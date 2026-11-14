@@ -149,12 +149,16 @@ begin
         select id from public.questions
          where status = 'published' and game_mode in ('picture', 'whoami', 'scripture')
          order by md5(id || current_date::text) limit 5) s
+      having count(*) >= 3  -- nothing published yet: leave today unset so it can fill in later
       on conflict (challenge_date) do nothing;
     select question_ids into v_ids from public.daily_challenges where challenge_date = current_date;
 
   elsif v_parts[1] = 'arena' and array_length(v_parts, 1) = 2 then
     v_mode := 'arena'; v_diff := v_parts[2]::int;
     if v_diff not between 1 and 4 then raise exception 'invalid_level'; end if;
+    if v_diff = 4 and not exists (select 1 from public.player_inventory where user_id = v_user and item_id = 'bonus_expert') then
+      raise exception 'bonus_required';
+    end if;
     select array_agg(id) into v_ids from (
       select id from public.questions
        where status = 'published' and game_mode in ('picture', 'whoami', 'scripture') and difficulty <= v_diff

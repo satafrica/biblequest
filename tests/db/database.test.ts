@@ -199,6 +199,14 @@ describe('gameplay scoring + gem earning', () => {
     await expect(rpc(u, 'start_session', ['picture:4:1'])).rejects.toThrow(/no_published_content/)
     await sql(`update public.questions set status='published' where game_mode='picture' and difficulty=4`)
   })
+  it('daily challenge on a database with nothing published fails cleanly and fills in later', async () => {
+    const u = await newUser()
+    const today = (await sql(`select current_date::text d`)).rows[0].d
+    await sql(`update public.questions set status='review'`)
+    await expect(rpc(u, 'start_session', [`daily:${today}`])).rejects.toThrow(/no_published_content/)
+    expect((await sql(`select count(*)::int n from public.daily_challenges where challenge_date=current_date`)).rows[0].n).toBe(0)
+    await sql(`update public.questions set status='published'`)
+  })
   it('daily challenge awards 25 once per day', async () => {
     const u = await newUser()
     const today = (await sql(`select current_date::text d`)).rows[0].d
@@ -293,6 +301,13 @@ describe('store + spending', () => {
     expect(await balance(u)).toBe(500)
     expect((await sql('select count(*)::int n from public.player_inventory where user_id=$1', [u])).rows[0].n).toBe(0)
   })
+  it('the Expert Gauntlet arena requires the bonus item', async () => {
+    const u = await richUser(2000)
+    await expect(rpc(u, 'start_session', ['arena:4'])).rejects.toThrow(/bonus_required/)
+    await rpc(u, 'purchase_item', ['bonus_expert', randomUUID()])
+    const s = await rpc(u, 'start_session', ['arena:4'])
+    expect(s.questions.length).toBe(10)
+  })
   it('equipping a cosmetic requires owning it', async () => {
     const u = await richUser(1000)
     await expect(rpc(u, 'set_item_equipped', ['theme_temple', true])).rejects.toThrow(/not_owned/)
@@ -339,6 +354,42 @@ describe('admin + editorial workflow', () => {
     const boss = await newUser('admin')
     const s = await rpc(boss, 'admin_stats', [])
     expect(s.players).toBeGreaterThan(5); expect(s.sessions_7d).toBeGreaterThan(5)
+  })
+  it('rejects questions that cite a chapter that does not exist', async () => {
+    const editor = await newUser('editor')
+    await expect(rpc(editor, 'admin_upsert_question', [JSON.stringify({ game_mode: 'picture', book_id: 65, chapter: 2, verse_start: 1,
+      reference_label: 'Jude 2:1', difficulty: 1, prompt: 'x?', options: ['a', 'b'], correct_index: 0, explanation: 'x' })])).rejects.toThrow(/invalid_reference/)
+  })
+  it('asset uploads need alt text and licensing, and start as draft', async () => {
+    const editor = await newUser('editor'); const u = await newUser()
+    const base = { id: 'test_asset', description: 'Test', ownership: 'Owner', license: 'Owned', alt_text: 'A test image', storage_path: '/images/x.webp' }
+    await expect(rpc(u, 'admin_upsert_asset', [JSON.stringify(base)])).rejects.toThrow(/forbidden/)
+    await expect(rpc(editor, 'admin_upsert_asset', [JSON.stringify({ ...base, alt_text: '' })])).rejects.toThrow(/alt_text_required/)
+    await expect(rpc(editor, 'admin_upsert_asset', [JSON.stringify({ ...base, license: '' })])).rejects.toThrow(/licensing_required/)
+    await rpc(editor, 'admin_upsert_asset', [JSON.stringify(base)])
+    expect((await sql(`select review_status from public.question_assets where id='test_asset'`)).rows[0].review_status).toBe('draft')
+    const seen = await asUser(u, async c => (await c.query(`select id from public.question_assets where id='test_asset'`)).rows)
+    expect(seen).toHaveLength(0)
+  })
+  it('editing a chapter sends it back to draft and hides it from players', async () => {
+    const editor = await newUser('editor')
+    const ch = (await sql(`select * from public.adventure_chapters where id='nt-6'`)).rows[0]
+    await expect(rpc(editor, 'admin_upsert_chapter', [JSON.stringify({ ...ch, question_ids: ['nope'] })])).rejects.toThrow(/unknown_question/)
+    await rpc(editor, 'admin_upsert_chapter', [JSON.stringify({ ...ch, narrative: ch.narrative + ' ' })])
+    expect((await sql(`select status from public.adventure_chapters where id='nt-6'`)).rows[0].status).toBe('draft')
+    await sql(`update public.adventure_chapters set status='published' where id='nt-6'`)
+  })
+  it('admins can schedule a future daily challenge from published questions only', async () => {
+    const boss = await newUser('admin'); const editor = await newUser('editor')
+    const ids = (await sql(`select id from public.questions where status='published' and game_mode='picture' order by id limit 5`)).rows.map(r => r.id)
+    const tomorrow = (await sql(`select (current_date + 1)::text d`)).rows[0].d
+    await expect(rpc(editor, 'admin_set_daily', [tomorrow, ids])).rejects.toThrow(/forbidden/)
+    await expect(rpc(boss, 'admin_set_daily', ['2000-01-01', ids])).rejects.toThrow(/date_in_past/)
+    await sql(`update public.questions set status='review' where id=$1`, [ids[0]])
+    await expect(rpc(boss, 'admin_set_daily', [tomorrow, ids])).rejects.toThrow(/unpublished_question/)
+    await sql(`update public.questions set status='published' where id=$1`, [ids[0]])
+    await rpc(boss, 'admin_set_daily', [tomorrow, ids])
+    expect((await sql(`select question_ids from public.daily_challenges where challenge_date=$1`, [tomorrow])).rows[0].question_ids).toEqual(ids)
   })
   it('leaderboard includes only players who opted in', async () => {
     const shy = await newUser(); const bold = await newUser()

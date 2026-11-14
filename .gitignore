@@ -9,3 +9,5 @@ playwright-report
 .DS_Store
 android
 ios
+test-results/
+playwright-report/

@@ -1,122 +1,71 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { lazy, Suspense, Component, type ReactNode } from 'react'
+import { HashRouter, Route, Routes, Link } from 'react-router-dom'
+import { AppProvider } from './state/AppContext'
+import { Layout } from './components/Layout'
+import Home from './pages/Home'
+import { PlayHub, PlayMode } from './pages/Play'
+import { AdventureDetail, AdventureList } from './pages/Adventures'
+import { Arena, Daily, Leaderboard } from './pages/Challenges'
+import StorePage from './pages/Store'
+import Profile from './pages/Profile'
+import Settings from './pages/Settings'
+import Account, { NewPassword } from './pages/Account'
+import { About, Collection, Community } from './pages/Info'
+import GameRunner from './game/GameRunner'
+import { report } from './lib/monitor'
 
-function App() {
-  const [count, setCount] = useState(0)
+const Admin = lazy(() => import('./admin/Admin'))
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+class Boundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false }
+  static getDerivedStateFromError() { return { failed: true } }
+  componentDidCatch(e: unknown) { report(e, 'react') }
+  render() {
+    if (!this.state.failed) return this.props.children
+    return (
+      <div className="mx-auto max-w-md px-4 py-16 text-center">
+        <h1 className="text-2xl font-semibold mb-2">Something went wrong</h1>
+        <p className="text-muted mb-6">Your saved progress is safe. Reload the page to continue.</p>
+        <button className="btn-primary" onClick={() => location.reload()}>Reload</button>
+      </div>
+    )
+  }
 }
 
-export default App
+function NotFound() {
+  return <div className="mx-auto max-w-md px-4 py-16 text-center"><h1 className="text-2xl font-semibold mb-2">Page not found</h1><Link className="link" to="/">Go home</Link></div>
+}
+
+export default function App() {
+  return (
+    <Boundary>
+      <AppProvider>
+        <HashRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="play" element={<PlayHub />} />
+              <Route path="play/:mode" element={<PlayMode />} />
+              <Route path="game/:levelKey" element={<GameRunner />} />
+              <Route path="adventures" element={<AdventureList />} />
+              <Route path="adventures/:id" element={<AdventureDetail />} />
+              <Route path="daily" element={<Daily />} />
+              <Route path="arena" element={<Arena />} />
+              <Route path="leaderboard" element={<Leaderboard />} />
+              <Route path="store" element={<StorePage />} />
+              <Route path="collection/:id" element={<Collection />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="settings" element={<Settings />} />
+              <Route path="account" element={<Account />} />
+              <Route path="account/new-password" element={<NewPassword />} />
+              <Route path="about" element={<About />} />
+              <Route path="community" element={<Community />} />
+              <Route path="admin" element={<Suspense fallback={<div className="loader mx-auto my-20" />}><Admin /></Suspense>} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </HashRouter>
+      </AppProvider>
+    </Boundary>
+  )
+}
