@@ -1,0 +1,182 @@
+[
+ {
+  "id": "hero_jerusalem",
+  "description": "Ancient Jerusalem at sunrise from the Mount of Olives",
+  "reference": "Psalm 125:2 (setting)",
+  "alt": "Ancient Jerusalem glowing gold at sunrise, seen from an olive grove with a traveller on the path.",
+  "path": "/images/hero_jerusalem.webp",
+  "height": 675,
+  "interpretation_note": "Artistic reconstruction of Second Temple-era Jerusalem; architecture is approximate, not an archaeological model."
+ },
+ {
+  "id": "creation",
+  "description": "Light breaking over the primordial waters",
+  "reference": "Genesis 1:1-5",
+  "alt": "Rays of light breaking over dark waters as land and plants emerge.",
+  "path": "/images/creation.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "noah_ark",
+  "description": "The ark after the flood with a rainbow",
+  "reference": "Genesis 8-9",
+  "alt": "A large wooden ark on a hillside under a rainbow as animals walk out in pairs.",
+  "path": "/images/noah_ark.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. The ark's shape is imagined; Genesis 6:15 gives only its dimensions."
+ },
+ {
+  "id": "abraham_stars",
+  "description": "Abram looking at the stars",
+  "reference": "Genesis 15:5",
+  "alt": "An old man outside a desert tent gazing up at a sky full of stars.",
+  "path": "/images/abraham_stars.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "joseph_coat",
+  "description": "Joseph in his coat with his brothers",
+  "reference": "Genesis 37:3-4",
+  "alt": "A young man in a colourful coat stands in a field while older brothers watch from a distance.",
+  "path": "/images/joseph_coat.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "moses_red_sea",
+  "description": "The parting of the Red Sea",
+  "reference": "Exodus 14:21-22",
+  "alt": "A leader raises his staff as the sea parts into towering walls and people cross on dry ground.",
+  "path": "/images/moses_red_sea.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "david_goliath",
+  "description": "David facing Goliath",
+  "reference": "1 Samuel 17",
+  "alt": "A young shepherd with a sling faces an armoured giant in a valley between two armies.",
+  "path": "/images/david_goliath.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "solomon_temple",
+  "description": "Dedication of Solomon's temple",
+  "reference": "1 Kings 8",
+  "alt": "A king in royal robes before a grand temple with bronze pillars as offerings smoke.",
+  "path": "/images/solomon_temple.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "elijah_carmel",
+  "description": "Fire on Mount Carmel",
+  "reference": "1 Kings 18:36-39",
+  "alt": "Fire falls from a stormy sky onto a stone altar while a prophet stands beside it.",
+  "path": "/images/elijah_carmel.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "daniel_lions",
+  "description": "Daniel in the lions' den",
+  "reference": "Daniel 6",
+  "alt": "A calm man in robes stands among resting lions in a dim stone den.",
+  "path": "/images/daniel_lions.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "esther_king",
+  "description": "Esther before King Ahasuerus",
+  "reference": "Esther 5:1-2",
+  "alt": "A queen approaches a Persian king on his throne as he extends a golden sceptre.",
+  "path": "/images/esther_king.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "nativity",
+  "description": "The birth of Jesus in Bethlehem",
+  "reference": "Luke 2:4-16",
+  "alt": "A mother and newborn in a manger in a stable at night, with shepherds kneeling.",
+  "path": "/images/nativity.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. Luke mentions a manger; the stable setting and star over the shepherds are traditional artistic details."
+ },
+ {
+  "id": "sermon_mount",
+  "description": "The Sermon on the Mount",
+  "reference": "Matthew 5-7",
+  "alt": "A teacher seated on a green hillside by a lake addresses a large crowd.",
+  "path": "/images/sermon_mount.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "calming_storm",
+  "description": "Jesus calming the storm",
+  "reference": "Mark 4:35-41",
+  "alt": "A small boat tossed by waves at night as a calm figure stretches out his arm.",
+  "path": "/images/calming_storm.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "good_samaritan",
+  "description": "The Good Samaritan",
+  "reference": "Luke 10:30-35",
+  "alt": "A traveller kneels to bandage a wounded man on a rocky road while two others walk away.",
+  "path": "/images/good_samaritan.webp",
+  "height": 900,
+  "interpretation_note": "Illustration of a parable (a story Jesus told), not a historical event."
+ },
+ {
+  "id": "prodigal_son",
+  "description": "The return of the prodigal son",
+  "reference": "Luke 15:20",
+  "alt": "An elderly father runs to embrace his ragged son on a country road.",
+  "path": "/images/prodigal_son.webp",
+  "height": 900,
+  "interpretation_note": "Illustration of a parable (a story Jesus told), not a historical event."
+ },
+ {
+  "id": "pentecost",
+  "description": "The day of Pentecost",
+  "reference": "Acts 2:1-4",
+  "alt": "Men and women in a room with small flames resting above their heads.",
+  "path": "/images/pentecost.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "paul_ship",
+  "description": "Paul's shipwreck",
+  "reference": "Acts 27:39-44",
+  "alt": "A Roman ship breaks apart on rocks while passengers swim toward an island beach.",
+  "path": "/images/paul_ship.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "jonah_fish",
+  "description": "Jonah and the great fish",
+  "reference": "Jonah 1:15-17",
+  "alt": "Beneath a stormy sea, an enormous fish rises toward a man while a ship tosses above.",
+  "path": "/images/jonah_fish.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. Scripture says 'a great fish' without naming a species."
+ },
+ {
+  "id": "empty_tomb",
+  "description": "The empty tomb",
+  "reference": "Mark 16:1-6",
+  "alt": "Women carrying spices approach a rock-cut tomb whose stone has been rolled away.",
+  "path": "/images/empty_tomb.webp",
+  "height": 900,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ }
+]

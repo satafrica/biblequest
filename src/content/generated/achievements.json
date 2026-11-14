@@ -1,0 +1,124 @@
+[
+ {
+  "id": "first_light",
+  "name": "First Light",
+  "description": "Answer your first question correctly.",
+  "icon": "sun",
+  "rule": {
+   "type": "correct_total",
+   "gte": 1
+  }
+ },
+ {
+  "id": "scholar_25",
+  "name": "Diligent Student",
+  "description": "Answer 25 different questions correctly.",
+  "icon": "scroll",
+  "rule": {
+   "type": "correct_total",
+   "gte": 25
+  }
+ },
+ {
+  "id": "scholar_100",
+  "name": "Scribe",
+  "description": "Answer 100 different questions correctly.",
+  "icon": "book",
+  "rule": {
+   "type": "correct_total",
+   "gte": 100
+  }
+ },
+ {
+  "id": "scholar_250",
+  "name": "Master of the Scrolls",
+  "description": "Answer 250 different questions correctly.",
+  "icon": "crown",
+  "rule": {
+   "type": "correct_total",
+   "gte": 250
+  }
+ },
+ {
+  "id": "levels_1",
+  "name": "First Steps",
+  "description": "Complete your first level.",
+  "icon": "path",
+  "rule": {
+   "type": "levels_completed",
+   "gte": 1
+  }
+ },
+ {
+  "id": "levels_10",
+  "name": "Pilgrim",
+  "description": "Complete 10 different levels.",
+  "icon": "path",
+  "rule": {
+   "type": "levels_completed",
+   "gte": 10
+  }
+ },
+ {
+  "id": "perfect_1",
+  "name": "Flawless",
+  "description": "Earn your first perfect round.",
+  "icon": "gem",
+  "rule": {
+   "type": "perfect_levels",
+   "gte": 1
+  }
+ },
+ {
+  "id": "perfect_10",
+  "name": "Refined Gold",
+  "description": "Earn 10 perfect rounds.",
+  "icon": "gem",
+  "rule": {
+   "type": "perfect_levels",
+   "gte": 10
+  }
+ },
+ {
+  "id": "daily_7",
+  "name": "Daily Bread",
+  "description": "Complete 7 daily challenges.",
+  "icon": "bread",
+  "rule": {
+   "type": "daily_total",
+   "gte": 7
+  }
+ },
+ {
+  "id": "adventurer",
+  "name": "Adventurer",
+  "description": "Complete a full Bible adventure.",
+  "icon": "map",
+  "rule": {
+   "type": "adventures_completed",
+   "gte": 1
+  }
+ },
+ {
+  "id": "picture_4",
+  "name": "Keen Eye",
+  "description": "Complete 4 Picture Quiz levels.",
+  "icon": "eye",
+  "rule": {
+   "type": "mode_levels",
+   "mode": "picture",
+   "gte": 4
+  }
+ },
+ {
+  "id": "whoami_4",
+  "name": "Know Their Names",
+  "description": "Complete 4 Who Am I? levels.",
+  "icon": "person",
+  "rule": {
+   "type": "mode_levels",
+   "mode": "whoami",
+   "gte": 4
+  }
+ }
+]
