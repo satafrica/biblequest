@@ -1,4 +1,6 @@
-import { Monitor, Moon, Sun } from 'lucide-react'
+import { Monitor, Moon, Sun, Volume1, Volume2, VolumeX } from 'lucide-react'
+import { playSound, unlockAudio } from '../lib/sounds'
+import { soundVolume } from '../state/prefs'
 import { useApp } from '../state/AppContext'
 import { PageHeader } from '../components/ui'
 import type { Prefs } from '../state/prefs'
@@ -29,10 +31,19 @@ export default function Settings() {
   }
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 md:py-12">
-      <PageHeader eyebrow="Settings" title="Display and accessibility">These options are always free.</PageHeader>
+      <PageHeader eyebrow="Settings" title="Display, sound and accessibility">These options are always free.</PageHeader>
       <div className="grid gap-4">
         <Segmented label="Appearance" value={prefs.theme} onChange={(v) => update({ theme: v })} options={[{ v: 'system', label: 'Match device', Icon: Monitor }, { v: 'light', label: 'Light', Icon: Sun }, { v: 'dark', label: 'Dark', Icon: Moon }]} />
         <Segmented label="Text size" value={prefs.textSize} onChange={(v) => update({ textSize: v })} options={[{ v: 'normal', label: 'Standard' }, { v: 'large', label: 'Large' }, { v: 'xlarge', label: 'Extra large' }]} />
+        <div className="grid gap-2">
+          <Segmented label="Sound effects" value={prefs.sound} onChange={(v) => { update({ sound: v }); unlockAudio(); if (v !== 'off') playSound('correct', soundVolume({ ...prefs, sound: v })) }}
+            options={[{ v: 'off', label: 'Off', Icon: VolumeX }, { v: 'soft', label: 'Soft', Icon: Volume1 }, { v: 'normal', label: 'Normal', Icon: Volume2 }]} />
+          <div className="flex flex-wrap items-center gap-2 px-1 text-sm text-muted">
+            <span>Chimes for correct and incorrect answers. Results are always shown on screen too.</span>
+            <button type="button" className="btn-ghost btn-sm" disabled={prefs.sound === 'off'} onClick={() => { unlockAudio(); playSound('correct', soundVolume(prefs)) }}>Play correct</button>
+            <button type="button" className="btn-ghost btn-sm" disabled={prefs.sound === 'off'} onClick={() => { unlockAudio(); playSound('wrong', soundVolume(prefs)) }}>Play incorrect</button>
+          </div>
+        </div>
         <Segmented label="Motion" value={prefs.motion} onChange={(v) => update({ motion: v })} options={[{ v: 'system', label: 'Match device' }, { v: 'reduce', label: 'Reduce motion' }, { v: 'full', label: 'Full motion' }]} />
         <div className="card flex items-start gap-3 p-5">
           <input id="hc" type="checkbox" className="mt-1 h-5 w-5 accent-[rgb(var(--accent))]" checked={prefs.highContrast} onChange={(e) => update({ highContrast: e.target.checked })} />

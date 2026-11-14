@@ -6,6 +6,8 @@ import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CompleteResul
 import { readJSON, removeKey, writeJSON } from '../lib/storage'
 import { describeLevelKey, levelCount } from '../engine/levels'
 import { Gems, GemIcon, Illustration, Modal } from '../components/ui'
+import { playSound, unlockAudio } from '../lib/sounds'
+import { soundVolume } from '../state/prefs'
 
 const ACTIVE_KEY = 'bq.active.v1'
 const ARENA_SECONDS = 20
@@ -86,6 +88,7 @@ export default function GameRunner() {
     try {
       const r = await backend.completeSession(sess.session_id)
       setSummary(r); setBalance(r.balance)
+      playSound('complete', soundVolume(prefs))
       persist({ levelKey, session: sess, idx: sess.questions.length, results: res, savedAt: Date.now(), completed: true })
       for (const a of r.new_achievements) {
         const ach = catalog.achievements.find((x) => x.id === a)
@@ -97,24 +100,26 @@ export default function GameRunner() {
       if (msg === 'This round has already finished.') { removeKey(ACTIVE_KEY); refresh().catch(() => {}) }
       setError(msg)
     } finally { setBusy(false); setPhase('summary') }
-  }, [backend, catalog.achievements, levelKey, persist, refresh, setBalance, toast])
+  }, [backend, catalog.achievements, levelKey, persist, refresh, setBalance, toast, prefs])
 
   finishRef.current = finish
 
   const submit = useCallback(async (choice: number) => {
     if (!session || !q || busy) return
     setBusy(true)
+    unlockAudio()
     try {
       const r = q.game_mode === 'sequence'
         ? await backend.submitSequence(session.session_id, q.id, order)
         : await backend.submitAnswer(session.session_id, q.id, choice, clues)
       const res = [...results, { ...r, qid: q.id }]
       setResults(res); setSelected(choice); setBalance(r.balance); setPhase('feedback')
+      playSound(r.correct ? 'correct' : 'wrong', soundVolume(prefs))
       persist({ levelKey, session, idx: idx + 1, results: res, savedAt: Date.now() })
     } catch (e) {
       toast({ title: 'Answer not sent', body: friendlyError(e), tone: 'error' })
     } finally { setBusy(false) }
-  }, [session, q, busy, backend, order, clues, results, setBalance, persist, levelKey, idx, toast])
+  }, [session, q, busy, backend, order, clues, results, setBalance, persist, levelKey, idx, toast, prefs])
 
   const next = useCallback(() => {
     if (!session) return

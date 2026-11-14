@@ -6,8 +6,9 @@ export interface Prefs {
   highContrast: boolean
   motion: 'system' | 'reduce' | 'full'
   timers: boolean
+  sound: 'off' | 'soft' | 'normal'
 }
-export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true }
+export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal' }
 const KEY = 'bq.prefs.v1'
 
 export const loadPrefs = (): Prefs => ({ ...DEFAULT_PREFS, ...readJSON<Partial<Prefs>>(KEY, {}) })
@@ -34,3 +35,5 @@ export function applyPrefs(p: Prefs, palette: string | null) {
   if (palette) el.dataset.palette = palette
   else delete el.dataset.palette
 }
+
+export const soundVolume = (p: Prefs): number => (p.sound === 'off' ? 0 : p.sound === 'soft' ? 0.45 : 1)

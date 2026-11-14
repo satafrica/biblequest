@@ -15,7 +15,7 @@ Status labels:
 |---|---|---|
 | Unit: game rules, rewards, store, power-ups, adaptive difficulty | `npm test` | 12 / 12 passed |
 | Database integration: real migrations, seed and RLS on PostgreSQL 18 (embedded), with a stub of Supabase's `auth` schema | `npm run test:db` | 43 / 43 passed |
-| Browser: guest plays a full level, gems persist across reload, replay earns nothing, buy a hint with confirmation, dark mode and text size persist, locked content shown honestly. Desktop Chrome and Pixel 7 | `npm run test:e2e` | 6 / 6 passed |
+| Browser: guest plays a full level, gems persist across reload, replay earns nothing, buy a hint with confirmation, dark mode and text size persist, locked content shown honestly, correct/incorrect answer sounds and the sound-off setting. Desktop Chrome and Pixel 7 | `npm run test:e2e` | 10 / 10 passed |
 | Accessibility: axe WCAG 2.0/2.1/2.2 A + AA rules on 12 routes × light/dark × desktop/mobile | `npm run test:e2e` | 48 / 48 passed |
 | Production build, and a check that the online build excludes the answer key | `npm run build` | Passed |
 | Hosted preview: full level played, no page errors | manual Playwright run | Passed |
@@ -37,6 +37,7 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Row-level security: players read only their own data. All writes go through database functions. Only published content is visible.
 - Editorial workflow in the database: draft → review → approved → published, publishing for admins only, reference-validation trigger, audit log.
 - Responsive design in the brand palette; light, dark and high-contrast; text sizes; reduced motion; keyboard play; mobile tab bar.
+- Answer sounds: a rising chime for correct, a soft low tone for incorrect, and a short arpeggio when a round ends. They are generated in the browser (no audio files or licences), can be set to Off, Soft or Normal in Settings, and are never the only signal. Not yet checked by ear on a physical phone.
 - PWA: manifest, icons, offline app shell (service worker registration checked locally).
 
 ## Built, not yet tested against live Supabase
