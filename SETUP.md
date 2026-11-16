@@ -20,7 +20,16 @@ Use a new project. Do not reuse the LearningGem project.
 
 ## 3. Supabase: load the database
 
-### Option A: SQL editor (no installs)
+### Option A: SQL editor (no installs) — easiest
+
+Run just two files, in order. Open each on GitHub, click **Raw**, copy everything, paste it into **SQL Editor → New query** and press **Run**:
+
+1. `supabase/setup/1_database.sql` (tables, security rules, game functions)
+2. `supabase/setup/2_content.sql` (questions, adventures, store, achievements)
+
+These are the same as the separate files listed below, combined for convenience.
+
+### Option A2: SQL editor, file by file
 
 In the Supabase dashboard open **SQL Editor → New query**. Run these files from the repository **in this order**. For each one, open the file on GitHub, click **Raw**, copy all of it, paste it into the editor and press **Run**:
 
