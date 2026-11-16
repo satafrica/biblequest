@@ -40,6 +40,16 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Answer sounds: a rising chime for correct, a soft low tone for incorrect, and a short arpeggio when a round ends. They are generated in the browser (no audio files or licences), can be set to Off, Soft or Normal in Settings, and are never the only signal. Not yet checked by ear on a physical phone.
 - PWA: manifest, icons, offline app shell (service worker registration checked locally).
 
+## Live Supabase project (16 November 2026)
+
+- Project `biblequest` (ref `zosmfpridatotdrvbqrx`) was created in a new **Free** organization called "BibleQuest". The LearningGem organization and project were not touched.
+- Both setup scripts ran on it: 28 tables, all with row-level security, 324 questions (0 published), 29 store items, 12 chapters and 12 achievements.
+- Fixed while loading: the `story_sequences` table was missing from the row-level-security list. It is now locked in the live database, `supabase/setup/1_database.sql` and the migration.
+- Auth: anonymous guest sign-ins are on; email sign-up with email confirmation is on. The Site URL is still `http://localhost:3000` and must be changed to the real address once the site is hosted.
+- **Tested live** (`tests/live`, Playwright desktop Chrome against a local server of the online build): a guest played a full 8-question level and earned 80 gems, which survived a reload. The guest added an email and kept the gems, set a password and bought a 30-gem hint. A second, fresh browser then signed in with that email and password and showed 50 gems. Database check: balance 50, 5 ledger entries, hint ×1 in inventory.
+- For that test only, email confirmation was switched off and 8 picture questions were published. Both were reverted afterwards, and the test accounts were deleted.
+- Not yet tested: the real confirmation and password-reset emails, phones, and a hosted address. Supabase's built-in email sender has a low hourly limit; add custom SMTP before launch.
+
 ## Built, not yet tested against live Supabase
 
 - Accounts: anonymous guest sessions, registration (keeps guest progress), sign-in, sign-out, password reset and change, cross-device saves (`src/engine/cloud.ts`).
@@ -61,6 +71,5 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 ## Blocked: needs the project owner
 
 - **Human review of all content.** Every question, illustration and chapter is seeded as `review`, so the online site shows no questions until an admin approves and publishes them.
-- **Supabase project.** Creating a new project may cost money and needs your approval. The existing LearningGem project was not touched.
 - **Netlify production deploy.** Needs your go-ahead and the two environment variables.
 - **Licensing decisions:** the image generator's commercial terms, and KJV distribution in the UK (Crown patent).

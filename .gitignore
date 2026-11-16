@@ -11,3 +11,7 @@ android
 ios
 test-results/
 playwright-report/
+dist-online
+.env.online
+tests/live/state.json
+tests/live/step*.json

@@ -895,7 +895,7 @@ do $$ declare t text; begin
     'question_assets','questions','adventures','adventure_chapters','game_sessions','session_answers',
     'player_progress','question_awards','daily_challenges','gem_wallets','gem_transactions','reward_rules',
     'store_items','player_inventory','item_uses','achievements','player_achievements','groups','group_members',
-    'reports','content_reviews','admin_audit_log']
+    'reports','content_reviews','admin_audit_log','story_sequences']
   loop execute format('alter table public.%I enable row level security', t); end loop;
 end $$;
 
