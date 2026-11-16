@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
 for (const theme of ['light', 'dark'] as const) {
-  for (const route of ['', 'play', 'play/picture', 'game/picture%3A1%3A1', 'store', 'settings', 'adventures', 'daily', 'arena', 'profile', 'about', 'admin']) {
+  for (const route of ['', 'play', 'play/picture', 'game/picture%3A1%3A1', 'store', 'settings', 'adventures', 'daily', 'arena', 'profile', 'about', 'privacy', 'terms', 'admin']) {
     test(`WCAG A/AA scan: /${route} (${theme})`, async ({ page }) => {
       await page.emulateMedia({ colorScheme: theme, reducedMotion: 'reduce' })
       await page.goto(`./#/${route}`)

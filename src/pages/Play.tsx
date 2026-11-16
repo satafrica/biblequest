@@ -6,12 +6,16 @@ import { MODES, modeInfo } from '../game/modes'
 import { DIFFICULTY_LABELS, LEVEL_SIZE, type Difficulty } from '../engine'
 import { levelCount, levelKey, recommendDifficulty } from '../engine/levels'
 import { Illustration, PageHeader } from '../components/ui'
+import { ReviewCard } from '../components/Streak'
+import { usePlayerStats } from '../state/usePlayerStats'
 
 export function PlayHub() {
   const { catalog } = useApp()
+  const stats = usePlayerStats()
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
       <PageHeader eyebrow="Play" title="Choose a game">Guests can play every live game. Each answer shows its Scripture reference and a short explanation.</PageHeader>
+      {stats && stats.review_count > 0 && <div className="mb-6 max-w-md"><ReviewCard stats={stats} /></div>}
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {MODES.map((m) => m.live ? (
           <li key={m.id}>

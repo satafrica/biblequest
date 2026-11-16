@@ -1,13 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { ArrowDown, ArrowUp, Check, Flag, Hourglass, Lamp, Scissors, Timer, X } from 'lucide-react'
+import { ArrowDown, ArrowUp, BookOpen, Check, Flag, Hourglass, Lamp, Scissors, Share2, Square, Timer, Volume2, X } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CompleteResult, type PublicQuestion, type SessionStart } from '../engine'
 import { readJSON, removeKey, writeJSON } from '../lib/storage'
 import { describeLevelKey, levelCount } from '../engine/levels'
 import { Gems, GemIcon, Illustration, Modal } from '../components/ui'
 import { playSound, unlockAudio } from '../lib/sounds'
-import { soundVolume } from '../state/prefs'
+import { soundVolume, speechRate } from '../state/prefs'
+import { vibrate } from '../lib/haptics'
+import { speak, speechSupported, stopSpeaking } from '../lib/speech'
+import { appUrl, resultText, shareResult } from '../lib/share'
 
 const ACTIVE_KEY = 'bq.active.v1'
 const ARENA_SECONDS = 20
@@ -88,7 +91,7 @@ export default function GameRunner() {
     try {
       const r = await backend.completeSession(sess.session_id)
       setSummary(r); setBalance(r.balance)
-      playSound('complete', soundVolume(prefs))
+      playSound('complete', soundVolume(prefs)); vibrate('complete', prefs.haptics)
       persist({ levelKey, session: sess, idx: sess.questions.length, results: res, savedAt: Date.now(), completed: true })
       for (const a of r.new_achievements) {
         const ach = catalog.achievements.find((x) => x.id === a)
@@ -114,7 +117,8 @@ export default function GameRunner() {
         : await backend.submitAnswer(session.session_id, q.id, choice, clues)
       const res = [...results, { ...r, qid: q.id }]
       setResults(res); setSelected(choice); setBalance(r.balance); setPhase('feedback')
-      playSound(r.correct ? 'correct' : 'wrong', soundVolume(prefs))
+      playSound(r.correct ? 'correct' : 'wrong', soundVolume(prefs)); vibrate(r.correct ? 'correct' : 'wrong', prefs.haptics)
+      stopSpeaking()
       persist({ levelKey, session, idx: idx + 1, results: res, savedAt: Date.now() })
     } catch (e) {
       toast({ title: 'Answer not sent', body: friendlyError(e), tone: 'error' })
@@ -124,9 +128,36 @@ export default function GameRunner() {
   const next = useCallback(() => {
     if (!session) return
     const n = idx + 1
+    stopSpeaking()
     if (n >= session.questions.length) { setIdx(n); finish(session, results); return }
     setIdx(n); resetQuestion(session.questions[n]); setPhase('question')
   }, [session, idx, results, finish, resetQuestion])
+
+  // Read aloud: the question with its visible clues and numbered options, or the feedback.
+  const questionSpeech = useMemo(() => {
+    if (!q) return ''
+    const parts = [q.prompt]
+    if (q.game_mode === 'whoami' && q.clues) parts.push(...q.clues.slice(0, clues).map((c, i) => `Clue ${i + 1}. ${c}`))
+    if (q.game_mode === 'sequence') parts.push('Events to put in order:', ...order.map((o, i) => `${i + 1}. ${o}.`))
+    else parts.push(...q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean))
+    return parts.join(' ')
+  }, [q, clues, order, eliminated])
+  const last0 = results[results.length - 1]
+  const feedbackSpeech = useMemo(() => {
+    if (!q || !last0) return ''
+    const parts = [last0.correct ? 'Correct.' : 'Not quite.']
+    if (!last0.correct && q.game_mode !== 'sequence' && last0.correct_index !== undefined) parts.push(`The answer is ${q.options[last0.correct_index]}.`)
+    if (last0.reference) parts.push(`${last0.reference}.`)
+    if (last0.verse_text) parts.push(last0.verse_text.replace(/\n/g, '. ').replace(/\u2026/g, ''))
+    if (last0.explanation) parts.push(last0.explanation)
+    return parts.join(' ')
+  }, [q, last0])
+  useEffect(() => {
+    if (phase === 'question' && prefs.readAloudAuto && q) speak(questionSpeech, { rate: speechRate(prefs) })
+    // only when a new question appears, not on every clue change
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, q?.id, prefs.readAloudAuto])
+  useEffect(() => () => stopSpeaking(), [])
 
   // Arena timer (optional; can be turned off in Settings)
   useEffect(() => {
@@ -270,6 +301,7 @@ export default function GameRunner() {
               <PowerButton label="Hint" Icon={Lamp} qty={owns('hint')} onUse={() => power('hint')} disabled={Boolean(hint)} />
               {q.game_mode !== 'sequence' && <PowerButton label="Remove two" Icon={Scissors} qty={owns('eliminate_two')} onUse={() => power('eliminate_two')} disabled={eliminated.length > 0} />}
               {timed && <PowerButton label="+15 seconds" Icon={Hourglass} qty={owns('extra_time')} onUse={() => power('extra_time')} />}
+              <ReadAloud text={questionSpeech} label="Read question aloud" />
             </div>
           )}
 
@@ -280,7 +312,13 @@ export default function GameRunner() {
               </p>
               {!last.correct && q.game_mode !== 'sequence' && last.correct_index !== undefined && <p className="mt-1">The answer is <strong>{q.options[last.correct_index]}</strong>.</p>}
               {last.reference && <p className="mt-2 text-sm font-semibold">{last.reference} <span className="font-normal text-muted">· {q.translation_id}</span></p>}
-              <p className="mt-2 leading-relaxed">{last.explanation}</p>
+              {last.verse_text && (
+                <blockquote className="mt-3 rounded-xl border-l-4 border-accent bg-accent/5 px-4 py-3 font-display leading-relaxed" data-testid="verse-text">
+                  <span className="mb-1 flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-wide text-muted"><BookOpen className="h-3.5 w-3.5" aria-hidden="true" />King James Version</span>
+                  {last.verse_text.split('\n').map((line, i) => <p key={i} className={i ? 'mt-2' : ''}>{line}</p>)}
+                </blockquote>
+              )}
+              <p className="mt-3 leading-relaxed">{last.explanation}</p>
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 {last.gems_awarded > 0 ? (
                   <span className="chip border-accent bg-accent/10 py-1 gem-pop"><GemIcon /> +{last.gems_awarded} gems</span>
@@ -288,6 +326,7 @@ export default function GameRunner() {
                   <span className="text-sm text-muted">Gems for this question were already earned earlier.</span>
                 ) : null}
                 {last.points > 0 && <span className="text-sm text-muted">+{last.points} points</span>}
+                <ReadAloud text={feedbackSpeech} label="Read aloud" />
                 <button className="btn-primary ml-auto" onClick={next} disabled={busy}>{idx + 1 >= total ? 'See results' : 'Next question'}</button>
               </div>
               {backend.kind === 'cloud' && (
@@ -299,7 +338,7 @@ export default function GameRunner() {
       )}
 
       {phase === 'summary' && (
-        <Summary levelKey={levelKey} results={results} total={total} summary={summary} error={error} busy={busy}
+        <Summary levelKey={levelKey} title={title} results={results} total={total} summary={summary} error={error} busy={busy}
           roundGems={roundGems} points={points} headingRef={headingRef}
           onRetry={() => { removeKey(ACTIVE_KEY); start(false) }}
           onFinishRetry={() => session && finish(session, results)} />
@@ -307,6 +346,19 @@ export default function GameRunner() {
 
       {q && <ReportDialog open={reportOpen} onClose={() => setReportOpen(false)} questionId={q.id} />}
     </div>
+  )
+}
+
+function ReadAloud({ text, label }: { text: string; label: string }) {
+  const { prefs } = useApp()
+  const [on, setOn] = useState(false)
+  useEffect(() => () => { if (on) stopSpeaking() }, [on])
+  if (!speechSupported() || !text) return null
+  return (
+    <button type="button" className="btn-ghost btn-sm" aria-pressed={on}
+      onClick={() => { if (on) { stopSpeaking(); setOn(false) } else { setOn(speak(text, { rate: speechRate(prefs), onEnd: () => setOn(false) })) } }}>
+      {on ? <Square className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}{on ? 'Stop reading' : label}
+    </button>
   )
 }
 
@@ -356,11 +408,17 @@ function SequenceBoard({ order, setOrder, locked, correctOrder }: { order: strin
   )
 }
 
-function Summary({ levelKey, results, total, summary, error, busy, roundGems, points, headingRef, onRetry, onFinishRetry }: {
-  levelKey: string; results: AnswerResult[]; total: number; summary: CompleteResult | null; error: string | null; busy: boolean
+function Summary({ levelKey, title, results, total, summary, error, busy, roundGems, points, headingRef, onRetry, onFinishRetry }: {
+  levelKey: string; title: string; results: AnswerResult[]; total: number; summary: CompleteResult | null; error: string | null; busy: boolean
   roundGems: number; points: number; headingRef: React.RefObject<HTMLHeadingElement | null>; onRetry: () => void; onFinishRetry: () => void
 }) {
   const { catalog } = useApp()
+  const [shareNote, setShareNote] = useState('')
+  const share = async () => {
+    const r = await shareResult(resultText(title, results.map((x) => x.correct), appUrl()))
+    const msg = r === 'copied' ? 'Result copied. Paste it anywhere to share.' : r === 'failed' ? 'Sharing is not available in this browser.' : ''
+    setShareNote(msg)
+  }
   const correct = summary?.correct ?? results.filter((r) => r.correct).length
   const p = levelKey.split(':')
   const nextTo = useMemo(() => {
@@ -376,6 +434,7 @@ function Summary({ levelKey, results, total, summary, error, busy, roundGems, po
       if (nx) return { to: `/game/${encodeURIComponent(`adv:${nx.id}`)}`, label: `Next chapter: ${nx.title}` }
       return { to: `/adventures`, label: 'Back to adventures' }
     }
+    if (p[0] === 'review') return { to: '/play', label: 'Back to games' }
     return { to: '/play', label: 'More games' }
   }, [catalog, p])
   if (busy && !summary) return <div className="grid min-h-[40vh] place-items-center" role="status"><span className="sr-only">Saving results</span><div className="loader" /></div>
@@ -404,8 +463,11 @@ function Summary({ levelKey, results, total, summary, error, busy, roundGems, po
       )}
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link className="btn-primary" to={nextTo.to}>{nextTo.label}</Link>
-        <button className="btn-secondary" onClick={onRetry}>Play again</button>
+        <button className="btn-secondary" onClick={onRetry}>{p[0] === 'review' ? 'Review again' : 'Play again'}</button>
+        {results.length > 0 && <button className="btn-secondary" onClick={share}><Share2 className="h-4 w-4" aria-hidden="true" />Share result</button>}
       </div>
+      <p className="mt-3 min-h-5 text-sm text-muted" role="status">{shareNote}</p>
+      <p className="text-xs text-muted">Sharing shows your score only, never the answers.</p>
     </section>
   )
 }

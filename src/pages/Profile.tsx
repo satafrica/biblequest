@@ -5,12 +5,15 @@ import { useApp } from '../state/AppContext'
 import { friendlyError, type Transaction } from '../engine'
 import { AVATARS, Avatar, Gems, ItemArt, Modal, PageHeader } from '../components/ui'
 import { EQUIPPABLE } from './Store'
+import { ReviewCard, StreakCalendar } from '../components/Streak'
+import { usePlayerStats } from '../state/usePlayerStats'
 
 const ACH_ICONS: Record<string, LucideIcon> = { sun: Sun, scroll: Scroll, book: Book, crown: Crown, path: Route, gem: Gem, bread: Bread, map: Map, eye: Eye, person: UserRound }
 
 export default function Profile() {
   const { profile, wallet, inventory, achievements, catalog, backend, user, refresh, toast, progress } = useApp()
   const loc = useLocation()
+  const stats = usePlayerStats()
   const [name, setName] = useState(profile?.display_name ?? '')
   const [txs, setTxs] = useState<Transaction[] | null>(null)
   const [resetOpen, setResetOpen] = useState(false)
@@ -43,6 +46,11 @@ export default function Profile() {
           <div className="mt-2 flex flex-wrap gap-4 text-sm"><span><Gems n={wallet.balance} /> balance</span><span className="text-muted">{wallet.lifetime_earned.toLocaleString()} earned all-time</span></div>
         </div>
         {backend.kind === 'cloud' && (guest ? <Link to="/account" className="btn-primary">Create account or sign in</Link> : <div className="flex flex-wrap gap-2"><Link to="/account/new-password" className="btn-ghost">Change password</Link><button className="btn-secondary" onClick={() => backend.signOut()}>Sign out</button></div>)}
+      </section>
+
+      <section id="streak" className="mb-10 grid scroll-mt-24 gap-6 md:grid-cols-2">
+        <StreakCalendar stats={stats} />
+        <div className="self-start"><ReviewCard stats={stats} /></div>
       </section>
 
       <section className="mb-10 grid gap-6 md:grid-cols-2">
@@ -132,7 +140,35 @@ export default function Profile() {
             </Modal>
           </>
         )}
+        {backend.kind === 'cloud' && user && <DeleteAccount />}
+        <p className="mt-4 text-sm text-muted"><Link to="/privacy" className="link">Privacy</Link> · <Link to="/terms" className="link">Terms of use</Link></p>
       </section>
+    </div>
+  )
+}
+
+function DeleteAccount() {
+  const { backend, refresh, toast, user } = useApp()
+  const [open, setOpen] = useState(false)
+  const [typed, setTyped] = useState('')
+  const [busy, setBusy] = useState(false)
+  return (
+    <div className="mt-4 border-t border-line pt-4">
+      <button className="btn-ghost btn-sm text-bad" onClick={() => setOpen(true)}>Delete my account</button>
+      <Modal open={open} onClose={() => setOpen(false)} title="Delete your account?">
+        <p className="text-sm">This permanently deletes {user?.isAnonymous ? 'this guest account' : 'your account'} and everything saved with it: gems, items, progress, achievements, answers and any reports you sent. It cannot be undone.</p>
+        <label htmlFor="del-confirm" className="label mt-4">Type DELETE to confirm</label>
+        <input id="del-confirm" className="input" value={typed} onChange={(e) => setTyped(e.target.value)} autoComplete="off" />
+        <div className="mt-5 flex justify-end gap-2">
+          <button className="btn-ghost" onClick={() => setOpen(false)}>Cancel</button>
+          <button className="btn-primary bg-bad" disabled={typed.trim() !== 'DELETE' || busy} onClick={async () => {
+            setBusy(true)
+            try { await backend.deleteAccount(); setOpen(false); await refresh().catch(() => {}); toast({ title: 'Account deleted', body: 'Your data has been removed. You can keep playing as a new guest.' }) }
+            catch (e) { toast({ title: 'Account not deleted', body: friendlyError(e), tone: 'error' }) }
+            finally { setBusy(false) }
+          }}>Delete permanently</button>
+        </div>
+      </Modal>
     </div>
   )
 }

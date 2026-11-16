@@ -59,7 +59,7 @@ export function About() {
             : <p>This build runs without the online backend. Progress and practice gems are stored only in this browser. Connecting the Supabase backend enables accounts, password recovery, cross-device saves, leaderboards and server-verified gems.</p>}
         </section>
         <section id="privacy" className="scroll-mt-24"><h2 className="text-xl font-semibold mb-2">Privacy</h2>
-          <p>BibleQuest stores what it needs to run the game: your email (if you register), display name, avatar, progress, answers, gem history, items and settings. Leaderboards show only players who opt in, by display name. There is no advertising tracking. Error reports, if enabled by the operator, exclude your answers and personal details.</p></section>
+          <p>BibleQuest stores what it needs to run the game: your email (if you register), display name, avatar, progress, answers, gem history, items and settings. Leaderboards show only players who opt in, by display name. There is no advertising tracking. Error reports, if enabled by the operator, exclude your answers and personal details. Read the full <Link className="link" to="/privacy">Privacy policy</Link> and <Link className="link" to="/terms">Terms of use</Link>.</p></section>
         <section><h2 className="text-xl font-semibold mb-2">Accessibility</h2>
           <p>BibleQuest aims for WCAG 2.2 AA: keyboard play (number keys 1–4 answer), screen-reader labels, alt text for every illustration, adjustable text size, high contrast, light and dark themes, reduced motion and optional timers. <Link className="link" to="/settings">Open settings</Link>.</p></section>
       </div>

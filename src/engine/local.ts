@@ -8,7 +8,7 @@ import { hash, todayUTC, uuid } from '../lib/ids'
 import {
   ARENA_SIZE, DAILY_SIZE, GameError, LEVEL_SIZE,
   type AnswerResult, type Backend, type Catalog, type CompleteResult, type EarnedAchievement, type InventoryItem,
-  type LeaderRow, type PowerUpResult, type Profile, type Progress, type PublicQuestion, type PurchaseResult,
+  type LeaderRow, type PlayerStats, type PowerUpResult, type Profile, type Progress, type PublicQuestion, type PurchaseResult,
   type SessionStart, type Transaction, type Wallet,
 } from './types'
 
@@ -29,12 +29,36 @@ interface LocalState {
   achievements: EarnedAchievement[]
   sessions: Record<string, LocalSession>
   nextTx: number
+  /** Missed questions not yet answered correctly since, most recent last. */
+  wrong: string[]
+  /** Local dates (yyyy-mm-dd) on which a round was completed. */
+  activeDays: string[]
+}
+
+/** yyyy-mm-dd in the device's own time zone. */
+export function localDay(d = new Date()): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+const dayNum = (s: string) => Math.round(Date.UTC(+s.slice(0, 4), +s.slice(5, 7) - 1, +s.slice(8, 10)) / 86400000)
+
+/** Streaks from a list of active days, matching the server's get_player_stats. */
+export function computeStats(days: string[], today: string, reviewCount: number): PlayerStats {
+  const sorted = [...new Set(days)].sort()
+  let run = 0; let best = 0; let prev: number | null = null
+  for (const d of sorted) { const n = dayNum(d); run = prev !== null && n === prev + 1 ? run + 1 : 1; best = Math.max(best, run); prev = n }
+  const t = dayNum(today)
+  return {
+    today, best_streak: best, review_count: reviewCount,
+    current_streak: prev !== null && prev >= t - 1 ? run : 0,
+    played_today: prev === t,
+    active_days: sorted.filter((d) => dayNum(d) > t - 84),
+  }
 }
 
 function fresh(): LocalState {
   return {
     profile: { id: 'local-guest', display_name: 'Guest pilgrim', avatar_id: 'scroll', role: 'player', leaderboard_opt_in: false, preferences: {} },
-    wallet: { balance: 0, lifetime_earned: 0 }, txs: [], keys: [], inventory: [], progress: [], awards: [], achievements: [], sessions: {}, nextTx: 1,
+    wallet: { balance: 0, lifetime_earned: 0 }, txs: [], keys: [], inventory: [], progress: [], awards: [], achievements: [], sessions: {}, nextTx: 1, wrong: [], activeDays: [],
   }
 }
 
@@ -70,6 +94,7 @@ export class LocalBackend implements Backend {
 
   /** Reset all practice data on this device. */
   reset() { this.s = fresh(); this.save() }
+  async deleteAccount() { this.reset() }
 
   async getCatalog(): Promise<Catalog> {
     const levelCounts: Catalog['levelCounts'] = {}
@@ -136,7 +161,16 @@ export class LocalBackend implements Backend {
       for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]] }
       return { mode: 'arena', ids: pool.slice(0, ARENA_SIZE) }
     }
+    if (p[0] === 'review' && p.length === 1) {
+      const ids = this.reviewIds().slice(0, LEVEL_SIZE)
+      if (!ids.length) throw new GameError('nothing_to_review')
+      return { mode: 'review', ids }
+    }
     throw new GameError('invalid_level')
+  }
+
+  private reviewIds(): string[] {
+    return [...(this.s.wrong ?? [])].reverse().filter((id) => byId.get(id) && byId.get(id)!.game_mode !== 'sequence')
   }
 
   async startSession(levelKey: string): Promise<SessionStart> {
@@ -158,6 +192,9 @@ export class LocalBackend implements Backend {
     if (!ses.question_ids.includes(questionId)) throw new GameError('question_not_in_session')
     if (ses.answers[questionId]) throw new GameError('already_answered')
     ses.answers[questionId] = { correct }
+    this.s.wrong = (this.s.wrong ?? []).filter((id) => id !== questionId)
+    if (!correct) this.s.wrong.push(questionId)
+    if (this.s.wrong.length > 200) this.s.wrong = this.s.wrong.slice(-200)
     let award = 0
     if (correct && !this.s.awards.includes(questionId)) {
       this.s.awards.push(questionId)
@@ -174,7 +211,7 @@ export class LocalBackend implements Backend {
     const correct = choice === q.correct_index
     const points = q.game_mode === 'whoami' ? Math.max(20, 100 - 20 * (Math.max(1, Math.min(cluesUsed || 1, 5)) - 1)) : 100
     const r = this.record(sessionId, questionId, correct, points)
-    return { ...r, correct_index: q.correct_index, explanation: q.explanation, reference: q.reference_label }
+    return { ...r, correct_index: q.correct_index, explanation: q.explanation, reference: q.reference_label, verse_text: q.verse_text ?? null, translation: q.translation_id }
   }
 
   async submitSequence(sessionId: string, questionId: string, order: string[]): Promise<AnswerResult> {
@@ -182,7 +219,7 @@ export class LocalBackend implements Backend {
     if (!q || q.game_mode !== 'sequence') throw new GameError('question_not_found')
     const correct = order.length === q.options.length && order.every((o, i) => o === q.options[i])
     const r = this.record(sessionId, questionId, correct, 100)
-    return { ...r, correct_order: q.options, explanation: q.explanation, reference: q.reference_label }
+    return { ...r, correct_order: q.options, explanation: q.explanation, reference: q.reference_label, verse_text: q.verse_text ?? null }
   }
 
   async completeSession(sessionId: string): Promise<CompleteResult> {
@@ -193,6 +230,8 @@ export class LocalBackend implements Backend {
     if (Object.keys(ses.answers).length < total) throw new GameError('session_incomplete')
     const correct = Object.values(ses.answers).filter((a) => a.correct).length
     ses.status = 'completed'
+    const day = localDay()
+    this.s.activeDays = [...new Set([...(this.s.activeDays ?? []), day])].sort().slice(-400)
     const now = new Date().toISOString()
     const prev = this.s.progress.find((p) => p.level_key === ses.level_key)
     if (prev) Object.assign(prev, { best_correct: Math.max(prev.best_correct, correct), total_questions: total, times_completed: prev.times_completed + 1, last_played_at: now })
@@ -281,5 +320,6 @@ export class LocalBackend implements Backend {
   }
 
   async getLeaderboard(): Promise<LeaderRow[]> { return [] }
+  async getPlayerStats(): Promise<PlayerStats> { return computeStats(this.s.activeDays ?? [], localDay(), this.reviewIds().length) }
   async reportQuestion() { throw new GameError('accounts_unavailable', 'Reports are sent to editors through the online backend.') }
 }

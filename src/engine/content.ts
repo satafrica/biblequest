@@ -11,7 +11,7 @@ export interface FullQuestion {
   id: string; game_mode: 'picture' | 'whoami' | 'scripture' | 'sequence'; book_id: number; book: string; chapter: number
   verse_start: number | null; verse_end: number | null; reference_label: string; difficulty: 1 | 2 | 3 | 4; prompt: string
   clues: string[] | null; options: string[]; correct_index: number; explanation: string; hint: string | null
-  image_id: string | null; translation_id: string; tags: string[]; status: string
+  image_id: string | null; translation_id: string; tags: string[]; status: string; verse_text?: string | null
   verification: { reference_exists: boolean; keywords_found: boolean; checked_against: string; checked_at: string; human_review: string }
 }
 

@@ -79,7 +79,7 @@ export default function Account() {
         {msg && <p role={msg.tone === 'err' ? 'alert' : 'status'} className={`rounded-xl border p-3 text-sm ${msg.tone === 'err' ? 'border-bad/60 text-bad' : 'border-good/60'}`}>{msg.text}</p>}
         <button className="btn-primary" disabled={busy}>{busy ? 'Please wait…' : tab === 'signin' ? 'Sign in' : tab === 'signup' ? 'Create account' : 'Send reset link'}</button>
       </form>
-      <p className="mt-4 text-xs text-muted">We store your email, display name, progress and gem history to run the game. See <Link className="link" to="/about#privacy">privacy</Link>.</p>
+      <p className="mt-4 text-xs text-muted">We store your email, display name, progress and gem history to run the game. By creating an account you agree to the <Link className="link" to="/terms">Terms of use</Link>; see the <Link className="link" to="/privacy">Privacy policy</Link>.</p>
     </div>
   )
 }

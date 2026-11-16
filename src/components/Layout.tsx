@@ -86,6 +86,8 @@ export function Layout() {
             <Link className="hover:text-ink" to="/community">Community</Link>
             <Link className="hover:text-ink" to="/settings">Settings</Link>
             <Link className="hover:text-ink" to="/leaderboard">Leaderboards</Link>
+            <Link className="hover:text-ink" to="/privacy">Privacy</Link>
+            <Link className="hover:text-ink" to="/terms">Terms</Link>
             {staff && <Link className="hover:text-ink" to="/admin">Admin</Link>}
             {backend.kind === 'local' && <Link className="hover:text-ink" to="/admin">Content review</Link>}
           </nav>

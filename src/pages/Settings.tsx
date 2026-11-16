@@ -1,6 +1,9 @@
+import { Link } from 'react-router-dom'
 import { Monitor, Moon, Sun, Volume1, Volume2, VolumeX } from 'lucide-react'
+import { hapticsSupported, vibrate } from '../lib/haptics'
+import { speak, speechSupported } from '../lib/speech'
 import { playSound, unlockAudio } from '../lib/sounds'
-import { soundVolume } from '../state/prefs'
+import { soundVolume, speechRate } from '../state/prefs'
 import { useApp } from '../state/AppContext'
 import { PageHeader } from '../components/ui'
 import type { Prefs } from '../state/prefs'
@@ -44,6 +47,22 @@ export default function Settings() {
             <button type="button" className="btn-ghost btn-sm" disabled={prefs.sound === 'off'} onClick={() => { unlockAudio(); playSound('wrong', soundVolume(prefs)) }}>Play incorrect</button>
           </div>
         </div>
+        <div className="card flex items-start gap-3 p-5">
+          <input id="hp" type="checkbox" className="mt-1 h-5 w-5 accent-[rgb(var(--accent))]" checked={prefs.haptics} onChange={(e) => { update({ haptics: e.target.checked }); if (e.target.checked) vibrate('correct') }} />
+          <label htmlFor="hp"><span className="font-semibold">Vibration</span><span className="block text-sm text-muted">{hapticsSupported() ? 'A short buzz for correct and incorrect answers.' : 'A short buzz for answers. This browser does not support vibration (iPhone browsers do not), so this setting has no effect here.'}</span></label>
+        </div>
+        <div className="grid gap-2">
+          <div className="card flex items-start gap-3 p-5">
+            <input id="ra" type="checkbox" className="mt-1 h-5 w-5 accent-[rgb(var(--accent))]" checked={prefs.readAloudAuto} disabled={!speechSupported()} onChange={(e) => update({ readAloudAuto: e.target.checked })} />
+            <label htmlFor="ra"><span className="font-semibold">Read each question aloud automatically</span><span className="block text-sm text-muted">{speechSupported() ? 'Uses your device\'s built-in voice. A "Read aloud" button is always available during play, including for the verse after you answer.' : 'This browser does not offer a built-in voice, so read-aloud is unavailable here.'}</span></label>
+          </div>
+          {speechSupported() && (
+            <>
+              <Segmented label="Reading speed" value={prefs.speechRate} onChange={(v) => { update({ speechRate: v }); speak('In the beginning God created the heaven and the earth.', { rate: speechRate({ ...prefs, speechRate: v }) }) }}
+                options={[{ v: 'slow', label: 'Slower' }, { v: 'normal', label: 'Normal' }, { v: 'fast', label: 'Faster' }]} />
+            </>
+          )}
+        </div>
         <Segmented label="Motion" value={prefs.motion} onChange={(v) => update({ motion: v })} options={[{ v: 'system', label: 'Match device' }, { v: 'reduce', label: 'Reduce motion' }, { v: 'full', label: 'Full motion' }]} />
         <div className="card flex items-start gap-3 p-5">
           <input id="hc" type="checkbox" className="mt-1 h-5 w-5 accent-[rgb(var(--accent))]" checked={prefs.highContrast} onChange={(e) => update({ highContrast: e.target.checked })} />
@@ -54,6 +73,7 @@ export default function Settings() {
           <label htmlFor="tm"><span className="font-semibold">Timers in the Challenge Arena</span><span className="block text-sm text-muted">Turn off to answer at your own pace. Other games are never timed.</span></label>
         </div>
       </div>
+      <p className="mt-8 text-sm text-muted"><Link to="/about" className="link">About &amp; licensing</Link> · <Link to="/privacy" className="link">Privacy</Link> · <Link to="/terms" className="link">Terms of use</Link></p>
     </div>
   )
 }

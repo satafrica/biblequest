@@ -15,6 +15,7 @@ export function describeLevelKey(key: string, chapterTitle?: (id: string) => str
   if (p[0] in modeNames && p.length === 3) return `${modeNames[p[0]]} · ${DIFFICULTY_LABELS[Number(p[1]) as Difficulty]} ${p[2]}`
   if (p[0] === 'adv') return `Adventure · ${chapterTitle?.(p[1]) ?? p[1]}`
   if (p[0] === 'daily') return `Daily Challenge · ${p[1]}`
+  if (p[0] === 'review') return 'Review My Mistakes'
   if (p[0] === 'arena') return `Challenge Arena · ${DIFFICULTY_LABELS[Number(p[1]) as Difficulty]}`
   return key
 }

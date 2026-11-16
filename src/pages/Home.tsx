@@ -5,9 +5,12 @@ import { MODES } from '../game/modes'
 import { Gems, Illustration } from '../components/ui'
 import { describeLevelKey, nextLevel, recommendDifficulty, levelKey } from '../engine/levels'
 import { todayUTC } from '../lib/ids'
+import { ReviewCard, StreakCard } from '../components/Streak'
+import { usePlayerStats } from '../state/usePlayerStats'
 
 export default function Home() {
   const { catalog, progress, wallet, achievements, user, backend, profile } = useApp()
+  const stats = usePlayerStats()
   const hero = catalog.assets['hero_jerusalem']
   const today = todayUTC()
   const dailyDone = progress.some((p) => p.level_key === `daily:${today}` && p.times_completed > 0)
@@ -77,6 +80,11 @@ export default function Home() {
               : guest ? <Link to="/about#accounts" className="mt-1 inline-block text-xs link">How accounts work</Link>
               : <Link to="/profile" className="mt-1 inline-block text-xs link">Profile and settings</Link>}
           </div>
+        </section>
+
+        <section aria-label="Streak and review" className="mt-4 grid gap-3 md:grid-cols-2">
+          <StreakCard stats={stats} />
+          <ReviewCard stats={stats} />
         </section>
 
         {continueTo && (

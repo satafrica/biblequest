@@ -11,6 +11,7 @@ import Profile from './pages/Profile'
 import Settings from './pages/Settings'
 import Account, { NewPassword } from './pages/Account'
 import { About, Collection, Community } from './pages/Info'
+import { Privacy, Terms } from './pages/Legal'
 import GameRunner from './game/GameRunner'
 import { report } from './lib/monitor'
 
@@ -60,6 +61,8 @@ export default function App() {
               <Route path="account/new-password" element={<NewPassword />} />
               <Route path="about" element={<About />} />
               <Route path="community" element={<Community />} />
+              <Route path="privacy" element={<Privacy />} />
+              <Route path="terms" element={<Terms />} />
               <Route path="admin" element={<Suspense fallback={<div className="loader mx-auto my-20" />}><Admin /></Suspense>} />
               <Route path="*" element={<NotFound />} />
             </Route>

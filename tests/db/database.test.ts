@@ -102,9 +102,44 @@ describe('security + RLS', () => {
     const rows = await asUser(u, async c => (await c.query('select * from public.questions limit 5')).rows)
     expect(rows.length).toBe(0)
   })
-  it('the public view never exposes correct answers or explanations', async () => {
-    const cols = await asUser(null, async c => (await c.query('select * from public.published_questions limit 1')).fields.map(f => f.name))
-    expect(cols).not.toContain('correct_index'); expect(cols).not.toContain('explanation')
+  it('the answer-free view exposes no answers and is not readable directly', async () => {
+    const cols = (await sql('select * from public.published_questions limit 1')).fields.map(f => f.name)
+    expect(cols).not.toContain('correct_index'); expect(cols).not.toContain('explanation'); expect(cols).not.toContain('verse_text')
+    await expect(asUser(null, c => c.query('select * from public.published_questions limit 1'))).rejects.toThrow(/permission denied/)
+    const u = await newUser()
+    await expect(asUser(u, c => c.query('select * from public.published_questions limit 1'))).rejects.toThrow(/permission denied/)
+    const s = await rpc(u, 'start_session', ['picture:1:1'])
+    expect(Object.keys(s.questions[0])).not.toContain('correct_index')
+    expect(Object.keys(s.questions[0])).not.toContain('verse_text')
+  })
+  it('anyone can read published question counts, without content', async () => {
+    const rows = await asUser(null, async c => (await c.query('select * from public.published_question_counts()')).rows)
+    const total = rows.reduce((a: number, r: { n: string }) => a + Number(r.n), 0)
+    expect(total).toBe((await sql(`select count(*)::int n from public.questions where status='published'`)).rows[0].n)
+    expect(Object.keys(rows[0]).sort()).toEqual(['difficulty', 'game_mode', 'n'])
+  })
+  it('role helpers are not callable through the API by guests', async () => {
+    for (const f of ['is_staff', 'is_admin', 'current_role_name'])
+      await expect(asUser(null, c => c.query(`select public.${f}()`))).rejects.toThrow(/permission denied/)
+    const u = await newUser()
+    await expect(asUser(u, c => c.query('select public.is_admin()'))).rejects.toThrow(/permission denied/)
+  })
+  it('guests cannot read staff-only rows (drafts, unpublished questions)', async () => {
+    await sql(`update public.store_items set active=false where id='hint'`)
+    try {
+      const rows = await asUser(null, async c => (await c.query(`select id from public.store_items where id='hint'`)).rows)
+      expect(rows.length).toBe(0)
+      const ed = await newUser('editor')
+      const r2 = await asUser(ed, async c => (await c.query(`select id from public.store_items where id='hint'`)).rows)
+      expect(r2.length).toBe(1)
+    } finally { await sql(`update public.store_items set active=true where id='hint'`) }
+  })
+  it('every foreign key in public has a covering index', async () => {
+    const missing = (await sql(`
+      select c.conname from pg_constraint c join pg_namespace n on n.oid=c.connamespace and n.nspname='public'
+       where c.contype='f' and not exists (select 1 from pg_index i where i.indrelid=c.conrelid
+         and (i.indkey::int2[])[0:array_length(c.conkey,1)-1] = c.conkey)`)).rows
+    expect(missing).toEqual([])
   })
   it('players cannot write wallets, transactions or inventory directly', async () => {
     const u = await newUser()
@@ -397,5 +432,88 @@ describe('admin + editorial workflow', () => {
     for (const u of [shy, bold]) await playLevel(u, 'arena:1')
     const board = await asUser(null, async c => (await c.query(`select * from public.get_leaderboard('weekly')`)).rows)
     expect(board.map(r => r.display_name)).toEqual(['Bold'])
+  })
+})
+
+describe('gameplay upgrades: verse text, review, streaks', () => {
+  it('returns the KJV verse text only after an answer is locked in', async () => {
+    const u = await newUser()
+    const s = await rpc(u, 'start_session', ['scripture:1:1'])
+    const q = s.questions[0]
+    expect(q.verse_text).toBeUndefined()
+    const r = await rpc(u, 'submit_answer', [s.session_id, q.id, await answerKey(q.id), 1])
+    const expected = (await sql('select verse_text from public.questions where id=$1', [q.id])).rows[0].verse_text
+    expect(r.verse_text).toBe(expected); expect(r.verse_text.length).toBeGreaterThan(10); expect(r.translation).toBe('KJV')
+  })
+  it('review replays missed questions until answered correctly, with no extra bonuses', async () => {
+    const u = await newUser()
+    await expect(rpc(u, 'start_session', ['review'])).rejects.toThrow(/nothing_to_review/)
+    const { session } = await playLevel(u, 'picture:1:1', false)
+    const missed = session.questions.map((q: { id: string }) => q.id)
+    expect((await rpc(u, 'get_player_stats', ['UTC'])).review_count).toBe(missed.length)
+    const before = await balance(u)
+    const rv = await rpc(u, 'start_session', ['review'])
+    expect(rv.questions.map((q: { id: string }) => q.id).sort()).toEqual([...missed].sort())
+    // answer the first one correctly, the rest wrong
+    for (const [i, q] of rv.questions.entries()) {
+      const k = await answerKey(q.id)
+      await rpc(u, 'submit_answer', [rv.session_id, q.id, i === 0 ? k : (k + 1) % q.options.length, 1])
+    }
+    const done = await rpc(u, 'complete_session', [rv.session_id])
+    expect(done.bonuses ?? []).toEqual([])
+    expect(await balance(u)).toBe(before + 10) // one first-time correct answer, nothing else
+    const left = await rpc(u, 'start_session', ['review'])
+    expect(left.questions.map((q: { id: string }) => q.id)).not.toContain(rv.questions[0].id)
+    expect(left.questions.length).toBe(missed.length - 1)
+  })
+  it('counts daily streaks from completed rounds in the player time zone', async () => {
+    const u = await newUser()
+    let st = await rpc(u, 'get_player_stats', ['America/New_York'])
+    expect(st.current_streak).toBe(0); expect(st.active_days).toEqual([]); expect(st.timezone).toBe('America/New_York')
+    await playLevel(u, 'picture:1:1')
+    // back-date two more completed rounds: yesterday and 3 days ago (a gap)
+    const sess = (await sql(`select id from public.game_sessions where user_id=$1`, [u])).rows[0].id
+    for (const daysAgo of [1, 3])
+      await sql(`insert into public.game_sessions (user_id, game_mode, level_key, difficulty, question_ids, status, started_at, completed_at)
+                 select user_id, game_mode, level_key, difficulty, question_ids, 'completed', now() - $2 * interval '1 day', now() - $2 * interval '1 day'
+                   from public.game_sessions where id=$1`, [sess, daysAgo])
+    st = await rpc(u, 'get_player_stats', ['UTC'])
+    expect(st.current_streak).toBe(2); expect(st.best_streak).toBe(2); expect(st.played_today).toBe(true)
+    expect(st.active_days.length).toBe(3)
+    // unknown time zones fall back to UTC instead of failing
+    expect((await rpc(u, 'get_player_stats', ['Not/AZone'])).timezone).toBe('UTC')
+    await expect(rpc(null, 'get_player_stats', ['UTC'])).rejects.toThrow(/not_authenticated|permission denied/)
+  })
+  it('a streak survives until the end of the next day, then resets', async () => {
+    const u = await newUser()
+    await playLevel(u, 'picture:1:1')
+    await sql(`update public.game_sessions set completed_at = now() - interval '1 day' where user_id=$1`, [u])
+    let st = await rpc(u, 'get_player_stats', ['UTC'])
+    expect(st.current_streak).toBe(1); expect(st.played_today).toBe(false)
+    await sql(`update public.game_sessions set completed_at = now() - interval '2 days' where user_id=$1`, [u])
+    st = await rpc(u, 'get_player_stats', ['UTC'])
+    expect(st.current_streak).toBe(0); expect(st.best_streak).toBe(1)
+  })
+})
+
+describe('account deletion', () => {
+  it('a player can delete their own account and all linked data, and nobody else can', async () => {
+    const u = await newUser(); const other = await newUser()
+    await playLevel(u, 'picture:1:1')
+    await asUser(u, c => c.query(`insert into public.reports (reporter_id, target_type, target_id, reason) values (auth.uid(), 'question', 'x', 'typo here')`))
+    await expect(rpc(null, 'delete_my_account', [])).rejects.toThrow(/permission denied|not_authenticated/)
+    await rpc(u, 'delete_my_account', [])
+    for (const t of ['profiles', 'gem_wallets']) expect((await sql(`select count(*)::int n from public.${t} where ${t === 'profiles' ? 'id' : 'user_id'}=$1`, [u])).rows[0].n).toBe(0)
+    for (const t of ['gem_transactions', 'game_sessions', 'player_progress', 'question_awards'])
+      expect((await sql(`select count(*)::int n from public.${t} where user_id=$1`, [u])).rows[0].n).toBe(0)
+    expect((await sql(`select count(*)::int n from public.reports where reporter_id=$1`, [u])).rows[0].n).toBe(0)
+    expect((await sql(`select count(*)::int n from auth.users where id=$1`, [other])).rows[0].n).toBe(1)
+  })
+  it('deleting a staff member keeps their reviewed content', async () => {
+    const boss = await newUser('admin')
+    const qid = (await sql(`select id from public.questions where status='published' order by id limit 1`)).rows[0].id
+    await sql(`update public.questions set created_by=$1 where id=$2`, [boss, qid])
+    await rpc(boss, 'delete_my_account', [])
+    expect((await sql(`select created_by from public.questions where id=$1`, [qid])).rows[0].created_by).toBeNull()
   })
 })

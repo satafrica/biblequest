@@ -7,8 +7,13 @@ export interface Prefs {
   motion: 'system' | 'reduce' | 'full'
   timers: boolean
   sound: 'off' | 'soft' | 'normal'
+  /** Vibrate on answers where the device supports it. */
+  haptics: boolean
+  /** Read each question aloud automatically (a Read aloud button is always available). */
+  readAloudAuto: boolean
+  speechRate: 'slow' | 'normal' | 'fast'
 }
-export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal' }
+export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal', haptics: true, readAloudAuto: false, speechRate: 'normal' }
 const KEY = 'bq.prefs.v1'
 
 export const loadPrefs = (): Prefs => ({ ...DEFAULT_PREFS, ...readJSON<Partial<Prefs>>(KEY, {}) })
@@ -37,3 +42,5 @@ export function applyPrefs(p: Prefs, palette: string | null) {
 }
 
 export const soundVolume = (p: Prefs): number => (p.sound === 'off' ? 0 : p.sound === 'soft' ? 0.45 : 1)
+
+export const speechRate = (p: Prefs): number => (p.speechRate === 'slow' ? 0.8 : p.speechRate === 'fast' ? 1.2 : 1)

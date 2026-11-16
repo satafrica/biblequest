@@ -34,6 +34,9 @@ export interface AnswerResult {
   correct_order?: string[]
   explanation: string
   reference: string
+  /** KJV passage for the reference, returned only after the answer is locked in. */
+  verse_text?: string | null
+  translation?: string
   points: number
   gems_awarded: number
   first_time_award: boolean
@@ -90,6 +93,16 @@ export interface AuthUser { id: string; email: string | null; isAnonymous: boole
 
 export interface LeaderRow { display_name: string; correct: number; rounds: number }
 
+/** Daily activity. A day counts when at least one round is completed. */
+export interface PlayerStats {
+  today: string            // yyyy-mm-dd in the player's time zone
+  current_streak: number
+  best_streak: number
+  played_today: boolean
+  active_days: string[]    // yyyy-mm-dd, most recent ~12 weeks
+  review_count: number     // missed questions not yet answered correctly
+}
+
 export class GameError extends Error {
   code: string
   constructor(code: string, message?: string) { super(message ?? code); this.code = code }
@@ -127,6 +140,9 @@ export interface Backend {
   setEquipped(itemId: string, equipped: boolean): Promise<void>
   getLeaderboard(period: 'daily' | 'weekly'): Promise<LeaderRow[]>
   reportQuestion(questionId: string, reason: string): Promise<void>
+  getPlayerStats(): Promise<PlayerStats>
+  /** Permanently delete the signed-in account and its data (cloud), or this device's data (local). */
+  deleteAccount(): Promise<void>
 }
 
 export const ERROR_MESSAGES: Record<string, string> = {
@@ -144,6 +160,7 @@ export const ERROR_MESSAGES: Record<string, string> = {
   not_authenticated: 'Please start a guest session or sign in to play.',
   offline: 'You appear to be offline. Reconnect to continue.',
   forbidden: 'You do not have permission to do that.',
+  nothing_to_review: 'Nothing to review right now. Questions you miss will appear here.',
 }
 export function friendlyError(e: unknown): string {
   const code = e instanceof GameError ? e.code : e instanceof Error ? e.message : String(e)

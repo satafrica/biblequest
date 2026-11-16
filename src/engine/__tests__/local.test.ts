@@ -135,3 +135,42 @@ describe('adaptive difficulty', () => {
     expect(recommendDifficulty([row('picture:3:1', 5, '2026-01-02')], 'picture')).toBe(3)
   })
 })
+
+describe('gameplay upgrades (local preview)', () => {
+  it('returns the KJV verse text with each answer', async () => {
+    const s = await b.startSession('scripture:1:1')
+    const q = byId.get(s.questions[0].id)!
+    expect('verse_text' in s.questions[0]).toBe(false)
+    const r = await b.submitAnswer(s.session_id, q.id, q.correct_index, 1)
+    expect(r.verse_text && r.verse_text.length).toBeGreaterThan(10)
+    expect(r.verse_text).not.toMatch(/ [,.;:]/)
+  })
+  it('review mode replays missed questions until answered correctly', async () => {
+    await expect(b.startSession('review')).rejects.toThrow(/nothing_to_review/)
+    const s = await b.startSession('picture:1:1')
+    const first = byId.get(s.questions[0].id)!
+    for (const q of s.questions) { const f = byId.get(q.id)!; await b.submitAnswer(s.session_id, q.id, (f.correct_index + 1) % f.options.length, 1) }
+    await b.completeSession(s.session_id)
+    expect((await b.getPlayerStats()).review_count).toBe(s.questions.length)
+    const rv = await b.startSession('review')
+    expect(rv.questions.length).toBe(s.questions.length)
+    await b.submitAnswer(rv.session_id, first.id, first.correct_index, 1)
+    expect((await b.getPlayerStats()).review_count).toBe(s.questions.length - 1)
+  })
+  it('computes streaks like the server', async () => {
+    const { computeStats } = await import('../local')
+    const st = computeStats(['2026-11-10', '2026-11-13', '2026-11-14', '2026-11-15'], '2026-11-16', 0)
+    expect(st.current_streak).toBe(3); expect(st.best_streak).toBe(3); expect(st.played_today).toBe(false)
+    expect(computeStats(['2026-11-13'], '2026-11-16', 0).current_streak).toBe(0)
+    expect(computeStats(['2026-11-15', '2026-11-16'], '2026-11-16', 0)).toMatchObject({ current_streak: 2, played_today: true })
+    await play(b, 'picture:1:1')
+    const mine = await b.getPlayerStats()
+    expect(mine.current_streak).toBe(1); expect(mine.played_today).toBe(true)
+  })
+  it('share text shows the score pattern but no answers', async () => {
+    const { resultText } = await import('../../lib/share')
+    const t = resultText('Picture Bible Quiz · Beginner 1', [true, false, true])
+    expect(t).toContain('2/3 correct'); expect(t).toContain('\u25A0\u25A1\u25A0')
+    expect(t.split('\n').length).toBe(2)
+  })
+})

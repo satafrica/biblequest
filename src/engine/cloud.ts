@@ -5,7 +5,7 @@ import { supabase } from '../lib/supabase'
 import {
   GameError,
   type Achievement, type Adventure, type AnswerResult, type Asset, type Backend, type Catalog, type CompleteResult,
-  type EarnedAchievement, type InventoryItem, type LeaderRow, type PowerUpResult, type Profile, type Progress,
+  type EarnedAchievement, type InventoryItem, type LeaderRow, type PlayerStats, type PowerUpResult, type Profile, type Progress,
   type PurchaseResult, type SessionStart, type StoreItem, type Transaction, type Wallet,
 } from './types'
 
@@ -74,7 +74,7 @@ export class CloudBackend implements Backend {
 
   async getCatalog(): Promise<Catalog> {
     const [qs, advs, chs, store, ach, assets, rules] = await Promise.all([
-      this.sb.from('published_questions').select('game_mode,difficulty'),
+      this.sb.rpc('published_question_counts'),
       this.sb.from('adventures').select('*').eq('status', 'published').order('sort_order'),
       this.sb.from('adventure_chapters').select('*').eq('status', 'published').order('position'),
       this.sb.from('store_items').select('*').eq('active', true).order('sort_order'),
@@ -84,9 +84,11 @@ export class CloudBackend implements Backend {
     ])
     for (const r of [qs, advs, chs, store, ach, assets, rules]) if (r.error) fail(r.error)
     const levelCounts: Catalog['levelCounts'] = {}
-    for (const q of qs.data as { game_mode: string; difficulty: number }[]) {
+    let totalQuestions = 0
+    for (const q of (qs.data ?? []) as { game_mode: string; difficulty: number; n: number }[]) {
       levelCounts[q.game_mode] ??= {}
-      levelCounts[q.game_mode][q.difficulty] = (levelCounts[q.game_mode][q.difficulty] ?? 0) + 1
+      levelCounts[q.game_mode][q.difficulty] = Number(q.n)
+      totalQuestions += Number(q.n)
     }
     const assetMap: Record<string, Asset> = {}
     for (const a of assets.data as Record<string, string | number | null>[]) {
@@ -106,7 +108,7 @@ export class CloudBackend implements Backend {
     return {
       levelCounts, adventures, store: storeItems, achievements: ach.data as Achievement[], assets: assetMap,
       rewards: Object.fromEntries((rules.data as { id: string; gems: number }[]).map((r) => [r.id, r.gems])),
-      totalQuestions: (qs.data ?? []).length,
+      totalQuestions,
     }
   }
 
@@ -199,6 +201,18 @@ export class CloudBackend implements Backend {
   }
   async setEquipped(itemId: string, equipped: boolean) { await this.rpc('set_item_equipped', { p_item: itemId, p_equipped: equipped }) }
   async getLeaderboard(period: 'daily' | 'weekly') { return this.rpc<LeaderRow[]>('get_leaderboard', { p_period: period }) }
+  async getPlayerStats() {
+    if (!this.current) return { today: '', current_streak: 0, best_streak: 0, played_today: false, active_days: [], review_count: 0 }
+    let tz = 'UTC'
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC' } catch { /* keep UTC */ }
+    return this.rpc<PlayerStats>('get_player_stats', { p_tz: tz })
+  }
+  async deleteAccount() {
+    this.uid()
+    await this.rpc('delete_my_account', {})
+    await this.sb.auth.signOut({ scope: 'local' }).catch(() => {})
+    try { for (const k of Object.keys(localStorage)) if (k.startsWith('bq.active')) localStorage.removeItem(k) } catch { /* storage blocked */ }
+  }
   async reportQuestion(questionId: string, reason: string) {
     const { error } = await this.sb.from('reports').insert({ reporter_id: this.uid(), target_type: 'question', target_id: questionId, reason })
     if (error) fail(error)

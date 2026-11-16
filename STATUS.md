@@ -1,6 +1,6 @@
 # Development status report
 
-Date: 14 November 2026 · Version 1.0.0-preview.1
+Date: 16 November 2026 · Version 1.0.0-preview.2
 
 Status labels:
 
@@ -13,10 +13,11 @@ Status labels:
 
 | Suite | Command | Result |
 |---|---|---|
-| Unit: game rules, rewards, store, power-ups, adaptive difficulty | `npm test` | 12 / 12 passed |
-| Database integration: real migrations, seed and RLS on PostgreSQL 18 (embedded), with a stub of Supabase's `auth` schema | `npm run test:db` | 43 / 43 passed |
-| Browser: guest plays a full level, gems persist across reload, replay earns nothing, buy a hint with confirmation, dark mode and text size persist, locked content shown honestly, correct/incorrect answer sounds and the sound-off setting. Desktop Chrome and Pixel 7 | `npm run test:e2e` | 10 / 10 passed |
-| Accessibility: axe WCAG 2.0/2.1/2.2 A + AA rules on 12 routes × light/dark × desktop/mobile | `npm run test:e2e` | 48 / 48 passed |
+| Unit: game rules, rewards, store, power-ups, adaptive difficulty | `npm test` | 16 / 16 passed |
+| Database integration: real migrations, seed and RLS on PostgreSQL 18 (embedded), with a stub of Supabase's `auth` schema | `npm run test:db` | 53 / 53 passed |
+| Browser (desktop Chrome and Pixel 7): full level, gems persist, replay earns nothing, hint purchase, dark mode and text size, locked content, answer sounds, plus the new KJV verse after answers, read-aloud, vibration, share, streak card and calendar, review-my-mistakes, Privacy and Terms | `npm run test:e2e` | all 74 passed (gameplay file rerun after the last small fix: 8 / 8) |
+| Accessibility: axe WCAG 2.0/2.1/2.2 A + AA rules on 14 routes (now including Privacy and Terms) × light/dark × desktop/mobile | `npm run test:e2e` | included in the 74 |
+| Live gameplay against the real Supabase project (`tests/live/gameplay.spec.ts`) | `npx playwright test -c playwright.live.config.ts tests/live/gameplay.spec.ts` | 1 / 1 passed |
 | Production build, and a check that the online build excludes the answer key | `npm run build` | Passed |
 | Hosted preview: full level played, no page errors | manual Playwright run | Passed |
 
@@ -39,6 +40,16 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Responsive design in the brand palette; light, dark and high-contrast; text sizes; reduced motion; keyboard play; mobile tab bar.
 - Answer sounds: a rising chime for correct, a soft low tone for incorrect, and a short arpeggio when a round ends. They are generated in the browser (no audio files or licences), can be set to Off, Soft or Normal in Settings, and are never the only signal. Not yet checked by ear on a physical phone.
 - PWA: manifest, icons, offline app shell (service worker registration checked locally).
+- Gameplay upgrades (16 November):
+  - After every answer, the KJV verse is shown (up to 6 verses), with a "Read aloud" button. Story Sequencing shows a short verse line per event.
+  - Read question aloud, optional automatic reading and reading speed, using the device's built-in voice.
+  - Vibration on right/wrong answers and at round end (can be turned off).
+  - Share result: score pattern (■□) and the site address, never the answers. Falls back to copying; shows a note if neither is available.
+  - Review my mistakes: replays questions you got wrong until you get them right (server-side in online mode).
+  - Daily streaks: 7-day card on Home, month calendar on Profile, current and best streak, using the player's time zone.
+- Privacy policy and Terms of use pages (`/privacy`, `/terms`), linked from the footer, Settings, About, Profile and the sign-up form. Plain-language drafts, not legal advice. The contact address comes from `VITE_CONTACT_EMAIL`, which is not set yet.
+- Delete my account (online mode, Profile): type DELETE to confirm. It removes the player's data; content they edited as staff is kept.
+- Spacing artifacts from the KJV source ("LORD ,") are cleaned in prompts and verses (14 prompts changed; answers unchanged).
 
 ## Live Supabase project (16 November 2026)
 
@@ -48,7 +59,20 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Auth: anonymous guest sign-ins are on; email sign-up with email confirmation is on. The Site URL is still `http://localhost:3000` and must be changed to the real address once the site is hosted.
 - **Tested live** (`tests/live`, Playwright desktop Chrome against a local server of the online build): a guest played a full 8-question level and earned 80 gems, which survived a reload. The guest added an email and kept the gems, set a password and bought a 30-gem hint. A second, fresh browser then signed in with that email and password and showed 50 gems. Database check: balance 50, 5 ledger entries, hint ×1 in inventory.
 - For that test only, email confirmation was switched off and 8 picture questions were published. Both were reverted afterwards, and the test accounts were deleted.
-- Not yet tested: the real confirmation and password-reset emails, phones, and a hosted address. Supabase's built-in email sender has a low hourly limit; add custom SMTP before launch.
+- Not yet tested: the real confirmation and password-reset emails, phones, and a hosted address. Supabase's built-in email sender is limited to 2 emails per hour; add custom SMTP before launch. CAPTCHA is not enabled.
+
+### Security and performance hardening (applied live 16 November)
+
+- Migrations `20261116000005_hardening_and_gameplay.sql` and `20261116000006_merge_read_policies.sql` were run on the live project, and verse text was added to all 324 questions.
+- Role checks moved to a private schema. Every policy was rewritten to name its roles and evaluate the user once per query. A bug in the groups policy was fixed. The `published_questions` view no longer bypasses security, and a counts function replaces it for visitors. All 20 foreign keys are indexed. Deleting a user no longer fails because of content they edited.
+- Auth: minimum password length raised from 6 to 8 (the app already required 8). Localhost addresses were added to the redirect allow list. The Site URL is still `http://localhost:3000`.
+- The project is hosted in AWS us-east-2 (Ohio, United States), as the Privacy page says.
+- Supabase advisors after the change:
+  - Security: the earlier ERROR (security-definer view) is gone.
+  - Remaining warnings are by design: anonymous guest sign-ins; game and admin functions callable by signed-in users (each checks permissions inside); the leaderboard and question-count functions are public; `story_sequences` is locked with no policy (answers are read only inside functions).
+  - Performance: the 15 per-row auth warnings, 20 unindexed foreign keys and duplicate read policies are gone. What remains is 22 "unused index" notes, which is expected with no traffic yet.
+- Live gameplay test: a guest played a picture level and all 8 answers showed the verse. Share was offered, the streak showed 1 day, the review round replayed the 5 missed questions with verses, and deleting the account returned the player to a new guest with 0 gems. For this test only, the 92 picture questions were published; they were set back to `review` and the test users were deleted. Live database now: 0 users, 324 questions in `review`.
+- The earlier sign-up/second-device live test (`step1`/`step2`) was not rerun after this change.
 
 ## Built, not yet tested against live Supabase
 
@@ -66,7 +90,9 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - More illustrations: 20 of the targeted 100–150 exist.
 - Multiplayer, friends and groups: database tables exist, but the features are switched off and labelled "Not yet available".
 - Moving UI text into translation files (i18n) and adding a second Bible translation.
-- Native app builds, store listings, privacy policy and terms pages.
+- Native app builds and store listings.
+- Legal review of the Privacy and Terms drafts, and a public contact email (`VITE_CONTACT_EMAIL`).
+- Read-aloud and vibration on a physical phone (tested only with browser stand-ins).
 
 ## Blocked: needs the project owner
 

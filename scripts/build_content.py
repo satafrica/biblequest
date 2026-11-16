@@ -34,9 +34,23 @@ def parse_ref(ref):
     if v2 > len(chapters[ch-1]) or v1 < 1 or v2 < v1: raise ValueError(f"verse out of range {ref}")
     return book, ch, v1, v2
 
+def clean(text):
+    """Tidy spacing artifacts in the source text (e.g. 'earth ,' -> 'earth,')."""
+    return re.sub(r" +([.,;:?!])", r"\1", text).strip()
+
 def passage(ref):
     book, ch, v1, v2 = parse_ref(ref)
-    return " ".join(KJV[BOOK_IDX[book]]["chapters"][ch-1][v1-1:v2])
+    return clean(" ".join(KJV[BOOK_IDX[book]]["chapters"][ch-1][v1-1:v2]))
+
+def verse_text(ref, max_verses=6, max_chars=700):
+    """KJV passage shown to the player after answering. Long passages are shortened, never rewritten."""
+    book, ch, v1, v2 = parse_ref(ref)
+    verses = KJV[BOOK_IDX[book]]["chapters"][ch-1][v1-1:v2]
+    text = clean(" ".join(verses[:max_verses]))
+    cut = len(verses) > max_verses
+    if len(text) > max_chars:
+        text = text[:max_chars].rsplit(" ", 1)[0]; cut = True
+    return text + (" \u2026" if cut else "")
 
 def check_keywords(qid, ref, kws):
     try: text = passage(ref)
@@ -143,6 +157,12 @@ for (sid, title, diff, events) in SEQUENCES:
     q["events_refs"] = [r for (_, r, _) in events]
     questions.append(q)
 
+for q in questions:
+    if q["game_mode"] == "sequence":
+        q["verse_text"] = "\n".join(f"{r}: {verse_text(r, 2, 220)}" for r in q["events_refs"])
+    else:
+        q["verse_text"] = verse_text(q["reference_label"])
+
 ids = [q["id"] for q in questions]
 dups = {i for i in ids if ids.count(i) > 1}
 if dups: errors.append(f"duplicate ids: {dups}")
@@ -220,10 +240,10 @@ for a in ASSETS:
                   lit("AI-generated for BibleQuest (GPT Image); confirm commercial-use terms of the generator before release"), "true",
                   lit(a["interpretation_note"]), lit(a["alt"]), lit(a["path"]), "1200", lit(a.get("height", 900)), "'review'"]) + ") on conflict (id) do nothing;")
 for q in questions:
-    out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification) values ("
+    out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification, verse_text) values ("
       + ",".join([lit(q["id"]), lit(q["game_mode"]), str(q["book_id"]), str(q["chapter"]), str(q["verse_start"]), str(q["verse_end"]),
                   lit(q["reference_label"]), str(q["difficulty"]), lit(q["prompt"]), lit(q["clues"]), lit(q["options"]), str(q["correct_index"]),
-                  lit(q["explanation"]), lit(q["hint"]), lit(q["image_id"]), lit(q.get("image_alt")), "'KJV'", arr(q["tags"]), "'review'", lit(q["verification"])])
+                  lit(q["explanation"]), lit(q["hint"]), lit(q["image_id"]), lit(q.get("image_alt")), "'KJV'", arr(q["tags"]), "'review'", lit(q["verification"]), lit(q["verse_text"])])
       + ") on conflict (id) do nothing;")
 for i, adv in enumerate(adventures):
     out.append(f"insert into public.adventures (id, title, summary, testament, image_id, sort_order, status) values ({lit(adv['id'])},{lit(adv['title'])},{lit(adv['summary'])},{lit(adv['testament'])},{lit(adv['image_id'])},{i},'review') on conflict (id) do nothing;")

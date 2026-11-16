@@ -15,3 +15,4 @@ dist-online
 .env.online
 tests/live/state.json
 tests/live/step*.json
+tests/live/gameplay.json
