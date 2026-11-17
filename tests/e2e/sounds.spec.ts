@@ -28,22 +28,24 @@ async function choose(page: Page, wantCorrect: boolean) {
   return notes(page)
 }
 
-test('a correct answer plays the rising chime, a wrong answer plays the low tone', async ({ page }) => {
+test('a correct answer plays the bright sparkle, a wrong answer plays the low tone', async ({ page }) => {
   await page.addInitScript(recorder)
   await page.goto('./#/game/scripture%3A1%3A1')
   const right = await choose(page, true)
-  expect(right).toContain(659) // E5, first note of the correct chime
+  expect(right).toContain(988) // B5, first note of the correct sparkle
   expect(right).not.toContain(466)
   await page.getByRole('button', { name: /Next question/ }).click()
   const wrong = await choose(page, false)
   expect(wrong).toContain(466) // low tone of the incorrect sound
-  expect(wrong).not.toContain(659)
+  expect(wrong).not.toContain(988)
 })
 
 test('no sounds play when sound effects are off', async ({ page }) => {
   await page.addInitScript(recorder)
   await page.goto('./#/settings')
-  await page.getByRole('radio', { name: 'Off' }).check({ force: true })
+  const off = page.getByRole('radio', { name: 'Off' })
+  await page.locator('label', { hasText: /^Off$/ }).click()
+  await expect(off).toBeChecked()
   await page.goto('./#/game/scripture%3A1%3A2')
   const group = page.getByRole('group', { name: 'Answer options' })
   await expect(group).toBeVisible()

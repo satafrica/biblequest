@@ -36,6 +36,21 @@ function bell(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, du
   }
 }
 
+/** A bright, glassy "ting": a sine plus a slightly detuned twin for shimmer and a high sparkle partial. */
+function sparkle(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, dur: number, peak: number) {
+  for (const [mult, gainMult, d] of [[1, 1, dur], [1.004, 0.5, dur], [4, 0.12, dur * 0.4]] as const) {
+    const osc = ac.createOscillator()
+    const g = ac.createGain()
+    osc.type = 'sine'
+    osc.frequency.setValueAtTime(freq * mult, at)
+    g.gain.setValueAtTime(0.0001, at)
+    g.gain.exponentialRampToValueAtTime(peak * gainMult, at + 0.006)
+    g.gain.exponentialRampToValueAtTime(0.0001, at + d)
+    osc.connect(g).connect(out)
+    osc.start(at); osc.stop(at + d + 0.05)
+  }
+}
+
 /** A gentle, low "not quite" tone: a softened triangle wave sliding down. */
 function soft(ac: BaseAudioContext, out: AudioNode, from: number, to: number, at: number, dur: number, peak: number) {
   const osc = ac.createOscillator()
@@ -64,9 +79,11 @@ function schedule(ac: BaseAudioContext, kind: Sound, volume: number) {
   out.connect(ac.destination)
   const t = ac.currentTime + 0.01
   if (kind === 'correct') {
-    // Rising major third (E5, then G#5): bright and short.
-    bell(ac, out, 659.25, t, 0.45, 0.35)
-    bell(ac, out, 830.61, t + 0.09, 0.6, 0.35)
+    // Bright "ting-TING": a quick B5 leaping up a fourth to a ringing E6,
+    // with a soft G#5 underneath for warmth.
+    sparkle(ac, out, 987.77, t, 0.22, 0.3)
+    sparkle(ac, out, 1318.51, t + 0.08, 0.7, 0.34)
+    bell(ac, out, 830.61, t + 0.08, 0.5, 0.12)
   } else if (kind === 'wrong') {
     // Two low descending notes: clear, but not harsh.
     // Pitched high enough to be heard on phone speakers.

@@ -38,7 +38,7 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Row-level security: players read only their own data. All writes go through database functions. Only published content is visible.
 - Editorial workflow in the database: draft → review → approved → published, publishing for admins only, reference-validation trigger, audit log.
 - Responsive design in the brand palette; light, dark and high-contrast; text sizes; reduced motion; keyboard play; mobile tab bar.
-- Answer sounds: a rising chime for correct, a soft low tone for incorrect, and a short arpeggio when a round ends. They are generated in the browser (no audio files or licences), can be set to Off, Soft or Normal in Settings, and are never the only signal. Not yet checked by ear on a physical phone.
+- Answer sounds: a bright "ting-TING" sparkle for correct (changed 17 November at the owner's request), a soft low tone for incorrect, and a short arpeggio when a round ends. They are generated in the browser (no audio files or licences), can be set to Off, Soft or Normal in Settings, and are never the only signal. Not yet checked by ear on a physical phone.
 - PWA: manifest, icons, offline app shell (service worker registration checked locally).
 - Gameplay upgrades (16 November):
   - After every answer, the KJV verse is shown (up to 6 verses), with a "Read aloud" button. Story Sequencing shows a short verse line per event.
@@ -76,7 +76,7 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 
 ## Netlify draft (17 November 2026)
 
-- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afba2b32e394b73c176e21a--biblequest-game.netlify.app (replaced the earlier draft 6afba0a9… so it includes the testament choice). Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
+- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afba730f08390d07b812bd7--biblequest-game.netlify.app (latest draft: includes the testament choice and the new correct-answer sound; replaces drafts 6afba0a9… and 6afba2b3…). Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
 - The security headers from `netlify.toml` are served (checked: Content-Security-Policy, X-Frame-Options, HSTS).
 - Supabase Auth: the Site URL is now the draft address. Redirects are allowed for `https://*--biblequest-game.netlify.app/**`, `https://biblequest-game.netlify.app/**` and localhost.
 - **Tested on the hosted draft** (Playwright, Pixel 7 emulation, against live Supabase): the gameplay test passed with 8/8 verses, streak, a 5-question review round, account deletion and no page errors. The 92 picture questions were published only for this run, then set back to `review`, and the test users were deleted.
