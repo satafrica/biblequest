@@ -74,6 +74,15 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Live gameplay test: a guest played a picture level and all 8 answers showed the verse. Share was offered, the streak showed 1 day, the review round replayed the 5 missed questions with verses, and deleting the account returned the player to a new guest with 0 gems. For this test only, the 92 picture questions were published; they were set back to `review` and the test users were deleted. Live database now: 0 users, 324 questions in `review`.
 - The earlier sign-up/second-device live test (`step1`/`step2`) was not rerun after this change.
 
+## Netlify draft (17 November 2026)
+
+- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afba0a9306958249caa416e--biblequest-game.netlify.app. Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
+- The security headers from `netlify.toml` are served (checked: Content-Security-Policy, X-Frame-Options, HSTS).
+- Supabase Auth: the Site URL is now the draft address. Redirects are allowed for `https://*--biblequest-game.netlify.app/**`, `https://biblequest-game.netlify.app/**` and localhost.
+- **Tested on the hosted draft** (Playwright, Pixel 7 emulation, against live Supabase): the gameplay test passed with 8/8 verses, streak, a 5-question review round, account deletion and no page errors. The 92 picture questions were published only for this run, then set back to `review`, and the test users were deleted.
+- Not yet tested: a real phone (the owner is testing next), real confirmation emails from the hosted address.
+- Note: `netlify.toml` builds `dist` with `npm run build`. If Netlify is later connected to GitHub, set the Supabase variables in Netlify and check that the build output is the online version.
+
 ## Built, not yet tested against live Supabase
 
 - Accounts: anonymous guest sessions, registration (keeps guest progress), sign-in, sign-out, password reset and change, cross-device saves (`src/engine/cloud.ts`).
