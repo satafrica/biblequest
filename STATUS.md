@@ -76,7 +76,7 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 
 ## Netlify draft (17 November 2026)
 
-- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afbb18782ad7a7dc0ace1b7--biblequest-game.netlify.app (latest draft: includes the testament choice and the fanfare correct-answer sound; replaces earlier drafts). Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
+- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afbc0e6f1cef7e3a5b48251--biblequest-game.netlify.app (latest draft: includes the testament choice, the fanfare correct-answer sound and deleted-guest recovery; replaces earlier drafts). Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
 - The security headers from `netlify.toml` are served (checked: Content-Security-Policy, X-Frame-Options, HSTS).
 - Supabase Auth: the Site URL is now the draft address. Redirects are allowed for `https://*--biblequest-game.netlify.app/**`, `https://biblequest-game.netlify.app/**` and localhost.
 - **Tested on the hosted draft** (Playwright, Pixel 7 emulation, against live Supabase): the gameplay test passed with 8/8 verses, streak, a 5-question review round, account deletion and no page errors. The 92 picture questions were published only for this run, then set back to `review`, and the test users were deleted.
@@ -91,6 +91,13 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - The server enforces the filter: `start_session` accepts `mode:difficulty:set:ot|nt` and `arena:difficulty:ot|nt`, and only serves questions from books of that testament (migration `20261117000007_testament_choice.sql`, applied to the live project). `published_question_counts()` now returns counts per testament.
 - The Daily Challenge and Review my mistakes still use the whole Bible. Adventures already have separate Old and New Testament journeys.
 - Current reviewed picture questions: 55 Old Testament, 37 New Testament (none are published yet).
+
+## Owner phone test and fix (17 November 2026)
+
+- The owner's Android phone reached the live project (guest sign-in, catalog and stats requests all succeeded). Its first round requests found no published questions for the chosen game (only picture questions were published). A cleanup of recent test guests then also deleted the owner's guest account by mistake, after which every round failed because the phone kept a sign-in for a deleted account. No round from the phone was saved.
+- Fix: on start, the app now checks a saved sign-in with Supabase and drops it if the account no longer exists, and if a guest round fails because the account is gone, it starts a fresh guest once and retries. Tested live: guest started a round, the account was deleted, the same browser came back and its new round and answer were saved under a new guest account.
+- Live gameplay test passed again on the new draft (Pixel 7 emulation): 8/8 verses, gems shown from the server (80), review round, no page errors. Test users deleted afterwards.
+- Cleanup rule going forward: never delete accounts while the owner may be testing; delete only after the owner says they are done.
 
 ## Built, not yet tested against live Supabase
 

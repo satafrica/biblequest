@@ -16,6 +16,11 @@ function fail(e: PostgrestError | Error | { message: string } | null): never {
   throw new GameError(known ? known[0] : msg, msg)
 }
 
+/** True when the server says the signed-in account does not exist any more. */
+function isGoneAccount(e: { status?: number; code?: string; message: string }) {
+  return e.code === 'user_not_found' || /does not exist|user_not_found/i.test(e.message) || e.status === 403
+}
+
 export class CloudBackend implements Backend {
   readonly kind = 'cloud' as const
   readonly persistent = true
@@ -26,6 +31,13 @@ export class CloudBackend implements Backend {
   async init() {
     const { data } = await this.sb.auth.getSession()
     this.current = data.session?.user ?? null
+    // A saved sign-in can outlive its account (for example after the account was deleted on
+    // another device). Check it with the server and drop it, so the player gets a fresh start
+    // instead of every round failing. Network errors keep the session so offline play still works.
+    if (this.current) {
+      const { error } = await this.sb.auth.getUser()
+      if (error && isGoneAccount(error)) await this.forgetSession()
+    }
     this.sb.auth.onAuthStateChange((event, session) => {
       this.current = session?.user ?? null
       if (event === 'PASSWORD_RECOVERY' && typeof window !== 'undefined') window.location.hash = '#/account/new-password'
@@ -170,7 +182,22 @@ export class CloudBackend implements Backend {
 
   async startSession(levelKey: string) {
     await this.ensurePlayer()
-    return this.rpc<SessionStart>('start_session', { p_level_key: levelKey })
+    try {
+      return await this.rpc<SessionStart>('start_session', { p_level_key: levelKey })
+    } catch (e) {
+      // The account behind this guest sign-in no longer exists: start again as a new guest, once.
+      if (!(e instanceof GameError) || !/user_id_fkey|user_not_found/.test(`${e.code} ${e.message}`) || !this.current?.is_anonymous) throw e
+      await this.forgetSession()
+      await this.ensurePlayer()
+      return this.rpc<SessionStart>('start_session', { p_level_key: levelKey })
+    }
+  }
+
+  /** Clears a sign-in on this device only. */
+  private async forgetSession() {
+    await this.sb.auth.signOut({ scope: 'local' }).catch(() => {})
+    this.current = null
+    this.listeners.forEach((l) => l())
   }
 
   /**
