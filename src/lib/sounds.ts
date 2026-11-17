@@ -36,19 +36,20 @@ function bell(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, du
   }
 }
 
-/** A bright, glassy "ting": a sine plus a slightly detuned twin for shimmer and a high sparkle partial. */
-function sparkle(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, dur: number, peak: number) {
-  for (const [mult, gainMult, d] of [[1, 1, dur], [1.004, 0.5, dur], [4, 0.12, dur * 0.4]] as const) {
-    const osc = ac.createOscillator()
-    const g = ac.createGain()
-    osc.type = 'sine'
-    osc.frequency.setValueAtTime(freq * mult, at)
-    g.gain.setValueAtTime(0.0001, at)
-    g.gain.exponentialRampToValueAtTime(peak * gainMult, at + 0.006)
-    g.gain.exponentialRampToValueAtTime(0.0001, at + d)
-    osc.connect(g).connect(out)
-    osc.start(at); osc.stop(at + d + 0.05)
-  }
+/** A plucked harp string: a filtered triangle with a soft octave overtone and a gentle ring. */
+function harp(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, dur: number, peak: number) {
+  const osc = ac.createOscillator()
+  const g = ac.createGain()
+  const lp = ac.createBiquadFilter()
+  osc.type = 'triangle'
+  lp.type = 'lowpass'; lp.frequency.setValueAtTime(3000, at)
+  osc.frequency.setValueAtTime(freq, at)
+  g.gain.setValueAtTime(0.0001, at)
+  g.gain.exponentialRampToValueAtTime(peak, at + 0.004)
+  g.gain.exponentialRampToValueAtTime(0.0001, at + dur)
+  osc.connect(lp).connect(g).connect(out)
+  osc.start(at); osc.stop(at + dur + 0.05)
+  bell(ac, out, freq * 2, at, dur * 0.45, peak * 0.22)
 }
 
 /** A gentle, low "not quite" tone: a softened triangle wave sliding down. */
@@ -79,11 +80,8 @@ function schedule(ac: BaseAudioContext, kind: Sound, volume: number) {
   out.connect(ac.destination)
   const t = ac.currentTime + 0.01
   if (kind === 'correct') {
-    // Bright "ting-TING": a quick B5 leaping up a fourth to a ringing E6,
-    // with a soft G#5 underneath for warmth.
-    sparkle(ac, out, 987.77, t, 0.22, 0.3)
-    sparkle(ac, out, 1318.51, t + 0.08, 0.7, 0.34)
-    bell(ac, out, 830.61, t + 0.08, 0.5, 0.12)
+    // Harp sweep: five plucked notes rolling up a C major chord (C5 E5 G5 C6 E6).
+    ;[523.25, 659.25, 783.99, 1046.5, 1318.51].forEach((f, i) => harp(ac, out, f, t + i * 0.045, 0.9, 0.25))
   } else if (kind === 'wrong') {
     // Two low descending notes: clear, but not harsh.
     // Pitched high enough to be heard on phone speakers.

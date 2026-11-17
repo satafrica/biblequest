@@ -28,16 +28,16 @@ async function choose(page: Page, wantCorrect: boolean) {
   return notes(page)
 }
 
-test('a correct answer plays the bright sparkle, a wrong answer plays the low tone', async ({ page }) => {
+test('a correct answer plays the harp sweep, a wrong answer plays the low tone', async ({ page }) => {
   await page.addInitScript(recorder)
   await page.goto('./#/game/scripture%3A1%3A1')
   const right = await choose(page, true)
-  expect(right).toContain(988) // B5, first note of the correct sparkle
+  expect(right).toContain(523) // C5, first note of the correct harp sweep
   expect(right).not.toContain(466)
   await page.getByRole('button', { name: /Next question/ }).click()
   const wrong = await choose(page, false)
   expect(wrong).toContain(466) // low tone of the incorrect sound
-  expect(wrong).not.toContain(988)
+  expect(wrong).not.toContain(523)
 })
 
 test('no sounds play when sound effects are off', async ({ page }) => {
