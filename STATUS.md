@@ -1,6 +1,6 @@
 # Development status report
 
-Date: 16 November 2026 · Version 1.0.0-preview.2
+Date: 16 November 2026 · Version 1.0.0-preview.3 (updated 17 November 2026)
 
 Status labels:
 
@@ -13,10 +13,10 @@ Status labels:
 
 | Suite | Command | Result |
 |---|---|---|
-| Unit: game rules, rewards, store, power-ups, adaptive difficulty | `npm test` | 16 / 16 passed |
-| Database integration: real migrations, seed and RLS on PostgreSQL 18 (embedded), with a stub of Supabase's `auth` schema | `npm run test:db` | 53 / 53 passed |
-| Browser (desktop Chrome and Pixel 7): full level, gems persist, replay earns nothing, hint purchase, dark mode and text size, locked content, answer sounds, plus the new KJV verse after answers, read-aloud, vibration, share, streak card and calendar, review-my-mistakes, Privacy and Terms | `npm run test:e2e` | all 74 passed (gameplay file rerun after the last small fix: 8 / 8) |
-| Accessibility: axe WCAG 2.0/2.1/2.2 A + AA rules on 14 routes (now including Privacy and Terms) × light/dark × desktop/mobile | `npm run test:e2e` | included in the 74 |
+| Unit: game rules, rewards, store, power-ups, adaptive difficulty | `npm test` | 18 / 18 passed |
+| Database integration: real migrations, seed and RLS on PostgreSQL 18 (embedded), with a stub of Supabase's `auth` schema | `npm run test:db` | 54 / 54 passed (includes Old/New Testament filtering and separate level bonuses) |
+| Browser (desktop Chrome and Pixel 7): full level, gems persist, replay earns nothing, hint purchase, dark mode and text size, locked content, answer sounds, plus the new KJV verse after answers, read-aloud, vibration, share, streak card and calendar, review-my-mistakes, Privacy and Terms | `npm run test:e2e` | all 76 passed, including the new testament test (one run hit a trace-file clash in a single test; it passed on rerun) |
+| Accessibility: axe WCAG 2.0/2.1/2.2 A + AA rules on 14 routes (now including Privacy and Terms) × light/dark × desktop/mobile | `npm run test:e2e` | included in the 76 |
 | Live gameplay against the real Supabase project (`tests/live/gameplay.spec.ts`) | `npx playwright test -c playwright.live.config.ts tests/live/gameplay.spec.ts` | 1 / 1 passed |
 | Production build, and a check that the online build excludes the answer key | `npm run build` | Passed |
 | Hosted preview: full level played, no page errors | manual Playwright run | Passed |
@@ -76,12 +76,21 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 
 ## Netlify draft (17 November 2026)
 
-- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afba0a9306958249caa416e--biblequest-game.netlify.app. Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
+- A new Netlify site, `biblequest-game`, was created on the owner's Netlify account. No other Netlify site was changed. A **draft** of the online build was uploaded: https://6afba2b32e394b73c176e21a--biblequest-game.netlify.app (replaced the earlier draft 6afba0a9… so it includes the testament choice). Nothing is published to production, so https://biblequest-game.netlify.app shows "not found" for now.
 - The security headers from `netlify.toml` are served (checked: Content-Security-Policy, X-Frame-Options, HSTS).
 - Supabase Auth: the Site URL is now the draft address. Redirects are allowed for `https://*--biblequest-game.netlify.app/**`, `https://biblequest-game.netlify.app/**` and localhost.
 - **Tested on the hosted draft** (Playwright, Pixel 7 emulation, against live Supabase): the gameplay test passed with 8/8 verses, streak, a 5-question review round, account deletion and no page errors. The 92 picture questions were published only for this run, then set back to `review`, and the test users were deleted.
+- **Testament choice, tested on the new draft** (Pixel 7 emulation, live Supabase): New Testament levels served only NT references, the choice was remembered after reload, and Old Testament chosen in Settings carried into the Arena with OT references only. The live gameplay test passed again (8/8 verses, 5-question review, no page errors). Picture questions were published only for this run, then set back to `review` (0 published, 324 in review) and test users deleted.
 - Not yet tested: a real phone (the owner is testing next), real confirmation emails from the hosted address.
 - Note: `netlify.toml` builds `dist` with `npm run build`. If Netlify is later connected to GitHub, set the Supabase variables in Netlify and check that the build output is the online version.
+
+## Testament choice (17 November 2026)
+
+- Players choose **Whole Bible**, **Old Testament** or **New Testament** on the Play hub, on each game's level list, in the Challenge Arena and in Settings ("Bible questions from"). The choice is remembered on the device and, when signed in, saved to the profile.
+- Old Testament and New Testament levels are separate levels, each with its own one-time 50-gem completion bonus. Whole-Bible progress is unchanged.
+- The server enforces the filter: `start_session` accepts `mode:difficulty:set:ot|nt` and `arena:difficulty:ot|nt`, and only serves questions from books of that testament (migration `20261117000007_testament_choice.sql`, applied to the live project). `published_question_counts()` now returns counts per testament.
+- The Daily Challenge and Review my mistakes still use the whole Bible. Adventures already have separate Old and New Testament journeys.
+- Current reviewed picture questions: 55 Old Testament, 37 New Testament (none are published yet).
 
 ## Built, not yet tested against live Supabase
 
