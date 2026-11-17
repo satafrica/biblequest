@@ -116,7 +116,8 @@ describe('security + RLS', () => {
     const rows = await asUser(null, async c => (await c.query('select * from public.published_question_counts()')).rows)
     const total = rows.reduce((a: number, r: { n: string }) => a + Number(r.n), 0)
     expect(total).toBe((await sql(`select count(*)::int n from public.questions where status='published'`)).rows[0].n)
-    expect(Object.keys(rows[0]).sort()).toEqual(['difficulty', 'game_mode', 'n'])
+    expect(Object.keys(rows[0]).sort()).toEqual(['difficulty', 'game_mode', 'n', 'testament'])
+    expect(new Set(rows.map((r: { testament: string }) => r.testament))).toEqual(new Set(['OT', 'NT']))
   })
   it('role helpers are not callable through the API by guests', async () => {
     for (const f of ['is_staff', 'is_admin', 'current_role_name'])
@@ -335,6 +336,27 @@ describe('store + spending', () => {
     await c.query('rollback'); await c.end()       // connection dropped mid-flight
     expect(await balance(u)).toBe(500)
     expect((await sql('select count(*)::int n from public.player_inventory where user_id=$1', [u])).rows[0].n).toBe(0)
+  })
+  it('levels and the arena can be limited to the Old or New Testament', async () => {
+    const u = await newUser()
+    const testamentOf = async (ids: string[]) => (await sql(
+      `select distinct b.testament from public.questions q join public.bible_books b on b.id = q.book_id where q.id = any($1)`, [ids])).rows.map(r => r.testament)
+    for (const [key, t] of [['picture:1:1:ot', 'OT'], ['picture:1:1:nt', 'NT'], ['scripture:2:1:nt', 'NT'], ['arena:2:ot', 'OT'], ['arena:2:nt', 'NT']] as const) {
+      const s = await rpc(u, 'start_session', [key])
+      expect(s.questions.length, key).toBeGreaterThan(0)
+      expect(await testamentOf(s.questions.map((q: { id: string }) => q.id)), key).toEqual([t])
+    }
+    // whole-Bible keys are unchanged and draw from both testaments across levels
+    const all = await rpc(u, 'start_session', ['scripture:2:1'])
+    expect(all.questions.length).toBe(8)
+    // OT and NT level sets are separate levels with their own one-time bonus
+    const r1 = await playLevel(u, 'picture:1:1:ot'); const r2 = await playLevel(u, 'picture:1:1:nt')
+    expect(r1.result.bonuses.some((b: { reason: string }) => b.reason === 'Level completed')).toBe(true)
+    expect(r2.result.bonuses.some((b: { reason: string }) => b.reason === 'Level completed')).toBe(true)
+    const again = await playLevel(u, 'picture:1:1:ot')
+    expect(again.result.bonuses).toEqual([])
+    for (const bad of ['picture:1:1:xx', 'picture:1:1:ot:1', 'arena:2:all'])
+      await expect(rpc(u, 'start_session', [bad])).rejects.toThrow(/invalid_level/)
   })
   it('the Expert Gauntlet arena requires the bonus item', async () => {
     const u = await richUser(2000)

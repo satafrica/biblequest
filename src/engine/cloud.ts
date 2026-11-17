@@ -84,11 +84,18 @@ export class CloudBackend implements Backend {
     ])
     for (const r of [qs, advs, chs, store, ach, assets, rules]) if (r.error) fail(r.error)
     const levelCounts: Catalog['levelCounts'] = {}
+    const testamentCounts: Catalog['testamentCounts'] = { ot: {}, nt: {} }
     let totalQuestions = 0
-    for (const q of (qs.data ?? []) as { game_mode: string; difficulty: number; n: number }[]) {
+    for (const q of (qs.data ?? []) as { game_mode: string; difficulty: number; testament?: string; n: number }[]) {
+      const n = Number(q.n)
       levelCounts[q.game_mode] ??= {}
-      levelCounts[q.game_mode][q.difficulty] = Number(q.n)
-      totalQuestions += Number(q.n)
+      levelCounts[q.game_mode][q.difficulty] = (levelCounts[q.game_mode][q.difficulty] ?? 0) + n
+      const t = q.testament?.toLowerCase()
+      if (t === 'ot' || t === 'nt') {
+        testamentCounts[t][q.game_mode] ??= {}
+        testamentCounts[t][q.game_mode][q.difficulty] = (testamentCounts[t][q.game_mode][q.difficulty] ?? 0) + n
+      }
+      totalQuestions += n
     }
     const assetMap: Record<string, Asset> = {}
     for (const a of assets.data as Record<string, string | number | null>[]) {
@@ -106,7 +113,7 @@ export class CloudBackend implements Backend {
       price: s.price as number, consumable: s.consumable as boolean, sort: s.sort_order as number, image: s.image_path as string | null, image_alt: s.image_alt as string | null,
     }))
     return {
-      levelCounts, adventures, store: storeItems, achievements: ach.data as Achievement[], assets: assetMap,
+      levelCounts, testamentCounts, adventures, store: storeItems, achievements: ach.data as Achievement[], assets: assetMap,
       rewards: Object.fromEntries((rules.data as { id: string; gems: number }[]).map((r) => [r.id, r.gems])),
       totalQuestions,
     }

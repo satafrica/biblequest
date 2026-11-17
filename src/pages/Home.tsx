@@ -3,13 +3,13 @@ import { ChevronRight, Lock } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { MODES } from '../game/modes'
 import { Gems, Illustration } from '../components/ui'
-import { describeLevelKey, nextLevel, recommendDifficulty, levelKey } from '../engine/levels'
+import { countsFor, describeLevelKey, nextLevel, parseLevelKey, recommendDifficulty, levelKey } from '../engine/levels'
 import { todayUTC } from '../lib/ids'
 import { ReviewCard, StreakCard } from '../components/Streak'
 import { usePlayerStats } from '../state/usePlayerStats'
 
 export default function Home() {
-  const { catalog, progress, wallet, achievements, user, backend, profile } = useApp()
+  const { catalog, progress, wallet, achievements, user, backend, profile, prefs } = useApp()
   const stats = usePlayerStats()
   const hero = catalog.assets['hero_jerusalem']
   const today = todayUTC()
@@ -20,9 +20,11 @@ export default function Home() {
   const continueTo = (() => {
     if (!recent) return null
     const p = recent.level_key.split(':')
-    if (p.length === 3) {
-      const d = Number(p[1]); const n = nextLevel(progress, catalog.levelCounts, p[0], d)
-      return { to: `/game/${encodeURIComponent(levelKey(p[0], d, n))}`, label: describeLevelKey(levelKey(p[0], d, n)) }
+    const lv = parseLevelKey(recent.level_key)
+    if (lv) {
+      const n = nextLevel(progress, countsFor(catalog, lv.testament), lv.mode, lv.diff, lv.testament)
+      const k = levelKey(lv.mode, lv.diff, n, lv.testament)
+      return { to: `/game/${encodeURIComponent(k)}`, label: describeLevelKey(k) }
     }
     if (p[0] === 'adv') {
       const adv = catalog.adventures.find((a) => a.chapters.some((c) => c.id === p[1]))
@@ -31,8 +33,10 @@ export default function Home() {
     }
     return null
   })()
-  const startTo = `/game/${encodeURIComponent(levelKey('picture', recommendDifficulty(progress, 'picture'), nextLevel(progress, catalog.levelCounts, 'picture', recommendDifficulty(progress, 'picture'))))}`
-  const levelsDone = progress.filter((p) => p.times_completed > 0 && p.level_key.split(':').length === 3).length
+  const startTestament = prefs.testament ?? 'all'
+  const startDiff = recommendDifficulty(progress, 'picture')
+  const startTo = `/game/${encodeURIComponent(levelKey('picture', startDiff, nextLevel(progress, countsFor(catalog, startTestament), 'picture', startDiff, startTestament), startTestament))}`
+  const levelsDone = progress.filter((p) => p.times_completed > 0 && parseLevelKey(p.level_key)).length
   const guest = backend.kind === 'local' || !user || user.isAnonymous
 
   return (

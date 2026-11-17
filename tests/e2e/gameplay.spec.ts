@@ -111,3 +111,38 @@ test('privacy and terms pages describe real data handling and are linked', async
   await page.goto('./#/profile')
   await expect(page.getByRole('button', { name: 'Delete my account' })).toHaveCount(0)
 })
+
+test('players can choose Old Testament, New Testament or the whole Bible', async ({ page }) => {
+  const OT = ['Genesis', 'Exodus', 'Leviticus', 'Numbers', 'Deuteronomy', 'Joshua', 'Judges', 'Ruth', '1 Samuel', '2 Samuel', '1 Kings', '2 Kings', '1 Chronicles', '2 Chronicles', 'Ezra', 'Nehemiah', 'Esther', 'Job', 'Psalms', 'Proverbs', 'Ecclesiastes', 'Song of Solomon', 'Isaiah', 'Jeremiah', 'Lamentations', 'Ezekiel', 'Daniel', 'Hosea', 'Joel', 'Amos', 'Obadiah', 'Jonah', 'Micah', 'Nahum', 'Habakkuk', 'Zephaniah', 'Haggai', 'Zechariah', 'Malachi']
+  const isOT = (ref: string) => OT.some((b) => ref.startsWith(b + ' '))
+  await page.goto('./#/play')
+  const picker = page.getByTestId('testament-picker')
+  await expect(picker.getByRole('radio', { name: 'Whole Bible' })).toHaveAttribute('aria-checked', 'true')
+  await picker.getByRole('radio', { name: 'New Testament' }).click()
+  await expect(picker.getByRole('radio', { name: 'New Testament' })).toHaveAttribute('aria-checked', 'true')
+
+  // the choice carries into a game's level list and is remembered after reload
+  await page.goto('./#/play/picture'); await page.reload()
+  await expect(page.getByTestId('testament-picker').getByRole('radio', { name: 'New Testament' })).toHaveAttribute('aria-checked', 'true')
+  await expect(page.getByText(/questions from the New Testament at this level/)).toBeVisible()
+  const level1 = page.getByRole('link', { name: /Level 1/ }).first()
+  await expect(level1).toHaveAttribute('href', /picture%3A\d%3A1%3Ant$/)
+  await level1.click()
+  await expect(page.getByText(/New Testament/).first()).toBeVisible()
+  for (let i = 0; i < 3; i++) {
+    await page.getByRole('group', { name: 'Answer options' }).getByRole('button').first().click()
+    const ref = (await page.getByTestId('answer-reference').textContent())!
+    expect(isOT(ref), ref).toBe(false)
+    await page.getByRole('button', { name: /Next question|See results/ }).click()
+  }
+
+  // Old Testament from Settings applies to the Arena
+  await page.goto('./#/settings')
+  await page.getByText('Old Testament', { exact: true }).click()
+  await page.goto('./#/arena')
+  await expect(page.getByTestId('testament-picker').getByRole('radio', { name: 'Old Testament' })).toHaveAttribute('aria-checked', 'true')
+  await page.getByRole('link', { name: 'Enter' }).first().click()
+  await expect(page.getByText(/Old Testament/).first()).toBeVisible()
+  await page.getByRole('group', { name: 'Answer options' }).getByRole('button').first().click()
+  expect(isOT((await page.getByTestId('answer-reference').textContent())!)).toBe(true)
+})

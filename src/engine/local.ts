@@ -5,6 +5,7 @@
 import { ACHIEVEMENTS, ADVENTURES, ASSETS, QUESTIONS, REWARDS, STORE, type FullQuestion } from './content'
 import { readJSON, storageAvailable, writeJSON } from '../lib/storage'
 import { hash, todayUTC, uuid } from '../lib/ids'
+import { parseLevelKey, testamentOfBook } from './levels'
 import {
   ARENA_SIZE, DAILY_SIZE, GameError, LEVEL_SIZE,
   type AnswerResult, type Backend, type Catalog, type CompleteResult, type EarnedAchievement, type InventoryItem,
@@ -98,11 +99,14 @@ export class LocalBackend implements Backend {
 
   async getCatalog(): Promise<Catalog> {
     const levelCounts: Catalog['levelCounts'] = {}
+    const testamentCounts: Catalog['testamentCounts'] = { ot: {}, nt: {} }
     for (const q of QUESTIONS) {
-      levelCounts[q.game_mode] ??= {}
-      levelCounts[q.game_mode][q.difficulty] = (levelCounts[q.game_mode][q.difficulty] ?? 0) + 1
+      for (const c of [levelCounts, testamentCounts[testamentOfBook(q.book_id)]]) {
+        c[q.game_mode] ??= {}
+        c[q.game_mode][q.difficulty] = (c[q.game_mode][q.difficulty] ?? 0) + 1
+      }
     }
-    return { levelCounts, adventures: ADVENTURES, store: STORE, achievements: ACHIEVEMENTS, assets: ASSETS, rewards: REWARDS, totalQuestions: QUESTIONS.length }
+    return { levelCounts, testamentCounts, adventures: ADVENTURES, store: STORE, achievements: ACHIEVEMENTS, assets: ASSETS, rewards: REWARDS, totalQuestions: QUESTIONS.length }
   }
   async getProfile() { return this.s.profile }
   async updateProfile(patch: Partial<Profile>) {
@@ -133,11 +137,13 @@ export class LocalBackend implements Backend {
   private selectIds(levelKey: string): { mode: string; ids: string[] } {
     const p = levelKey.split(':')
     const pub = QUESTIONS // local preview uses all reviewed-and-verified bundled content
-    if (['picture', 'whoami', 'scripture', 'sequence'].includes(p[0]) && p.length === 3) {
-      const diff = Number(p[1]); const set = Number(p[2])
+    const inPart = (q: { book_id: number }, t: string | undefined) => !t || testamentOfBook(q.book_id) === t
+    const lv = parseLevelKey(levelKey)
+    if (lv) {
+      const { diff, set } = lv; const t = lv.testament === 'all' ? undefined : lv.testament
       if (!(diff >= 1 && diff <= 4) || !(set >= 1)) throw new GameError('invalid_level')
-      const ids = pub.filter((q) => q.game_mode === p[0] && q.difficulty === diff).map((q) => q.id).sort()
-      return { mode: p[0], ids: ids.slice((set - 1) * LEVEL_SIZE, set * LEVEL_SIZE) }
+      const ids = pub.filter((q) => q.game_mode === lv.mode && q.difficulty === diff && inPart(q, t)).map((q) => q.id).sort()
+      return { mode: lv.mode, ids: ids.slice((set - 1) * LEVEL_SIZE, set * LEVEL_SIZE) }
     }
     if (p[0] === 'adv' && p.length === 2) {
       const adv = ADVENTURES.find((a) => a.chapters.some((c) => c.id === p[1]))
@@ -153,11 +159,11 @@ export class LocalBackend implements Backend {
         .sort((a, b) => hash(a + p[1]) - hash(b + p[1])).slice(0, DAILY_SIZE)
       return { mode: 'daily', ids }
     }
-    if (p[0] === 'arena' && p.length === 2) {
+    if (p[0] === 'arena' && (p.length === 2 || (p.length === 3 && (p[2] === 'ot' || p[2] === 'nt')))) {
       const diff = Number(p[1])
       if (!(diff >= 1 && diff <= 4)) throw new GameError('invalid_level')
       if (diff === 4 && !this.s.inventory.some((i) => i.item_id === 'bonus_expert')) throw new GameError('bonus_required')
-      const pool = pub.filter((q) => q.game_mode !== 'sequence' && q.difficulty <= diff).map((q) => q.id)
+      const pool = pub.filter((q) => q.game_mode !== 'sequence' && q.difficulty <= diff && inPart(q, p[2])).map((q) => q.id)
       for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]] }
       return { mode: 'arena', ids: pool.slice(0, ARENA_SIZE) }
     }

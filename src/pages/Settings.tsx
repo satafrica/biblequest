@@ -37,6 +37,10 @@ export default function Settings() {
       <PageHeader eyebrow="Settings" title="Display, sound and accessibility">These options are always free.</PageHeader>
       <div className="grid gap-4">
         <Segmented label="Appearance" value={prefs.theme} onChange={(v) => update({ theme: v })} options={[{ v: 'system', label: 'Match device', Icon: Monitor }, { v: 'light', label: 'Light', Icon: Sun }, { v: 'dark', label: 'Dark', Icon: Moon }]} />
+        <div className="grid gap-2">
+          <Segmented label="Bible questions from" value={prefs.testament ?? 'all'} onChange={(v) => update({ testament: v })} options={[{ v: 'all', label: 'Whole Bible' }, { v: 'ot', label: 'Old Testament' }, { v: 'nt', label: 'New Testament' }]} />
+          <p className="px-1 text-sm text-muted">Used by the level games and the Challenge Arena. The Daily Challenge always uses the whole Bible.</p>
+        </div>
         <Segmented label="Text size" value={prefs.textSize} onChange={(v) => update({ textSize: v })} options={[{ v: 'normal', label: 'Standard' }, { v: 'large', label: 'Large' }, { v: 'xlarge', label: 'Extra large' }]} />
         <div className="grid gap-2">
           <Segmented label="Sound effects" value={prefs.sound} onChange={(v) => { update({ sound: v }); unlockAudio(); if (v !== 'off') playSound('correct', soundVolume({ ...prefs, sound: v })) }}

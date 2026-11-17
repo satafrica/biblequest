@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { LocalBackend } from '../local'
 import { ADVENTURES, QUESTIONS, STORE } from '../content'
-import { recommendDifficulty } from '../levels'
+import { countsFor, describeLevelKey, levelCount, levelKey, parseLevelKey, recommendDifficulty } from '../levels'
 import { todayUTC } from '../../lib/ids'
 import type { Progress } from '../types'
 
@@ -123,6 +123,36 @@ describe('store', () => {
     await expect(b.startSession('arena:4')).rejects.toMatchObject({ code: 'bonus_required' })
     const s = await b.startSession('arena:1')
     expect(s.questions.length).toBe(10)
+  })
+})
+
+describe('Old / New Testament choice', () => {
+  it('limits level questions and the arena to the chosen testament', async () => {
+    const cat = await b.getCatalog()
+    for (const t of ['ot', 'nt'] as const) {
+      const n = levelCount(countsFor(cat, t), 'picture', 1)
+      expect(n).toBeGreaterThan(0)
+      const seen = new Set<string>()
+      for (let set = 1; set <= n; set++) {
+        const s = await b.startSession(levelKey('picture', 1, set, t))
+        for (const q of s.questions) { expect(byId.get(q.id)!.book_id <= 39 ? 'ot' : 'nt').toBe(t); seen.add(q.id) }
+      }
+      expect(seen.size).toBe(countsFor(cat, t).picture[1])
+      const a = await b.startSession(`arena:2:${t}`)
+      expect(a.questions.length).toBeGreaterThan(0)
+      for (const q of a.questions) expect(byId.get(q.id)!.book_id <= 39 ? 'ot' : 'nt').toBe(t)
+    }
+    const total = (m: string, d: number) => (cat.testamentCounts.ot[m]?.[d] ?? 0) + (cat.testamentCounts.nt[m]?.[d] ?? 0)
+    expect(total('scripture', 2)).toBe(cat.levelCounts.scripture[2])
+    await expect(b.startSession('picture:1:1:xx')).rejects.toMatchObject({ code: 'invalid_level' })
+  })
+  it('keeps whole-Bible keys unchanged and labels testament levels', () => {
+    expect(levelKey('picture', 1, 2)).toBe('picture:1:2')
+    expect(levelKey('picture', 1, 2, 'nt')).toBe('picture:1:2:nt')
+    expect(parseLevelKey('picture:1:2:ot')).toEqual({ mode: 'picture', diff: 1, set: 2, testament: 'ot' })
+    expect(parseLevelKey('picture:1:2:zz')).toBeNull()
+    expect(describeLevelKey('whoami:2:1:ot')).toBe('Who Am I? · Intermediate 1 · Old Testament')
+    expect(describeLevelKey('arena:3:nt')).toContain('New Testament')
   })
 })
 

@@ -4,7 +4,7 @@ import { ArrowDown, ArrowUp, BookOpen, Check, Flag, Hourglass, Lamp, Scissors, S
 import { useApp } from '../state/AppContext'
 import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CompleteResult, type PublicQuestion, type SessionStart } from '../engine'
 import { readJSON, removeKey, writeJSON } from '../lib/storage'
-import { describeLevelKey, levelCount } from '../engine/levels'
+import { countsFor, describeLevelKey, levelCount, levelKey as makeLevelKey, parseLevelKey } from '../engine/levels'
 import { Gems, GemIcon, Illustration, Modal } from '../components/ui'
 import { playSound, unlockAudio } from '../lib/sounds'
 import { soundVolume, speechRate } from '../state/prefs'
@@ -311,7 +311,7 @@ export default function GameRunner() {
                 {last.correct ? 'Correct' : selected === -1 && q.game_mode !== 'sequence' ? 'Time is up' : 'Not quite'}
               </p>
               {!last.correct && q.game_mode !== 'sequence' && last.correct_index !== undefined && <p className="mt-1">The answer is <strong>{q.options[last.correct_index]}</strong>.</p>}
-              {last.reference && <p className="mt-2 text-sm font-semibold">{last.reference} <span className="font-normal text-muted">· {q.translation_id}</span></p>}
+              {last.reference && <p className="mt-2 text-sm font-semibold" data-testid="answer-reference">{last.reference} <span className="font-normal text-muted">· {q.translation_id}</span></p>}
               {last.verse_text && (
                 <blockquote className="mt-3 rounded-xl border-l-4 border-accent bg-accent/5 px-4 py-3 font-display leading-relaxed" data-testid="verse-text">
                   <span className="mb-1 flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-wide text-muted"><BookOpen className="h-3.5 w-3.5" aria-hidden="true" />King James Version</span>
@@ -422,10 +422,11 @@ function Summary({ levelKey, title, results, total, summary, error, busy, roundG
   const correct = summary?.correct ?? results.filter((r) => r.correct).length
   const p = levelKey.split(':')
   const nextTo = useMemo(() => {
-    if (p.length === 3) {
-      const n = levelCount(catalog.levelCounts, p[0], Number(p[1]))
-      if (Number(p[2]) < n) return { to: `/game/${encodeURIComponent(`${p[0]}:${p[1]}:${Number(p[2]) + 1}`)}`, label: 'Next level' }
-      return { to: `/play/${p[0]}`, label: 'Choose another level' }
+    const lv = parseLevelKey(levelKey)
+    if (lv) {
+      const n = levelCount(countsFor(catalog, lv.testament), lv.mode, lv.diff)
+      if (lv.set < n) return { to: `/game/${encodeURIComponent(makeLevelKey(lv.mode, lv.diff, lv.set + 1, lv.testament))}`, label: 'Next level' }
+      return { to: `/play/${lv.mode}`, label: 'Choose another level' }
     }
     if (p[0] === 'adv') {
       const adv = catalog.adventures.find((a) => a.chapters.some((c) => c.id === p[1]))

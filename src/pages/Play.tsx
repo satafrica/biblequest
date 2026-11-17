@@ -4,7 +4,9 @@ import { Check, Lock, Sparkles } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { MODES, modeInfo } from '../game/modes'
 import { DIFFICULTY_LABELS, LEVEL_SIZE, type Difficulty } from '../engine'
-import { levelCount, levelKey, recommendDifficulty } from '../engine/levels'
+import { countsFor, levelCount, levelKey, recommendDifficulty, testamentLabel } from '../engine/levels'
+import { TestamentPicker } from '../components/TestamentPicker'
+import { useTestament } from '../state/useTestament'
 import { Illustration, PageHeader } from '../components/ui'
 import { ReviewCard } from '../components/Streak'
 import { usePlayerStats } from '../state/usePlayerStats'
@@ -15,6 +17,7 @@ export function PlayHub() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
       <PageHeader eyebrow="Play" title="Choose a game">Guests can play every live game. Each answer shows its Scripture reference and a short explanation.</PageHeader>
+      <TestamentPicker id="hub-testament" note={<>Applies to Picture Bible Quiz, Who Am I?, Scripture Challenge, Story Sequencing and the Challenge Arena. The Daily Challenge uses the whole Bible, and <Link to="/adventures" className="link">Adventures</Link> have an Old Testament and a New Testament journey.</>} />
       {stats && stats.review_count > 0 && <div className="mb-6 max-w-md"><ReviewCard stats={stats} /></div>}
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {MODES.map((m) => m.live ? (
@@ -41,16 +44,21 @@ export function PlayMode() {
   const info = modeInfo(mode)
   const recommended = recommendDifficulty(progress, mode)
   const [diff, setDiff] = useState<Difficulty>(recommended)
+  const [testament] = useTestament()
   if (!info || !['picture', 'whoami', 'scripture', 'sequence'].includes(mode)) return <Navigate to="/play" replace />
-  const n = levelCount(catalog.levelCounts, mode, diff)
-  const qCount = catalog.levelCounts[mode]?.[diff] ?? 0
+  const counts = countsFor(catalog, testament)
+  const n = levelCount(counts, mode, diff)
+  const qCount = counts[mode]?.[diff] ?? 0
+  const where = testament === 'all' ? 'the whole Bible' : `the ${testamentLabel(testament)}`
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8 md:py-12">
       <PageHeader eyebrow="Play" title={info.name}>{info.blurb}</PageHeader>
+      <TestamentPicker id="mode-testament" />
+      <p className="eyebrow mb-2">Difficulty</p>
       <div role="radiogroup" aria-label="Difficulty" className="mb-6 flex flex-wrap gap-2">
         {([1, 2, 3, 4] as Difficulty[]).map((d) => {
-          const has = (catalog.levelCounts[mode]?.[d] ?? 0) > 0
+          const has = (counts[mode]?.[d] ?? 0) > 0
           return (
             <button key={d} role="radio" aria-checked={diff === d} disabled={!has} onClick={() => setDiff(d)}
               className={`btn-sm btn ${diff === d ? 'bg-ink text-bg' : 'border border-line bg-raised'}`}>
@@ -60,18 +68,18 @@ export function PlayMode() {
         })}
       </div>
       <p className="mb-4 text-sm text-muted">
-        {qCount} questions at this level · up to {LEVEL_SIZE} per level. The suggestion adapts to your recent accuracy; you can always choose.
+        {qCount} questions from {where} at this level · up to {LEVEL_SIZE} per level. The suggestion adapts to your recent accuracy; you can always choose.
       </p>
-      {n === 0 ? <p className="card p-6 text-muted">No questions are published at this difficulty yet.</p> : (
+      {n === 0 ? <p className="card p-6 text-muted">No questions from {where} are published at this difficulty yet. Try another difficulty or part of the Bible.</p> : (
         <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {Array.from({ length: n }, (_, i) => i + 1).map((s) => {
-            const key = levelKey(mode, diff, s)
+            const key = levelKey(mode, diff, s, testament)
             const pr = progress.find((p) => p.level_key === key)
             const done = pr && pr.times_completed > 0
             return (
               <li key={s}>
                 <Link to={`/game/${encodeURIComponent(key)}`} className={`card flex h-full flex-col p-4 hover:border-accent ${done ? 'border-good/50' : ''}`}>
-                  <span className="eyebrow">{DIFFICULTY_LABELS[diff]}</span>
+                  <span className="eyebrow">{DIFFICULTY_LABELS[diff]}{testament !== 'all' && ` · ${testament === 'ot' ? 'Old' : 'New'} Testament`}</span>
                   <span className="font-display text-xl font-semibold">Level {s}</span>
                   <span className="mt-2 text-sm text-muted">{done ? <span className="inline-flex items-center gap-1 text-good"><Check className="h-4 w-4" aria-hidden="true" />Best {pr!.best_correct}/{pr!.total_questions}</span> : 'Not played yet'}</span>
                 </Link>

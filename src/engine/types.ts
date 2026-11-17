@@ -79,8 +79,14 @@ export interface Adventure { id: string; title: string; testament: string; image
 /** Number of questions available per mode and difficulty (published only in cloud mode). */
 export type LevelCounts = Record<string, Record<number, number>>
 
+/** Which part of the Bible questions come from. 'all' is the whole Bible. */
+export type Testament = 'all' | 'ot' | 'nt'
+
 export interface Catalog {
+  /** Whole-Bible counts. */
   levelCounts: LevelCounts
+  /** Counts limited to the Old ('ot') or New ('nt') Testament. */
+  testamentCounts: Record<'ot' | 'nt', LevelCounts>
   adventures: Adventure[]
   store: StoreItem[]
   achievements: Achievement[]

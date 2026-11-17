@@ -5,6 +5,9 @@ import { useApp } from '../state/AppContext'
 import { DIFFICULTY_LABELS, ARENA_SIZE, DAILY_SIZE, friendlyError, type Difficulty, type LeaderRow } from '../engine'
 import { Illustration, PageHeader } from '../components/ui'
 import { todayUTC } from '../lib/ids'
+import { arenaKey } from '../engine/levels'
+import { TestamentPicker } from '../components/TestamentPicker'
+import { useTestament } from '../state/useTestament'
 
 export function Daily() {
   const { catalog, progress } = useApp()
@@ -33,6 +36,7 @@ export function Daily() {
 
 export function Arena() {
   const { owns, prefs, catalog } = useApp()
+  const [testament] = useTestament()
   const img = catalog.assets['david_goliath']
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 md:py-12">
@@ -41,6 +45,7 @@ export function Arena() {
         {' '}{prefs.timers ? <>Timers can be turned off in <Link className="link" to="/settings">Settings</Link>.</> : <>Timers are off (see <Link className="link" to="/settings">Settings</Link>).</>}
       </PageHeader>
       {img && <Illustration path={img.path} alt={img.alt} className="mb-6 aspect-[16/6] w-full rounded-2xl object-cover" priority />}
+      <TestamentPicker id="arena-testament" />
       <ul className="grid gap-3 sm:grid-cols-2">
         {([1, 2, 3, 4] as Difficulty[]).map((d) => {
           const locked = d === 4 && owns('bonus_expert') < 1
@@ -48,7 +53,7 @@ export function Arena() {
             <li key={d} className="card flex items-center gap-4 p-4">
               <div className="flex-1"><p className="font-display text-lg font-semibold">{DIFFICULTY_LABELS[d]}</p><p className="text-sm text-muted">{d === 1 ? 'Beginner questions only' : `Mixed questions up to ${DIFFICULTY_LABELS[d]}`}</p></div>
               {locked ? <Link to="/store" className="btn-secondary btn-sm"><Lock className="h-4 w-4" aria-hidden="true" />Unlock in store</Link>
-                : <Link to={`/game/${encodeURIComponent(`arena:${d}`)}`} className="btn-primary btn-sm">Enter</Link>}
+                : <Link to={`/game/${encodeURIComponent(arenaKey(d, testament))}`} className="btn-primary btn-sm">Enter</Link>}
             </li>
           )
         })}
