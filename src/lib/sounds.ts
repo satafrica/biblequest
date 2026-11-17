@@ -36,20 +36,21 @@ function bell(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, du
   }
 }
 
-/** A plucked harp string: a filtered triangle with a soft octave overtone and a gentle ring. */
-function harp(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, dur: number, peak: number) {
-  const osc = ac.createOscillator()
-  const g = ac.createGain()
-  const lp = ac.createBiquadFilter()
-  osc.type = 'triangle'
-  lp.type = 'lowpass'; lp.frequency.setValueAtTime(3000, at)
-  osc.frequency.setValueAtTime(freq, at)
-  g.gain.setValueAtTime(0.0001, at)
-  g.gain.exponentialRampToValueAtTime(peak, at + 0.004)
-  g.gain.exponentialRampToValueAtTime(0.0001, at + dur)
-  osc.connect(lp).connect(g).connect(out)
-  osc.start(at); osc.stop(at + dur + 0.05)
-  bell(ac, out, freq * 2, at, dur * 0.45, peak * 0.22)
+/** A soft brass note: two slightly detuned sawtooth waves through a warm low-pass filter. */
+function brass(ac: BaseAudioContext, out: AudioNode, freq: number, at: number, dur: number, peak: number) {
+  for (const [mult, gainMult] of [[1, 1], [1.003, 0.6]] as const) {
+    const osc = ac.createOscillator()
+    const g = ac.createGain()
+    const lp = ac.createBiquadFilter()
+    osc.type = 'sawtooth'
+    lp.type = 'lowpass'; lp.frequency.setValueAtTime(2200, at)
+    osc.frequency.setValueAtTime(freq * mult, at)
+    g.gain.setValueAtTime(0.0001, at)
+    g.gain.exponentialRampToValueAtTime(peak * gainMult, at + 0.03)
+    g.gain.exponentialRampToValueAtTime(0.0001, at + dur)
+    osc.connect(lp).connect(g).connect(out)
+    osc.start(at); osc.stop(at + dur + 0.05)
+  }
 }
 
 /** A gentle, low "not quite" tone: a softened triangle wave sliding down. */
@@ -80,8 +81,9 @@ function schedule(ac: BaseAudioContext, kind: Sound, volume: number) {
   out.connect(ac.destination)
   const t = ac.currentTime + 0.01
   if (kind === 'correct') {
-    // Harp sweep: five plucked notes rolling up a C major chord (C5 E5 G5 C6 E6).
-    ;[523.25, 659.25, 783.99, 1046.5, 1318.51].forEach((f, i) => harp(ac, out, f, t + i * 0.045, 0.9, 0.25))
+    // Mini fanfare, a short brass "ta-DA": a G4 pickup into a C major chord (C5 E5 G5).
+    brass(ac, out, 392.0, t, 0.16, 0.44)
+    ;[523.25, 659.25, 783.99].forEach((f) => brass(ac, out, f, t + 0.15, 0.75, 0.33))
   } else if (kind === 'wrong') {
     // Two low descending notes: clear, but not harsh.
     // Pitched high enough to be heard on phone speakers.
