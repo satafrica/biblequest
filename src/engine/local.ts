@@ -5,7 +5,7 @@
 import { ACHIEVEMENTS, ADVENTURES, ASSETS, QUESTIONS, REWARDS, STORE, type FullQuestion } from './content'
 import { readJSON, storageAvailable, writeJSON } from '../lib/storage'
 import { hash, todayUTC, uuid } from '../lib/ids'
-import { parseLevelKey, testamentOfBook } from './levels'
+import { MASTER_SIZE, parseLevelKey, testamentOfBook } from './levels'
 import {
   ARENA_SIZE, DAILY_SIZE, GameError, LEVEL_SIZE,
   type AnswerResult, type Backend, type Catalog, type CompleteResult, type EarnedAchievement, type InventoryItem,
@@ -14,6 +14,9 @@ import {
 } from './types'
 
 const KEY = 'bq.local.v1'
+/** Same mode lists as the server's start_session. */
+const DAILY_MODES: string[] = ['picture', 'whoami', 'scripture']
+const MASTER_MODES: string[] = ['picture', 'whoami', 'scripture', 'sequence', 'wisdom', 'geography', 'mystery', 'hidden']
 
 interface LocalSession {
   id: string; level_key: string; game_mode: string; question_ids: string[]
@@ -72,13 +75,15 @@ function toPublic(q: FullQuestion): PublicQuestion {
     id: q.id, game_mode: q.game_mode, book_id: q.book_id, chapter: q.chapter, verse_start: q.verse_start, verse_end: q.verse_end,
     reference_label: q.reference_label, difficulty: q.difficulty, prompt: q.prompt, clues: q.clues, options,
     has_hint: Boolean(q.hint), image_id: q.image_id, image_alt: a?.alt ?? null, image_path: a?.path ?? null,
-    translation_id: q.translation_id, tags: q.tags,
+    translation_id: q.translation_id, tags: q.tags, extra: q.extra ?? null,
   }
 }
 
 export class LocalBackend implements Backend {
   readonly kind = 'local' as const
   readonly persistent = storageAvailable()
+  /** Friends, groups and challenge matches need online accounts. */
+  readonly community = null
   private s: LocalState = fresh()
   private listeners = new Set<() => void>()
 
@@ -155,7 +160,7 @@ export class LocalBackend implements Backend {
     }
     if (p[0] === 'daily' && p.length === 2) {
       if (p[1] !== todayUTC()) throw new GameError('daily_expired')
-      const ids = pub.filter((q) => q.game_mode !== 'sequence').map((q) => q.id)
+      const ids = pub.filter((q) => DAILY_MODES.includes(q.game_mode)).map((q) => q.id)
         .sort((a, b) => hash(a + p[1]) - hash(b + p[1])).slice(0, DAILY_SIZE)
       return { mode: 'daily', ids }
     }
@@ -163,9 +168,14 @@ export class LocalBackend implements Backend {
       const diff = Number(p[1])
       if (!(diff >= 1 && diff <= 4)) throw new GameError('invalid_level')
       if (diff === 4 && !this.s.inventory.some((i) => i.item_id === 'bonus_expert')) throw new GameError('bonus_required')
-      const pool = pub.filter((q) => q.game_mode !== 'sequence' && q.difficulty <= diff && inPart(q, p[2])).map((q) => q.id)
+      const pool = pub.filter((q) => DAILY_MODES.includes(q.game_mode) && q.difficulty <= diff && inPart(q, p[2])).map((q) => q.id)
       for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]] }
       return { mode: 'arena', ids: pool.slice(0, ARENA_SIZE) }
+    }
+    if (p[0] === 'master' && (p.length === 1 || (p.length === 2 && (p[1] === 'ot' || p[1] === 'nt')))) {
+      const pool = pub.filter((q) => q.difficulty === 4 && MASTER_MODES.includes(q.game_mode) && inPart(q, p[1])).map((q) => q.id)
+      for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]] }
+      return { mode: 'master', ids: pool.slice(0, MASTER_SIZE) }
     }
     if (p[0] === 'review' && p.length === 1) {
       const ids = this.reviewIds().slice(0, LEVEL_SIZE)
@@ -245,7 +255,7 @@ export class LocalBackend implements Backend {
 
     const bonuses: CompleteResult['bonuses'] = []
     const add = (gems: number, reason: string, ref: string, key: string) => { const g = this.applyGems(gems, reason, ref, key); if (g > 0) bonuses.push({ reason, gems: g }) }
-    if (['picture', 'whoami', 'scripture', 'sequence', 'adventure'].includes(ses.game_mode)) {
+    if (['picture', 'whoami', 'scripture', 'sequence', 'adventure', 'wisdom', 'geography', 'hidden', 'master'].includes(ses.game_mode)) {
       add(REWARDS.level_complete, 'Level completed', ses.level_key, `level:${ses.level_key}`)
       if (correct === total) add(REWARDS.perfect_round, 'Perfect round', ses.level_key, `perfect:${ses.level_key}`)
     }

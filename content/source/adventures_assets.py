@@ -122,4 +122,8 @@ ACHIEVEMENTS = [
  {"id": "adventurer", "name": "Adventurer", "description": "Complete a full Bible adventure.", "icon": "map", "rule": {"type": "adventures_completed", "gte": 1}},
  {"id": "picture_4", "name": "Keen Eye", "description": "Complete 4 Picture Quiz levels.", "icon": "eye", "rule": {"type": "mode_levels", "mode": "picture", "gte": 4}},
  {"id": "whoami_4", "name": "Know Their Names", "description": "Complete 4 Who Am I? levels.", "icon": "person", "rule": {"type": "mode_levels", "mode": "whoami", "gte": 4}},
+ {"id": "geography_2", "name": "Map Reader", "description": "Complete 2 Geography Explorer levels.", "icon": "map", "rule": {"type": "mode_levels", "mode": "geography", "gte": 2}},
+ {"id": "hidden_2", "name": "Sharp Eyes", "description": "Complete 2 Hidden Object levels.", "icon": "eye", "rule": {"type": "mode_levels", "mode": "hidden", "gte": 2}},
+ {"id": "wisdom_2", "name": "Wise Counsel", "description": "Complete 2 Wisdom Decisions levels.", "icon": "scroll", "rule": {"type": "mode_levels", "mode": "wisdom", "gte": 2}},
+ {"id": "master_1", "name": "Bible Master", "description": "Complete a Bible Master Challenge.", "icon": "crown", "rule": {"type": "mode_levels", "mode": "master", "gte": 1}},
 ]

@@ -1,6 +1,6 @@
 import { DIFFICULTY_LABELS, LEVEL_SIZE, type Catalog, type Difficulty, type LevelCounts, type Progress, type Testament } from './types'
 
-export const LEVEL_MODES = ['picture', 'whoami', 'scripture', 'sequence'] as const
+export const LEVEL_MODES = ['picture', 'whoami', 'scripture', 'sequence', 'wisdom', 'geography', 'hidden'] as const
 export type LevelMode = (typeof LEVEL_MODES)[number]
 
 export const TESTAMENTS: { v: Testament; label: string; short: string }[] = [
@@ -16,6 +16,9 @@ const isPart = (x: string | undefined): x is 'ot' | 'nt' => x === 'ot' || x === 
 /** Level keys: `mode:difficulty:set` for the whole Bible, `mode:difficulty:set:ot|nt` for one testament. */
 export const levelKey = (mode: string, diff: number, set: number, t: Testament = 'all') =>
   t === 'all' ? `${mode}:${diff}:${set}` : `${mode}:${diff}:${set}:${t}`
+
+export const masterKey = (t: Testament = 'all') => (t === 'all' ? 'master' : `master:${t}`)
+export const MASTER_SIZE = 12
 
 export const arenaKey = (diff: number, t: Testament = 'all') => (t === 'all' ? `arena:${diff}` : `arena:${diff}:${t}`)
 
@@ -38,10 +41,12 @@ export function levelCount(counts: LevelCounts, mode: string, diff: number): num
 
 export function describeLevelKey(key: string, chapterTitle?: (id: string) => string | undefined): string {
   const p = key.split(':')
-  const modeNames: Record<string, string> = { picture: 'Picture Bible Quiz', whoami: 'Who Am I?', scripture: 'Scripture Challenge', sequence: 'Story Sequencing' }
+  const modeNames: Record<string, string> = { picture: 'Picture Bible Quiz', whoami: 'Who Am I?', scripture: 'Scripture Challenge', sequence: 'Story Sequencing', wisdom: 'Wisdom Decisions', geography: 'Geography Explorer', hidden: 'Hidden Object' }
   const lv = parseLevelKey(key)
   if (lv) return `${modeNames[lv.mode]} · ${DIFFICULTY_LABELS[lv.diff as Difficulty]} ${lv.set}${lv.testament === 'all' ? '' : ` · ${testamentLabel(lv.testament)}`}`
-  if (p[0] === 'adv') return `Adventure · ${chapterTitle?.(p[1]) ?? p[1]}`
+  if (p[0] === 'adv') return `${p[1].startsWith('case-') ? 'Bible Mystery' : p[1].startsWith('parable-') ? 'Parables' : 'Adventure'} · ${chapterTitle?.(p[1]) ?? p[1]}`
+  if (p[0] === 'master') return `Bible Master Challenge${isPart(p[1]) ? ` · ${testamentLabel(p[1])}` : ''}`
+  if (p[0] === 'challenge') return `Challenge match · ${p[1]}`
   if (p[0] === 'daily') return `Daily Challenge · ${p[1]}`
   if (p[0] === 'review') return 'Review My Mistakes'
   if (p[0] === 'arena') return `Challenge Arena · ${DIFFICULTY_LABELS[Number(p[1]) as Difficulty]}${isPart(p[2]) ? ` · ${testamentLabel(p[2])}` : ''}`

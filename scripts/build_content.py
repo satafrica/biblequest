@@ -72,10 +72,11 @@ def verse_text(ref, max_verses=6, max_chars=700):
         text = text[:max_chars].rsplit(" ", 1)[0]; cut = True
     return text + (" \u2026" if cut else "")
 
-def check_keywords(qid, ref, kws):
+def check_keywords(qid, ref, kws, ignore_hyphens=False):
     try: text = passage(ref)
     except ValueError as e: errors.append(f"{qid}: {e}"); return False
     norm = lambda s: s.replace("\u2019", "'").replace("\u00e6", "ae").replace("\u00c6", "Ae").lower()
+    if ignore_hyphens: norm = (lambda f: lambda s: f(s).replace("-", ""))(norm)   # place names: Beer-sheba = Beersheba
     for k in kws:
         if norm(k) not in norm(text):
             errors.append(f"{qid}: keyword '{k}' not found in {ref}: {text[:140]}")
@@ -100,7 +101,7 @@ def base(qid, mode, ref, diff, prompt, options, correct, expl, hint=None, image=
 REVIEWED = json.load(open(os.path.join(ROOT, "content", "source", "reviewed.json"), encoding="utf-8"))
 REVIEWED_IDS = set(REVIEWED["ids"])
 REVIEWED_BATCHES = []
-for _name in ("reviewed.json", "reviewed_2.json"):
+for _name in ("reviewed.json", "reviewed_2.json", "reviewed_3.json"):
     _path = os.path.join(ROOT, "content", "source", _name)
     if os.path.exists(_path):
         _b = json.load(open(_path, encoding="utf-8")); _b["ids"] = set(_b["ids"]); REVIEWED_BATCHES.append(_b)
@@ -205,6 +206,63 @@ for (sid, title, diff, events) in SEQUENCES:
     q["events_refs"] = [r for (_, r, _) in events]
     questions.append(q)
 
+# --- New modes: Wisdom, Geography, Mystery, Parables (AI-drafted, auto-checked, AI-reviewed twice) and Hidden Object
+NEW = json.load(open(os.path.join(ROOT, "content", "source", "new_modes.json"), encoding="utf-8"))
+GEO = json.load(open(os.path.join(ROOT, "content", "source", "geo_places.json"), encoding="utf-8"))
+geo_name = lambda n: re.sub(r" \d+$", "", n)
+NEW_IDS = set()
+for it in NEW:
+    qid = it["id"]
+    mode = it["mode"]
+    if not check_keywords(qid, it["reference"], it["keywords"], ignore_hyphens=mode == "geography"): continue
+    if mode == "geography":
+        names = [it["place"]] + it["distractors"]
+        for n in names:
+            if n not in GEO: errors.append(f"{qid}: place {n} not in gazetteer")
+        if it["kind"] == "identify":
+            o, c = shuffle(qid, [geo_name(n) for n in names])
+            extra = {"map": {"view": it["view"], "kind": "identify", "markers": [{"lat": GEO[it["place"]]["lat"], "lon": GEO[it["place"]]["lon"]}]}}
+        else:
+            order, c = shuffle(qid, names)        # marker A..D in shuffled order; correct = letter of the place
+            o = ["Marker A", "Marker B", "Marker C", "Marker D"]
+            extra = {"map": {"view": it["view"], "kind": "locate", "markers": [{"lat": GEO[n]["lat"], "lon": GEO[n]["lon"], "label": "ABCD"[i]} for i, n in enumerate(order)]}}
+        q = base(qid, "geography", it["reference"], it["difficulty"], it["prompt"], o, c, it["explanation"], it.get("hint"), tags=["geography", geo_name(it["place"]), parse_ref(it["reference"])[0]])
+        q["extra"] = extra
+        q["place_source"] = GEO[it["place"]]["url"]
+    else:
+        ordered = [it["options"][it["correct"]]] + [x for i, x in enumerate(it["options"]) if i != it["correct"]]
+        o, c = shuffle(qid, ordered)      # deterministic shuffle so the answer is not always in the same place
+        tags = [mode, parse_ref(it["reference"])[0]]
+        q = base(qid, mode, it["reference"], it["difficulty"], it["prompt"], o, c, it["explanation"], it.get("hint"), tags=tags)
+        if mode == "mystery":
+            q["extra"] = {"case_title": it["case_title"], "stage": it["stage"], "stages": it["stages"], "clue": it["clue"]}
+            q["tags"].append(it["case"])
+        elif mode == "parables":
+            q["extra"] = {"parable_title": it["parable_title"]}
+            q["tags"].append(it["parable"])
+        else:
+            q["extra"] = None
+    questions.append(q); NEW_IDS.add(qid)
+
+from hidden_objects import HIDDEN              # noqa: E402
+_asset_ids = {a["id"] for a in ASSETS}
+for scene, objs in HIDDEN.items():
+    if scene not in _asset_ids: errors.append(f"hidden: no illustration {scene}"); continue
+    asset = next(a for a in ASSETS if a["id"] == scene)
+    boxes = [{"area": i, "box": b} for i, ob in enumerate(objs) for b in ob[6]]
+    for i, (key, prompt, ref, kws, expl, diff, bxs) in enumerate(objs):
+        qid = f"hid-{scene}-{key}"
+        if not check_keywords(qid, ref, kws): continue
+        for b in bxs:
+            if len(b) != 4 or b[0] < 0 or b[1] < 0 or b[0] + b[2] > 100.5 or b[1] + b[3] > 100.5: errors.append(f"{qid}: box out of the picture {b}")
+        q = base(qid, "hidden", ref, diff, prompt, [f"Area {n + 1}" for n in range(len(objs))], i, expl,
+                 f"Look for something mentioned in {ref}.", scene, tags=["hidden", scene, parse_ref(ref)[0]])
+        q["image_alt"] = asset["alt"]
+        q["extra"] = {"boxes": boxes}
+        questions.append(q)
+
+for q in questions: q.setdefault("extra", None)
+
 # --- Who Am I?: KJV passage behind each clue (shown after answering) --------
 _who_ids = {q["id"] for q in questions if q["game_mode"] == "whoami"}
 for name in CLUE_REFS:
@@ -233,7 +291,10 @@ for sid, refs in EVENT_REFS.items():
 for q in questions:
     for batch in REVIEWED_BATCHES:
         if q["id"] in batch["ids"]:
-            q["verification"].update({"human_review": "approved", "reviewed_at": batch["reviewed_at"], "review_method": batch["method"]})
+            if batch.get("human_review", "approved") == "approved":
+                q["verification"].update({"human_review": "approved", "reviewed_at": batch["reviewed_at"], "review_method": batch["method"]})
+            else:  # AI-reviewed only: stays pending so it shows in the admin Quick review
+                q["verification"].update({"ai_review": "passed", "ai_reviewed_at": batch["reviewed_at"], "review_method": batch["method"]})
     if q["game_mode"] == "sequence":
         q["verse_text"] = "\n".join(f"{r}: {verse_text(r, 2, 220)}" for r in q["events_refs"])
     else:
@@ -262,6 +323,23 @@ for adv in ADVENTURES:
         used.update(picked)
         for r in ch.get("refs", []): parse_ref(r)
         chapters.append({**{k: v for k, v in ch.items() if k not in ("tags", "refs")}, "position": pos, "question_ids": picked})
+    adventures.append({**{k: v for k, v in adv.items() if k != "chapters"}, "chapters": chapters})
+
+for adv in adventures: adv["kind"] = "journey"
+for ch in (c for a in adventures for c in a["chapters"]): ch["reading"] = None
+_by_id = {q["id"]: q for q in questions}
+for adv in json.load(open(os.path.join(ROOT, "content", "source", "new_adventures.json"), encoding="utf-8")):
+    chapters = []
+    for pos, ch in enumerate(adv["chapters"], 1):
+        qids = [i for i in ch["question_ids"] if i in _by_id]
+        if len(qids) < 3: errors.append(f"{adv['id']}/{ch['id']}: only {len(qids)} questions")
+        for r in ch.get("refs", []): parse_ref(r)
+        reading = None
+        if ch.get("reading"):
+            try: reading = [{"ref": r, "text": passage_text(r)} for r in ch["reading"]]
+            except ValueError as e: errors.append(f"{ch['id']}: reading {e}")
+        chapters.append({"id": ch["id"], "title": ch["title"], "reference_label": ch["reference_label"], "image_id": ch.get("image_id"),
+                         "narrative": ch["narrative"], "position": pos, "question_ids": qids, "reading": reading})
     adventures.append({**{k: v for k, v in adv.items() if k != "chapters"}, "chapters": chapters})
 
 if errors:
@@ -299,12 +377,13 @@ modes = [("picture","Picture Bible Quiz","Identify stories, people and places fr
  ("adventure","Bible Adventure Journey","Travel from Genesis to Revelation, chapter by chapter.","live",5),
  ("arena","Bible Challenge Arena","Timed rounds with optional leaderboards.","live",6),
  ("daily","Daily Bible Challenge","Five questions, new every day.","live",7),
- ("mystery","Bible Mystery","Multi-stage investigations with clues.","in_development",8),
- ("geography","Bible Geography Explorer","Cities, rivers, mountains and journeys on reviewed maps.","in_development",9),
- ("hidden","Hidden Object Adventure","Find objects connected to Bible stories.","in_development",10),
- ("wisdom","Bible Wisdom Decisions","Real-life choices connected to biblical teaching.","in_development",11),
- ("parables","Parables Explorer","Interactive journeys through the parables of Jesus.","in_development",12),
- ("master","Bible Master Challenge","Expert-level challenges across all of Scripture.","in_development",13)]
+ ("mystery","Bible Mystery","Multi-stage investigations with clues.","live",8),
+ ("geography","Bible Geography Explorer","Cities, rivers, mountains and journeys on reviewed maps.","live",9),
+ ("hidden","Hidden Object Adventure","Find objects connected to Bible stories.","live",10),
+ ("wisdom","Bible Wisdom Decisions","Real-life choices connected to biblical teaching.","live",11),
+ ("parables","Parables Explorer","Interactive journeys through the parables of Jesus.","live",12),
+ ("master","Bible Master Challenge","Expert-level challenges across all of Scripture.","live",13),
+ ("challenge","Challenge Match","Play the same questions as friends or a group.","live",15)]
 out.append("insert into public.game_modes (id, name, description, availability, sort_order) values " +
   ",".join(f"({lit(a)},{lit(b)},{lit(c)},{lit(d)},{e})" for a,b,c,d,e in modes) + " on conflict (id) do update set availability = excluded.availability;")
 out.append("insert into public.reward_rules (id, gems, description) values ('correct_answer',10,'First correct answer to a question'),"
@@ -316,15 +395,15 @@ for a in ASSETS:
                   lit("AI-generated for MyBibleGem (GPT Image); confirm commercial-use terms of the generator before release"), "true",
                   lit(a["interpretation_note"]), lit(a["alt"]), lit(a["path"]), "1200", lit(a.get("height", 900)), "'review'"]) + ") on conflict (id) do nothing;")
 for q in questions:
-    out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification, verse_text, clue_refs) values ("
+    out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification, verse_text, clue_refs, extra) values ("
       + ",".join([lit(q["id"]), lit(q["game_mode"]), str(q["book_id"]), str(q["chapter"]), str(q["verse_start"]), str(q["verse_end"]),
                   lit(q["reference_label"]), str(q["difficulty"]), lit(q["prompt"]), lit(q["clues"]), lit(q["options"]), str(q["correct_index"]),
-                  lit(q["explanation"]), lit(q["hint"]), lit(q["image_id"]), lit(q.get("image_alt")), "'KJV'", arr(q["tags"]), "'review'", lit(q["verification"]), lit(q["verse_text"]), lit(q["clue_refs"])])
+                  lit(q["explanation"]), lit(q["hint"]), lit(q["image_id"]), lit(q.get("image_alt")), "'KJV'", arr(q["tags"]), "'review'", lit(q["verification"]), lit(q["verse_text"]), lit(q["clue_refs"]), lit(q["extra"])])
       + ") on conflict (id) do nothing;")
 for i, adv in enumerate(adventures):
-    out.append(f"insert into public.adventures (id, title, summary, testament, image_id, sort_order, status) values ({lit(adv['id'])},{lit(adv['title'])},{lit(adv['summary'])},{lit(adv['testament'])},{lit(adv['image_id'])},{i},'review') on conflict (id) do nothing;")
+    out.append(f"insert into public.adventures (id, title, summary, testament, image_id, sort_order, status, kind) values ({lit(adv['id'])},{lit(adv['title'])},{lit(adv['summary'])},{lit(adv['testament'])},{lit(adv['image_id'])},{i},'review',{lit(adv['kind'])}) on conflict (id) do nothing;")
     for ch in adv["chapters"]:
-        out.append(f"insert into public.adventure_chapters (id, adventure_id, position, title, reference_label, narrative, image_id, question_ids, status) values ({lit(ch['id'])},{lit(adv['id'])},{ch['position']},{lit(ch['title'])},{lit(ch['reference_label'])},{lit(ch['narrative'])},{lit(ch['image_id'])},{arr(ch['question_ids'])},'review') on conflict (id) do nothing;")
+        out.append(f"insert into public.adventure_chapters (id, adventure_id, position, title, reference_label, narrative, image_id, question_ids, status, reading) values ({lit(ch['id'])},{lit(adv['id'])},{ch['position']},{lit(ch['title'])},{lit(ch['reference_label'])},{lit(ch['narrative'])},{lit(ch['image_id'])},{arr(ch['question_ids'])},'review',{lit(ch['reading'])}) on conflict (id) do nothing;")
 for s in STORE_ITEMS:
     out.append(f"insert into public.store_items (id, name, description, category, price, consumable, image_path, image_alt, sort_order) values ({lit(s['id'])},{lit(s['name'])},{lit(s['description'])},{lit(s['category'])},{s['price']},{lit(s['consumable'])},{lit(s.get('image'))},{lit(s.get('image_alt'))},{s.get('sort',0)}) on conflict (id) do nothing;")
 for a in ACHIEVEMENTS:

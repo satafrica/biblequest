@@ -61,9 +61,10 @@ test('dark mode and text size apply and persist', async ({ page }) => {
   await expect(page.locator('html')).toHaveClass(/dark/)
 })
 
-test('locked content is honest: expert arena and adventure chapters', async ({ page }) => {
+test('locked content is honest: expert arena, and community needs the online version', async ({ page }) => {
   await page.goto('./#/arena')
   await expect(page.getByRole('link', { name: /Unlock in store/ }).or(page.getByRole('button', { name: /Unlock in store/ }))).toBeVisible()
   await page.goto('./#/community')
-  await expect(page.getByText('Not yet available.')).toBeVisible()
+  await expect(page.getByTestId('community-gate')).toBeVisible()
+  await expect(page.getByTestId('community-gate')).toContainText(/online version|free account/)
 })

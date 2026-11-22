@@ -1,0 +1,404 @@
+[
+ {
+  "id": "cases-ot",
+  "kind": "mystery",
+  "title": "Old Testament Case Files",
+  "testament": "OT",
+  "image_id": "joseph_coat",
+  "summary": "Nine investigations from Genesis to Daniel. Read each briefing, study the clues and answer from the text.",
+  "chapters": [
+   {
+    "id": "case-m3",
+    "title": "The Missing Household Gods",
+    "reference_label": "Genesis 31",
+    "image_id": null,
+    "narrative": "Jacob has left Paddan-aram with his wives, children and flocks, and Laban has discovered that his household images are gone. Working only from Genesis 31, piece together when they vanished, how Laban gave chase, what was said, and where the missing gods really were.",
+    "question_ids": [
+     "mys-m3-1",
+     "mys-m3-2",
+     "mys-m3-3",
+     "mys-m3-4",
+     "mys-m3-5"
+    ]
+   },
+   {
+    "id": "case-m2",
+    "title": "The Bloodstained Coat",
+    "reference_label": "Genesis 37",
+    "image_id": "joseph_coat",
+    "narrative": "A grieving father in Canaan holds a torn, blood-soaked garment and believes his favoured son is dead. Your assignment is to trace the coat's journey from Jacob's tent to the wilderness pit and uncover what really happened, using only the testimony of Genesis 37.",
+    "question_ids": [
+     "mys-m2-1",
+     "mys-m2-2",
+     "mys-m2-3",
+     "mys-m2-4",
+     "mys-m2-5"
+    ]
+   },
+   {
+    "id": "case-m1",
+    "title": "The Silver Cup in the Sack",
+    "reference_label": "Genesis 44",
+    "image_id": "joseph_coat",
+    "narrative": "Eleven brothers set out for home from Egypt with full sacks of corn, and a costly silver cup goes missing from the house of the ruler. Your case file is Genesis 44: trace how the cup got into the sack, how it was found, and how the matter was settled.",
+    "question_ids": [
+     "mys-m1-1",
+     "mys-m1-2",
+     "mys-m1-3",
+     "mys-m1-4",
+     "mys-m1-5"
+    ]
+   },
+   {
+    "id": "case-m4",
+    "title": "The Spies on the Roof",
+    "reference_label": "Joshua 2",
+    "image_id": null,
+    "narrative": "Two strangers from the camp of Israel slipped into Jericho, and by nightfall the king's men were knocking at a house on the town wall. Your case file is Joshua 2: follow the evidence in story order to learn who sent the men, where they vanished, and how they escaped the city.",
+    "question_ids": [
+     "mys-m4-1",
+     "mys-m4-2",
+     "mys-m4-3",
+     "mys-m4-4",
+     "mys-m4-5"
+    ]
+   },
+   {
+    "id": "case-m5",
+    "title": "The Hidden Plunder",
+    "reference_label": "Joshua 7",
+    "image_id": null,
+    "narrative": "After the stunning fall of Jericho, Israel suffers an unexpected and humiliating defeat at the small city of Ai. Something has gone terribly wrong in the camp, and the LORD reveals that a hidden wrong must be uncovered before Israel can stand again. Investigate the case of 'The Hidden Plunder' in Joshua 7.",
+    "question_ids": [
+     "mys-m5-1",
+     "mys-m5-2",
+     "mys-m5-3",
+     "mys-m5-4",
+     "mys-m5-5"
+    ]
+   },
+   {
+    "id": "case-m6",
+    "title": "The Secret of Samson's Strength",
+    "reference_label": "Judges 16",
+    "image_id": null,
+    "narrative": "Samson, the judge of Israel, has broken every bond his enemies placed on him, and no one knows why he cannot be overpowered. In Judges 16 a woman is offered a fortune to uncover his secret. Your task is to follow the evidence, stage by stage, to learn how the strongest man in Israel was finally brought low.",
+    "question_ids": [
+     "mys-m6-1",
+     "mys-m6-2",
+     "mys-m6-3",
+     "mys-m6-4",
+     "mys-m6-5"
+    ]
+   },
+   {
+    "id": "case-m7",
+    "title": "Two Mothers and One Child",
+    "reference_label": "1 Kings 3",
+    "image_id": null,
+    "narrative": "In 1 Kings 3, two women stand before King Solomon with one living baby and one dead one, and each claims the living child as her own. There were no other witnesses in the house, so the king must uncover the truth from their testimony alone. Gather the evidence and discover how the true mother was revealed.",
+    "question_ids": [
+     "mys-m7-1",
+     "mys-m7-2",
+     "mys-m7-3",
+     "mys-m7-4",
+     "mys-m7-5"
+    ]
+   },
+   {
+    "id": "case-m12",
+    "title": "The Plot Against the Queen's People",
+    "reference_label": "Esther 3, 4, 5, 7",
+    "image_id": "esther_king",
+    "narrative": "In the court of king Ahasuerus at Shushan, a royal decree has gone out to destroy every Jew in the empire on a single appointed day, and the queen herself is secretly one of the people marked for death. Investigate Esther 3-7 to trace who set the plot in motion, how it was arranged, and how it was finally exposed.",
+    "question_ids": [
+     "mys-m12-1",
+     "mys-m12-2",
+     "mys-m12-3",
+     "mys-m12-4",
+     "mys-m12-5"
+    ]
+   },
+   {
+    "id": "case-m8",
+    "title": "The Writing on the Wall",
+    "reference_label": "Daniel 5",
+    "image_id": null,
+    "narrative": "During a royal banquet in Babylon, a disembodied hand writes a message on the palace wall, and the king's wise men cannot explain it. Your task is to work through the case file in Daniel 5 and find out what the writing meant and what happened that same night.",
+    "question_ids": [
+     "mys-m8-1",
+     "mys-m8-2",
+     "mys-m8-3",
+     "mys-m8-4",
+     "mys-m8-5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cases-nt",
+  "kind": "mystery",
+  "title": "New Testament Case Files",
+  "testament": "NT",
+  "image_id": "pentecost",
+  "summary": "Three investigations from the Gospels and Acts.",
+  "chapters": [
+   {
+    "id": "case-m9",
+    "title": "The Betrayer at the Table",
+    "reference_label": "Matthew 26; John 13",
+    "image_id": null,
+    "narrative": "On the night of the Passover, Jesus sat at the table with his twelve disciples and announced that one of them would betray him. Using the accounts in Matthew 26 and John 13, trace how the agreement was made, how the betrayer was revealed at the table, and what sign was finally used to deliver Jesus over.",
+    "question_ids": [
+     "mys-m9-1",
+     "mys-m9-2",
+     "mys-m9-3",
+     "mys-m9-4",
+     "mys-m9-5"
+    ]
+   },
+   {
+    "id": "case-m10",
+    "title": "The Price of the Land",
+    "reference_label": "Acts 5",
+    "image_id": null,
+    "narrative": "In the early Jerusalem church, a couple sold a possession and brought money to the apostles, but within hours both were dead and fear had spread through the whole church. Your case file covers Acts 5:1-11. Follow the money, the words spoken, and the timeline to learn what really happened with the price of the land.",
+    "question_ids": [
+     "mys-m10-1",
+     "mys-m10-2",
+     "mys-m10-3",
+     "mys-m10-4",
+     "mys-m10-5"
+    ]
+   },
+   {
+    "id": "case-m11",
+    "title": "The Prisoner Who Walked Free",
+    "reference_label": "Acts 12",
+    "image_id": null,
+    "narrative": "Case file: The Prisoner Who Walked Free. Peter has been locked in a heavily guarded prison by King Herod, yet by morning he is gone and the soldiers cannot account for him. Investigate the evidence recorded in Acts 12 to discover how the prisoner walked free.",
+    "question_ids": [
+     "mys-m11-1",
+     "mys-m11-2",
+     "mys-m11-3",
+     "mys-m11-4",
+     "mys-m11-5"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "parables-matthew",
+  "kind": "parables",
+  "title": "Parables in Matthew",
+  "testament": "NT",
+  "image_id": "sermon_mount",
+  "summary": "Read seven parables of Jesus from Matthew in the King James Version, then answer questions on each.",
+  "chapters": [
+   {
+    "id": "parable-p6",
+    "title": "The Wise and Foolish Builders",
+    "reference_label": "Matthew 7:24-29",
+    "image_id": "sermon_mount",
+    "narrative": "This parable is the closing illustration of the Sermon on the Mount, which Jesus taught after he \"went up into a mountain\" and his disciples came to him while the multitudes gathered (Matthew 5:1-2). When he finished, \"the people were astonished at his doctrine\" (Matthew 7:28).",
+    "reading": [
+     "Matthew 7:24-29"
+    ],
+    "question_ids": [
+     "par-p6-1",
+     "par-p6-2",
+     "par-p6-3",
+     "par-p6-4"
+    ]
+   },
+   {
+    "id": "parable-p1",
+    "title": "The Sower",
+    "reference_label": "Matthew 13:1-9, 18-23",
+    "image_id": null,
+    "narrative": "Jesus went out of the house, sat by the sea side, and because great multitudes gathered, he entered a ship and taught the people on the shore in parables (Matthew 13:1-3). He later explained the parable of the sower to his disciples (Matthew 13:18).",
+    "reading": [
+     "Matthew 13:1-9",
+     "Matthew 13:18-23"
+    ],
+    "question_ids": [
+     "par-p1-1",
+     "par-p1-2",
+     "par-p1-3",
+     "par-p1-4"
+    ]
+   },
+   {
+    "id": "parable-p5",
+    "title": "The Mustard Seed and the Leaven",
+    "reference_label": "Matthew 13:31-35",
+    "image_id": null,
+    "narrative": "Sitting in a ship by the sea, Jesus taught great multitudes gathered on the shore, speaking 'many things unto them in parables' (Matthew 13:1-3). These two short parables were spoken to that multitude (Matthew 13:34).",
+    "reading": [
+     "Matthew 13:31-35"
+    ],
+    "question_ids": [
+     "par-p5-1",
+     "par-p5-2",
+     "par-p5-3",
+     "par-p5-4"
+    ]
+   },
+   {
+    "id": "parable-p8",
+    "title": "The Unforgiving Servant",
+    "reference_label": "Matthew 18:21-35",
+    "image_id": null,
+    "narrative": "Peter came to Jesus and asked, \"Lord, how oft shall my brother sin against me, and I forgive him?\" (Matthew 18:21). Jesus answered him, then told this parable of a king settling accounts with his servants (Matthew 18:22-23).",
+    "reading": [
+     "Matthew 18:21-35"
+    ],
+    "question_ids": [
+     "par-p8-1",
+     "par-p8-2",
+     "par-p8-3",
+     "par-p8-4"
+    ]
+   },
+   {
+    "id": "parable-p9",
+    "title": "The Labourers in the Vineyard",
+    "reference_label": "Matthew 20:1-16",
+    "image_id": null,
+    "narrative": "Jesus told this parable to His disciples right after Peter asked, \"Behold, we have forsaken all, and followed thee; what shall we have therefore?\" and Jesus answered that \"many that are first shall be last; and the last shall be first\" (Matthew 19:27-30). The parable opens with \"For the kingdom of heaven is like unto a man that is an householder\" (Matthew 20:1), illustrating that saying.",
+    "reading": [
+     "Matthew 20:1-8",
+     "Matthew 20:9-16"
+    ],
+    "question_ids": [
+     "par-p9-1",
+     "par-p9-2",
+     "par-p9-3"
+    ]
+   },
+   {
+    "id": "parable-p10",
+    "title": "The Ten Virgins",
+    "reference_label": "Matthew 25:1-13",
+    "image_id": null,
+    "narrative": "Jesus told this parable to His disciples, who had come to Him privately on the mount of Olives asking, \"what shall be the sign of thy coming, and of the end of the world?\" (Matthew 24:3). It continues His answer about being ready for His coming, since \"of that day and hour knoweth no man\" (Matthew 24:36).",
+    "reading": [
+     "Matthew 25:1-13"
+    ],
+    "question_ids": [
+     "par-p10-1",
+     "par-p10-2",
+     "par-p10-3",
+     "par-p10-4"
+    ]
+   },
+   {
+    "id": "parable-p11",
+    "title": "The Talents",
+    "reference_label": "Matthew 25:14-30",
+    "image_id": null,
+    "narrative": "Sitting on the Mount of Olives, Jesus was answering His disciples' private question about the sign of His coming and of the end of the world (Matthew 24:3). He told this parable right after warning, \"Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh\" (Matthew 25:13).",
+    "reading": [
+     "Matthew 25:14-22",
+     "Matthew 25:23-30"
+    ],
+    "question_ids": [
+     "par-p11-1",
+     "par-p11-2",
+     "par-p11-3",
+     "par-p11-4"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "parables-luke",
+  "kind": "parables",
+  "title": "Parables in Luke",
+  "testament": "NT",
+  "image_id": "good_samaritan",
+  "summary": "Read five parables of Jesus from Luke in the King James Version, then answer questions on each.",
+  "chapters": [
+   {
+    "id": "parable-p2",
+    "title": "The Good Samaritan",
+    "reference_label": "Luke 10:25-37",
+    "image_id": "good_samaritan",
+    "narrative": "A certain lawyer stood up and tempted Jesus, asking, 'Master, what shall I do to inherit eternal life?' (Luke 10:25). After agreeing that the law commands love for God and neighbour, the lawyer, 'willing to justify himself,' asked, 'And who is my neighbour?' Jesus answered with this parable (Luke 10:29-30).",
+    "reading": [
+     "Luke 10:25-37"
+    ],
+    "question_ids": [
+     "par-p2-1",
+     "par-p2-2",
+     "par-p2-3",
+     "par-p2-4"
+    ]
+   },
+   {
+    "id": "parable-p7",
+    "title": "The Rich Fool",
+    "reference_label": "Luke 12:13-21",
+    "image_id": null,
+    "narrative": "When a man in the crowd asked Jesus to make his brother divide the inheritance with him, Jesus refused to act as judge and warned them to beware of covetousness, then told this parable (Luke 12:13-15).",
+    "reading": [
+     "Luke 12:13-21"
+    ],
+    "question_ids": [
+     "par-p7-1",
+     "par-p7-2",
+     "par-p7-3"
+    ]
+   },
+   {
+    "id": "parable-p3",
+    "title": "The Lost Sheep and the Lost Coin",
+    "reference_label": "Luke 15:1-10",
+    "image_id": null,
+    "narrative": "Publicans and sinners drew near to hear Jesus, and the Pharisees and scribes murmured, \"This man receiveth sinners, and eateth with them\"; in answer, Jesus spake this parable unto them (Luke 15:1-3).",
+    "reading": [
+     "Luke 15:1-10"
+    ],
+    "question_ids": [
+     "par-p3-1",
+     "par-p3-2",
+     "par-p3-3",
+     "par-p3-4"
+    ]
+   },
+   {
+    "id": "parable-p4",
+    "title": "The Prodigal Son",
+    "reference_label": "Luke 15:11-32",
+    "image_id": "prodigal_son",
+    "narrative": "Publicans and sinners drew near to hear Jesus, and the Pharisees and scribes murmured, saying, \"This man receiveth sinners, and eateth with them\" (Luke 15:1-2). In answer, Jesus told a series of parables about the lost being found, ending with this story of a father and his two sons (Luke 15:3, 11).",
+    "reading": [
+     "Luke 15:11-24",
+     "Luke 15:25-32"
+    ],
+    "question_ids": [
+     "par-p4-1",
+     "par-p4-2",
+     "par-p4-3",
+     "par-p4-4"
+    ]
+   },
+   {
+    "id": "parable-p12",
+    "title": "The Pharisee and the Publican",
+    "reference_label": "Luke 18:9-14",
+    "image_id": null,
+    "narrative": "Luke records that Jesus spoke this parable \"unto certain which trusted in themselves that they were righteous, and despised others\" (Luke 18:9). It contrasts the prayers of two men who went up to the temple to pray (Luke 18:10).",
+    "reading": [
+     "Luke 18:9-14"
+    ],
+    "question_ids": [
+     "par-p12-1",
+     "par-p12-2",
+     "par-p12-3",
+     "par-p12-4"
+    ]
+   }
+  ]
+ }
+]

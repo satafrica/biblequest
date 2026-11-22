@@ -420,7 +420,11 @@ function Reports() {
       <li key={r.id} className="p-3 text-sm">
         <div className="flex flex-wrap items-center gap-2"><strong>{r.target_type} {r.target_id}</strong><span className="chip">{r.status}</span><span className="text-muted">{new Date(r.created_at).toLocaleString()}</span></div>
         <p className="mt-1">{r.reason}</p>
-        <div className="mt-2 flex gap-2">{['reviewing', 'resolved', 'dismissed'].filter((s) => s !== r.status).map((s) => <button key={s} className="btn-secondary btn-sm" onClick={() => act(`Report ${s}`, async () => (await sb()).rpc('admin_set_report_status', { p_id: r.id, p_status: s })).then(load)}>Mark {s}</button>)}</div>
+        <div className="mt-2 flex flex-wrap gap-2">{['reviewing', 'resolved', 'dismissed'].filter((s) => s !== r.status).map((s) => <button key={s} className="btn-secondary btn-sm" onClick={() => act(`Report ${s}`, async () => (await sb()).rpc('admin_set_report_status', { p_id: r.id, p_status: s })).then(load)}>Mark {s}</button>)}
+          {r.target_type === 'profile' && <button className="btn-secondary btn-sm" onClick={() => { if (confirm('Reset this player\u2019s display name to a neutral one?')) act('Name reset', async () => (await sb()).rpc('admin_moderate', { p_target_type: 'profile', p_target_id: r.target_id, p_action: 'reset_name' })).then(load) }}>Reset player name</button>}
+          {r.target_type === 'group' && <button className="btn-secondary btn-sm" onClick={() => { if (confirm('Reset this group\u2019s name and description?')) act('Group name reset', async () => (await sb()).rpc('admin_moderate', { p_target_type: 'group', p_target_id: r.target_id, p_action: 'reset_name' })).then(load) }}>Reset group name</button>}
+          {r.target_type === 'group' && <button className="btn-secondary btn-sm" onClick={() => { if (confirm('Delete this group for all members? This cannot be undone.')) act('Group deleted', async () => (await sb()).rpc('admin_moderate', { p_target_type: 'group', p_target_id: r.target_id, p_action: 'delete' })).then(load) }}>Delete group</button>}
+        </div>
       </li>))}</ul>
   )
 }

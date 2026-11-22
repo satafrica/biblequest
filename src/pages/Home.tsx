@@ -149,15 +149,19 @@ export default function Home() {
               </li>
             ))}
           </ul>
-          <h3 className="mt-10 mb-3 text-lg font-semibold">In development</h3>
-          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {MODES.filter((m) => !m.live).map((m) => (
-              <li key={m.id} className="card flex items-start gap-3 p-4 border-dashed shadow-none" aria-label={`${m.name}: in development, not yet playable`}>
-                <m.Icon className="mt-0.5 h-5 w-5 text-muted" aria-hidden="true" />
-                <div><p className="font-semibold">{m.name} <span className="chip ml-1 align-middle"><Lock className="h-3 w-3" aria-hidden="true" />In development</span></p><p className="text-sm text-muted">{m.blurb}</p></div>
-              </li>
-            ))}
-          </ul>
+          {MODES.some((m) => !m.live) && (
+            <>
+              <h3 className="mt-10 mb-3 text-lg font-semibold">In development</h3>
+              <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {MODES.filter((m) => !m.live).map((m) => (
+                  <li key={m.id} className="card flex items-start gap-3 p-4 border-dashed shadow-none" aria-label={`${m.name}: in development, not yet playable`}>
+                    <m.Icon className="mt-0.5 h-5 w-5 text-muted" aria-hidden="true" />
+                    <div><p className="font-semibold">{m.name} <span className="chip ml-1 align-middle"><Lock className="h-3 w-3" aria-hidden="true" />In development</span></p><p className="text-sm text-muted">{m.blurb}</p></div>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </section>
 
         <section className="mt-12 card grid gap-4 p-6 md:grid-cols-[1fr_auto] md:items-center">

@@ -1,5 +1,5 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { Lock, Users } from 'lucide-react'
+import { Lock } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { Illustration, PageHeader } from '../components/ui'
 
@@ -49,6 +49,11 @@ export function About() {
           <p className="mt-2">Other translations (for example Spanish, French, Portuguese, Twi or Swahili Bibles) will be added only after their licences are confirmed. The app is built so text can be translated later; only English is available today.</p></section>
         <section><h2 className="text-xl font-semibold mb-2">Editorial review</h2>
           <p>Questions, illustrations and adventure chapters move through draft → review → approved → published. Only published content appears in games on the live service. {backend.kind === 'local' ? `This preview shows all ${catalog.totalQuestions} questions currently in review so the project owner can check them; they are not yet marked as human-approved.` : ''} Explanations stick to what the text says; where Christian traditions interpret a passage differently, MyBibleGem avoids presenting one reading as settled fact.</p></section>
+        <section><h2 className="text-xl font-semibold mb-2">Newer game content</h2>
+          <p>Bible Mystery cases, Geography Explorer, Hidden Object, Wisdom Decisions and Parables Explorer questions were drafted with an AI model, checked automatically against the KJV text, and then reviewed and corrected in two separate AI review passes before being published. They have not yet been read line by line by a person; please use the flag button in any game to report a problem.</p>
+          <p className="mt-2">Maps use place identifications from <a className="link" href="https://www.openbible.info/geo/" target="_blank" rel="noreferrer">OpenBible.info Bible Geocoding Data</a> (licensed CC BY 4.0) and coastline and river outlines from <a className="link" href="https://www.naturalearthdata.com/" target="_blank" rel="noreferrer">Natural Earth</a> (public domain). Many ancient sites are uncertain; markers show the most likely location.</p></section>
+        <section><h2 className="text-xl font-semibold mb-2">Community</h2>
+          <p>Friends, groups and challenge matches need a registered account. Only display names, avatars and scores are shared; there is no chat or direct messaging. Groups are joined by invite code, owners and moderators can remove members, and any name can be reported to the administrators.</p></section>
         <section><h2 className="text-xl font-semibold mb-2">Illustrations</h2>
           <p>Illustrations were created with an AI image generator for MyBibleGem and are artistic interpretations. Faces, clothing, colours and settings are imagined; each image carries a note distinguishing what Scripture describes from artistic detail. Commercial-use terms of the generator should be confirmed by the owner before public release.</p></section>
         <section><h2 className="text-xl font-semibold mb-2">Gems</h2>
@@ -67,17 +72,3 @@ export function About() {
   )
 }
 
-export function Community() {
-  return (
-    <div className="mx-auto max-w-3xl px-4 py-8 md:py-12">
-      <PageHeader eyebrow="Community" title="Friends, groups and multiplayer">Not yet available.</PageHeader>
-      <div className="card flex gap-4 p-6">
-        <Users className="h-8 w-8 shrink-0 text-muted" aria-hidden="true" />
-        <div className="leading-relaxed">
-          <p>Church groups, friend lists, study groups and live multiplayer are planned. The database already includes group and membership tables with moderation reports, but these features are switched off until they are finished, moderated and tested.</p>
-          <p className="mt-3 text-sm text-muted">Planned safeguards: invitation-only groups, group leaders as moderators, reporting of names and messages, no direct messages between strangers.</p>
-        </div>
-      </div>
-    </div>
-  )
-}

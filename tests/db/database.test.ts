@@ -539,3 +539,120 @@ describe('account deletion', () => {
     expect((await sql(`select created_by from public.questions where id=$1`, [qid])).rows[0].created_by).toBeNull()
   })
 })
+
+describe('new game modes', () => {
+  it('geography, hidden and wisdom levels start with answer-free extra data', async () => {
+    const u = await newUser()
+    for (const mode of ['geography', 'hidden', 'wisdom']) {
+      const d = (await sql(`select min(difficulty)::int d from public.questions where game_mode=$1`, [mode])).rows[0].d
+      const s = await rpc(u, 'start_session', [`${mode}:${d}:1`])
+      expect(s.questions.length).toBeGreaterThan(0)
+      for (const q of s.questions) {
+        expect(q.game_mode).toBe(mode)
+        expect(Object.keys(q)).not.toContain('correct_index')
+        if (mode === 'geography') expect(q.extra.map.markers.length).toBeGreaterThan(0)
+        if (mode === 'hidden') { expect(q.extra.boxes.length).toBeGreaterThan(0); expect(q.extra.boxes.every((b: { area: number }) => b.area < q.options.length)).toBe(true); expect(q.image_path).toBeTruthy() }
+      }
+      const r = await playLevel(u, `${mode}:${d}:1`)
+      expect(r.result.correct).toBe(r.session.questions.length)
+    }
+  })
+  it('mystery and parables chapters play as adventures with a reading or briefing', async () => {
+    const u = await newUser()
+    const ch = (await sql(`select c.id, c.reading, a.kind from public.adventure_chapters c join public.adventures a on a.id=c.adventure_id where a.kind in ('mystery','parables') and c.position=1 order by a.kind`)).rows
+    expect(ch.map((c: { kind: string }) => c.kind)).toEqual(expect.arrayContaining(['mystery', 'parables']))
+    for (const c of ch) {
+      if (c.kind === 'parables') expect(c.reading).toBeTruthy()
+      const r = await playLevel(u, `adv:${c.id}`)
+      expect(r.result.correct).toBe(r.session.questions.length)
+    }
+  })
+  it('the master challenge draws 12 expert questions from the chosen testament', async () => {
+    const u = await newUser()
+    const s = await rpc(u, 'start_session', ['master'])
+    expect(s.questions.length).toBe(12)
+    expect(s.questions.every((q: { difficulty: number }) => q.difficulty === 4)).toBe(true)
+    const done = await playLevel(u, 'master')
+    expect(done.result.new_achievements ?? done.result.achievements ?? []).toEqual(expect.arrayContaining(['master_1']))
+    const nt = await rpc(u, 'start_session', ['master:nt'])
+    const ntBooks = (await sql(`select id from public.bible_books where testament='NT'`)).rows.map((r: { id: string }) => r.id)
+    expect(nt.questions.every((q: { book_id: string }) => ntBooks.includes(q.book_id))).toBe(true)
+  })
+})
+
+describe('community', () => {
+  const anonUser = async () => { const id = await newUser(); await sql('update auth.users set is_anonymous=true where id=$1', [id]); return id }
+  it('guests cannot use community features', async () => {
+    const g = await anonUser()
+    await expect(rpc(g, 'get_my_friend_code', [])).rejects.toThrow(/account_required/)
+    await expect(rpc(g, 'create_group', ['Guest group', null])).rejects.toThrow(/account_required/)
+    await expect(rpc(null, 'list_friends', [])).rejects.toThrow()
+  })
+  it('friend requests by code, acceptance, weekly board and removal', async () => {
+    const a = await newUser(), b = await newUser()
+    const codeB = await rpc(b, 'get_my_friend_code', [])
+    expect(codeB).toMatch(/^[A-Z0-9]{6,10}$/)
+    await expect(rpc(a, 'send_friend_request', ['NOPE00'])).rejects.toThrow(/code_not_found/)
+    await expect(rpc(b, 'send_friend_request', [codeB])).rejects.toThrow(/own_code/)
+    expect(await rpc(a, 'send_friend_request', [codeB.toLowerCase()])).toBe('sent')
+    const incoming = await asUser(b, async c => (await c.query('select * from public.list_friends()')).rows)
+    expect(incoming).toHaveLength(1); expect(incoming[0].direction).toBe('incoming'); expect(incoming[0].status).toBe('pending')
+    await rpc(b, 'respond_friend_request', [a, true])
+    await playLevel(b, 'picture:1:1')
+    const mine = await asUser(a, async c => (await c.query('select * from public.list_friends()')).rows)
+    expect(mine[0].status).toBe('accepted'); expect(Number(mine[0].weekly_correct)).toBeGreaterThan(0)
+    await rpc(a, 'remove_friend', [b])
+    expect((await asUser(b, async c => (await c.query('select * from public.list_friends()')).rows))).toHaveLength(0)
+    // tables are not readable directly
+    await expect(asUser(a, c => c.query('select * from public.friendships'))).rejects.toThrow(/permission denied/)
+  })
+  it('groups: invite codes, roles, moderation and deletion', async () => {
+    const owner = await newUser(), m1 = await newUser(), m2 = await newUser(), outsider = await newUser()
+    await expect(rpc(owner, 'create_group', ['see http://spam.example', null])).rejects.toThrow(/invalid_name/)
+    const g = await rpc(owner, 'create_group', ['Tuesday Bible Study', 'Our church group'])
+    await rpc(m1, 'join_group', [g.invite_code]); await rpc(m2, 'join_group', [g.invite_code])
+    await expect(rpc(outsider, 'get_group', [g.id])).rejects.toThrow(/not_a_member/)
+    const detail = await rpc(m1, 'get_group', [g.id])
+    expect(detail.members).toHaveLength(3); expect(detail.my_role).toBe('member')
+    await expect(rpc(m1, 'remove_group_member', [g.id, m2])).rejects.toThrow(/forbidden/)
+    await rpc(owner, 'set_group_moderator', [g.id, m1, true])
+    await rpc(m1, 'remove_group_member', [g.id, m2])
+    await expect(rpc(m1, 'remove_group_member', [g.id, owner])).rejects.toThrow()
+    expect((await rpc(owner, 'get_group', [g.id])).members).toHaveLength(2)
+    await expect(rpc(owner, 'leave_group', [g.id])).rejects.toThrow(/owner_cannot_leave/)
+    const newCode = await rpc(owner, 'update_group', [g.id, 'Tuesday Study', 'x', true])
+    expect(newCode).not.toBe(g.invite_code)
+    await expect(rpc(outsider, 'join_group', [g.invite_code])).rejects.toThrow(/code_not_found/)
+    await expect(rpc(m1, 'delete_group', [g.id])).rejects.toThrow(/forbidden/)
+    await rpc(owner, 'delete_group', [g.id])
+    expect((await sql('select count(*)::int n from public.groups where id=$1', [g.id])).rows[0].n).toBe(0)
+  })
+  it('challenge matches: same questions for everyone, first score counts, results board', async () => {
+    const a = await newUser(), b = await newUser(), guest = await anonUser()
+    await expect(rpc(guest, 'create_challenge', ['mixed', 2, null])).rejects.toThrow(/account_required/)
+    const code = await rpc(a, 'create_challenge', ['mixed', 2, null])
+    const sa = await rpc(a, 'start_session', [`challenge:${code}`])
+    const sb = await rpc(b, 'start_session', [`challenge:${code.toLowerCase()}`])
+    expect(sb.questions.map((q: { id: string }) => q.id)).toEqual(sa.questions.map((q: { id: string }) => q.id))
+    await playLevel(a, `challenge:${code}`, true)
+    await playLevel(b, `challenge:${code}`, false)
+    await playLevel(b, `challenge:${code}`, true) // replay does not overwrite the first score
+    const c = await rpc(a, 'get_challenge', [code])
+    expect(c.results).toHaveLength(2)
+    expect(c.results[0].is_me).toBe(true)
+    expect(c.results[1].correct).toBe(0)
+    // a guest can still play a match by code
+    await playLevel(guest, `challenge:${code}`, true)
+    expect((await rpc(a, 'get_challenge', [code])).results).toHaveLength(3)
+    await sql(`update public.challenges set expires_at = now() - interval '1 minute' where code=$1`, [code])
+    await expect(rpc(b, 'start_session', [`challenge:${code}`])).rejects.toThrow(/challenge_expired/)
+  })
+  it('only staff can moderate names and groups, and it is audited', async () => {
+    const p = await newUser(), adm = await newUser('admin')
+    await sql(`update public.profiles set display_name='Rude Name' where id=$1`, [p])
+    await expect(rpc(p, 'admin_moderate', ['profile', p, 'reset_name'])).rejects.toThrow(/forbidden/)
+    await rpc(adm, 'admin_moderate', ['profile', p, 'reset_name'])
+    expect((await sql('select display_name from public.profiles where id=$1', [p])).rows[0].display_name).toBe('Pilgrim')
+    expect((await sql(`select count(*)::int n from public.admin_audit_log where action='moderate_reset_name' and target_id=$1`, [p])).rows[0].n).toBe(1)
+  })
+})

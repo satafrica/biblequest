@@ -5,14 +5,15 @@ import adventuresJson from '../content/generated/adventures.json'
 import assetsJson from '../content/generated/assets.json'
 import storeJson from '../content/generated/store.json'
 import achievementsJson from '../content/generated/achievements.json'
-import type { Achievement, Adventure, Asset, StoreItem } from './types'
+import type { Achievement, Adventure, Asset, QuestionExtra, QuestionMode, StoreItem } from './types'
 
 export interface FullQuestion {
-  id: string; game_mode: 'picture' | 'whoami' | 'scripture' | 'sequence'; book_id: number; book: string; chapter: number
+  id: string; game_mode: QuestionMode; book_id: number; book: string; chapter: number
   verse_start: number | null; verse_end: number | null; reference_label: string; difficulty: 1 | 2 | 3 | 4; prompt: string
   clues: string[] | null; options: string[]; correct_index: number; explanation: string; hint: string | null
   image_id: string | null; translation_id: string; tags: string[]; status: string; verse_text?: string | null
   clue_refs?: { ref: string; text: string }[][] | null
+  extra?: QuestionExtra | null
   verification: { reference_exists: boolean; keywords_found: boolean; checked_against: string; checked_at: string; human_review: string }
 }
 

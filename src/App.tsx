@@ -10,7 +10,9 @@ import StorePage from './pages/Store'
 import Profile from './pages/Profile'
 import Settings from './pages/Settings'
 import Account, { NewPassword } from './pages/Account'
-import { About, Collection, Community } from './pages/Info'
+import { About, Collection } from './pages/Info'
+import { Master } from './pages/Master'
+import { ChallengePage, Community, GroupPage } from './pages/Community'
 import { Privacy, Terms } from './pages/Legal'
 import GameRunner from './game/GameRunner'
 import { report } from './lib/monitor'
@@ -50,6 +52,9 @@ export default function App() {
               <Route path="game/:levelKey" element={<GameRunner />} />
               <Route path="adventures" element={<AdventureList />} />
               <Route path="adventures/:id" element={<AdventureDetail />} />
+              <Route path="mystery" element={<AdventureList kind="mystery" />} />
+              <Route path="parables" element={<AdventureList kind="parables" />} />
+              <Route path="master" element={<Master />} />
               <Route path="daily" element={<Daily />} />
               <Route path="arena" element={<Arena />} />
               <Route path="leaderboard" element={<Leaderboard />} />
@@ -61,6 +66,8 @@ export default function App() {
               <Route path="account/new-password" element={<NewPassword />} />
               <Route path="about" element={<About />} />
               <Route path="community" element={<Community />} />
+              <Route path="community/group/:id" element={<GroupPage />} />
+              <Route path="community/challenge/:code" element={<ChallengePage />} />
               <Route path="privacy" element={<Privacy />} />
               <Route path="terms" element={<Terms />} />
               <Route path="admin" element={<Suspense fallback={<div className="loader mx-auto my-20" />}><Admin /></Suspense>} />

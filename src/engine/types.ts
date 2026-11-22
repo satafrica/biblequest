@@ -1,4 +1,5 @@
-export type ModeId = 'picture' | 'whoami' | 'scripture' | 'sequence' | 'adventure' | 'arena' | 'daily'
+export type ModeId = 'picture' | 'whoami' | 'scripture' | 'sequence' | 'adventure' | 'arena' | 'daily' | QuestionMode
+export type QuestionMode = 'picture' | 'whoami' | 'scripture' | 'sequence' | 'wisdom' | 'geography' | 'hidden' | 'mystery' | 'parables'
 export type Difficulty = 1 | 2 | 3 | 4
 export const DIFFICULTY_LABELS: Record<Difficulty, string> = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced', 4: 'Expert' }
 export const LEVEL_SIZE = 8
@@ -8,7 +9,7 @@ export const DAILY_SIZE = 5
 /** A question as the player sees it: never includes the correct answer. */
 export interface PublicQuestion {
   id: string
-  game_mode: 'picture' | 'whoami' | 'scripture' | 'sequence'
+  game_mode: QuestionMode
   book_id: number
   chapter: number
   verse_start: number | null
@@ -24,6 +25,20 @@ export interface PublicQuestion {
   image_path: string | null
   translation_id: string
   tags: string[]
+  /** Mode-specific display data. Never contains the answer. */
+  extra?: QuestionExtra | null
+}
+
+export interface MapMarker { lat: number; lon: number; label?: string }
+export interface QuestionExtra {
+  /** Geography: which map, and the marker(s) to show. */
+  map?: { view: 'land' | 'east' | 'med'; kind: 'identify' | 'locate'; markers: MapMarker[] }
+  /** Hidden object: tap areas on the picture, [x, y, w, h] in percent. Area i is option i. */
+  boxes?: { area: number; box: [number, number, number, number] }[]
+  /** Bible Mystery stage. */
+  case_title?: string; stage?: number; stages?: number; clue?: string
+  /** Parables Explorer. */
+  parable_title?: string
 }
 
 export interface SessionStart { session_id: string; questions: PublicQuestion[] }
@@ -77,8 +92,9 @@ export interface Profile {
 export interface StoreItem { id: string; name: string; description: string; category: 'power_up' | 'badge' | 'frame' | 'theme' | 'collection' | 'collectible' | 'bonus' | 'decoration'; price: number; consumable: boolean; sort: number; image: string | null; image_alt: string | null }
 export interface Achievement { id: string; name: string; description: string; icon: string }
 export interface Asset { id: string; description: string; reference: string; alt: string; path: string; width?: number; height?: number; interpretation_note: string }
-export interface Chapter { id: string; title: string; reference_label: string; image_id: string | null; narrative: string; position: number; question_ids: string[] }
-export interface Adventure { id: string; title: string; testament: string; image_id: string | null; summary: string; chapters: Chapter[] }
+export interface Chapter { id: string; title: string; reference_label: string; image_id: string | null; narrative: string; position: number; question_ids: string[]; reading?: CluePassage[] | null }
+export type AdventureKind = 'journey' | 'mystery' | 'parables'
+export interface Adventure { id: string; title: string; testament: string; image_id: string | null; summary: string; chapters: Chapter[]; kind?: AdventureKind }
 
 /** Number of questions available per mode and difficulty (published only in cloud mode). */
 export type LevelCounts = Record<string, Record<number, number>>
@@ -111,6 +127,39 @@ export interface PlayerStats {
   played_today: boolean
   active_days: string[]    // yyyy-mm-dd, most recent ~12 weeks
   review_count: number     // missed questions not yet answered correctly
+}
+
+// --- Community (online accounts only) ---------------------------------------
+export interface Friend { user_id: string; display_name: string; avatar_id: string; status: 'pending' | 'accepted'; direction: 'incoming' | 'outgoing'; weekly_correct: number | null; since: string }
+export interface GroupSummary { id: string; name: string; description: string | null; my_role: 'owner' | 'moderator' | 'member'; members: number; invite_code: string; created_at: string }
+export interface GroupMember { user_id: string; display_name: string; avatar_id: string; role: 'owner' | 'moderator' | 'member'; weekly_correct: number; is_me: boolean }
+export interface ChallengeSummary { code: string; title: string; created_at: string; expires_at: string; players: number; played: boolean; group?: string | null; mine?: boolean }
+export interface GroupDetail { id: string; name: string; description: string | null; invite_code: string; my_role: GroupMember['role']; is_owner: boolean; members: GroupMember[]; challenges: ChallengeSummary[] }
+export interface ChallengeDetail {
+  code: string; title: string; questions: number; created_at: string; expires_at: string; expired: boolean; creator: string | null; group: string | null; played: boolean
+  results: { display_name: string; correct: number; total: number; points: number; is_me: boolean; completed_at: string }[]
+}
+export type ChallengeMode = 'mixed' | 'picture' | 'whoami' | 'scripture' | 'wisdom' | 'geography'
+
+export interface Community {
+  myFriendCode(): Promise<string>
+  sendFriendRequest(code: string): Promise<'sent' | 'accepted' | 'pending' | 'already_friends'>
+  respondFriendRequest(requester: string, accept: boolean): Promise<void>
+  removeFriend(other: string): Promise<void>
+  listFriends(): Promise<Friend[]>
+  createGroup(name: string, description?: string): Promise<{ id: string; invite_code: string }>
+  joinGroup(code: string): Promise<string>
+  listGroups(): Promise<GroupSummary[]>
+  getGroup(id: string): Promise<GroupDetail>
+  leaveGroup(id: string): Promise<void>
+  removeMember(group: string, member: string): Promise<void>
+  setModerator(group: string, member: string, on: boolean): Promise<void>
+  updateGroup(group: string, name: string, description: string, newCode: boolean): Promise<string>
+  deleteGroup(id: string): Promise<void>
+  createChallenge(mode: ChallengeMode, difficulty: number, group?: string | null): Promise<string>
+  getChallenge(code: string): Promise<ChallengeDetail>
+  listChallenges(): Promise<ChallengeSummary[]>
+  report(targetType: 'profile' | 'group', targetId: string, reason: string): Promise<void>
 }
 
 export class GameError extends Error {
@@ -153,6 +202,8 @@ export interface Backend {
   getPlayerStats(): Promise<PlayerStats>
   /** Permanently delete the signed-in account and its data (cloud), or this device's data (local). */
   deleteAccount(): Promise<void>
+  /** Friends, groups and challenge matches. Only the online backend has this. */
+  readonly community: Community | null
 }
 
 export const ERROR_MESSAGES: Record<string, string> = {
@@ -171,6 +222,19 @@ export const ERROR_MESSAGES: Record<string, string> = {
   offline: 'You appear to be offline. Reconnect to continue.',
   forbidden: 'You do not have permission to do that.',
   nothing_to_review: 'Nothing to review right now. Questions you miss will appear here.',
+  account_required: 'Community features need a free account. Create one from the Account page.',
+  code_not_found: 'No match for that code. Check it and try again.',
+  own_code: 'That is your own friend code.',
+  rate_limited: 'That is a lot in one day. Please try again tomorrow.',
+  friend_limit: 'You have reached the friend limit.',
+  group_limit: 'You have reached the limit for groups.',
+  group_full: 'That group is full.',
+  not_a_member: 'You are not a member of that group.',
+  owner_cannot_leave: 'Owners cannot leave their own group. Delete it, or keep it.',
+  invalid_name: 'Names must be 3–60 characters and cannot contain links or email addresses.',
+  challenge_expired: 'That challenge has ended.',
+  request_not_found: 'That request is no longer waiting.',
+  accounts_unavailable: 'This needs the online version of MyBibleGem.',
 }
 export function friendlyError(e: unknown): string {
   const code = e instanceof GameError ? e.code : e instanceof Error ? e.message : String(e)

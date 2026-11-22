@@ -4,7 +4,7 @@ import type { PostgrestError, SupabaseClient, User } from '@supabase/supabase-js
 import { supabase } from '../lib/supabase'
 import {
   GameError,
-  type Achievement, type Adventure, type AnswerResult, type Asset, type Backend, type Catalog, type CompleteResult,
+  type Achievement, type Adventure, type Chapter, type ChallengeDetail, type ChallengeMode, type ChallengeSummary, type Community, type Friend, type GroupDetail, type GroupSummary, type AnswerResult, type Asset, type Backend, type Catalog, type CompleteResult,
   type EarnedAchievement, type InventoryItem, type LeaderRow, type PlayerStats, type PowerUpResult, type Profile, type Progress,
   type PurchaseResult, type SessionStart, type StoreItem, type Transaction, type Wallet,
 } from './types'
@@ -115,9 +115,11 @@ export class CloudBackend implements Backend {
     }
     const adventures: Adventure[] = (advs.data as Record<string, unknown>[]).map((a) => ({
       id: a.id as string, title: a.title as string, testament: a.testament as string, image_id: a.image_id as string | null, summary: a.summary as string,
+      kind: ((a.kind as string) ?? 'journey') as Adventure['kind'],
       chapters: (chs.data as Record<string, unknown>[]).filter((c) => c.adventure_id === a.id).map((c) => ({
         id: c.id as string, title: c.title as string, reference_label: c.reference_label as string, image_id: c.image_id as string | null,
         narrative: c.narrative as string, position: c.position as number, question_ids: c.question_ids as string[],
+        reading: (c.reading as Chapter['reading']) ?? null,
       })),
     })).filter((a) => a.chapters.length > 0)
     const storeItems: StoreItem[] = (store.data as Record<string, unknown>[]).map((s) => ({
@@ -253,4 +255,28 @@ export class CloudBackend implements Backend {
   }
 
   client() { return this.sb }
+
+  readonly community: Community = {
+    myFriendCode: () => this.rpc<string>('get_my_friend_code', {}),
+    sendFriendRequest: (code) => this.rpc('send_friend_request', { p_code: code }),
+    respondFriendRequest: async (requester, accept) => { await this.rpc('respond_friend_request', { p_requester: requester, p_accept: accept }) },
+    removeFriend: async (other) => { await this.rpc('remove_friend', { p_other: other }) },
+    listFriends: async () => ((await this.rpc<Friend[]>('list_friends', {})) ?? []).map((f) => ({ ...f, weekly_correct: f.weekly_correct == null ? null : Number(f.weekly_correct) })),
+    createGroup: (name, description) => this.rpc('create_group', { p_name: name, p_description: description ?? null }),
+    joinGroup: (code) => this.rpc<string>('join_group', { p_code: code }),
+    listGroups: async () => ((await this.rpc<GroupSummary[]>('list_my_groups', {})) ?? []).map((g) => ({ ...g, members: Number(g.members) })),
+    getGroup: (id) => this.rpc<GroupDetail>('get_group', { p_group: id }),
+    leaveGroup: async (id) => { await this.rpc('leave_group', { p_group: id }) },
+    removeMember: async (group, member) => { await this.rpc('remove_group_member', { p_group: group, p_member: member }) },
+    setModerator: async (group, member, on) => { await this.rpc('set_group_moderator', { p_group: group, p_member: member, p_moderator: on }) },
+    updateGroup: (group, name, description, newCode) => this.rpc<string>('update_group', { p_group: group, p_name: name, p_description: description, p_new_code: newCode }),
+    deleteGroup: async (id) => { await this.rpc('delete_group', { p_group: id }) },
+    createChallenge: (mode: ChallengeMode, difficulty, group) => this.rpc<string>('create_challenge', { p_mode: mode, p_difficulty: difficulty, p_group: group ?? null }),
+    getChallenge: (code) => this.rpc<ChallengeDetail>('get_challenge', { p_code: code }),
+    listChallenges: async () => (await this.rpc<ChallengeSummary[]>('list_my_challenges', {})) ?? [],
+    report: async (targetType, targetId, reason) => {
+      const { error } = await this.sb.from('reports').insert({ reporter_id: this.uid(), target_type: targetType, target_id: targetId, reason })
+      if (error) fail(error)
+    },
+  }
 }

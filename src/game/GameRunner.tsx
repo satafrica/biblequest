@@ -11,6 +11,8 @@ import { soundVolume, speechRate } from '../state/prefs'
 import { vibrate } from '../lib/haptics'
 import { speak, speechSupported, stopSpeaking } from '../lib/speech'
 import { appUrl, resultText, shareResult } from '../lib/share'
+import { BibleMap, type MarkerState } from './BibleMap'
+import { HiddenScene } from './HiddenScene'
 
 const ACTIVE_KEY = 'bq.active.v1'
 const ARENA_SECONDS = 20
@@ -138,7 +140,9 @@ export default function GameRunner() {
     if (!q) return ''
     const parts = [q.prompt]
     if (q.game_mode === 'whoami' && q.clues) parts.push(...q.clues.slice(0, clues).map((c, i) => `Clue ${i + 1}. ${c}`))
+    if (q.game_mode === 'mystery' && q.extra?.clue) parts.unshift(`Case file: ${q.extra.case_title}. Stage ${q.extra.stage} of ${q.extra.stages}. ${q.extra.clue}`)
     if (q.game_mode === 'sequence') parts.push('Events to put in order:', ...order.map((o, i) => `${i + 1}. ${o}.`))
+    else if (q.game_mode === 'hidden') parts.push('Tap the object in the picture.')
     else parts.push(...q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean))
     return parts.join(' ')
   }, [q, clues, order, eliminated])
@@ -146,7 +150,8 @@ export default function GameRunner() {
   const feedbackSpeech = useMemo(() => {
     if (!q || !last0) return ''
     const parts = [last0.correct ? 'Correct.' : 'Not quite.']
-    if (!last0.correct && q.game_mode !== 'sequence' && last0.correct_index !== undefined) parts.push(`The answer is ${q.options[last0.correct_index]}.`)
+    if (!last0.correct && q.game_mode === 'hidden') parts.push('The object is outlined in the picture.')
+    else if (!last0.correct && q.game_mode !== 'sequence' && last0.correct_index !== undefined) parts.push(`The answer is ${q.options[last0.correct_index]}.`)
     if (last0.reference) parts.push(`${last0.reference}.`)
     if (last0.verse_text) parts.push(last0.verse_text.replace(/\n/g, '. ').replace(/\u2026/g, ''))
     if (last0.explanation) parts.push(last0.explanation)
@@ -180,7 +185,7 @@ export default function GameRunner() {
 
   // Number keys 1-4 choose an option
   useEffect(() => {
-    if (phase !== 'question' || !q || q.game_mode === 'sequence') return
+    if (phase !== 'question' || !q || q.game_mode === 'sequence' || q.game_mode === 'hidden') return
     const onKey = (e: KeyboardEvent) => {
       const t = e.target as HTMLElement
       if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA')) return
@@ -231,18 +236,28 @@ export default function GameRunner() {
             </figure>
           )}
           <div className="p-5 md:p-7">
-            <p className="eyebrow mb-1">{chapter.adventure.title} · Chapter {chapter.position}</p>
+            <p className="eyebrow mb-1">{chapter.adventure.title} · {chapter.adventure.kind === 'mystery' ? 'Case' : chapter.adventure.kind === 'parables' ? 'Parable' : 'Chapter'} {chapter.position}</p>
             <h1 ref={headingRef} tabIndex={-1} className="outline-none text-2xl font-semibold mb-1">{chapter.title}</h1>
             <p className="text-sm text-muted mb-4">{chapter.reference_label}</p>
+            {chapter.adventure.kind === 'mystery' && <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted">Case briefing</p>}
             <p className="leading-relaxed mb-6">{chapter.narrative}</p>
-            <button className="btn-primary" onClick={() => setPhase('question')}>Begin chapter · {total} questions</button>
+            {chapter.reading && chapter.reading.length > 0 && <ChapterReading reading={chapter.reading} />}
+            <button className="btn-primary" onClick={() => setPhase('question')}>
+              {chapter.adventure.kind === 'mystery' ? `Open the case · ${total} stages` : chapter.adventure.kind === 'parables' ? `Answer questions · ${total}` : `Begin chapter · ${total} questions`}
+            </button>
           </div>
         </section>
       )}
 
       {(phase === 'question' || phase === 'feedback') && q && (
         <section aria-labelledby="q-heading" className="fade-up" key={q.id}>
-          {q.image_path && (
+          {q.game_mode === 'geography' && q.extra?.map && (
+            <BibleMap map={q.extra.map} hideText={`${q.prompt} ${q.options.join(' ')}`}
+              states={phase === 'feedback' && last && q.extra.map.kind === 'locate'
+                ? q.extra.map.markers.map((_, i): MarkerState => i === last.correct_index ? 'correct' : i === selected ? 'wrong' : 'idle') : undefined}
+              revealLabel={phase === 'feedback' && last && q.extra.map.kind === 'identify' && last.correct_index !== undefined ? q.options[last.correct_index] : undefined} />
+          )}
+          {q.image_path && q.game_mode !== 'hidden' && (
             <figure className="mb-5 overflow-hidden rounded-2xl border border-line/70 bg-surface">
               <Illustration path={q.image_path} alt={q.image_alt ?? ''} className="aspect-[4/3] w-full object-cover" sizes="(min-width: 768px) 720px, 100vw" priority />
               {phase === 'feedback' && q.image_id && catalog.assets[q.image_id]?.interpretation_note && (
@@ -259,6 +274,12 @@ export default function GameRunner() {
               </span>
             )}
           </div>
+          {q.game_mode === 'mystery' && q.extra?.clue && (
+            <div className="mb-4 rounded-2xl border border-accent/50 bg-accent/5 p-4" data-testid="case-clue">
+              <p className="eyebrow mb-1">{q.extra.case_title} · Stage {q.extra.stage} of {q.extra.stages}</p>
+              <p className="font-display leading-relaxed">{q.extra.clue}</p>
+            </div>
+          )}
           <h1 id="q-heading" ref={headingRef} tabIndex={-1} className="outline-none text-xl md:text-2xl font-semibold leading-snug mb-4">{q.prompt}</h1>
 
           {q.game_mode === 'whoami' && q.clues && (
@@ -276,6 +297,9 @@ export default function GameRunner() {
 
           {q.game_mode === 'sequence' ? (
             <SequenceBoard order={order} setOrder={setOrder} locked={phase === 'feedback'} correctOrder={phase === 'feedback' ? last?.correct_order : undefined} />
+          ) : q.game_mode === 'hidden' && q.image_path && q.extra?.boxes ? (
+            <HiddenScene path={q.image_path} alt={q.image_alt ?? ''} boxes={q.extra.boxes} areaCount={q.options.length} locked={phase === 'feedback'}
+              chosen={selected} correct={phase === 'feedback' ? last?.correct_index : undefined} disabled={busy} onPick={(a) => submit(a)} />
           ) : (
             <div className="grid gap-3" role="group" aria-label="Answer options">
               {q.options.map((o, i) => {
@@ -299,7 +323,7 @@ export default function GameRunner() {
             <div className="mt-5 flex flex-wrap items-center gap-2">
               {q.game_mode === 'sequence' && <button className="btn-primary" disabled={busy} onClick={() => submit(-1)}>Check order</button>}
               <PowerButton label="Hint" Icon={Lamp} qty={owns('hint')} onUse={() => power('hint')} disabled={Boolean(hint)} />
-              {q.game_mode !== 'sequence' && <PowerButton label="Remove two" Icon={Scissors} qty={owns('eliminate_two')} onUse={() => power('eliminate_two')} disabled={eliminated.length > 0} />}
+              {q.game_mode !== 'sequence' && q.game_mode !== 'hidden' && <PowerButton label="Remove two" Icon={Scissors} qty={owns('eliminate_two')} onUse={() => power('eliminate_two')} disabled={eliminated.length > 0} />}
               {timed && <PowerButton label="+15 seconds" Icon={Hourglass} qty={owns('extra_time')} onUse={() => power('extra_time')} />}
               <ReadAloud text={questionSpeech} label="Read question aloud" />
             </div>
@@ -310,7 +334,8 @@ export default function GameRunner() {
               <p className={`font-display text-xl font-semibold ${last.correct ? 'text-good' : 'text-bad'}`}>
                 {last.correct ? 'Correct' : selected === -1 && q.game_mode !== 'sequence' ? 'Time is up' : 'Not quite'}
               </p>
-              {!last.correct && q.game_mode !== 'sequence' && last.correct_index !== undefined && <p className="mt-1">The answer is <strong>{q.options[last.correct_index]}</strong>.</p>}
+              {!last.correct && q.game_mode === 'hidden' && <p className="mt-1">The object is outlined in green in the picture.</p>}
+              {!last.correct && q.game_mode !== 'sequence' && q.game_mode !== 'hidden' && last.correct_index !== undefined && <p className="mt-1">The answer is <strong>{q.options[last.correct_index]}</strong>.</p>}
               {last.reference && <p className="mt-2 text-sm font-semibold" data-testid="answer-reference">{last.reference} <span className="font-normal text-muted">· {q.translation_id}</span></p>}
               {last.verse_text && !(q.game_mode === 'sequence' && last.clue_refs && last.clue_refs.length > 0) && (
                 <blockquote className="mt-3 rounded-xl border-l-4 border-accent bg-accent/5 px-4 py-3 font-display leading-relaxed" data-testid="verse-text">
@@ -438,10 +463,14 @@ function Summary({ levelKey, title, results, total, summary, error, busy, roundG
       const adv = catalog.adventures.find((a) => a.chapters.some((c) => c.id === p[1]))
       const ch = adv?.chapters.find((c) => c.id === p[1])
       const nx = adv?.chapters.find((c) => c.position === (ch?.position ?? 0) + 1)
-      if (nx) return { to: `/game/${encodeURIComponent(`adv:${nx.id}`)}`, label: `Next chapter: ${nx.title}` }
+      if (nx) return { to: `/game/${encodeURIComponent(`adv:${nx.id}`)}`, label: `${adv?.kind === 'mystery' ? 'Next case' : adv?.kind === 'parables' ? 'Next parable' : 'Next chapter'}: ${nx.title}` }
+      if (adv?.kind === 'mystery') return { to: '/mystery', label: 'Back to case files' }
+      if (adv?.kind === 'parables') return { to: '/parables', label: 'Back to parables' }
       return { to: `/adventures`, label: 'Back to adventures' }
     }
     if (p[0] === 'review') return { to: '/play', label: 'Back to games' }
+    if (p[0] === 'challenge') return { to: `/community/challenge/${p[1]}`, label: 'See the results board' }
+    if (p[0] === 'master') return { to: '/master', label: 'Back to Master Challenge' }
     return { to: '/play', label: 'More games' }
   }, [catalog, p])
   if (busy && !summary) return <div className="grid min-h-[40vh] place-items-center" role="status"><span className="sr-only">Saving results</span><div className="loader" /></div>
@@ -497,6 +526,23 @@ function ReportDialog({ open, onClose, questionId }: { open: boolean; onClose: (
         <div className="mt-4 flex justify-end gap-2"><button type="button" className="btn-ghost" onClick={onClose}>Cancel</button><button className="btn-primary" disabled={sending || reason.trim().length < 3}>Send report</button></div>
       </form>
     </Modal>
+  )
+}
+
+/** The KJV passage(s) for a parable or chapter, read before the questions. */
+function ChapterReading({ reading }: { reading: CluePassage[] }) {
+  const speech = reading.map((p) => `${p.ref}. ${p.text}`).join(' ')
+  return (
+    <section className="mb-6 rounded-xl border border-line bg-surface/60 p-4" aria-label="Scripture reading" data-testid="chapter-reading">
+      <p className="mb-2 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-muted"><BookOpen className="h-3.5 w-3.5" aria-hidden="true" />Read the passage · King James Version</p>
+      {reading.map((p) => (
+        <blockquote key={p.ref} className="mt-3 border-l-4 border-accent/70 pl-3 font-display leading-relaxed first:mt-0">
+          <span className="mb-0.5 block font-sans text-xs font-semibold text-muted">{p.ref}</span>
+          {p.text}
+        </blockquote>
+      ))}
+      <div className="mt-3"><ReadAloud text={speech} label="Read the passage aloud" /></div>
+    </section>
   )
 }
 

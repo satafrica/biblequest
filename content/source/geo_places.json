@@ -1,0 +1,4468 @@
+{
+"Abana": {
+"lat": 33.5135,
+"lon": 36.305,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/aea17b7/abana"
+},
+"Abarim": {
+"lat": 31.7539,
+"lon": 35.7152,
+"score": 1000,
+"type": "mountain range",
+"url": "https://www.openbible.info/geo/ancient/aa8275b/abarim"
+},
+"Abdon": {
+"lat": 33.0477,
+"lon": 35.1619,
+"score": 826,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a72a1ff/abdon"
+},
+"Abel-beth-maacah": {
+"lat": 33.2581,
+"lon": 35.581,
+"score": 756,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/abffcaa/abel-beth-maacah"
+},
+"Abel-shittim": {
+"lat": 31.8402,
+"lon": 35.6737,
+"score": 761,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/a51d1fa/abel-shittim"
+},
+"Abiezer": {
+"lat": 32.6057,
+"lon": 35.29,
+"score": 1000,
+"type": "people group",
+"url": "https://www.openbible.info/geo/ancient/a549c0f/abiezer"
+},
+"Abila Lysaniou": {
+"lat": 33.6267,
+"lon": 36.1058,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a276d01/abila-lysaniou"
+},
+"Abilene": {
+"lat": 33.6267,
+"lon": 36.1058,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a498faa/abilene"
+},
+"Acco": {
+"lat": 32.9211,
+"lon": 35.0883,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5f4dfc/acco"
+},
+"Achaia": {
+"lat": 38.72,
+"lon": 22.54,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aef4242/achaia"
+},
+"Achzib 2": {
+"lat": 33.0483,
+"lon": 35.1027,
+"score": 794,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad0d82f/achzib-2"
+},
+"Adam": {
+"lat": 32.1039,
+"lon": 35.5468,
+"score": 823,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adc31c7/adam"
+},
+"Adami-nekeb": {
+"lat": 32.7492,
+"lon": 35.4592,
+"score": 722,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2c780b/adami-nekeb"
+},
+"Adoraim": {
+"lat": 31.5051,
+"lon": 35.0275,
+"score": 815,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae16cf5/adoraim"
+},
+"Adramyttium": {
+"lat": 39.5007,
+"lon": 26.9327,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a184f3a/adramyttium"
+},
+"Adriatic Sea": {
+"lat": 38.0,
+"lon": 19.0,
+"score": 1000,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/adc77fb/adriatic-sea"
+},
+"Adulis": {
+"lat": 15.2631,
+"lon": 39.6606,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab7c40f/adulis"
+},
+"Adullam": {
+"lat": 31.6517,
+"lon": 35.0017,
+"score": 737,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af82614/adullam"
+},
+"Adummim": {
+"lat": 31.8175,
+"lon": 35.3615,
+"score": 1000,
+"type": "road",
+"url": "https://www.openbible.info/geo/ancient/acf8790/adummim"
+},
+"Ahava": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 708,
+"type": "canal",
+"url": "https://www.openbible.info/geo/ancient/a6c3859/ahava"
+},
+"Aija": {
+"lat": 31.9169,
+"lon": 35.2611,
+"score": 884,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa884e2/aija"
+},
+"Akrabbim": {
+"lat": 30.9066,
+"lon": 35.1313,
+"score": 727,
+"type": "mountain pass",
+"url": "https://www.openbible.info/geo/ancient/a39267b/akrabbim"
+},
+"Alemeth": {
+"lat": 31.8249,
+"lon": 35.2735,
+"score": 810,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad4ad26/alemeth"
+},
+"Alexandria": {
+"lat": 31.1825,
+"lon": 29.8965,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aee7248/alexandria"
+},
+"Allon": {
+"lat": 32.7211,
+"lon": 35.4106,
+"score": 1000,
+"type": "tree",
+"url": "https://www.openbible.info/geo/ancient/a00de1e/allon"
+},
+"Allon-bacuth": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 1000,
+"type": "tree",
+"url": "https://www.openbible.info/geo/ancient/af9a894/allon-bacuth"
+},
+"Almon": {
+"lat": 31.8249,
+"lon": 35.2735,
+"score": 811,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ada3369/almon"
+},
+"Amalek": {
+"lat": 30.6483,
+"lon": 34.4222,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab95484/amalek"
+},
+"Amate": {
+"lat": 31.7823,
+"lon": 47.8694,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adc3294/amate"
+},
+"Ammon": {
+"lat": 31.9547,
+"lon": 35.9343,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a6046fa/ammon"
+},
+"Amphipolis": {
+"lat": 40.8202,
+"lon": 23.8472,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4bdea7/amphipolis"
+},
+"Anab": {
+"lat": 31.4121,
+"lon": 34.9549,
+"score": 777,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a234727/anab"
+},
+"Anaharath": {
+"lat": 32.6534,
+"lon": 35.4661,
+"score": 741,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac07206/anaharath"
+},
+"Anem": {
+"lat": 32.7135,
+"lon": 35.4954,
+"score": 700,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad13f27/anem"
+},
+"Angle": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/aac6cda/angle"
+},
+"Anim": {
+"lat": 31.3536,
+"lon": 35.0635,
+"score": 763,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac22b90/anim"
+},
+"Antioch 1": {
+"lat": 36.2267,
+"lon": 36.1717,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae41ab4/antioch-1"
+},
+"Antioch 2": {
+"lat": 38.3061,
+"lon": 31.1892,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6c704a/antioch-2"
+},
+"Aphek 2": {
+"lat": 32.105,
+"lon": 34.9304,
+"score": 901,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a7b2e63/aphek-2"
+},
+"Aphik": {
+"lat": 32.8461,
+"lon": 35.1119,
+"score": 830,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a012133/aphik"
+},
+"Apollonia": {
+"lat": 40.6237,
+"lon": 23.4697,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab20df9/apollonia"
+},
+"Arabah": {
+"lat": 30.4169,
+"lon": 35.1514,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2bb5ef/arabah"
+},
+"Arabia 1": {
+"lat": 23.0,
+"lon": 46.0,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a59f6f5/arabia-1"
+},
+"Arabia 2": {
+"lat": 30.07,
+"lon": 35.35,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a0f4ea8/arabia-2"
+},
+"Aram": {
+"lat": 33.5111,
+"lon": 36.3064,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a3e66cd/aram"
+},
+"Aram-naharaim": {
+"lat": 36.8644,
+"lon": 39.0328,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a3c7b44/aram-naharaim"
+},
+"Ararat": {
+"lat": 39.7028,
+"lon": 44.3004,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab89be9/ararat"
+},
+"Arbela": {
+"lat": 32.8151,
+"lon": 35.4838,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a576db3/arbela"
+},
+"Areopagus": {
+"lat": 37.9722,
+"lon": 23.7236,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/a815d89/areopagus"
+},
+"Argob": {
+"lat": 32.9695,
+"lon": 36.4554,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a42a5b2/argob"
+},
+"Ariel": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8754c4/ariel"
+},
+"Arnon": {
+"lat": 31.4658,
+"lon": 35.5733,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a4cc324/arnon"
+},
+"Aroer 1": {
+"lat": 31.4708,
+"lon": 35.8194,
+"score": 872,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae46f2e/aroer-1"
+},
+"Aroer 4": {
+"lat": 31.1521,
+"lon": 34.9791,
+"score": 838,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a620b14/aroer-4"
+},
+"Arpad": {
+"lat": 36.4725,
+"lon": 37.0947,
+"score": 765,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a173c40/arpad"
+},
+"Arvad": {
+"lat": 34.8561,
+"lon": 35.8583,
+"score": 895,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afbf1b5/arvad"
+},
+"Ashdod": {
+"lat": 31.7572,
+"lon": 34.6578,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a30c937/ashdod"
+},
+"Ashkelon": {
+"lat": 31.6639,
+"lon": 34.5458,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac87d4c/ashkelon"
+},
+"Ashkenaz": {
+"lat": 44.9428,
+"lon": 34.1206,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aec9225/ashkenaz"
+},
+"Ashtaroth": {
+"lat": 32.8042,
+"lon": 36.0158,
+"score": 797,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6fea11/ashtaroth"
+},
+"Ashteroth-karnaim": {
+"lat": 32.8042,
+"lon": 36.0158,
+"score": 833,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afe4be0/ashteroth-karnaim"
+},
+"Asia": {
+"lat": 38.4,
+"lon": 28.3,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a197f19/asia"
+},
+"Asshur": {
+"lat": 35.4567,
+"lon": 43.2625,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a874951/asshur"
+},
+"Assos": {
+"lat": 39.4906,
+"lon": 26.3367,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a0a2ca7/assos"
+},
+"Assyria": {
+"lat": 36.3594,
+"lon": 43.1528,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a3d1321/assyria"
+},
+"Atad": {
+"lat": 31.9149,
+"lon": 35.5304,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2f186d/atad"
+},
+"Ataroth 1": {
+"lat": 31.5753,
+"lon": 35.6659,
+"score": 778,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/abc9a1d/ataroth-1"
+},
+"Athens": {
+"lat": 37.9719,
+"lon": 23.7267,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a1fe6e7/athens"
+},
+"Attalia": {
+"lat": 36.8813,
+"lon": 30.7036,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac744c1/attalia"
+},
+"Aven": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 819,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af3ccdf/aven"
+},
+"Azekah": {
+"lat": 31.7002,
+"lon": 34.9357,
+"score": 772,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af2ca0c/azekah"
+},
+"Baal-hazor": {
+"lat": 31.9786,
+"lon": 35.2861,
+"score": 710,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a366989/baal-hazor"
+},
+"Baal-meon": {
+"lat": 31.6795,
+"lon": 35.7353,
+"score": 797,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a76f7b7/baal-meon"
+},
+"Baalah 2": {
+"lat": 31.809,
+"lon": 35.1038,
+"score": 970,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac2f5ea/baalah-2"
+},
+"Baalath 1": {
+"lat": 31.8385,
+"lon": 34.7822,
+"score": 749,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/abc1b7c/baalath-1"
+},
+"Baale-judah": {
+"lat": 31.809,
+"lon": 35.1038,
+"score": 959,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a66f19c/baale-judah"
+},
+"Babel": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 810,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab8fdbc/babel"
+},
+"Babylon 1": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a217d18/babylon-1"
+},
+"Babylon 2": {
+"lat": 41.8922,
+"lon": 12.4852,
+"score": 917,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae5ede9/babylon-2"
+},
+"Babylon 3": {
+"lat": 41.8922,
+"lon": 12.4852,
+"score": 934,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a3f0756/babylon-3"
+},
+"Babylonia": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a8394b8/babylonia"
+},
+"Bamoth-baal": {
+"lat": 31.7318,
+"lon": 35.7409,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a577c27/bamoth-baal"
+},
+"Bashan": {
+"lat": 32.7811,
+"lon": 35.9347,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aa7a40a/bashan"
+},
+"Batanea": {
+"lat": 32.852,
+"lon": 36.1993,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a249453/batanea"
+},
+"Bath-rabbim": {
+"lat": 31.8008,
+"lon": 35.8091,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/abaa030/bath-rabbim"
+},
+"Beautiful Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a5c37fd/beautiful-gate"
+},
+"Beeroth Bene-jaakan": {
+"lat": 30.7918,
+"lon": 34.4725,
+"score": 962,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a280f83/beeroth-bene-jaakan"
+},
+"Beersheba 1": {
+"lat": 31.2447,
+"lon": 34.8408,
+"score": 823,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad2f6c2/beersheba-1"
+},
+"Beeshterah": {
+"lat": 32.8042,
+"lon": 36.0158,
+"score": 755,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a293fbf/beeshterah"
+},
+"Bene-berak": {
+"lat": 32.0367,
+"lon": 34.8277,
+"score": 818,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae83378/bene-berak"
+},
+"Benjamin Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/ae04aa8/benjamin-gate"
+},
+"Beon": {
+"lat": 31.6795,
+"lon": 35.7353,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a882ef5/beon"
+},
+"Berea": {
+"lat": 40.5183,
+"lon": 22.2,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a62fe31/berea"
+},
+"Besor": {
+"lat": 31.4642,
+"lon": 34.3757,
+"score": 882,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a57df09/besor"
+},
+"Beth-aven 2": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 913,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a696a95/beth-aven-2"
+},
+"Beth-eden": {
+"lat": 36.7014,
+"lon": 38.0865,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a84c5a4/beth-eden"
+},
+"Beth-haccherem": {
+"lat": 31.7399,
+"lon": 35.2169,
+"score": 747,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a30f9a0/beth-haccherem"
+},
+"Beth-haggan": {
+"lat": 32.4608,
+"lon": 35.2987,
+"score": 782,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aaa2f54/beth-haggan"
+},
+"Beth-horon": {
+"lat": 31.895,
+"lon": 35.0836,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a75b45e/beth-horon"
+},
+"Beth-jeshimoth": {
+"lat": 31.7826,
+"lon": 35.6213,
+"score": 799,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a30f37b/beth-jeshimoth"
+},
+"Beth-lebaoth": {
+"lat": 31.0067,
+"lon": 34.4918,
+"score": 730,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a289a5b/beth-lebaoth"
+},
+"Beth-meon": {
+"lat": 31.6795,
+"lon": 35.7353,
+"score": 955,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a78580c/beth-meon"
+},
+"Beth-shan": {
+"lat": 32.5036,
+"lon": 35.5031,
+"score": 889,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2a8df0/beth-shan"
+},
+"Beth-shemesh 1": {
+"lat": 31.7506,
+"lon": 34.9747,
+"score": 864,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a3b5b53/beth-shemesh-1"
+},
+"Beth-tappuah": {
+"lat": 31.5386,
+"lon": 35.0462,
+"score": 800,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adac973/beth-tappuah"
+},
+"Beth-zur": {
+"lat": 31.5894,
+"lon": 35.0942,
+"score": 842,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/addba2a/beth-zur"
+},
+"Bethany 1": {
+"lat": 31.7717,
+"lon": 35.2559,
+"score": 889,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4f35bc/bethany-1"
+},
+"Bethel 1": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 716,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a64f355/bethel-1"
+},
+"Bether 2": {
+"lat": 31.73,
+"lon": 35.1356,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6c8205/bether-2"
+},
+"Bethesda": {
+"lat": 31.7814,
+"lon": 35.2358,
+"score": 1000,
+"type": "pool",
+"url": "https://www.openbible.info/geo/ancient/a0aa8cf/bethesda"
+},
+"Bethlehem 1": {
+"lat": 31.7043,
+"lon": 35.2076,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a112427/bethlehem-1"
+},
+"Bethlehem 2": {
+"lat": 32.7348,
+"lon": 35.1856,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a308715/bethlehem-2"
+},
+"Bethlehem 3": {
+"lat": 32.7348,
+"lon": 35.1856,
+"score": 733,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab1a343/bethlehem-3"
+},
+"Bethsaida 2": {
+"lat": 32.9104,
+"lon": 35.631,
+"score": 740,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9fc13a/bethsaida-2"
+},
+"Bethul": {
+"lat": 31.3273,
+"lon": 34.8785,
+"score": 837,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a92de65/bethul"
+},
+"Beyond the River": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a88310a/beyond-the-river"
+},
+"Bezek 2": {
+"lat": 32.3688,
+"lon": 35.3974,
+"score": 753,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a206291/bezek-2"
+},
+"Bileam": {
+"lat": 32.4462,
+"lon": 35.292,
+"score": 730,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac959b2/bileam"
+},
+"Bilhah": {
+"lat": 31.1421,
+"lon": 34.9122,
+"score": 885,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a20bd85/bilhah"
+},
+"Bithynia": {
+"lat": 40.5,
+"lon": 31.0,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a5c0cb0/bithynia"
+},
+"Bochim": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 712,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a859268/bochim"
+},
+"Bor-ashan": {
+"lat": 31.2814,
+"lon": 34.7974,
+"score": 938,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab624f3/bor-ashan"
+},
+"Bozez": {
+"lat": 31.8572,
+"lon": 35.2871,
+"score": 1011,
+"type": "cliff",
+"url": "https://www.openbible.info/geo/ancient/abde10e/bozez"
+},
+"Bozrah 1": {
+"lat": 30.7458,
+"lon": 35.6039,
+"score": 880,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a871210/bozrah-1"
+},
+"Broad Wall": {
+"lat": 31.7761,
+"lon": 35.2319,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/ab0d85b/broad-wall"
+},
+"Cabul 2": {
+"lat": 32.8683,
+"lon": 35.2114,
+"score": 1044,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a08144e/cabul-2"
+},
+"Caesarea": {
+"lat": 32.5,
+"lon": 34.8917,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a58735e/caesarea"
+},
+"Caesarea Philippi": {
+"lat": 33.2461,
+"lon": 35.6933,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab7bf48/caesarea-philippi"
+},
+"Calah": {
+"lat": 36.0981,
+"lon": 43.3289,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae1f807/calah"
+},
+"Canaan": {
+"lat": 32.7667,
+"lon": 35.3333,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a581f0c/canaan"
+},
+"Capernaum": {
+"lat": 32.8811,
+"lon": 35.575,
+"score": 842,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af2161c/capernaum"
+},
+"Caphtor": {
+"lat": 35.3097,
+"lon": 24.8933,
+"score": 757,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a329990/caphtor"
+},
+"Cappadocia": {
+"lat": 38.6706,
+"lon": 34.8392,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a33fbde/cappadocia"
+},
+"Carchemish": {
+"lat": 36.8297,
+"lon": 38.015,
+"score": 880,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af6c730/carchemish"
+},
+"Carmel 1": {
+"lat": 31.4229,
+"lon": 35.133,
+"score": 842,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a053f15/carmel-1"
+},
+"Carthage": {
+"lat": 36.8526,
+"lon": 10.3235,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa56bd1/carthage"
+},
+"Casiphia": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 784,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/addb84c/casiphia"
+},
+"Cauda": {
+"lat": 34.8333,
+"lon": 24.0833,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/aca2b0a/cauda"
+},
+"Cenchreae": {
+"lat": 37.8843,
+"lon": 22.9968,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa31dd3/cenchreae"
+},
+"Chaldea": {
+"lat": 30.9622,
+"lon": 46.1044,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a32a4f8/chaldea"
+},
+"Chephirah": {
+"lat": 31.8309,
+"lon": 35.1068,
+"score": 838,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2e5054/chephirah"
+},
+"Chesalon": {
+"lat": 31.7811,
+"lon": 35.0511,
+"score": 702,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a42c452/chesalon"
+},
+"Chesil": {
+"lat": 31.3273,
+"lon": 34.8785,
+"score": 751,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/acf2fac/chesil"
+},
+"Chesulloth": {
+"lat": 32.6834,
+"lon": 35.3242,
+"score": 878,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac3d92d/chesulloth"
+},
+"Chezib": {
+"lat": 31.6421,
+"lon": 34.953,
+"score": 816,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab41e6b/chezib"
+},
+"Chinnereth": {
+"lat": 32.8694,
+"lon": 35.5383,
+"score": 756,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/a2bb265/chinnereth"
+},
+"Chios": {
+"lat": 38.3725,
+"lon": 26.1375,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a4c2c75/chios"
+},
+"Chisloth-tabor": {
+"lat": 32.6834,
+"lon": 35.3242,
+"score": 743,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a898f06/chisloth-tabor"
+},
+"Chorazin": {
+"lat": 32.9114,
+"lon": 35.5639,
+"score": 786,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a593a48/chorazin"
+},
+"Cilicia": {
+"lat": 36.913,
+"lon": 34.8921,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ad63819/cilicia"
+},
+"City of David": {
+"lat": 31.7736,
+"lon": 35.2356,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a84f426/city-of-david"
+},
+"City of Palms 1": {
+"lat": 31.8717,
+"lon": 35.4446,
+"score": 939,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a529e92/city-of-palms-1"
+},
+"City of Palms 2": {
+"lat": 31.8717,
+"lon": 35.4446,
+"score": 898,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac4ff01/city-of-palms-2"
+},
+"Cnidus": {
+"lat": 36.6858,
+"lon": 27.375,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab793ce/cnidus"
+},
+"Colossae": {
+"lat": 37.7866,
+"lon": 29.2599,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4e5a69/colossae"
+},
+"Corinth": {
+"lat": 37.9058,
+"lon": 22.8787,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6f437a/corinth"
+},
+"Corner Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a68aa8f/corner-gate"
+},
+"Cos": {
+"lat": 36.8153,
+"lon": 27.1103,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a398e5d/cos"
+},
+"Cozeba": {
+"lat": 31.6421,
+"lon": 34.953,
+"score": 719,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a44cac9/cozeba"
+},
+"Crete": {
+"lat": 35.3097,
+"lon": 24.8933,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a26aa94/crete"
+},
+"Cush 1": {
+"lat": 16.9351,
+"lon": 33.7507,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ac5a1ec/cush-1"
+},
+"Cuth": {
+"lat": 32.76,
+"lon": 44.6129,
+"score": 810,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a538831/cuth"
+},
+"Cyprus": {
+"lat": 35.0,
+"lon": 33.0,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a2e7601/cyprus"
+},
+"Cyrene": {
+"lat": 32.8209,
+"lon": 21.8512,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a81cdb5/cyrene"
+},
+"Dalmatia": {
+"lat": 43.8128,
+"lon": 16.2188,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ae86cd7/dalmatia"
+},
+"Damascus": {
+"lat": 33.5111,
+"lon": 36.3064,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a69c1d4/damascus"
+},
+"Dan": {
+"lat": 33.249,
+"lon": 35.652,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a513646/dan"
+},
+"Debir 1": {
+"lat": 31.4321,
+"lon": 35.0149,
+"score": 775,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad2048e/debir-1"
+},
+"Decapolis": {
+"lat": 32.7167,
+"lon": 35.8,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ae733a2/decapolis"
+},
+"Dedan": {
+"lat": 26.65,
+"lon": 37.9167,
+"score": 845,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a3a2a75/dedan"
+},
+"Derbe": {
+"lat": 37.3486,
+"lon": 33.3615,
+"score": 860,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa401a9/derbe"
+},
+"Dibon 1": {
+"lat": 31.5022,
+"lon": 35.7766,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a0d784a/dibon-1"
+},
+"Diviners\u2019 Oak": {
+"lat": 32.2136,
+"lon": 35.2819,
+"score": 1000,
+"type": "tree",
+"url": "https://www.openbible.info/geo/ancient/a0dc90b/diviners-oak"
+},
+"Dor": {
+"lat": 32.6174,
+"lon": 34.9164,
+"score": 864,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a70c56b/dor"
+},
+"Dothan": {
+"lat": 32.4135,
+"lon": 35.2399,
+"score": 877,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab635e4/dothan"
+},
+"Dung Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a1611b6/dung-gate"
+},
+"East": {
+"lat": 31.9547,
+"lon": 35.9343,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab0b2dd/east"
+},
+"East Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a4e8401/east-gate"
+},
+"East Square": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "district in settlement",
+"url": "https://www.openbible.info/geo/ancient/a6bb890/east-square"
+},
+"Ecbatana": {
+"lat": 34.8065,
+"lon": 48.5162,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a212ef7/ecbatana"
+},
+"Eden 2": {
+"lat": 36.7014,
+"lon": 38.0865,
+"score": 944,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a7409b9/eden-2"
+},
+"Edom": {
+"lat": 30.7458,
+"lon": 35.6039,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2735ff/edom"
+},
+"Edrei 1": {
+"lat": 32.6253,
+"lon": 36.1061,
+"score": 821,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aaa6f7a/edrei-1"
+},
+"Egypt": {
+"lat": 30.1294,
+"lon": 31.3075,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/af301ca/egypt"
+},
+"Ekron": {
+"lat": 31.7775,
+"lon": 34.8519,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a3fc47a/ekron"
+},
+"El-bethel": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 1000,
+"type": "altar",
+"url": "https://www.openbible.info/geo/ancient/a30b045/el-bethel"
+},
+"Elam": {
+"lat": 32.1892,
+"lon": 48.2578,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a7e3a59/elam"
+},
+"Elealeh": {
+"lat": 31.8193,
+"lon": 35.8283,
+"score": 774,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5ccd34/elealeh"
+},
+"En-dor": {
+"lat": 32.6436,
+"lon": 35.3902,
+"score": 757,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aca444b/en-dor"
+},
+"En-rogel": {
+"lat": 31.7672,
+"lon": 35.236,
+"score": 793,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/af9cfc9/en-rogel"
+},
+"En-shemesh": {
+"lat": 31.7741,
+"lon": 35.2701,
+"score": 741,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/a34e870/en-shemesh"
+},
+"Engedi": {
+"lat": 31.45,
+"lon": 35.3833,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a51df0e/engedi"
+},
+"Ephah": {
+"lat": 28.4947,
+"lon": 35.0122,
+"score": 1000,
+"type": "people group",
+"url": "https://www.openbible.info/geo/ancient/ac25afc/ephah"
+},
+"Ephesus": {
+"lat": 37.9391,
+"lon": 27.3407,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5feb15/ephesus"
+},
+"Ephraim 2": {
+"lat": 31.9544,
+"lon": 35.3003,
+"score": 936,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad14500/ephraim-2"
+},
+"Ephraim 3": {
+"lat": 32.3811,
+"lon": 35.7647,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aa24ad4/ephraim-3"
+},
+"Ephraim Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a7b6270/ephraim-gate"
+},
+"Ephrath": {
+"lat": 31.7043,
+"lon": 35.2076,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af4e985/ephrath"
+},
+"Ephrathah": {
+"lat": 31.7043,
+"lon": 35.2076,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af6c09e/ephrathah"
+},
+"Erech": {
+"lat": 31.3222,
+"lon": 45.6361,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5db1a6/erech"
+},
+"Eridu": {
+"lat": 30.8158,
+"lon": 45.9958,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4c6f72/eridu"
+},
+"Eshtemoa": {
+"lat": 31.4008,
+"lon": 35.0671,
+"score": 722,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad68510/eshtemoa"
+},
+"Etam 1": {
+"lat": 31.7637,
+"lon": 35.0258,
+"score": 816,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae05348/etam-1"
+},
+"Etam 3": {
+"lat": 31.6848,
+"lon": 35.1788,
+"score": 747,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa21f26/etam-3"
+},
+"Ether 1": {
+"lat": 31.6159,
+"lon": 34.8783,
+"score": 751,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a82f7b4/ether-1"
+},
+"Ethiopia": {
+"lat": 16.9351,
+"lon": 33.7507,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab45bd3/ethiopia"
+},
+"Etruria": {
+"lat": 42.2279,
+"lon": 11.8389,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a5eafe1/etruria"
+},
+"Euphrates": {
+"lat": 31.0043,
+"lon": 47.442,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a62dec4/euphrates"
+},
+"Fair Havens": {
+"lat": 34.9297,
+"lon": 24.8003,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aae626a/fair-havens"
+},
+"Fish Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a6057f5/fish-gate"
+},
+"Forum of Appius": {
+"lat": 41.4664,
+"lon": 12.9975,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a121d5e/forum-of-appius"
+},
+"Fountain Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a2fc4c4/fountain-gate"
+},
+"Gaash": {
+"lat": 32.0081,
+"lon": 35.1073,
+"score": 829,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/ab05a42/gaash"
+},
+"Gadara": {
+"lat": 32.656,
+"lon": 35.6794,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afed46a/gadara"
+},
+"Galatia": {
+"lat": 39.2667,
+"lon": 32.9833,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a0f440a/galatia"
+},
+"Galilee 1": {
+"lat": 32.76,
+"lon": 35.527,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a9cf1e8/galilee-1"
+},
+"Gareb": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/ad4607c/gareb"
+},
+"Gate of Yeshanah": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a2fa712/gate-of-yeshanah"
+},
+"Gate of the Foundation": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a753c3b/gate-of-the-foundation"
+},
+"Gate of the Guard": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a4eb961/gate-of-the-guard"
+},
+"Gath 1": {
+"lat": 31.6997,
+"lon": 34.8469,
+"score": 850,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a18873f/gath-1"
+},
+"Gath 3": {
+"lat": 31.6997,
+"lon": 34.8469,
+"score": 799,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a0ac467/gath-3"
+},
+"Gath-hepher": {
+"lat": 32.7381,
+"lon": 35.3197,
+"score": 789,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac51cec/gath-hepher"
+},
+"Gath-padalla": {
+"lat": 32.3984,
+"lon": 35.0401,
+"score": 752,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab56b36/gath-padalla"
+},
+"Gaza": {
+"lat": 31.504,
+"lon": 34.4644,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa8edd2/gaza"
+},
+"Geba 1": {
+"lat": 31.8575,
+"lon": 35.2611,
+"score": 740,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a264254/geba-1"
+},
+"Geba 2": {
+"lat": 31.8475,
+"lon": 35.1834,
+"score": 767,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2d3ca1/geba-2"
+},
+"Geba 4": {
+"lat": 31.8575,
+"lon": 35.2611,
+"score": 731,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae14b1d/geba-4"
+},
+"Gebal 1": {
+"lat": 34.1192,
+"lon": 35.6458,
+"score": 939,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9a2541/gebal-1"
+},
+"Gederah 3": {
+"lat": 31.6889,
+"lon": 34.9961,
+"score": 882,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a0a5b78/gederah-3"
+},
+"Gedor 1": {
+"lat": 31.6326,
+"lon": 35.0921,
+"score": 806,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af054ba/gedor-1"
+},
+"Gennesaret": {
+"lat": 32.8606,
+"lon": 35.5072,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a7de69e/gennesaret"
+},
+"Gerasa": {
+"lat": 32.2723,
+"lon": 35.8914,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ada6b64/gerasa"
+},
+"Gergesa": {
+"lat": 32.8261,
+"lon": 35.6504,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aabf84a/gergesa"
+},
+"Geruth Chimham": {
+"lat": 31.7043,
+"lon": 35.2076,
+"score": 963,
+"type": "natural area",
+"url": "https://www.openbible.info/geo/ancient/a1c28f1/geruth-chimham"
+},
+"Geshur": {
+"lat": 32.7667,
+"lon": 35.7,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/af6c325/geshur"
+},
+"Gethsemane": {
+"lat": 31.7794,
+"lon": 35.2394,
+"score": 1000,
+"type": "garden",
+"url": "https://www.openbible.info/geo/ancient/a42418f/gethsemane"
+},
+"Gezer": {
+"lat": 31.8592,
+"lon": 34.9192,
+"score": 942,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aed6538/gezer"
+},
+"Gibeath-haaraloth": {
+"lat": 31.8819,
+"lon": 35.46,
+"score": 749,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/a97126d/gibeath-haaraloth"
+},
+"Gibeon": {
+"lat": 31.8475,
+"lon": 35.1834,
+"score": 912,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aede336/gibeon"
+},
+"Gihon 2": {
+"lat": 31.7729,
+"lon": 35.2364,
+"score": 1000,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/a2a303c/gihon-2"
+},
+"Gilead 1": {
+"lat": 32.187,
+"lon": 35.6921,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ae73b90/gilead-1"
+},
+"Gimzo": {
+"lat": 31.9297,
+"lon": 34.9468,
+"score": 805,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5dd9e3/gimzo"
+},
+"Goah": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/a5627a3/goah"
+},
+"Gog": {
+"lat": 38.4883,
+"lon": 28.0403,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a858723/gog"
+},
+"Gomer": {
+"lat": 39.0,
+"lon": 32.0,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a80bf37/gomer"
+},
+"Goshen 1": {
+"lat": 30.7994,
+"lon": 31.8342,
+"score": 1020,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a60f092/goshen-1"
+},
+"Gozan": {
+"lat": 36.8268,
+"lon": 40.0397,
+"score": 829,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a924b16/gozan"
+},
+"Great Sea": {
+"lat": 31.8048,
+"lon": 34.1703,
+"score": 1000,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/aa805fb/great-sea"
+},
+"Greece": {
+"lat": 37.9719,
+"lon": 23.7267,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a4492a0/greece"
+},
+"Gulloth-mayim": {
+"lat": 31.4321,
+"lon": 35.0149,
+"score": 1000,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/aaa3eca/gulloth-mayim"
+},
+"Gutium": {
+"lat": 34.3875,
+"lon": 47.1321,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a654e6d/gutium"
+},
+"Habor": {
+"lat": 35.1303,
+"lon": 40.4273,
+"score": 879,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/af19252/habor"
+},
+"Hadid": {
+"lat": 31.9633,
+"lon": 34.9518,
+"score": 838,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a044272/hadid"
+},
+"Hadrach": {
+"lat": 35.905,
+"lon": 36.7986,
+"score": 789,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a3e8d63/hadrach"
+},
+"Hakkephirim": {
+"lat": 32.0272,
+"lon": 34.8681,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a607415/hakkephirim"
+},
+"Halah": {
+"lat": 36.4317,
+"lon": 43.1946,
+"score": 710,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/abf176f/halah"
+},
+"Halhul": {
+"lat": 31.5774,
+"lon": 35.1073,
+"score": 881,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afca9ce/halhul"
+},
+"Hall of Judgment": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "hall",
+"url": "https://www.openbible.info/geo/ancient/a8c2deb/hall-of-judgment"
+},
+"Hall of Pillars": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "hall",
+"url": "https://www.openbible.info/geo/ancient/a493f37/hall-of-pillars"
+},
+"Hall of the Throne": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "hall",
+"url": "https://www.openbible.info/geo/ancient/a5e2c12/hall-of-the-throne"
+},
+"Ham 2": {
+"lat": 30.1294,
+"lon": 31.3075,
+"score": 1169,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2f3001/ham-2"
+},
+"Hamath 1": {
+"lat": 35.1365,
+"lon": 36.75,
+"score": 957,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac62cbc/hamath-1"
+},
+"Hamath 2": {
+"lat": 35.1365,
+"lon": 36.75,
+"score": 1125,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa9c505/hamath-2"
+},
+"Hammon 1": {
+"lat": 33.1281,
+"lon": 35.152,
+"score": 752,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9d4f8e/hammon-1"
+},
+"Hammon 2": {
+"lat": 32.7664,
+"lon": 35.5506,
+"score": 755,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a62236c/hammon-2"
+},
+"Hammoth-dor": {
+"lat": 32.7664,
+"lon": 35.5506,
+"score": 801,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a7d3e84/hammoth-dor"
+},
+"Hamonah": {
+"lat": 31.7539,
+"lon": 35.7152,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a154d7b/hamonah"
+},
+"Hannathon": {
+"lat": 32.7856,
+"lon": 35.2569,
+"score": 847,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a412c43/hannathon"
+},
+"Haran": {
+"lat": 36.8644,
+"lon": 39.0328,
+"score": 922,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6d9af3/haran"
+},
+"Harod 1": {
+"lat": 32.5486,
+"lon": 35.3558,
+"score": 722,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/ae3cace/harod-1"
+},
+"Hatti": {
+"lat": 40.0197,
+"lon": 34.6153,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a4b8b4d/hatti"
+},
+"Hauran": {
+"lat": 32.7301,
+"lon": 36.3681,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a0e8903/hauran"
+},
+"Havilah 3": {
+"lat": 23.0,
+"lon": 46.0,
+"score": 903,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a1d9047/havilah-3"
+},
+"Havvoth-jair": {
+"lat": 32.5876,
+"lon": 35.7256,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a26c8f2/havvoth-jair"
+},
+"Hazazon-tamar 2": {
+"lat": 31.45,
+"lon": 35.3833,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a887a2d/hazazon-tamar-2"
+},
+"Hazor 1": {
+"lat": 33.0183,
+"lon": 35.5692,
+"score": 928,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6f33c5/hazor-1"
+},
+"Hazor 3": {
+"lat": 31.345,
+"lon": 35.1244,
+"score": 775,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4d3e40/hazor-3"
+},
+"Hebron": {
+"lat": 31.5251,
+"lon": 35.1022,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a85151a/hebron"
+},
+"Helbon": {
+"lat": 33.6667,
+"lon": 36.25,
+"score": 750,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8a8e54/helbon"
+},
+"Heliopolis": {
+"lat": 30.1294,
+"lon": 31.3075,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/acd9137/heliopolis"
+},
+"Helkath-hazzurim": {
+"lat": 31.8475,
+"lon": 35.1834,
+"score": 1000,
+"type": "field",
+"url": "https://www.openbible.info/geo/ancient/ac722b9/helkath-hazzurim"
+},
+"Heracleopolis Magna": {
+"lat": 29.0856,
+"lon": 30.9344,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a542fc2/heracleopolis-magna"
+},
+"Heracleopolis Parva": {
+"lat": 30.9781,
+"lon": 32.1756,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/acd64ca/heracleopolis-parva"
+},
+"Herod\u2019s palace": {
+"lat": 31.7761,
+"lon": 35.228,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/a72ca28/herods-palace"
+},
+"Hierapolis": {
+"lat": 37.9266,
+"lon": 29.1274,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a11bbbe/hierapolis"
+},
+"Hilakku": {
+"lat": 36.913,
+"lon": 34.8921,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ad1c917/hilakku"
+},
+"Holy Place 2": {
+"lat": 31.7778,
+"lon": 35.2356,
+"score": 1000,
+"type": "room",
+"url": "https://www.openbible.info/geo/ancient/ab60a74/holy-place-2"
+},
+"Horse Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/af8b51e/horse-gate"
+},
+"House of the Forest of Lebanon": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/a966bdf/house-of-the-forest-of-lebanon"
+},
+"Humtah": {
+"lat": 31.5251,
+"lon": 35.1022,
+"score": 795,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5a846f/humtah"
+},
+"Ibleam": {
+"lat": 32.4462,
+"lon": 35.292,
+"score": 860,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a878d66/ibleam"
+},
+"Iconium": {
+"lat": 37.8722,
+"lon": 32.4923,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae425aa/iconium"
+},
+"Idalah": {
+"lat": 32.7258,
+"lon": 35.1834,
+"score": 721,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae8fac6/idalah"
+},
+"Idumea": {
+"lat": 31.5251,
+"lon": 35.1022,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2517a0/idumea"
+},
+"Illyricum": {
+"lat": 43.5394,
+"lon": 16.4831,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ac405c0/illyricum"
+},
+"Immer": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 1007,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae4d198/immer"
+},
+"India": {
+"lat": 23.9944,
+"lon": 67.4308,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a878481/india"
+},
+"Ir-shemesh": {
+"lat": 31.7506,
+"lon": 34.9747,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad6cc26/ir-shemesh"
+},
+"Italy": {
+"lat": 41.8922,
+"lon": 12.4852,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a7184a7/italy"
+},
+"Ituraea": {
+"lat": 33.4,
+"lon": 35.85,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aa9e265/ituraea"
+},
+"Jabbok": {
+"lat": 32.1153,
+"lon": 35.5431,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/aca7bd9/jabbok"
+},
+"Jabneel 1": {
+"lat": 31.866,
+"lon": 34.7463,
+"score": 775,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a7adb01/jabneel-1"
+},
+"Jabneel 2": {
+"lat": 32.7133,
+"lon": 35.5125,
+"score": 753,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/abff89f/jabneel-2"
+},
+"Jarmuth 1": {
+"lat": 31.7083,
+"lon": 34.975,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a539e01/jarmuth-1"
+},
+"Jarmuth 2": {
+"lat": 32.5956,
+"lon": 35.5214,
+"score": 811,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a1eb300/jarmuth-2"
+},
+"Jattir": {
+"lat": 31.3525,
+"lon": 35.0161,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad6eb0b/jattir"
+},
+"Javan": {
+"lat": 38.2,
+"lon": 27.5,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a116c5c/javan"
+},
+"Jebus": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 805,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a403c45/jebus"
+},
+"Jehud": {
+"lat": 32.0308,
+"lon": 34.8903,
+"score": 805,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa0ef78/jehud"
+},
+"Jericho 1": {
+"lat": 31.8717,
+"lon": 35.4446,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a231f80/jericho-1"
+},
+"Jericho 2": {
+"lat": 31.8519,
+"lon": 35.4362,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aaf03fa/jericho-2"
+},
+"Jeruel": {
+"lat": 31.5797,
+"lon": 35.3092,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a8ccbf2/jeruel"
+},
+"Jerusalem": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a15257a/jerusalem"
+},
+"Jeshanah": {
+"lat": 31.9986,
+"lon": 35.2603,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5f5b06/jeshanah"
+},
+"Jeshimon": {
+"lat": 31.4703,
+"lon": 35.2228,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ad41f6e/jeshimon"
+},
+"Jezreel 2": {
+"lat": 32.5579,
+"lon": 35.328,
+"score": 806,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae0bf4a/jezreel-2"
+},
+"Jokneam": {
+"lat": 32.6641,
+"lon": 35.1083,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5c92e1/jokneam"
+},
+"Joppa": {
+"lat": 32.0545,
+"lon": 34.753,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae023a9/joppa"
+},
+"Jordan": {
+"lat": 31.7614,
+"lon": 35.5583,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/ae686c9/jordan"
+},
+"Jordan Valley": {
+"lat": 32.3172,
+"lon": 35.57,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/aa54aa4/jordan-valley"
+},
+"Judea 1": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a149f13/judea-1"
+},
+"Judea 2": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab86a69/judea-2"
+},
+"Juttah": {
+"lat": 31.4478,
+"lon": 35.09,
+"score": 771,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/acc7184/juttah"
+},
+"Kadesh-barnea": {
+"lat": 30.6483,
+"lon": 34.4222,
+"score": 864,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac2cef0/kadesh-barnea"
+},
+"Kanah 2": {
+"lat": 33.2092,
+"lon": 35.2992,
+"score": 842,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac3233c/kanah-2"
+},
+"Karnaim": {
+"lat": 32.8358,
+"lon": 36.035,
+"score": 760,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adf5c7b/karnaim"
+},
+"Kedar": {
+"lat": 29.8114,
+"lon": 39.8683,
+"score": 1000,
+"type": "people group",
+"url": "https://www.openbible.info/geo/ancient/a68d1a9/kedar"
+},
+"Kedesh 4": {
+"lat": 32.735,
+"lon": 35.5555,
+"score": 755,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad74690/kedesh-4"
+},
+"Kedesh 5": {
+"lat": 33.1116,
+"lon": 35.5295,
+"score": 959,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a662eed/kedesh-5"
+},
+"Keilah": {
+"lat": 31.6137,
+"lon": 35.0036,
+"score": 815,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad9df93/keilah"
+},
+"Kenath": {
+"lat": 32.7562,
+"lon": 36.619,
+"score": 798,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4f650b/kenath"
+},
+"Kidron": {
+"lat": 31.7803,
+"lon": 35.24,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a553110/kidron"
+},
+"King\u2019s Highway": {
+"lat": 31.9547,
+"lon": 35.9343,
+"score": 1000,
+"type": "road",
+"url": "https://www.openbible.info/geo/ancient/a057d59/kings-highway"
+},
+"Kir 2": {
+"lat": 31.1806,
+"lon": 35.7014,
+"score": 753,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a1a57d0/kir-2"
+},
+"Kir-hareseth": {
+"lat": 31.1806,
+"lon": 35.7014,
+"score": 805,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab55371/kir-hareseth"
+},
+"Kiriath-jearim": {
+"lat": 31.809,
+"lon": 35.1038,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9bba61/kiriath-jearim"
+},
+"Kishon": {
+"lat": 32.8167,
+"lon": 35.0333,
+"score": 854,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a5a6458/kishon"
+},
+"Kittim": {
+"lat": 35.0,
+"lon": 33.0,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/aeb46a8/kittim"
+},
+"Kue": {
+"lat": 37.0,
+"lon": 35.325,
+"score": 865,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/af133c0/kue"
+},
+"Kumidi": {
+"lat": 33.6238,
+"lon": 35.821,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adb1dcf/kumidi"
+},
+"Laash": {
+"lat": 35.1365,
+"lon": 36.75,
+"score": 917,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8778a3/laash"
+},
+"Lachish": {
+"lat": 31.5653,
+"lon": 34.8492,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a3cc590/lachish"
+},
+"Laodicea": {
+"lat": 37.8358,
+"lon": 29.1075,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a83fb1e/laodicea"
+},
+"Lasea": {
+"lat": 34.9406,
+"lon": 24.8111,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a56788c/lasea"
+},
+"Leb-kamai": {
+"lat": 30.9622,
+"lon": 46.1044,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a9de8b7/leb-kamai"
+},
+"Lebanon": {
+"lat": 33.54,
+"lon": 35.5836,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a730058/lebanon"
+},
+"Lebo-hamath": {
+"lat": 34.1949,
+"lon": 36.3496,
+"score": 738,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5eb047/lebo-hamath"
+},
+"Libya": {
+"lat": 32.8209,
+"lon": 21.8512,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ac12af9/libya"
+},
+"Lod": {
+"lat": 31.95,
+"lon": 34.9,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2c5cc7/lod"
+},
+"Lower Beth-horon": {
+"lat": 31.895,
+"lon": 35.0836,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a094036/lower-beth-horon"
+},
+"Lower Gulloth": {
+"lat": 31.4321,
+"lon": 35.0149,
+"score": 1000,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/aacc081/lower-gulloth"
+},
+"Lower Pool": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "pool",
+"url": "https://www.openbible.info/geo/ancient/a1ae20f/lower-pool"
+},
+"Lud 1": {
+"lat": 38.4883,
+"lon": 28.0403,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a38776a/lud-1"
+},
+"Luz 1": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a397042/luz-1"
+},
+"Lycaonia": {
+"lat": 38.0,
+"lon": 33.0,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a3668b6/lycaonia"
+},
+"Lycia": {
+"lat": 36.7333,
+"lon": 29.9,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a19fd03/lycia"
+},
+"Lydia": {
+"lat": 38.4883,
+"lon": 28.0403,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2d7b73/lydia"
+},
+"Lystra": {
+"lat": 37.6017,
+"lon": 32.3384,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af0719d/lystra"
+},
+"Maacah": {
+"lat": 33.2581,
+"lon": 35.581,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/acae7cb/maacah"
+},
+"Maareh-geba": {
+"lat": 31.8231,
+"lon": 35.2307,
+"score": 1000,
+"type": "natural area",
+"url": "https://www.openbible.info/geo/ancient/a5e9c87/maareh-geba"
+},
+"Macedonia": {
+"lat": 41.6,
+"lon": 22.54,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a69e1b8/macedonia"
+},
+"Machpelah": {
+"lat": 31.5247,
+"lon": 35.1108,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae00861/machpelah"
+},
+"Madiama": {
+"lat": 28.4947,
+"lon": 35.0122,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/abf5daf/madiama"
+},
+"Magdala": {
+"lat": 32.8271,
+"lon": 35.5136,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af75e9e/magdala"
+},
+"Mahaneh-dan 1": {
+"lat": 31.778,
+"lon": 34.9989,
+"score": 789,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/ab3fd96/mahaneh-dan-1"
+},
+"Malta": {
+"lat": 35.9335,
+"lon": 14.4117,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a57835d/malta"
+},
+"Maon": {
+"lat": 31.4094,
+"lon": 35.1338,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6845b1/maon"
+},
+"Mareshah": {
+"lat": 31.593,
+"lon": 34.8982,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5cda86/mareshah"
+},
+"Massah": {
+"lat": 28.6231,
+"lon": 33.8803,
+"score": 840,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/a296e06/massah"
+},
+"Me-jarkon": {
+"lat": 32.1039,
+"lon": 34.7758,
+"score": 723,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a7d1972/me-jarkon"
+},
+"Medeba": {
+"lat": 31.7161,
+"lon": 35.7955,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af4f21c/medeba"
+},
+"Media": {
+"lat": 34.8065,
+"lon": 48.5162,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ad2fadf/media"
+},
+"Megiddo": {
+"lat": 32.5853,
+"lon": 35.1844,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8554e3/megiddo"
+},
+"Memphis": {
+"lat": 29.8488,
+"lon": 31.253,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8ec269/memphis"
+},
+"Merathaim": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8eaad5/merathaim"
+},
+"Meribah 1": {
+"lat": 30.6483,
+"lon": 34.4222,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a505743/meribah-1"
+},
+"Meribah 2": {
+"lat": 28.6231,
+"lon": 33.8803,
+"score": 1000,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/a65db0f/meribah-2"
+},
+"Meshech": {
+"lat": 39.655,
+"lon": 31.9942,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a5f9092/meshech"
+},
+"Mesopotamia": {
+"lat": 36.8644,
+"lon": 39.0328,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a43f60f/mesopotamia"
+},
+"Middle Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 862,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/abee1b4/middle-gate"
+},
+"Midian": {
+"lat": 28.4947,
+"lon": 35.0122,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/acc6d8e/midian"
+},
+"Migdol 3": {
+"lat": 30.9648,
+"lon": 32.4929,
+"score": 731,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a15973c/migdol-3"
+},
+"Miletus": {
+"lat": 37.5311,
+"lon": 27.2756,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a55027d/miletus"
+},
+"Millo": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 724,
+"type": "fortification",
+"url": "https://www.openbible.info/geo/ancient/a734b66/millo"
+},
+"Minni": {
+"lat": 36.5703,
+"lon": 46.2753,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ae1054e/minni"
+},
+"Mithkah": {
+"lat": 30.6406,
+"lon": 34.4111,
+"score": 876,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/aa5f658/mithkah"
+},
+"Mitylene": {
+"lat": 39.1105,
+"lon": 26.547,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a33910d/mitylene"
+},
+"Mizpah 3": {
+"lat": 31.8851,
+"lon": 35.2164,
+"score": 781,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a736f6c/mizpah-3"
+},
+"Mizpeh 1": {
+"lat": 31.8851,
+"lon": 35.2164,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afc2466/mizpeh-1"
+},
+"Moab 1": {
+"lat": 31.1806,
+"lon": 35.7014,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aa0b1d6/moab-1"
+},
+"Moab 2": {
+"lat": 31.8402,
+"lon": 35.6737,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aca767b/moab-2"
+},
+"Moreh 1": {
+"lat": 32.2136,
+"lon": 35.2819,
+"score": 953,
+"type": "tree",
+"url": "https://www.openbible.info/geo/ancient/a38ad9f/moreh-1"
+},
+"Moreh 2": {
+"lat": 32.6176,
+"lon": 35.3487,
+"score": 770,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/a772880/moreh-2"
+},
+"Mortar": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "district in settlement",
+"url": "https://www.openbible.info/geo/ancient/abcd5f2/mortar"
+},
+"Most Holy Place 2": {
+"lat": 31.7778,
+"lon": 35.2356,
+"score": 1000,
+"type": "altar",
+"url": "https://www.openbible.info/geo/ancient/a9acaaf/most-holy-place-2"
+},
+"Mount Baal-hermon": {
+"lat": 33.4,
+"lon": 35.85,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/ac8955e/mount-baal-hermon"
+},
+"Mount Bashan": {
+"lat": 32.6667,
+"lon": 36.7333,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/aac759d/mount-bashan"
+},
+"Mount Carmel": {
+"lat": 32.6725,
+"lon": 35.0233,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a3e21c6/mount-carmel"
+},
+"Mount Ebal": {
+"lat": 32.234,
+"lon": 35.2733,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/aa5cc66/mount-ebal"
+},
+"Mount Ephraim": {
+"lat": 31.9228,
+"lon": 35.2414,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ac0d1a5/mount-ephraim"
+},
+"Mount Esau": {
+"lat": 30.1843,
+"lon": 35.3166,
+"score": 1000,
+"type": "mountain range",
+"url": "https://www.openbible.info/geo/ancient/a8e843f/mount-esau"
+},
+"Mount Gerizim": {
+"lat": 32.1994,
+"lon": 35.2728,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a30e967/mount-gerizim"
+},
+"Mount Gilboa": {
+"lat": 32.4339,
+"lon": 35.4144,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/acf57c5/mount-gilboa"
+},
+"Mount Hermon": {
+"lat": 33.4,
+"lon": 35.85,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a341fe8/mount-hermon"
+},
+"Mount Horeb": {
+"lat": 28.5397,
+"lon": 33.9733,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a9bb03e/mount-horeb"
+},
+"Mount Jearim": {
+"lat": 31.7811,
+"lon": 35.0511,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a3587ba/mount-jearim"
+},
+"Mount Lebanon": {
+"lat": 34.2997,
+"lon": 36.1164,
+"score": 1000,
+"type": "mountain range",
+"url": "https://www.openbible.info/geo/ancient/ac54760/mount-lebanon"
+},
+"Mount Moriah": {
+"lat": 31.7778,
+"lon": 35.2356,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/aac1fcf/mount-moriah"
+},
+"Mount Perazim": {
+"lat": 31.7852,
+"lon": 35.2047,
+"score": 725,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a991067/mount-perazim"
+},
+"Mount Seir 1": {
+"lat": 30.1843,
+"lon": 35.3166,
+"score": 775,
+"type": "mountain range",
+"url": "https://www.openbible.info/geo/ancient/ae981db/mount-seir-1"
+},
+"Mount Shepher": {
+"lat": 30.5066,
+"lon": 34.3036,
+"score": 975,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a39fe14/mount-shepher"
+},
+"Mount Tabor": {
+"lat": 32.6863,
+"lon": 35.3929,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/acd63ee/mount-tabor"
+},
+"Mount Zion": {
+"lat": 31.7717,
+"lon": 35.2286,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/abd9596/mount-zion"
+},
+"Mount of Olives": {
+"lat": 31.7779,
+"lon": 35.2457,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/ac2c4c5/mount-of-olives"
+},
+"Muster Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/aa9e65f/muster-gate"
+},
+"Myra": {
+"lat": 36.2592,
+"lon": 29.9853,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa4b3e2/myra"
+},
+"Mysia": {
+"lat": 40.0,
+"lon": 28.5,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2d9bc8/mysia"
+},
+"Naarah": {
+"lat": 31.8935,
+"lon": 35.4248,
+"score": 751,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a179865/naarah"
+},
+"Nahuru": {
+"lat": 36.8644,
+"lon": 39.0328,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac6cefa/nahuru"
+},
+"Nain": {
+"lat": 32.6307,
+"lon": 35.3501,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aee679c/nain"
+},
+"Nazareth": {
+"lat": 32.7021,
+"lon": 35.2977,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af5884f/nazareth"
+},
+"Neapolis": {
+"lat": 40.935,
+"lon": 24.415,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6a7150/neapolis"
+},
+"Neballat": {
+"lat": 31.9864,
+"lon": 34.9589,
+"score": 824,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/acd682e/neballat"
+},
+"Negeb": {
+"lat": 31.2447,
+"lon": 34.8408,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a1cb244/negeb"
+},
+"Neiel": {
+"lat": 32.8926,
+"lon": 35.2219,
+"score": 701,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab571de/neiel"
+},
+"Nephtoah": {
+"lat": 31.7944,
+"lon": 35.1966,
+"score": 747,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/ac1fef1/nephtoah"
+},
+"New Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/aa85961/new-gate"
+},
+"Nezib": {
+"lat": 31.5859,
+"lon": 35.0098,
+"score": 788,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aafe3bd/nezib"
+},
+"Nicopolis": {
+"lat": 39.0235,
+"lon": 20.7374,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af43cde/nicopolis"
+},
+"Nile": {
+"lat": 31.4653,
+"lon": 30.3667,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a012705/nile"
+},
+"Nimrah": {
+"lat": 31.9091,
+"lon": 35.6387,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a314731/nimrah"
+},
+"Nimrod": {
+"lat": 36.3594,
+"lon": 43.1528,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a8518f1/nimrod"
+},
+"Nineveh": {
+"lat": 36.3594,
+"lon": 43.1528,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a70fd5d/nineveh"
+},
+"Nobah 1": {
+"lat": 32.7562,
+"lon": 36.619,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa23a3e/nobah-1"
+},
+"North": {
+"lat": 36.2267,
+"lon": 36.1717,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a244929/north"
+},
+"North Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/aa4589b/north-gate"
+},
+"Nuhashe": {
+"lat": 35.7406,
+"lon": 37.0467,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab66f81/nuhashe"
+},
+"Old Pool": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "pool",
+"url": "https://www.openbible.info/geo/ancient/a51e3b0/old-pool"
+},
+"Ono": {
+"lat": 32.0272,
+"lon": 34.8681,
+"score": 758,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae6bfe2/ono"
+},
+"Ophel": {
+"lat": 31.7753,
+"lon": 35.2362,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/af96edd/ophel"
+},
+"Ophrah 1": {
+"lat": 31.9544,
+"lon": 35.3003,
+"score": 786,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a53b82d/ophrah-1"
+},
+"Pamphylia": {
+"lat": 37.0,
+"lon": 31.0,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aa95188/pamphylia"
+},
+"Paphos": {
+"lat": 34.7557,
+"lon": 32.4042,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a314765/paphos"
+},
+"Paran": {
+"lat": 30.3032,
+"lon": 34.7767,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aa6b19b/paran"
+},
+"Parbar": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/ab1d701/parbar"
+},
+"Patara": {
+"lat": 36.2603,
+"lon": 29.3142,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ade301b/patara"
+},
+"Pathros": {
+"lat": 24.1,
+"lon": 32.7,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aab30ec/pathros"
+},
+"Patmos": {
+"lat": 37.325,
+"lon": 26.5417,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a8f60f3/patmos"
+},
+"Pekod": {
+"lat": 31.3611,
+"lon": 47.4496,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a4b9865/pekod"
+},
+"Pelusium": {
+"lat": 31.0425,
+"lon": 32.5461,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa32a17/pelusium"
+},
+"People\u2019s Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a6f94a6/peoples-gate"
+},
+"Peor": {
+"lat": 31.777,
+"lon": 35.7385,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a9ef72b/peor"
+},
+"Perez-uzzah": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae67841/perez-uzzah"
+},
+"Perga": {
+"lat": 36.9604,
+"lon": 30.8537,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aff04b8/perga"
+},
+"Pergamum": {
+"lat": 39.1322,
+"lon": 27.1842,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a75d2c1/pergamum"
+},
+"Persia": {
+"lat": 34.8065,
+"lon": 48.5162,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab9696f/persia"
+},
+"Pethor": {
+"lat": 36.7014,
+"lon": 38.0865,
+"score": 998,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa9e754/pethor"
+},
+"Philadelphia": {
+"lat": 38.35,
+"lon": 28.5167,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a1c7cc1/philadelphia"
+},
+"Philippi": {
+"lat": 41.0121,
+"lon": 24.2846,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a49e1d0/philippi"
+},
+"Philistia": {
+"lat": 31.6639,
+"lon": 34.5458,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ac71e65/philistia"
+},
+"Phoenicia": {
+"lat": 33.2708,
+"lon": 35.1961,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a33d53e/phoenicia"
+},
+"Phrygia": {
+"lat": 39.0,
+"lon": 31.0,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ab8ae56/phrygia"
+},
+"Pi-beseth": {
+"lat": 30.5728,
+"lon": 31.51,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2cd991/pi-beseth"
+},
+"Pirathon": {
+"lat": 32.1906,
+"lon": 35.1658,
+"score": 726,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a40647c/pirathon"
+},
+"Pisidia": {
+"lat": 38.3061,
+"lon": 31.1892,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a55aded/pisidia"
+},
+"Pontus": {
+"lat": 40.68,
+"lon": 37.83,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a83a43e/pontus"
+},
+"Ptolemais": {
+"lat": 32.9214,
+"lon": 35.0692,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/abc2af0/ptolemais"
+},
+"Punon": {
+"lat": 30.6277,
+"lon": 35.4936,
+"score": 755,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9ecc26/punon"
+},
+"Puteoli": {
+"lat": 40.8261,
+"lon": 14.1206,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4488e9/puteoli"
+},
+"Rabbah 1": {
+"lat": 31.9547,
+"lon": 35.9343,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae067b5/rabbah-1"
+},
+"Ragmat": {
+"lat": 17.4773,
+"lon": 44.1794,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9664ba/ragmat"
+},
+"Ramah 1": {
+"lat": 31.8543,
+"lon": 35.2316,
+"score": 723,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6d57ed/ramah-1"
+},
+"Ramah 5": {
+"lat": 32.4999,
+"lon": 36.015,
+"score": 985,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad27541/ramah-5"
+},
+"Ramah 7": {
+"lat": 31.8543,
+"lon": 35.2316,
+"score": 1113,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a75be6f/ramah-7"
+},
+"Ramah 8": {
+"lat": 31.8231,
+"lon": 35.2307,
+"score": 1000,
+"type": "hill",
+"url": "https://www.openbible.info/geo/ancient/a15bdfd/ramah-8"
+},
+"Ramath-lehi": {
+"lat": 31.7488,
+"lon": 35.001,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a601121/ramath-lehi"
+},
+"Ramathaim-zophim": {
+"lat": 31.8543,
+"lon": 35.2316,
+"score": 766,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a54ef72/ramathaim-zophim"
+},
+"Ramoth 2": {
+"lat": 31.2092,
+"lon": 35.1657,
+"score": 973,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab049cf/ramoth-2"
+},
+"Ramoth 3": {
+"lat": 32.4999,
+"lon": 36.015,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a95147f/ramoth-3"
+},
+"Ramoth-gilead": {
+"lat": 32.4999,
+"lon": 36.015,
+"score": 808,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2fe63c/ramoth-gilead"
+},
+"Red Sea 2": {
+"lat": 28.75,
+"lon": 34.75,
+"score": 1000,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/ad64d75/red-sea-2"
+},
+"Red Sea 3": {
+"lat": 28.75,
+"lon": 33.0,
+"score": 776,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/a3ba698/red-sea-3"
+},
+"Rehob 1": {
+"lat": 34.0089,
+"lon": 36.1453,
+"score": 799,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae4cd38/rehob-1"
+},
+"Rhegium": {
+"lat": 38.1088,
+"lon": 15.6441,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a63bb26/rhegium"
+},
+"Rhodes 2": {
+"lat": 36.4402,
+"lon": 28.2109,
+"score": 766,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a8c207b/rhodes-2"
+},
+"Riblah 1": {
+"lat": 34.4595,
+"lon": 36.5726,
+"score": 948,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab2bde8/riblah-1"
+},
+"Rimmono": {
+"lat": 32.7881,
+"lon": 35.3106,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a655b28/rimmono"
+},
+"River 2": {
+"lat": 31.0043,
+"lon": 47.442,
+"score": 789,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a669096/river-2"
+},
+"Rome": {
+"lat": 41.8922,
+"lon": 12.4852,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afc8e7a/rome"
+},
+"Salamis": {
+"lat": 35.1849,
+"lon": 33.9019,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afa863b/salamis"
+},
+"Salecah": {
+"lat": 32.4939,
+"lon": 36.7105,
+"score": 716,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac3bc41/salecah"
+},
+"Salem": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aad7e4e/salem"
+},
+"Salmone": {
+"lat": 35.316,
+"lon": 26.3116,
+"score": 1000,
+"type": "promontory",
+"url": "https://www.openbible.info/geo/ancient/a1c44ea/salmone"
+},
+"Salona": {
+"lat": 43.5394,
+"lon": 16.4831,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a49cd82/salona"
+},
+"Salt Sea": {
+"lat": 31.5,
+"lon": 35.5,
+"score": 1000,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/abed304/salt-sea"
+},
+"Samaria 1": {
+"lat": 32.2761,
+"lon": 35.195,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a041bb3/samaria-1"
+},
+"Samaria 2": {
+"lat": 32.2761,
+"lon": 35.195,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a282dce/samaria-2"
+},
+"Samos": {
+"lat": 37.75,
+"lon": 26.8333,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/acf6ec0/samos"
+},
+"Samothrace": {
+"lat": 40.45,
+"lon": 25.5833,
+"score": 1000,
+"type": "island",
+"url": "https://www.openbible.info/geo/ancient/a68750d/samothrace"
+},
+"Saparre": {
+"lat": 32.1261,
+"lon": 45.2308,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9042c4/saparre"
+},
+"Sardis": {
+"lat": 38.4883,
+"lon": 28.0403,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aab4a5f/sardis"
+},
+"Sarid": {
+"lat": 32.6604,
+"lon": 35.2342,
+"score": 760,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab5b542/sarid"
+},
+"Scythia": {
+"lat": 44.9428,
+"lon": 34.1206,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a8d18cf/scythia"
+},
+"Sea of Galilee": {
+"lat": 32.8189,
+"lon": 35.59,
+"score": 1000,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/a562fcc/sea-of-galilee"
+},
+"Second Quarter": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "district in settlement",
+"url": "https://www.openbible.info/geo/ancient/a5ab519/second-quarter"
+},
+"Secu": {
+"lat": 31.9374,
+"lon": 35.1447,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a4052df/secu"
+},
+"Seleucia": {
+"lat": 36.124,
+"lon": 35.922,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6d306d/seleucia"
+},
+"Seneh": {
+"lat": 31.8531,
+"lon": 35.2862,
+"score": 1000,
+"type": "cliff",
+"url": "https://www.openbible.info/geo/ancient/a311f80/seneh"
+},
+"Senir": {
+"lat": 33.4,
+"lon": 35.85,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/ad27e17/senir"
+},
+"Serpent\u2019s Stone": {
+"lat": 31.7672,
+"lon": 35.236,
+"score": 1000,
+"type": "rock",
+"url": "https://www.openbible.info/geo/ancient/a8bb3d8/serpents-stone"
+},
+"Shaalbim": {
+"lat": 31.8698,
+"lon": 34.9871,
+"score": 791,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ae89331/shaalbim"
+},
+"Shaalbon": {
+"lat": 31.8698,
+"lon": 34.9871,
+"score": 814,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a1303a4/shaalbon"
+},
+"Shallecheth": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 907,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a5d4629/shallecheth"
+},
+"Sharon 1": {
+"lat": 32.4,
+"lon": 34.883,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a83fd43/sharon-1"
+},
+"Shaveh-kiriathaim": {
+"lat": 31.5406,
+"lon": 35.6861,
+"score": 1000,
+"type": "natural area",
+"url": "https://www.openbible.info/geo/ancient/a86d49f/shaveh-kiriathaim"
+},
+"Sheba 1": {
+"lat": 15.3483,
+"lon": 44.2064,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a81ab85/sheba-1"
+},
+"Shechem": {
+"lat": 32.2136,
+"lon": 35.2819,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adf74d4/shechem"
+},
+"Sheep Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/aa3d425/sheep-gate"
+},
+"Shepham": {
+"lat": 34.3967,
+"lon": 36.3871,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9ba60c/shepham"
+},
+"Shephelah": {
+"lat": 31.6917,
+"lon": 34.875,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/af084cf/shephelah"
+},
+"Sheshach": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab58876/sheshach"
+},
+"Shikkeron": {
+"lat": 31.8215,
+"lon": 34.812,
+"score": 786,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afd2396/shikkeron"
+},
+"Shiloah": {
+"lat": 31.7706,
+"lon": 35.235,
+"score": 1000,
+"type": "pool",
+"url": "https://www.openbible.info/geo/ancient/ae71673/shiloah"
+},
+"Shiloh": {
+"lat": 32.0557,
+"lon": 35.2895,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa4680a/shiloh"
+},
+"Shimron": {
+"lat": 32.7039,
+"lon": 35.2133,
+"score": 829,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a072bae/shimron"
+},
+"Shinar": {
+"lat": 32.5433,
+"lon": 44.4222,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/af725b1/shinar"
+},
+"Shoa": {
+"lat": 31.0043,
+"lon": 47.4421,
+"score": 706,
+"type": "people group",
+"url": "https://www.openbible.info/geo/ancient/aa3bc1e/shoa"
+},
+"Shunem": {
+"lat": 32.6056,
+"lon": 35.3343,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac86af5/shunem"
+},
+"Sibraim": {
+"lat": 34.4011,
+"lon": 36.6364,
+"score": 1013,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab5d319/sibraim"
+},
+"Sidon": {
+"lat": 33.561,
+"lon": 35.3719,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a98e4d7/sidon"
+},
+"Silla": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "fortification",
+"url": "https://www.openbible.info/geo/ancient/ab56451/silla"
+},
+"Siloam": {
+"lat": 31.7706,
+"lon": 35.235,
+"score": 1000,
+"type": "pool",
+"url": "https://www.openbible.info/geo/ancient/a294859/siloam"
+},
+"Siphmoth": {
+"lat": 31.4008,
+"lon": 35.0671,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a077262/siphmoth"
+},
+"Smyrna": {
+"lat": 38.4189,
+"lon": 27.1378,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2e65fb/smyrna"
+},
+"Socoh 1": {
+"lat": 31.6822,
+"lon": 34.9749,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a39a6b9/socoh-1"
+},
+"Socoh 2": {
+"lat": 31.4009,
+"lon": 35.0061,
+"score": 819,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac9c090/socoh-2"
+},
+"Socoh 3": {
+"lat": 32.3421,
+"lon": 35.032,
+"score": 788,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a64ff72/socoh-3"
+},
+"Solomon\u2019s Portico": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/a47c817/solomons-portico"
+},
+"South 1": {
+"lat": 31.2447,
+"lon": 34.8408,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a2d4170/south-1"
+},
+"South 2": {
+"lat": 15.3483,
+"lon": 44.2064,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a422f1c/south-2"
+},
+"South 3": {
+"lat": 31.1825,
+"lon": 29.8965,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a1c0469/south-3"
+},
+"South Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a092025/south-gate"
+},
+"Spain": {
+"lat": 40.21,
+"lon": -4.35,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a3f0f69/spain"
+},
+"Sparta": {
+"lat": 37.0819,
+"lon": 22.4236,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a7aafda/sparta"
+},
+"Straight Street": {
+"lat": 33.5092,
+"lon": 36.3114,
+"score": 1000,
+"type": "road",
+"url": "https://www.openbible.info/geo/ancient/af23dbb/straight-street"
+},
+"Sur": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/aadfb8f/sur"
+},
+"Susa": {
+"lat": 32.1892,
+"lon": 48.2578,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a033b84/susa"
+},
+"Sutu": {
+"lat": 31.0043,
+"lon": 47.4421,
+"score": 1000,
+"type": "people group",
+"url": "https://www.openbible.info/geo/ancient/abef753/sutu"
+},
+"Syene": {
+"lat": 24.0889,
+"lon": 32.8997,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a8a6a5b/syene"
+},
+"Syracuse": {
+"lat": 37.0639,
+"lon": 15.2931,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a1e3697/syracuse"
+},
+"Syria 1": {
+"lat": 33.5111,
+"lon": 36.3064,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a159fa4/syria-1"
+},
+"Syria 2": {
+"lat": 33.5111,
+"lon": 36.3064,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a890adf/syria-2"
+},
+"Syrtis": {
+"lat": 31.5,
+"lon": 18.0,
+"score": 1000,
+"type": "body of water",
+"url": "https://www.openbible.info/geo/ancient/ad36371/syrtis"
+},
+"Taanach": {
+"lat": 32.5215,
+"lon": 35.2191,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6f05f6/taanach"
+},
+"Tabbur-erez": {
+"lat": 32.1994,
+"lon": 35.2728,
+"score": 1000,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a5948b2/tabbur-erez"
+},
+"Tadmor": {
+"lat": 34.547,
+"lon": 38.274,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ad797fe/tadmor"
+},
+"Tahath": {
+"lat": 30.6406,
+"lon": 34.4111,
+"score": 722,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/abe40d1/tahath"
+},
+"Tahpanhes": {
+"lat": 30.8606,
+"lon": 32.1714,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/adb008c/tahpanhes"
+},
+"Tamar 2": {
+"lat": 30.8087,
+"lon": 35.2459,
+"score": 757,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a5947d7/tamar-2"
+},
+"Tarsus": {
+"lat": 36.913,
+"lon": 34.8921,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a666ea0/tarsus"
+},
+"Tartessos": {
+"lat": 37.2719,
+"lon": -6.9442,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a86d7c7/tartessos"
+},
+"Tekoa": {
+"lat": 31.6325,
+"lon": 35.2105,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a2e3aa0/tekoa"
+},
+"Tema": {
+"lat": 27.6297,
+"lon": 38.5516,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/acd48d6/tema"
+},
+"Terah": {
+"lat": 30.6406,
+"lon": 34.4111,
+"score": 1000,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/a944b90/terah"
+},
+"Thapsacus": {
+"lat": 35.95,
+"lon": 38.1667,
+"score": 816,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa4fca2/thapsacus"
+},
+"The Lord Is There": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a012194/the-lord-is-there"
+},
+"Thebes": {
+"lat": 25.7206,
+"lon": 32.6103,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9674fc/thebes"
+},
+"Thessalonica": {
+"lat": 40.6378,
+"lon": 22.9458,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afa9d8e/thessalonica"
+},
+"Three Taverns": {
+"lat": 41.5619,
+"lon": 12.8739,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/afef438/three-taverns"
+},
+"Thyatira": {
+"lat": 38.9202,
+"lon": 27.8365,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a94b661/thyatira"
+},
+"Tiberias": {
+"lat": 32.7736,
+"lon": 35.5442,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac9adc9/tiberias"
+},
+"Tigris": {
+"lat": 31.0043,
+"lon": 47.4421,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a38ebfd/tigris"
+},
+"Timnah 1": {
+"lat": 31.7848,
+"lon": 34.9103,
+"score": 836,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a21f909/timnah-1"
+},
+"Timnath-heres": {
+"lat": 32.0081,
+"lon": 35.1073,
+"score": 809,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6e6528/timnath-heres"
+},
+"Tiphsah 1": {
+"lat": 35.95,
+"lon": 38.1667,
+"score": 754,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aab8f2d/tiphsah-1"
+},
+"Tirzah": {
+"lat": 32.2874,
+"lon": 35.3378,
+"score": 834,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a80d317/tirzah"
+},
+"Topheth": {
+"lat": 31.7692,
+"lon": 35.2281,
+"score": 1000,
+"type": "altar",
+"url": "https://www.openbible.info/geo/ancient/ad81b79/topheth"
+},
+"Tower of Hananel": {
+"lat": 31.7801,
+"lon": 35.2343,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/af58391/tower-of-hananel"
+},
+"Tower of Shechem": {
+"lat": 32.2136,
+"lon": 35.2819,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/a939939/tower-of-shechem"
+},
+"Tower of the Hundred": {
+"lat": 31.7801,
+"lon": 35.2343,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/a50eea4/tower-of-the-hundred"
+},
+"Tower of the Ovens": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "structure",
+"url": "https://www.openbible.info/geo/ancient/a721f7f/tower-of-the-ovens"
+},
+"Trachonitis": {
+"lat": 32.9695,
+"lon": 36.4554,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a85a60a/trachonitis"
+},
+"Troas": {
+"lat": 39.7519,
+"lon": 26.1586,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a91c509/troas"
+},
+"Trogyllium": {
+"lat": 37.6594,
+"lon": 27.0033,
+"score": 1000,
+"type": "promontory",
+"url": "https://www.openbible.info/geo/ancient/a6f61d3/trogyllium"
+},
+"Tubal": {
+"lat": 37.2956,
+"lon": 36.2536,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/aaaaead/tubal"
+},
+"Tyre": {
+"lat": 33.2708,
+"lon": 35.1961,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a160272/tyre"
+},
+"Ulai": {
+"lat": 32.41,
+"lon": 48.1478,
+"score": 743,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a7a7549/ulai"
+},
+"Upper Beth-horon": {
+"lat": 31.8858,
+"lon": 35.1142,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ab682e6/upper-beth-horon"
+},
+"Upper Gulloth": {
+"lat": 31.4321,
+"lon": 35.0149,
+"score": 1000,
+"type": "spring",
+"url": "https://www.openbible.info/geo/ancient/a380434/upper-gulloth"
+},
+"Upper Pool": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "pool",
+"url": "https://www.openbible.info/geo/ancient/a532b99/upper-pool"
+},
+"Upu": {
+"lat": 33.5111,
+"lon": 36.3064,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ade3503/upu"
+},
+"Ur 1": {
+"lat": 30.9622,
+"lon": 46.1044,
+"score": 703,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a6cf75c/ur-1"
+},
+"Ur 2": {
+"lat": 30.9622,
+"lon": 46.1044,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/aa01373/ur-2"
+},
+"Ura": {
+"lat": 40.2546,
+"lon": 40.226,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a78592e/ura"
+},
+"Uzza": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "garden",
+"url": "https://www.openbible.info/geo/ancient/adfab55/uzza"
+},
+"Valley of Aijalon": {
+"lat": 31.8675,
+"lon": 34.9594,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a2e6de9/valley-of-aijalon"
+},
+"Valley of Decision": {
+"lat": 31.7803,
+"lon": 35.24,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a49037e/valley-of-decision"
+},
+"Valley of Elah": {
+"lat": 31.6754,
+"lon": 34.998,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/ab183f8/valley-of-elah"
+},
+"Valley of Gerar": {
+"lat": 31.3821,
+"lon": 34.6065,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a816ed9/valley-of-gerar"
+},
+"Valley of Gibeon": {
+"lat": 31.8475,
+"lon": 35.1834,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a8c579d/valley-of-gibeon"
+},
+"Valley of Hebron": {
+"lat": 31.5251,
+"lon": 35.1022,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a375f5a/valley-of-hebron"
+},
+"Valley of Hinnom": {
+"lat": 31.7692,
+"lon": 35.2281,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a37c8e6/valley-of-hinnom"
+},
+"Valley of Jehoshaphat": {
+"lat": 31.7803,
+"lon": 35.24,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a324282/valley-of-jehoshaphat"
+},
+"Valley of Jericho": {
+"lat": 31.8717,
+"lon": 35.4446,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/ac9a77c/valley-of-jericho"
+},
+"Valley of Jezreel": {
+"lat": 32.5964,
+"lon": 35.2419,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/aa516c2/valley-of-jezreel"
+},
+"Valley of Lebanon": {
+"lat": 34.0089,
+"lon": 36.1453,
+"score": 961,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/ac2192b/valley-of-lebanon"
+},
+"Valley of Mizpeh": {
+"lat": 33.4,
+"lon": 35.85,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/ae32196/valley-of-mizpeh"
+},
+"Valley of Rephaim": {
+"lat": 31.7632,
+"lon": 35.2191,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a7559e6/valley-of-rephaim"
+},
+"Valley of Shaveh": {
+"lat": 31.7672,
+"lon": 35.236,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a402ee4/valley-of-shaveh"
+},
+"Valley of Shittim": {
+"lat": 31.6671,
+"lon": 35.4486,
+"score": 702,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a01769f/valley-of-shittim"
+},
+"Valley of Sorek": {
+"lat": 31.7558,
+"lon": 35.05,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/a339971/valley-of-sorek"
+},
+"Valley of Succoth": {
+"lat": 32.1966,
+"lon": 35.6212,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/aa24fbf/valley-of-succoth"
+},
+"Valley of Zered": {
+"lat": 31.027,
+"lon": 35.4853,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/aaa2177/valley-of-zered"
+},
+"Valley of the Arnon": {
+"lat": 31.4658,
+"lon": 35.5733,
+"score": 1000,
+"type": "valley",
+"url": "https://www.openbible.info/geo/ancient/af4c2cd/valley-of-the-arnon"
+},
+"Waheb": {
+"lat": 31.6656,
+"lon": 35.8175,
+"score": 1000,
+"type": "campsite",
+"url": "https://www.openbible.info/geo/ancient/adec54b/waheb"
+},
+"Water Gate": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "gate",
+"url": "https://www.openbible.info/geo/ancient/a0293ff/water-gate"
+},
+"Waters of Jericho": {
+"lat": 31.8705,
+"lon": 35.4448,
+"score": 736,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/a70e38b/waters-of-jericho"
+},
+"Way of Holiness": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "road",
+"url": "https://www.openbible.info/geo/ancient/a207807/way-of-holiness"
+},
+"Way of the Red Sea": {
+"lat": 29.7272,
+"lon": 34.9983,
+"score": 1000,
+"type": "road",
+"url": "https://www.openbible.info/geo/ancient/a55c970/way-of-the-red-sea"
+},
+"Wilderness of Maon": {
+"lat": 31.4094,
+"lon": 35.1338,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ae11a0d/wilderness-of-maon"
+},
+"Wilderness of Sinai": {
+"lat": 28.5397,
+"lon": 33.9733,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/ae50cf1/wilderness-of-sinai"
+},
+"Wilderness of Ziph": {
+"lat": 31.4748,
+"lon": 35.1351,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a50057d/wilderness-of-ziph"
+},
+"Wildgoats\u2019 Rocks": {
+"lat": 31.45,
+"lon": 35.3833,
+"score": 1000,
+"type": "natural area",
+"url": "https://www.openbible.info/geo/ancient/adea7b0/wildgoats-rocks"
+},
+"Yiron": {
+"lat": 33.0833,
+"lon": 35.4167,
+"score": 790,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a78b87e/yiron"
+},
+"Zanoah 1": {
+"lat": 31.7194,
+"lon": 35.0013,
+"score": 730,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a28f432/zanoah-1"
+},
+"Zaphon 2": {
+"lat": 35.9525,
+"lon": 35.9693,
+"score": 1041,
+"type": "mountain",
+"url": "https://www.openbible.info/geo/ancient/a78e845/zaphon-2"
+},
+"Zarephath": {
+"lat": 33.4642,
+"lon": 35.2951,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6fa2d3/zarephath"
+},
+"Zephath": {
+"lat": 31.2123,
+"lon": 34.9583,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6163e0/zephath"
+},
+"Zered": {
+"lat": 31.027,
+"lon": 35.4853,
+"score": 1000,
+"type": "river",
+"url": "https://www.openbible.info/geo/ancient/ab5161f/zered"
+},
+"Zeredah 2": {
+"lat": 32.2677,
+"lon": 35.5772,
+"score": 743,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a6dc035/zeredah-2"
+},
+"Zin 1": {
+"lat": 30.971,
+"lon": 35.325,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a0b5c50/zin-1"
+},
+"Zin 2": {
+"lat": 30.971,
+"lon": 35.325,
+"score": 880,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a190097/zin-2"
+},
+"Zion": {
+"lat": 31.7767,
+"lon": 35.2342,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/af20c46/zion"
+},
+"Ziph 1": {
+"lat": 31.4748,
+"lon": 35.1351,
+"score": 760,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a9b852f/ziph-1"
+},
+"Zoan": {
+"lat": 30.9769,
+"lon": 31.88,
+"score": 1000,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/ac31fee/zoan"
+},
+"Zobah": {
+"lat": 33.9353,
+"lon": 36.1508,
+"score": 1000,
+"type": "region",
+"url": "https://www.openbible.info/geo/ancient/a4aa78a/zobah"
+},
+"Zorah": {
+"lat": 31.774,
+"lon": 34.9853,
+"score": 832,
+"type": "settlement",
+"url": "https://www.openbible.info/geo/ancient/a08174b/zorah"
+}
+}
