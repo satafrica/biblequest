@@ -40,6 +40,39 @@ ASSETS = [
  A("empty_tomb", "The empty tomb", "Mark 16:1-6", "A garden rock-cut tomb with the round stone rolled away, women carrying spices", "Women carrying spices approach a rock-cut tomb whose stone has been rolled away."),
 ]
 
+# 22 Nov 2026: crowd and group scenes regenerated so the people show a range of skin tones,
+# and Jesus is shown with warmer olive-brown skin. Each entry adds to the generation prompt and note.
+MIX = ("the people are of varied Middle Eastern, North African and East African appearance, "
+       "with a clear mix of olive, tan, brown and deep dark-brown skin tones")
+JESUS = "Jesus is shown as a first-century Galilean Jewish man with warm olive-brown skin, dark hair and dark eyes"
+APPEARANCE = " The people's appearance is imagined and deliberately varied."
+DIVERSIFY = {
+    "moses_red_sea": (MIX, " Exodus 12:38 says a 'mixed multitude' went up with Israel."),
+    "solomon_temple": (MIX, ""),
+    "elijah_carmel": (MIX, ""),
+    "esther_king": ("the queen and king have olive skin and their attendants have brown and deep dark-brown skin", " Esther 1:1 describes a kingdom stretching from India to Ethiopia."),
+    "sermon_mount": (JESUS + "; " + MIX, " Luke 6:17 says the crowd included people from the coast of Tyre and Sidon."),
+    "paul_ship": (MIX, " Acts 27 describes 276 people aboard a ship of Alexandria."),
+    "feeding_5000": (JESUS + "; " + MIX, ""),
+    "triumphal_entry": (JESUS + "; " + MIX, ""),
+    "zacchaeus_tree": (JESUS + "; " + MIX, ""),
+    "wedding_cana": (MIX, ""),
+    "last_supper": (JESUS + "; the disciples range from olive and tan to brown and dark-brown skin", ""),
+    "jericho_walls": (MIX, ""),
+}
+
+def diversify(assets):
+    for a in assets:
+        if a["id"] in DIVERSIFY:
+            add, note = DIVERSIFY[a["id"]]
+            body, sep, style = a["prompt"].partition(". " + STYLE[:40])
+            a["prompt"] = body + "; " + add + sep + style
+            a["interpretation_note"] = a["interpretation_note"] + APPEARANCE + note
+    return assets
+
+ASSETS = diversify(ASSETS)
+
+
 ADVENTURES = [
  {"id": "ot-journey", "title": "From Eden to Exile", "testament": "OT", "image_id": "creation",
   "summary": "Walk through the Old Testament: creation, the patriarchs, the exodus, the kingdom and the prophets.",

@@ -1,7 +1,7 @@
 # Illustration batch 2 (22 Nov 2026): 20 more scenes for Picture Bible Quiz and Hidden Object.
 # Same style and notes as batch 1. Each prompt asks for the objects named in the KJV passage
 # to be clearly visible and well separated, so hidden-object tap areas do not overlap.
-from adventures_assets import A, NOTE, STYLE
+from adventures_assets import A, NOTE, STYLE, diversify
 
 CLEAR = (" Every object named here must be clearly visible, distinct and well separated from the others; "
          "wide 16:9 composition with the main figures in the middle ground; no modern objects; no text")
@@ -76,3 +76,5 @@ ASSETS_2 = [
    "A shepherd carries a lost sheep on his shoulders across rocky wilderness hills, rejoicing; in the distance the rest of the flock waits in a fold; a shepherd's staff in his hand; a small village of friends and neighbours on the hillside beyond" + CLEAR,
    "A shepherd carries a lost sheep on his shoulders across the hills while the rest of the flock waits in the distance.", 675, note=PARABLE),
 ]
+
+ASSETS_2 = diversify(ASSETS_2)

@@ -213,3 +213,9 @@ Notes:
 - New `public/images/pentecost.webp` (same layout; olive, tan, brown and deep-brown skin tones; flames and Jerusalem window kept).
 - Alt text, prompt and note updated (Acts 2:5-11 names visitors from many nations). Find-it boxes for the flames (14) and Jerusalem window re-marked and visually checked.
 - Live DB updated (question_assets 'pentecost'; extra.boxes for the pentecost hidden scene). Published as deploy 6b034447c7abccd8e396ad3a; index and both webp files md5-verified on mybiblegem.com; 26 live Playwright tests passed; 18 test guests removed (auth.users back to 12).
+
+## 22 Nov 2026 — 12 more pictures redone with a range of skin tones
+- Redone (same layouts): Red Sea, Sermon on the Mount, Feeding the 5,000, Entry into Jerusalem, Zacchaeus, Solomon's temple, Paul's shipwreck, Elijah on Carmel, Wedding at Cana, Last Supper, Jericho, Esther. Jesus has warmer olive-brown skin where he appears.
+- Prompts and notes updated via DIVERSIFY in content/source/adventures_assets.py (applied to assets_2.py too). Find-it boxes unchanged and visually re-checked on every picture.
+- New docs/ILLUSTRATION_GUIDE.md: people the KJV calls Ethiopian (Numbers 12:1, Jeremiah 38:7, Acts 8:27) must be shown with dark skin. No current picture depicts them.
+- Live DB question_assets updated (12 rows). Published deploy 6b0347936607b27cc690213f; index and all 24 webp files md5-verified on mybiblegem.com; 26 live Playwright tests passed; 18 test guests removed (auth.users back to 12).
