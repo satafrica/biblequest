@@ -28,6 +28,8 @@ export interface PublicQuestion {
 
 export interface SessionStart { session_id: string; questions: PublicQuestion[] }
 
+export interface CluePassage { ref: string; text: string }
+
 export interface AnswerResult {
   correct: boolean
   correct_index?: number
@@ -36,6 +38,8 @@ export interface AnswerResult {
   reference: string
   /** KJV passage for the reference, returned only after the answer is locked in. */
   verse_text?: string | null
+  /** Who Am I?: KJV passage(s) behind each clue, returned only after the answer is locked in. */
+  clue_refs?: CluePassage[][] | null
   translation?: string
   points: number
   gems_awarded: number

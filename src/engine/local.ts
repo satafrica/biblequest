@@ -217,7 +217,7 @@ export class LocalBackend implements Backend {
     const correct = choice === q.correct_index
     const points = q.game_mode === 'whoami' ? Math.max(20, 100 - 20 * (Math.max(1, Math.min(cluesUsed || 1, 5)) - 1)) : 100
     const r = this.record(sessionId, questionId, correct, points)
-    return { ...r, correct_index: q.correct_index, explanation: q.explanation, reference: q.reference_label, verse_text: q.verse_text ?? null, translation: q.translation_id }
+    return { ...r, correct_index: q.correct_index, explanation: q.explanation, reference: q.reference_label, verse_text: q.verse_text ?? null, clue_refs: q.clue_refs ?? null, translation: q.translation_id }
   }
 
   async submitSequence(sessionId: string, questionId: string, order: string[]): Promise<AnswerResult> {

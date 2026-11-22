@@ -23,6 +23,7 @@ PICTURE = PICTURE + X1.PICTURE_2; WHOAMI = WHOAMI + X1.WHOAMI_2
 COMPLETE = COMPLETE + X1.COMPLETE_2; WHICH_BOOK = WHICH_BOOK + X1.WHICH_BOOK_2
 MATCH_REF = MATCH_REF + X1.MATCH_REF_2; SEQUENCES = SEQUENCES + X1.SEQUENCES_2
 import expansion_2 as X2                                 # noqa: E402
+from clue_refs_2 import CLUE_REFS                         # noqa: E402
 WHOAMI = WHOAMI + X2.WHOAMI_3
 COMPLETE = COMPLETE + X2.COMPLETE_3; WHICH_BOOK = WHICH_BOOK + X2.WHICH_BOOK_3
 MATCH_REF = MATCH_REF + X2.MATCH_REF_3; SEQUENCES = SEQUENCES + X2.SEQUENCES_3
@@ -193,6 +194,20 @@ for (sid, title, diff, events) in SEQUENCES:
     q["events_refs"] = [r for (_, r, _) in events]
     questions.append(q)
 
+# --- Who Am I?: KJV passage behind each clue (shown after answering) --------
+_who_ids = {q["id"] for q in questions if q["game_mode"] == "whoami"}
+for name in CLUE_REFS:
+    if f"who-{name}" not in _who_ids: errors.append(f"clue_refs: no question who-{name}")
+for q in questions:
+    q["clue_refs"] = None
+    name = q["id"][4:] if q["game_mode"] == "whoami" else None
+    if name in CLUE_REFS:
+        refs = CLUE_REFS[name]
+        if len(refs) != len(q["clues"]): errors.append(f"{q['id']}: {len(refs)} clue reference lists for {len(q['clues'])} clues"); continue
+        try: q["clue_refs"] = [[{"ref": r, "text": verse_text(r)} for r in group] for group in refs]
+        except (ValueError, IndexError, KeyError) as e: errors.append(f"{q['id']}: clue reference {e}")
+        if any(not g for g in refs): errors.append(f"{q['id']}: a clue has no reference")
+
 for q in questions:
     for batch in REVIEWED_BATCHES:
         if q["id"] in batch["ids"]:
@@ -279,10 +294,10 @@ for a in ASSETS:
                   lit("AI-generated for MyBibleGem (GPT Image); confirm commercial-use terms of the generator before release"), "true",
                   lit(a["interpretation_note"]), lit(a["alt"]), lit(a["path"]), "1200", lit(a.get("height", 900)), "'review'"]) + ") on conflict (id) do nothing;")
 for q in questions:
-    out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification, verse_text) values ("
+    out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification, verse_text, clue_refs) values ("
       + ",".join([lit(q["id"]), lit(q["game_mode"]), str(q["book_id"]), str(q["chapter"]), str(q["verse_start"]), str(q["verse_end"]),
                   lit(q["reference_label"]), str(q["difficulty"]), lit(q["prompt"]), lit(q["clues"]), lit(q["options"]), str(q["correct_index"]),
-                  lit(q["explanation"]), lit(q["hint"]), lit(q["image_id"]), lit(q.get("image_alt")), "'KJV'", arr(q["tags"]), "'review'", lit(q["verification"]), lit(q["verse_text"])])
+                  lit(q["explanation"]), lit(q["hint"]), lit(q["image_id"]), lit(q.get("image_alt")), "'KJV'", arr(q["tags"]), "'review'", lit(q["verification"]), lit(q["verse_text"]), lit(q["clue_refs"])])
       + ") on conflict (id) do nothing;")
 for i, adv in enumerate(adventures):
     out.append(f"insert into public.adventures (id, title, summary, testament, image_id, sort_order, status) values ({lit(adv['id'])},{lit(adv['title'])},{lit(adv['summary'])},{lit(adv['testament'])},{lit(adv['image_id'])},{i},'review') on conflict (id) do nothing;")

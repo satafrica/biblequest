@@ -175,6 +175,19 @@ describe('gameplay upgrades (local preview)', () => {
     expect(r.verse_text && r.verse_text.length).toBeGreaterThan(10)
     expect(r.verse_text).not.toMatch(/ [,.;:]/)
   })
+  it('returns the Scripture behind each Who Am I? clue only after answering', async () => {
+    const s = await b.startSession('whoami:4:1')
+    const pub = s.questions.find((x) => byId.get(x.id)!.clue_refs)!
+    expect(pub).toBeTruthy()
+    expect('clue_refs' in pub).toBe(false)
+    const q = byId.get(pub.id)!
+    const r = await b.submitAnswer(s.session_id, q.id, (q.correct_index + 1) % q.options.length, 1)
+    expect(r.clue_refs).toHaveLength(q.clues!.length)
+    for (const group of r.clue_refs!) {
+      expect(group.length).toBeGreaterThan(0)
+      for (const p of group) { expect(p.ref).toMatch(/^[1-3]?\s?[A-Z][a-z]+( of [A-Z][a-z]+)? \d+:\d+(-\d+)?$/); expect(p.text.length).toBeGreaterThan(10) }
+    }
+  })
   it('review mode replays missed questions until answered correctly', async () => {
     await expect(b.startSession('review')).rejects.toThrow(/nothing_to_review/)
     const s = await b.startSession('picture:1:1')

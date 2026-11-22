@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { ArrowDown, ArrowUp, BookOpen, Check, Flag, Hourglass, Lamp, Scissors, Share2, Square, Timer, Volume2, X } from 'lucide-react'
 import { useApp } from '../state/AppContext'
-import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CompleteResult, type PublicQuestion, type SessionStart } from '../engine'
+import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CluePassage, type CompleteResult, type PublicQuestion, type SessionStart } from '../engine'
 import { readJSON, removeKey, writeJSON } from '../lib/storage'
 import { countsFor, describeLevelKey, levelCount, levelKey as makeLevelKey, parseLevelKey } from '../engine/levels'
 import { Gems, GemIcon, Illustration, Modal } from '../components/ui'
@@ -329,6 +329,9 @@ export default function GameRunner() {
                 <ReadAloud text={feedbackSpeech} label="Read aloud" />
                 <button className="btn-primary ml-auto" onClick={next} disabled={busy}>{idx + 1 >= total ? 'See results' : 'Next question'}</button>
               </div>
+              {q.game_mode === 'whoami' && q.clues && last.clue_refs && last.clue_refs.length > 0 && (
+                <CluePassages clues={q.clues} refs={last.clue_refs} />
+              )}
               {backend.kind === 'cloud' && (
                 <button className="mt-3 inline-flex items-center gap-1 text-sm text-muted hover:text-ink" onClick={() => setReportOpen(true)}><Flag className="h-4 w-4" aria-hidden="true" /> Report a problem with this question</button>
               )}
@@ -491,5 +494,49 @@ function ReportDialog({ open, onClose, questionId }: { open: boolean; onClose: (
         <div className="mt-4 flex justify-end gap-2"><button type="button" className="btn-ghost" onClick={onClose}>Cancel</button><button className="btn-primary" disabled={sending || reason.trim().length < 3}>Send report</button></div>
       </form>
     </Modal>
+  )
+}
+
+const CLUE_PASSAGES_KEY = 'bq.cluePassagesOpen.v1'
+
+/** Who Am I? verse reading: the KJV passage behind each clue, shown after answering. */
+function CluePassages({ clues, refs }: { clues: string[]; refs: CluePassage[][] }) {
+  const [open, setOpen] = useState(() => readJSON<boolean>(CLUE_PASSAGES_KEY, true))
+  const seen = new Map<string, number>()
+  const items = clues.map((clue, i) => ({
+    clue,
+    passages: (refs[i] ?? []).map((p) => {
+      const first = seen.get(p.ref)
+      if (first === undefined) seen.set(p.ref, i + 1)
+      return { ...p, sameAs: first }
+    }),
+  }))
+  const speech = items.map((it, i) => [`Clue ${i + 1}. ${it.clue}.`,
+    ...it.passages.map((p) => p.sameAs ? `${p.ref}, as in clue ${p.sameAs}.` : `${p.ref}. ${p.text.replace(/\u2026/g, '')}`)].join(' ')).join(' ')
+  return (
+    <details className="mt-4 rounded-xl border border-line bg-surface/60" open={open} data-testid="clue-passages"
+      onToggle={(e) => { const o = (e.currentTarget as HTMLDetailsElement).open; setOpen(o); writeJSON(CLUE_PASSAGES_KEY, o) }}>
+      <summary className="flex cursor-pointer items-center gap-2 px-4 py-3 font-semibold">
+        <BookOpen className="h-4 w-4 text-accent" aria-hidden="true" /> Read the Scripture behind each clue
+      </summary>
+      <div className="px-4 pb-4">
+        <ol className="space-y-4" aria-label="Scripture for each clue">
+          {items.map((it, i) => (
+            <li key={i}>
+              <p className="text-sm"><span className="font-display font-semibold text-accent">Clue {i + 1}.</span> {it.clue}</p>
+              {it.passages.map((p, j) => p.sameAs ? (
+                <p key={j} className="mt-1 text-sm text-muted">{p.ref} <span>· same passage as clue {p.sameAs}</span></p>
+              ) : (
+                <blockquote key={j} className="mt-2 rounded-lg border-l-4 border-accent/70 bg-accent/5 px-3 py-2 font-display leading-relaxed">
+                  <span className="mb-0.5 block font-sans text-xs font-semibold uppercase tracking-wide text-muted">{p.ref} · KJV</span>
+                  {p.text}
+                </blockquote>
+              ))}
+            </li>
+          ))}
+        </ol>
+        <div className="mt-3"><ReadAloud text={speech} label="Read these passages aloud" /></div>
+      </div>
+    </details>
   )
 }
