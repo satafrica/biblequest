@@ -28,6 +28,7 @@ export default defineConfig({
       workbox: {
         // App shell and small illustrations are available offline; full-size images are cached as viewed.
         globPatterns: ['**/*.{js,css,html,svg,png}', 'images/*-sm.webp'],
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
         navigateFallback: 'index.html',
         // A newly published version takes over at once (the page then reloads itself once, see main.tsx).
         skipWaiting: true,

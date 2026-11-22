@@ -20,3 +20,21 @@ describe('map projection', () => {
     expect(project(v as never, w, n)).toEqual([0, 0])
   })
 })
+
+describe('every hidden-object scene in the bundled content', () => {
+  type Q = { id: string; game_mode: string; correct_index: number; extra?: { boxes?: { area: number; box: [number, number, number, number] }[] } }
+  it('lets each correct object be found by tapping somewhere on it', async () => {
+    const qs = (await import('../../content/generated/questions.json')).default as unknown as Q[]
+    const hidden = qs.filter((q) => q.game_mode === 'hidden')
+    expect(hidden.length).toBeGreaterThan(100)
+    const unreachable: string[] = []
+    for (const q of hidden) {
+      const boxes = q.extra?.boxes ?? []
+      let hits = 0
+      for (let y = 0.5; y < 100; y += 1) for (let x = 0.5; x < 100; x += 1) if (hitArea(boxes, x, y, 0) === q.correct_index) hits++
+      // At least about 2% x 2% of the picture must belong to the answer, so a fingertip can reach it.
+      if (hits < 4) unreachable.push(`${q.id} (${hits})`)
+    }
+    expect(unreachable).toEqual([])
+  })
+})

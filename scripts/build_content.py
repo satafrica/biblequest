@@ -18,6 +18,9 @@ sys.path.insert(0, os.path.join(ROOT, "content", "source"))
 from picture_whoami import PICTURE, WHOAMI            # noqa: E402
 from scripture_sequence import COMPLETE, WHICH_BOOK, MATCH_REF, SEQUENCES  # noqa: E402
 from adventures_assets import ASSETS, ADVENTURES, STORE_ITEMS, ACHIEVEMENTS  # noqa: E402
+from assets_2 import ASSETS_2                             # noqa: E402
+import illustrations_2 as I2                              # noqa: E402
+ASSETS = ASSETS + ASSETS_2
 import expansion_1 as X1                                 # noqa: E402
 PICTURE = PICTURE + X1.PICTURE_2; WHOAMI = WHOAMI + X1.WHOAMI_2
 COMPLETE = COMPLETE + X1.COMPLETE_2; WHICH_BOOK = WHICH_BOOK + X1.WHICH_BOOK_2
@@ -28,6 +31,7 @@ from clue_refs_1 import CLUE_REFS as CLUE_REFS_1           # noqa: E402
 assert not set(CLUE_REFS) & set(CLUE_REFS_1)
 CLUE_REFS = {**CLUE_REFS_1, **CLUE_REFS}
 WHOAMI = WHOAMI + X2.WHOAMI_3
+PICTURE = PICTURE + I2.PICTURE_3
 COMPLETE = COMPLETE + X2.COMPLETE_3; WHICH_BOOK = WHICH_BOOK + X2.WHICH_BOOK_3
 MATCH_REF = MATCH_REF + X2.MATCH_REF_3; SEQUENCES = SEQUENCES + X2.SEQUENCES_3
 
@@ -101,7 +105,7 @@ def base(qid, mode, ref, diff, prompt, options, correct, expl, hint=None, image=
 REVIEWED = json.load(open(os.path.join(ROOT, "content", "source", "reviewed.json"), encoding="utf-8"))
 REVIEWED_IDS = set(REVIEWED["ids"])
 REVIEWED_BATCHES = []
-for _name in ("reviewed.json", "reviewed_2.json", "reviewed_3.json"):
+for _name in ("reviewed.json", "reviewed_2.json", "reviewed_3.json", "reviewed_4.json"):
     _path = os.path.join(ROOT, "content", "source", _name)
     if os.path.exists(_path):
         _b = json.load(open(_path, encoding="utf-8")); _b["ids"] = set(_b["ids"]); REVIEWED_BATCHES.append(_b)
@@ -245,6 +249,8 @@ for it in NEW:
     questions.append(q); NEW_IDS.add(qid)
 
 from hidden_objects import HIDDEN              # noqa: E402
+assert not set(HIDDEN) & set(I2.HIDDEN_2)
+HIDDEN = {**HIDDEN, **I2.HIDDEN_2}
 _asset_ids = {a["id"] for a in ASSETS}
 for scene, objs in HIDDEN.items():
     if scene not in _asset_ids: errors.append(f"hidden: no illustration {scene}"); continue

@@ -178,5 +178,185 @@
   "path": "/images/empty_tomb.webp",
   "height": 900,
   "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "burning_bush",
+  "description": "Moses at the burning bush",
+  "reference": "Exodus 3:1-5",
+  "alt": "A shepherd kneels barefoot before a bush that burns without burning up, his sandals and rod beside him and sheep on the slope.",
+  "path": "/images/burning_bush.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "jacob_ladder",
+  "description": "Jacob's dream of the ladder",
+  "reference": "Genesis 28:10-13",
+  "alt": "A traveller sleeps with his head on a stone while angels go up and down a shining ladder into the night sky.",
+  "path": "/images/jacob_ladder.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "jericho_walls",
+  "description": "The walls of Jericho",
+  "reference": "Joshua 6:4-20",
+  "alt": "Priests blow rams' horn trumpets and carry the gilded ark around a walled city, with a scarlet cord hanging from a window.",
+  "path": "/images/jericho_walls.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. The ark's appearance follows Exodus 25:10-22; the city and clothing are imagined."
+ },
+ {
+  "id": "ruth_boaz",
+  "description": "Ruth gleaning in the field of Boaz",
+  "reference": "Ruth 2:2-8",
+  "alt": "A young woman gleans barley behind reapers in a golden field while the landowner speaks with her.",
+  "path": "/images/ruth_boaz.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "elijah_ravens",
+  "description": "Elijah fed by ravens",
+  "reference": "1 Kings 17:3-6",
+  "alt": "Two ravens bring bread and meat to a prophet sitting by a brook in a rocky ravine.",
+  "path": "/images/elijah_ravens.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "nehemiah_walls",
+  "description": "Rebuilding the walls of Jerusalem",
+  "reference": "Nehemiah 4:15-18",
+  "alt": "Builders rebuild a stone wall and gate; one lays stones while holding a sword, a man on the wall blows a trumpet, and a leader holds a scroll.",
+  "path": "/images/nehemiah_walls.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. The scroll stands for the king's letters (Nehemiah 2:7-9); the leader's appearance is imagined. Scripture says the builders had their swords girded by their sides (Nehemiah 4:18); showing one in hand is artistic."
+ },
+ {
+  "id": "jesus_baptism",
+  "description": "The baptism of Jesus",
+  "reference": "Matthew 3:13-17",
+  "alt": "In the Jordan river a man in camel's hair stands beside Jesus as a dove descends from an opening sky.",
+  "path": "/images/jesus_baptism.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "wedding_cana",
+  "description": "The wedding at Cana",
+  "reference": "John 2:1-10",
+  "alt": "A servant draws wine from one of six stone waterpots while the ruler of the feast tastes a cup at a village wedding.",
+  "path": "/images/wedding_cana.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "feeding_5000",
+  "description": "Feeding the five thousand",
+  "reference": "John 6:5-13",
+  "alt": "A boy offers five barley loaves and two small fishes to Jesus as a great crowd sits on the grass, with baskets of leftovers nearby.",
+  "path": "/images/feeding_5000.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "walking_water",
+  "description": "Jesus walking on the water",
+  "reference": "Matthew 14:24-31",
+  "alt": "On a stormy lake at night Jesus walks on the water and catches Peter's hand as he sinks, a boat behind them.",
+  "path": "/images/walking_water.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "zacchaeus_tree",
+  "description": "Zacchaeus in the sycomore tree",
+  "reference": "Luke 19:1-6",
+  "alt": "A short man in rich clothes sits in a sycomore tree above a crowd while Jesus looks up and calls him.",
+  "path": "/images/zacchaeus_tree.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "triumphal_entry",
+  "description": "The entry into Jerusalem",
+  "reference": "Matthew 21:6-9",
+  "alt": "Jesus rides a young donkey toward Jerusalem as people spread garments on the road and wave palm branches.",
+  "path": "/images/triumphal_entry.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. Scripture mentions the colt (Mark 11:7), garments and branches spread in the way (Matthew 21:8) and branches of palm trees (John 12:13); faces, clothing and composition are imagined."
+ },
+ {
+  "id": "last_supper",
+  "description": "The Last Supper",
+  "reference": "Luke 22:14-20",
+  "alt": "Jesus breaks bread at a low table with his apostles in an upper room, a cup of wine before him.",
+  "path": "/images/last_supper.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. The seating and room are imagined; Luke 22:12 calls it a large upper room furnished."
+ },
+ {
+  "id": "lazarus_tomb",
+  "description": "The raising of Lazarus",
+  "reference": "John 11:38-44",
+  "alt": "A man bound in white graveclothes walks out of a cave tomb as Jesus stands before it and mourners watch.",
+  "path": "/images/lazarus_tomb.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "damascus_road",
+  "description": "Saul on the road to Damascus",
+  "reference": "Acts 9:3-8",
+  "alt": "A man has fallen on a road under a blinding light from heaven while two companions stand speechless and a pack donkey waits, with the walled city of Damascus in the distance.",
+  "path": "/images/damascus_road.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. Scripture mentions men journeying with Saul who stood speechless (Acts 9:7) but not how many there were or whether they had animals; their number and the donkey are imagined."
+ },
+ {
+  "id": "miraculous_catch",
+  "description": "The miraculous catch of fish",
+  "reference": "Luke 5:4-7",
+  "alt": "Fishermen in two boats haul a net so full of fish that it is breaking, while Jesus sits in one boat.",
+  "path": "/images/miraculous_catch.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
+ },
+ {
+  "id": "wise_men",
+  "description": "The wise men bring gifts",
+  "reference": "Matthew 2:9-11",
+  "alt": "Wise men kneel in a house before a mother and young child, offering gold, frankincense and myrrh, with a star outside.",
+  "path": "/images/wise_men.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. Matthew does not say how many wise men came; three is traditional, from the three gifts."
+ },
+ {
+  "id": "sinai_tablets",
+  "description": "Moses with the tablets at Sinai",
+  "reference": "Exodus 19:18; 32:15",
+  "alt": "Moses comes down a smoking mountain carrying two stone tablets, with a camp of tents in the valley below.",
+  "path": "/images/sinai_tablets.webp",
+  "height": 675,
+  "interpretation_note": "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture. The writing on the tablets is shown as unreadable marks."
+ },
+ {
+  "id": "parable_sower",
+  "description": "The parable of the sower",
+  "reference": "Matthew 13:3-8",
+  "alt": "A farmer scatters seed over a field with a path where birds eat seed, stony ground, thorns and good soil.",
+  "path": "/images/parable_sower.webp",
+  "height": 675,
+  "interpretation_note": "Illustration of a parable (a story Jesus told), not a historical event."
+ },
+ {
+  "id": "lost_sheep",
+  "description": "The parable of the lost sheep",
+  "reference": "Luke 15:4-6",
+  "alt": "A shepherd carries a lost sheep on his shoulders across the hills while the rest of the flock waits in the distance.",
+  "path": "/images/lost_sheep.webp",
+  "height": 675,
+  "interpretation_note": "Illustration of a parable (a story Jesus told), not a historical event."
  }
 ]

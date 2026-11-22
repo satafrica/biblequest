@@ -18,3 +18,4 @@ tests/live/step*.json
 tests/live/gameplay.json
 __pycache__/
 content/geo/cache
+art_batch2/
