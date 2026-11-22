@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { createBackend, type AuthUser, type Backend, type Catalog, type EarnedAchievement, type InventoryItem, type Profile, type Progress, type Wallet } from '../engine'
 import { applyPrefs, loadPrefs, savePrefs, type Prefs } from './prefs'
+import { setPreferredVoice } from '../lib/speech'
 
 export interface Toast { id: number; title: string; body?: string; tone?: 'gem' | 'info' | 'error' }
 
@@ -80,6 +81,7 @@ export function AppProvider({ children, backendOverride }: { children: ReactNode
   }, [])
 
   const equippedTheme = inventory.find((i) => i.equipped && PALETTES[i.item_id])?.item_id
+  useEffect(() => { setPreferredVoice(prefs.narratorVoice ?? '') }, [prefs.narratorVoice])
   useEffect(() => {
     applyPrefs(prefs, equippedTheme ? PALETTES[equippedTheme] : null)
     const mq = window.matchMedia?.('(prefers-color-scheme: dark)')

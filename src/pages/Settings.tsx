@@ -1,7 +1,8 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Monitor, Moon, Sun, Volume1, Volume2, VolumeX } from 'lucide-react'
 import { hapticsSupported, vibrate } from '../lib/haptics'
-import { speak, speechSupported } from '../lib/speech'
+import { englishVoices, onVoicesChanged, setPreferredVoice, speak, speechSupported } from '../lib/speech'
 import { playSound, unlockAudio } from '../lib/sounds'
 import { soundVolume, speechRate } from '../state/prefs'
 import { useApp } from '../state/AppContext'
@@ -22,6 +23,32 @@ function Segmented<T extends string>({ label, value, options, onChange }: { labe
         ))}
       </div>
     </fieldset>
+  )
+}
+
+const SAMPLE = 'In the beginning God created the heaven and the earth. Genesis 1:1.'
+
+/** Choice of the device's English voices, most natural first. Voices differ on every device. */
+function NarratorVoice({ value, onChange, onTest }: { value: string; onChange: (v: string) => void; onTest: () => void }) {
+  const [voices, setVoices] = useState(() => englishVoices())
+  useEffect(() => { setVoices(englishVoices()); return onVoicesChanged(() => setVoices(englishVoices())) }, [])
+  const known = !value || voices.some((v) => v.voiceURI === value)
+  return (
+    <div className="card p-5">
+      <label htmlFor="nv" className="font-semibold">Narrator voice</label>
+      <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center">
+        <select id="nv" className="w-full min-w-0 max-w-full rounded-xl border border-line bg-raised px-3 py-2 sm:flex-1" value={known ? value : ''} onChange={(e) => onChange(e.target.value)}>
+          <option value="">Automatic (most natural)</option>
+          {voices.map((v) => <option key={v.voiceURI} value={v.voiceURI}>{v.name} ({v.lang}){v.localService ? '' : ' \u00b7 needs internet'}</option>)}
+        </select>
+        <button type="button" className="btn-ghost btn-sm self-start sm:self-auto" onClick={onTest}><Volume2 className="h-4 w-4" aria-hidden="true" />Test voice</button>
+      </div>
+      {voices.length > 0 && <p className="mt-2 text-sm" data-testid="narrator-now">Now using: <strong>{(known && value ? voices.find((v) => v.voiceURI === value) : voices[0])?.name}</strong></p>}
+      <p className="mt-2 text-sm text-muted">
+        {voices.length === 0 ? 'No English voices have loaded yet. ' : `${voices.length} English voice${voices.length === 1 ? '' : 's'} on this device. `}
+        Voices come from your device, so they sound different on each one. For a more natural voice: on iPhone or iPad, go to Settings, Accessibility, Spoken Content, Voices, English, and download an Enhanced or Premium voice; on Android, choose Speech Services by Google in your text-to-speech settings; on a computer, voices marked Natural or Online (for example in Microsoft Edge) sound most human.
+      </p>
+    </div>
   )
 }
 
@@ -62,7 +89,8 @@ export default function Settings() {
           </div>
           {speechSupported() && (
             <>
-              <Segmented label="Reading speed" value={prefs.speechRate} onChange={(v) => { update({ speechRate: v }); speak('In the beginning God created the heaven and the earth.', { rate: speechRate({ ...prefs, speechRate: v }) }) }}
+              <NarratorVoice value={prefs.narratorVoice ?? ''} onChange={(v) => { update({ narratorVoice: v }); setPreferredVoice(v); speak(SAMPLE, { rate: speechRate(prefs) }) }} onTest={() => speak(SAMPLE, { rate: speechRate(prefs) })} />
+              <Segmented label="Reading speed" value={prefs.speechRate} onChange={(v) => { update({ speechRate: v }); speak(SAMPLE, { rate: speechRate({ ...prefs, speechRate: v }) }) }}
                 options={[{ v: 'slow', label: 'Slower' }, { v: 'normal', label: 'Normal' }, { v: 'fast', label: 'Faster' }]} />
             </>
           )}

@@ -12,10 +12,12 @@ export interface Prefs {
   /** Read each question aloud automatically (a Read aloud button is always available). */
   readAloudAuto: boolean
   speechRate: 'slow' | 'normal' | 'fast'
+  /** voiceURI of the chosen narrator voice on this device; '' = automatic (most natural available). */
+  narratorVoice: string
   /** Which part of the Bible level games and the Arena draw from. */
   testament: 'all' | 'ot' | 'nt'
 }
-export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal', haptics: true, readAloudAuto: false, speechRate: 'normal', testament: 'all' }
+export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal', haptics: true, readAloudAuto: false, speechRate: 'normal', narratorVoice: '', testament: 'all' }
 const KEY = 'bq.prefs.v1'
 
 export const loadPrefs = (): Prefs => ({ ...DEFAULT_PREFS, ...readJSON<Partial<Prefs>>(KEY, {}) })
