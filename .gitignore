@@ -16,3 +16,4 @@ dist-online
 tests/live/state.json
 tests/live/step*.json
 tests/live/gameplay.json
+__pycache__/

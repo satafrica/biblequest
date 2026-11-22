@@ -4,14 +4,16 @@ STYLE = ("Cinematic, painterly realism in the tradition of classical biblical oi
          "palette of deep navy, antique gold, ivory, emerald and subtle amethyst; dignified adult tone; no text or logos.")
 NOTE = "Artistic interpretation. Faces, clothing, colours and composition are imagined; only the event itself is described in Scripture."
 
-def A(id, desc, ref, prompt, alt, h=900, note=NOTE):
-    return {"id": id, "description": desc, "reference": ref, "prompt": prompt + ". " + STYLE, "alt": alt,
+NATURE_STYLE = STYLE.replace("ancient Near Eastern setting, historically plausible clothing and architecture; ", "untouched natural world with no architecture; ")
+
+def A(id, desc, ref, prompt, alt, h=900, note=NOTE, style=STYLE):
+    return {"id": id, "description": desc, "reference": ref, "prompt": prompt + ". " + style, "alt": alt,
             "path": f"/images/{id}.webp", "height": h, "interpretation_note": note}
 
 ASSETS = [
  A("hero_jerusalem", "Ancient Jerusalem at sunrise from the Mount of Olives", "Psalm 125:2 (setting)", "Wide panoramic view of ancient Jerusalem at sunrise seen from the Mount of Olives, limestone walls and the Second Temple glowing gold, olive trees, a lone traveler with a staff", "Ancient Jerusalem glowing gold at sunrise, seen from an olive grove with a traveller on the path.", 675,
    "Artistic reconstruction of Second Temple-era Jerusalem; architecture is approximate, not an archaeological model."),
- A("creation", "Light breaking over the primordial waters", "Genesis 1:1-5", "The creation of the world: light breaking across dark primordial waters", "Rays of light breaking over dark waters as land and plants emerge."),
+ A("creation", "Light breaking over the primordial waters", "Genesis 1:1-5", "The creation of the world: light breaking across dark primordial waters as dry land, plants, sun, moon and stars appear; the world is newly made, with no buildings, ruins, people or human-made objects anywhere", "Rays of light breaking over dark waters as land and plants emerge.", style=NATURE_STYLE),
  A("noah_ark", "The ark after the flood with a rainbow", "Genesis 8-9", "A massive wooden ark resting under a rainbow, animals leaving in pairs, an elderly man giving thanks, a dove", "A large wooden ark on a hillside under a rainbow as animals walk out in pairs.",
    note=NOTE + " The ark's shape is imagined; Genesis 6:15 gives only its dimensions."),
  A("abraham_stars", "Abram looking at the stars", "Genesis 15:5", "An elderly nomadic patriarch outside his tent at night gazing at countless stars", "An old man outside a desert tent gazing up at a sky full of stars."),

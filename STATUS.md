@@ -1,6 +1,6 @@
 # Development status report
 
-Date: 16 November 2026 · Version 1.0.0-preview.3 (updated 17 November 2026)
+Date: 16 November 2026 · Version 1.0.0-preview.3 (updated 21 November 2026)
 
 Status labels:
 
@@ -101,6 +101,8 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Owner reported the pictures did not show. Cause: only the 92 picture questions had been published; their 19 illustrations (question_assets) were still in review, and the server only sends an image path for published illustrations. My earlier live gameplay test checked answers and gems but not that images loaded, so it missed this. Fixed by temporarily publishing the 19 illustrations those questions use (hero_jerusalem stays in review). Verified on the hosted draft (Pixel 7 emulation): the image on the first three questions loads (natural width > 0) and appears on screen. Revert both together: questions back to review and these 19 illustrations back to review.
 - 17 Nov 2026: at the owner's request ("I want all of them"), all 324 questions were published on the live project (232 more: 153 Scripture Quiz, 52 Who Am I?, 27 Sequence), plus the 2 Journeys and 12 chapters built from them. These have NOT had a human reference review; the owner chose to publish without it. Only the hero_jerusalem illustration remains in review. Live test on the hosted draft (Pixel 7 emulation) played to the results screen in Scripture Quiz (beginner, intermediate NT, advanced), Who Am I? (whole Bible and OT), Sequence (beginner and OT), today's Daily Challenge and Journey chapter ot-1, with server gems rising and no page errors. Not tested: Challenge Arena (needs a store unlock).
 - 21 Nov 2026: at the owner's request, deploy 6afbc0e6 was published to production: https://biblequest-game.netlify.app (HTTP 200). Supabase site_url changed to that address and it was added to the redirect allow list. Live test on production (Pixel 7 emulation): Picture Bible Quiz Level 1 played to results, image loaded, 8 answers, server wallet 80 gems, no page errors; test guest deleted by id. Two other guest players had already played on production (120 and 130 gems) and were left untouched.
+- 21 Nov 2026: accuracy check of the 232 non-picture questions (exact KJV text check for Scripture Quiz; two-stage AI check for Who Am I? and Sequence). 0 reference or answer errors; 19 wording fixes (13 Who Am I? hints now name the Bible section instead of the book that is an answer option, 4 Sequence hints now give the first verse and use a single verse range, 1 spacing fix). The fixes were applied on the live project and all 232 were marked human_review "approved" (reviewed_at 2026-11-21), verified by query. The 92 picture questions are still human_review "pending". Report: tests/review/REPORT.md.
+- 21 Nov 2026: the owner saw a building in the creation picture. Replaced it with a new image (light over the waters, land, plants, sun, moon and stars; no buildings or people) and changed its prompt so it no longer asks for architecture; live question_assets.generation_prompt updated. 72 unit tests and 76 browser tests passed. Draft 6b02626b serves the new image (byte match checked). Production still shows the old picture until this draft is published.
 - Cleanup rule going forward: never delete accounts while the owner may be testing; delete only after the owner says they are done.
 
 ## Built, not yet tested against live Supabase
@@ -125,6 +127,5 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 
 ## Blocked: needs the project owner
 
-- **Human review of all content.** Every question, illustration and chapter is seeded as `review`, so the online site shows no questions until an admin approves and publishes them.
-- **Netlify production deploy.** Needs your go-ahead and the two environment variables.
+- **Human review of the 92 picture questions and 20 illustrations.** All 324 questions are published; the 232 non-picture questions passed the 21 Nov accuracy check.
 - **Licensing decisions:** the image generator's commercial terms, and KJV distribution in the UK (Crown patent).

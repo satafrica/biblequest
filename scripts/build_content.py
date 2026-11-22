@@ -77,6 +77,22 @@ def base(qid, mode, ref, diff, prompt, options, correct, expl, hint=None, image=
             "verification": {"reference_exists": True, "keywords_found": True, "checked_against": "KJV (thiagobodruk/bible en_kjv.json)",
                               "checked_at": datetime.date.today().isoformat(), "human_review": "pending"}}
 
+REVIEWED = json.load(open(os.path.join(ROOT, "content", "source", "reviewed.json"), encoding="utf-8"))
+REVIEWED_IDS = set(REVIEWED["ids"])
+
+def section_hint(book):
+    n = BOOK_IDX[book] + 1
+    if n <= 5: return "Look in the books of Moses."
+    if n <= 17: return "Look in the books of history."
+    if n <= 22: return "Look in the books of poetry and wisdom."
+    if n <= 27: return "Look in the Major Prophets."
+    if n <= 39: return "Look in the Minor Prophets."
+    if n <= 43: return "Look in the Gospels."
+    if n == 44: return "Look in Acts."
+    if n <= 57: return "Look in Paul's letters."
+    if n <= 65: return "Look in the New Testament letters."
+    return "Look in Revelation."
+
 questions = []
 # --- Picture quiz -----------------------------------------------------------
 counts = {}
@@ -96,7 +112,10 @@ for (name, diff, clues, opts, ref, kws, expl) in WHOAMI:
     if not check_keywords(qid, ref, kws): continue
     if len(clues) != 4: errors.append(f"{qid}: needs 4 clues")
     o, c = shuffle(qid, opts)
-    questions.append(base(qid, "whoami", ref, diff, "Who am I?", o, c, expl, f"Look in {parse_ref(ref)[0]}.", None,
+    book = parse_ref(ref)[0]
+    # A hint naming a book that shares a name with an option would reveal (or misdirect to) a person.
+    hint = section_hint(book) if any(book == x or book.endswith(" " + x) for x in opts) else f"Look in {book}."
+    questions.append(base(qid, "whoami", ref, diff, "Who am I?", o, c, expl, hint, None,
                           tags=[name, parse_ref(ref)[0]], clues=clues))
 
 # --- Scripture: complete the verse -----------------------------------------
@@ -150,14 +169,20 @@ for (sid, title, diff, events) in SEQUENCES:
     if not ok: continue
     first = events[0][1]
     label = f"{events[0][1].split(':')[0]} \u2013 {events[-1][1].split(':')[0]}"
+    one_chapter = len({r.split(':')[0] for (_, r, _) in events}) == 1
     expl = " \u2192 ".join(f"{t} ({r})" for (t, r, _) in events)
     q = base(qid, "sequence", first, diff, f"Put these events in order: {title}", [t for (t, _, _) in events], 0,
-             expl, f"The first event is in {events[0][1].split(':')[0]}.", tags=[sid, parse_ref(first)[0]])
+             expl, f"The first event is in {first if one_chapter else first.split(':')[0]}.", tags=[sid, parse_ref(first)[0]])
+    if one_chapter:
+        b0, c0, v0, _ = parse_ref(first); _, _, _, vz = parse_ref(events[-1][1])
+        label = f"{b0} {c0}:{v0}-{vz}"
     q["reference_label"] = label
     q["events_refs"] = [r for (_, r, _) in events]
     questions.append(q)
 
 for q in questions:
+    if q["id"] in REVIEWED_IDS:
+        q["verification"].update({"human_review": "approved", "reviewed_at": REVIEWED["reviewed_at"], "review_method": REVIEWED["method"]})
     if q["game_mode"] == "sequence":
         q["verse_text"] = "\n".join(f"{r}: {verse_text(r, 2, 220)}" for r in q["events_refs"])
     else:
