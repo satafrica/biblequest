@@ -1,5 +1,5 @@
 import { lazy, Suspense, Component, type ReactNode } from 'react'
-import { HashRouter, Route, Routes, Link } from 'react-router-dom'
+import { HashRouter, Route, Routes, Link, Navigate } from 'react-router-dom'
 import { AppProvider } from './state/AppContext'
 import { Layout } from './components/Layout'
 import Home from './pages/Home'
@@ -58,7 +58,8 @@ export default function App() {
               <Route path="daily" element={<Daily />} />
               <Route path="arena" element={<Arena />} />
               <Route path="leaderboard" element={<Leaderboard />} />
-              <Route path="store" element={<StorePage />} />
+              <Route path="rewards" element={<StorePage />} />
+              <Route path="store" element={<Navigate to="/rewards" replace />} />
               <Route path="collection/:id" element={<Collection />} />
               <Route path="profile" element={<Profile />} />
               <Route path="settings" element={<Settings />} />

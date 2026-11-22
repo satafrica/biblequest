@@ -33,7 +33,7 @@ export function Privacy() {
           <ul className="list-disc space-y-1 pl-5">
             <li><strong>Account details</strong> (only if you create an account): your email address and a password. Passwords are stored by our authentication provider in hashed form; we never see them.</li>
             <li><strong>Profile</strong>: display name, chosen avatar, whether you opted in to leaderboards, and your display settings (theme, text size, sound, vibration, read-aloud).</li>
-            <li><strong>Game activity</strong>: rounds you start and finish, the answer you chose for each question and whether it was right, your progress, streak days, achievements, gem history and store items.</li>
+            <li><strong>Game activity</strong>: rounds you start and finish, the answer you chose for each question and whether it was right, your progress, streak days, achievements, gem history and unlocked reward items.</li>
             <li><strong>Reports</strong> you send about a question, including the text you write.</li>
           </ul>
           <p>Guests who have not registered get a private guest account with no email address. The same game activity is stored for it.</p>
@@ -87,8 +87,8 @@ export function Terms() {
         <Section title="Your account">
           <p>You are responsible for keeping your password private. Use a display name that is respectful; names that are offensive or impersonate others may be changed or removed. You may delete your account at any time from your Profile.</p>
         </Section>
-        <Section title="Gems and store items">
-          <p>Gems are earned only by playing (for example {catalog.rewards.correct_answer} gems for the first correct answer to a question). Gems and store items have no monetary value, cannot be bought with or exchanged for money, and cannot be transferred between accounts. They are tied to your account and are removed if the account is deleted. We may correct balances affected by errors or misuse.</p>
+        <Section title="Gems and reward items">
+          <p>Gems are earned only by playing (for example {catalog.rewards.correct_answer} gems for the first correct answer to a question). Gems and reward items have no monetary value, cannot be bought with or exchanged for money, and cannot be transferred between accounts. They are tied to your account and are removed if the account is deleted. We may correct balances affected by errors or misuse.</p>
         </Section>
         <Section title="Fair play">
           <p>Do not try to manipulate scores or gems, interfere with the service, or access other players' data. Accounts that do so may be suspended.</p>

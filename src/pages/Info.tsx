@@ -12,13 +12,13 @@ export function Collection() {
   const { id = '' } = useParams()
   const { owns, catalog } = useApp()
   const g = GALLERIES[id]
-  if (!g) return <Navigate to="/store" replace />
+  if (!g) return <Navigate to="/rewards" replace />
   if (owns(id) < 1) return (
     <div className="mx-auto max-w-xl px-4 py-12 text-center">
       <Lock className="mx-auto mb-3 h-8 w-8 text-muted" aria-hidden="true" />
       <h1 className="text-2xl font-semibold mb-2">{g.title}</h1>
-      <p className="text-muted mb-5">Unlock this gallery in the store to view every illustration with its Scripture reference and artistic notes.</p>
-      <Link to="/store" className="btn-primary">Go to the store</Link>
+      <p className="text-muted mb-5">Unlock this gallery in Gem Rewards to view every illustration with its Scripture reference and artistic notes.</p>
+      <Link to="/rewards" className="btn-primary">Go to Gem Rewards</Link>
     </div>
   )
   return (
@@ -60,7 +60,7 @@ export function About() {
           <p>Gems are earned by playing: {catalog.rewards.correct_answer} for the first correct answer to each question, {catalog.rewards.level_complete} for completing a level for the first time, {catalog.rewards.perfect_round} for a first perfect round, {catalog.rewards.daily_challenge} for each daily challenge and {catalog.rewards.adventure_complete} for completing an adventure. Replaying the same question does not earn gems again. Gems never expire, cannot go below zero, and cannot be bought, sold or exchanged for money.</p></section>
         <section id="accounts" className="scroll-mt-24"><h2 className="text-xl font-semibold mb-2">Accounts and saving</h2>
           {backend.kind === 'cloud'
-            ? <p>You can play as a guest straight away; your guest progress is saved to a private guest account on this device. Create an account with your email to keep progress, gems and items on every device. All gem awards and purchases are calculated and stored by the server.</p>
+            ? <p>You can play as a guest straight away; your guest progress is saved to a private guest account on this device. Create an account with your email to keep progress, gems and items on every device. All gem awards and unlocks are calculated and stored by the server.</p>
             : <p>This build runs without the online backend. Progress and practice gems are stored only in this browser. Connecting the Supabase backend enables accounts, password recovery, cross-device saves, leaderboards and server-verified gems.</p>}
         </section>
         <section id="privacy" className="scroll-mt-24"><h2 className="text-xl font-semibold mb-2">Privacy</h2>

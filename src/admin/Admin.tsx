@@ -97,7 +97,7 @@ function CloudAdmin({ isAdmin }: { isAdmin: boolean }) {
   const [tab, setTab] = useState<Tab>('overview')
   const tabs: { id: Tab; label: string; admin?: boolean }[] = [
     { id: 'overview', label: 'Overview' }, { id: 'quick', label: 'Quick review' }, { id: 'questions', label: 'Questions' }, { id: 'images', label: 'Illustrations' },
-    { id: 'adventures', label: 'Adventures' }, { id: 'daily', label: 'Daily challenges', admin: true }, { id: 'store', label: 'Store & rewards', admin: true },
+    { id: 'adventures', label: 'Adventures' }, { id: 'daily', label: 'Daily challenges', admin: true }, { id: 'store', label: 'Gem Rewards & awards', admin: true },
     { id: 'reports', label: 'Reports' }, { id: 'audit', label: 'Audit log', admin: true },
   ]
   return (
@@ -135,7 +135,7 @@ function Overview() {
   if (err) return <p className="card p-4 text-bad">{err}</p>
   if (!s) return <div className="loader" role="status" aria-label="Loading" />
   const cards: [string, unknown][] = [['Players', s.players], ['Rounds started (7 days)', s.sessions_7d], ['Rounds completed (7 days)', s.completed_7d], ['Answers (7 days)', s.answers_7d],
-    ['Accuracy (7 days)', s.accuracy_7d != null ? `${s.accuracy_7d}%` : '—'], ['Gems earned (7 days)', s.gems_earned_7d], ['Gems spent (7 days)', s.gems_spent_7d], ['Open reports', s.open_reports]]
+    ['Accuracy (7 days)', s.accuracy_7d != null ? `${s.accuracy_7d}%` : '—'], ['Gems earned (7 days)', s.gems_earned_7d], ['Gems used (7 days)', s.gems_spent_7d], ['Open reports', s.open_reports]]
   return (
     <div>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{cards.map(([k, v]) => <li key={k} className="card p-4"><p className="eyebrow mb-1">{k}</p><p className="text-2xl font-semibold tabular-nums">{String(v ?? 0)}</p></li>)}</ul>
@@ -391,8 +391,8 @@ function StoreAdmin() {
     <div className="grid gap-8">
       <section><h2 className="mb-2 text-lg font-semibold">Reward rules</h2>
         <ul className="card divide-y divide-line">{rules.map((r) => <RuleRow key={r.id} r={r} onSave={(g) => act(`${r.id} = ${g}`, async () => (await sb()).rpc('admin_update_reward_rule', { p_id: r.id, p_gems: g })).then(load)} />)}</ul>
-        <p className="mt-2 text-xs text-muted">Changes apply to future awards only. Past transactions are never altered.</p></section>
-      <section><h2 className="mb-2 text-lg font-semibold">Store prices</h2>
+        <p className="mt-2 text-xs text-muted">Changes apply to future awards only. Past gem history is never altered.</p></section>
+      <section><h2 className="mb-2 text-lg font-semibold">Gems needed per reward item</h2>
         <ul className="card divide-y divide-line">{items.map((i) => <ItemRow key={i.id} i={i} onSave={(p, a) => act(`${i.name} updated`, async () => (await sb()).rpc('admin_update_store_item', { p_id: i.id, p_price: p, p_active: a })).then(load)} />)}</ul></section>
     </div>
   )
@@ -405,7 +405,7 @@ function ItemRow({ i, onSave }: { i: { id: string; name: string; price: number; 
   const [p, setP] = useState(i.price); const [a, setA] = useState(i.active)
   return <li className="flex flex-wrap items-center gap-3 p-3 text-sm"><span className="flex-1">{i.name} <span className="text-muted">· {i.category}</span></span>
     <label className="flex items-center gap-1"><input type="checkbox" checked={a} onChange={(e) => setA(e.target.checked)} />Active</label>
-    <label className="sr-only" htmlFor={`p-${i.id}`}>Price</label><input id={`p-${i.id}`} type="number" min={1} className="input w-28" value={p} onChange={(e) => setP(Number(e.target.value))} />
+    <label className="sr-only" htmlFor={`p-${i.id}`}>Gems needed</label><input id={`p-${i.id}`} type="number" min={1} className="input w-28" value={p} onChange={(e) => setP(Number(e.target.value))} />
     <button className="btn-secondary btn-sm" disabled={p === i.price && a === i.active} onClick={() => onSave(p, a)}>Save</button></li>
 }
 

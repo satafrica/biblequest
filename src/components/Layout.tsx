@@ -1,6 +1,6 @@
 import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
-import { Compass, House, Map, Store, UserRound, WifiOff, X } from 'lucide-react'
+import { Compass, Gift, House, Map, UserRound, WifiOff, X } from 'lucide-react'
 import { stays, useApp } from '../state/AppContext'
 import { Avatar, Gems, Logo } from './ui'
 
@@ -9,13 +9,13 @@ const NAV = [
   { to: '/adventures', label: 'Adventures' },
   { to: '/daily', label: 'Daily' },
   { to: '/arena', label: 'Arena' },
-  { to: '/store', label: 'Store' },
+  { to: '/rewards', label: 'Gem Rewards' },
 ]
 const TABS = [
   { to: '/', label: 'Home', Icon: House, end: true },
   { to: '/play', label: 'Play', Icon: Compass },
   { to: '/adventures', label: 'Journeys', Icon: Map },
-  { to: '/store', label: 'Store', Icon: Store },
+  { to: '/rewards', label: 'Gem Rewards', Icon: Gift },
   { to: '/profile', label: 'Profile', Icon: UserRound },
 ]
 

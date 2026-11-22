@@ -94,7 +94,7 @@ export default function Profile() {
 
       <section id="inventory" className="mb-10 scroll-mt-24">
         <h2 className="mb-3 text-xl font-semibold">Inventory</h2>
-        {inventory.filter((i) => i.quantity > 0).length === 0 ? <p className="card p-5 text-muted">Nothing yet. <Link to="/store" className="link">Visit the store</Link>.</p> : (
+        {inventory.filter((i) => i.quantity > 0).length === 0 ? <p className="card p-5 text-muted">Nothing yet. <Link to="/rewards" className="link">Visit Gem Rewards</Link>.</p> : (
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {inventory.filter((i) => i.quantity > 0).map((i) => {
               const it = itemOf(i.item_id)
@@ -119,7 +119,7 @@ export default function Profile() {
             <table className="w-full text-left text-sm">
               <thead className="bg-ink/5"><tr><th className="px-4 py-2">Date</th><th className="px-4 py-2">Activity</th><th className="px-4 py-2 text-right">Gems</th><th className="px-4 py-2 text-right">Balance</th></tr></thead>
               <tbody>{txs.map((t) => (
-                <tr key={t.id} className="border-t border-line"><td className="whitespace-nowrap px-4 py-2 text-muted">{new Date(t.created_at).toLocaleString()}</td><td className="px-4 py-2">{t.reason}</td>
+                <tr key={t.id} className="border-t border-line"><td className="whitespace-nowrap px-4 py-2 text-muted">{new Date(t.created_at).toLocaleString()}</td><td className="px-4 py-2">{t.reason.replace(/^Purchased /, 'Unlocked ')}</td>
                   <td className={`px-4 py-2 text-right tabular-nums font-semibold ${t.amount > 0 ? 'text-good' : 'text-bad'}`}>{t.amount > 0 ? `+${t.amount}` : t.amount}</td><td className="px-4 py-2 text-right tabular-nums">{t.balance_after}</td></tr>
               ))}</tbody>
             </table>

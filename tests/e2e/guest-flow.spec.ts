@@ -20,7 +20,7 @@ async function playLevel(page: Page, key: string) {
   await expect(page.getByRole('heading', { name: /of \d+ correct/ })).toBeVisible()
 }
 
-test('guest completes a full picture level, earns persistent gems and buys a hint', async ({ page }) => {
+test('guest completes a full picture level, earns persistent gems and unlocks a hint', async ({ page }) => {
   const errors: string[] = []
   page.on('pageerror', (e) => errors.push(e.message))
   await page.goto('./')
@@ -41,11 +41,11 @@ test('guest completes a full picture level, earns persistent gems and buys a hin
   await expect(page.getByText(/Gems are awarded once per question/)).toBeVisible()
   expect(await balance(page)).toBe(earned)
 
-  // Buy a hint with confirmation.
-  await page.goto('./#/store')
-  await page.getByRole('button', { name: /Buy Lamp of Insight for 30 gems/ }).click()
-  const dialog = page.getByRole('dialog', { name: 'Confirm purchase' })
-  await dialog.getByRole('button', { name: 'Buy for 30' }).click()
+  // Unlock a hint with confirmation.
+  await page.goto('./#/rewards')
+  await page.getByRole('button', { name: /Unlock Lamp of Insight for 30 gems/ }).click()
+  const dialog = page.getByRole('dialog', { name: 'Confirm unlock' })
+  await dialog.getByRole('button', { name: 'Unlock for 30 gems' }).click()
   await expect(dialog).toBeHidden()
   await expect.poll(() => balance(page)).toBe(earned - 30)
   expect(errors).toEqual([])
@@ -63,7 +63,7 @@ test('dark mode and text size apply and persist', async ({ page }) => {
 
 test('locked content is honest: expert arena, and community needs the online version', async ({ page }) => {
   await page.goto('./#/arena')
-  await expect(page.getByRole('link', { name: /Unlock in store/ }).or(page.getByRole('button', { name: /Unlock in store/ }))).toBeVisible()
+  await expect(page.getByRole('link', { name: /Unlock in Gem Rewards/ }).or(page.getByRole('button', { name: /Unlock in Gem Rewards/ }))).toBeVisible()
   await page.goto('./#/community')
   await expect(page.getByTestId('community-gate')).toBeVisible()
   await expect(page.getByTestId('community-gate')).toContainText(/online version|free account/)

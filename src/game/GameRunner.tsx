@@ -396,7 +396,7 @@ function ReadAloud({ text, label }: { text: string; label: string }) {
 
 function PowerButton({ label, Icon, qty, onUse, disabled }: { label: string; Icon: typeof Lamp; qty: number; onUse: () => void; disabled?: boolean }) {
   if (qty <= 0) return (
-    <Link to="/store" className="btn-ghost btn-sm text-muted"><Icon className="h-4 w-4" aria-hidden="true" />{label}<span className="text-xs">(get in store)</span></Link>
+    <Link to="/rewards" className="btn-ghost btn-sm text-muted"><Icon className="h-4 w-4" aria-hidden="true" />{label}<span className="text-xs">(unlock with gems)</span></Link>
   )
   return <button className="btn-secondary btn-sm" onClick={onUse} disabled={disabled}><Icon className="h-4 w-4" aria-hidden="true" />{label} <span className="chip py-0">{qty}</span></button>
 }

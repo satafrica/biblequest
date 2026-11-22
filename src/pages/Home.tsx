@@ -166,10 +166,10 @@ export default function Home() {
 
         <section className="mt-12 card grid gap-4 p-6 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <h2 className="text-xl font-semibold">The Gem Store</h2>
-            <p className="text-sm text-muted">Spend gems on hints, profile frames, badges, colour themes and illustration galleries. Scripture learning and accessibility features always stay free.</p>
+            <h2 className="text-xl font-semibold">Gem Rewards</h2>
+            <p className="text-sm text-muted">Use the gems you earn to unlock hints, profile frames, badges, colour themes and illustration galleries. Scripture learning and accessibility features always stay free.</p>
           </div>
-          <Link to="/store" className="btn-secondary">Open the store</Link>
+          <Link to="/rewards" className="btn-secondary">Open Gem Rewards</Link>
         </section>
       </div>
     </>

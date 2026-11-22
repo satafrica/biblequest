@@ -52,7 +52,7 @@ export function Arena() {
           return (
             <li key={d} className="card flex items-center gap-4 p-4">
               <div className="flex-1"><p className="font-display text-lg font-semibold">{DIFFICULTY_LABELS[d]}</p><p className="text-sm text-muted">{d === 1 ? 'Beginner questions only' : `Mixed questions up to ${DIFFICULTY_LABELS[d]}`}</p></div>
-              {locked ? <Link to="/store" className="btn-secondary btn-sm"><Lock className="h-4 w-4" aria-hidden="true" />Unlock in store</Link>
+              {locked ? <Link to="/rewards" className="btn-secondary btn-sm"><Lock className="h-4 w-4" aria-hidden="true" />Unlock in Gem Rewards</Link>
                 : <Link to={`/game/${encodeURIComponent(arenaKey(d, testament))}`} className="btn-primary btn-sm">Enter</Link>}
             </li>
           )

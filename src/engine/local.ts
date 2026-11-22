@@ -318,7 +318,7 @@ export class LocalBackend implements Backend {
     const inv = this.s.inventory.find((i) => i.item_id === itemId)
     if (this.s.keys.includes(`buy:${key}`)) return { ok: true, replayed: true, balance: this.s.wallet.balance, quantity: inv?.quantity ?? 0 }
     if (!item.consumable && inv) throw new GameError('already_owned')
-    this.applyGems(-item.price, `Purchased ${item.name}`, itemId, `buy:${key}`)
+    this.applyGems(-item.price, `Unlocked ${item.name}`, itemId, `buy:${key}`)
     let qty = 1
     if (inv) qty = ++inv.quantity
     else this.s.inventory.push({ item_id: itemId, quantity: 1, equipped: false, acquired_at: new Date().toISOString() })

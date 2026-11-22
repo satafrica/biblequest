@@ -36,12 +36,12 @@ export function usePurchase() {
       const r = await backend.purchase(item.id, keyFor(item.id))
       clearKey(item.id)
       setBalance(r.balance)
-      toast({ title: r.replayed ? 'Purchase already completed' : `${item.name} added`, body: r.replayed ? 'Your earlier purchase went through; you were charged once.' : `Balance: ${r.balance} gems`, tone: 'gem' })
+      toast({ title: r.replayed ? 'Already unlocked' : `${item.name} unlocked`, body: r.replayed ? 'Your earlier unlock went through; the gems were used only once.' : `Balance: ${r.balance} gems`, tone: 'gem' })
       await refresh()
       return true
     } catch (e) {
       if (!(e instanceof GameError && e.code === 'offline')) clearKey(item.id)
-      toast({ title: 'Purchase not completed', body: friendlyError(e), tone: 'error' })
+      toast({ title: 'Unlock not completed', body: friendlyError(e), tone: 'error' })
       return false
     } finally { setBusy(false) }
   }
@@ -62,15 +62,15 @@ export default function StorePage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
-      <PageHeader eyebrow="Gem Store" title="Store">
-        Gems are earned by playing and never expire. They have no cash value and cannot be bought or redeemed for money. Hints and cosmetics are optional — every Scripture lesson and accessibility feature is free.
+      <PageHeader eyebrow="Earned by playing" title="Gem Rewards">
+        Gems are earned by playing and never expire. They can't be bought, and nothing in MyBibleGem costs real money. Hints and cosmetics are optional — every Scripture lesson and accessibility feature is free.
       </PageHeader>
       <div className="mb-6 flex flex-wrap items-center gap-3">
         <span className="chip border-accent py-1.5 text-sm">Your balance: <Gems n={wallet.balance} /></span>
         {backend.kind === 'local' && <span className="text-sm text-muted">Practice gems in this preview stay on this device.</span>}
-        <Link to="/profile#history" className="ml-auto text-sm link">Transaction history</Link>
+        <Link to="/profile#wallet" className="ml-auto text-sm link">Gem history</Link>
       </div>
-      <div role="tablist" aria-label="Store categories" className="mb-6 flex gap-2 overflow-x-auto pb-1">
+      <div role="tablist" aria-label="Reward categories" className="mb-6 flex gap-2 overflow-x-auto pb-1">
         {CATS.map((c) => <button key={c.id} role="tab" aria-selected={cat === c.id} onClick={() => setCat(c.id)} className={`btn btn-sm shrink-0 ${cat === c.id ? 'bg-ink text-bg' : 'border border-line bg-raised'}`}>{c.label}</button>)}
       </div>
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -87,18 +87,18 @@ export default function StorePage() {
                 <div className="mt-auto flex flex-wrap items-center gap-2 pt-3">
                   {ownedNonConsumable ? (
                     <>
-                      <span className="chip border-good text-good"><Check className="h-3 w-3" aria-hidden="true" />Owned</span>
+                      <span className="chip border-good text-good"><Check className="h-3 w-3" aria-hidden="true" />Unlocked</span>
                       {EQUIPPABLE.has(item.category) && <button className="btn-secondary btn-sm" onClick={() => equip(item, !owned.equipped)}>{owned.equipped ? 'Unequip' : 'Equip'}</button>}
                       {item.category === 'collection' && <Link to={`/collection/${item.id}`} className="btn-secondary btn-sm">Open gallery</Link>}
                       {item.category === 'bonus' && <Link to="/arena" className="btn-secondary btn-sm">Go to Arena</Link>}
                     </>
                   ) : (
                     <>
-                      <span className="font-semibold"><Gems n={item.price} /></span>
+                      <span className="text-sm"><span className="text-muted">Gems needed </span><span className="font-semibold"><Gems n={item.price} /></span></span>
                       {item.consumable && owned && <span className="chip">You have {owned.quantity}</span>}
                       <button className="btn-primary btn-sm ml-auto" disabled={busy || short > 0} onClick={() => setConfirm(item)}
-                        aria-label={short > 0 ? `${item.name}: need ${short} more gems` : `Buy ${item.name} for ${item.price} gems`}>
-                        {short > 0 ? `Need ${short} more` : 'Buy'}
+                        aria-label={short > 0 ? `${item.name}: need ${short} more gems` : `Unlock ${item.name} for ${item.price} gems`}>
+                        {short > 0 ? `Need ${short} more` : 'Unlock'}
                       </button>
                     </>
                   )}
@@ -108,18 +108,18 @@ export default function StorePage() {
           )
         })}
       </ul>
-      <Modal open={Boolean(confirm)} onClose={() => setConfirm(null)} title="Confirm purchase">
+      <Modal open={Boolean(confirm)} onClose={() => setConfirm(null)} title="Confirm unlock">
         {confirm && (
           <div>
             <div className="flex items-center gap-4"><ItemArt item={confirm} size="sm" /><div><p className="font-semibold">{confirm.name}</p><p className="text-sm text-muted">{confirm.description}</p></div></div>
             <dl className="mt-5 space-y-1 text-sm">
-              <div className="flex justify-between"><dt>Price</dt><dd><Gems n={confirm.price} /></dd></div>
+              <div className="flex justify-between"><dt>Gems needed</dt><dd><Gems n={confirm.price} /></dd></div>
               <div className="flex justify-between"><dt>Current balance</dt><dd><Gems n={wallet.balance} /></dd></div>
-              <div className="flex justify-between border-t border-line pt-1 font-semibold"><dt>After purchase</dt><dd><Gems n={wallet.balance - confirm.price} /></dd></div>
+              <div className="flex justify-between border-t border-line pt-1 font-semibold"><dt>Gems left</dt><dd><Gems n={wallet.balance - confirm.price} /></dd></div>
             </dl>
             <div className="mt-6 flex justify-end gap-2">
               <button className="btn-ghost" onClick={() => setConfirm(null)}>Cancel</button>
-              <button className="btn-primary" disabled={busy} onClick={async () => { if (await buy(confirm)) setConfirm(null) }}>{busy ? 'Purchasing…' : `Buy for ${confirm.price}`}</button>
+              <button className="btn-primary" disabled={busy} onClick={async () => { if (await buy(confirm)) setConfirm(null) }}>{busy ? 'Unlocking…' : `Unlock for ${confirm.price} gems`}</button>
             </div>
           </div>
         )}

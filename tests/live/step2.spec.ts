@@ -16,11 +16,11 @@ test('confirmed account sets a password and syncs to a second device', async ({ 
   await page.getByRole('button', { name: 'Save password' }).click()
   await expect(page.getByText('Password updated.')).toBeVisible({ timeout: 15000 })
   const gemsA = await balance(page)
-  // buy a hint on device A
-  await page.goto('./#/store')
-  await page.getByRole('button', { name: /Buy Lamp of Insight for 30 gems/ }).click()
-  const dialog = page.getByRole('dialog', { name: 'Confirm purchase' })
-  await dialog.getByRole('button', { name: 'Buy for 30' }).click()
+  // unlock a hint on device A
+  await page.goto('./#/rewards')
+  await page.getByRole('button', { name: /Unlock Lamp of Insight for 30 gems/ }).click()
+  const dialog = page.getByRole('dialog', { name: 'Confirm unlock' })
+  await dialog.getByRole('button', { name: 'Unlock for 30 gems' }).click()
   await expect(dialog).toBeHidden({ timeout: 15000 })
   await expect.poll(() => balance(page), { timeout: 15000 }).toBe(gemsA - 30)
   // device B: brand-new browser context
@@ -33,7 +33,7 @@ test('confirmed account sets a password and syncs to a second device', async ({ 
   await b.getByRole('button', { name: 'Sign in' }).last().click()
   await expect(b).toHaveURL(/#\/profile/, { timeout: 15000 })
   await expect.poll(() => balance(b), { timeout: 15000 }).toBe(gemsA - 30)
-  await b.goto('./#/store')
+  await b.goto('./#/rewards')
   const owned = await b.getByText(/Owned|owned|In inventory|×\s*1|x1/).count()
   writeFileSync('tests/live/step2.json', JSON.stringify({ s1, gemsA, gemsB: await balance(b), ownedMarkers: owned }))
   await ctxB.close()
