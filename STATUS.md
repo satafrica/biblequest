@@ -201,3 +201,10 @@ Notes:
 - Build change: vite.config.ts raises the offline precache limit to 4 MB because the bundled content grew to 2.1 MB. This affects only the offline build and the next deploy.
 - Tests: 93 unit, 126 end-to-end passed (4 live-only skipped).
 - Still open: the image generator's commercial-use terms (owner decision).
+
+## AI illustration credit and open-Bible icon (22 November 2026)
+
+- Credit "AI-generated illustration, made with Perplexity." now shows under every Picture Quiz image (before and after answering), under Hidden Object scenes, in the gallery, on the home hero and chapter intros, and in the desktop footer. The About page says the illustrations are AI-generated, made with Perplexity (linked), and the old public note asking the owner to confirm terms was removed (the licensing decision itself is still open; see Blocked).
+- App icon: the old PNG icons had lost the book outline when rendered (only the star and two thin lines showed on phones). They were replaced with an open Bible under a gold star, built from filled shapes and rendered in Chromium (icon-192/512, maskable-192/512, apple-touch-icon, favicon.svg; the header logo uses the favicon). Checked under round and rounded-square masks.
+- Tests: new tests/e2e/credits.spec.ts; 93 unit and 126 end-to-end passed. Draft 6b034241 was tested against the live backend, then published at the owner's request and re-tested on https://mybiblegem.com (credits 6/6; index, icons and favicon match the build). My 6 test guests were deleted by exact id.
+- Phones that already installed the app may keep the old icon until Android refreshes it (can take a day) or the app is removed and added to the home screen again.
