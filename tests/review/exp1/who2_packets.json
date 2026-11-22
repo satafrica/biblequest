@@ -1,0 +1,1514 @@
+[
+ {
+  "id": "who-eve",
+  "answer": "Eve",
+  "options": [
+   "Rachel",
+   "Hannah",
+   "Eve",
+   "Sarah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was the first woman.",
+    "proposed_reference": "Genesis 2:22",
+    "kjv_text": "Genesis 2:22: And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man."
+   },
+   {
+    "clue": "I was made from a rib taken from the man.",
+    "proposed_reference": "Genesis 2:22",
+    "kjv_text": "Genesis 2:22: And the rib, which the LORD God had taken from man, made he a woman, and brought her unto the man."
+   },
+   {
+    "clue": "The serpent spoke to me in the garden.",
+    "proposed_reference": "Genesis 3:1",
+    "kjv_text": "Genesis 3:1: Now the serpent was more subtil than any beast of the field which the LORD God had made. And he said unto the woman, Yea, hath God said, Ye shall not eat of every tree of the garden?"
+   },
+   {
+    "clue": "I am called the mother of all living.",
+    "proposed_reference": "Genesis 3:20",
+    "kjv_text": "Genesis 3:20: And Adam called his wife’s name Eve; because she was the mother of all living."
+   }
+  ],
+  "hint": "Look in Genesis.",
+  "explanation": "\"Adam called his wife's name Eve; because she was the mother of all living.\"",
+  "reference_label": "Genesis 3:20",
+  "ref_kjv": "And Adam called his wife’s name Eve; because she was the mother of all living."
+ },
+ {
+  "id": "who-isaac",
+  "answer": "Isaac",
+  "options": [
+   "Joseph",
+   "Ishmael",
+   "Isaac",
+   "Jacob"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "My mother laughed when my birth was promised.",
+    "proposed_reference": "Genesis 18:12",
+    "kjv_text": "Genesis 18:12: Therefore Sarah laughed within herself, saying, After I am waxed old shall I have pleasure, my lord being old also?"
+   },
+   {
+    "clue": "My father was a hundred years old when I was born.",
+    "proposed_reference": "Genesis 21:5",
+    "kjv_text": "Genesis 21:5: And Abraham was an hundred years old, when his son Isaac was born unto him."
+   },
+   {
+    "clue": "I was laid on an altar in the land of Moriah.",
+    "proposed_reference": "Genesis 22:9",
+    "kjv_text": "Genesis 22:9: And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood."
+   },
+   {
+    "clue": "My sons were Esau and Jacob.",
+    "proposed_reference": "Genesis 25:25-26",
+    "kjv_text": "Genesis 25:25-26: And the first came out red, all over like an hairy garment; and they called his name Esau. And after that came his brother out, and his hand took hold on Esau’s heel; and his name was called Jacob: and Isaac was threescore years old when she bare them."
+   }
+  ],
+  "hint": "Look in Genesis.",
+  "explanation": "Abraham bound Isaac his son and laid him on the altar upon the wood.",
+  "reference_label": "Genesis 22:9",
+  "ref_kjv": "And they came to the place which God had told him of; and Abraham built an altar there, and laid the wood in order, and bound Isaac his son, and laid him on the altar upon the wood."
+ },
+ {
+  "id": "who-rebekah",
+  "answer": "Rebekah",
+  "options": [
+   "Rebekah",
+   "Rachel",
+   "Leah",
+   "Sarah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I drew water for a stranger's camels at a well.",
+    "proposed_reference": "Genesis 24:19-20",
+    "kjv_text": "Genesis 24:19-20: And when she had done giving him drink, she said, I will draw water for thy camels also, until they have done drinking. And she hasted, and emptied her pitcher into the trough, and ran again unto the well to draw water, and drew for all his camels."
+   },
+   {
+    "clue": "I was the sister of Laban.",
+    "proposed_reference": "Genesis 24:29",
+    "kjv_text": "Genesis 24:29: And Rebekah had a brother, and his name was Laban: and Laban ran out unto the man, unto the well."
+   },
+   {
+    "clue": "I married Isaac.",
+    "proposed_reference": "Genesis 24:67",
+    "kjv_text": "Genesis 24:67: And Isaac brought her into his mother Sarah’s tent, and took Rebekah, and she became his wife; and he loved her: and Isaac was comforted after his mother’s death."
+   },
+   {
+    "clue": "I helped my son Jacob receive his father's blessing.",
+    "proposed_reference": "Genesis 27:6-17",
+    "kjv_text": "Genesis 27:6-17: And Rebekah spake unto Jacob her son, saying, Behold, I heard thy father speak unto Esau thy brother, saying, Bring me venison, and make me savoury meat, that I may eat, and bless thee before the LORD before my death. Now therefore, my son, obey my voice according to that which I command thee. Go now to the flock, and fetch me from thence two good kids of the goats; and I will make them savoury meat for thy father, such as he loveth: And thou shalt bring it to thy father, that he may eat, and that he may bless thee before his death. And Jacob said to Rebekah his mother, Behold, Esau my brother is a hairy man, and I am a smooth man: My father peradventure will feel me, and I shall seem to him as a deceiver; and I shall bring a curse upon me, and not a blessing. And his mother said unto him, Upon me be thy curse, my son: only obey my voice, and go fetch me them. And he went, and fetched, and brought them to his mother: and his mother made savoury meat, such as his father loved. And Rebekah took goodly raiment of her eldest son Esau, which were with her in the house, and put them upon Jacob her younger son: And she put the skins of the kids of the goats upon his hands, and upon the smooth of his neck: And she gave the savoury meat and the bread, which she had prepared, into the hand of her son Jacob."
+   }
+  ],
+  "hint": "Look in Genesis.",
+  "explanation": "Isaac brought Rebekah into his mother Sarah's tent, and she became his wife.",
+  "reference_label": "Genesis 24:67",
+  "ref_kjv": "And Isaac brought her into his mother Sarah’s tent, and took Rebekah, and she became his wife; and he loved her: and Isaac was comforted after his mother’s death."
+ },
+ {
+  "id": "who-rachel",
+  "answer": "Rachel",
+  "options": [
+   "Rachel",
+   "Bilhah",
+   "Rebekah",
+   "Leah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "My father was Laban.",
+    "proposed_reference": "Genesis 29:16",
+    "kjv_text": "Genesis 29:16: And Laban had two daughters: the name of the elder was Leah, and the name of the younger was Rachel."
+   },
+   {
+    "clue": "Jacob served seven years for me, and they seemed but a few days.",
+    "proposed_reference": "Genesis 29:20",
+    "kjv_text": "Genesis 29:20: And Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her."
+   },
+   {
+    "clue": "I was the mother of Joseph and Benjamin.",
+    "proposed_reference": "Genesis 35:24",
+    "kjv_text": "Genesis 35:24: The sons of Rachel; Joseph, and Benjamin:"
+   },
+   {
+    "clue": "I died on the way to Bethlehem.",
+    "proposed_reference": "Genesis 35:19",
+    "kjv_text": "Genesis 35:19: And Rachel died, and was buried in the way to Ephrath, which is Beth-lehem."
+   }
+  ],
+  "hint": "Look in Genesis.",
+  "explanation": "\"Jacob served seven years for Rachel; and they seemed unto him but a few days.\"",
+  "reference_label": "Genesis 29:20",
+  "ref_kjv": "And Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her."
+ },
+ {
+  "id": "who-lot",
+  "answer": "Lot",
+  "options": [
+   "Terah",
+   "Lot",
+   "Laban",
+   "Nahor"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was Abram's nephew.",
+    "proposed_reference": "Genesis 12:5",
+    "kjv_text": "Genesis 12:5: And Abram took Sarai his wife, and Lot his brother’s son, and all their substance that they had gathered, and the souls that they had gotten in Haran; and they went forth to go into the land of Canaan; and into the land of Canaan they came."
+   },
+   {
+    "clue": "I chose all the plain of Jordan.",
+    "proposed_reference": "Genesis 13:11",
+    "kjv_text": "Genesis 13:11: Then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other."
+   },
+   {
+    "clue": "Two angels came to my house in Sodom.",
+    "proposed_reference": "Genesis 19:1-3",
+    "kjv_text": "Genesis 19:1-3: And there came two angels to Sodom at even; and Lot sat in the gate of Sodom: and Lot seeing them rose up to meet them; and he bowed himself with his face toward the ground; And he said, Behold now, my lords, turn in, I pray you, into your servant’s house, and tarry all night, and wash your feet, and ye shall rise up early, and go on your ways. And they said, Nay; but we will abide in the street all night. And he pressed upon them greatly; and they turned in unto him, and entered into his house; and he made them a feast, and did bake unleavened bread, and they did eat."
+   },
+   {
+    "clue": "My wife looked back and became a pillar of salt.",
+    "proposed_reference": "Genesis 19:26",
+    "kjv_text": "Genesis 19:26: But his wife looked back from behind him, and she became a pillar of salt."
+   }
+  ],
+  "hint": "Look in Genesis.",
+  "explanation": "Lot's wife looked back from behind him, and she became a pillar of salt.",
+  "reference_label": "Genesis 19:26",
+  "ref_kjv": "But his wife looked back from behind him, and she became a pillar of salt."
+ },
+ {
+  "id": "who-aaron",
+  "answer": "Aaron",
+  "options": [
+   "Joshua",
+   "Eleazar",
+   "Moses",
+   "Aaron"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a Levite and the brother of Moses.",
+    "proposed_reference": "Exodus 4:14",
+    "kjv_text": "Exodus 4:14: And the anger of the LORD was kindled against Moses, and he said, Is not Aaron the Levite thy brother? I know that he can speak well. And also, behold, he cometh forth to meet thee: and when he seeth thee, he will be glad in his heart."
+   },
+   {
+    "clue": "I spoke to Pharaoh on Moses' behalf.",
+    "proposed_reference": "Exodus 7:2",
+    "kjv_text": "Exodus 7:2: Thou shalt speak all that I command thee: and Aaron thy brother shall speak unto Pharaoh, that he send the children of Israel out of his land."
+   },
+   {
+    "clue": "I made a golden calf when the people asked.",
+    "proposed_reference": "Exodus 32:1-4",
+    "kjv_text": "Exodus 32:1-4: And when the people saw that Moses delayed to come down out of the mount, the people gathered themselves together unto Aaron, and said unto him, Up, make us gods, which shall go before us; for as for this Moses, the man that brought us up out of the land of Egypt, we wot not what is become of him. And Aaron said unto them, Break off the golden earrings, which are in the ears of your wives, of your sons, and of your daughters, and bring them unto me. And all the people brake off the golden earrings which were in their ears, and brought them unto Aaron. And he received them at their hand, and fashioned it with a graving tool, after he had made it a molten calf: and they said, These be thy gods, O Israel, which brought thee up out of the land of Egypt."
+   },
+   {
+    "clue": "My rod budded and yielded almonds.",
+    "proposed_reference": "Numbers 17:8",
+    "kjv_text": "Numbers 17:8: And it came to pass, that on the morrow Moses went into the tabernacle of witness; and, behold, the rod of Aaron for the house of Levi was budded, and brought forth buds, and bloomed blossoms, and yielded almonds."
+   }
+  ],
+  "hint": "Look in Numbers.",
+  "explanation": "The rod of Aaron for the house of Levi budded, bloomed blossoms and yielded almonds.",
+  "reference_label": "Numbers 17:8",
+  "ref_kjv": "And it came to pass, that on the morrow Moses went into the tabernacle of witness; and, behold, the rod of Aaron for the house of Levi was budded, and brought forth buds, and bloomed blossoms, and yielded almonds."
+ },
+ {
+  "id": "who-balaam",
+  "answer": "Balaam",
+  "options": [
+   "Balaam",
+   "Jethro",
+   "Balak",
+   "Korah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I am called a soothsayer.",
+    "proposed_reference": "Joshua 13:22",
+    "kjv_text": "Joshua 13:22: Balaam also the son of Beor, the soothsayer, did the children of Israel slay with the sword among them that were slain by them."
+   },
+   {
+    "clue": "Balak, king of Moab, sent for me to curse Israel.",
+    "proposed_reference": "Numbers 22:5-6",
+    "kjv_text": "Numbers 22:5-6: He sent messengers therefore unto Balaam the son of Beor to Pethor, which is by the river of the land of the children of his people, to call him, saying, Behold, there is a people come out from Egypt: behold, they cover the face of the earth, and they abide over against me: Come now therefore, I pray thee, curse me this people; for they are too mighty for me: peradventure I shall prevail, that we may smite them, and that I may drive them out of the land: for I wot that he whom thou blessest is blessed, and he whom thou cursest is cursed."
+   },
+   {
+    "clue": "An angel with a drawn sword stood in my way.",
+    "proposed_reference": "Numbers 22:31",
+    "kjv_text": "Numbers 22:31: Then the LORD opened the eyes of Balaam, and he saw the angel of the LORD standing in the way, and his sword drawn in his hand: and he bowed down his head, and fell flat on his face."
+   },
+   {
+    "clue": "My ass spoke to me.",
+    "proposed_reference": "Numbers 22:28",
+    "kjv_text": "Numbers 22:28: And the LORD opened the mouth of the ass, and she said unto Balaam, What have I done unto thee, that thou hast smitten me these three times?"
+   }
+  ],
+  "hint": "Look in Numbers.",
+  "explanation": "The LORD opened the mouth of the ass, and she said unto Balaam, \"What have I done unto thee?\"",
+  "reference_label": "Numbers 22:28",
+  "ref_kjv": "And the LORD opened the mouth of the ass, and she said unto Balaam, What have I done unto thee, that thou hast smitten me these three times?"
+ },
+ {
+  "id": "who-jethro",
+  "answer": "Jethro",
+  "options": [
+   "Balak",
+   "Laban",
+   "Aaron",
+   "Jethro"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a priest of Midian.",
+    "proposed_reference": "Exodus 3:1",
+    "kjv_text": "Exodus 3:1: Now Moses kept the flock of Jethro his father in law, the priest of Midian: and he led the flock to the backside of the desert, and came to the mountain of God, even to Horeb."
+   },
+   {
+    "clue": "I was Moses' father-in-law.",
+    "proposed_reference": "Exodus 18:1",
+    "kjv_text": "Exodus 18:1: When Jethro, the priest of Midian, Moses’ father in law, heard of all that God had done for Moses, and for Israel his people, and that the LORD had brought Israel out of Egypt;"
+   },
+   {
+    "clue": "Moses kept my flock near Horeb.",
+    "proposed_reference": "Exodus 3:1",
+    "kjv_text": "Exodus 3:1: Now Moses kept the flock of Jethro his father in law, the priest of Midian: and he led the flock to the backside of the desert, and came to the mountain of God, even to Horeb."
+   },
+   {
+    "clue": "I advised Moses to appoint rulers to judge the people.",
+    "proposed_reference": "Exodus 18:21-22",
+    "kjv_text": "Exodus 18:21-22: Moreover thou shalt provide out of all the people able men, such as fear God, men of truth, hating covetousness; and place such over them, to be rulers of thousands, and rulers of hundreds, rulers of fifties, and rulers of tens: And let them judge the people at all seasons: and it shall be, that every great matter they shall bring unto thee, but every small matter they shall judge: so shall it be easier for thyself, and they shall bear the burden with thee."
+   }
+  ],
+  "hint": "Look in Exodus.",
+  "explanation": "Moses kept the flock of Jethro his father in law, the priest of Midian.",
+  "reference_label": "Exodus 3:1",
+  "ref_kjv": "Now Moses kept the flock of Jethro his father in law, the priest of Midian: and he led the flock to the backside of the desert, and came to the mountain of God, even to Horeb."
+ },
+ {
+  "id": "who-eli",
+  "answer": "Eli",
+  "options": [
+   "Ahimelech",
+   "Samuel",
+   "Eli",
+   "Zadok"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a priest at Shiloh.",
+    "proposed_reference": "1 Samuel 1:9",
+    "kjv_text": "1 Samuel 1:9: So Hannah rose up after they had eaten in Shiloh, and after they had drunk. Now Eli the priest sat upon a seat by a post of the temple of the LORD."
+   },
+   {
+    "clue": "I thought Hannah was drunken as she prayed.",
+    "proposed_reference": "1 Samuel 1:13",
+    "kjv_text": "1 Samuel 1:13: Now Hannah, she spake in her heart; only her lips moved, but her voice was not heard: therefore Eli thought she had been drunken."
+   },
+   {
+    "clue": "My sons Hophni and Phinehas were wicked.",
+    "proposed_reference": "1 Samuel 2:12",
+    "kjv_text": "1 Samuel 2:12: Now the sons of Eli were sons of Belial; they knew not the LORD."
+   },
+   {
+    "clue": "I fell backward and died when I heard the ark was taken.",
+    "proposed_reference": "1 Samuel 4:18",
+    "kjv_text": "1 Samuel 4:18: And it came to pass, when he made mention of the ark of God, that he fell from off the seat backward by the side of the gate, and his neck brake, and he died: for he was an old man, and heavy. And he had judged Israel forty years."
+   }
+  ],
+  "hint": "Look in the books of history.",
+  "explanation": "When the ark of God was mentioned, Eli fell from off the seat backward, and he died.",
+  "reference_label": "1 Samuel 4:18",
+  "ref_kjv": "And it came to pass, when he made mention of the ark of God, that he fell from off the seat backward by the side of the gate, and his neck brake, and he died: for he was an old man, and heavy. And he had judged Israel forty years."
+ },
+ {
+  "id": "who-jonathan",
+  "answer": "Jonathan",
+  "options": [
+   "Jonathan",
+   "Absalom",
+   "Ishbosheth",
+   "Abner"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was the son of King Saul.",
+    "proposed_reference": "1 Samuel 14:49",
+    "kjv_text": "1 Samuel 14:49: Now the sons of Saul were Jonathan, and Ishui, and Melchi-shua: and the names of his two daughters were these; the name of the firstborn Merab, and the name of the younger Michal:"
+   },
+   {
+    "clue": "I climbed up to a Philistine garrison with my armourbearer.",
+    "proposed_reference": "1 Samuel 14:13",
+    "kjv_text": "1 Samuel 14:13: And Jonathan climbed up upon his hands and upon his feet, and his armourbearer after him: and they fell before Jonathan; and his armourbearer slew after him."
+   },
+   {
+    "clue": "My soul was knit with the soul of David.",
+    "proposed_reference": "1 Samuel 18:1",
+    "kjv_text": "1 Samuel 18:1: And it came to pass, when he had made an end of speaking unto Saul, that the soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul."
+   },
+   {
+    "clue": "I warned David by shooting arrows.",
+    "proposed_reference": "1 Samuel 20:36-37",
+    "kjv_text": "1 Samuel 20:36-37: And he said unto his lad, Run, find out now the arrows which I shoot. And as the lad ran, he shot an arrow beyond him. And when the lad was come to the place of the arrow which Jonathan had shot, Jonathan cried after the lad, and said, Is not the arrow beyond thee?"
+   }
+  ],
+  "hint": "Look in 1 Samuel.",
+  "explanation": "The soul of Jonathan was knit with the soul of David.",
+  "reference_label": "1 Samuel 18:1",
+  "ref_kjv": "And it came to pass, when he had made an end of speaking unto Saul, that the soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul."
+ },
+ {
+  "id": "who-goliath",
+  "answer": "Goliath",
+  "options": [
+   "Sisera",
+   "Og",
+   "Achish",
+   "Goliath"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a champion of the Philistines.",
+    "proposed_reference": "1 Samuel 17:4",
+    "kjv_text": "1 Samuel 17:4: And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span."
+   },
+   {
+    "clue": "I came from Gath.",
+    "proposed_reference": "1 Samuel 17:4",
+    "kjv_text": "1 Samuel 17:4: And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span."
+   },
+   {
+    "clue": "My height was six cubits and a span.",
+    "proposed_reference": "1 Samuel 17:4",
+    "kjv_text": "1 Samuel 17:4: And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span."
+   },
+   {
+    "clue": "A shepherd boy struck me down with a sling and a stone.",
+    "proposed_reference": "1 Samuel 17:49-50",
+    "kjv_text": "1 Samuel 17:49-50: And David put his hand in his bag, and took thence a stone, and slang it, and smote the Philistine in his forehead, that the stone sunk into his forehead; and he fell upon his face to the earth. So David prevailed over the Philistine with a sling and with a stone, and smote the Philistine, and slew him; but there was no sword in the hand of David."
+   }
+  ],
+  "hint": "Look in 1 Samuel.",
+  "explanation": "Goliath of Gath stood six cubits and a span.",
+  "reference_label": "1 Samuel 17:4",
+  "ref_kjv": "And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span."
+ },
+ {
+  "id": "who-bathsheba",
+  "answer": "Bathsheba",
+  "options": [
+   "Michal",
+   "Tamar",
+   "Bathsheba",
+   "Abigail"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was the wife of Uriah the Hittite.",
+    "proposed_reference": "2 Samuel 11:3",
+    "kjv_text": "2 Samuel 11:3: And David sent and enquired after the woman. And one said, Is not this Bath-sheba, the daughter of Eliam, the wife of Uriah the Hittite?"
+   },
+   {
+    "clue": "King David saw me washing as he walked on his roof.",
+    "proposed_reference": "2 Samuel 11:2",
+    "kjv_text": "2 Samuel 11:2: And it came to pass in an eveningtide, that David arose from off his bed, and walked upon the roof of the king’s house: and from the roof he saw a woman washing herself; and the woman was very beautiful to look upon."
+   },
+   {
+    "clue": "I became the mother of Solomon.",
+    "proposed_reference": "2 Samuel 12:24",
+    "kjv_text": "2 Samuel 12:24: And David comforted Bath-sheba his wife, and went in unto her, and lay with her: and she bare a son, and he called his name Solomon: and the LORD loved him."
+   },
+   {
+    "clue": "My son King Solomon set a seat for me at his right hand.",
+    "proposed_reference": "1 Kings 2:19",
+    "kjv_text": "1 Kings 2:19: Bath-sheba therefore went unto king Solomon, to speak unto him for Adonijah. And the king rose up to meet her, and bowed himself unto her, and sat down on his throne, and caused a seat to be set for the king’s mother; and she sat on his right hand."
+   }
+  ],
+  "hint": "Look in 2 Samuel.",
+  "explanation": "David was told she was the daughter of Eliam, the wife of Uriah the Hittite.",
+  "reference_label": "2 Samuel 11:3",
+  "ref_kjv": "And David sent and enquired after the woman. And one said, Is not this Bath-sheba, the daughter of Eliam, the wife of Uriah the Hittite?"
+ },
+ {
+  "id": "who-nathan",
+  "answer": "Nathan",
+  "options": [
+   "Samuel",
+   "Gad",
+   "Ahijah",
+   "Nathan"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a prophet in David's court.",
+    "proposed_reference": "2 Samuel 7:2",
+    "kjv_text": "2 Samuel 7:2: That the king said unto Nathan the prophet, See now, I dwell in an house of cedar, but the ark of God dwelleth within curtains."
+   },
+   {
+    "clue": "I told David his son would build God's house.",
+    "proposed_reference": "2 Samuel 7:12-13",
+    "kjv_text": "2 Samuel 7:12-13: And when thy days be fulfilled, and thou shalt sleep with thy fathers, I will set up thy seed after thee, which shall proceed out of thy bowels, and I will establish his kingdom. He shall build an house for my name, and I will stablish the throne of his kingdom for ever."
+   },
+   {
+    "clue": "I told David a parable about a poor man's ewe lamb.",
+    "proposed_reference": "2 Samuel 12:1-4",
+    "kjv_text": "2 Samuel 12:1-4: And the LORD sent Nathan unto David. And he came unto him, and said unto him, There were two men in one city; the one rich, and the other poor. The rich man had exceeding many flocks and herds: But the poor man had nothing, save one little ewe lamb, which he had bought and nourished up: and it grew up together with him, and with his children; it did eat of his own meat, and drank of his own cup, and lay in his bosom, and was unto him as a daughter. And there came a traveller unto the rich man, and he spared to take of his own flock and of his own herd, to dress for the wayfaring man that was come unto him; but took the poor man’s lamb, and dressed it for the man that was come to him."
+   },
+   {
+    "clue": "I said to David, Thou art the man.",
+    "proposed_reference": "2 Samuel 12:7",
+    "kjv_text": "2 Samuel 12:7: And Nathan said to David, Thou art the man. Thus saith the LORD God of Israel, I anointed thee king over Israel, and I delivered thee out of the hand of Saul;"
+   }
+  ],
+  "hint": "Look in the books of history.",
+  "explanation": "Nathan said to David, \"Thou art the man.\"",
+  "reference_label": "2 Samuel 12:7",
+  "ref_kjv": "And Nathan said to David, Thou art the man. Thus saith the LORD God of Israel, I anointed thee king over Israel, and I delivered thee out of the hand of Saul;"
+ },
+ {
+  "id": "who-absalom",
+  "answer": "Absalom",
+  "options": [
+   "Amnon",
+   "Absalom",
+   "Adonijah",
+   "Solomon"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a son of King David.",
+    "proposed_reference": "2 Samuel 3:3",
+    "kjv_text": "2 Samuel 3:3: And his second, Chileab, of Abigail the wife of Nabal the Carmelite; and the third, Absalom the son of Maacah the daughter of Talmai king of Geshur;"
+   },
+   {
+    "clue": "I stole the hearts of the men of Israel.",
+    "proposed_reference": "2 Samuel 15:6",
+    "kjv_text": "2 Samuel 15:6: And on this manner did Absalom to all Israel that came to the king for judgment: so Absalom stole the hearts of the men of Israel."
+   },
+   {
+    "clue": "I led a rebellion against my father.",
+    "proposed_reference": "2 Samuel 15:10-12",
+    "kjv_text": "2 Samuel 15:10-12: But Absalom sent spies throughout all the tribes of Israel, saying, As soon as ye hear the sound of the trumpet, then ye shall say, Absalom reigneth in Hebron. And with Absalom went two hundred men out of Jerusalem, that were called; and they went in their simplicity, and they knew not any thing. And Absalom sent for Ahithophel the Gilonite, David’s counsellor, from his city, even from Giloh, while he offered sacrifices. And the conspiracy was strong; for the people increased continually with Absalom."
+   },
+   {
+    "clue": "My head caught in an oak as my mule went on.",
+    "proposed_reference": "2 Samuel 18:9",
+    "kjv_text": "2 Samuel 18:9: And Absalom met the servants of David. And Absalom rode upon a mule, and the mule went under the thick boughs of a great oak, and his head caught hold of the oak, and he was taken up between the heaven and the earth; and the mule that was under him went away."
+   }
+  ],
+  "hint": "Look in 2 Samuel.",
+  "explanation": "Absalom's mule went under the thick boughs of a great oak, and his head caught hold of the oak.",
+  "reference_label": "2 Samuel 18:9",
+  "ref_kjv": "And Absalom met the servants of David. And Absalom rode upon a mule, and the mule went under the thick boughs of a great oak, and his head caught hold of the oak, and he was taken up between the heaven and the earth; and the mule that was under him went away."
+ },
+ {
+  "id": "who-jezebel",
+  "answer": "Jezebel",
+  "options": [
+   "Delilah",
+   "Jezebel",
+   "Vashti",
+   "Athaliah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was the daughter of the king of the Zidonians.",
+    "proposed_reference": "1 Kings 16:31",
+    "kjv_text": "1 Kings 16:31: And it came to pass, as if it had been a light thing for him to walk in the sins of Jeroboam the son of Nebat, that he took to wife Jezebel the daughter of Ethbaal king of the Zidonians, and went and served Baal, and worshipped him."
+   },
+   {
+    "clue": "I was the wife of King Ahab.",
+    "proposed_reference": "1 Kings 16:31",
+    "kjv_text": "1 Kings 16:31: And it came to pass, as if it had been a light thing for him to walk in the sins of Jeroboam the son of Nebat, that he took to wife Jezebel the daughter of Ethbaal king of the Zidonians, and went and served Baal, and worshipped him."
+   },
+   {
+    "clue": "I threatened Elijah's life after Mount Carmel.",
+    "proposed_reference": "1 Kings 19:1-2",
+    "kjv_text": "1 Kings 19:1-2: And Ahab told Jezebel all that Elijah had done, and withal how he had slain all the prophets with the sword. Then Jezebel sent a messenger unto Elijah, saying, So let the gods do to me, and more also, if I make not thy life as the life of one of them by to morrow about this time."
+   },
+   {
+    "clue": "I arranged Naboth's death to take his vineyard.",
+    "proposed_reference": "1 Kings 21:7-15",
+    "kjv_text": "1 Kings 21:7-15: And Jezebel his wife said unto him, Dost thou now govern the kingdom of Israel? arise, and eat bread, and let thine heart be merry: I will give thee the vineyard of Naboth the Jezreelite. So she wrote letters in Ahab’s name, and sealed them with his seal, and sent the letters unto the elders and to the nobles that were in his city, dwelling with Naboth. And she wrote in the letters, saying, Proclaim a fast, and set Naboth on high among the people: And set two men, sons of Belial, before him, to bear witness against him, saying, Thou didst blaspheme God and the king. And then carry him out, and stone him, that he may die. And the men of his city, even the elders and the nobles who were the inhabitants in his city, did as Jezebel had sent unto them, and as it was written in the letters which she had sent unto them. They proclaimed a fast, and set Naboth on high among the people. And there came in two men, children of Belial, and sat before him: and the men of Belial witnessed against him, even against Naboth, in the presence of the people, saying, Naboth did blaspheme God and the king. Then they carried him forth out of the city, and stoned him with stones, that he died. Then they sent to Jezebel, saying, Naboth is stoned, and is dead. And it came to pass, when Jezebel heard that Naboth was stoned, and was dead, that Jezebel said to Ahab, Arise, take possession of the vineyard of Naboth the Jezreelite, which he refused to give thee for money: for Naboth is not "
+   }
+  ],
+  "hint": "Look in 1 Kings.",
+  "explanation": "Jezebel sent a messenger unto Elijah, threatening his life.",
+  "reference_label": "1 Kings 19:2",
+  "ref_kjv": "Then Jezebel sent a messenger unto Elijah, saying, So let the gods do to me, and more also, if I make not thy life as the life of one of them by to morrow about this time."
+ },
+ {
+  "id": "who-ahab",
+  "answer": "Ahab",
+  "options": [
+   "Ahab",
+   "Jeroboam",
+   "Omri",
+   "Jehu"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a king of Israel.",
+    "proposed_reference": "1 Kings 16:29",
+    "kjv_text": "1 Kings 16:29: And in the thirty and eighth year of Asa king of Judah began Ahab the son of Omri to reign over Israel: and Ahab the son of Omri reigned over Israel in Samaria twenty and two years."
+   },
+   {
+    "clue": "I married Jezebel.",
+    "proposed_reference": "1 Kings 16:31",
+    "kjv_text": "1 Kings 16:31: And it came to pass, as if it had been a light thing for him to walk in the sins of Jeroboam the son of Nebat, that he took to wife Jezebel the daughter of Ethbaal king of the Zidonians, and went and served Baal, and worshipped him."
+   },
+   {
+    "clue": "I asked Elijah, Art thou he that troubleth Israel?",
+    "proposed_reference": "1 Kings 18:17",
+    "kjv_text": "1 Kings 18:17: And it came to pass, when Ahab saw Elijah, that Ahab said unto him, Art thou he that troubleth Israel?"
+   },
+   {
+    "clue": "I wanted Naboth's vineyard for a garden of herbs.",
+    "proposed_reference": "1 Kings 21:2",
+    "kjv_text": "1 Kings 21:2: And Ahab spake unto Naboth, saying, Give me thy vineyard, that I may have it for a garden of herbs, because it is near unto my house: and I will give thee for it a better vineyard than it; or, if it seem good to thee, I will give thee the worth of it in money."
+   }
+  ],
+  "hint": "Look in 1 Kings.",
+  "explanation": "Ahab said to Naboth, \"Give me thy vineyard.\"",
+  "reference_label": "1 Kings 21:2",
+  "ref_kjv": "And Ahab spake unto Naboth, saying, Give me thy vineyard, that I may have it for a garden of herbs, because it is near unto my house: and I will give thee for it a better vineyard than it; or, if it seem good to thee, I will give thee the worth of it in money."
+ },
+ {
+  "id": "who-hezekiah",
+  "answer": "Hezekiah",
+  "options": [
+   "Hezekiah",
+   "Josiah",
+   "Manasseh",
+   "Uzziah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a king of Judah.",
+    "proposed_reference": "2 Kings 18:1",
+    "kjv_text": "2 Kings 18:1: Now it came to pass in the third year of Hoshea son of Elah king of Israel, that Hezekiah the son of Ahaz king of Judah began to reign."
+   },
+   {
+    "clue": "I broke in pieces the brasen serpent that Moses had made.",
+    "proposed_reference": "2 Kings 18:4",
+    "kjv_text": "2 Kings 18:4: He removed the high places, and brake the images, and cut down the groves, and brake in pieces the brasen serpent that Moses had made: for unto those days the children of Israel did burn incense to it: and he called it Nehushtan."
+   },
+   {
+    "clue": "Isaiah told me to set my house in order.",
+    "proposed_reference": "2 Kings 20:1",
+    "kjv_text": "2 Kings 20:1: In those days was Hezekiah sick unto death. And the prophet Isaiah the son of Amoz came to him, and said unto him, Thus saith the LORD, Set thine house in order; for thou shalt die, and not live."
+   },
+   {
+    "clue": "God added fifteen years to my life.",
+    "proposed_reference": "Isaiah 38:5",
+    "kjv_text": "Isaiah 38:5: Go, and say to Hezekiah, Thus saith the LORD, the God of David thy father, I have heard thy prayer, I have seen thy tears: behold, I will add unto thy days fifteen years."
+   }
+  ],
+  "hint": "Look in Isaiah.",
+  "explanation": "God said through Isaiah, \"I will add unto thy days fifteen years.\"",
+  "reference_label": "Isaiah 38:5",
+  "ref_kjv": "Go, and say to Hezekiah, Thus saith the LORD, the God of David thy father, I have heard thy prayer, I have seen thy tears: behold, I will add unto thy days fifteen years."
+ },
+ {
+  "id": "who-josiah",
+  "answer": "Josiah",
+  "options": [
+   "Joash",
+   "Josiah",
+   "Hezekiah",
+   "Jehoiakim"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I became king of Judah at eight years old.",
+    "proposed_reference": "2 Kings 22:1",
+    "kjv_text": "2 Kings 22:1: Josiah was eight years old when he began to reign, and he reigned thirty and one years in Jerusalem. And his mother’s name was Jedidah, the daughter of Adaiah of Boscath."
+   },
+   {
+    "clue": "The book of the law was found in the temple in my reign.",
+    "proposed_reference": "2 Kings 22:8",
+    "kjv_text": "2 Kings 22:8: And Hilkiah the high priest said unto Shaphan the scribe, I have found the book of the law in the house of the LORD. And Hilkiah gave the book to Shaphan, and he read it."
+   },
+   {
+    "clue": "I rent my clothes when it was read to me.",
+    "proposed_reference": "2 Kings 22:11",
+    "kjv_text": "2 Kings 22:11: And it came to pass, when the king had heard the words of the book of the law, that he rent his clothes."
+   },
+   {
+    "clue": "I kept a great passover.",
+    "proposed_reference": "2 Kings 23:21-23",
+    "kjv_text": "2 Kings 23:21-23: And the king commanded all the people, saying, Keep the passover unto the LORD your God, as it is written in the book of this covenant. Surely there was not holden such a passover from the days of the judges that judged Israel, nor in all the days of the kings of Israel, nor of the kings of Judah; But in the eighteenth year of king Josiah, wherein this passover was holden to the LORD in Jerusalem."
+   }
+  ],
+  "hint": "Look in 2 Kings.",
+  "explanation": "\"Josiah was eight years old when he began to reign.\"",
+  "reference_label": "2 Kings 22:1",
+  "ref_kjv": "Josiah was eight years old when he began to reign, and he reigned thirty and one years in Jerusalem. And his mother’s name was Jedidah, the daughter of Adaiah of Boscath."
+ },
+ {
+  "id": "who-ezra",
+  "answer": "Ezra",
+  "options": [
+   "Ezra",
+   "Zerubbabel",
+   "Nehemiah",
+   "Haggai"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a priest and a ready scribe in the law of Moses.",
+    "proposed_reference": "Ezra 7:6",
+    "kjv_text": "Ezra 7:6: This Ezra went up from Babylon; and he was a ready scribe in the law of Moses, which the LORD God of Israel had given: and the king granted him all his request, according to the hand of the LORD his God upon him."
+   },
+   {
+    "clue": "I went up from Babylon in the reign of Artaxerxes.",
+    "proposed_reference": "Ezra 7:1-6",
+    "kjv_text": "Ezra 7:1-6: Now after these things, in the reign of Artaxerxes king of Persia, Ezra the son of Seraiah, the son of Azariah, the son of Hilkiah, The son of Shallum, the son of Zadok, the son of Ahitub, The son of Amariah, the son of Azariah, the son of Meraioth, The son of Zerahiah, the son of Uzzi, the son of Bukki, The son of Abishua, the son of Phinehas, the son of Eleazar, the son of Aaron the chief priest: This Ezra went up from Babylon; and he was a ready scribe in the law of Moses, which the LORD God of Israel had given: and the king granted him all his request, according to the hand of the LORD his God upon him."
+   },
+   {
+    "clue": "I read the book of the law to the people.",
+    "proposed_reference": "Nehemiah 8:2-3",
+    "kjv_text": "Nehemiah 8:2-3: And Ezra the priest brought the law before the congregation both of men and women, and all that could hear with understanding, upon the first day of the seventh month. And he read therein before the street that was before the water gate from the morning until midday, before the men and the women, and those that could understand; and the ears of all the people were attentive unto the book of the law."
+   },
+   {
+    "clue": "I stood upon a pulpit of wood.",
+    "proposed_reference": "Nehemiah 8:4",
+    "kjv_text": "Nehemiah 8:4: And Ezra the scribe stood upon a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, and Shema, and Anaiah, and Urijah, and Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, and Mishael, and Malchiah, and Hashum, and Hashbadana, Zechariah, and Meshullam."
+   }
+  ],
+  "hint": "Look in the books of history.",
+  "explanation": "Ezra the scribe stood upon a pulpit of wood.",
+  "reference_label": "Nehemiah 8:4",
+  "ref_kjv": "And Ezra the scribe stood upon a pulpit of wood, which they had made for the purpose; and beside him stood Mattithiah, and Shema, and Anaiah, and Urijah, and Hilkiah, and Maaseiah, on his right hand; and on his left hand, Pedaiah, and Mishael, and Malchiah, and Hashum, and Hashbadana, Zechariah, and Meshullam."
+ },
+ {
+  "id": "who-ezekiel",
+  "answer": "Ezekiel",
+  "options": [
+   "Jeremiah",
+   "Daniel",
+   "Ezekiel",
+   "Zechariah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a priest among the captives by the river Chebar.",
+    "proposed_reference": "Ezekiel 1:3",
+    "kjv_text": "Ezekiel 1:3: The word of the LORD came expressly unto Ezekiel the priest, the son of Buzi, in the land of the Chaldeans by the river Chebar; and the hand of the LORD was there upon him."
+   },
+   {
+    "clue": "I saw wheels whose rings were full of eyes.",
+    "proposed_reference": "Ezekiel 1:18",
+    "kjv_text": "Ezekiel 1:18: As for their rings, they were so high that they were dreadful; and their rings were full of eyes round about them four."
+   },
+   {
+    "clue": "I lay on my side for many days as a sign.",
+    "proposed_reference": "Ezekiel 4:4-6",
+    "kjv_text": "Ezekiel 4:4-6: Lie thou also upon thy left side, and lay the iniquity of the house of Israel upon it: according to the number of the days that thou shalt lie upon it thou shalt bear their iniquity. For I have laid upon thee the years of their iniquity, according to the number of the days, three hundred and ninety days: so shalt thou bear the iniquity of the house of Israel. And when thou hast accomplished them, lie again on thy right side, and thou shalt bear the iniquity of the house of Judah forty days: I have appointed thee each day for a year."
+   },
+   {
+    "clue": "I prophesied to a valley of dry bones.",
+    "proposed_reference": "Ezekiel 37:1-4",
+    "kjv_text": "Ezekiel 37:1-4: The hand of the LORD was upon me, and carried me out in the spirit of the LORD, and set me down in the midst of the valley which was full of bones, And caused me to pass by them round about: and, behold, there were very many in the open valley; and, lo, they were very dry. And he said unto me, Son of man, can these bones live? And I answered, O Lord GOD, thou knowest. Again he said unto me, Prophesy upon these bones, and say unto them, O ye dry bones, hear the word of the LORD."
+   }
+  ],
+  "hint": "Look in the Major Prophets.",
+  "explanation": "God said, \"Prophesy upon these bones, and say unto them, O ye dry bones, hear the word of the LORD.\"",
+  "reference_label": "Ezekiel 37:4",
+  "ref_kjv": "Again he said unto me, Prophesy upon these bones, and say unto them, O ye dry bones, hear the word of the LORD."
+ },
+ {
+  "id": "who-hosea",
+  "answer": "Hosea",
+  "options": [
+   "Hosea",
+   "Amos",
+   "Joel",
+   "Micah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a prophet to Israel.",
+    "proposed_reference": "Hosea 1:1-2",
+    "kjv_text": "Hosea 1:1-2: The word of the LORD that came unto Hosea, the son of Beeri, in the days of Uzziah, Jotham, Ahaz, and Hezekiah, kings of Judah, and in the days of Jeroboam the son of Joash, king of Israel. The beginning of the word of the LORD by Hosea. And the LORD said to Hosea, Go, take unto thee a wife of whoredoms and children of whoredoms: for the land hath committed great whoredom, departing from the LORD."
+   },
+   {
+    "clue": "I obeyed God and took Gomer as my wife.",
+    "proposed_reference": "Hosea 1:2-3",
+    "kjv_text": "Hosea 1:2-3: The beginning of the word of the LORD by Hosea. And the LORD said to Hosea, Go, take unto thee a wife of whoredoms and children of whoredoms: for the land hath committed great whoredom, departing from the LORD. So he went and took Gomer the daughter of Diblaim; which conceived, and bare him a son."
+   },
+   {
+    "clue": "I named a son Loammi.",
+    "proposed_reference": "Hosea 1:9",
+    "kjv_text": "Hosea 1:9: Then said God, Call his name Lo-ammi: for ye are not my people, and I will not be your God."
+   },
+   {
+    "clue": "I bought a woman for fifteen pieces of silver and barley.",
+    "proposed_reference": "Hosea 3:1-2",
+    "kjv_text": "Hosea 3:1-2: Then said the LORD unto me, Go yet, love a woman beloved of her friend, yet an adulteress, according to the love of the LORD toward the children of Israel, who look to other gods, and love flagons of wine. So I bought her to me for fifteen pieces of silver, and for an homer of barley, and an half homer of barley:"
+   }
+  ],
+  "hint": "Look in the Minor Prophets.",
+  "explanation": "Hosea took Gomer the daughter of Diblaim.",
+  "reference_label": "Hosea 1:3",
+  "ref_kjv": "So he went and took Gomer the daughter of Diblaim; which conceived, and bare him a son."
+ },
+ {
+  "id": "who-amos",
+  "answer": "Amos",
+  "options": [
+   "Amos",
+   "Micah",
+   "Obadiah",
+   "Hosea"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was among the herdmen of Tekoa.",
+    "proposed_reference": "Amos 1:1",
+    "kjv_text": "Amos 1:1: The words of Amos, who was among the herdmen of Tekoa, which he saw concerning Israel in the days of Uzziah king of Judah, and in the days of Jeroboam the son of Joash king of Israel, two years before the earthquake."
+   },
+   {
+    "clue": "I was a gatherer of sycomore fruit.",
+    "proposed_reference": "Amos 7:14",
+    "kjv_text": "Amos 7:14: Then answered Amos, and said to Amaziah, I was no prophet, neither was I a prophet’s son; but I was an herdman, and a gatherer of sycomore fruit:"
+   },
+   {
+    "clue": "I said I was no prophet, neither a prophet's son.",
+    "proposed_reference": "Amos 7:14",
+    "kjv_text": "Amos 7:14: Then answered Amos, and said to Amaziah, I was no prophet, neither was I a prophet’s son; but I was an herdman, and a gatherer of sycomore fruit:"
+   },
+   {
+    "clue": "I cried: let judgment run down as waters.",
+    "proposed_reference": "Amos 5:24",
+    "kjv_text": "Amos 5:24: But let judgment run down as waters, and righteousness as a mighty stream."
+   }
+  ],
+  "hint": "Look in the Minor Prophets.",
+  "explanation": "Amos said, \"I was no prophet... but I was an herdman, and a gatherer of sycomore fruit.\"",
+  "reference_label": "Amos 7:14",
+  "ref_kjv": "Then answered Amos, and said to Amaziah, I was no prophet, neither was I a prophet’s son; but I was an herdman, and a gatherer of sycomore fruit:"
+ },
+ {
+  "id": "who-zacharias",
+  "answer": "Zacharias",
+  "options": [
+   "Joseph",
+   "Annas",
+   "Zacharias",
+   "Simeon"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a priest of the course of Abia.",
+    "proposed_reference": "Luke 1:5",
+    "kjv_text": "Luke 1:5: There was in the days of Herod, the king of Judæa, a certain priest named Zacharias, of the course of Abia: and his wife was of the daughters of Aaron, and her name was Elisabeth."
+   },
+   {
+    "clue": "An angel appeared to me by the altar of incense.",
+    "proposed_reference": "Luke 1:11",
+    "kjv_text": "Luke 1:11: And there appeared unto him an angel of the Lord standing on the right side of the altar of incense."
+   },
+   {
+    "clue": "I was struck dumb because I did not believe.",
+    "proposed_reference": "Luke 1:20",
+    "kjv_text": "Luke 1:20: And, behold, thou shalt be dumb, and not able to speak, until the day that these things shall be performed, because thou believest not my words, which shall be fulfilled in their season."
+   },
+   {
+    "clue": "I wrote: His name is John.",
+    "proposed_reference": "Luke 1:63",
+    "kjv_text": "Luke 1:63: And he asked for a writing table, and wrote, saying, His name is John. And they marvelled all."
+   }
+  ],
+  "hint": "Look in Luke.",
+  "explanation": "Zacharias asked for a writing table and wrote, \"His name is John.\"",
+  "reference_label": "Luke 1:63",
+  "ref_kjv": "And he asked for a writing table, and wrote, saying, His name is John. And they marvelled all."
+ },
+ {
+  "id": "who-elisabeth",
+  "answer": "Elisabeth",
+  "options": [
+   "Elisabeth",
+   "Anna",
+   "Salome",
+   "Mary"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was of the daughters of Aaron.",
+    "proposed_reference": "Luke 1:5",
+    "kjv_text": "Luke 1:5: There was in the days of Herod, the king of Judæa, a certain priest named Zacharias, of the course of Abia: and his wife was of the daughters of Aaron, and her name was Elisabeth."
+   },
+   {
+    "clue": "I was barren and well stricken in years.",
+    "proposed_reference": "Luke 1:7",
+    "kjv_text": "Luke 1:7: And they had no child, because that Elisabeth was barren, and they both were now well stricken in years."
+   },
+   {
+    "clue": "My babe leaped in my womb when Mary greeted me.",
+    "proposed_reference": "Luke 1:41",
+    "kjv_text": "Luke 1:41: And it came to pass, that, when Elisabeth heard the salutation of Mary, the babe leaped in her womb; and Elisabeth was filled with the Holy Ghost:"
+   },
+   {
+    "clue": "I was the mother of John the Baptist.",
+    "proposed_reference": "Luke 1:57-60",
+    "kjv_text": "Luke 1:57-60: Now Elisabeth’s full time came that she should be delivered; and she brought forth a son. And her neighbours and her cousins heard how the Lord had shewed great mercy upon her; and they rejoiced with her. And it came to pass, that on the eighth day they came to circumcise the child; and they called him Zacharias, after the name of his father. And his mother answered and said, Not so; but he shall be called John."
+   }
+  ],
+  "hint": "Look in Luke.",
+  "explanation": "When Elisabeth heard Mary's greeting, the babe leaped in her womb.",
+  "reference_label": "Luke 1:41",
+  "ref_kjv": "And it came to pass, that, when Elisabeth heard the salutation of Mary, the babe leaped in her womb; and Elisabeth was filled with the Holy Ghost:"
+ },
+ {
+  "id": "who-simeon",
+  "answer": "Simeon",
+  "options": [
+   "Simeon",
+   "Joseph of Arimathaea",
+   "Zacharias",
+   "Nicodemus"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a just and devout man in Jerusalem.",
+    "proposed_reference": "Luke 2:25",
+    "kjv_text": "Luke 2:25: And, behold, there was a man in Jerusalem, whose name was Simeon; and the same man was just and devout, waiting for the consolation of Israel: and the Holy Ghost was upon him."
+   },
+   {
+    "clue": "The Holy Ghost revealed I would not die before seeing the Lord's Christ.",
+    "proposed_reference": "Luke 2:26",
+    "kjv_text": "Luke 2:26: And it was revealed unto him by the Holy Ghost, that he should not see death, before he had seen the Lord’s Christ."
+   },
+   {
+    "clue": "I took the child Jesus up in my arms in the temple.",
+    "proposed_reference": "Luke 2:28",
+    "kjv_text": "Luke 2:28: Then took he him up in his arms, and blessed God, and said,"
+   },
+   {
+    "clue": "I said: Lord, now lettest thou thy servant depart in peace.",
+    "proposed_reference": "Luke 2:29",
+    "kjv_text": "Luke 2:29: Lord, now lettest thou thy servant depart in peace, according to thy word:"
+   }
+  ],
+  "hint": "Look in Luke.",
+  "explanation": "Simeon said, \"Lord, now lettest thou thy servant depart in peace, according to thy word.\"",
+  "reference_label": "Luke 2:29",
+  "ref_kjv": "Lord, now lettest thou thy servant depart in peace, according to thy word:"
+ },
+ {
+  "id": "who-anna",
+  "answer": "Anna",
+  "options": [
+   "Elisabeth",
+   "Anna",
+   "Phebe",
+   "Dorcas"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a prophetess of the tribe of Aser.",
+    "proposed_reference": "Luke 2:36",
+    "kjv_text": "Luke 2:36: And there was one Anna, a prophetess, the daughter of Phanuel, of the tribe of Aser: she was of a great age, and had lived with an husband seven years from her virginity;"
+   },
+   {
+    "clue": "I was a widow of about fourscore and four years.",
+    "proposed_reference": "Luke 2:37",
+    "kjv_text": "Luke 2:37: And she was a widow of about fourscore and four years, which departed not from the temple, but served God with fastings and prayers night and day."
+   },
+   {
+    "clue": "I served God with fastings and prayers night and day.",
+    "proposed_reference": "Luke 2:37",
+    "kjv_text": "Luke 2:37: And she was a widow of about fourscore and four years, which departed not from the temple, but served God with fastings and prayers night and day."
+   },
+   {
+    "clue": "I gave thanks when the child Jesus was brought to the temple.",
+    "proposed_reference": "Luke 2:38",
+    "kjv_text": "Luke 2:38: And she coming in that instant gave thanks likewise unto the Lord, and spake of him to all them that looked for redemption in Jerusalem."
+   }
+  ],
+  "hint": "Look in Luke.",
+  "explanation": "\"There was one Anna, a prophetess... of the tribe of Aser.\"",
+  "reference_label": "Luke 2:36",
+  "ref_kjv": "And there was one Anna, a prophetess, the daughter of Phanuel, of the tribe of Aser: she was of a great age, and had lived with an husband seven years from her virginity;"
+ },
+ {
+  "id": "who-joseph_husband",
+  "answer": "Joseph, husband of Mary",
+  "options": [
+   "Joseph of Arimathaea",
+   "Zacharias",
+   "Simeon",
+   "Joseph, husband of Mary"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was of the house and lineage of David.",
+    "proposed_reference": "Luke 2:4",
+    "kjv_text": "Luke 2:4: And Joseph also went up from Galilee, out of the city of Nazareth, into Judæa, unto the city of David, which is called Bethlehem; (because he was of the house and lineage of David:)"
+   },
+   {
+    "clue": "An angel told me in a dream not to fear to take Mary as my wife.",
+    "proposed_reference": "Matthew 1:20",
+    "kjv_text": "Matthew 1:20: But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost."
+   },
+   {
+    "clue": "I took the young child and his mother into Egypt by night.",
+    "proposed_reference": "Matthew 2:14",
+    "kjv_text": "Matthew 2:14: When he arose, he took the young child and his mother by night, and departed into Egypt:"
+   },
+   {
+    "clue": "People called Jesus the carpenter's son.",
+    "proposed_reference": "Matthew 13:55",
+    "kjv_text": "Matthew 13:55: Is not this the carpenter’s son? is not his mother called Mary? and his brethren, James, and Joses, and Simon, and Judas?"
+   }
+  ],
+  "hint": "Look in Matthew.",
+  "explanation": "The angel said, \"Joseph, thou son of David, fear not to take unto thee Mary thy wife.\"",
+  "reference_label": "Matthew 1:20",
+  "ref_kjv": "But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost."
+ },
+ {
+  "id": "who-andrew",
+  "answer": "Andrew",
+  "options": [
+   "James",
+   "Andrew",
+   "Nathanael",
+   "Philip"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was from Bethsaida.",
+    "proposed_reference": "John 1:44",
+    "kjv_text": "John 1:44: Now Philip was of Bethsaida, the city of Andrew and Peter."
+   },
+   {
+    "clue": "I first heard John the Baptist speak about Jesus.",
+    "proposed_reference": "John 1:40",
+    "kjv_text": "John 1:40: One of the two which heard John speak, and followed him, was Andrew, Simon Peter’s brother."
+   },
+   {
+    "clue": "I brought my brother Simon to Jesus.",
+    "proposed_reference": "John 1:41-42",
+    "kjv_text": "John 1:41-42: He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ. And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas, which is by interpretation, A stone."
+   },
+   {
+    "clue": "I told Jesus of a lad with five barley loaves.",
+    "proposed_reference": "John 6:8-9",
+    "kjv_text": "John 6:8-9: One of his disciples, Andrew, Simon Peter’s brother, saith unto him, There is a lad here, which hath five barley loaves, and two small fishes: but what are they among so many?"
+   }
+  ],
+  "hint": "Look in John.",
+  "explanation": "Andrew first found his own brother Simon and brought him to Jesus.",
+  "reference_label": "John 1:40-41",
+  "ref_kjv": "One of the two which heard John speak, and followed him, was Andrew, Simon Peter’s brother. He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ."
+ },
+ {
+  "id": "who-philip_apostle",
+  "answer": "Philip",
+  "options": [
+   "Thomas",
+   "Bartholomew",
+   "Andrew",
+   "Philip"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was from Bethsaida.",
+    "proposed_reference": "John 1:44",
+    "kjv_text": "John 1:44: Now Philip was of Bethsaida, the city of Andrew and Peter."
+   },
+   {
+    "clue": "Jesus said to me, Follow me.",
+    "proposed_reference": "John 1:43",
+    "kjv_text": "John 1:43: The day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me."
+   },
+   {
+    "clue": "I told Nathanael: Come and see.",
+    "proposed_reference": "John 1:46",
+    "kjv_text": "John 1:46: And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see."
+   },
+   {
+    "clue": "I asked Jesus: Lord, shew us the Father.",
+    "proposed_reference": "John 14:8",
+    "kjv_text": "John 14:8: Philip saith unto him, Lord, shew us the Father, and it sufficeth us."
+   }
+  ],
+  "hint": "Look in John.",
+  "explanation": "Philip said, \"Lord, shew us the Father, and it sufficeth us.\"",
+  "reference_label": "John 14:8",
+  "ref_kjv": "Philip saith unto him, Lord, shew us the Father, and it sufficeth us."
+ },
+ {
+  "id": "who-nathanael",
+  "answer": "Nathanael",
+  "options": [
+   "Thomas",
+   "Nicodemus",
+   "Nathanael",
+   "Philip"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was from Cana of Galilee.",
+    "proposed_reference": "John 21:2",
+    "kjv_text": "John 21:2: There were together Simon Peter, and Thomas called Didymus, and Nathanael of Cana in Galilee, and the sons of Zebedee, and two other of his disciples."
+   },
+   {
+    "clue": "I asked: Can there any good thing come out of Nazareth?",
+    "proposed_reference": "John 1:46",
+    "kjv_text": "John 1:46: And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see."
+   },
+   {
+    "clue": "Jesus saw me under the fig tree.",
+    "proposed_reference": "John 1:48",
+    "kjv_text": "John 1:48: Nathanael saith unto him, Whence knowest thou me? Jesus answered and said unto him, Before that Philip called thee, when thou wast under the fig tree, I saw thee."
+   },
+   {
+    "clue": "Jesus called me an Israelite indeed, in whom is no guile.",
+    "proposed_reference": "John 1:47",
+    "kjv_text": "John 1:47: Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile!"
+   }
+  ],
+  "hint": "Look in John.",
+  "explanation": "Jesus said of Nathanael, \"Behold an Israelite indeed, in whom is no guile!\"",
+  "reference_label": "John 1:47",
+  "ref_kjv": "Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile!"
+ },
+ {
+  "id": "who-pilate",
+  "answer": "Pontius Pilate",
+  "options": [
+   "Caiaphas",
+   "Herod",
+   "Felix",
+   "Pontius Pilate"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was the Roman governor of Judaea.",
+    "proposed_reference": "Luke 3:1",
+    "kjv_text": "Luke 3:1: Now in the fifteenth year of the reign of Tiberius Cæsar, Pontius Pilate being governor of Judæa, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of Ituraea and of the region of Trachonitis, and Lysanias the tetrarch of Abilene,"
+   },
+   {
+    "clue": "My wife sent word about a dream concerning a just man.",
+    "proposed_reference": "Matthew 27:19",
+    "kjv_text": "Matthew 27:19: When he was set down on the judgment seat, his wife sent unto him, saying, Have thou nothing to do with that just man: for I have suffered many things this day in a dream because of him."
+   },
+   {
+    "clue": "I asked: What is truth?",
+    "proposed_reference": "John 18:38",
+    "kjv_text": "John 18:38: Pilate saith unto him, What is truth? And when he had said this, he went out again unto the Jews, and saith unto them, I find in him no fault at all."
+   },
+   {
+    "clue": "I washed my hands before the multitude.",
+    "proposed_reference": "Matthew 27:24",
+    "kjv_text": "Matthew 27:24: When Pilate saw that he could prevail nothing, but that rather a tumult was made, he took water, and washed his hands before the multitude, saying, I am innocent of the blood of this just person: see ye to it."
+   }
+  ],
+  "hint": "Look in Matthew.",
+  "explanation": "Pilate took water and washed his hands before the multitude.",
+  "reference_label": "Matthew 27:24",
+  "ref_kjv": "When Pilate saw that he could prevail nothing, but that rather a tumult was made, he took water, and washed his hands before the multitude, saying, I am innocent of the blood of this just person: see ye to it."
+ },
+ {
+  "id": "who-caiaphas",
+  "answer": "Caiaphas",
+  "options": [
+   "Annas",
+   "Caiaphas",
+   "Nicodemus",
+   "Gamaliel"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was high priest that same year.",
+    "proposed_reference": "John 11:49",
+    "kjv_text": "John 11:49: And one of them, named Caiaphas, being the high priest that same year, said unto them, Ye know nothing at all,"
+   },
+   {
+    "clue": "I said it was expedient that one man should die for the people.",
+    "proposed_reference": "John 11:50",
+    "kjv_text": "John 11:50: Nor consider that it is expedient for us, that one man should die for the people, and that the whole nation perish not."
+   },
+   {
+    "clue": "Annas was my father-in-law.",
+    "proposed_reference": "John 18:13",
+    "kjv_text": "John 18:13: And led him away to Annas first; for he was father in law to Caiaphas, which was the high priest that same year."
+   },
+   {
+    "clue": "Annas sent Jesus to me bound.",
+    "proposed_reference": "John 18:24",
+    "kjv_text": "John 18:24: Now Annas had sent him bound unto Caiaphas the high priest."
+   }
+  ],
+  "hint": "Look in John.",
+  "explanation": "Caiaphas, the high priest that same year, said it was expedient that one man should die for the people.",
+  "reference_label": "John 11:49-50",
+  "ref_kjv": "And one of them, named Caiaphas, being the high priest that same year, said unto them, Ye know nothing at all, Nor consider that it is expedient for us, that one man should die for the people, and that the whole nation perish not."
+ },
+ {
+  "id": "who-gamaliel",
+  "answer": "Gamaliel",
+  "options": [
+   "Caiaphas",
+   "Ananias",
+   "Gamaliel",
+   "Nicodemus"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a Pharisee and a doctor of the law.",
+    "proposed_reference": "Acts 5:34",
+    "kjv_text": "Acts 5:34: Then stood there up one in the council, a Pharisee, named Gamaliel, a doctor of the law, had in reputation among all the people, and commanded to put the apostles forth a little space;"
+   },
+   {
+    "clue": "I was had in reputation among all the people.",
+    "proposed_reference": "Acts 5:34",
+    "kjv_text": "Acts 5:34: Then stood there up one in the council, a Pharisee, named Gamaliel, a doctor of the law, had in reputation among all the people, and commanded to put the apostles forth a little space;"
+   },
+   {
+    "clue": "I told the council to let the apostles alone.",
+    "proposed_reference": "Acts 5:38",
+    "kjv_text": "Acts 5:38: And now I say unto you, Refrain from these men, and let them alone: for if this counsel or this work be of men, it will come to nought:"
+   },
+   {
+    "clue": "Paul was brought up at my feet.",
+    "proposed_reference": "Acts 22:3",
+    "kjv_text": "Acts 22:3: I am verily a man which am a Jew, born in Tarsus, a city in Cilicia, yet brought up in this city at the feet of Gamaliel, and taught according to the perfect manner of the law of the fathers, and was zealous toward God, as ye all are this day."
+   }
+  ],
+  "hint": "Look in Acts.",
+  "explanation": "A Pharisee named Gamaliel, a doctor of the law, stood up in the council.",
+  "reference_label": "Acts 5:34",
+  "ref_kjv": "Then stood there up one in the council, a Pharisee, named Gamaliel, a doctor of the law, had in reputation among all the people, and commanded to put the apostles forth a little space;"
+ },
+ {
+  "id": "who-dorcas",
+  "answer": "Tabitha (Dorcas)",
+  "options": [
+   "Lydia",
+   "Tabitha (Dorcas)",
+   "Priscilla",
+   "Phebe"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I lived in Joppa.",
+    "proposed_reference": "Acts 9:36",
+    "kjv_text": "Acts 9:36: Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas: this woman was full of good works and almsdeeds which she did."
+   },
+   {
+    "clue": "I was full of good works and almsdeeds.",
+    "proposed_reference": "Acts 9:36",
+    "kjv_text": "Acts 9:36: Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas: this woman was full of good works and almsdeeds which she did."
+   },
+   {
+    "clue": "I made coats and garments that the widows showed.",
+    "proposed_reference": "Acts 9:39",
+    "kjv_text": "Acts 9:39: Then Peter arose and went with them. When he was come, they brought him into the upper chamber: and all the widows stood by him weeping, and shewing the coats and garments which Dorcas made, while she was with them."
+   },
+   {
+    "clue": "Peter said to me, arise, and I opened my eyes.",
+    "proposed_reference": "Acts 9:40",
+    "kjv_text": "Acts 9:40: But Peter put them all forth, and kneeled down, and prayed; and turning him to the body said, Tabitha, arise. And she opened her eyes: and when she saw Peter, she sat up."
+   }
+  ],
+  "hint": "Look in Acts.",
+  "explanation": "Peter turned to the body and said, \"Tabitha, arise.\" And she opened her eyes.",
+  "reference_label": "Acts 9:40",
+  "ref_kjv": "But Peter put them all forth, and kneeled down, and prayed; and turning him to the body said, Tabitha, arise. And she opened her eyes: and when she saw Peter, she sat up."
+ },
+ {
+  "id": "who-cornelius",
+  "answer": "Cornelius",
+  "options": [
+   "Claudius Lysias",
+   "Sergius Paulus",
+   "Cornelius",
+   "Julius"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a centurion of the Italian band.",
+    "proposed_reference": "Acts 10:1",
+    "kjv_text": "Acts 10:1: There was a certain man in Cæsarea called Cornelius, a centurion of the band called the Italian band,"
+   },
+   {
+    "clue": "I was a devout man who prayed to God alway.",
+    "proposed_reference": "Acts 10:2",
+    "kjv_text": "Acts 10:2: A devout man, and one that feared God with all his house, which gave much alms to the people, and prayed to God alway."
+   },
+   {
+    "clue": "An angel told me to send to Joppa for Peter.",
+    "proposed_reference": "Acts 10:3-5",
+    "kjv_text": "Acts 10:3-5: He saw in a vision evidently about the ninth hour of the day an angel of God coming in to him, and saying unto him, Cornelius. And when he looked on him, he was afraid, and said, What is it, Lord? And he said unto him, Thy prayers and thine alms are come up for a memorial before God. And now send men to Joppa, and call for one Simon, whose surname is Peter:"
+   },
+   {
+    "clue": "The Holy Ghost fell on all who heard Peter speak in my house.",
+    "proposed_reference": "Acts 10:44",
+    "kjv_text": "Acts 10:44: While Peter yet spake these words, the Holy Ghost fell on all them which heard the word."
+   }
+  ],
+  "hint": "Look in Acts.",
+  "explanation": "Cornelius was a centurion of the band called the Italian band, in Caesarea.",
+  "reference_label": "Acts 10:1",
+  "ref_kjv": "There was a certain man in Cæsarea called Cornelius, a centurion of the band called the Italian band,"
+ },
+ {
+  "id": "who-priscilla",
+  "answer": "Priscilla",
+  "options": [
+   "Dorcas",
+   "Priscilla",
+   "Lydia",
+   "Phebe"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "My husband Aquila and I were tentmakers.",
+    "proposed_reference": "Acts 18:3",
+    "kjv_text": "Acts 18:3: And because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers."
+   },
+   {
+    "clue": "We came from Italy when Claudius commanded the Jews to leave Rome.",
+    "proposed_reference": "Acts 18:2",
+    "kjv_text": "Acts 18:2: And found a certain Jew named Aquila, born in Pontus, lately come from Italy, with his wife Priscilla; (because that Claudius had commanded all Jews to depart from Rome:) and came unto them."
+   },
+   {
+    "clue": "Paul stayed and worked with us in Corinth.",
+    "proposed_reference": "Acts 18:3",
+    "kjv_text": "Acts 18:3: And because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers."
+   },
+   {
+    "clue": "We expounded the way of God more perfectly to Apollos.",
+    "proposed_reference": "Acts 18:26",
+    "kjv_text": "Acts 18:26: And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly."
+   }
+  ],
+  "hint": "Look in Acts.",
+  "explanation": "Aquila and Priscilla took Apollos aside and expounded unto him the way of God more perfectly.",
+  "reference_label": "Acts 18:26",
+  "ref_kjv": "And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly."
+ },
+ {
+  "id": "who-silas",
+  "answer": "Silas",
+  "options": [
+   "Luke",
+   "Barnabas",
+   "Silas",
+   "Timothy"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a chief man among the brethren.",
+    "proposed_reference": "Acts 15:22",
+    "kjv_text": "Acts 15:22: Then pleased it the apostles and elders, with the whole church, to send chosen men of their own company to Antioch with Paul and Barnabas; namely, Judas surnamed Barsabas, and Silas, chief men among the brethren:"
+   },
+   {
+    "clue": "I travelled with Paul after he parted from Barnabas.",
+    "proposed_reference": "Acts 15:40",
+    "kjv_text": "Acts 15:40: And Paul chose Silas, and departed, being recommended by the brethren unto the grace of God."
+   },
+   {
+    "clue": "I was beaten and put in the stocks with Paul at Philippi.",
+    "proposed_reference": "Acts 16:22-24",
+    "kjv_text": "Acts 16:22-24: And the multitude rose up together against them: and the magistrates rent off their clothes, and commanded to beat them. And when they had laid many stripes upon them, they cast them into prison, charging the jailor to keep them safely: Who, having received such a charge, thrust them into the inner prison, and made their feet fast in the stocks."
+   },
+   {
+    "clue": "At midnight Paul and I prayed and sang praises.",
+    "proposed_reference": "Acts 16:25",
+    "kjv_text": "Acts 16:25: And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them."
+   }
+  ],
+  "hint": "Look in Acts.",
+  "explanation": "At midnight Paul and Silas prayed, and sang praises unto God.",
+  "reference_label": "Acts 16:25",
+  "ref_kjv": "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them."
+ },
+ {
+  "id": "who-apollos",
+  "answer": "Apollos",
+  "options": [
+   "Titus",
+   "Apollos",
+   "Silas",
+   "Aquila"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was a Jew born at Alexandria.",
+    "proposed_reference": "Acts 18:24",
+    "kjv_text": "Acts 18:24: And a certain Jew named Apollos, born at Alexandria, an eloquent man, and mighty in the scriptures, came to Ephesus."
+   },
+   {
+    "clue": "I was an eloquent man, mighty in the scriptures.",
+    "proposed_reference": "Acts 18:24",
+    "kjv_text": "Acts 18:24: And a certain Jew named Apollos, born at Alexandria, an eloquent man, and mighty in the scriptures, came to Ephesus."
+   },
+   {
+    "clue": "Aquila and Priscilla taught me the way of God more perfectly.",
+    "proposed_reference": "Acts 18:26",
+    "kjv_text": "Acts 18:26: And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly."
+   },
+   {
+    "clue": "Paul wrote that he planted and I watered.",
+    "proposed_reference": "1 Corinthians 3:6",
+    "kjv_text": "1 Corinthians 3:6: I have planted, Apollos watered; but God gave the increase."
+   }
+  ],
+  "hint": "Look in Acts.",
+  "explanation": "A Jew named Apollos, born at Alexandria, was an eloquent man, mighty in the scriptures.",
+  "reference_label": "Acts 18:24",
+  "ref_kjv": "And a certain Jew named Apollos, born at Alexandria, an eloquent man, and mighty in the scriptures, came to Ephesus."
+ },
+ {
+  "id": "who-abigail",
+  "answer": "Abigail",
+  "options": [
+   "Abigail",
+   "Bathsheba",
+   "Michal",
+   "Ahinoam"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "My husband Nabal was churlish.",
+    "proposed_reference": "1 Samuel 25:3",
+    "kjv_text": "1 Samuel 25:3: Now the name of the man was Nabal; and the name of his wife Abigail: and she was a woman of good understanding, and of a beautiful countenance: but the man was churlish and evil in his doings; and he was of the house of Caleb."
+   },
+   {
+    "clue": "I brought bread, wine and figs to David's men.",
+    "proposed_reference": "1 Samuel 25:18",
+    "kjv_text": "1 Samuel 25:18: Then Abigail made haste, and took two hundred loaves, and two bottles of wine, and five sheep ready dressed, and five measures of parched corn, and an hundred clusters of raisins, and two hundred cakes of figs, and laid them on asses."
+   },
+   {
+    "clue": "I persuaded David not to shed blood.",
+    "proposed_reference": "1 Samuel 25:33",
+    "kjv_text": "1 Samuel 25:33: And blessed be thy advice, and blessed be thou, which hast kept me this day from coming to shed blood, and from avenging myself with mine own hand."
+   },
+   {
+    "clue": "After Nabal died, I became David's wife.",
+    "proposed_reference": "1 Samuel 25:39-42",
+    "kjv_text": "1 Samuel 25:39-42: And when David heard that Nabal was dead, he said, Blessed be the LORD, that hath pleaded the cause of my reproach from the hand of Nabal, and hath kept his servant from evil: for the LORD hath returned the wickedness of Nabal upon his own head. And David sent and communed with Abigail, to take her to him to wife. And when the servants of David were come to Abigail to Carmel, they spake unto her, saying, David sent us unto thee, to take thee to him to wife. And she arose, and bowed herself on her face to the earth, and said, Behold, let thine handmaid be a servant to wash the feet of the servants of my lord. And Abigail hasted, and arose, and rode upon an ass, with five damsels of hers that went after her; and she went after the messengers of David, and became his wife."
+   }
+  ],
+  "hint": "Look in 1 Samuel.",
+  "explanation": "The man's name was Nabal and the name of his wife Abigail.",
+  "reference_label": "1 Samuel 25:3",
+  "ref_kjv": "Now the name of the man was Nabal; and the name of his wife Abigail: and she was a woman of good understanding, and of a beautiful countenance: but the man was churlish and evil in his doings; and he was of the house of Caleb."
+ },
+ {
+  "id": "who-herod",
+  "answer": "Herod",
+  "options": [
+   "Herod",
+   "Pontius Pilate",
+   "Archelaus",
+   "Caesar Augustus"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was king in Judaea when Jesus was born.",
+    "proposed_reference": "Matthew 2:1",
+    "kjv_text": "Matthew 2:1: Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem,"
+   },
+   {
+    "clue": "I was troubled when wise men asked for the King of the Jews.",
+    "proposed_reference": "Matthew 2:3",
+    "kjv_text": "Matthew 2:3: When Herod the king had heard these things, he was troubled, and all Jerusalem with him."
+   },
+   {
+    "clue": "I told the wise men to bring me word again.",
+    "proposed_reference": "Matthew 2:8",
+    "kjv_text": "Matthew 2:8: And he sent them to Bethlehem, and said, Go and search diligently for the young child; and when ye have found him, bring me word again, that I may come and worship him also."
+   },
+   {
+    "clue": "I ordered the children in Bethlehem slain.",
+    "proposed_reference": "Matthew 2:16",
+    "kjv_text": "Matthew 2:16: Then Herod, when he saw that he was mocked of the wise men, was exceeding wroth, and sent forth, and slew all the children that were in Bethlehem, and in all the coasts thereof, from two years old and under, according to the time which he had diligently enquired of the wise men."
+   }
+  ],
+  "hint": "Look in Matthew.",
+  "explanation": "Herod sent forth and slew all the children that were in Bethlehem.",
+  "reference_label": "Matthew 2:16",
+  "ref_kjv": "Then Herod, when he saw that he was mocked of the wise men, was exceeding wroth, and sent forth, and slew all the children that were in Bethlehem, and in all the coasts thereof, from two years old and under, according to the time which he had diligently enquired of the wise men."
+ },
+ {
+  "id": "who-jael",
+  "answer": "Jael",
+  "options": [
+   "Rahab",
+   "Jael",
+   "Delilah",
+   "Deborah"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I was the wife of Heber the Kenite.",
+    "proposed_reference": "Judges 4:17",
+    "kjv_text": "Judges 4:17: Howbeit Sisera fled away on his feet to the tent of Jael the wife of Heber the Kenite: for there was peace between Jabin the king of Hazor and the house of Heber the Kenite."
+   },
+   {
+    "clue": "Sisera fled to my tent.",
+    "proposed_reference": "Judges 4:17",
+    "kjv_text": "Judges 4:17: Howbeit Sisera fled away on his feet to the tent of Jael the wife of Heber the Kenite: for there was peace between Jabin the king of Hazor and the house of Heber the Kenite."
+   },
+   {
+    "clue": "I gave him milk when he asked for water.",
+    "proposed_reference": "Judges 4:19",
+    "kjv_text": "Judges 4:19: And he said unto her, Give me, I pray thee, a little water to drink; for I am thirsty. And she opened a bottle of milk, and gave him drink, and covered him."
+   },
+   {
+    "clue": "I drove a nail of the tent into his temples.",
+    "proposed_reference": "Judges 4:21",
+    "kjv_text": "Judges 4:21: Then Jael Heber’s wife took a nail of the tent, and took an hammer in her hand, and went softly unto him, and smote the nail into his temples, and fastened it into the ground: for he was fast asleep and weary. So he died."
+   }
+  ],
+  "hint": "Look in Judges.",
+  "explanation": "Jael, Heber's wife, took a nail of the tent and smote it into Sisera's temples.",
+  "reference_label": "Judges 4:21",
+  "ref_kjv": "Then Jael Heber’s wife took a nail of the tent, and took an hammer in her hand, and went softly unto him, and smote the nail into his temples, and fastened it into the ground: for he was fast asleep and weary. So he died."
+ },
+ {
+  "id": "who-delilah",
+  "answer": "Delilah",
+  "options": [
+   "Jezebel",
+   "Delilah",
+   "Jael",
+   "Michal"
+  ],
+  "clue_pairs": [
+   {
+    "clue": "I lived in the valley of Sorek.",
+    "proposed_reference": "Judges 16:4",
+    "kjv_text": "Judges 16:4: And it came to pass afterward, that he loved a woman in the valley of Sorek, whose name was Delilah."
+   },
+   {
+    "clue": "The lords of the Philistines offered me silver.",
+    "proposed_reference": "Judges 16:5",
+    "kjv_text": "Judges 16:5: And the lords of the Philistines came up unto her, and said unto her, Entice him, and see wherein his great strength lieth, and by what means we may prevail against him, that we may bind him to afflict him: and we will give thee every one of us eleven hundred pieces of silver."
+   },
+   {
+    "clue": "I asked a strong man the secret of his strength.",
+    "proposed_reference": "Judges 16:6",
+    "kjv_text": "Judges 16:6: And Delilah said to Samson, Tell me, I pray thee, wherein thy great strength lieth, and wherewith thou mightest be bound to afflict thee."
+   },
+   {
+    "clue": "I had his seven locks shaved while he slept.",
+    "proposed_reference": "Judges 16:19",
+    "kjv_text": "Judges 16:19: And she made him sleep upon her knees; and she called for a man, and she caused him to shave off the seven locks of his head; and she began to afflict him, and his strength went from him."
+   }
+  ],
+  "hint": "Look in Judges.",
+  "explanation": "Samson loved a woman in the valley of Sorek, whose name was Delilah.",
+  "reference_label": "Judges 16:4",
+  "ref_kjv": "And it came to pass afterward, that he loved a woman in the valley of Sorek, whose name was Delilah."
+ }
+]

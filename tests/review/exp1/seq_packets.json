@@ -1,0 +1,478 @@
+[
+ {
+  "id": "seq-cain_abel",
+  "title": "Put these events in order: Cain and Abel",
+  "difficulty": 2,
+  "reference_label": "Genesis 4:2-15",
+  "hint": "The first event is in Genesis 4:2.",
+  "events_in_stated_order": [
+   {
+    "event": "Abel keeps sheep and Cain tills the ground",
+    "ref": "Genesis 4:2",
+    "kjv": "And she again bare his brother Abel. And Abel was a keeper of sheep, but Cain was a tiller of the ground."
+   },
+   {
+    "event": "Both bring offerings to the LORD",
+    "ref": "Genesis 4:3-4",
+    "kjv": "And in process of time it came to pass, that Cain brought of the fruit of the ground an offering unto the LORD. And Abel, he also brought of the firstlings of his flock and of the fat thereof. And the LORD had respect unto Abel and to his offering:"
+   },
+   {
+    "event": "God warns Cain that sin lieth at the door",
+    "ref": "Genesis 4:7",
+    "kjv": "If thou doest well, shalt thou not be accepted? and if thou doest not well, sin lieth at the door. And unto thee shall be his desire, and thou shalt rule over him."
+   },
+   {
+    "event": "Cain rises up against Abel in the field",
+    "ref": "Genesis 4:8",
+    "kjv": "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him."
+   },
+   {
+    "event": "God sets a mark upon Cain",
+    "ref": "Genesis 4:15",
+    "kjv": "And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the LORD set a mark upon Cain, lest any finding him should kill him."
+   }
+  ]
+ },
+ {
+  "id": "seq-babel",
+  "title": "Put these events in order: The Tower of Babel",
+  "difficulty": 2,
+  "reference_label": "Genesis 11:1-8",
+  "hint": "The first event is in Genesis 11:1.",
+  "events_in_stated_order": [
+   {
+    "event": "All the earth has one language",
+    "ref": "Genesis 11:1",
+    "kjv": "And the whole earth was of one language, and of one speech."
+   },
+   {
+    "event": "People settle in a plain in the land of Shinar",
+    "ref": "Genesis 11:2",
+    "kjv": "And it came to pass, as they journeyed from the east, that they found a plain in the land of Shinar; and they dwelt there."
+   },
+   {
+    "event": "They make brick and plan a city and a tower",
+    "ref": "Genesis 11:3-4",
+    "kjv": "And they said one to another, Go to, let us make brick, and burn them throughly. And they had brick for stone, and slime had they for morter. And they said, Go to, let us build us a city and a tower, whose top may reach unto heaven; and let us make us a name, lest we be scattered abroad upon the face of the whole earth."
+   },
+   {
+    "event": "The LORD comes down to see the city",
+    "ref": "Genesis 11:5",
+    "kjv": "And the LORD came down to see the city and the tower, which the children of men builded."
+   },
+   {
+    "event": "Their language is confounded and they are scattered",
+    "ref": "Genesis 11:7-8",
+    "kjv": "Go to, let us go down, and there confound their language, that they may not understand one another’s speech. So the LORD scattered them abroad from thence upon the face of all the earth: and they left off to build the city."
+   }
+  ]
+ },
+ {
+  "id": "seq-isaac_sacrifice",
+  "title": "Put these events in order: Abraham Tested",
+  "difficulty": 3,
+  "reference_label": "Genesis 22:2-13",
+  "hint": "The first event is in Genesis 22:2.",
+  "events_in_stated_order": [
+   {
+    "event": "God tells Abraham to take Isaac to the land of Moriah",
+    "ref": "Genesis 22:2",
+    "kjv": "And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of."
+   },
+   {
+    "event": "Abraham rises early and saddles his ass",
+    "ref": "Genesis 22:3",
+    "kjv": "And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son, and clave the wood for the burnt offering, and rose up, and went unto the place of which God had told him."
+   },
+   {
+    "event": "Isaac asks where the lamb is",
+    "ref": "Genesis 22:7",
+    "kjv": "And Isaac spake unto Abraham his father, and said, My father: and he said, Here am I, my son. And he said, Behold the fire and the wood: but where is the lamb for a burnt offering?"
+   },
+   {
+    "event": "The angel of the LORD calls out of heaven",
+    "ref": "Genesis 22:11",
+    "kjv": "And the angel of the LORD called unto him out of heaven, and said, Abraham, Abraham: and he said, Here am I."
+   },
+   {
+    "event": "A ram caught in a thicket is offered instead",
+    "ref": "Genesis 22:13",
+    "kjv": "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns: and Abraham went and took the ram, and offered him up for a burnt offering in the stead of his son."
+   }
+  ]
+ },
+ {
+  "id": "seq-moses_early",
+  "title": "Put these events in order: The Early Life of Moses",
+  "difficulty": 2,
+  "reference_label": "Exodus 1 – Exodus 3",
+  "hint": "The first event is in Exodus 1.",
+  "events_in_stated_order": [
+   {
+    "event": "Pharaoh orders every son born to be cast into the river",
+    "ref": "Exodus 1:22",
+    "kjv": "And Pharaoh charged all his people, saying, Every son that is born ye shall cast into the river, and every daughter ye shall save alive."
+   },
+   {
+    "event": "Baby Moses is hidden in an ark of bulrushes",
+    "ref": "Exodus 2:3",
+    "kjv": "And when she could not longer hide him, she took for him an ark of bulrushes, and daubed it with slime and with pitch, and put the child therein; and she laid it in the flags by the river’s brink."
+   },
+   {
+    "event": "Pharaoh's daughter finds the child",
+    "ref": "Exodus 2:5-6",
+    "kjv": "And the daughter of Pharaoh came down to wash herself at the river; and her maidens walked along by the river’s side; and when she saw the ark among the flags, she sent her maid to fetch it. And when she had opened it, she saw the child: and, behold, the babe wept. And she had compassion on him, and said, This is one of the Hebrews’ children."
+   },
+   {
+    "event": "Moses flees to the land of Midian",
+    "ref": "Exodus 2:15",
+    "kjv": "Now when Pharaoh heard this thing, he sought to slay Moses. But Moses fled from the face of Pharaoh, and dwelt in the land of Midian: and he sat down by a well."
+   },
+   {
+    "event": "God speaks from the burning bush",
+    "ref": "Exodus 3:2-4",
+    "kjv": "And the angel of the LORD appeared unto him in a flame of fire out of the midst of a bush: and he looked, and, behold, the bush burned with fire, and the bush was not consumed. And Moses said, I will now turn aside, and see this great sight, why the bush is not burnt. And when the LORD saw that he turned aside to see, God called unto him out of the midst of the bush, and said, Moses, Moses. And he said, Here am I."
+   }
+  ]
+ },
+ {
+  "id": "seq-sinai",
+  "title": "Put these events in order: At Mount Sinai",
+  "difficulty": 3,
+  "reference_label": "Exodus 19 – Exodus 34",
+  "hint": "The first event is in Exodus 19.",
+  "events_in_stated_order": [
+   {
+    "event": "Israel camps before the mount",
+    "ref": "Exodus 19:2",
+    "kjv": "For they were departed from Rephidim, and were come to the desert of Sinai, and had pitched in the wilderness; and there Israel camped before the mount."
+   },
+   {
+    "event": "Mount Sinai smokes as the LORD descends",
+    "ref": "Exodus 19:18",
+    "kjv": "And mount Sinai was altogether on a smoke, because the LORD descended upon it in fire: and the smoke thereof ascended as the smoke of a furnace, and the whole mount quaked greatly."
+   },
+   {
+    "event": "God speaks the ten commandments",
+    "ref": "Exodus 20:1-3",
+    "kjv": "And God spake all these words, saying, I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage. Thou shalt have no other gods before me."
+   },
+   {
+    "event": "The people make a golden calf",
+    "ref": "Exodus 32:4",
+    "kjv": "And he received them at their hand, and fashioned it with a graving tool, after he had made it a molten calf: and they said, These be thy gods, O Israel, which brought thee up out of the land of Egypt."
+   },
+   {
+    "event": "Moses hews two new tables of stone",
+    "ref": "Exodus 34:1",
+    "kjv": "And the LORD said unto Moses, Hew thee two tables of stone like unto the first: and I will write upon these tables the words that were in the first tables, which thou brakest."
+   }
+  ]
+ },
+ {
+  "id": "seq-jericho",
+  "title": "Put these events in order: The Fall of Jericho",
+  "difficulty": 1,
+  "reference_label": "Joshua 2 – Joshua 6",
+  "hint": "The first event is in Joshua 2.",
+  "events_in_stated_order": [
+   {
+    "event": "Rahab hides the two spies",
+    "ref": "Joshua 2:4",
+    "kjv": "And the woman took the two men, and hid them, and said thus, There came men unto me, but I wist not whence they were:"
+   },
+   {
+    "event": "Israel crosses the Jordan on dry ground",
+    "ref": "Joshua 3:17",
+    "kjv": "And the priests that bare the ark of the covenant of the LORD stood firm on dry ground in the midst of Jordan, and all the Israelites passed over on dry ground, until all the people were passed clean over Jordan."
+   },
+   {
+    "event": "The people march around the city once a day for six days",
+    "ref": "Joshua 6:14",
+    "kjv": "And the second day they compassed the city once, and returned into the camp: so they did six days."
+   },
+   {
+    "event": "On the seventh day they compass the city seven times",
+    "ref": "Joshua 6:15",
+    "kjv": "And it came to pass on the seventh day, that they rose early about the dawning of the day, and compassed the city after the same manner seven times: only on that day they compassed the city seven times."
+   },
+   {
+    "event": "The wall falls down flat",
+    "ref": "Joshua 6:20",
+    "kjv": "So the people shouted when the priests blew with the trumpets: and it came to pass, when the people heard the sound of the trumpet, and the people shouted with a great shout, that the wall fell down flat, so that the people went up into the city, every man straight before him, and they took the city."
+   }
+  ]
+ },
+ {
+  "id": "seq-hannah",
+  "title": "Put these events in order: Hannah's Prayer",
+  "difficulty": 3,
+  "reference_label": "1 Samuel 1 – 1 Samuel 2",
+  "hint": "The first event is in 1 Samuel 1.",
+  "events_in_stated_order": [
+   {
+    "event": "Hannah prays in bitterness of soul at Shiloh",
+    "ref": "1 Samuel 1:10",
+    "kjv": "And she was in bitterness of soul, and prayed unto the LORD, and wept sore."
+   },
+   {
+    "event": "Eli thinks she is drunken",
+    "ref": "1 Samuel 1:13",
+    "kjv": "Now Hannah, she spake in her heart; only her lips moved, but her voice was not heard: therefore Eli thought she had been drunken."
+   },
+   {
+    "event": "Hannah bears a son and names him Samuel",
+    "ref": "1 Samuel 1:20",
+    "kjv": "Wherefore it came to pass, when the time was come about after Hannah had conceived, that she bare a son, and called his name Samuel, saying, Because I have asked him of the LORD."
+   },
+   {
+    "event": "She lends the child to the LORD",
+    "ref": "1 Samuel 1:28",
+    "kjv": "Therefore also I have lent him to the LORD; as long as he liveth he shall be lent to the LORD. And he worshipped the LORD there."
+   },
+   {
+    "event": "Hannah prays: My heart rejoiceth in the LORD",
+    "ref": "1 Samuel 2:1",
+    "kjv": "And Hannah prayed, and said, My heart rejoiceth in the LORD, mine horn is exalted in the LORD: my mouth is enlarged over mine enemies; because I rejoice in thy salvation."
+   }
+  ]
+ },
+ {
+  "id": "seq-naaman",
+  "title": "Put these events in order: Naaman Is Healed",
+  "difficulty": 3,
+  "reference_label": "2 Kings 5:3-14",
+  "hint": "The first event is in 2 Kings 5:3.",
+  "events_in_stated_order": [
+   {
+    "event": "A little maid tells of the prophet in Samaria",
+    "ref": "2 Kings 5:3",
+    "kjv": "And she said unto her mistress, Would God my lord were with the prophet that is in Samaria! for he would recover him of his leprosy."
+   },
+   {
+    "event": "The king of Israel rends his clothes",
+    "ref": "2 Kings 5:7",
+    "kjv": "And it came to pass, when the king of Israel had read the letter, that he rent his clothes, and said, Am I God, to kill and to make alive, that this man doth send unto me to recover a man of his leprosy? wherefore consider, I pray you, and see how he seeketh a quarrel against me."
+   },
+   {
+    "event": "Elisha says to wash in Jordan seven times",
+    "ref": "2 Kings 5:10",
+    "kjv": "And Elisha sent a messenger unto him, saying, Go and wash in Jordan seven times, and thy flesh shall come again to thee, and thou shalt be clean."
+   },
+   {
+    "event": "Naaman turns away in a rage",
+    "ref": "2 Kings 5:12",
+    "kjv": "Are not Abana and Pharpar, rivers of Damascus, better than all the waters of Israel? may I not wash in them, and be clean? So he turned and went away in a rage."
+   },
+   {
+    "event": "His flesh comes again like a little child's",
+    "ref": "2 Kings 5:14",
+    "kjv": "Then went he down, and dipped himself seven times in Jordan, according to the saying of the man of God: and his flesh came again like unto the flesh of a little child, and he was clean."
+   }
+  ]
+ },
+ {
+  "id": "seq-nehemiah",
+  "title": "Put these events in order: Rebuilding the Walls",
+  "difficulty": 3,
+  "reference_label": "Nehemiah 1 – Nehemiah 6",
+  "hint": "The first event is in Nehemiah 1.",
+  "events_in_stated_order": [
+   {
+    "event": "Nehemiah weeps over the news of Jerusalem",
+    "ref": "Nehemiah 1:4",
+    "kjv": "And it came to pass, when I heard these words, that I sat down and wept, and mourned certain days, and fasted, and prayed before the God of heaven,"
+   },
+   {
+    "event": "King Artaxerxes asks why his countenance is sad",
+    "ref": "Nehemiah 2:1-2",
+    "kjv": "And it came to pass in the month Nisan, in the twentieth year of Artaxerxes the king, that wine was before him: and I took up the wine, and gave it unto the king. Now I had not been beforetime sad in his presence. Wherefore the king said unto me, Why is thy countenance sad, seeing thou art not sick? this is nothing else but sorrow of heart. Then I was very sore afraid,"
+   },
+   {
+    "event": "Nehemiah views the walls by night",
+    "ref": "Nehemiah 2:13",
+    "kjv": "And I went out by night by the gate of the valley, even before the dragon well, and to the dung port, and viewed the walls of Jerusalem, which were broken down, and the gates thereof were consumed with fire."
+   },
+   {
+    "event": "Sanballat and Tobiah mock the builders",
+    "ref": "Nehemiah 4:1-3",
+    "kjv": "But it came to pass, that when Sanballat heard that we builded the wall, he was wroth, and took great indignation, and mocked the Jews. And he spake before his brethren and the army of Samaria, and said, What do these feeble Jews? will they fortify themselves? will they sacrifice? will they make an end in a day? will they revive the stones out of the heaps of the rubbish which are burned? Now Tobiah the Ammonite was by him, and he said, Even that which they build, if a fox go up, he shall even break down their stone wall."
+   },
+   {
+    "event": "The wall is finished in fifty and two days",
+    "ref": "Nehemiah 6:15",
+    "kjv": "So the wall was finished in the twenty and fifth day of the month Elul, in fifty and two days."
+   }
+  ]
+ },
+ {
+  "id": "seq-fiery_furnace",
+  "title": "Put these events in order: The Fiery Furnace",
+  "difficulty": 2,
+  "reference_label": "Daniel 3:1-27",
+  "hint": "The first event is in Daniel 3:1.",
+  "events_in_stated_order": [
+   {
+    "event": "Nebuchadnezzar sets up an image of gold",
+    "ref": "Daniel 3:1",
+    "kjv": "Nebuchadnezzar the king made an image of gold, whose height was threescore cubits, and the breadth thereof six cubits: he set it up in the plain of Dura, in the province of Babylon."
+   },
+   {
+    "event": "Shadrach, Meshach and Abednego refuse to worship it",
+    "ref": "Daniel 3:12",
+    "kjv": "There are certain Jews whom thou hast set over the affairs of the province of Babylon, Shadrach, Meshach, and Abed-nego; these men, O king, have not regarded thee: they serve not thy gods, nor worship the golden image which thou hast set up."
+   },
+   {
+    "event": "The furnace is heated seven times hotter",
+    "ref": "Daniel 3:19",
+    "kjv": "Then was Nebuchadnezzar full of fury, and the form of his visage was changed against Shadrach, Meshach, and Abed-nego: therefore he spake, and commanded that they should heat the furnace one seven times more than it was wont to be heated."
+   },
+   {
+    "event": "The king sees four men loose in the fire",
+    "ref": "Daniel 3:25",
+    "kjv": "He answered and said, Lo, I see four men loose, walking in the midst of the fire, and they have no hurt; and the form of the fourth is like the Son of God."
+   },
+   {
+    "event": "They come out with no smell of fire upon them",
+    "ref": "Daniel 3:27",
+    "kjv": "And the princes, governors, and captains, and the king’s counsellors, being gathered together, saw these men, upon whose bodies the fire had no power, nor was an hair of their head singed, neither were their coats changed, nor the smell of fire had passed on them."
+   }
+  ]
+ },
+ {
+  "id": "seq-lazarus",
+  "title": "Put these events in order: The Raising of Lazarus",
+  "difficulty": 2,
+  "reference_label": "John 11:3-44",
+  "hint": "The first event is in John 11:3.",
+  "events_in_stated_order": [
+   {
+    "event": "The sisters send word that Lazarus is sick",
+    "ref": "John 11:3",
+    "kjv": "Therefore his sisters sent unto him, saying, Lord, behold, he whom thou lovest is sick."
+   },
+   {
+    "event": "Jesus arrives after Lazarus has lain in the grave four days",
+    "ref": "John 11:17",
+    "kjv": "Then when Jesus came, he found that he had lain in the grave four days already."
+   },
+   {
+    "event": "Jesus says: I am the resurrection, and the life",
+    "ref": "John 11:25",
+    "kjv": "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:"
+   },
+   {
+    "event": "Jesus weeps",
+    "ref": "John 11:35",
+    "kjv": "Jesus wept."
+   },
+   {
+    "event": "Lazarus comes forth bound with graveclothes",
+    "ref": "John 11:44",
+    "kjv": "And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus saith unto them, Loose him, and let him go."
+   }
+  ]
+ },
+ {
+  "id": "seq-feeding",
+  "title": "Put these events in order: Feeding the Five Thousand",
+  "difficulty": 1,
+  "reference_label": "John 6:2-13",
+  "hint": "The first event is in John 6:2.",
+  "events_in_stated_order": [
+   {
+    "event": "A great multitude follows Jesus",
+    "ref": "John 6:2",
+    "kjv": "And a great multitude followed him, because they saw his miracles which he did on them that were diseased."
+   },
+   {
+    "event": "Jesus asks Philip where to buy bread",
+    "ref": "John 6:5",
+    "kjv": "When Jesus then lifted up his eyes, and saw a great company come unto him, he saith unto Philip, Whence shall we buy bread, that these may eat?"
+   },
+   {
+    "event": "Andrew tells Jesus of a lad with five barley loaves and two small fishes",
+    "ref": "John 6:8-9",
+    "kjv": "One of his disciples, Andrew, Simon Peter’s brother, saith unto him, There is a lad here, which hath five barley loaves, and two small fishes: but what are they among so many?"
+   },
+   {
+    "event": "The men sit down and Jesus gives thanks",
+    "ref": "John 6:10-11",
+    "kjv": "And Jesus said, Make the men sit down. Now there was much grass in the place. So the men sat down, in number about five thousand. And Jesus took the loaves; and when he had given thanks, he distributed to the disciples, and the disciples to them that were set down; and likewise of the fishes as much as they would."
+   },
+   {
+    "event": "Twelve baskets of fragments are gathered",
+    "ref": "John 6:13",
+    "kjv": "Therefore they gathered them together, and filled twelve baskets with the fragments of the five barley loaves, which remained over and above unto them that had eaten."
+   }
+  ]
+ },
+ {
+  "id": "seq-saul_conversion",
+  "title": "Put these events in order: Saul's Conversion",
+  "difficulty": 2,
+  "reference_label": "Acts 8 – Acts 9",
+  "hint": "The first event is in Acts 8.",
+  "events_in_stated_order": [
+   {
+    "event": "Saul consents to Stephen's death",
+    "ref": "Acts 8:1",
+    "kjv": "And Saul was consenting unto his death. And at that time there was a great persecution against the church which was at Jerusalem; and they were all scattered abroad throughout the regions of Judæa and Samaria, except the apostles."
+   },
+   {
+    "event": "A light from heaven shines around Saul near Damascus",
+    "ref": "Acts 9:3",
+    "kjv": "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven:"
+   },
+   {
+    "event": "Saul is three days without sight",
+    "ref": "Acts 9:9",
+    "kjv": "And he was three days without sight, and neither did eat nor drink."
+   },
+   {
+    "event": "Ananias lays his hands on Saul",
+    "ref": "Acts 9:17",
+    "kjv": "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul, the Lord, even Jesus, that appeared unto thee in the way as thou camest, hath sent me, that thou mightest receive thy sight, and be filled with the Holy Ghost."
+   },
+   {
+    "event": "Saul preaches Christ in the synagogues",
+    "ref": "Acts 9:20",
+    "kjv": "And straightway he preached Christ in the synagogues, that he is the Son of God."
+   }
+  ]
+ },
+ {
+  "id": "seq-zacchaeus",
+  "title": "Put these events in order: Jesus and Zacchaeus",
+  "difficulty": 1,
+  "reference_label": "Luke 19:2-8",
+  "hint": "The first event is in Luke 19:2-3.",
+  "events_in_stated_order": [
+   {
+    "event": "Zacchaeus, a chief among the publicans, seeks to see Jesus",
+    "ref": "Luke 19:2-3",
+    "kjv": "And, behold, there was a man named Zacchæus, which was the chief among the publicans, and he was rich. And he sought to see Jesus who he was; and could not for the press, because he was little of stature."
+   },
+   {
+    "event": "He climbs up into a sycomore tree",
+    "ref": "Luke 19:4",
+    "kjv": "And he ran before, and climbed up into a sycomore tree to see him: for he was to pass that way."
+   },
+   {
+    "event": "Jesus says: to day I must abide at thy house",
+    "ref": "Luke 19:5",
+    "kjv": "And when Jesus came to the place, he looked up, and saw him, and said unto him, Zacchæus, make haste, and come down; for to day I must abide at thy house."
+   },
+   {
+    "event": "The people murmur",
+    "ref": "Luke 19:7",
+    "kjv": "And when they saw it, they all murmured, saying, That he was gone to be guest with a man that is a sinner."
+   },
+   {
+    "event": "Zacchaeus gives half his goods to the poor",
+    "ref": "Luke 19:8",
+    "kjv": "And Zacchæus stood, and said unto the Lord; Behold, Lord, the half of my goods I give to the poor; and if I have taken any thing from any man by false accusation, I restore him fourfold."
+   }
+  ]
+ }
+]

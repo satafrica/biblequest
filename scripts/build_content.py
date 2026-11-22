@@ -18,6 +18,10 @@ sys.path.insert(0, os.path.join(ROOT, "content", "source"))
 from picture_whoami import PICTURE, WHOAMI            # noqa: E402
 from scripture_sequence import COMPLETE, WHICH_BOOK, MATCH_REF, SEQUENCES  # noqa: E402
 from adventures_assets import ASSETS, ADVENTURES, STORE_ITEMS, ACHIEVEMENTS  # noqa: E402
+import expansion_1 as X1                                 # noqa: E402
+PICTURE = PICTURE + X1.PICTURE_2; WHOAMI = WHOAMI + X1.WHOAMI_2
+COMPLETE = COMPLETE + X1.COMPLETE_2; WHICH_BOOK = WHICH_BOOK + X1.WHICH_BOOK_2
+MATCH_REF = MATCH_REF + X1.MATCH_REF_2; SEQUENCES = SEQUENCES + X1.SEQUENCES_2
 
 KJV = json.load(open(os.path.join(ROOT, "content", "kjv.json"), encoding="utf-8-sig"))
 BOOKS = [b["name"] for b in KJV]

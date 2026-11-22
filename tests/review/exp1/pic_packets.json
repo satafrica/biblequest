@@ -1,0 +1,971 @@
+[
+ {
+  "id": "pic-creation-5",
+  "illustration": "creation",
+  "question": "On which day did God create man in His own image?",
+  "options": [
+   "The seventh day",
+   "The third day",
+   "The sixth day",
+   "The fifth day"
+  ],
+  "answer": "The sixth day",
+  "reference_label": "Genesis 1:27-31",
+  "ref_kjv": "So God created man in his own image, in the image of God created he him; male and female created he them. And God blessed them, and God said unto them, Be fruitful, and multiply, and replenish the earth, and subdue it: and have dominion over the fish of the sea, and over the fowl of the air, and over every living thing that moveth upon the earth. And God said, Behold, I have given you every herb bearing seed, which is upon the face of all the earth, and every tree, in the which is the fruit of a tree yielding seed; to you it shall be for meat. And to every beast of the earth, and to every fowl of the air, and to every thing that creepeth upon the earth, wherein there is life, I have given every green herb for meat: and it was so. And God saw every thing that he had made, and, behold, it was very good. And the evening and the morning were the sixth day.",
+  "explanation": "God created man in His own image, and the evening and the morning were the sixth day.",
+  "hint": "Read Genesis 1:27-31.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-creation-6",
+  "illustration": "creation",
+  "question": "What did God call the dry land?",
+  "options": [
+   "Earth",
+   "Eden",
+   "Heaven",
+   "Canaan"
+  ],
+  "answer": "Earth",
+  "reference_label": "Genesis 1:10",
+  "ref_kjv": "And God called the dry land Earth; and the gathering together of the waters called he Seas: and God saw that it was good.",
+  "explanation": "\"God called the dry land Earth; and the gathering together of the waters called he Seas.\"",
+  "hint": "Read Genesis 1:10.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-creation-7",
+  "illustration": "creation",
+  "question": "What did God call the firmament?",
+  "options": [
+   "Day",
+   "Heaven",
+   "Earth",
+   "Sea"
+  ],
+  "answer": "Heaven",
+  "reference_label": "Genesis 1:8",
+  "ref_kjv": "And God called the firmament Heaven. And the evening and the morning were the second day.",
+  "explanation": "\"God called the firmament Heaven.\" That was the second day.",
+  "hint": "It was made on the second day.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-noah_ark-6",
+  "illustration": "noah_ark",
+  "question": "For how many days and nights did it rain in the flood?",
+  "options": [
+   "Forty",
+   "Seven",
+   "Twelve",
+   "A hundred"
+  ],
+  "answer": "Forty",
+  "reference_label": "Genesis 7:12",
+  "ref_kjv": "And the rain was upon the earth forty days and forty nights.",
+  "explanation": "\"The rain was upon the earth forty days and forty nights.\"",
+  "hint": "Read Genesis 7:12.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-noah_ark-7",
+  "illustration": "noah_ark",
+  "question": "Of what wood did God tell Noah to make the ark?",
+  "options": [
+   "Olive wood",
+   "Cedar",
+   "Gopher wood",
+   "Shittim wood"
+  ],
+  "answer": "Gopher wood",
+  "reference_label": "Genesis 6:14",
+  "ref_kjv": "Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch.",
+  "explanation": "God said, \"Make thee an ark of gopher wood.\"",
+  "hint": "Read Genesis 6:14.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-noah_ark-8",
+  "illustration": "noah_ark",
+  "question": "Which bird did Noah send out first?",
+  "options": [
+   "A dove",
+   "An eagle",
+   "A raven",
+   "A sparrow"
+  ],
+  "answer": "A raven",
+  "reference_label": "Genesis 8:7",
+  "ref_kjv": "And he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth.",
+  "explanation": "Noah sent forth a raven, which went forth to and fro.",
+  "hint": "It was not the dove.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-abraham_stars-6",
+  "illustration": "abraham_stars",
+  "question": "Before God showed him the stars, whom did Abram name as the steward of his house?",
+  "options": [
+   "Laban",
+   "Ishmael",
+   "Lot",
+   "Eliezer of Damascus"
+  ],
+  "answer": "Eliezer of Damascus",
+  "reference_label": "Genesis 15:2",
+  "ref_kjv": "And Abram said, Lord GOD, what wilt thou give me, seeing I go childless, and the steward of my house is this Eliezer of Damascus?",
+  "explanation": "Abram said, \"The steward of my house is this Eliezer of Damascus.\"",
+  "hint": "Read Genesis 15:2.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-abraham_stars-7",
+  "illustration": "abraham_stars",
+  "question": "How did Abram respond to the promise of descendants like the stars?",
+  "options": [
+   "He asked for a sign in the sky",
+   "He believed in the LORD",
+   "He went down to Egypt",
+   "He built a city"
+  ],
+  "answer": "He believed in the LORD",
+  "reference_label": "Genesis 15:6",
+  "ref_kjv": "And he believed in the LORD; and he counted it to him for righteousness.",
+  "explanation": "\"He believed in the LORD; and he counted it to him for righteousness.\"",
+  "hint": "Read Genesis 15:6.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-abraham_stars-8",
+  "illustration": "abraham_stars",
+  "question": "In the vision before the stars, what did God say He was to Abram?",
+  "options": [
+   "His fortress and tower",
+   "His king and judge",
+   "His shield and exceeding great reward",
+   "His sword and spear"
+  ],
+  "answer": "His shield and exceeding great reward",
+  "reference_label": "Genesis 15:1",
+  "ref_kjv": "After these things the word of the LORD came unto Abram in a vision, saying, Fear not, Abram: I am thy shield, and thy exceeding great reward.",
+  "explanation": "\"Fear not, Abram: I am thy shield, and thy exceeding great reward.\"",
+  "hint": "Read Genesis 15:1.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-joseph_coat-6",
+  "illustration": "joseph_coat",
+  "question": "Into what did Joseph's brothers first cast him?",
+  "options": [
+   "A well",
+   "A prison",
+   "A pit",
+   "A river"
+  ],
+  "answer": "A pit",
+  "reference_label": "Genesis 37:24",
+  "ref_kjv": "And they took him, and cast him into a pit: and the pit was empty, there was no water in it.",
+  "explanation": "They cast him into a pit; the pit was empty, with no water in it.",
+  "hint": "Read Genesis 37:24.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-joseph_coat-7",
+  "illustration": "joseph_coat",
+  "question": "In whose house did Joseph first serve after he was sold into Egypt?",
+  "options": [
+   "Pharaoh's",
+   "Laban's",
+   "The butler's",
+   "Potiphar's"
+  ],
+  "answer": "Potiphar's",
+  "reference_label": "Genesis 39:1-2",
+  "ref_kjv": "And Joseph was brought down to Egypt; and Potiphar, an officer of Pharaoh, captain of the guard, an Egyptian, bought him of the hands of the Ishmeelites, which had brought him down thither. And the LORD was with Joseph, and he was a prosperous man; and he was in the house of his master the Egyptian.",
+  "explanation": "Potiphar, an officer of Pharaoh, bought Joseph, and Joseph was in the house of his master the Egyptian.",
+  "hint": "Read Genesis 39:1-2.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-joseph_coat-8",
+  "illustration": "joseph_coat",
+  "question": "In what did Joseph's brothers dip his coat?",
+  "options": [
+   "The blood of a kid of the goats",
+   "Water from the pit",
+   "Wine",
+   "Oil"
+  ],
+  "answer": "The blood of a kid of the goats",
+  "reference_label": "Genesis 37:31",
+  "ref_kjv": "And they took Joseph’s coat, and killed a kid of the goats, and dipped the coat in the blood;",
+  "explanation": "They killed a kid of the goats and dipped the coat in the blood.",
+  "hint": "Read Genesis 37:31.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-moses_red_sea-6",
+  "illustration": "moses_red_sea",
+  "question": "What did the LORD use to drive the sea back all night?",
+  "options": [
+   "A cold north wind",
+   "A strong east wind",
+   "A whirlwind",
+   "A great earthquake"
+  ],
+  "answer": "A strong east wind",
+  "reference_label": "Exodus 14:21",
+  "ref_kjv": "And Moses stretched out his hand over the sea; and the LORD caused the sea to go back by a strong east wind all that night, and made the sea dry land, and the waters were divided.",
+  "explanation": "The LORD caused the sea to go back by a strong east wind all that night.",
+  "hint": "Read Exodus 14:21.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-moses_red_sea-7",
+  "illustration": "moses_red_sea",
+  "question": "What happened to Pharaoh's army when the waters returned?",
+  "options": [
+   "They were struck blind",
+   "They turned back to Egypt",
+   "They crossed safely",
+   "The sea covered them"
+  ],
+  "answer": "The sea covered them",
+  "reference_label": "Exodus 14:28",
+  "ref_kjv": "And the waters returned, and covered the chariots, and the horsemen, and all the host of Pharaoh that came into the sea after them; there remained not so much as one of them.",
+  "explanation": "The waters returned and covered the chariots, the horsemen and all the host of Pharaoh.",
+  "hint": "Read Exodus 14:28.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-moses_red_sea-8",
+  "illustration": "moses_red_sea",
+  "question": "Where did Moses make bitter waters sweet soon after the crossing?",
+  "options": [
+   "Marah",
+   "Meribah",
+   "The pool of Siloam",
+   "The river Jordan"
+  ],
+  "answer": "Marah",
+  "reference_label": "Exodus 15:23-25",
+  "ref_kjv": "And when they came to Marah, they could not drink of the waters of Marah, for they were bitter: therefore the name of it was called Marah. And the people murmured against Moses, saying, What shall we drink? And he cried unto the LORD; and the LORD shewed him a tree, which when he had cast into the waters, the waters were made sweet: there he made for them a statute and an ordinance, and there he proved them,",
+  "explanation": "The waters of Marah were bitter; Moses cast a tree into them and they were made sweet.",
+  "hint": "Read Exodus 15:23-25.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-david_goliath-6",
+  "illustration": "david_goliath",
+  "question": "Whose armour did David try on before facing Goliath?",
+  "options": [
+   "Saul's",
+   "Abner's",
+   "Goliath's",
+   "Jonathan's"
+  ],
+  "answer": "Saul's",
+  "reference_label": "1 Samuel 17:38-39",
+  "ref_kjv": "And Saul armed David with his armour, and he put an helmet of brass upon his head; also he armed him with a coat of mail. And David girded his sword upon his armour, and he assayed to go; for he had not proved it. And David said unto Saul, I cannot go with these; for I have not proved them. And David put them off him.",
+  "explanation": "Saul armed David with his armour, but David put it off because he had not proved it.",
+  "hint": "Read 1 Samuel 17:38-39.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-david_goliath-7",
+  "illustration": "david_goliath",
+  "question": "What did David leave with a keeper when he went to the camp?",
+  "options": [
+   "The sheep",
+   "His ass",
+   "His harp",
+   "His sling"
+  ],
+  "answer": "The sheep",
+  "reference_label": "1 Samuel 17:20",
+  "ref_kjv": "And David rose up early in the morning, and left the sheep with a keeper, and took, and went, as Jesse had commanded him; and he came to the trench, as the host was going forth to the fight, and shouted for the battle.",
+  "explanation": "David rose early and left the sheep with a keeper.",
+  "hint": "Read 1 Samuel 17:20.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-david_goliath-8",
+  "illustration": "david_goliath",
+  "question": "Where did David's stone strike Goliath?",
+  "options": [
+   "In his forehead",
+   "In his heart",
+   "In his hand",
+   "In his foot"
+  ],
+  "answer": "In his forehead",
+  "reference_label": "1 Samuel 17:49",
+  "ref_kjv": "And David put his hand in his bag, and took thence a stone, and slang it, and smote the Philistine in his forehead, that the stone sunk into his forehead; and he fell upon his face to the earth.",
+  "explanation": "The stone sank into the Philistine's forehead, and he fell upon his face.",
+  "hint": "Read 1 Samuel 17:49.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-solomon_temple-6",
+  "illustration": "solomon_temple",
+  "question": "Who was Solomon's father?",
+  "options": [
+   "David",
+   "Saul",
+   "Jesse",
+   "Nathan"
+  ],
+  "answer": "David",
+  "reference_label": "1 Kings 2:12",
+  "ref_kjv": "Then sat Solomon upon the throne of David his father; and his kingdom was established greatly.",
+  "explanation": "Solomon sat upon the throne of David his father.",
+  "hint": "Read 1 Kings 2:12.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-solomon_temple-7",
+  "illustration": "solomon_temple",
+  "question": "How many years did Solomon spend building the temple?",
+  "options": [
+   "Seven",
+   "Forty",
+   "Three",
+   "Twelve"
+  ],
+  "answer": "Seven",
+  "reference_label": "1 Kings 6:38",
+  "ref_kjv": "And in the eleventh year, in the month Bul, which is the eighth month, was the house finished throughout all the parts thereof, and according to all the fashion of it. So was he seven years in building it.",
+  "explanation": "\"So was he seven years in building it.\"",
+  "hint": "Read 1 Kings 6:38.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-solomon_temple-8",
+  "illustration": "solomon_temple",
+  "question": "Which king of Tyre sent cedar and fir timber for the temple?",
+  "options": [
+   "Hiram",
+   "Cyrus",
+   "Nebuchadnezzar",
+   "Ahab"
+  ],
+  "answer": "Hiram",
+  "reference_label": "1 Kings 5:8-10",
+  "ref_kjv": "And Hiram sent to Solomon, saying, I have considered the things which thou sentest to me for: and I will do all thy desire concerning timber of cedar, and concerning timber of fir. My servants shall bring them down from Lebanon unto the sea: and I will convey them by sea in floats unto the place that thou shalt appoint me, and will cause them to be discharged there, and thou shalt receive them: and thou shalt accomplish my desire, in giving food for my household. So Hiram gave Solomon cedar trees and fir trees according to all his desire.",
+  "explanation": "Hiram gave Solomon cedar trees and fir trees according to all his desire.",
+  "hint": "Read 1 Kings 5:8-10.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-elijah_carmel-6",
+  "illustration": "elijah_carmel",
+  "question": "On Carmel Elijah asked, \"How long halt ye between two...\"",
+  "options": [
+   "Kings",
+   "Altars",
+   "Mountains",
+   "Opinions"
+  ],
+  "answer": "Opinions",
+  "reference_label": "1 Kings 18:21",
+  "ref_kjv": "And Elijah came unto all the people, and said, How long halt ye between two opinions? if the LORD be God, follow him: but if Baal, then follow him. And the people answered him not a word.",
+  "explanation": "\"How long halt ye between two opinions? if the LORD be God, follow him.\"",
+  "hint": "Read 1 Kings 18:21.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-elijah_carmel-7",
+  "illustration": "elijah_carmel",
+  "question": "What did Elijah have poured over the sacrifice on Mount Carmel?",
+  "options": [
+   "Wine",
+   "Oil",
+   "Water",
+   "Blood"
+  ],
+  "answer": "Water",
+  "reference_label": "1 Kings 18:33-35",
+  "ref_kjv": "And he put the wood in order, and cut the bullock in pieces, and laid him on the wood, and said, Fill four barrels with water, and pour it on the burnt sacrifice, and on the wood. And he said, Do it the second time. And they did it the second time. And he said, Do it the third time. And they did it the third time. And the water ran round about the altar; and he filled the trench also with water.",
+  "explanation": "Barrels of water were poured on the sacrifice three times until the trench was filled.",
+  "hint": "Read 1 Kings 18:33-35.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-elijah_carmel-8",
+  "illustration": "elijah_carmel",
+  "question": "How many stones did Elijah use to build the altar on Carmel?",
+  "options": [
+   "Ten",
+   "Three",
+   "Seven",
+   "Twelve"
+  ],
+  "answer": "Twelve",
+  "reference_label": "1 Kings 18:31",
+  "ref_kjv": "And Elijah took twelve stones, according to the number of the tribes of the sons of Jacob, unto whom the word of the LORD came, saying, Israel shall be thy name:",
+  "explanation": "Elijah took twelve stones, according to the number of the tribes of the sons of Jacob.",
+  "hint": "Read 1 Kings 18:31.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-daniel_lions-6",
+  "illustration": "daniel_lions",
+  "question": "Why was Daniel cast into the den of lions?",
+  "options": [
+   "He refused the king's meat",
+   "He kept praying to his God despite the king's decree",
+   "He would not bow to a golden image",
+   "He read the writing on the wall"
+  ],
+  "answer": "He kept praying to his God despite the king's decree",
+  "reference_label": "Daniel 6:13",
+  "ref_kjv": "Then answered they and said before the king, That Daniel, which is of the children of the captivity of Judah, regardeth not thee, O king, nor the decree that thou hast signed, but maketh his petition three times a day.",
+  "explanation": "His accusers said Daniel regarded not the king's decree but made his petition three times a day.",
+  "hint": "Read Daniel 6:13.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-daniel_lions-7",
+  "illustration": "daniel_lions",
+  "question": "What was laid upon the mouth of the den and sealed?",
+  "options": [
+   "A stone",
+   "A net",
+   "A wooden lid",
+   "A gate of iron"
+  ],
+  "answer": "A stone",
+  "reference_label": "Daniel 6:17",
+  "ref_kjv": "And a stone was brought, and laid upon the mouth of the den; and the king sealed it with his own signet, and with the signet of his lords; that the purpose might not be changed concerning Daniel.",
+  "explanation": "A stone was laid upon the mouth of the den, and the king sealed it with his own signet.",
+  "hint": "Read Daniel 6:17.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-daniel_lions-8",
+  "illustration": "daniel_lions",
+  "question": "What did the king do very early the next morning?",
+  "options": [
+   "Left the city",
+   "Went to the temple",
+   "Went in haste to the den",
+   "Held a feast"
+  ],
+  "answer": "Went in haste to the den",
+  "reference_label": "Daniel 6:19",
+  "ref_kjv": "Then the king arose very early in the morning, and went in haste unto the den of lions.",
+  "explanation": "The king arose very early in the morning and went in haste unto the den of lions.",
+  "hint": "Read Daniel 6:19.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-esther_king-7",
+  "illustration": "esther_king",
+  "question": "Which queen refused to come at King Ahasuerus' command?",
+  "options": [
+   "Athaliah",
+   "Michal",
+   "Vashti",
+   "Jezebel"
+  ],
+  "answer": "Vashti",
+  "reference_label": "Esther 1:12",
+  "ref_kjv": "But the queen Vashti refused to come at the king’s commandment by his chamberlains: therefore was the king very wroth, and his anger burned in him.",
+  "explanation": "Queen Vashti refused to come at the king's commandment.",
+  "hint": "Read Esther 1:12.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-esther_king-8",
+  "illustration": "esther_king",
+  "question": "On what was Haman hanged?",
+  "options": [
+   "The gallows he had made for Mordecai",
+   "The city gate",
+   "The palace wall",
+   "A tree in the king's garden"
+  ],
+  "answer": "The gallows he had made for Mordecai",
+  "reference_label": "Esther 7:10",
+  "ref_kjv": "So they hanged Haman on the gallows that he had prepared for Mordecai. Then was the king’s wrath pacified.",
+  "explanation": "They hanged Haman on the gallows that he had prepared for Mordecai.",
+  "hint": "Read Esther 7:10.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-esther_king-9",
+  "illustration": "esther_king",
+  "question": "What did Esther ask the Jews in Shushan to do before she went to the king?",
+  "options": [
+   "Hide in their houses",
+   "Bring gifts",
+   "Fast for three days",
+   "Gather weapons"
+  ],
+  "answer": "Fast for three days",
+  "reference_label": "Esther 4:16",
+  "ref_kjv": "Go, gather together all the Jews that are present in Shushan, and fast ye for me, and neither eat nor drink three days, night or day: I also and my maidens will fast likewise; and so will I go in unto the king, which is not according to the law: and if I perish, I perish.",
+  "explanation": "Esther said, \"Fast ye for me... three days, night or day.\"",
+  "hint": "Read Esther 4:16.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-nativity-7",
+  "illustration": "nativity",
+  "question": "What name did the angel tell Joseph to give the child?",
+  "options": [
+   "Jesus",
+   "David",
+   "Samuel",
+   "John"
+  ],
+  "answer": "Jesus",
+  "reference_label": "Matthew 1:21",
+  "ref_kjv": "And she shall bring forth a son, and thou shalt call his name JESUS: for he shall save his people from their sins.",
+  "explanation": "\"Thou shalt call his name JESUS: for he shall save his people from their sins.\"",
+  "hint": "Read Matthew 1:21.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-nativity-8",
+  "illustration": "nativity",
+  "question": "What went before the wise men and stood over where the young child was?",
+  "options": [
+   "A star",
+   "An angel",
+   "A bright cloud",
+   "A pillar of cloud"
+  ],
+  "answer": "A star",
+  "reference_label": "Matthew 2:9",
+  "ref_kjv": "When they had heard the king, they departed; and, lo, the star, which they saw in the east, went before them, till it came and stood over where the young child was.",
+  "explanation": "The star went before them, till it came and stood over where the young child was.",
+  "hint": "Read Matthew 2:9.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-nativity-9",
+  "illustration": "nativity",
+  "question": "To which land did Joseph take Mary and the child to escape Herod?",
+  "options": [
+   "Egypt",
+   "Babylon",
+   "Persia",
+   "Syria"
+  ],
+  "answer": "Egypt",
+  "reference_label": "Matthew 2:14",
+  "ref_kjv": "When he arose, he took the young child and his mother by night, and departed into Egypt:",
+  "explanation": "Joseph took the young child and his mother by night and departed into Egypt.",
+  "hint": "Read Matthew 2:14.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-sermon_mount-6",
+  "illustration": "sermon_mount",
+  "question": "\"Blessed are the peacemakers: for they shall be called...\"",
+  "options": [
+   "Kings and priests",
+   "The light of the world",
+   "The salt of the earth",
+   "The children of God"
+  ],
+  "answer": "The children of God",
+  "reference_label": "Matthew 5:9",
+  "ref_kjv": "Blessed are the peacemakers: for they shall be called the children of God.",
+  "explanation": "\"Blessed are the peacemakers: for they shall be called the children of God.\"",
+  "hint": "Read Matthew 5:9.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-sermon_mount-7",
+  "illustration": "sermon_mount",
+  "question": "Where did Jesus say to lay up treasures?",
+  "options": [
+   "On earth",
+   "In the ground",
+   "In heaven",
+   "In the temple"
+  ],
+  "answer": "In heaven",
+  "reference_label": "Matthew 6:20",
+  "ref_kjv": "But lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt, and where thieves do not break through nor steal:",
+  "explanation": "\"Lay up for yourselves treasures in heaven.\"",
+  "hint": "Read Matthew 6:20.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-sermon_mount-8",
+  "illustration": "sermon_mount",
+  "question": "Jesus said to consider which things, that toil not, neither spin?",
+  "options": [
+   "The lilies of the field",
+   "The sparrows",
+   "The grass of the field",
+   "The fowls of the air"
+  ],
+  "answer": "The lilies of the field",
+  "reference_label": "Matthew 6:28",
+  "ref_kjv": "And why take ye thought for raiment? Consider the lilies of the field, how they grow; they toil not, neither do they spin:",
+  "explanation": "\"Consider the lilies of the field, how they grow; they toil not, neither do they spin.\"",
+  "hint": "Read Matthew 6:28.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-calming_storm-4",
+  "illustration": "calming_storm",
+  "question": "What was Jesus doing when the storm arose?",
+  "options": [
+   "Praying",
+   "Preaching",
+   "Fishing",
+   "Sleeping"
+  ],
+  "answer": "Sleeping",
+  "reference_label": "Mark 4:38",
+  "ref_kjv": "And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?",
+  "explanation": "Jesus was in the hinder part of the ship, asleep on a pillow.",
+  "hint": "Read Mark 4:38.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-calming_storm-5",
+  "illustration": "calming_storm",
+  "question": "What did the disciples say when they woke Jesus?",
+  "options": [
+   "Master, carest thou not that we perish?",
+   "Who is the greatest?",
+   "Lord, teach us to pray",
+   "Lord, increase our faith"
+  ],
+  "answer": "Master, carest thou not that we perish?",
+  "reference_label": "Mark 4:38",
+  "ref_kjv": "And he was in the hinder part of the ship, asleep on a pillow: and they awake him, and say unto him, Master, carest thou not that we perish?",
+  "explanation": "They woke Him and said, \"Master, carest thou not that we perish?\"",
+  "hint": "Read Mark 4:38.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-calming_storm-6",
+  "illustration": "calming_storm",
+  "question": "What happened when Jesus rebuked the wind?",
+  "options": [
+   "Thunder answered",
+   "There was a great calm",
+   "The ship sank",
+   "It began to rain"
+  ],
+  "answer": "There was a great calm",
+  "reference_label": "Mark 4:39",
+  "ref_kjv": "And he arose, and rebuked the wind, and said unto the sea, Peace, be still. And the wind ceased, and there was a great calm.",
+  "explanation": "The wind ceased, and there was a great calm.",
+  "hint": "Read Mark 4:39.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-calming_storm-7",
+  "illustration": "calming_storm",
+  "question": "What did the disciples ask one another afterwards?",
+  "options": [
+   "Shall we return to land?",
+   "What manner of man is this?",
+   "Who touched me?",
+   "Where shall we go?"
+  ],
+  "answer": "What manner of man is this?",
+  "reference_label": "Mark 4:41",
+  "ref_kjv": "And they feared exceedingly, and said one to another, What manner of man is this, that even the wind and the sea obey him?",
+  "explanation": "\"What manner of man is this, that even the wind and the sea obey him?\"",
+  "hint": "Read Mark 4:41.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-good_samaritan-7",
+  "illustration": "good_samaritan",
+  "question": "On what did the Samaritan set the wounded man?",
+  "options": [
+   "A cart",
+   "His own beast",
+   "A boat",
+   "A litter"
+  ],
+  "answer": "His own beast",
+  "reference_label": "Luke 10:34",
+  "ref_kjv": "And went to him, and bound up his wounds, pouring in oil and wine, and set him on his own beast, and brought him to an inn, and took care of him.",
+  "explanation": "He set him on his own beast and brought him to an inn.",
+  "hint": "Read Luke 10:34.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-good_samaritan-8",
+  "illustration": "good_samaritan",
+  "question": "Whom did the lawyer name as the true neighbour?",
+  "options": [
+   "The priest",
+   "The Levite",
+   "He that shewed mercy on him",
+   "The host of the inn"
+  ],
+  "answer": "He that shewed mercy on him",
+  "reference_label": "Luke 10:37",
+  "ref_kjv": "And he said, He that shewed mercy on him. Then said Jesus unto him, Go, and do thou likewise.",
+  "explanation": "The lawyer said, \"He that shewed mercy on him.\" Jesus said, \"Go, and do thou likewise.\"",
+  "hint": "Read Luke 10:37.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-prodigal_son-6",
+  "illustration": "prodigal_son",
+  "question": "What did the younger son ask his father to give him?",
+  "options": [
+   "His portion of goods",
+   "A field",
+   "A wife",
+   "A blessing"
+  ],
+  "answer": "His portion of goods",
+  "reference_label": "Luke 15:12",
+  "ref_kjv": "And the younger of them said to his father, Father, give me the portion of goods that falleth to me. And he divided unto them his living.",
+  "explanation": "\"Father, give me the portion of goods that falleth to me.\"",
+  "hint": "Read Luke 15:12.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-prodigal_son-7",
+  "illustration": "prodigal_son",
+  "question": "What would the son gladly have eaten while feeding swine?",
+  "options": [
+   "Wild honey",
+   "Bread crumbs",
+   "The husks the swine ate",
+   "Grass"
+  ],
+  "answer": "The husks the swine ate",
+  "reference_label": "Luke 15:16",
+  "ref_kjv": "And he would fain have filled his belly with the husks that the swine did eat: and no man gave unto him.",
+  "explanation": "He would fain have filled his belly with the husks that the swine did eat.",
+  "hint": "Read Luke 15:16.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-prodigal_son-8",
+  "illustration": "prodigal_son",
+  "question": "What did the father do when he saw his son a great way off?",
+  "options": [
+   "Sent a servant",
+   "Ran and fell on his neck",
+   "Waited at the door",
+   "Turned away"
+  ],
+  "answer": "Ran and fell on his neck",
+  "reference_label": "Luke 15:20",
+  "ref_kjv": "And he arose, and came to his father. But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him.",
+  "explanation": "The father had compassion, and ran, and fell on his neck, and kissed him.",
+  "hint": "Read Luke 15:20.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-pentecost-5",
+  "illustration": "pentecost",
+  "question": "What sound came from heaven on the day of Pentecost?",
+  "options": [
+   "A rushing mighty wind",
+   "A trumpet",
+   "Thunder",
+   "Singing"
+  ],
+  "answer": "A rushing mighty wind",
+  "reference_label": "Acts 2:2",
+  "ref_kjv": "And suddenly there came a sound from heaven as of a rushing mighty wind, and it filled all the house where they were sitting.",
+  "explanation": "Suddenly there came a sound from heaven as of a rushing mighty wind.",
+  "hint": "Read Acts 2:2.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-pentecost-6",
+  "illustration": "pentecost",
+  "question": "With what were they all filled?",
+  "options": [
+   "Fear",
+   "Sorrow",
+   "The Holy Ghost",
+   "Anger"
+  ],
+  "answer": "The Holy Ghost",
+  "reference_label": "Acts 2:4",
+  "ref_kjv": "And they were all filled with the Holy Ghost, and began to speak with other tongues, as the Spirit gave them utterance.",
+  "explanation": "They were all filled with the Holy Ghost and began to speak with other tongues.",
+  "hint": "Read Acts 2:4.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-pentecost-7",
+  "illustration": "pentecost",
+  "question": "Which prophet did Peter quote in his sermon?",
+  "options": [
+   "Malachi",
+   "Isaiah",
+   "Joel",
+   "Jeremiah"
+  ],
+  "answer": "Joel",
+  "reference_label": "Acts 2:16",
+  "ref_kjv": "But this is that which was spoken by the prophet Joel;",
+  "explanation": "Peter said, \"This is that which was spoken by the prophet Joel.\"",
+  "hint": "Read Acts 2:16.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-paul_ship-5",
+  "illustration": "paul_ship",
+  "question": "What was the name of the centurion who had charge of Paul?",
+  "options": [
+   "Claudius",
+   "Julius",
+   "Festus",
+   "Cornelius"
+  ],
+  "answer": "Julius",
+  "reference_label": "Acts 27:1",
+  "ref_kjv": "And when it was determined that we should sail into Italy, they delivered Paul and certain other prisoners unto one named Julius, a centurion of Augustus’ band.",
+  "explanation": "Paul was delivered unto one named Julius, a centurion of Augustus' band.",
+  "hint": "Read Acts 27:1.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-paul_ship-6",
+  "illustration": "paul_ship",
+  "question": "How many souls were in the ship?",
+  "options": [
+   "500",
+   "120",
+   "70",
+   "276 (two hundred threescore and sixteen)"
+  ],
+  "answer": "276 (two hundred threescore and sixteen)",
+  "reference_label": "Acts 27:37",
+  "ref_kjv": "And we were in all in the ship two hundred threescore and sixteen souls.",
+  "explanation": "\"We were in all in the ship two hundred threescore and sixteen souls.\"",
+  "hint": "Read Acts 27:37.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-paul_ship-7",
+  "illustration": "paul_ship",
+  "question": "During the storm, what did Paul urge everyone on the ship to be?",
+  "options": [
+   "Of good cheer",
+   "Angry with the captain",
+   "Ready to swim",
+   "Silent"
+  ],
+  "answer": "Of good cheer",
+  "reference_label": "Acts 27:22",
+  "ref_kjv": "And now I exhort you to be of good cheer: for there shall be no loss of any man’s life among you, but of the ship.",
+  "explanation": "Paul said, \"I exhort you to be of good cheer: for there shall be no loss of any man's life.\"",
+  "hint": "Read Acts 27:22.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-jonah_fish-6",
+  "illustration": "jonah_fish",
+  "question": "What was Jonah doing in the ship during the storm?",
+  "options": [
+   "Rowing hard",
+   "Lying fast asleep",
+   "Praying on deck",
+   "Throwing cargo overboard"
+  ],
+  "answer": "Lying fast asleep",
+  "reference_label": "Jonah 1:5",
+  "ref_kjv": "Then the mariners were afraid, and cried every man unto his god, and cast forth the wares that were in the ship into the sea, to lighten it of them. But Jonah was gone down into the sides of the ship; and he lay, and was fast asleep.",
+  "explanation": "Jonah was gone down into the sides of the ship; and he lay, and was fast asleep.",
+  "hint": "Read Jonah 1:5.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-jonah_fish-7",
+  "illustration": "jonah_fish",
+  "question": "How did the people of Nineveh respond to Jonah's warning?",
+  "options": [
+   "They fasted and put on sackcloth",
+   "They left the city",
+   "They attacked Jonah",
+   "They ignored him"
+  ],
+  "answer": "They fasted and put on sackcloth",
+  "reference_label": "Jonah 3:5",
+  "ref_kjv": "So the people of Nineveh believed God, and proclaimed a fast, and put on sackcloth, from the greatest of them even to the least of them.",
+  "explanation": "The people of Nineveh believed God, proclaimed a fast and put on sackcloth.",
+  "hint": "Read Jonah 3:5.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-jonah_fish-8",
+  "illustration": "jonah_fish",
+  "question": "What did the fish do when the LORD spoke to it?",
+  "options": [
+   "Vomited Jonah out upon the dry land",
+   "Swam to Tarshish",
+   "Carried him to Joppa",
+   "Released him in the deep"
+  ],
+  "answer": "Vomited Jonah out upon the dry land",
+  "reference_label": "Jonah 2:10",
+  "ref_kjv": "And the LORD spake unto the fish, and it vomited out Jonah upon the dry land.",
+  "explanation": "\"The LORD spake unto the fish, and it vomited out Jonah upon the dry land.\"",
+  "hint": "Read Jonah 2:10.",
+  "difficulty": 3
+ },
+ {
+  "id": "pic-empty_tomb-5",
+  "illustration": "empty_tomb",
+  "question": "What did the women find had been rolled away?",
+  "options": [
+   "The guards",
+   "A curtain",
+   "The stone",
+   "The linen clothes"
+  ],
+  "answer": "The stone",
+  "reference_label": "Mark 16:4",
+  "ref_kjv": "And when they looked, they saw that the stone was rolled away: for it was very great.",
+  "explanation": "They saw that the stone was rolled away: for it was very great.",
+  "hint": "Read Mark 16:4.",
+  "difficulty": 2
+ },
+ {
+  "id": "pic-empty_tomb-6",
+  "illustration": "empty_tomb",
+  "question": "What did the angel tell the women about Jesus?",
+  "options": [
+   "He is sleeping",
+   "He went to the temple",
+   "He is risen",
+   "He was taken away"
+  ],
+  "answer": "He is risen",
+  "reference_label": "Matthew 28:6",
+  "ref_kjv": "He is not here: for he is risen, as he said. Come, see the place where the Lord lay.",
+  "explanation": "\"He is not here: for he is risen, as he said.\"",
+  "hint": "Read Matthew 28:6.",
+  "difficulty": 1
+ },
+ {
+  "id": "pic-empty_tomb-7",
+  "illustration": "empty_tomb",
+  "question": "Who ran with Peter to the tomb and got there first?",
+  "options": [
+   "Thomas",
+   "James",
+   "Andrew",
+   "The other disciple, whom Jesus loved"
+  ],
+  "answer": "The other disciple, whom Jesus loved",
+  "reference_label": "John 20:2-4",
+  "ref_kjv": "Then she runneth, and cometh to Simon Peter, and to the other disciple, whom Jesus loved, and saith unto them, They have taken away the Lord out of the sepulchre, and we know not where they have laid him. Peter therefore went forth, and that other disciple, and came to the sepulchre. So they ran both together: and the other disciple did outrun Peter, and came first to the sepulchre.",
+  "explanation": "The other disciple, whom Jesus loved, did outrun Peter and came first to the sepulchre.",
+  "hint": "Read John 20:2-4.",
+  "difficulty": 3
+ }
+]
