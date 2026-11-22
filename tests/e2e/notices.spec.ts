@@ -5,7 +5,9 @@ test('a page notice closes when the player moves to another page', async ({ page
   const name = page.locator('#dn')
   await name.fill('Notice Tester')
   await page.locator('form').filter({ has: name }).getByRole('button', { name: 'Save' }).click()
-  const notice = page.getByRole('status').filter({ hasText: 'Profile saved' })
+  // Offline preview: "Profile saved". Online without a session yet: "Not saved" (start a guest session first).
+  // Either way it is a page notice and must close on the next page.
+  const notice = page.getByRole('status').filter({ hasText: /Profile saved|Not saved/ })
   await expect(notice).toBeVisible()
   await page.goto('./#/settings')
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
