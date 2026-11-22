@@ -5394,21 +5394,23 @@
  {
   "id": "wis-w13-2",
   "mode": "wisdom",
-  "prompt": "A friend from your small group is overwhelmed after losing a job while caring for a sick parent. You have some free evenings and could help with meals and errands. What does Galatians 6:2 counsel here?",
+  "prompt": "You run a growing community programme and insist on handling every question, decision and dispute yourself. You are worn out, and people wait days for answers. A trusted older relative tells you plainly that this cannot go on. What does Exodus 18:17-18 counsel here?",
   "options": [
-   "Wait for them to ask, since everyone should handle their own problems privately",
-   "Offer advice from a distance but avoid getting involved in their practical needs",
-   "Step in to help carry the load, since this fulfils the law of Christ",
-   "Remind them that hardship builds character and leave them to grow through it"
+   "Keep doing everything yourself, since a good leader never admits a load is too heavy",
+   "Hide your exhaustion so no one doubts your ability",
+   "Accept that the load is too heavy to carry alone, because doing it all yourself wears out both you and the people",
+   "Shut the programme down rather than share any responsibility"
   ],
   "correct": 2,
-  "reference": "Galatians 6:2",
+  "reference": "Exodus 18:17-18",
   "keywords": [
-   "one another's burdens",
-   "law of Christ"
+   "not good",
+   "wear away",
+   "too heavy",
+   "alone"
   ],
-  "explanation": "Galatians 6:2 says, 'Bear ye one another's burdens, and so fulfil the law of Christ.' Practically sharing a friend's load is how believers live out Christ's law.",
-  "hint": "The verse speaks of carrying something together.",
+  "explanation": "In Exodus 18:17-18 Jethro told Moses, 'The thing that thou doest is not good. Thou wilt surely wear away, both thou, and this people that is with thee: for this thing is too heavy for thee; thou art not able to perform it thyself alone.' A leader who carries everything alone wears out both himself and the people.",
+  "hint": "Moses' father in law said something was too heavy for one person.",
   "difficulty": 1
  },
  {
@@ -5734,21 +5736,22 @@
  {
   "id": "wis-w11-3",
   "mode": "wisdom",
-  "prompt": "At a community meeting, an elderly man with white hair slowly makes his way to the front, and some younger attendees roll their eyes and keep their seats. You consider how to respond. Which response best reflects the teaching of Leviticus 19:32?",
+  "prompt": "You lead a busy household, and faith rarely comes up at home except on Sundays. Your children are growing fast, and you wonder whether passing on what you believe can wait until a formal class or a better season. Which response best reflects the teaching of Deuteronomy 6:6-7?",
   "options": [
-   "Ignore him, since respect should be based only on someone's position or wealth",
-   "Rise and show him honour, treating age itself with respect as an act of reverence toward God",
-   "Join the others in quietly laughing at how slow he is",
-   "Offer respect only if he proves he is more qualified than the younger speakers"
+   "Leave all spiritual teaching to church and school, since home is for rest",
+   "Keep God's words in your own heart and talk of them with your children in everyday moments at home and on the way",
+   "Wait until the children are grown, when they can decide for themselves",
+   "Talk about faith only when a crisis forces the subject"
   ],
   "correct": 1,
-  "reference": "Leviticus 19:32",
+  "reference": "Deuteronomy 6:6-7",
   "keywords": [
-   "hoary head",
-   "old man"
+   "teach them diligently",
+   "sittest in thine house",
+   "walkest by the way"
   ],
-  "explanation": "Leviticus 19:32 says, 'Thou shalt rise up before the hoary head, and honour the face of the old man, and fear thy God,' tying respect for the aged to reverence for the LORD.",
-  "hint": "The verse describes a physical action of respect toward grey hair.",
+  "explanation": "Deuteronomy 6:6-7 says the LORD's words 'shall be in thine heart' and 'thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up.' Teaching is meant to be part of everyday family life.",
+  "hint": "The passage lists ordinary moments of the day, from sitting at home to lying down and rising up.",
   "difficulty": 2
  },
  {
@@ -6854,7 +6857,7 @@
    "locked"
   ],
   "explanation": "Finding the parlour doors locked, the servants said, 'Surely he covereth his feet in his summer chamber,' and tarried until they were ashamed, then used a key and found their lord dead (Judges 3:24-25).",
-  "hint": "The locked doors led them to assume the king wanted privacy.",
+  "hint": "Read what the servants said to one another while they waited outside.",
   "difficulty": 3,
   "stages": 5
  },

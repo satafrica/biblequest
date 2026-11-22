@@ -1,0 +1,76 @@
+[
+ {
+  "id": "wis-w11-3",
+  "mode": "wisdom",
+  "prompt": "You lead a busy household, and faith rarely comes up at home except on Sundays. Your children are growing fast, and you wonder whether passing on what you believe can wait until a formal class or a better season. Which response best reflects the teaching of Deuteronomy 6:6-7?",
+  "options": [
+   "Leave all spiritual teaching to church and school, since home is for rest",
+   "Keep God's words in your own heart and talk of them with your children in everyday moments at home and on the way",
+   "Wait until the children are grown, when they can decide for themselves",
+   "Talk about faith only when a crisis forces the subject"
+  ],
+  "correct": 1,
+  "reference": "Deuteronomy 6:6-7",
+  "keywords": [
+   "teach them diligently",
+   "sittest in thine house",
+   "walkest by the way"
+  ],
+  "explanation": "Deuteronomy 6:6-7 says the LORD's words 'shall be in thine heart' and 'thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up.' Teaching is meant to be part of everyday family life.",
+  "hint": "The passage lists ordinary moments of the day, from sitting at home to lying down and rising up.",
+  "difficulty": 2,
+  "kjv": "And these words, which I command thee this day, shall be in thine heart: And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up.",
+  "auto_errors": []
+ },
+ {
+  "id": "wis-w13-2",
+  "mode": "wisdom",
+  "prompt": "You run a growing community programme and insist on handling every question, decision and dispute yourself. You are worn out, and people wait days for answers. A trusted older relative tells you plainly that this cannot go on. What does Exodus 18:17-18 counsel here?",
+  "options": [
+   "Keep doing everything yourself, since a good leader never admits a load is too heavy",
+   "Hide your exhaustion so no one doubts your ability",
+   "Accept that the load is too heavy to carry alone, because doing it all yourself wears out both you and the people",
+   "Shut the programme down rather than share any responsibility"
+  ],
+  "correct": 2,
+  "reference": "Exodus 18:17-18",
+  "keywords": [
+   "not good",
+   "wear away",
+   "too heavy",
+   "alone"
+  ],
+  "explanation": "In Exodus 18:17-18 Jethro told Moses, 'The thing that thou doest is not good. Thou wilt surely wear away, both thou, and this people that is with thee: for this thing is too heavy for thee; thou art not able to perform it thyself alone.' A leader who carries everything alone wears out both himself and the people.",
+  "hint": "Moses' father in law said something was too heavy for one person.",
+  "difficulty": 1,
+  "kjv": "And Moses’ father in law said unto him, The thing that thou doest is not good. Thou wilt surely wear away, both thou, and this people that is with thee: for this thing is too heavy for thee; thou art not able to perform it thyself alone.",
+  "auto_errors": []
+ },
+ {
+  "id": "mys-m16-4",
+  "mode": "mystery",
+  "case": "m16",
+  "case_title": "The Left-Handed Messenger",
+  "briefing": "A foreign king has ruled Israel for years, until one day he is found dead behind locked doors in his own private chamber, and the visitor who last saw him alive has vanished. Your case file is Judges 3:12-30: follow the evidence from the oppression of Israel to the final outcome, staying strictly with what the text reports.",
+  "stage": 4,
+  "clue": "Scene report: the visitor left through the porch. Afterward the king's servants waited a long time outside the parlour before anyone went in.",
+  "prompt": "According to the text, why did the servants delay entering the parlour?",
+  "options": [
+   "Ehud had ordered them to stay outside until evening",
+   "They feared the king's anger at being disturbed at a feast",
+   "The doors were locked, and they supposed he covereth his feet in his summer chamber",
+   "They could not find anyone to open the doors until morning"
+  ],
+  "correct": 2,
+  "reference": "Judges 3:21-25",
+  "keywords": [
+   "covereth his feet",
+   "locked"
+  ],
+  "explanation": "Finding the parlour doors locked, the servants said, 'Surely he covereth his feet in his summer chamber,' and tarried until they were ashamed, then used a key and found their lord dead (Judges 3:24-25).",
+  "hint": "Read what the servants said to one another while they waited outside.",
+  "difficulty": 3,
+  "kjv": "And Ehud put forth his left hand, and took the dagger from his right thigh, and thrust it into his belly: And the haft also went in after the blade; and the fat closed upon the blade, so that he could not draw the dagger out of his belly; and the dirt came out. Then Ehud went forth through the porch, and shut the doors of the parlour upon him, and locked them. When he was gone out, his servants came; and when they saw that, behold, the doors of the parlour were locked, they said, Surely he covereth his feet in his summer chamber. And they tarried till they were ashamed: and, behold, he opened not the doors of the parlour; therefore they took a key, and opened them: and, behold, their lord …",
+  "auto_errors": []
+ }
+]
