@@ -22,6 +22,10 @@ import expansion_1 as X1                                 # noqa: E402
 PICTURE = PICTURE + X1.PICTURE_2; WHOAMI = WHOAMI + X1.WHOAMI_2
 COMPLETE = COMPLETE + X1.COMPLETE_2; WHICH_BOOK = WHICH_BOOK + X1.WHICH_BOOK_2
 MATCH_REF = MATCH_REF + X1.MATCH_REF_2; SEQUENCES = SEQUENCES + X1.SEQUENCES_2
+import expansion_2 as X2                                 # noqa: E402
+WHOAMI = WHOAMI + X2.WHOAMI_3
+COMPLETE = COMPLETE + X2.COMPLETE_3; WHICH_BOOK = WHICH_BOOK + X2.WHICH_BOOK_3
+MATCH_REF = MATCH_REF + X2.MATCH_REF_3; SEQUENCES = SEQUENCES + X2.SEQUENCES_3
 
 KJV = json.load(open(os.path.join(ROOT, "content", "kjv.json"), encoding="utf-8-sig"))
 BOOKS = [b["name"] for b in KJV]

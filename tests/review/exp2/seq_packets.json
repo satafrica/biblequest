@@ -1,0 +1,740 @@
+[
+ {
+  "id": "seq-lot_sodom",
+  "title": "Put these events in order: Lot and the Cities of the Plain",
+  "difficulty": 2,
+  "reference_label": "Genesis 13 – Genesis 19",
+  "hint": "The first event is in Genesis 13.",
+  "events_in_stated_order": [
+   {
+    "event": "Lot chooses the plain of Jordan",
+    "ref": "Genesis 13:11",
+    "kjv": "Then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other."
+   },
+   {
+    "event": "Abram hears that Lot was taken captive",
+    "ref": "Genesis 14:14",
+    "kjv": "And when Abram heard that his brother was taken captive, he armed his trained servants, born in his own house, three hundred and eighteen, and pursued them unto Dan."
+   },
+   {
+    "event": "Two angels come to Sodom at evening",
+    "ref": "Genesis 19:1",
+    "kjv": "And there came two angels to Sodom at even; and Lot sat in the gate of Sodom: and Lot seeing them rose up to meet them; and he bowed himself with his face toward the ground;"
+   },
+   {
+    "event": "Lot's wife looks back",
+    "ref": "Genesis 19:26",
+    "kjv": "But his wife looked back from behind him, and she became a pillar of salt."
+   }
+  ]
+ },
+ {
+  "id": "seq-isaac_rebekah",
+  "title": "Put these events in order: A Bride for Isaac",
+  "difficulty": 2,
+  "reference_label": "Genesis 24:4-67",
+  "hint": "The first event is in Genesis 24:4.",
+  "events_in_stated_order": [
+   {
+    "event": "Abraham sends his servant to his kindred",
+    "ref": "Genesis 24:4",
+    "kjv": "But thou shalt go unto my country, and to my kindred, and take a wife unto my son Isaac."
+   },
+   {
+    "event": "Rebekah offers to water the camels",
+    "ref": "Genesis 24:19",
+    "kjv": "And when she had done giving him drink, she said, I will draw water for thy camels also, until they have done drinking."
+   },
+   {
+    "event": "Laban runs out to the man at the well",
+    "ref": "Genesis 24:29",
+    "kjv": "And Rebekah had a brother, and his name was Laban: and Laban ran out unto the man, unto the well."
+   },
+   {
+    "event": "Rebekah says, I will go",
+    "ref": "Genesis 24:58",
+    "kjv": "And they called Rebekah, and said unto her, Wilt thou go with this man? And she said, I will go."
+   },
+   {
+    "event": "Rebekah becomes Isaac's wife",
+    "ref": "Genesis 24:67",
+    "kjv": "And Isaac brought her into his mother Sarah’s tent, and took Rebekah, and she became his wife; and he loved her: and Isaac was comforted after his mother’s death."
+   }
+  ]
+ },
+ {
+  "id": "seq-jacob_rachel",
+  "title": "Put these events in order: Jacob, Rachel and Leah",
+  "difficulty": 3,
+  "reference_label": "Genesis 29:10-30",
+  "hint": "The first event is in Genesis 29:10.",
+  "events_in_stated_order": [
+   {
+    "event": "Jacob waters Rachel's flock at the well",
+    "ref": "Genesis 29:10",
+    "kjv": "And it came to pass, when Jacob saw Rachel the daughter of Laban his mother’s brother, and the sheep of Laban his mother’s brother, that Jacob went near, and rolled the stone from the well’s mouth, and watered the flock …"
+   },
+   {
+    "event": "Jacob serves seven years for Rachel",
+    "ref": "Genesis 29:20",
+    "kjv": "And Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her."
+   },
+   {
+    "event": "Jacob finds he has married Leah",
+    "ref": "Genesis 29:25",
+    "kjv": "And it came to pass, that in the morning, behold, it was Leah: and he said to Laban, What is this thou hast done unto me? did not I serve with thee for Rachel? wherefore then hast thou beguiled me?"
+   },
+   {
+    "event": "Jacob serves seven more years",
+    "ref": "Genesis 29:30",
+    "kjv": "And he went in also unto Rachel, and he loved also Rachel more than Leah, and served with him yet seven other years."
+   }
+  ]
+ },
+ {
+  "id": "seq-joseph_brothers",
+  "title": "Put these events in order: Joseph and His Brothers in Egypt",
+  "difficulty": 2,
+  "reference_label": "Genesis 42 – Genesis 45",
+  "hint": "The first event is in Genesis 42.",
+  "events_in_stated_order": [
+   {
+    "event": "Ten brothers go down to buy corn in Egypt",
+    "ref": "Genesis 42:3",
+    "kjv": "And Joseph’s ten brethren went down to buy corn in Egypt."
+   },
+   {
+    "event": "Simeon is bound before their eyes",
+    "ref": "Genesis 42:24",
+    "kjv": "And he turned himself about from them, and wept; and returned to them again, and communed with them, and took from them Simeon, and bound him before their eyes."
+   },
+   {
+    "event": "The brothers take Benjamin down to Egypt",
+    "ref": "Genesis 43:15",
+    "kjv": "And the men took that present, and they took double money in their hand, and Benjamin; and rose up, and went down to Egypt, and stood before Joseph."
+   },
+   {
+    "event": "The cup is found in Benjamin's sack",
+    "ref": "Genesis 44:12",
+    "kjv": "And he searched, and began at the eldest, and left at the youngest: and the cup was found in Benjamin’s sack."
+   },
+   {
+    "event": "Joseph makes himself known",
+    "ref": "Genesis 45:1",
+    "kjv": "Then Joseph could not refrain himself before all them that stood by him; and he cried, Cause every man to go out from me. And there stood no man with him, while Joseph made himself known unto his brethren."
+   }
+  ]
+ },
+ {
+  "id": "seq-twelve_spies",
+  "title": "Put these events in order: The Twelve Spies",
+  "difficulty": 2,
+  "reference_label": "Numbers 13 – Numbers 14",
+  "hint": "The first event is in Numbers 13.",
+  "events_in_stated_order": [
+   {
+    "event": "Moses sends the spies to search Canaan",
+    "ref": "Numbers 13:17",
+    "kjv": "And Moses sent them to spy out the land of Canaan, and said unto them, Get you up this way southward, and go up into the mountain:"
+   },
+   {
+    "event": "Two men carry a cluster of grapes on a staff",
+    "ref": "Numbers 13:23",
+    "kjv": "And they came unto the brook of Eshcol, and cut down from thence a branch with one cluster of grapes, and they bare it between two upon a staff; and they brought of the pomegranates, and of the figs."
+   },
+   {
+    "event": "Caleb says, Let us go up at once",
+    "ref": "Numbers 13:30",
+    "kjv": "And Caleb stilled the people before Moses, and said, Let us go up at once, and possess it; for we are well able to overcome it."
+   },
+   {
+    "event": "The people murmur against Moses and Aaron",
+    "ref": "Numbers 14:2",
+    "kjv": "And all the children of Israel murmured against Moses and against Aaron: and the whole congregation said unto them, Would God that we had died in the land of Egypt! or would God we had died in this wilderness!"
+   },
+   {
+    "event": "Israel must wander forty years",
+    "ref": "Numbers 14:34",
+    "kjv": "After the number of the days in which ye searched the land, even forty days, each day for a year, shall ye bear your iniquities, even forty years, and ye shall know my breach of promise."
+   }
+  ]
+ },
+ {
+  "id": "seq-balaam",
+  "title": "Put these events in order: Balaam and the Donkey",
+  "difficulty": 3,
+  "reference_label": "Numbers 22 – Numbers 23",
+  "hint": "The first event is in Numbers 22.",
+  "events_in_stated_order": [
+   {
+    "event": "Balaam saddles his ass and goes with the princes of Moab",
+    "ref": "Numbers 22:21",
+    "kjv": "And Balaam rose up in the morning, and saddled his ass, and went with the princes of Moab."
+   },
+   {
+    "event": "The ass sees the angel standing in the way",
+    "ref": "Numbers 22:23",
+    "kjv": "And the ass saw the angel of the LORD standing in the way, and his sword drawn in his hand: and the ass turned aside out of the way, and went into the field: and Balaam smote the ass, to turn her into the way."
+   },
+   {
+    "event": "The LORD opens the mouth of the ass",
+    "ref": "Numbers 22:28",
+    "kjv": "And the LORD opened the mouth of the ass, and she said unto Balaam, What have I done unto thee, that thou hast smitten me these three times?"
+   },
+   {
+    "event": "The LORD opens Balaam's eyes",
+    "ref": "Numbers 22:31",
+    "kjv": "Then the LORD opened the eyes of Balaam, and he saw the angel of the LORD standing in the way, and his sword drawn in his hand: and he bowed down his head, and fell flat on his face."
+   },
+   {
+    "event": "Balak complains that Balaam has blessed Israel",
+    "ref": "Numbers 23:11",
+    "kjv": "And Balak said unto Balaam, What hast thou done unto me? I took thee to curse mine enemies, and, behold, thou hast blessed them altogether."
+   }
+  ]
+ },
+ {
+  "id": "seq-deborah_barak",
+  "title": "Put these events in order: Deborah and Barak",
+  "difficulty": 3,
+  "reference_label": "Judges 4 – Judges 5",
+  "hint": "The first event is in Judges 4.",
+  "events_in_stated_order": [
+   {
+    "event": "Deborah judges Israel under the palm tree",
+    "ref": "Judges 4:4-5",
+    "kjv": "And Deborah, a prophetess, the wife of Lapidoth, she judged Israel at that time. And she dwelt under the palm tree of Deborah between Ramah and Beth-el in mount Ephraim: and the children of Israel came up to her for …"
+   },
+   {
+    "event": "Deborah calls Barak to Mount Tabor",
+    "ref": "Judges 4:6",
+    "kjv": "And she sent and called Barak the son of Abinoam out of Kedesh-naphtali, and said unto him, Hath not the LORD God of Israel commanded, saying, Go and draw toward mount Tabor, and take with thee ten thousand men of the …"
+   },
+   {
+    "event": "Barak goes down from Mount Tabor",
+    "ref": "Judges 4:14",
+    "kjv": "And Deborah said unto Barak, Up; for this is the day in which the LORD hath delivered Sisera into thine hand: is not the LORD gone out before thee? So Barak went down from mount Tabor, and ten thousand men after him."
+   },
+   {
+    "event": "Jael drives a nail through Sisera's temples",
+    "ref": "Judges 4:21",
+    "kjv": "Then Jael Heber’s wife took a nail of the tent, and took an hammer in her hand, and went softly unto him, and smote the nail into his temples, and fastened it into the ground: for he was fast asleep and weary. So he …"
+   },
+   {
+    "event": "Deborah and Barak sing a song",
+    "ref": "Judges 5:1",
+    "kjv": "Then sang Deborah and Barak the son of Abinoam on that day, saying,"
+   }
+  ]
+ },
+ {
+  "id": "seq-saul_king",
+  "title": "Put these events in order: Israel's First King",
+  "difficulty": 2,
+  "reference_label": "1 Samuel 8 – 1 Samuel 15",
+  "hint": "The first event is in 1 Samuel 8.",
+  "events_in_stated_order": [
+   {
+    "event": "The elders ask Samuel for a king",
+    "ref": "1 Samuel 8:5",
+    "kjv": "And said unto him, Behold, thou art old, and thy sons walk not in thy ways: now make us a king to judge us like all the nations."
+   },
+   {
+    "event": "Saul, a choice young man, is introduced",
+    "ref": "1 Samuel 9:2",
+    "kjv": "And he had a son, whose name was Saul, a choice young man, and a goodly: and there was not among the children of Israel a goodlier person than he: from his shoulders and upward he was higher than any of the people."
+   },
+   {
+    "event": "Samuel anoints Saul with a vial of oil",
+    "ref": "1 Samuel 10:1",
+    "kjv": "Then Samuel took a vial of oil, and poured it upon his head, and kissed him, and said, Is it not because the LORD hath anointed thee to be captain over his inheritance?"
+   },
+   {
+    "event": "The people shout, God save the king",
+    "ref": "1 Samuel 10:24",
+    "kjv": "And Samuel said to all the people, See ye him whom the LORD hath chosen, that there is none like him among all the people? And all the people shouted, and said, God save the king."
+   },
+   {
+    "event": "Samuel tells Saul the LORD has rejected him",
+    "ref": "1 Samuel 15:23",
+    "kjv": "For rebellion is as the sin of witchcraft, and stubbornness is as iniquity and idolatry. Because thou hast rejected the word of the LORD, he hath also rejected thee from being king."
+   }
+  ]
+ },
+ {
+  "id": "seq-david_bathsheba",
+  "title": "Put these events in order: David, Bathsheba and Nathan",
+  "difficulty": 3,
+  "reference_label": "2 Samuel 11 – 2 Samuel 12",
+  "hint": "The first event is in 2 Samuel 11.",
+  "events_in_stated_order": [
+   {
+    "event": "David sees a woman from the roof",
+    "ref": "2 Samuel 11:2",
+    "kjv": "And it came to pass in an eveningtide, that David arose from off his bed, and walked upon the roof of the king’s house: and from the roof he saw a woman washing herself; and the woman was very beautiful to look upon."
+   },
+   {
+    "event": "David writes to set Uriah in the hottest battle",
+    "ref": "2 Samuel 11:15",
+    "kjv": "And he wrote in the letter, saying, Set ye Uriah in the forefront of the hottest battle, and retire ye from him, that he may be smitten, and die."
+   },
+   {
+    "event": "Nathan says, Thou art the man",
+    "ref": "2 Samuel 12:7",
+    "kjv": "And Nathan said to David, Thou art the man. Thus saith the LORD God of Israel, I anointed thee king over Israel, and I delivered thee out of the hand of Saul;"
+   },
+   {
+    "event": "David confesses, I have sinned",
+    "ref": "2 Samuel 12:13",
+    "kjv": "And David said unto Nathan, I have sinned against the LORD. And Nathan said unto David, The LORD also hath put away thy sin; thou shalt not die."
+   },
+   {
+    "event": "Solomon is born",
+    "ref": "2 Samuel 12:24",
+    "kjv": "And David comforted Bath-sheba his wife, and went in unto her, and lay with her: and she bare a son, and he called his name Solomon: and the LORD loved him."
+   }
+  ]
+ },
+ {
+  "id": "seq-absalom",
+  "title": "Put these events in order: Absalom's Rebellion",
+  "difficulty": 3,
+  "reference_label": "2 Samuel 15 – 2 Samuel 18",
+  "hint": "The first event is in 2 Samuel 15.",
+  "events_in_stated_order": [
+   {
+    "event": "Absalom steals the hearts of the men of Israel",
+    "ref": "2 Samuel 15:6",
+    "kjv": "And on this manner did Absalom to all Israel that came to the king for judgment: so Absalom stole the hearts of the men of Israel."
+   },
+   {
+    "event": "David flees from Jerusalem",
+    "ref": "2 Samuel 15:14",
+    "kjv": "And David said unto all his servants that were with him at Jerusalem, Arise, and let us flee; for we shall not else escape from Absalom: make speed to depart, lest he overtake us suddenly, and bring evil upon us, and …"
+   },
+   {
+    "event": "Absalom's head is caught in an oak",
+    "ref": "2 Samuel 18:9",
+    "kjv": "And Absalom met the servants of David. And Absalom rode upon a mule, and the mule went under the thick boughs of a great oak, and his head caught hold of the oak, and he was taken up between the heaven and the earth; …"
+   },
+   {
+    "event": "Joab thrusts three darts into Absalom",
+    "ref": "2 Samuel 18:14",
+    "kjv": "Then said Joab, I may not tarry thus with thee. And he took three darts in his hand, and thrust them through the heart of Absalom, while he was yet alive in the midst of the oak."
+   },
+   {
+    "event": "David weeps, O my son Absalom",
+    "ref": "2 Samuel 18:33",
+    "kjv": "And the king was much moved, and went up to the chamber over the gate, and wept: and as he went, thus he said, O my son Absalom, my son, my son Absalom! would God I had died for thee, O Absalom, my son, my son!"
+   }
+  ]
+ },
+ {
+  "id": "seq-elisha_ministry",
+  "title": "Put these events in order: The Miracles of Elisha",
+  "difficulty": 3,
+  "reference_label": "2 Kings 2 – 2 Kings 6",
+  "hint": "The first event is in 2 Kings 2.",
+  "events_in_stated_order": [
+   {
+    "event": "Elisha asks for a double portion of Elijah's spirit",
+    "ref": "2 Kings 2:9",
+    "kjv": "And it came to pass, when they were gone over, that Elijah said unto Elisha, Ask what I shall do for thee, before I be taken away from thee. And Elisha said, I pray thee, let a double portion of thy spirit be upon me."
+   },
+   {
+    "event": "Elisha divides the Jordan with Elijah's mantle",
+    "ref": "2 Kings 2:14",
+    "kjv": "And he took the mantle of Elijah that fell from him, and smote the waters, and said, Where is the LORD God of Elijah? and when he also had smitten the waters, they parted hither and thither: and Elisha went over."
+   },
+   {
+    "event": "The widow's oil flows until the vessels are full",
+    "ref": "2 Kings 4:6",
+    "kjv": "And it came to pass, when the vessels were full, that she said unto her son, Bring me yet a vessel. And he said unto her, There is not a vessel more. And the oil stayed."
+   },
+   {
+    "event": "The Shunammite's son sneezes seven times",
+    "ref": "2 Kings 4:35",
+    "kjv": "Then he returned, and walked in the house to and fro; and went up, and stretched himself upon him: and the child sneezed seven times, and the child opened his eyes."
+   },
+   {
+    "event": "The axe head swims",
+    "ref": "2 Kings 6:6",
+    "kjv": "And the man of God said, Where fell it? And he shewed him the place. And he cut down a stick, and cast it in thither; and the iron did swim."
+   }
+  ]
+ },
+ {
+  "id": "seq-hezekiah",
+  "title": "Put these events in order: Hezekiah and the Assyrians",
+  "difficulty": 3,
+  "reference_label": "2 Kings 18 – 2 Kings 19",
+  "hint": "The first event is in 2 Kings 18.",
+  "events_in_stated_order": [
+   {
+    "event": "Hezekiah breaks the brasen serpent",
+    "ref": "2 Kings 18:4",
+    "kjv": "He removed the high places, and brake the images, and cut down the groves, and brake in pieces the brasen serpent that Moses had made: for unto those days the children of Israel did burn incense to it: and he called it …"
+   },
+   {
+    "event": "Sennacherib comes up against the fenced cities of Judah",
+    "ref": "2 Kings 18:13",
+    "kjv": "Now in the fourteenth year of king Hezekiah did Sennacherib king of Assyria come up against all the fenced cities of Judah, and took them."
+   },
+   {
+    "event": "Hezekiah spreads the letter before the LORD",
+    "ref": "2 Kings 19:14",
+    "kjv": "And Hezekiah received the letter of the hand of the messengers, and read it: and Hezekiah went up into the house of the LORD, and spread it before the LORD."
+   },
+   {
+    "event": "The angel of the LORD strikes the Assyrian camp",
+    "ref": "2 Kings 19:35",
+    "kjv": "And it came to pass that night, that the angel of the LORD went out, and smote in the camp of the Assyrians an hundred fourscore and five thousand: and when they arose early in the morning, behold, they were all dead …"
+   },
+   {
+    "event": "Sennacherib is slain by his sons in his own temple",
+    "ref": "2 Kings 19:37",
+    "kjv": "And it came to pass, as he was worshipping in the house of Nisroch his god, that Adrammelech and Sharezer his sons smote him with the sword: and they escaped into the land of Armenia. And Esar-haddon his son reigned in …"
+   }
+  ]
+ },
+ {
+  "id": "seq-josiah",
+  "title": "Put these events in order: King Josiah's Reform",
+  "difficulty": 3,
+  "reference_label": "2 Kings 22 – 2 Kings 23",
+  "hint": "The first event is in 2 Kings 22.",
+  "events_in_stated_order": [
+   {
+    "event": "Josiah becomes king at eight years old",
+    "ref": "2 Kings 22:1",
+    "kjv": "Josiah was eight years old when he began to reign, and he reigned thirty and one years in Jerusalem. And his mother’s name was Jedidah, the daughter of Adaiah of Boscath."
+   },
+   {
+    "event": "The book of the law is found in the temple",
+    "ref": "2 Kings 22:8",
+    "kjv": "And Hilkiah the high priest said unto Shaphan the scribe, I have found the book of the law in the house of the LORD. And Hilkiah gave the book to Shaphan, and he read it."
+   },
+   {
+    "event": "Josiah tears his clothes",
+    "ref": "2 Kings 22:11",
+    "kjv": "And it came to pass, when the king had heard the words of the book of the law, that he rent his clothes."
+   },
+   {
+    "event": "Josiah makes a covenant before the LORD",
+    "ref": "2 Kings 23:3",
+    "kjv": "And the king stood by a pillar, and made a covenant before the LORD, to walk after the LORD, and to keep his commandments and his testimonies and his statutes with all their heart and all their soul, to perform the …"
+   },
+   {
+    "event": "Josiah commands the people to keep the passover",
+    "ref": "2 Kings 23:21",
+    "kjv": "And the king commanded all the people, saying, Keep the passover unto the LORD your God, as it is written in the book of this covenant."
+   }
+  ]
+ },
+ {
+  "id": "seq-ezra_return",
+  "title": "Put these events in order: Return and Rebuilding",
+  "difficulty": 3,
+  "reference_label": "Ezra 1 – Ezra 7",
+  "hint": "The first event is in Ezra 1.",
+  "events_in_stated_order": [
+   {
+    "event": "Cyrus makes a proclamation",
+    "ref": "Ezra 1:1",
+    "kjv": "Now in the first year of Cyrus king of Persia, that the word of the LORD by the mouth of Jeremiah might be fulfilled, the LORD stirred up the spirit of Cyrus king of Persia, that he made a proclamation throughout all …"
+   },
+   {
+    "event": "The foundation of the temple is laid",
+    "ref": "Ezra 3:10",
+    "kjv": "And when the builders laid the foundation of the temple of the LORD, they set the priests in their apparel with trumpets, and the Levites the sons of Asaph with cymbals, to praise the LORD, after the ordinance of David …"
+   },
+   {
+    "event": "The people of the land trouble the builders",
+    "ref": "Ezra 4:4",
+    "kjv": "Then the people of the land weakened the hands of the people of Judah, and troubled them in building,"
+   },
+   {
+    "event": "The house of God is finished",
+    "ref": "Ezra 6:15",
+    "kjv": "And this house was finished on the third day of the month Adar, which was in the sixth year of the reign of Darius the king."
+   },
+   {
+    "event": "Ezra goes up from Babylon",
+    "ref": "Ezra 7:6",
+    "kjv": "This Ezra went up from Babylon; and he was a ready scribe in the law of Moses, which the LORD God of Israel had given: and the king granted him all his request, according to the hand of the LORD his God upon him."
+   }
+  ]
+ },
+ {
+  "id": "seq-walking_water",
+  "title": "Put these events in order: Walking on the Water",
+  "difficulty": 2,
+  "reference_label": "Matthew 14:23-32",
+  "hint": "The first event is in Matthew 14:23.",
+  "events_in_stated_order": [
+   {
+    "event": "Jesus goes up a mountain to pray",
+    "ref": "Matthew 14:23",
+    "kjv": "And when he had sent the multitudes away, he went up into a mountain apart to pray: and when the evening was come, he was there alone."
+   },
+   {
+    "event": "The ship is tossed with waves",
+    "ref": "Matthew 14:24",
+    "kjv": "But the ship was now in the midst of the sea, tossed with waves: for the wind was contrary."
+   },
+   {
+    "event": "Jesus comes walking on the sea",
+    "ref": "Matthew 14:25",
+    "kjv": "And in the fourth watch of the night Jesus went unto them, walking on the sea."
+   },
+   {
+    "event": "Peter begins to sink and cries, Lord, save me",
+    "ref": "Matthew 14:30",
+    "kjv": "But when he saw the wind boisterous, he was afraid; and beginning to sink, he cried, saying, Lord, save me."
+   },
+   {
+    "event": "The wind ceases when they come into the ship",
+    "ref": "Matthew 14:32",
+    "kjv": "And when they were come into the ship, the wind ceased."
+   }
+  ]
+ },
+ {
+  "id": "seq-jairus_daughter",
+  "title": "Put these events in order: Jairus' Daughter",
+  "difficulty": 2,
+  "reference_label": "Mark 5:22-41",
+  "hint": "The first event is in Mark 5:22.",
+  "events_in_stated_order": [
+   {
+    "event": "Jairus falls at Jesus' feet",
+    "ref": "Mark 5:22",
+    "kjv": "And, behold, there cometh one of the rulers of the synagogue, Jairus by name; and when he saw him, he fell at his feet,"
+   },
+   {
+    "event": "A woman touches Jesus' garment",
+    "ref": "Mark 5:27",
+    "kjv": "When she had heard of Jesus, came in the press behind, and touched his garment."
+   },
+   {
+    "event": "Jesus asks, Who touched my clothes?",
+    "ref": "Mark 5:30",
+    "kjv": "And Jesus, immediately knowing in himself that virtue had gone out of him, turned him about in the press, and said, Who touched my clothes?"
+   },
+   {
+    "event": "Messengers say, Thy daughter is dead",
+    "ref": "Mark 5:35",
+    "kjv": "While he yet spake, there came from the ruler of the synagogue’s house certain which said, Thy daughter is dead: why troublest thou the Master any further?"
+   },
+   {
+    "event": "Jesus says, Talitha cumi",
+    "ref": "Mark 5:41",
+    "kjv": "And he took the damsel by the hand, and said unto her, Talitha cumi; which is, being interpreted, Damsel, I say unto thee, arise."
+   }
+  ]
+ },
+ {
+  "id": "seq-peter_denial",
+  "title": "Put these events in order: Peter's Denial",
+  "difficulty": 2,
+  "reference_label": "Luke 22:33-62",
+  "hint": "The first event is in Luke 22:33.",
+  "events_in_stated_order": [
+   {
+    "event": "Peter says he is ready to go to prison and to death",
+    "ref": "Luke 22:33",
+    "kjv": "And he said unto him, Lord, I am ready to go with thee, both into prison, and to death."
+   },
+   {
+    "event": "Peter follows afar off",
+    "ref": "Luke 22:54",
+    "kjv": "Then took they him, and led him, and brought him into the high priest’s house. And Peter followed afar off."
+   },
+   {
+    "event": "Peter says, Woman, I know him not",
+    "ref": "Luke 22:57",
+    "kjv": "And he denied him, saying, Woman, I know him not."
+   },
+   {
+    "event": "The Lord turns and looks upon Peter",
+    "ref": "Luke 22:61",
+    "kjv": "And the Lord turned, and looked upon Peter. And Peter remembered the word of the Lord, how he had said unto him, Before the cock crow, thou shalt deny me thrice."
+   },
+   {
+    "event": "Peter goes out and weeps bitterly",
+    "ref": "Luke 22:62",
+    "kjv": "And Peter went out, and wept bitterly."
+   }
+  ]
+ },
+ {
+  "id": "seq-stephen",
+  "title": "Put these events in order: Stephen the Witness",
+  "difficulty": 2,
+  "reference_label": "Acts 6 – Acts 7",
+  "hint": "The first event is in Acts 6.",
+  "events_in_stated_order": [
+   {
+    "event": "Stephen is chosen among the seven",
+    "ref": "Acts 6:5",
+    "kjv": "And the saying pleased the whole multitude: and they chose Stephen, a man full of faith and of the Holy Ghost, and Philip, and Prochorus, and Nicanor, and Timon, and Parmenas, and Nicolas a proselyte of Antioch:"
+   },
+   {
+    "event": "Stephen does great wonders among the people",
+    "ref": "Acts 6:8",
+    "kjv": "And Stephen, full of faith and power, did great wonders and miracles among the people."
+   },
+   {
+    "event": "Stephen is brought to the council",
+    "ref": "Acts 6:12",
+    "kjv": "And they stirred up the people, and the elders, and the scribes, and came upon him, and caught him, and brought him to the council,"
+   },
+   {
+    "event": "Stephen sees the heavens opened",
+    "ref": "Acts 7:56",
+    "kjv": "And said, Behold, I see the heavens opened, and the Son of man standing on the right hand of God."
+   },
+   {
+    "event": "Stephen prays, Lord, lay not this sin to their charge",
+    "ref": "Acts 7:60",
+    "kjv": "And he kneeled down, and cried with a loud voice, Lord, lay not this sin to their charge. And when he had said this, he fell asleep."
+   }
+  ]
+ },
+ {
+  "id": "seq-philip_ethiopian",
+  "title": "Put these events in order: Philip and the Ethiopian",
+  "difficulty": 2,
+  "reference_label": "Acts 8:26-39",
+  "hint": "The first event is in Acts 8:26.",
+  "events_in_stated_order": [
+   {
+    "event": "An angel sends Philip toward the south",
+    "ref": "Acts 8:26",
+    "kjv": "And the angel of the Lord spake unto Philip, saying, Arise, and go toward the south unto the way that goeth down from Jerusalem unto Gaza, which is desert."
+   },
+   {
+    "event": "Philip meets a man of Ethiopia",
+    "ref": "Acts 8:27",
+    "kjv": "And he arose and went: and, behold, a man of Ethiopia, an eunuch of great authority under Candace queen of the Ethiopians, who had the charge of all her treasure, and had come to Jerusalem for to worship,"
+   },
+   {
+    "event": "Philip asks, Understandest thou what thou readest?",
+    "ref": "Acts 8:30",
+    "kjv": "And Philip ran thither to him, and heard him read the prophet Esaias, and said, Understandest thou what thou readest?"
+   },
+   {
+    "event": "Philip baptizes the eunuch",
+    "ref": "Acts 8:38",
+    "kjv": "And he commanded the chariot to stand still: and they went down both into the water, both Philip and the eunuch; and he baptized him."
+   },
+   {
+    "event": "The Spirit of the Lord catches Philip away",
+    "ref": "Acts 8:39",
+    "kjv": "And when they were come up out of the water, the Spirit of the Lord caught away Philip, that the eunuch saw him no more: and he went on his way rejoicing."
+   }
+  ]
+ },
+ {
+  "id": "seq-peter_cornelius",
+  "title": "Put these events in order: Peter and Cornelius",
+  "difficulty": 3,
+  "reference_label": "Acts 10:3-48",
+  "hint": "The first event is in Acts 10:3.",
+  "events_in_stated_order": [
+   {
+    "event": "Cornelius sees an angel in a vision",
+    "ref": "Acts 10:3",
+    "kjv": "He saw in a vision evidently about the ninth hour of the day an angel of God coming in to him, and saying unto him, Cornelius."
+   },
+   {
+    "event": "Peter sees a great sheet let down from heaven",
+    "ref": "Acts 10:11",
+    "kjv": "And saw heaven opened, and a certain vessel descending unto him, as it had been a great sheet knit at the four corners, and let down to the earth:"
+   },
+   {
+    "event": "Cornelius waits with his kinsmen and friends",
+    "ref": "Acts 10:24",
+    "kjv": "And the morrow after they entered into Cæsarea. And Cornelius waited for them, and had called together his kinsmen and near friends."
+   },
+   {
+    "event": "The Holy Ghost falls on all who hear",
+    "ref": "Acts 10:44",
+    "kjv": "While Peter yet spake these words, the Holy Ghost fell on all them which heard the word."
+   },
+   {
+    "event": "Peter commands them to be baptized",
+    "ref": "Acts 10:48",
+    "kjv": "And he commanded them to be baptized in the name of the Lord. Then prayed they him to tarry certain days."
+   }
+  ]
+ },
+ {
+  "id": "seq-peter_prison",
+  "title": "Put these events in order: Peter Freed from Prison",
+  "difficulty": 2,
+  "reference_label": "Acts 12:2-14",
+  "hint": "The first event is in Acts 12:2.",
+  "events_in_stated_order": [
+   {
+    "event": "Herod kills James with the sword",
+    "ref": "Acts 12:2",
+    "kjv": "And he killed James the brother of John with the sword."
+   },
+   {
+    "event": "Peter sleeps between two soldiers",
+    "ref": "Acts 12:6",
+    "kjv": "And when Herod would have brought him forth, the same night Peter was sleeping between two soldiers, bound with two chains: and the keepers before the door kept the prison."
+   },
+   {
+    "event": "The chains fall off Peter's hands",
+    "ref": "Acts 12:7",
+    "kjv": "And, behold, the angel of the Lord came upon him, and a light shined in the prison: and he smote Peter on the side, and raised him up, saying, Arise up quickly. And his chains fell off from his hands."
+   },
+   {
+    "event": "The iron gate opens of its own accord",
+    "ref": "Acts 12:10",
+    "kjv": "When they were past the first and the second ward, they came unto the iron gate that leadeth unto the city; which opened to them of his own accord: and they went out, and passed on through one street; and forthwith the …"
+   },
+   {
+    "event": "Rhoda is too glad to open the gate",
+    "ref": "Acts 12:14",
+    "kjv": "And when she knew Peter’s voice, she opened not the gate for gladness, but ran in, and told how Peter stood before the gate."
+   }
+  ]
+ },
+ {
+  "id": "seq-paul_philippi",
+  "title": "Put these events in order: Paul and Silas at Philippi",
+  "difficulty": 2,
+  "reference_label": "Acts 16:14-33",
+  "hint": "The first event is in Acts 16:14.",
+  "events_in_stated_order": [
+   {
+    "event": "The Lord opens Lydia's heart",
+    "ref": "Acts 16:14",
+    "kjv": "And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us: whose heart the Lord opened, that she attended unto the things which were spoken of Paul."
+   },
+   {
+    "event": "Paul casts the spirit out of a damsel",
+    "ref": "Acts 16:18",
+    "kjv": "And this did she many days. But Paul, being grieved, turned and said to the spirit, I command thee in the name of Jesus Christ to come out of her. And he came out the same hour."
+   },
+   {
+    "event": "Paul and Silas are cast into prison",
+    "ref": "Acts 16:23",
+    "kjv": "And when they had laid many stripes upon them, they cast them into prison, charging the jailor to keep them safely:"
+   },
+   {
+    "event": "At midnight they pray and sing praises",
+    "ref": "Acts 16:25",
+    "kjv": "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them."
+   },
+   {
+    "event": "The jailer and all his household are baptized",
+    "ref": "Acts 16:33",
+    "kjv": "And he took them the same hour of the night, and washed their stripes; and was baptized, he and all his, straightway."
+   }
+  ]
+ }
+]

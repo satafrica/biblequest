@@ -1,0 +1,842 @@
+[
+ {
+  "id": "who-abel",
+  "clues": [
+   "My older brother was a tiller of the ground.",
+   "I was a keeper of sheep.",
+   "The LORD had respect unto my offering from the firstlings of my flock.",
+   "My brother rose up against me in the field."
+  ],
+  "options": [
+   "Enoch",
+   "Cain",
+   "Seth",
+   "Abel"
+  ],
+  "answer": "Abel",
+  "reference_label": "Genesis 4:8",
+  "ref_kjv": "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him.",
+  "explanation": "Cain rose up against Abel his brother in the field and slew him (Genesis 4:8).",
+  "hint": "Look in Genesis.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-ishmael",
+  "clues": [
+   "My mother was an Egyptian handmaid.",
+   "An angel told my mother my name before I was born.",
+   "My name was given because the LORD had heard my mother's affliction.",
+   "My father was Abraham, but I was not the son of the promise."
+  ],
+  "options": [
+   "Isaac",
+   "Lot",
+   "Ishmael",
+   "Esau"
+  ],
+  "answer": "Ishmael",
+  "reference_label": "Genesis 16:11",
+  "ref_kjv": "And the angel of the LORD said unto her, Behold, thou art with child, and shalt bear a son, and shalt call his name Ishmael; because the LORD hath heard thy affliction.",
+  "explanation": "The angel told Hagar to call her son Ishmael, because the LORD had heard her affliction (Genesis 16:11).",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-hagar",
+  "clues": [
+   "I was an Egyptian handmaid of Sarai.",
+   "I fled into the wilderness, and an angel found me by a fountain of water.",
+   "I called the LORD who spoke to me, Thou God seest me.",
+   "My son was Ishmael."
+  ],
+  "options": [
+   "Keturah",
+   "Zilpah",
+   "Bilhah",
+   "Hagar"
+  ],
+  "answer": "Hagar",
+  "reference_label": "Genesis 16:13",
+  "ref_kjv": "And she called the name of the LORD that spake unto her, Thou God seest me: for she said, Have I also here looked after him that seeth me?",
+  "explanation": "Hagar called the name of the LORD that spoke to her, Thou God seest me (Genesis 16:13).",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-laban",
+  "clues": [
+   "I was the brother of Rebekah.",
+   "My nephew served me seven years for my younger daughter.",
+   "On the wedding night I gave him my older daughter instead.",
+   "My daughters were Leah and Rachel."
+  ],
+  "options": [
+   "Nahor",
+   "Laban",
+   "Jethro",
+   "Bethuel"
+  ],
+  "answer": "Laban",
+  "reference_label": "Genesis 29:25",
+  "ref_kjv": "And it came to pass, that in the morning, behold, it was Leah: and he said to Laban, What is this thou hast done unto me? did not I serve with thee for Rachel? wherefore then hast thou beguiled me?",
+  "explanation": "In the morning Jacob found it was Leah and asked Laban why he had beguiled him (Genesis 29:25).",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-leah",
+  "clues": [
+   "My eyes are described as tender.",
+   "My father gave me to Jacob in place of my younger sister.",
+   "I was the mother of Reuben, Levi and Judah.",
+   "My younger sister was Rachel."
+  ],
+  "options": [
+   "Rachel",
+   "Bilhah",
+   "Dinah",
+   "Leah"
+  ],
+  "answer": "Leah",
+  "reference_label": "Genesis 29:17",
+  "ref_kjv": "Leah was tender eyed; but Rachel was beautiful and well favoured.",
+  "explanation": "Leah was tender eyed, but Rachel was beautiful and well favoured (Genesis 29:17).",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-judah",
+  "clues": [
+   "I was the fourth son of Leah.",
+   "I said, let us sell our brother rather than kill him.",
+   "In Egypt I offered to stay as a bondman in place of my youngest brother.",
+   "Jacob said the sceptre would not depart from me."
+  ],
+  "options": [
+   "Judah",
+   "Levi",
+   "Simeon",
+   "Reuben"
+  ],
+  "answer": "Judah",
+  "reference_label": "Genesis 49:10",
+  "ref_kjv": "The sceptre shall not depart from Judah, nor a lawgiver from between his feet, until Shiloh come; and unto him shall the gathering of the people be.",
+  "explanation": "Jacob blessed his son: The sceptre shall not depart from Judah (Genesis 49:10).",
+  "hint": "Look in Genesis.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-benjamin",
+  "clues": [
+   "I was the youngest son of Jacob.",
+   "My mother died as I was born, and she called me Benoni.",
+   "Joseph's silver cup was found in my sack.",
+   "My full brother was Joseph."
+  ],
+  "options": [
+   "Joseph",
+   "Judah",
+   "Dan",
+   "Benjamin"
+  ],
+  "answer": "Benjamin",
+  "reference_label": "Genesis 44:12",
+  "ref_kjv": "And he searched, and began at the eldest, and left at the youngest: and the cup was found in Benjamin’s sack.",
+  "explanation": "The steward searched from the eldest to the youngest, and the cup was found in Benjamin's sack (Genesis 44:12).",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-reuben",
+  "clues": [
+   "I was Jacob's firstborn son.",
+   "I found mandrakes in the field and brought them to my mother.",
+   "I persuaded my brothers to cast Joseph into a pit instead of killing him.",
+   "I planned to rescue Joseph and bring him back to our father."
+  ],
+  "options": [
+   "Levi",
+   "Reuben",
+   "Judah",
+   "Simeon"
+  ],
+  "answer": "Reuben",
+  "reference_label": "Genesis 37:22",
+  "ref_kjv": "And Reuben said unto them, Shed no blood, but cast him into this pit that is in the wilderness, and lay no hand upon him; that he might rid him out of their hands, to deliver him to his father again.",
+  "explanation": "Reuben said, Shed no blood, but cast him into this pit, so that he might deliver him to his father again (Genesis 37:22).",
+  "hint": "Look in Genesis.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-zipporah",
+  "clues": [
+   "My father was a priest of Midian.",
+   "I met my husband when he helped my sisters and me water our flock.",
+   "God sent my husband to bring Israel out of Egypt.",
+   "I circumcised my son with a sharp stone."
+  ],
+  "options": [
+   "Jochebed",
+   "Miriam",
+   "Zipporah",
+   "Rahab"
+  ],
+  "answer": "Zipporah",
+  "reference_label": "Exodus 2:21",
+  "ref_kjv": "And Moses was content to dwell with the man: and he gave Moses Zipporah his daughter.",
+  "explanation": "Moses was content to dwell with the priest of Midian, who gave Moses Zipporah his daughter (Exodus 2:21).",
+  "hint": "Look in Exodus.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-achan",
+  "clues": [
+   "I took a Babylonish garment, silver and a wedge of gold from Jericho.",
+   "I hid them in the earth in the middle of my tent.",
+   "Because of my sin, Israel was defeated at Ai.",
+   "I was the son of Carmi, of the tribe of Judah."
+  ],
+  "options": [
+   "Korah",
+   "Balaam",
+   "Achan",
+   "Gehazi"
+  ],
+  "answer": "Achan",
+  "reference_label": "Joshua 7:21",
+  "ref_kjv": "When I saw among the spoils a goodly Babylonish garment, and two hundred shekels of silver, and a wedge of gold of fifty shekels weight, then I coveted them, and took them; and, behold, they are hid in the earth in the midst of my tent, and the silver under it.",
+  "explanation": "Achan confessed that he coveted a Babylonish garment, silver and gold, and hid them in his tent (Joshua 7:21).",
+  "hint": "Look in Joshua.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-ehud",
+  "clues": [
+   "The LORD raised me up as a deliverer of Israel; I was a Benjamite.",
+   "I was left-handed.",
+   "I made a dagger with two edges, a cubit long.",
+   "I killed Eglon, the king of Moab."
+  ],
+  "options": [
+   "Othniel",
+   "Ehud",
+   "Shamgar",
+   "Gideon"
+  ],
+  "answer": "Ehud",
+  "reference_label": "Judges 3:15",
+  "ref_kjv": "But when the children of Israel cried unto the LORD, the LORD raised them up a deliverer, Ehud the son of Gera, a Benjamite, a man lefthanded: and by him the children of Israel sent a present unto Eglon the king of Moab.",
+  "explanation": "The LORD raised up a deliverer, Ehud the son of Gera, a Benjamite, a man lefthanded (Judges 3:15).",
+  "hint": "Look in Judges.",
+  "difficulty": 4
+ },
+ {
+  "id": "who-barak",
+  "clues": [
+   "The prophetess Deborah called me to fight.",
+   "I would not go to battle unless Deborah went with me.",
+   "I led ten thousand men down from mount Tabor.",
+   "I fought against Sisera, captain of Jabin's army."
+  ],
+  "options": [
+   "Barak",
+   "Gideon",
+   "Joshua",
+   "Jephthah"
+  ],
+  "answer": "Barak",
+  "reference_label": "Judges 4:8",
+  "ref_kjv": "And Barak said unto her, If thou wilt go with me, then I will go: but if thou wilt not go with me, then I will not go.",
+  "explanation": "Barak said to Deborah, If thou wilt go with me, then I will go (Judges 4:8).",
+  "hint": "Look in Judges.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-jephthah",
+  "clues": [
+   "I was a Gileadite and a mighty man of valour.",
+   "My brothers drove me out, and I lived in the land of Tob.",
+   "I made a vow to the LORD before fighting the children of Ammon.",
+   "My daughter came out to meet me with timbrels and dances."
+  ],
+  "options": [
+   "Ehud",
+   "Samson",
+   "Jephthah",
+   "Gideon"
+  ],
+  "answer": "Jephthah",
+  "reference_label": "Judges 11:34",
+  "ref_kjv": "And Jephthah came to Mizpeh unto his house, and, behold, his daughter came out to meet him with timbrels and with dances: and she was his only child; beside her he had neither son nor daughter.",
+  "explanation": "When Jephthah came home to Mizpeh, his daughter came out to meet him with timbrels and dances (Judges 11:34).",
+  "hint": "Look in Judges.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-naomi",
+  "clues": [
+   "My husband Elimelech and I moved to Moab during a famine.",
+   "My husband and both my sons died in Moab.",
+   "I asked to be called Mara, because the Almighty had dealt very bitterly with me.",
+   "My daughter-in-law Ruth would not leave me."
+  ],
+  "options": [
+   "Elisabeth",
+   "Hannah",
+   "Naomi",
+   "Orpah"
+  ],
+  "answer": "Naomi",
+  "reference_label": "Ruth 1:20",
+  "ref_kjv": "And she said unto them, Call me not Naomi, call me Mara: for the Almighty hath dealt very bitterly with me.",
+  "explanation": "She said, Call me not Naomi, call me Mara: for the Almighty hath dealt very bitterly with me (Ruth 1:20).",
+  "hint": "Look in Ruth.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-mephibosheth",
+  "clues": [
+   "I was the son of Jonathan.",
+   "I became lame when my nurse fled with me and I fell.",
+   "King David restored to me all the land of Saul.",
+   "I ate continually at the king's table."
+  ],
+  "options": [
+   "Ishbosheth",
+   "Mephibosheth",
+   "Absalom",
+   "Ziba"
+  ],
+  "answer": "Mephibosheth",
+  "reference_label": "2 Samuel 9:13",
+  "ref_kjv": "So Mephibosheth dwelt in Jerusalem: for he did eat continually at the king’s table; and was lame on both his feet.",
+  "explanation": "Mephibosheth dwelt in Jerusalem and ate continually at the king's table, and was lame on both his feet (2 Samuel 9:13).",
+  "hint": "Look in 2 Samuel.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-joab",
+  "clues": [
+   "I was the captain of King David's army.",
+   "My mother was Zeruiah.",
+   "I killed Abner at the gate of Hebron.",
+   "I thrust three darts through Absalom's heart as he hung in an oak."
+  ],
+  "options": [
+   "Joab",
+   "Uriah",
+   "Benaiah",
+   "Abner"
+  ],
+  "answer": "Joab",
+  "reference_label": "2 Samuel 18:14",
+  "ref_kjv": "Then said Joab, I may not tarry thus with thee. And he took three darts in his hand, and thrust them through the heart of Absalom, while he was yet alive in the midst of the oak.",
+  "explanation": "Joab took three darts and thrust them through the heart of Absalom while he was alive in the oak (2 Samuel 18:14).",
+  "hint": "Look in 2 Samuel.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-uriah",
+  "clues": [
+   "I was a Hittite and one of David's mighty men.",
+   "I would not go down to my house while the ark and the army stayed in tents.",
+   "I carried a letter to Joab that arranged my own death.",
+   "My wife was Bathsheba."
+  ],
+  "options": [
+   "Nathan",
+   "Uriah",
+   "Joab",
+   "Abner"
+  ],
+  "answer": "Uriah",
+  "reference_label": "2 Samuel 11:15",
+  "ref_kjv": "And he wrote in the letter, saying, Set ye Uriah in the forefront of the hottest battle, and retire ye from him, that he may be smitten, and die.",
+  "explanation": "David wrote, Set ye Uriah in the forefront of the hottest battle (2 Samuel 11:15).",
+  "hint": "Look in 2 Samuel.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-rehoboam",
+  "clues": [
+   "I was the son of Solomon.",
+   "I rejected the counsel of the old men and followed the young men.",
+   "I told the people, my father chastised you with whips, but I will chastise you with scorpions.",
+   "The ten tribes of Israel rebelled against me."
+  ],
+  "options": [
+   "Abijah",
+   "Rehoboam",
+   "Asa",
+   "Jeroboam"
+  ],
+  "answer": "Rehoboam",
+  "reference_label": "1 Kings 12:14",
+  "ref_kjv": "And spake to them after the counsel of the young men, saying, My father made your yoke heavy, and I will add to your yoke: my father also chastised you with whips, but I will chastise you with scorpions.",
+  "explanation": "Rehoboam answered after the counsel of the young men: I will chastise you with scorpions (1 Kings 12:14).",
+  "hint": "Look in 1 Kings.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-jeroboam",
+  "clues": [
+   "I was a servant of Solomon, from the tribe of Ephraim.",
+   "The prophet Ahijah tore a new garment into twelve pieces and gave me ten.",
+   "I became king over the ten northern tribes.",
+   "I set up calves of gold in Beth-el and in Dan."
+  ],
+  "options": [
+   "Ahab",
+   "Omri",
+   "Jeroboam",
+   "Rehoboam"
+  ],
+  "answer": "Jeroboam",
+  "reference_label": "1 Kings 12:28-29",
+  "ref_kjv": "Whereupon the king took counsel, and made two calves of gold, and said unto them, It is too much for you to go up to Jerusalem: behold thy gods, O Israel, which brought thee up out of the land of Egypt. And he set the one in Beth-el, and the other put he in Dan.",
+  "explanation": "Jeroboam made two calves of gold and set one in Beth-el and the other in Dan (1 Kings 12:28-29).",
+  "hint": "Look in 1 Kings.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-gehazi",
+  "clues": [
+   "I was the servant of the prophet Elisha.",
+   "I told my master that the Shunammite woman had no child.",
+   "I ran after Naaman and took silver and garments from him.",
+   "The leprosy of Naaman clung to me."
+  ],
+  "options": [
+   "Elisha",
+   "Ziba",
+   "Gehazi",
+   "Baruch"
+  ],
+  "answer": "Gehazi",
+  "reference_label": "2 Kings 5:27",
+  "ref_kjv": "The leprosy therefore of Naaman shall cleave unto thee, and unto thy seed for ever. And he went out from his presence a leper as white as snow.",
+  "explanation": "Elisha told Gehazi that the leprosy of Naaman would cleave to him, and he went out a leper as white as snow (2 Kings 5:27).",
+  "hint": "Look in 2 Kings.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-jehu",
+  "clues": [
+   "A young prophet anointed me king over Israel.",
+   "The watchman knew me because I drove furiously.",
+   "I had Jezebel thrown down from a window.",
+   "I destroyed the worship of Baal out of Israel."
+  ],
+  "options": [
+   "Elisha",
+   "Joram",
+   "Jehu",
+   "Ahab"
+  ],
+  "answer": "Jehu",
+  "reference_label": "2 Kings 9:20",
+  "ref_kjv": "And the watchman told, saying, He came even unto them, and cometh not again: and the driving is like the driving of Jehu the son of Nimshi; for he driveth furiously.",
+  "explanation": "The watchman said the driving is like the driving of Jehu the son of Nimshi, for he driveth furiously (2 Kings 9:20).",
+  "hint": "Look in 2 Kings.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-nebuchadnezzar",
+  "clues": [
+   "I was king of Babylon.",
+   "I dreamed of a great image with a head of gold.",
+   "I set up a golden image and commanded everyone to worship it.",
+   "I ate grass as oxen until I knew that the most High rules."
+  ],
+  "options": [
+   "Nebuchadnezzar",
+   "Belshazzar",
+   "Darius",
+   "Cyrus"
+  ],
+  "answer": "Nebuchadnezzar",
+  "reference_label": "Daniel 4:33",
+  "ref_kjv": "The same hour was the thing fulfilled upon Nebuchadnezzar: and he was driven from men, and did eat grass as oxen, and his body was wet with the dew of heaven, till his hairs were grown like eagles’ feathers, and his nails like birds’ claws.",
+  "explanation": "The word was fulfilled upon Nebuchadnezzar: he was driven from men and did eat grass as oxen (Daniel 4:33).",
+  "hint": "Look in Daniel.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-belshazzar",
+  "clues": [
+   "I was a king of the Chaldeans in Babylon.",
+   "I drank wine from the golden vessels taken from the temple in Jerusalem.",
+   "The fingers of a man's hand wrote on the wall of my palace.",
+   "I was slain that same night."
+  ],
+  "options": [
+   "Ahasuerus",
+   "Belshazzar",
+   "Darius",
+   "Nebuchadnezzar"
+  ],
+  "answer": "Belshazzar",
+  "reference_label": "Daniel 5:30",
+  "ref_kjv": "In that night was Belshazzar the king of the Chaldeans slain.",
+  "explanation": "In that night was Belshazzar the king of the Chaldeans slain (Daniel 5:30).",
+  "hint": "Look in Daniel.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-cyrus",
+  "clues": [
+   "I was king of Persia.",
+   "The LORD stirred up my spirit to make a proclamation.",
+   "I declared that a house should be built for the LORD at Jerusalem.",
+   "Isaiah calls me the LORD's anointed."
+  ],
+  "options": [
+   "Darius",
+   "Artaxerxes",
+   "Nebuchadnezzar",
+   "Cyrus"
+  ],
+  "answer": "Cyrus",
+  "reference_label": "Ezra 1:2",
+  "ref_kjv": "Thus saith Cyrus king of Persia, The LORD God of heaven hath given me all the kingdoms of the earth; and he hath charged me to build him an house at Jerusalem, which is in Judah.",
+  "explanation": "Thus saith Cyrus king of Persia: the LORD God of heaven hath charged me to build him an house at Jerusalem (Ezra 1:2).",
+  "hint": "Look in Ezra.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-mordecai",
+  "clues": [
+   "I was a Jew who sat in the king's gate in Shushan.",
+   "I reported a plot by two chamberlains to kill the king.",
+   "I would not bow down to Haman.",
+   "I raised my cousin Esther as my own daughter."
+  ],
+  "options": [
+   "Nehemiah",
+   "Mordecai",
+   "Daniel",
+   "Haman"
+  ],
+  "answer": "Mordecai",
+  "reference_label": "Esther 3:2",
+  "ref_kjv": "And all the king’s servants, that were in the king’s gate, bowed, and reverenced Haman: for the king had so commanded concerning him. But Mordecai bowed not, nor did him reverence.",
+  "explanation": "All the king's servants bowed to Haman, but Mordecai bowed not, nor did him reverence (Esther 3:2).",
+  "hint": "Look in Esther.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-haman",
+  "clues": [
+   "King Ahasuerus set me above all the princes.",
+   "I was full of wrath because a Jew would not bow to me.",
+   "Pur, that is, the lot, was cast before me to choose a day to destroy the Jews.",
+   "I was hanged on the gallows I had prepared for another man."
+  ],
+  "options": [
+   "Haman",
+   "Darius",
+   "Mordecai",
+   "Ahasuerus"
+  ],
+  "answer": "Haman",
+  "reference_label": "Esther 7:10",
+  "ref_kjv": "So they hanged Haman on the gallows that he had prepared for Mordecai. Then was the king’s wrath pacified.",
+  "explanation": "They hanged Haman on the gallows that he had prepared for Mordecai (Esther 7:10).",
+  "hint": "Look in Esther.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-vashti",
+  "clues": [
+   "I was queen to King Ahasuerus.",
+   "I made a feast for the women in the royal house.",
+   "I refused to come when the king sent his chamberlains for me.",
+   "My royal estate was given to another who was better than I."
+  ],
+  "options": [
+   "Esther",
+   "Michal",
+   "Vashti",
+   "Jezebel"
+  ],
+  "answer": "Vashti",
+  "reference_label": "Esther 1:12",
+  "ref_kjv": "But the queen Vashti refused to come at the king’s commandment by his chamberlains: therefore was the king very wroth, and his anger burned in him.",
+  "explanation": "The queen Vashti refused to come at the king's commandment by his chamberlains (Esther 1:12).",
+  "hint": "Look in the books of history.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-james_zebedee",
+  "clues": [
+   "My father was Zebedee.",
+   "I was mending nets in a ship when Jesus called me.",
+   "Jesus called my brother and me Boanerges, the sons of thunder.",
+   "King Herod killed me with the sword."
+  ],
+  "options": [
+   "Peter",
+   "James",
+   "Philip",
+   "Andrew"
+  ],
+  "answer": "James",
+  "reference_label": "Acts 12:2",
+  "ref_kjv": "And he killed James the brother of John with the sword.",
+  "explanation": "Herod killed James the brother of John with the sword (Acts 12:2).",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-bartimaeus",
+  "clues": [
+   "I was a blind beggar sitting by the highway near Jericho.",
+   "I cried out, Jesus, thou son of David, have mercy on me.",
+   "When many told me to be quiet, I cried all the more.",
+   "I cast away my garment, came to Jesus and received my sight."
+  ],
+  "options": [
+   "Lazarus",
+   "Zacchaeus",
+   "Bartimaeus",
+   "Malchus"
+  ],
+  "answer": "Bartimaeus",
+  "reference_label": "Mark 10:46",
+  "ref_kjv": "And they came to Jericho: and as he went out of Jericho with his disciples and a great number of people, blind Bartimæus, the son of Timæus, sat by the highway side begging.",
+  "explanation": "Blind Bartimaeus, the son of Timaeus, sat by the highway side begging as Jesus left Jericho (Mark 10:46).",
+  "hint": "Look in Mark.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-jairus",
+  "clues": [
+   "I was a ruler of the synagogue.",
+   "I fell at Jesus' feet and begged him to come to my house.",
+   "My little daughter lay at the point of death.",
+   "Jesus took her by the hand and said, Talitha cumi."
+  ],
+  "options": [
+   "Nicodemus",
+   "Zacharias",
+   "Jairus",
+   "Cornelius"
+  ],
+  "answer": "Jairus",
+  "reference_label": "Mark 5:22",
+  "ref_kjv": "And, behold, there cometh one of the rulers of the synagogue, Jairus by name; and when he saw him, he fell at his feet,",
+  "explanation": "One of the rulers of the synagogue, Jairus by name, fell at Jesus' feet (Mark 5:22).",
+  "hint": "Look in Mark.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-mary_bethany",
+  "clues": [
+   "My sister was Martha and my brother was Lazarus.",
+   "I sat at Jesus' feet and heard his word.",
+   "Jesus said I had chosen that good part.",
+   "I anointed Jesus' feet with costly spikenard and wiped them with my hair."
+  ],
+  "options": [
+   "Mary Magdalene",
+   "Martha",
+   "Salome",
+   "Mary of Bethany"
+  ],
+  "answer": "Mary of Bethany",
+  "reference_label": "Luke 10:39",
+  "ref_kjv": "And she had a sister called Mary, which also sat at Jesus’ feet, and heard his word.",
+  "explanation": "Martha had a sister called Mary, which also sat at Jesus' feet, and heard his word (Luke 10:39).",
+  "hint": "Look in Luke.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-simon_cyrene",
+  "clues": [
+   "I was passing by, coming out of the country.",
+   "I was compelled to bear a cross.",
+   "The cross I carried was the cross of Jesus.",
+   "I came from Cyrene and was the father of Alexander and Rufus."
+  ],
+  "options": [
+   "Nicodemus",
+   "Simon of Cyrene",
+   "Barabbas",
+   "Joseph of Arimathea"
+  ],
+  "answer": "Simon of Cyrene",
+  "reference_label": "Mark 15:21",
+  "ref_kjv": "And they compel one Simon a Cyrenian, who passed by, coming out of the country, the father of Alexander and Rufus, to bear his cross.",
+  "explanation": "They compelled Simon a Cyrenian, coming out of the country, the father of Alexander and Rufus, to bear his cross (Mark 15:21).",
+  "hint": "Look in Mark.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-barabbas",
+  "clues": [
+   "I was a prisoner in Jerusalem.",
+   "I had been bound with others who had made insurrection and committed murder.",
+   "Pilate offered the crowd a choice between Jesus and me.",
+   "The people asked for me to be released."
+  ],
+  "options": [
+   "Judas",
+   "Simon of Cyrene",
+   "Malchus",
+   "Barabbas"
+  ],
+  "answer": "Barabbas",
+  "reference_label": "Mark 15:15",
+  "ref_kjv": "And so Pilate, willing to content the people, released Barabbas unto them, and delivered Jesus, when he had scourged him, to be crucified.",
+  "explanation": "Pilate, willing to content the people, released Barabbas unto them (Mark 15:15).",
+  "hint": "Look in Mark.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-joseph_arimathea",
+  "clues": [
+   "I was an honourable counsellor who waited for the kingdom of God.",
+   "I was a disciple of Jesus, but secretly, for fear of the Jews.",
+   "I went to Pilate and begged the body of Jesus.",
+   "I laid Jesus in my own new tomb, hewn out in the rock."
+  ],
+  "options": [
+   "Joseph of Arimathea",
+   "Lazarus",
+   "Nicodemus",
+   "Gamaliel"
+  ],
+  "answer": "Joseph of Arimathea",
+  "reference_label": "Matthew 27:59-60",
+  "ref_kjv": "And when Joseph had taken the body, he wrapped it in a clean linen cloth, And laid it in his own new tomb, which he had hewn out in the rock: and he rolled a great stone to the door of the sepulchre, and departed.",
+  "explanation": "Joseph wrapped the body in clean linen and laid it in his own new tomb, hewn out in the rock (Matthew 27:59-60).",
+  "hint": "Look in Matthew.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-matthias",
+  "clues": [
+   "I followed Jesus from the baptism of John until he was taken up.",
+   "My name was put forward together with Joseph called Barsabas.",
+   "The disciples prayed and gave forth their lots.",
+   "I was numbered with the eleven apostles in the place of Judas."
+  ],
+  "options": [
+   "Barnabas",
+   "Stephen",
+   "Silas",
+   "Matthias"
+  ],
+  "answer": "Matthias",
+  "reference_label": "Acts 1:26",
+  "ref_kjv": "And they gave forth their lots; and the lot fell upon Matthias; and he was numbered with the eleven apostles.",
+  "explanation": "The lot fell upon Matthias, and he was numbered with the eleven apostles (Acts 1:26).",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-ananias",
+  "clues": [
+   "I was a disciple living in Damascus.",
+   "The Lord spoke to me in a vision about a man named Saul.",
+   "I told the Lord I had heard how much evil Saul had done to the saints.",
+   "I put my hands on Saul so that he might receive his sight."
+  ],
+  "options": [
+   "Ananias",
+   "Barnabas",
+   "Philip",
+   "Silas"
+  ],
+  "answer": "Ananias",
+  "reference_label": "Acts 9:17",
+  "ref_kjv": "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul, the Lord, even Jesus, that appeared unto thee in the way as thou camest, hath sent me, that thou mightest receive thy sight, and be filled with the Holy Ghost.",
+  "explanation": "Ananias entered the house and, putting his hands on him, said, Brother Saul (Acts 9:17).",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-eutychus",
+  "clues": [
+   "I was a young man in Troas.",
+   "I sat in a window while Paul preached until midnight.",
+   "I fell into a deep sleep and fell down from the third loft.",
+   "Paul embraced me, and I was brought alive."
+  ],
+  "options": [
+   "Eutychus",
+   "Tychicus",
+   "Onesimus",
+   "Timothy"
+  ],
+  "answer": "Eutychus",
+  "reference_label": "Acts 20:9",
+  "ref_kjv": "And there sat in a window a certain young man named Eutychus, being fallen into a deep sleep: and as Paul was long preaching, he sunk down with sleep, and fell down from the third loft, and was taken up dead.",
+  "explanation": "A young man named Eutychus sank down with sleep and fell from the third loft (Acts 20:9).",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-agrippa",
+  "clues": [
+   "I was a king who came to Caesarea with Bernice to greet Festus.",
+   "Festus told me about a prisoner named Paul.",
+   "Paul made his defence before me.",
+   "I said to Paul, Almost thou persuadest me to be a Christian."
+  ],
+  "options": [
+   "Festus",
+   "Gallio",
+   "Felix",
+   "Agrippa"
+  ],
+  "answer": "Agrippa",
+  "reference_label": "Acts 26:28",
+  "ref_kjv": "Then Agrippa said unto Paul, Almost thou persuadest me to be a Christian.",
+  "explanation": "Agrippa said unto Paul, Almost thou persuadest me to be a Christian (Acts 26:28).",
+  "hint": "Look in Acts.",
+  "difficulty": 4
+ },
+ {
+  "id": "who-onesimus",
+  "clues": [
+   "I departed from my master for a season.",
+   "Paul begat me while he was in bonds.",
+   "I was once unprofitable to my master, but now profitable.",
+   "Paul sent me back to Philemon as a brother beloved."
+  ],
+  "options": [
+   "Tychicus",
+   "Titus",
+   "Onesimus",
+   "Epaphras"
+  ],
+  "answer": "Onesimus",
+  "reference_label": "Philemon 1:10",
+  "ref_kjv": "I beseech thee for my son Onesimus, whom I have begotten in my bonds:",
+  "explanation": "Paul wrote, I beseech thee for my son Onesimus, whom I have begotten in my bonds (Philemon 1:10).",
+  "hint": "Look in Philemon.",
+  "difficulty": 4
+ },
+ {
+  "id": "who-john_mark",
+  "clues": [
+   "Many gathered to pray at my mother Mary's house in Jerusalem.",
+   "I went with Barnabas and Saul but left them in Pamphylia.",
+   "Paul and Barnabas parted over whether to take me again.",
+   "Paul later wrote that I was profitable to him for the ministry."
+  ],
+  "options": [
+   "Mark",
+   "Luke",
+   "Timothy",
+   "Silas"
+  ],
+  "answer": "Mark",
+  "reference_label": "Acts 15:39",
+  "ref_kjv": "And the contention was so sharp between them, that they departed asunder one from the other: and so Barnabas took Mark, and sailed unto Cyprus;",
+  "explanation": "The contention was so sharp that they parted, and Barnabas took Mark and sailed to Cyprus (Acts 15:39).",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ }
+]
