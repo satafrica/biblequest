@@ -225,7 +225,7 @@ export class LocalBackend implements Backend {
     if (!q || q.game_mode !== 'sequence') throw new GameError('question_not_found')
     const correct = order.length === q.options.length && order.every((o, i) => o === q.options[i])
     const r = this.record(sessionId, questionId, correct, 100)
-    return { ...r, correct_order: q.options, explanation: q.explanation, reference: q.reference_label, verse_text: q.verse_text ?? null }
+    return { ...r, correct_order: q.options, explanation: q.explanation, reference: q.reference_label, verse_text: q.verse_text ?? null, clue_refs: q.clue_refs ?? null }
   }
 
   async completeSession(sessionId: string): Promise<CompleteResult> {

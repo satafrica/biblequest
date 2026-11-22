@@ -312,7 +312,7 @@ export default function GameRunner() {
               </p>
               {!last.correct && q.game_mode !== 'sequence' && last.correct_index !== undefined && <p className="mt-1">The answer is <strong>{q.options[last.correct_index]}</strong>.</p>}
               {last.reference && <p className="mt-2 text-sm font-semibold" data-testid="answer-reference">{last.reference} <span className="font-normal text-muted">· {q.translation_id}</span></p>}
-              {last.verse_text && (
+              {last.verse_text && !(q.game_mode === 'sequence' && last.clue_refs && last.clue_refs.length > 0) && (
                 <blockquote className="mt-3 rounded-xl border-l-4 border-accent bg-accent/5 px-4 py-3 font-display leading-relaxed" data-testid="verse-text">
                   <span className="mb-1 flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-wide text-muted"><BookOpen className="h-3.5 w-3.5" aria-hidden="true" />King James Version</span>
                   {last.verse_text.split('\n').map((line, i) => <p key={i} className={i ? 'mt-2' : ''}>{line}</p>)}
@@ -331,6 +331,9 @@ export default function GameRunner() {
               </div>
               {q.game_mode === 'whoami' && q.clues && last.clue_refs && last.clue_refs.length > 0 && (
                 <CluePassages clues={q.clues} refs={last.clue_refs} />
+              )}
+              {q.game_mode === 'sequence' && last.correct_order && last.clue_refs && last.clue_refs.length === last.correct_order.length && (
+                <CluePassages clues={last.correct_order} refs={last.clue_refs} kind="event" />
               )}
               {backend.kind === 'cloud' && (
                 <button className="mt-3 inline-flex items-center gap-1 text-sm text-muted hover:text-ink" onClick={() => setReportOpen(true)}><Flag className="h-4 w-4" aria-hidden="true" /> Report a problem with this question</button>
@@ -499,8 +502,10 @@ function ReportDialog({ open, onClose, questionId }: { open: boolean; onClose: (
 
 const CLUE_PASSAGES_KEY = 'bq.cluePassagesOpen.v1'
 
-/** Who Am I? verse reading: the KJV passage behind each clue, shown after answering. */
-function CluePassages({ clues, refs }: { clues: string[]; refs: CluePassage[][] }) {
+/** Verse reading after answering: the KJV passage behind each Who Am I? clue, or each Story Sequencing event (in the correct order). */
+function CluePassages({ clues, refs, kind = 'clue' }: { clues: string[]; refs: CluePassage[][]; kind?: 'clue' | 'event' }) {
+  const Word = kind === 'event' ? 'Event' : 'Clue'
+  const word = Word.toLowerCase()
   const [open, setOpen] = useState(() => readJSON<boolean>(CLUE_PASSAGES_KEY, true))
   const seen = new Map<string, number>()
   const items = clues.map((clue, i) => ({
@@ -511,21 +516,21 @@ function CluePassages({ clues, refs }: { clues: string[]; refs: CluePassage[][] 
       return { ...p, sameAs: first }
     }),
   }))
-  const speech = items.map((it, i) => [`Clue ${i + 1}. ${it.clue}.`,
-    ...it.passages.map((p) => p.sameAs ? `${p.ref}, as in clue ${p.sameAs}.` : `${p.ref}. ${p.text.replace(/\u2026/g, '')}`)].join(' ')).join(' ')
+  const speech = items.map((it, i) => [`${Word} ${i + 1}. ${it.clue}.`,
+    ...it.passages.map((p) => p.sameAs ? `${p.ref}, as in ${word} ${p.sameAs}.` : `${p.ref}. ${p.text.replace(/\u2026/g, '')}`)].join(' ')).join(' ')
   return (
-    <details className="mt-4 rounded-xl border border-line bg-surface/60" open={open} data-testid="clue-passages"
+    <details className="mt-4 rounded-xl border border-line bg-surface/60" open={open} data-testid={kind === 'event' ? 'event-passages' : 'clue-passages'}
       onToggle={(e) => { const o = (e.currentTarget as HTMLDetailsElement).open; setOpen(o); writeJSON(CLUE_PASSAGES_KEY, o) }}>
       <summary className="flex cursor-pointer items-center gap-2 px-4 py-3 font-semibold">
-        <BookOpen className="h-4 w-4 text-accent" aria-hidden="true" /> Read the Scripture behind each clue
+        <BookOpen className="h-4 w-4 text-accent" aria-hidden="true" /> Read the Scripture behind each {word}
       </summary>
       <div className="px-4 pb-4">
-        <ol className="space-y-4" aria-label="Scripture for each clue">
+        <ol className="space-y-4" aria-label={`Scripture for each ${word}`}>
           {items.map((it, i) => (
             <li key={i}>
-              <p className="text-sm"><span className="font-display font-semibold text-accent">Clue {i + 1}.</span> {it.clue}</p>
+              <p className="text-sm"><span className="font-display font-semibold text-accent">{Word} {i + 1}.</span> {it.clue}</p>
               {it.passages.map((p, j) => p.sameAs ? (
-                <p key={j} className="mt-1 text-sm text-muted">{p.ref} <span>· same passage as clue {p.sameAs}</span></p>
+                <p key={j} className="mt-1 text-sm text-muted">{p.ref} <span>· same passage as {word} {p.sameAs}</span></p>
               ) : (
                 <blockquote key={j} className="mt-2 rounded-lg border-l-4 border-accent/70 bg-accent/5 px-3 py-2 font-display leading-relaxed">
                   <span className="mb-0.5 block font-sans text-xs font-semibold uppercase tracking-wide text-muted">{p.ref} · KJV</span>

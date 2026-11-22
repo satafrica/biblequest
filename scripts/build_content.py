@@ -54,6 +54,14 @@ def passage(ref):
     book, ch, v1, v2 = parse_ref(ref)
     return clean(" ".join(KJV[BOOK_IDX[book]]["chapters"][ch-1][v1-1:v2]))
 
+def passage_text(ref):
+    """Full KJV passage for the clue/event verse reading: never shortened (references are kept to 15 verses or fewer)."""
+    book, ch, v1, v2 = parse_ref(ref)
+    if v2 - v1 + 1 > 15: raise ValueError(f"{ref} is longer than 15 verses")
+    verses = KJV[BOOK_IDX[book]]["chapters"][ch-1][v1-1:v2]
+    if len(verses) != v2 - v1 + 1: raise ValueError(f"{ref} runs past the end of the chapter")
+    return clean(" ".join(verses))
+
 def verse_text(ref, max_verses=6, max_chars=700):
     """KJV passage shown to the player after answering. Long passages are shortened, never rewritten."""
     book, ch, v1, v2 = parse_ref(ref)
@@ -207,9 +215,20 @@ for q in questions:
     if name in CLUE_REFS:
         refs = CLUE_REFS[name]
         if len(refs) != len(q["clues"]): errors.append(f"{q['id']}: {len(refs)} clue reference lists for {len(q['clues'])} clues"); continue
-        try: q["clue_refs"] = [[{"ref": r, "text": verse_text(r)} for r in group] for group in refs]
+        try: q["clue_refs"] = [[{"ref": r, "text": passage_text(r)} for r in group] for group in refs]
         except (ValueError, IndexError, KeyError) as e: errors.append(f"{q['id']}: clue reference {e}")
         if any(not g for g in refs): errors.append(f"{q['id']}: a clue has no reference")
+
+# --- Story Sequencing: KJV passage behind each event, in the correct order (shown after answering)
+from event_refs import EVENT_REFS                         # noqa: E402
+_seq = {q["id"]: q for q in questions if q["game_mode"] == "sequence"}
+for sid, refs in EVENT_REFS.items():
+    q = _seq.get(sid)
+    if q is None: errors.append(f"event_refs: no question {sid}"); continue
+    if len(refs) != len(q["options"]): errors.append(f"{sid}: {len(refs)} event reference lists for {len(q['options'])} events"); continue
+    if any(not g for g in refs): errors.append(f"{sid}: an event has no reference")
+    try: q["clue_refs"] = [[{"ref": r, "text": passage_text(r)} for r in group] for group in refs]
+    except (ValueError, IndexError, KeyError) as e: errors.append(f"{sid}: event reference {e}")
 
 for q in questions:
     for batch in REVIEWED_BATCHES:

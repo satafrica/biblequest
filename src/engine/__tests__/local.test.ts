@@ -188,6 +188,19 @@ describe('gameplay upgrades (local preview)', () => {
       for (const p of group) { expect(p.ref).toMatch(/^[1-3]?\s?[A-Z][a-z]+( of [A-Z][a-z]+)? \d+:\d+(-\d+)?$/); expect(p.text.length).toBeGreaterThan(10) }
     }
   })
+  it('returns the full Scripture behind each Story Sequencing event, in the correct order, only after answering', async () => {
+    const s = await b.startSession('sequence:1:1')
+    const pub = s.questions[0]
+    expect('clue_refs' in pub).toBe(false)
+    const q = byId.get(pub.id)!
+    const r = await b.submitSequence(s.session_id, q.id, [...pub.options].reverse())
+    expect(r.correct_order).toEqual(q.options)
+    expect(r.clue_refs).toHaveLength(q.options.length)
+    for (const group of r.clue_refs!) {
+      expect(group.length).toBeGreaterThan(0)
+      for (const p of group) { expect(p.text.length).toBeGreaterThan(10); expect(p.text).not.toContain('\u2026') }
+    }
+  })
   it('review mode replays missed questions until answered correctly', async () => {
     await expect(b.startSession('review')).rejects.toThrow(/nothing_to_review/)
     const s = await b.startSession('picture:1:1')

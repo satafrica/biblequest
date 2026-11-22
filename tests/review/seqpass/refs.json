@@ -1,0 +1,1058 @@
+{
+ "seq-creation": [
+  [
+   "Genesis 1:3-5"
+  ],
+  [
+   "Genesis 1:6-8"
+  ],
+  [
+   "Genesis 1:9-13"
+  ],
+  [
+   "Genesis 1:14-19"
+  ],
+  [
+   "Genesis 1:20-23"
+  ]
+ ],
+ "seq-noah": [
+  [
+   "Genesis 6:13-14"
+  ],
+  [
+   "Genesis 7:7-9"
+  ],
+  [
+   "Genesis 7:12"
+  ],
+  [
+   "Genesis 8:10-11"
+  ],
+  [
+   "Genesis 9:12-13"
+  ]
+ ],
+ "seq-abraham": [
+  [
+   "Genesis 12:1"
+  ],
+  [
+   "Genesis 15:5"
+  ],
+  [
+   "Genesis 17:5"
+  ],
+  [
+   "Genesis 21:2-3"
+  ],
+  [
+   "Genesis 22:1-2"
+  ]
+ ],
+ "seq-jacob": [
+  [
+   "Genesis 25:26"
+  ],
+  [
+   "Genesis 25:33-34"
+  ],
+  [
+   "Genesis 28:10-12"
+  ],
+  [
+   "Genesis 32:24-28"
+  ]
+ ],
+ "seq-joseph": [
+  [
+   "Genesis 37:3"
+  ],
+  [
+   "Genesis 37:26-28"
+  ],
+  [
+   "Genesis 39:1-4"
+  ],
+  [
+   "Genesis 41:25-30"
+  ],
+  [
+   "Genesis 45:4"
+  ]
+ ],
+ "seq-exodus": [
+  [
+   "Exodus 2:3"
+  ],
+  [
+   "Exodus 3:2-4"
+  ],
+  [
+   "Exodus 7:20"
+  ],
+  [
+   "Exodus 12:21-23",
+   "Exodus 12:28"
+  ],
+  [
+   "Exodus 14:22"
+  ]
+ ],
+ "seq-wilderness": [
+  [
+   "Exodus 16:14-15"
+  ],
+  [
+   "Exodus 19:20",
+   "Exodus 20:1-3"
+  ],
+  [
+   "Exodus 32:1-4"
+  ],
+  [
+   "Numbers 13:1-3",
+   "Numbers 13:17"
+  ]
+ ],
+ "seq-plagues": [
+  [
+   "Exodus 7:20"
+  ],
+  [
+   "Exodus 8:6"
+  ],
+  [
+   "Exodus 8:17"
+  ],
+  [
+   "Exodus 10:22"
+  ],
+  [
+   "Exodus 12:29"
+  ]
+ ],
+ "seq-joshua": [
+  [
+   "Joshua 2:1-4"
+  ],
+  [
+   "Joshua 3:17"
+  ],
+  [
+   "Joshua 6:1-2",
+   "Joshua 6:20"
+  ],
+  [
+   "Joshua 10:12-13"
+  ]
+ ],
+ "seq-gideon": [
+  [
+   "Judges 6:11-12"
+  ],
+  [
+   "Judges 6:36-40"
+  ],
+  [
+   "Judges 7:4-7"
+  ],
+  [
+   "Judges 7:20"
+  ]
+ ],
+ "seq-samson": [
+  [
+   "Judges 13:3-5"
+  ],
+  [
+   "Judges 14:5-6"
+  ],
+  [
+   "Judges 16:4"
+  ],
+  [
+   "Judges 16:30"
+  ]
+ ],
+ "seq-ruth": [
+  [
+   "Ruth 1:14-18"
+  ],
+  [
+   "Ruth 2:2-3"
+  ],
+  [
+   "Ruth 3:9"
+  ],
+  [
+   "Ruth 4:13"
+  ],
+  [
+   "Ruth 4:17"
+  ]
+ ],
+ "seq-samuel": [
+  [
+   "1 Samuel 1:9-11"
+  ],
+  [
+   "1 Samuel 3:8-10"
+  ],
+  [
+   "1 Samuel 9:27",
+   "1 Samuel 10:1"
+  ],
+  [
+   "1 Samuel 16:13"
+  ]
+ ],
+ "seq-david": [
+  [
+   "1 Samuel 16:13"
+  ],
+  [
+   "1 Samuel 16:23"
+  ],
+  [
+   "1 Samuel 17:4",
+   "1 Samuel 17:48-50"
+  ],
+  [
+   "1 Samuel 24:3-7"
+  ],
+  [
+   "2 Samuel 5:3"
+  ]
+ ],
+ "seq-solomon": [
+  [
+   "1 Kings 3:9"
+  ],
+  [
+   "1 Kings 3:16-17",
+   "1 Kings 3:24-27"
+  ],
+  [
+   "1 Kings 6:1",
+   "1 Kings 6:14"
+  ],
+  [
+   "1 Kings 8:63"
+  ],
+  [
+   "1 Kings 10:1-2"
+  ]
+ ],
+ "seq-elijah": [
+  [
+   "1 Kings 17:1-6"
+  ],
+  [
+   "1 Kings 17:9",
+   "1 Kings 17:15-16"
+  ],
+  [
+   "1 Kings 18:20",
+   "1 Kings 18:36-38"
+  ],
+  [
+   "1 Kings 19:11-13"
+  ],
+  [
+   "2 Kings 2:11"
+  ]
+ ],
+ "seq-daniel": [
+  [
+   "Daniel 1:8"
+  ],
+  [
+   "Daniel 2:31-32",
+   "Daniel 2:36-38"
+  ],
+  [
+   "Daniel 3:20-23"
+  ],
+  [
+   "Daniel 5:5"
+  ],
+  [
+   "Daniel 6:16"
+  ]
+ ],
+ "seq-esther": [
+  [
+   "Esther 2:17"
+  ],
+  [
+   "Esther 3:6"
+  ],
+  [
+   "Esther 5:1-2"
+  ],
+  [
+   "Esther 7:10"
+  ]
+ ],
+ "seq-jonah": [
+  [
+   "Jonah 1:1-2"
+  ],
+  [
+   "Jonah 1:3"
+  ],
+  [
+   "Jonah 1:17"
+  ],
+  [
+   "Jonah 3:4"
+  ],
+  [
+   "Jonah 4:6"
+  ]
+ ],
+ "seq-nativity": [
+  [
+   "Luke 1:26-31"
+  ],
+  [
+   "Luke 2:4-5"
+  ],
+  [
+   "Luke 2:8-14"
+  ],
+  [
+   "Luke 2:25-28"
+  ],
+  [
+   "Luke 2:42-46"
+  ]
+ ],
+ "seq-ministry": [
+  [
+   "Matthew 3:16"
+  ],
+  [
+   "Matthew 4:1"
+  ],
+  [
+   "Matthew 4:18-20"
+  ],
+  [
+   "Matthew 5:1-2"
+  ]
+ ],
+ "seq-passion": [
+  [
+   "Matthew 21:8-10"
+  ],
+  [
+   "Matthew 26:26"
+  ],
+  [
+   "Matthew 26:36-39"
+  ],
+  [
+   "Matthew 27:35"
+  ],
+  [
+   "Matthew 28:5-6"
+  ]
+ ],
+ "seq-resurrection": [
+  [
+   "Luke 24:1-3",
+   "Luke 24:10"
+  ],
+  [
+   "Luke 24:13"
+  ],
+  [
+   "Luke 24:36"
+  ],
+  [
+   "Luke 24:51"
+  ]
+ ],
+ "seq-church": [
+  [
+   "Acts 1:9"
+  ],
+  [
+   "Acts 2:1-4"
+  ],
+  [
+   "Acts 3:2-8"
+  ],
+  [
+   "Acts 7:59"
+  ],
+  [
+   "Acts 9:3-5"
+  ]
+ ],
+ "seq-paul": [
+  [
+   "Acts 9:3-6"
+  ],
+  [
+   "Acts 13:2"
+  ],
+  [
+   "Acts 16:9"
+  ],
+  [
+   "Acts 17:22"
+  ],
+  [
+   "Acts 27:41-44",
+   "Acts 28:1"
+  ]
+ ],
+ "seq-prodigal": [
+  [
+   "Luke 15:11-12"
+  ],
+  [
+   "Luke 15:13"
+  ],
+  [
+   "Luke 15:13-15"
+  ],
+  [
+   "Luke 15:20"
+  ],
+  [
+   "Luke 15:25-28"
+  ]
+ ],
+ "seq-samaritan": [
+  [
+   "Luke 10:30"
+  ],
+  [
+   "Luke 10:31"
+  ],
+  [
+   "Luke 10:32"
+  ],
+  [
+   "Luke 10:33-34"
+  ],
+  [
+   "Luke 10:35"
+  ]
+ ],
+ "seq-cain_abel": [
+  [
+   "Genesis 4:2"
+  ],
+  [
+   "Genesis 4:3-4"
+  ],
+  [
+   "Genesis 4:6-7"
+  ],
+  [
+   "Genesis 4:8"
+  ],
+  [
+   "Genesis 4:15"
+  ]
+ ],
+ "seq-babel": [
+  [
+   "Genesis 11:1"
+  ],
+  [
+   "Genesis 11:2"
+  ],
+  [
+   "Genesis 11:3-4"
+  ],
+  [
+   "Genesis 11:5"
+  ],
+  [
+   "Genesis 11:7-9"
+  ]
+ ],
+ "seq-isaac_sacrifice": [
+  [
+   "Genesis 22:1-2"
+  ],
+  [
+   "Genesis 22:3"
+  ],
+  [
+   "Genesis 22:7"
+  ],
+  [
+   "Genesis 22:10-11"
+  ],
+  [
+   "Genesis 22:13"
+  ]
+ ],
+ "seq-moses_early": [
+  [
+   "Exodus 1:22"
+  ],
+  [
+   "Exodus 2:2-3"
+  ],
+  [
+   "Exodus 2:5-6"
+  ],
+  [
+   "Exodus 2:15"
+  ],
+  [
+   "Exodus 3:2-4"
+  ]
+ ],
+ "seq-sinai": [
+  [
+   "Exodus 19:2"
+  ],
+  [
+   "Exodus 19:18"
+  ],
+  [
+   "Exodus 20:1-3",
+   "Deuteronomy 4:13"
+  ],
+  [
+   "Exodus 32:1-4"
+  ],
+  [
+   "Exodus 34:1-4"
+  ]
+ ],
+ "seq-jericho": [
+  [
+   "Joshua 2:1",
+   "Joshua 2:4-6"
+  ],
+  [
+   "Joshua 3:17"
+  ],
+  [
+   "Joshua 6:11-14"
+  ],
+  [
+   "Joshua 6:15"
+  ],
+  [
+   "Joshua 6:20"
+  ]
+ ],
+ "seq-hannah": [
+  [
+   "1 Samuel 1:9-10"
+  ],
+  [
+   "1 Samuel 1:13"
+  ],
+  [
+   "1 Samuel 1:20"
+  ],
+  [
+   "1 Samuel 1:26-28"
+  ],
+  [
+   "1 Samuel 2:1"
+  ]
+ ],
+ "seq-naaman": [
+  [
+   "2 Kings 5:2-3"
+  ],
+  [
+   "2 Kings 5:7"
+  ],
+  [
+   "2 Kings 5:10"
+  ],
+  [
+   "2 Kings 5:11-12"
+  ],
+  [
+   "2 Kings 5:14"
+  ]
+ ],
+ "seq-nehemiah": [
+  [
+   "Nehemiah 1:3-4"
+  ],
+  [
+   "Nehemiah 2:1-2"
+  ],
+  [
+   "Nehemiah 2:13"
+  ],
+  [
+   "Nehemiah 4:1-3"
+  ],
+  [
+   "Nehemiah 6:15"
+  ]
+ ],
+ "seq-fiery_furnace": [
+  [
+   "Daniel 3:1"
+  ],
+  [
+   "Daniel 3:12",
+   "Daniel 3:16-18"
+  ],
+  [
+   "Daniel 3:19"
+  ],
+  [
+   "Daniel 3:24-25"
+  ],
+  [
+   "Daniel 3:26-27"
+  ]
+ ],
+ "seq-lazarus": [
+  [
+   "John 11:1-3"
+  ],
+  [
+   "John 11:14-17"
+  ],
+  [
+   "John 11:25"
+  ],
+  [
+   "John 11:35"
+  ],
+  [
+   "John 11:43-44"
+  ]
+ ],
+ "seq-feeding": [
+  [
+   "John 6:2"
+  ],
+  [
+   "John 6:5"
+  ],
+  [
+   "John 6:8-9"
+  ],
+  [
+   "John 6:10-11"
+  ],
+  [
+   "John 6:12-13"
+  ]
+ ],
+ "seq-saul_conversion": [
+  [
+   "Acts 7:58-60",
+   "Acts 8:1"
+  ],
+  [
+   "Acts 9:1-3"
+  ],
+  [
+   "Acts 9:8-9"
+  ],
+  [
+   "Acts 9:17"
+  ],
+  [
+   "Acts 9:19-20"
+  ]
+ ],
+ "seq-zacchaeus": [
+  [
+   "Luke 19:2-3"
+  ],
+  [
+   "Luke 19:4"
+  ],
+  [
+   "Luke 19:5"
+  ],
+  [
+   "Luke 19:7"
+  ],
+  [
+   "Luke 19:8"
+  ]
+ ],
+ "seq-lot_sodom": [
+  [
+   "Genesis 13:11"
+  ],
+  [
+   "Genesis 14:12-14"
+  ],
+  [
+   "Genesis 19:1"
+  ],
+  [
+   "Genesis 19:23-26"
+  ]
+ ],
+ "seq-isaac_rebekah": [
+  [
+   "Genesis 24:2-4"
+  ],
+  [
+   "Genesis 24:15-19"
+  ],
+  [
+   "Genesis 24:29"
+  ],
+  [
+   "Genesis 24:58"
+  ],
+  [
+   "Genesis 24:67"
+  ]
+ ],
+ "seq-jacob_rachel": [
+  [
+   "Genesis 29:9-10"
+  ],
+  [
+   "Genesis 29:20"
+  ],
+  [
+   "Genesis 29:25"
+  ],
+  [
+   "Genesis 29:30"
+  ]
+ ],
+ "seq-joseph_brothers": [
+  [
+   "Genesis 42:3"
+  ],
+  [
+   "Genesis 42:24"
+  ],
+  [
+   "Genesis 43:15"
+  ],
+  [
+   "Genesis 44:12"
+  ],
+  [
+   "Genesis 45:1-3"
+  ]
+ ],
+ "seq-twelve_spies": [
+  [
+   "Numbers 13:17"
+  ],
+  [
+   "Numbers 13:23"
+  ],
+  [
+   "Numbers 13:30"
+  ],
+  [
+   "Numbers 14:2"
+  ],
+  [
+   "Numbers 14:33-34"
+  ]
+ ],
+ "seq-balaam": [
+  [
+   "Numbers 22:21"
+  ],
+  [
+   "Numbers 22:23"
+  ],
+  [
+   "Numbers 22:28"
+  ],
+  [
+   "Numbers 22:31"
+  ],
+  [
+   "Numbers 23:11"
+  ]
+ ],
+ "seq-deborah_barak": [
+  [
+   "Judges 4:4-5"
+  ],
+  [
+   "Judges 4:6"
+  ],
+  [
+   "Judges 4:14"
+  ],
+  [
+   "Judges 4:21"
+  ],
+  [
+   "Judges 5:1-3"
+  ]
+ ],
+ "seq-saul_king": [
+  [
+   "1 Samuel 8:4-5"
+  ],
+  [
+   "1 Samuel 9:1-2"
+  ],
+  [
+   "1 Samuel 9:27",
+   "1 Samuel 10:1"
+  ],
+  [
+   "1 Samuel 10:21-24"
+  ],
+  [
+   "1 Samuel 15:22-23"
+  ]
+ ],
+ "seq-david_bathsheba": [
+  [
+   "2 Samuel 11:2"
+  ],
+  [
+   "2 Samuel 11:14-15"
+  ],
+  [
+   "2 Samuel 12:7"
+  ],
+  [
+   "2 Samuel 12:13"
+  ],
+  [
+   "2 Samuel 12:24"
+  ]
+ ],
+ "seq-absalom": [
+  [
+   "2 Samuel 15:2-6"
+  ],
+  [
+   "2 Samuel 15:14-16"
+  ],
+  [
+   "2 Samuel 18:9"
+  ],
+  [
+   "2 Samuel 18:14"
+  ],
+  [
+   "2 Samuel 18:33"
+  ]
+ ],
+ "seq-elisha_ministry": [
+  [
+   "2 Kings 2:9"
+  ],
+  [
+   "2 Kings 2:13-14"
+  ],
+  [
+   "2 Kings 4:1-6"
+  ],
+  [
+   "2 Kings 4:35-36"
+  ],
+  [
+   "2 Kings 6:5-6"
+  ]
+ ],
+ "seq-hezekiah": [
+  [
+   "2 Kings 18:1-4"
+  ],
+  [
+   "2 Kings 18:13"
+  ],
+  [
+   "2 Kings 19:14"
+  ],
+  [
+   "2 Kings 19:35"
+  ],
+  [
+   "2 Kings 19:36-37"
+  ]
+ ],
+ "seq-josiah": [
+  [
+   "2 Kings 22:1"
+  ],
+  [
+   "2 Kings 22:8"
+  ],
+  [
+   "2 Kings 22:10-11"
+  ],
+  [
+   "2 Kings 23:3"
+  ],
+  [
+   "2 Kings 23:21"
+  ]
+ ],
+ "seq-ezra_return": [
+  [
+   "Ezra 1:1-3"
+  ],
+  [
+   "Ezra 3:10-11"
+  ],
+  [
+   "Ezra 4:4-5"
+  ],
+  [
+   "Ezra 6:14-15"
+  ],
+  [
+   "Ezra 7:6"
+  ]
+ ],
+ "seq-walking_water": [
+  [
+   "Matthew 14:23"
+  ],
+  [
+   "Matthew 14:24"
+  ],
+  [
+   "Matthew 14:25"
+  ],
+  [
+   "Matthew 14:28-30"
+  ],
+  [
+   "Matthew 14:32"
+  ]
+ ],
+ "seq-jairus_daughter": [
+  [
+   "Mark 5:22-23"
+  ],
+  [
+   "Mark 5:25-28"
+  ],
+  [
+   "Mark 5:30"
+  ],
+  [
+   "Mark 5:35"
+  ],
+  [
+   "Mark 5:41-42"
+  ]
+ ],
+ "seq-peter_denial": [
+  [
+   "Luke 22:33-34"
+  ],
+  [
+   "Luke 22:54"
+  ],
+  [
+   "Luke 22:55-57"
+  ],
+  [
+   "Luke 22:61"
+  ],
+  [
+   "Luke 22:62"
+  ]
+ ],
+ "seq-stephen": [
+  [
+   "Acts 6:3-5"
+  ],
+  [
+   "Acts 6:8"
+  ],
+  [
+   "Acts 6:9-12"
+  ],
+  [
+   "Acts 7:55-56"
+  ],
+  [
+   "Acts 7:59-60"
+  ]
+ ],
+ "seq-philip_ethiopian": [
+  [
+   "Acts 8:26"
+  ],
+  [
+   "Acts 8:27-28"
+  ],
+  [
+   "Acts 8:29-30"
+  ],
+  [
+   "Acts 8:38"
+  ],
+  [
+   "Acts 8:39"
+  ]
+ ],
+ "seq-peter_cornelius": [
+  [
+   "Acts 10:3"
+  ],
+  [
+   "Acts 10:9-11"
+  ],
+  [
+   "Acts 10:24"
+  ],
+  [
+   "Acts 10:44"
+  ],
+  [
+   "Acts 10:46-48"
+  ]
+ ],
+ "seq-peter_prison": [
+  [
+   "Acts 12:1-2"
+  ],
+  [
+   "Acts 12:6"
+  ],
+  [
+   "Acts 12:7"
+  ],
+  [
+   "Acts 12:10"
+  ],
+  [
+   "Acts 12:13-14"
+  ]
+ ],
+ "seq-paul_philippi": [
+  [
+   "Acts 16:14"
+  ],
+  [
+   "Acts 16:16-18"
+  ],
+  [
+   "Acts 16:19-24"
+  ],
+  [
+   "Acts 16:25"
+  ],
+  [
+   "Acts 16:27-33"
+  ]
+ ]
+}
