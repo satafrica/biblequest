@@ -1,0 +1,1094 @@
+[
+ {
+  "id": "who-abraham",
+  "clues": [
+   "I left Ur of the Chaldees.",
+   "God changed my name.",
+   "My wife laughed at God's promise of a son.",
+   "God tested me in the land of Moriah."
+  ],
+  "options": [
+   "Abraham",
+   "Isaac",
+   "Jacob",
+   "Lot"
+  ],
+  "answer": "Abraham",
+  "reference_label": "Genesis 22:1-2",
+  "ref_kjv": "And it came to pass after these things, that God did tempt Abraham, and said unto him, Abraham: and he said, Behold, here I am. And he said, Take now thy son, thine only son Isaac, whom thou lovest, and get thee into the land of Moriah; and offer him there for a burnt offering upon one of the mountains which I will tell thee of.",
+  "explanation": "God tempted (tested) Abraham and sent him to the land of Moriah.",
+  "hint": "Look in Genesis.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-adam",
+  "clues": [
+   "I was formed of the dust of the ground.",
+   "I gave names to the animals.",
+   "I lived in the garden of Eden.",
+   "My wife was Eve."
+  ],
+  "options": [
+   "Enoch",
+   "Cain",
+   "Seth",
+   "Adam"
+  ],
+  "answer": "Adam",
+  "reference_label": "Genesis 2:19-20",
+  "ref_kjv": "And out of the ground the LORD God formed every beast of the field, and every fowl of the air; and brought them unto Adam to see what he would call them: and whatsoever Adam called every living creature, that was the name thereof. And Adam gave names to all cattle, and to the fowl of the air, and to every beast of the field; but for Adam there was not found an help meet for him.",
+  "explanation": "\"Adam gave names to all cattle, and to the fowl of the air.\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-barnabas",
+  "clues": [
+   "My name is interpreted 'the son of consolation'.",
+   "I sold land and laid the money at the apostles' feet.",
+   "I brought Saul to the apostles in Jerusalem.",
+   "I travelled with Paul on his first missionary journey."
+  ],
+  "options": [
+   "Timothy",
+   "Barnabas",
+   "Mark",
+   "Silas"
+  ],
+  "answer": "Barnabas",
+  "reference_label": "Acts 4:36-37",
+  "ref_kjv": "And Joses, who by the apostles was surnamed Barnabas, (which is, being interpreted, The son of consolation,) a Levite, and of the country of Cyprus, Having land, sold it, and brought the money, and laid it at the apostles\u2019 feet.",
+  "explanation": "Joses was surnamed Barnabas, \"the son of consolation.\"",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-boaz",
+  "clues": [
+   "I was a mighty man of wealth in Bethlehem.",
+   "I let a Moabite woman glean in my fields.",
+   "I redeemed the inheritance of Elimelech.",
+   "I married Ruth."
+  ],
+  "options": [
+   "Jesse",
+   "Elimelech",
+   "Obed",
+   "Boaz"
+  ],
+  "answer": "Boaz",
+  "reference_label": "Ruth 4:13",
+  "ref_kjv": "So Boaz took Ruth, and she was his wife: and when he went in unto her, the LORD gave her conception, and she bare a son.",
+  "explanation": "\"So Boaz took Ruth, and she was his wife.\"",
+  "hint": "Look in Ruth.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-cain",
+  "clues": [
+   "I was a tiller of the ground.",
+   "God did not respect my offering.",
+   "I asked: Am I my brother's keeper?",
+   "God set a mark upon me."
+  ],
+  "options": [
+   "Abel",
+   "Seth",
+   "Cain",
+   "Lamech"
+  ],
+  "answer": "Cain",
+  "reference_label": "Genesis 4:9",
+  "ref_kjv": "And the LORD said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother\u2019s keeper?",
+  "explanation": "Cain answered, \"I know not: Am I my brother's keeper?\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-caleb",
+  "clues": [
+   "I was one of the twelve spies.",
+   "I brought back a good report with Joshua.",
+   "I was eighty-five years old when I asked for my inheritance.",
+   "I asked for the mountain and received Hebron."
+  ],
+  "options": [
+   "Othniel",
+   "Joshua",
+   "Caleb",
+   "Phinehas"
+  ],
+  "answer": "Caleb",
+  "reference_label": "Joshua 14:6-13",
+  "ref_kjv": "Then the children of Judah came unto Joshua in Gilgal: and Caleb the son of Jephunneh the Kenezite said unto him, Thou knowest the thing that the LORD said unto Moses the man of God concerning me and thee in Kadesh-barnea. Forty years old was I when Moses the servant of the LORD sent me from Kadesh-barnea to espy out the land; and I brought him word again as it was in mine heart. Nevertheless my brethren that went up with me made the heart of the people melt: but I wholly followed the LORD my God. And Moses sware on that day, saying, Surely the land whereon thy feet have trodden shall be thine inheritance, and thy children\u2019s for ever, because thou hast wholly followed the LORD my God. And \u2026",
+  "explanation": "Joshua blessed Caleb and gave him Hebron for an inheritance.",
+  "hint": "Look in Joshua.",
+  "difficulty": 4
+ },
+ {
+  "id": "who-daniel",
+  "clues": [
+   "I was taken captive to Babylon as a young man.",
+   "I purposed not to defile myself with the king's meat.",
+   "I read the writing on the wall.",
+   "I was delivered from the den of lions."
+  ],
+  "options": [
+   "Nehemiah",
+   "Ezekiel",
+   "Daniel",
+   "Jeremiah"
+  ],
+  "answer": "Daniel",
+  "reference_label": "Daniel 6:23",
+  "ref_kjv": "Then was the king exceeding glad for him, and commanded that they should take Daniel up out of the den. So Daniel was taken up out of the den, and no manner of hurt was found upon him, because he believed in his God.",
+  "explanation": "Daniel was taken up out of the den, and no manner of hurt was found upon him.",
+  "hint": "Look in Daniel.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-david",
+  "clues": [
+   "I was the youngest son of Jesse.",
+   "I played the harp for King Saul.",
+   "I defeated Goliath.",
+   "I became king over Israel."
+  ],
+  "options": [
+   "Saul",
+   "Jonathan",
+   "David",
+   "Solomon"
+  ],
+  "answer": "David",
+  "reference_label": "1 Samuel 16:23",
+  "ref_kjv": "And it came to pass, when the evil spirit from God was upon Saul, that David took an harp, and played with his hand: so Saul was refreshed, and was well, and the evil spirit departed from him.",
+  "explanation": "David took an harp and played, so Saul was refreshed.",
+  "hint": "Look in 1 Samuel.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-deborah",
+  "clues": [
+   "I was a prophetess.",
+   "I judged Israel under a palm tree in mount Ephraim.",
+   "I summoned Barak to fight Sisera.",
+   "A song of mine is recorded in Judges 5."
+  ],
+  "options": [
+   "Miriam",
+   "Jael",
+   "Huldah",
+   "Deborah"
+  ],
+  "answer": "Deborah",
+  "reference_label": "Judges 4:4-5",
+  "ref_kjv": "And Deborah, a prophetess, the wife of Lapidoth, she judged Israel at that time. And she dwelt under the palm tree of Deborah between Ramah and Beth-el in mount Ephraim: and the children of Israel came up to her for judgment.",
+  "explanation": "Deborah judged Israel and dwelt under the palm tree of Deborah.",
+  "hint": "Look in Judges.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-elijah",
+  "clues": [
+   "I was a Tishbite.",
+   "Ravens fed me by the brook Cherith.",
+   "I challenged the prophets of Baal on Mount Carmel.",
+   "I went up by a whirlwind into heaven."
+  ],
+  "options": [
+   "Jonah",
+   "Elisha",
+   "Elijah",
+   "Amos"
+  ],
+  "answer": "Elijah",
+  "reference_label": "1 Kings 17:1-6",
+  "ref_kjv": "And Elijah the Tishbite, who was of the inhabitants of Gilead, said unto Ahab, As the LORD God of Israel liveth, before whom I stand, there shall not be dew nor rain these years, but according to my word. And the word of the LORD came unto him, saying, Get thee hence, and turn thee eastward, and hide thyself by the brook Cherith, that is before Jordan. And it shall be, that thou shalt drink of the brook; and I have commanded the ravens to feed thee there. So he went and did according unto the word of the LORD: for he went and dwelt by the brook Cherith, that is before Jordan. And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening; and he drank of the \u2026",
+  "explanation": "Ravens brought Elijah bread and flesh morning and evening.",
+  "hint": "Look in 1 Kings.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-elisha",
+  "clues": [
+   "I was ploughing with twelve yoke of oxen when I was called.",
+   "I asked for a double portion of my master's spirit.",
+   "I took up the mantle that fell from Elijah.",
+   "I told Naaman to wash in the Jordan seven times."
+  ],
+  "options": [
+   "Obadiah",
+   "Gehazi",
+   "Elijah",
+   "Elisha"
+  ],
+  "answer": "Elisha",
+  "reference_label": "2 Kings 2:9",
+  "ref_kjv": "And it came to pass, when they were gone over, that Elijah said unto Elisha, Ask what I shall do for thee, before I be taken away from thee. And Elisha said, I pray thee, let a double portion of thy spirit be upon me.",
+  "explanation": "Elisha said, \"Let a double portion of thy spirit be upon me.\"",
+  "hint": "Look in 2 Kings.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-enoch",
+  "clues": [
+   "I walked with God.",
+   "I was the father of Methuselah.",
+   "I was not, for God took me.",
+   "Hebrews says I was translated so I should not see death."
+  ],
+  "options": [
+   "Elijah",
+   "Noah",
+   "Enoch",
+   "Seth"
+  ],
+  "answer": "Enoch",
+  "reference_label": "Genesis 5:24",
+  "ref_kjv": "And Enoch walked with God: and he was not; for God took him.",
+  "explanation": "\"Enoch walked with God: and he was not; for God took him.\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-esau",
+  "clues": [
+   "I was a cunning hunter.",
+   "I was born red and hairy.",
+   "I sold my birthright for a meal.",
+   "I am also called Edom."
+  ],
+  "options": [
+   "Ishmael",
+   "Nimrod",
+   "Jacob",
+   "Esau"
+  ],
+  "answer": "Esau",
+  "reference_label": "Genesis 25:30-33",
+  "ref_kjv": "And Esau said to Jacob, Feed me, I pray thee, with that same red pottage; for I am faint: therefore was his name called Edom. And Jacob said, Sell me this day thy birthright. And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me? And Jacob said, Swear to me this day; and he sware unto him: and he sold his birthright unto Jacob.",
+  "explanation": "Esau sold his birthright unto Jacob.",
+  "hint": "Look in Genesis.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-esther",
+  "clues": [
+   "I was raised by my cousin Mordecai.",
+   "I became queen in Persia.",
+   "I said: If I perish, I perish.",
+   "The feast of Purim remembers my people's deliverance."
+  ],
+  "options": [
+   "Deborah",
+   "Esther",
+   "Vashti",
+   "Ruth"
+  ],
+  "answer": "Esther",
+  "reference_label": "Esther 4:16",
+  "ref_kjv": "Go, gather together all the Jews that are present in Shushan, and fast ye for me, and neither eat nor drink three days, night or day: I also and my maidens will fast likewise; and so will I go in unto the king, which is not according to the law: and if I perish, I perish.",
+  "explanation": "Esther resolved to go in unto the king, \"and if I perish, I perish.\"",
+  "hint": "Look in Esther.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-gideon",
+  "clues": [
+   "An angel found me threshing wheat by a winepress.",
+   "I tested God with a fleece.",
+   "My army was reduced to three hundred men.",
+   "We carried trumpets, pitchers and lamps."
+  ],
+  "options": [
+   "Joshua",
+   "Gideon",
+   "Barak",
+   "Ehud"
+  ],
+  "answer": "Gideon",
+  "reference_label": "Judges 7:7",
+  "ref_kjv": "And the LORD said unto Gideon, By the three hundred men that lapped will I save you, and deliver the Midianites into thine hand: and let all the other people go every man unto his place.",
+  "explanation": "The LORD said to Gideon, \"By the three hundred men... will I save you.\"",
+  "hint": "Look in Judges.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-hannah",
+  "clues": [
+   "My husband was Elkanah.",
+   "I prayed silently at Shiloh, and Eli thought I was drunk.",
+   "I vowed to give my son to the LORD.",
+   "I named my son Samuel."
+  ],
+  "options": [
+   "Sarah",
+   "Elisabeth",
+   "Peninnah",
+   "Hannah"
+  ],
+  "answer": "Hannah",
+  "reference_label": "1 Samuel 1:13-20",
+  "ref_kjv": "Now Hannah, she spake in her heart; only her lips moved, but her voice was not heard: therefore Eli thought she had been drunken. And Eli said unto her, How long wilt thou be drunken? put away thy wine from thee. And Hannah answered and said, No, my lord, I am a woman of a sorrowful spirit: I have drunk neither wine nor strong drink, but have poured out my soul before the LORD. Count not thine handmaid for a daughter of Belial: for out of the abundance of my complaint and grief have I spoken hitherto. Then Eli answered and said, Go in peace: and the God of Israel grant thee thy petition that thou hast asked of him. And she said, Let thine handmaid find grace in thy sight. So the woman went \u2026",
+  "explanation": "Hannah bore a son and called his name Samuel.",
+  "hint": "Look in 1 Samuel.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-isaiah",
+  "clues": [
+   "I saw the Lord high and lifted up in the year King Uzziah died.",
+   "A seraph touched my lips with a live coal.",
+   "I answered: Here am I; send me.",
+   "I prophesied of a child called Immanuel."
+  ],
+  "options": [
+   "Jeremiah",
+   "Isaiah",
+   "Micah",
+   "Ezekiel"
+  ],
+  "answer": "Isaiah",
+  "reference_label": "Isaiah 6:8",
+  "ref_kjv": "Also I heard the voice of the Lord, saying, Whom shall I send, and who will go for us? Then said I, Here am I; send me.",
+  "explanation": "Isaiah 6:8: \"Here am I; send me.\"",
+  "hint": "Look in Isaiah.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-jacob",
+  "clues": [
+   "I was born holding my twin brother's heel.",
+   "I bought my brother's birthright with pottage.",
+   "I dreamed of a ladder reaching to heaven.",
+   "God renamed me Israel."
+  ],
+  "options": [
+   "Isaac",
+   "Laban",
+   "Jacob",
+   "Esau"
+  ],
+  "answer": "Jacob",
+  "reference_label": "Genesis 32:28",
+  "ref_kjv": "And he said, Thy name shall be called no more Jacob, but Israel: for as a prince hast thou power with God and with men, and hast prevailed.",
+  "explanation": "\"Thy name shall be called no more Jacob, but Israel.\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-jeremiah",
+  "clues": [
+   "God said He knew me before He formed me in the belly.",
+   "I protested that I was only a child.",
+   "I was let down into a dungeon full of mire.",
+   "Baruch wrote my words on a roll."
+  ],
+  "options": [
+   "Jeremiah",
+   "Daniel",
+   "Isaiah",
+   "Ezekiel"
+  ],
+  "answer": "Jeremiah",
+  "reference_label": "Jeremiah 1:5-6",
+  "ref_kjv": "Before I formed thee in the belly I knew thee; and before thou camest forth out of the womb I sanctified thee, and I ordained thee a prophet unto the nations. Then said I, Ah, Lord GOD! behold, I cannot speak: for I am a child.",
+  "explanation": "God told Jeremiah, \"Before I formed thee in the belly I knew thee.\" Tradition calls him the weeping prophet.",
+  "hint": "Look in Jeremiah.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-job",
+  "clues": [
+   "I lived in the land of Uz.",
+   "I was perfect and upright.",
+   "I lost my children and possessions in a single day.",
+   "I said: The LORD gave, and the LORD hath taken away."
+  ],
+  "options": [
+   "Bildad",
+   "Job",
+   "Elihu",
+   "Eliphaz"
+  ],
+  "answer": "Job",
+  "reference_label": "Job 1:21",
+  "ref_kjv": "And said, Naked came I out of my mother\u2019s womb, and naked shall I return thither: the LORD gave, and the LORD hath taken away; blessed be the name of the LORD.",
+  "explanation": "\"The LORD gave, and the LORD hath taken away; blessed be the name of the LORD.\"",
+  "hint": "Look in Job.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-john_apostle",
+  "clues": [
+   "I was a son of Zebedee.",
+   "Jesus surnamed my brother and me Boanerges.",
+   "Tradition identifies me as the disciple whom Jesus loved.",
+   "I was on the isle of Patmos for the word of God."
+  ],
+  "options": [
+   "Andrew",
+   "John",
+   "Philip",
+   "James"
+  ],
+  "answer": "John",
+  "reference_label": "Revelation 1:9",
+  "ref_kjv": "I John, who also am your brother, and companion in tribulation, and in the kingdom and patience of Jesus Christ, was in the isle that is called Patmos, for the word of God, and for the testimony of Jesus Christ.",
+  "explanation": "\"I John... was in the isle that is called Patmos.\" Identifying the Revelation author with the apostle is traditional.",
+  "hint": "Look in Revelation.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-john_baptist",
+  "clues": [
+   "My father Zacharias was a priest.",
+   "I wore raiment of camel's hair.",
+   "I ate locusts and wild honey.",
+   "I baptized Jesus in the Jordan."
+  ],
+  "options": [
+   "Peter",
+   "Andrew",
+   "John the Baptist",
+   "Elijah"
+  ],
+  "answer": "John the Baptist",
+  "reference_label": "Matthew 3:4",
+  "ref_kjv": "And the same John had his raiment of camel\u2019s hair, and a leathern girdle about his loins; and his meat was locusts and wild honey.",
+  "explanation": "John had raiment of camel's hair and his meat was locusts and wild honey.",
+  "hint": "Look in Matthew.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-jonah",
+  "clues": [
+   "I was a prophet, the son of Amittai.",
+   "I fled from God's call on a ship.",
+   "I spent three days inside a great fish.",
+   "I was displeased when Nineveh repented."
+  ],
+  "options": [
+   "Nahum",
+   "Hosea",
+   "Amos",
+   "Jonah"
+  ],
+  "answer": "Jonah",
+  "reference_label": "Jonah 1:1",
+  "ref_kjv": "Now the word of the LORD came unto Jonah the son of Amittai, saying,",
+  "explanation": "The word of the LORD came unto Jonah the son of Amittai.",
+  "hint": "Look in Jonah.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-joseph",
+  "clues": [
+   "I was my father's favourite son.",
+   "My brothers sold me into slavery.",
+   "I interpreted Pharaoh's dreams.",
+   "I was set over all the land of Egypt."
+  ],
+  "options": [
+   "Moses",
+   "Judah",
+   "Joseph",
+   "Benjamin"
+  ],
+  "answer": "Joseph",
+  "reference_label": "Genesis 41:41",
+  "ref_kjv": "And Pharaoh said unto Joseph, See, I have set thee over all the land of Egypt.",
+  "explanation": "Pharaoh said to Joseph, \"I have set thee over all the land of Egypt.\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-joshua",
+  "clues": [
+   "I was one of twelve men sent to spy out Canaan.",
+   "I succeeded Moses as leader.",
+   "The walls of Jericho fell when the people shouted.",
+   "I said: As for me and my house, we will serve the LORD."
+  ],
+  "options": [
+   "Joshua",
+   "Caleb",
+   "Gideon",
+   "Aaron"
+  ],
+  "answer": "Joshua",
+  "reference_label": "Joshua 24:15",
+  "ref_kjv": "And if it seem evil unto you to serve the LORD, choose you this day whom ye will serve; whether the gods which your fathers served that were on the other side of the flood, or the gods of the Amorites, in whose land ye dwell: but as for me and my house, we will serve the LORD.",
+  "explanation": "Joshua 24:15: \"As for me and my house, we will serve the LORD.\"",
+  "hint": "Look in Joshua.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-judas",
+  "clues": [
+   "I was one of the twelve.",
+   "I had the bag.",
+   "I agreed to betray Jesus for thirty pieces of silver.",
+   "I betrayed Jesus with a kiss."
+  ],
+  "options": [
+   "Peter",
+   "Thomas",
+   "Judas Iscariot",
+   "Andrew"
+  ],
+  "answer": "Judas Iscariot",
+  "reference_label": "Matthew 26:14-15",
+  "ref_kjv": "Then one of the twelve, called Judas Iscariot, went unto the chief priests, And said unto them, What will ye give me, and I will deliver him unto you? And they covenanted with him for thirty pieces of silver.",
+  "explanation": "Judas Iscariot covenanted with the chief priests for thirty pieces of silver.",
+  "hint": "Look in Matthew.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-lazarus",
+  "clues": [
+   "I lived in Bethany.",
+   "My sisters were Mary and Martha.",
+   "Jesus wept near my grave.",
+   "Jesus called me out of the tomb."
+  ],
+  "options": [
+   "Bartimaeus",
+   "Simon",
+   "Jairus",
+   "Lazarus"
+  ],
+  "answer": "Lazarus",
+  "reference_label": "John 11:43-44",
+  "ref_kjv": "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth. And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus saith unto them, Loose him, and let him go.",
+  "explanation": "Jesus cried with a loud voice, \"Lazarus, come forth.\"",
+  "hint": "Look in John.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-lydia",
+  "clues": [
+   "I was a seller of purple.",
+   "I came from the city of Thyatira.",
+   "I heard Paul speak by a riverside at Philippi.",
+   "My household was baptized."
+  ],
+  "options": [
+   "Dorcas",
+   "Priscilla",
+   "Lydia",
+   "Phebe"
+  ],
+  "answer": "Lydia",
+  "reference_label": "Acts 16:14-15",
+  "ref_kjv": "And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us: whose heart the Lord opened, that she attended unto the things which were spoken of Paul. And when she was baptized, and her household, she besought us, saying, If ye have judged me to be faithful to the Lord, come into my house, and abide there. And she constrained us.",
+  "explanation": "Lydia, a seller of purple, of the city of Thyatira, heard Paul.",
+  "hint": "Look in Acts.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-martha",
+  "clues": [
+   "I lived in Bethany with my sister and brother.",
+   "I was cumbered about much serving.",
+   "Jesus said my sister had chosen the good part.",
+   "I welcomed Jesus into my house."
+  ],
+  "options": [
+   "Martha",
+   "Mary Magdalene",
+   "Salome",
+   "Joanna"
+  ],
+  "answer": "Martha",
+  "reference_label": "Luke 10:38-41",
+  "ref_kjv": "Now it came to pass, as they went, that he entered into a certain village: and a certain woman named Martha received him into her house. And she had a sister called Mary, which also sat at Jesus\u2019 feet, and heard his word. But Martha was cumbered about much serving, and came to him, and said, Lord, dost thou not care that my sister hath left me to serve alone? bid her therefore that she help me. And Jesus answered and said unto her, Martha, Martha, thou art careful and troubled about many things:",
+  "explanation": "\"Martha was cumbered about much serving.\"",
+  "hint": "Look in Luke.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-mary",
+  "clues": [
+   "I lived in Nazareth of Galilee.",
+   "The angel Gabriel was sent to me.",
+   "I was espoused to Joseph.",
+   "I gave birth to Jesus in Bethlehem."
+  ],
+  "options": [
+   "Elisabeth",
+   "Martha",
+   "Anna",
+   "Mary"
+  ],
+  "answer": "Mary",
+  "reference_label": "Luke 1:26-27",
+  "ref_kjv": "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee, named Nazareth, To a virgin espoused to a man whose name was Joseph, of the house of David; and the virgin\u2019s name was Mary.",
+  "explanation": "Gabriel was sent to a virgin espoused to Joseph, and her name was Mary.",
+  "hint": "Look in Luke.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-mary_magdalene",
+  "clues": [
+   "Seven devils had gone out of me.",
+   "I stood by the cross.",
+   "I came to the tomb while it was yet dark.",
+   "At first I supposed the risen Jesus was the gardener."
+  ],
+  "options": [
+   "Martha",
+   "Mary the mother of James",
+   "Mary Magdalene",
+   "Salome"
+  ],
+  "answer": "Mary Magdalene",
+  "reference_label": "John 20:15-16",
+  "ref_kjv": "Jesus saith unto her, Woman, why weepest thou? whom seekest thou? She, supposing him to be the gardener, saith unto him, Sir, if thou have borne him hence, tell me where thou hast laid him, and I will take him away. Jesus saith unto her, Mary. She turned herself, and saith unto him, Rabboni; which is to say, Master.",
+  "explanation": "She, supposing him to be the gardener... Jesus saith unto her, Mary.",
+  "hint": "Look in John.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-matthew",
+  "clues": [
+   "I was a publican.",
+   "I sat at the receipt of custom.",
+   "Jesus said to me: Follow me.",
+   "Jesus ate with publicans and sinners at my table."
+  ],
+  "options": [
+   "Simon",
+   "Judas",
+   "Matthew",
+   "Zacchaeus"
+  ],
+  "answer": "Matthew",
+  "reference_label": "Matthew 9:9",
+  "ref_kjv": "And as Jesus passed forth from thence, he saw a man, named Matthew, sitting at the receipt of custom: and he saith unto him, Follow me. And he arose, and followed him.",
+  "explanation": "Jesus saw a man named Matthew sitting at the receipt of custom.",
+  "hint": "Look in Matthew.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-melchizedek",
+  "clues": [
+   "I was king of Salem.",
+   "I was priest of the most high God.",
+   "I brought forth bread and wine to Abram.",
+   "Abram gave me tithes of all."
+  ],
+  "options": [
+   "Abimelech",
+   "Melchizedek",
+   "Aaron",
+   "Jethro"
+  ],
+  "answer": "Melchizedek",
+  "reference_label": "Genesis 14:18-20",
+  "ref_kjv": "And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God. And he blessed him, and said, Blessed be Abram of the most high God, possessor of heaven and earth: And blessed be the most high God, which hath delivered thine enemies into thy hand. And he gave him tithes of all.",
+  "explanation": "Melchizedek king of Salem brought forth bread and wine.",
+  "hint": "Look in Genesis.",
+  "difficulty": 4
+ },
+ {
+  "id": "who-methuselah",
+  "clues": [
+   "My father was Enoch.",
+   "My son was Lamech.",
+   "I was Noah's grandfather.",
+   "I lived nine hundred sixty and nine years."
+  ],
+  "options": [
+   "Methuselah",
+   "Mahalaleel",
+   "Jared",
+   "Enoch"
+  ],
+  "answer": "Methuselah",
+  "reference_label": "Genesis 5:27",
+  "ref_kjv": "And all the days of Methuselah were nine hundred sixty and nine years: and he died.",
+  "explanation": "\"All the days of Methuselah were nine hundred sixty and nine years.\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 4
+ },
+ {
+  "id": "who-miriam",
+  "clues": [
+   "I watched over my baby brother at the river.",
+   "I am called a prophetess.",
+   "I led the women with a timbrel after the Red Sea crossing.",
+   "I was briefly struck with leprosy."
+  ],
+  "options": [
+   "Jochebed",
+   "Zipporah",
+   "Deborah",
+   "Miriam"
+  ],
+  "answer": "Miriam",
+  "reference_label": "Exodus 15:20",
+  "ref_kjv": "And Miriam the prophetess, the sister of Aaron, took a timbrel in her hand; and all the women went out after her with timbrels and with dances.",
+  "explanation": "\"Miriam the prophetess, the sister of Aaron, took a timbrel.\"",
+  "hint": "Look in Exodus.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-moses",
+  "clues": [
+   "As a baby I was hidden in an ark of bulrushes.",
+   "I was raised in Pharaoh's household.",
+   "I saw a bush burn without being consumed.",
+   "I led Israel out of Egypt."
+  ],
+  "options": [
+   "Moses",
+   "Aaron",
+   "Joseph",
+   "Joshua"
+  ],
+  "answer": "Moses",
+  "reference_label": "Exodus 3:2-4",
+  "ref_kjv": "And the angel of the LORD appeared unto him in a flame of fire out of the midst of a bush: and he looked, and, behold, the bush burned with fire, and the bush was not consumed. And Moses said, I will now turn aside, and see this great sight, why the bush is not burnt. And when the LORD saw that he turned aside to see, God called unto him out of the midst of the bush, and said, Moses, Moses. And he said, Here am I.",
+  "explanation": "God called to Moses out of the midst of the burning bush.",
+  "hint": "Look in Exodus.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-naaman",
+  "clues": [
+   "I was captain of the host of the king of Syria.",
+   "I was a leper.",
+   "A captive little maid from Israel told of a prophet.",
+   "I dipped myself seven times in the Jordan."
+  ],
+  "options": [
+   "Ben-hadad",
+   "Hazael",
+   "Naaman",
+   "Gehazi"
+  ],
+  "answer": "Naaman",
+  "reference_label": "2 Kings 5:14",
+  "ref_kjv": "Then went he down, and dipped himself seven times in Jordan, according to the saying of the man of God: and his flesh came again like unto the flesh of a little child, and he was clean.",
+  "explanation": "He dipped himself seven times in Jordan and his flesh came again.",
+  "hint": "Look in 2 Kings.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-nehemiah",
+  "clues": [
+   "I was cupbearer to King Artaxerxes.",
+   "I wept over Jerusalem's broken walls.",
+   "I led the rebuilding of the city wall.",
+   "The wall was finished in fifty-two days."
+  ],
+  "options": [
+   "Nehemiah",
+   "Ezra",
+   "Zerubbabel",
+   "Haggai"
+  ],
+  "answer": "Nehemiah",
+  "reference_label": "Nehemiah 6:15",
+  "ref_kjv": "So the wall was finished in the twenty and fifth day of the month Elul, in fifty and two days.",
+  "explanation": "\"So the wall was finished... in fifty and two days.\"",
+  "hint": "Look in Nehemiah.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-nicodemus",
+  "clues": [
+   "I was a Pharisee and a ruler of the Jews.",
+   "I came to Jesus by night.",
+   "Jesus told me I must be born again.",
+   "I brought myrrh and aloes for Jesus' burial."
+  ],
+  "options": [
+   "Joseph of Arimathaea",
+   "Gamaliel",
+   "Zacchaeus",
+   "Nicodemus"
+  ],
+  "answer": "Nicodemus",
+  "reference_label": "John 3:1-3",
+  "ref_kjv": "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews: The same came to Jesus by night, and said unto him, Rabbi, we know that thou art a teacher come from God: for no man can do these miracles that thou doest, except God be with him. Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.",
+  "explanation": "Jesus told Nicodemus, \"Except a man be born again, he cannot see the kingdom of God.\"",
+  "hint": "Look in John.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-noah",
+  "clues": [
+   "I lived before a great flood.",
+   "God told me to build with gopher wood.",
+   "My sons were Shem, Ham and Japheth.",
+   "I built the ark."
+  ],
+  "options": [
+   "Abraham",
+   "Enoch",
+   "Lot",
+   "Noah"
+  ],
+  "answer": "Noah",
+  "reference_label": "Genesis 6:13-14",
+  "ref_kjv": "And God said unto Noah, The end of all flesh is come before me; for the earth is filled with violence through them; and, behold, I will destroy them with the earth. Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch.",
+  "explanation": "God told Noah, \"Make thee an ark of gopher wood.\"",
+  "hint": "Look in Genesis.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-paul",
+  "clues": [
+   "I was born in Tarsus.",
+   "I once persecuted the church.",
+   "A light from heaven blinded me near Damascus.",
+   "I wrote many letters to the churches."
+  ],
+  "options": [
+   "Barnabas",
+   "Stephen",
+   "Silas",
+   "Paul"
+  ],
+  "answer": "Paul",
+  "reference_label": "Acts 9:3-4",
+  "ref_kjv": "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven: And he fell to the earth, and heard a voice saying unto him, Saul, Saul, why persecutest thou me?",
+  "explanation": "Near Damascus a voice said, \"Saul, Saul, why persecutest thou me?\" He is later called Paul.",
+  "hint": "Look in Acts.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-peter",
+  "clues": [
+   "I was a fisherman, the brother of Andrew.",
+   "Jesus called me to become a fisher of men.",
+   "I walked on the water toward Jesus.",
+   "I denied Jesus three times before the cock crew."
+  ],
+  "options": [
+   "Peter",
+   "John",
+   "Andrew",
+   "Thomas"
+  ],
+  "answer": "Peter",
+  "reference_label": "Matthew 26:75",
+  "ref_kjv": "And Peter remembered the word of Jesus, which said unto him, Before the cock crow, thou shalt deny me thrice. And he went out, and wept bitterly.",
+  "explanation": "Peter remembered Jesus' words, \"Before the cock crow, thou shalt deny me thrice.\"",
+  "hint": "Look in Matthew.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-rahab",
+  "clues": [
+   "My house was upon the town wall of Jericho.",
+   "I hid two Israelite spies.",
+   "I let them down by a cord through a window.",
+   "A line of scarlet thread marked my home."
+  ],
+  "options": [
+   "Rahab",
+   "Jael",
+   "Deborah",
+   "Ruth"
+  ],
+  "answer": "Rahab",
+  "reference_label": "Joshua 2:1-18",
+  "ref_kjv": "And Joshua the son of Nun sent out of Shittim two men to spy secretly, saying, Go view the land, even Jericho. And they went, and came into an harlot\u2019s house, named Rahab, and lodged there. And it was told the king of Jericho, saying, Behold, there came men in hither to night of the children of Israel to search out the country. And the king of Jericho sent unto Rahab, saying, Bring forth the men that are come to thee, which are entered into thine house: for they be come to search out all the country. And the woman took the two men, and hid them, and said thus, There came men unto me, but I wist not whence they were: And it came to pass about the time of shutting of the gate, when it was \u2026",
+  "explanation": "The spies told Rahab to bind the scarlet thread in the window.",
+  "hint": "Look in Joshua.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-ruth",
+  "clues": [
+   "I was a woman of Moab.",
+   "I told my mother-in-law: whither thou goest, I will go.",
+   "I gleaned in the fields of Boaz.",
+   "I became an ancestor of King David."
+  ],
+  "options": [
+   "Naomi",
+   "Ruth",
+   "Rahab",
+   "Orpah"
+  ],
+  "answer": "Ruth",
+  "reference_label": "Ruth 1:16",
+  "ref_kjv": "And Ruth said, Intreat me not to leave thee, or to return from following after thee: for whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God:",
+  "explanation": "Ruth said to Naomi, \"Whither thou goest, I will go.\"",
+  "hint": "Look in Ruth.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-samson",
+  "clues": [
+   "I was a Nazarite from birth.",
+   "I tore a young lion with my bare hands.",
+   "Delilah learned the secret of my strength.",
+   "I pulled down the house where the Philistines gathered."
+  ],
+  "options": [
+   "Samson",
+   "Gideon",
+   "Saul",
+   "Jephthah"
+  ],
+  "answer": "Samson",
+  "reference_label": "Judges 16:30",
+  "ref_kjv": "And Samson said, Let me die with the Philistines. And he bowed himself with all his might; and the house fell upon the lords, and upon all the people that were therein. So the dead which he slew at his death were more than they which he slew in his life.",
+  "explanation": "Samson bowed himself with all his might and the house fell.",
+  "hint": "Look in Judges.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-samuel",
+  "clues": [
+   "My mother Hannah prayed for me at Shiloh.",
+   "As a boy I served Eli the priest.",
+   "I heard the LORD call my name in the night.",
+   "I anointed both Saul and David."
+  ],
+  "options": [
+   "Nathan",
+   "Eli",
+   "Gad",
+   "Samuel"
+  ],
+  "answer": "Samuel",
+  "reference_label": "1 Samuel 3:10",
+  "ref_kjv": "And the LORD came, and stood, and called as at other times, Samuel, Samuel. Then Samuel answered, Speak; for thy servant heareth.",
+  "explanation": "The LORD came and called, \"Samuel, Samuel.\"",
+  "hint": "Look in 1 Samuel.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-saul",
+  "clues": [
+   "I was of the tribe of Benjamin.",
+   "From my shoulders upward I was higher than any of the people.",
+   "Samuel anointed me as Israel's first king.",
+   "I consulted a woman at Endor."
+  ],
+  "options": [
+   "Absalom",
+   "Jonathan",
+   "David",
+   "Saul"
+  ],
+  "answer": "Saul",
+  "reference_label": "1 Samuel 9:2",
+  "ref_kjv": "And he had a son, whose name was Saul, a choice young man, and a goodly: and there was not among the children of Israel a goodlier person than he: from his shoulders and upward he was higher than any of the people.",
+  "explanation": "Saul was \"higher than any of the people\" from his shoulders upward.",
+  "hint": "Look in 1 Samuel.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-solomon",
+  "clues": [
+   "My mother was Bathsheba.",
+   "I asked God for an understanding heart.",
+   "I built the temple in Jerusalem.",
+   "I judged between two women who both claimed one baby."
+  ],
+  "options": [
+   "David",
+   "Rehoboam",
+   "Solomon",
+   "Hezekiah"
+  ],
+  "answer": "Solomon",
+  "reference_label": "1 Kings 3:10-12",
+  "ref_kjv": "And the speech pleased the Lord, that Solomon had asked this thing. And God said unto him, Because thou hast asked this thing, and hast not asked for thyself long life; neither hast asked riches for thyself, nor hast asked the life of thine enemies; but hast asked for thyself understanding to discern judgment; Behold, I have done according to thy words: lo, I have given thee a wise and an understanding heart; so that there was none like thee before thee, neither after thee shall any arise like unto thee.",
+  "explanation": "God gave Solomon \"a wise and an understanding heart.\"",
+  "hint": "Look in 1 Kings.",
+  "difficulty": 1
+ },
+ {
+  "id": "who-stephen",
+  "clues": [
+   "I was one of seven chosen to serve the church.",
+   "I was full of faith and power.",
+   "As I spoke I saw the heavens opened.",
+   "I was stoned while a young man named Saul watched."
+  ],
+  "options": [
+   "Barnabas",
+   "Stephen",
+   "James",
+   "Philip"
+  ],
+  "answer": "Stephen",
+  "reference_label": "Acts 7:58-59",
+  "ref_kjv": "And cast him out of the city, and stoned him: and the witnesses laid down their clothes at a young man\u2019s feet, whose name was Saul. And they stoned Stephen, calling upon God, and saying, Lord Jesus, receive my spirit.",
+  "explanation": "The witnesses laid their clothes at Saul's feet, and they stoned Stephen.",
+  "hint": "Look in Acts.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-thomas",
+  "clues": [
+   "I was one of the twelve, called Didymus.",
+   "I was absent when Jesus first appeared to the disciples.",
+   "I wanted to see the print of the nails.",
+   "I said: My Lord and my God."
+  ],
+  "options": [
+   "Thomas",
+   "Philip",
+   "Bartholomew",
+   "Matthew"
+  ],
+  "answer": "Thomas",
+  "reference_label": "John 20:28",
+  "ref_kjv": "And Thomas answered and said unto him, My Lord and my God.",
+  "explanation": "Thomas answered and said unto him, \"My Lord and my God.\"",
+  "hint": "Look in John.",
+  "difficulty": 2
+ },
+ {
+  "id": "who-timothy",
+  "clues": [
+   "My grandmother Lois and mother Eunice shared unfeigned faith.",
+   "I was Paul's young companion.",
+   "Paul called me his dearly beloved son.",
+   "Two New Testament letters are addressed to me."
+  ],
+  "options": [
+   "Silas",
+   "Titus",
+   "Timothy",
+   "Luke"
+  ],
+  "answer": "Timothy",
+  "reference_label": "2 Timothy 1:2-5",
+  "ref_kjv": "To Timothy, my dearly beloved son: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord. I thank God, whom I serve from my forefathers with pure conscience, that without ceasing I have remembrance of thee in my prayers night and day; Greatly desiring to see thee, being mindful of thy tears, that I may be filled with joy; When I call to remembrance the unfeigned faith that is in thee, which dwelt first in thy grandmother Lois, and thy mother Eunice; and I am persuaded that in thee also.",
+  "explanation": "Paul remembered the faith in Lois and Eunice, and in Timothy.",
+  "hint": "Look in 2 Timothy.",
+  "difficulty": 3
+ },
+ {
+  "id": "who-zacchaeus",
+  "clues": [
+   "I was chief among the publicans.",
+   "I was rich.",
+   "I was little of stature.",
+   "I climbed a sycomore tree to see Jesus."
+  ],
+  "options": [
+   "Zacchaeus",
+   "Matthew",
+   "Bartimaeus",
+   "Nicodemus"
+  ],
+  "answer": "Zacchaeus",
+  "reference_label": "Luke 19:2-4",
+  "ref_kjv": "And, behold, there was a man named Zacch\u00e6us, which was the chief among the publicans, and he was rich. And he sought to see Jesus who he was; and could not for the press, because he was little of stature. And he ran before, and climbed up into a sycomore tree to see him: for he was to pass that way.",
+  "explanation": "Zacchaeus climbed up into a sycomore tree to see Jesus.",
+  "hint": "Look in Luke.",
+  "difficulty": 1
+ }
+]
