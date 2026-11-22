@@ -123,6 +123,8 @@ def section_hint(book):
     if n <= 65: return "Look in the New Testament letters."
     return "Look in Revelation."
 
+WHOAMI_SECTION_HINT = {"achan"}
+
 questions = []
 # --- Picture quiz -----------------------------------------------------------
 counts = {}
@@ -145,6 +147,8 @@ for (name, diff, clues, opts, ref, kws, expl) in WHOAMI:
     book = parse_ref(ref)[0]
     # A hint naming a book that shares a name with an option would reveal (or misdirect to) a person.
     hint = section_hint(book) if any(book == x or book.endswith(" " + x) for x in opts) else f"Look in {book}."
+    # The only option from that book: the book name would give the answer away.
+    if name in WHOAMI_SECTION_HINT: hint = section_hint(book)
     questions.append(base(qid, "whoami", ref, diff, "Who am I?", o, c, expl, hint, None,
                           tags=[name, parse_ref(ref)[0]], clues=clues))
 

@@ -238,3 +238,8 @@ Notes:
   - 3 near-duplicates
   - 2 picture answer areas that miss part of the object
   The live DB was updated in one transaction and verified: 1286 approved and 37 pending, with the pending ids matching the fail list exactly. The update was done by direct SQL, so the Quick review audit log has no entry for it, and the Quick review page was not opened. Report: tests/review/pending4/REPORT.md.
+- Fixes for the 37 (22 Nov 2026, at the owner's request): the assistant rewrote all 37 with the same ids, and they passed the automatic KJV checks, a fresh Claude Opus 5.5 review (37/37) and the picture check. The details are in tests/review/fixes5/REPORT.md.
+  - The case "The Spies on the Roof" is now "The Spies in Jericho".
+  - The Moses and Noah answer areas were redrawn. This also changed the box layout for the already-approved questions on those pictures, which stay approved.
+  - The live DB was updated (44 rows, matching the build). The 37 are still pending in Quick review and need approval.
+  - No deploy was needed.

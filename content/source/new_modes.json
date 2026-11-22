@@ -142,7 +142,7 @@
    "changeth not"
   ],
   "explanation": "Psalms 15:4 describes the one who may dwell with the LORD as \"He that sweareth to his own hurt, and changeth not.\" Such a person keeps a commitment even when it becomes costly.",
-  "hint": "The psalm praises someone whose promise holds even when keeping it hurts.",
+  "hint": "Think about what it means to swear \"to his own hurt, and change not.\"",
   "difficulty": 4
  },
  {
@@ -511,22 +511,22 @@
  {
   "id": "wis-w5-2",
   "mode": "wisdom",
-  "prompt": "You and your spouse had a heated disagreement about household chores this evening. It is getting late, and you are tempted to go to bed still fuming and deal with it 'some other time.' What does Ephesians 4:26 counsel here?",
+  "prompt": "You share a new plan with two friends. One praises everything you say. The other kindly points out a serious flaw, and it stings. Which response best reflects the wisdom of Proverbs 27:6?",
   "options": [
-   "Let the anger simmer for a few days so your spouse learns a lesson",
-   "Deal with the anger without sinning and seek to settle it before the day ends",
-   "Say nothing, but quietly keep holding on to your resentment",
-   "Vent to friends over the next few days while staying angry at your spouse"
+   "Stop talking to the friend who criticised you",
+   "Value the honest friend's hard words above easy flattery",
+   "Trust whichever friend makes you feel better",
+   "Ask everyone else until someone agrees with you"
   ],
   "correct": 1,
-  "reference": "Ephesians 4:26",
+  "reference": "Proverbs 27:6",
   "keywords": [
-   "sin not",
-   "sun go down upon your wrath"
+   "wounds of a friend",
+   "kisses of an enemy"
   ],
-  "explanation": "Ephesians 4:26 says, 'Be ye angry, and sin not: let not the sun go down upon your wrath.' Anger is not to lead to sin, nor to be carried past the end of the day. It should be dealt with promptly rather than nursed.",
-  "hint": "Think about what the verse says regarding the end of the day.",
-  "difficulty": 1
+  "explanation": "Proverbs 27:6 says, \"Faithful are the wounds of a friend; but the kisses of an enemy are deceitful.\" Honest correction from a true friend can be trusted more than pleasant flattery.",
+  "hint": "Proverbs 27:6 compares two kinds of treatment.",
+  "difficulty": 2
  },
  {
   "id": "wis-w5-3",
@@ -840,19 +840,19 @@
   "mode": "wisdom",
   "prompt": "Your manager hints that layoffs might come sometime next year. You start spending every evening imagining worst-case scenarios months ahead, and it is draining your joy today. What does Jesus counsel in Matthew 6:34?",
   "options": [
-   "Spend extra time each day rehearsing every possible future problem so nothing surprises you",
-   "Assume the worst will certainly happen and prepare to be miserable",
-   "Take no anxious thought for tomorrow; each day has enough trouble of its own",
-   "Worry now so that tomorrow will feel lighter"
+   "Keep reviewing every possible layoff scenario each evening so you will be ready for anything",
+   "Ask God to tell you exactly what will happen next year before you let yourself rest",
+   "Push the worry down and tell yourself your job is certainly safe",
+   "Take no anxious thought for tomorrow, and give today's strength to today"
   ],
-  "correct": 2,
+  "correct": 3,
   "reference": "Matthew 6:34",
   "keywords": [
    "no thought for the morrow",
    "Sufficient unto the day"
   ],
   "explanation": "Jesus says, 'Take therefore no thought for the morrow... Sufficient unto the day is the evil thereof' (Matthew 6:34), teaching His hearers not to borrow tomorrow's anxieties.",
-  "hint": "Jesus says each day already carries enough of its own.",
+  "hint": "Read Matthew 6:34: what does Jesus say about the morrow?",
   "difficulty": 1
  },
  {
@@ -921,23 +921,22 @@
  {
   "id": "wis-w7-6",
   "mode": "wisdom",
-  "prompt": "You confidently announce to friends that next year you will move cities, start a business, and be turning a profit within twelve months. One friend gently asks how you are holding those plans before God. Which response best reflects the teaching of James 4:13-15?",
+  "prompt": "You have moved to a new city. One group of coworkers invites you out every weekend for reckless nights that leave you in trouble, while another group is steady and wise but quieter. Which response best reflects the wisdom of Proverbs 13:20?",
   "options": [
-   "Make plans humbly, recognizing life is like a vapour and saying, 'If the Lord will, we shall live, and do this'",
-   "Never make any plans at all, since planning is forbidden",
-   "Boast about the plans, since confidence guarantees success",
-   "Insist that your future is fully secure because you have worked out every detail"
+   "Choose your closest companions from those who walk wisely",
+   "Stay with the reckless group, since friends don't change who you are",
+   "Avoid all friendships so no one can influence you",
+   "Spend time with whichever group is more fun that week"
   ],
   "correct": 0,
-  "reference": "James 4:13-15",
+  "reference": "Proverbs 13:20",
   "keywords": [
-   "If the Lord will",
-   "vapour",
-   "on the morrow"
+   "walketh with wise men shall be wise",
+   "companion of fools"
   ],
-  "explanation": "James notes 'ye know not what shall be on the morrow' and that life 'is even a vapour,' so 'ye ought to say, If the Lord will, we shall live, and do this, or that' (James 4:13-15).",
-  "hint": "James does not condemn planning itself, but a certain attitude toward it.",
-  "difficulty": 3
+  "explanation": "Proverbs 13:20 says, \"He that walketh with wise men shall be wise: but a companion of fools shall be destroyed.\" The company we keep shapes us.",
+  "hint": "Proverbs 13:20 contrasts two kinds of companions and where each leads.",
+  "difficulty": 2
  },
  {
   "id": "wis-w7-7",
@@ -997,7 +996,7 @@
    "never leave thee"
   ],
   "explanation": "Hebrews 13:5 urges, 'be content with such things as ye have,' grounding contentment in God's promise, 'I will never leave thee, nor forsake thee.'",
-  "hint": "The verse pairs a call to contentment with a promise of God's presence.",
+  "hint": "Hebrews 13:5 begins with a word about covetousness.",
   "difficulty": 1
  },
  {
@@ -1137,8 +1136,8 @@
    "Love your enemies",
    "pray for them"
   ],
-  "explanation": "Jesus commands, \"Love your enemies, bless them that curse you, do good to them that hate you, and pray for them\" (Matthew 5:44). Retaliation, exposure or cold withdrawal run against this command.",
-  "hint": "Jesus lists four active things to do toward those who mistreat you.",
+  "explanation": "Jesus commands, \"Love your enemies, bless them that curse you, do good to them that hate you, and pray for them which despitefully use you, and persecute you\" (Matthew 5:44). Retaliation, exposure or cold withdrawal run against this command.",
+  "hint": "Matthew 5:44 gives Jesus' command about enemies.",
   "difficulty": 1
  },
  {
@@ -1159,7 +1158,7 @@
    "vile raiment"
   ],
   "explanation": "James warns against holding the faith \"with respect of persons,\" rebuking those who honor the man with the gold ring while telling the poor man in vile raiment, \"Stand thou there\" (James 2:1-4).",
-  "hint": "James describes this exact seating situation and calls favoritism being partial.",
+  "hint": "James 2:1-4 describes a man with a gold ring and a poor man in vile raiment.",
   "difficulty": 1
  },
  {
@@ -1279,7 +1278,7 @@
    "thine enemy falleth"
   ],
   "explanation": "Proverbs 24:17-18 warns, \"Rejoice not when thine enemy falleth, and let not thine heart be glad when he stumbleth,\" because it displeases the LORD. This covers inward gladness, not just outward celebration.",
-  "hint": "The verse addresses not only your words but also your heart.",
+  "hint": "Proverbs 24:18 explains why this matters to the LORD.",
   "difficulty": 4
  },
  {
@@ -1750,22 +1749,21 @@
   "id": "geo-gx-3",
   "mode": "geography",
   "kind": "locate",
-  "place": "Gaza",
+  "place": "Dothan",
   "distractors": [
-   "Dan",
-   "Beth-shan",
-   "Jericho 1"
+   "Hebron",
+   "Beersheba 1",
+   "Joppa"
   ],
   "view": "land",
-  "prompt": "Samson carried off the doors of the city gate of Gaza. Which marker shows Gaza?",
-  "reference": "Judges 16:1-3",
+  "prompt": "Joseph went looking for his brothers and found them feeding the flock at Dothan. Which marker shows Dothan?",
+  "reference": "Genesis 37:17",
   "keywords": [
-   "Gaza",
-   "doors of the gate"
+   "Dothan"
   ],
-  "explanation": "Samson went to Gaza, and at midnight he took the doors of the gate of the city and carried them away (Judges 16:1-3).",
-  "hint": "Look for a Philistine city near the southern coast.",
-  "difficulty": 1
+  "explanation": "A man told Joseph his brothers had said, Let us go to Dothan. Joseph went after his brethren and found them in Dothan (Genesis 37:17).",
+  "hint": "Look in the hill country north of Shechem.",
+  "difficulty": 2
  },
  {
   "id": "geo-gx-4",
@@ -2687,7 +2685,7 @@
   "case": "m6",
   "case_title": "The Secret of Samson's Strength",
   "stage": 3,
-  "clue": "Evidence bag #1: Seven fresh, undried withs recovered from Delilah's chamber, where men had been lying in wait. Samson broke them as a thread of tow breaks when it touches the fire.",
+  "clue": "Evidence report: men had been lying in wait in Delilah's chamber. When she bound Samson and cried that the Philistines were upon him, he broke the bonds as a thread of tow breaks when it touches the fire.",
   "prompt": "When Delilah first asked, what did Samson say would make him weak?",
   "options": [
    "Being bound with chains of iron",
@@ -2702,7 +2700,7 @@
    "never dried"
   ],
   "explanation": "Samson told Delilah, \"If they bind me with seven green withs that were never dried, then shall I be weak\" (Judges 16:7), yet he broke them when she bound him (Judges 16:9).",
-  "hint": "Look for something freshly cut that had not yet dried out.",
+  "hint": "Judges 16:7 gives his first answer.",
   "difficulty": 2,
   "stages": 5
  },
@@ -2728,7 +2726,7 @@
    "told her all his heart"
   ],
   "explanation": "In Judges 16:17 Samson said, \"There hath not come a razor upon mine head; for I have been a Nazarite unto God from my mother's womb: if I be shaven, then my strength will go from me.\"",
-  "hint": "The secret concerns his head and a lifelong vow to God.",
+  "hint": "Judges 16:17 records what he finally told her.",
   "difficulty": 2,
   "stages": 5
  },
@@ -2763,7 +2761,7 @@
   "case": "m7",
   "case_title": "Two Mothers and One Child",
   "stage": 1,
-  "clue": "Court record: two women arrived together and stood before the king. The first testified that they shared a home and that she had given birth there.",
+  "clue": "Court record: two women came to the king and stood before him, and the first woman began her testimony.",
   "prompt": "According to the first woman, what was the living arrangement of the two women?",
   "options": [
    "They dwelt together in one house",
@@ -2778,7 +2776,7 @@
    "one house"
   ],
   "explanation": "The first woman said, \"I and this woman dwell in one house; and I was delivered of a child with her in the house\" (1 Kings 3:17).",
-  "hint": "Listen to how she describes where they both live.",
+  "hint": "1 Kings 3:17 gives her opening words.",
   "difficulty": 1,
   "stages": 5
  },
@@ -2886,9 +2884,9 @@
   "id": "mys-m4-1",
   "mode": "mystery",
   "case": "m4",
-  "case_title": "The Spies on the Roof",
+  "case_title": "The Spies in Jericho",
   "stage": 1,
-  "clue": "Camp record: two men departed from Shittim under orders to view the land, even Jericho. They were later traced to the house of a woman named Rahab.",
+  "clue": "Camp record: two men departed from Shittim under orders to view the land, even Jericho. It was later told the king that they had come in to the house of a woman named Rahab.",
   "prompt": "According to the record, who sent the two men out to spy?",
   "options": [
    "Joshua the son of Nun",
@@ -2903,7 +2901,7 @@
    "two men to spy"
   ],
   "explanation": "Joshua 2:1 states that Joshua the son of Nun sent out of Shittim two men to spy secretly, saying, Go view the land, even Jericho.",
-  "hint": "Look for the leader named at the very start of the chapter, identified by his father's name.",
+  "hint": "The answer is in the first verse of Joshua 2.",
   "difficulty": 1,
   "stages": 5
  },
@@ -2911,7 +2909,7 @@
   "id": "mys-m4-2",
   "mode": "mystery",
   "case": "m4",
-  "case_title": "The Spies on the Roof",
+  "case_title": "The Spies in Jericho",
   "stage": 2,
   "clue": "Statement given to the king's messengers: 'There came men unto me, but I wist not whence they were... pursue after them quickly.' Yet the text says she had already taken the two men and hid them.",
   "prompt": "Where were the two men actually hidden?",
@@ -2928,7 +2926,7 @@
    "stalks of flax"
   ],
   "explanation": "Joshua 2:6 says she had brought them up to the roof of the house and hid them with the stalks of flax which she had laid in order upon the roof.",
-  "hint": "Think high, not low, and of something she had laid out in order there.",
+  "hint": "Joshua 2:6 tells where she had brought them.",
   "difficulty": 1,
   "stages": 5
  },
@@ -2936,9 +2934,9 @@
   "id": "mys-m4-3",
   "mode": "mystery",
   "case": "m4",
-  "case_title": "The Spies on the Roof",
+  "case_title": "The Spies in Jericho",
   "stage": 3,
-  "clue": "Gatekeeper's report: the king's men went out in pursuit of the spies, and as soon as the pursuers had gone out, the city gate was shut behind them.",
+  "clue": "City record: the king's men went out in pursuit of the spies, and as soon as the pursuers had gone out, the city gate was shut behind them.",
   "prompt": "Which way did the pursuers go in search of the men?",
   "options": [
    "The way to Jordan unto the fords",
@@ -2953,7 +2951,7 @@
    "fords"
   ],
   "explanation": "Joshua 2:7 records that the men pursued after them the way to Jordan unto the fords, and the gate was shut once they had gone out.",
-  "hint": "The pursuers headed toward a river crossing.",
+  "hint": "Joshua 2:7 names the way they went.",
   "difficulty": 1,
   "stages": 5
  },
@@ -2961,7 +2959,7 @@
   "id": "mys-m4-4",
   "mode": "mystery",
   "case": "m4",
-  "case_title": "The Spies on the Roof",
+  "case_title": "The Spies in Jericho",
   "stage": 4,
   "clue": "Overheard on the roof before the men lay down: the woman spoke of what Jericho had heard about the Red sea and about the kings Sihon and Og.",
   "prompt": "What did Rahab tell the spies she knew?",
@@ -2986,7 +2984,7 @@
   "id": "mys-m4-5",
   "mode": "mystery",
   "case": "m4",
-  "case_title": "The Spies on the Roof",
+  "case_title": "The Spies in Jericho",
   "stage": 5,
   "clue": "Final evidence: her house was upon the town wall. The spies told her to gather her household and to bind a token in the very window they had used; she answered, 'According unto your words, so be it.'",
   "prompt": "What really happened: how did the spies leave Jericho, and what marked Rahab's house?",
@@ -3013,7 +3011,7 @@
   "case": "m3",
   "case_title": "The Missing Household Gods",
   "stage": 1,
-  "clue": "Shepherd's log: the master of the house was away from his tents tending to the flock when the images vanished, and Jacob left without telling him.",
+  "clue": "Household log: the master of the house was away when the images vanished, and Jacob left without telling him.",
   "prompt": "According to the text, what was Laban doing when the images were taken?",
   "options": [
    "He had gone to shear his sheep",
@@ -3028,7 +3026,7 @@
    "images"
   ],
   "explanation": "Genesis 31:19 says Laban went to shear his sheep, and while he was away the images that were his were stolen. Jacob then fled over the river toward mount Gilead (Genesis 31:21).",
-  "hint": "Think about seasonal work with a flock.",
+  "hint": "Genesis 31:19 says where Laban had gone.",
   "difficulty": 3,
   "stages": 5
  },
@@ -3659,7 +3657,7 @@
    "chief priests"
   ],
   "explanation": "Judas went to the chief priests and 'they covenanted with him for thirty pieces of silver,' after which he sought opportunity to betray Jesus (Matthew 26:14-16).",
-  "hint": "The sum was a number of pieces of a precious metal, but not gold.",
+  "hint": "Matthew 26:15 records the amount.",
   "difficulty": 2,
   "stages": 5
  },
@@ -3813,7 +3811,7 @@
    "two soldiers"
   ],
   "explanation": "Acts 12:6 records that Peter was sleeping between two soldiers, bound with two chains, while keepers before the door kept the prison. Meanwhile, Acts 12:5 notes the church prayed without ceasing for him.",
-  "hint": "The record mentions a pair of soldiers and a pair of restraints.",
+  "hint": "Acts 12:6 describes how Peter lay that night and what the keepers were doing.",
   "difficulty": 2,
   "stages": 5
  },
@@ -3848,7 +3846,7 @@
   "case": "m11",
   "case_title": "The Prisoner Who Walked Free",
   "stage": 4,
-  "clue": "Witness statement: A young woman at a house where many were gathered praying heard a familiar voice knocking at the gate, but she ran inside instead of opening it.",
+  "clue": "Witness statement: a young woman at a house where many were gathered praying came to hearken when someone knocked at the gate. She knew the voice, but for gladness she ran inside instead of opening it.",
   "prompt": "Who was this witness, and at whose house did it happen?",
   "options": [
    "Rhoda, at the house of Mary the mother of John Mark",
@@ -3863,7 +3861,7 @@
    "house of Mary"
   ],
   "explanation": "Acts 12:12-13 identifies the house of Mary the mother of John whose surname was Mark, and the damsel named Rhoda. For gladness she did not open the gate but ran in to tell that Peter stood there (Acts 12:14).",
-  "hint": "The house belonged to the mother of a man whose surname was Mark.",
+  "hint": "Acts 12:12-13 names both the house and the damsel who came to the gate.",
   "difficulty": 2,
   "stages": 5
  },
@@ -4110,7 +4108,7 @@
    "deceitfulness of riches"
   ],
   "explanation": "Matthew 13:22 says that for the one who received seed among the thorns, \"the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful.\"",
-  "hint": "Tribulation is linked to the stony places; the thorns stand for two other pressures Jesus names.",
+  "hint": "Matthew 13:22 gives Jesus' explanation of the seed among the thorns.",
   "difficulty": 3
  },
  {
@@ -4399,7 +4397,7 @@
    "bestow my fruits"
   ],
   "explanation": "The rich man thought within himself, 'What shall I do, because I have no room where to bestow my fruits?' (Luke 12:17).",
-  "hint": "Think about storage space for an unusually large harvest.",
+  "hint": "Luke 12:17 records what he thought within himself.",
   "difficulty": 1
  },
  {
@@ -4465,7 +4463,7 @@
    "wilderness"
   ],
   "explanation": "Jesus asks what man would not \"leave the ninety and nine in the wilderness, and go after that which is lost, until he find it\" (Luke 15:4).",
-  "hint": "Think of the open country where the flock was grazing.",
+  "hint": "Luke 15:4 says where he leaves them.",
   "difficulty": 1
  },
  {
@@ -4487,7 +4485,7 @@
    "sweep the house"
   ],
   "explanation": "Jesus describes the woman who would \"light a candle, and sweep the house, and seek diligently till she find it\" (Luke 15:8).",
-  "hint": "She searches her own house carefully, needing light to see.",
+  "hint": "Luke 15:8 lists what she does.",
   "difficulty": 1
  },
  {
@@ -4685,7 +4683,7 @@
    "heavenly Father"
   ],
   "explanation": "Jesus concluded, \"So likewise shall my heavenly Father do also unto you, if ye from your hearts forgive not every one his brother their trespasses\" (Matthew 18:35).",
-  "hint": "Look at the final verse, which begins \"So likewise.\"",
+  "hint": "Matthew 18:35 records the lesson.",
   "difficulty": 2
  },
  {
@@ -4707,7 +4705,7 @@
    "Peter"
   ],
   "explanation": "Jesus told Peter, \"I say not unto thee, Until seven times: but, Until seventy times seven\" (Matthew 18:22), and the parable follows as an illustration (\"Therefore,\" Matthew 18:23).",
-  "hint": "Jesus explicitly rejected Peter's number and gave a far larger one.",
+  "hint": "Matthew 18:22 records Jesus' answer.",
   "difficulty": 2
  },
  {
@@ -4730,7 +4728,7 @@
    "vineyard"
   ],
   "explanation": "The householder \"agreed with the labourers for a penny a day\" and sent them into his vineyard (Matthew 20:1-2).",
-  "hint": "It was a single coin for the day, agreed before any work began.",
+  "hint": "Matthew 20:2 records the agreement.",
   "difficulty": 1
  },
  {
@@ -4862,7 +4860,7 @@
    "sign of thy coming"
   ],
   "explanation": "\"As he sat upon the mount of Olives, the disciples came unto him privately, saying, Tell us, when shall these things be? and what shall be the sign of thy coming, and of the end of the world?\" (Matthew 24:3).",
-  "hint": "Look at the start of the previous chapter, where a small group approached Jesus away from the crowds.",
+  "hint": "Matthew 24:3 records the question.",
   "difficulty": 3
  },
  {

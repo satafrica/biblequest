@@ -6,9 +6,9 @@
 HIDDEN = {
  "noah_ark": [
   ("dove", "Find the dove that Noah sent out.", "Genesis 8:11", ["dove"], "The dove came back to Noah with an olive leaf, so Noah knew the waters were abated (Genesis 8:11).", 2, [[68, 1, 11, 15]]),
-  ("bow", "Find the bow God set in the cloud.", "Genesis 9:13", ["bow in the cloud"], "God set His bow in the cloud as a token of His covenant with the earth (Genesis 9:13).", 1, [[44, 0, 32, 34]]),
-  ("ark", "Find the ark.", "Genesis 8:4", ["ark rested"], "The ark rested upon the mountains of Ararat (Genesis 8:4).", 1, [[4, 0, 40, 46]]),
-  ("beasts", "Find the elephants going forth out of the ark.", "Genesis 8:19", ["went forth out of the ark"], "Every beast, creeping thing and fowl went forth out of the ark after their kinds (Genesis 8:19).", 3, [[43, 33, 18, 23]]),
+  ("bow", "Find the bow God set in the cloud.", "Genesis 9:13", ["bow in the cloud"], "God set His bow in the cloud as a token of His covenant with the earth (Genesis 9:13).", 1, [[40, 0, 16, 7], [54, 4, 12, 12], [64, 10, 12, 25]]),
+  ("ark", "Find the ark.", "Genesis 8:4", ["ark rested"], "The ark rested upon the mountains of Ararat (Genesis 8:4).", 1, [[4, 0, 63, 48]]),
+  ("beasts", "Find a beast going forth out of the ark.", "Genesis 8:19", ["every beast", "went forth out of the ark"], "Every beast, every creeping thing and every fowl went forth out of the ark after their kinds (Genesis 8:19).", 2, [[43, 33, 18, 23], [57, 50, 16, 20], [74, 61, 22, 22], [47, 71, 17, 20], [30, 42, 10, 14], [35, 21, 10, 19]]),
  ],
  "david_goliath": [
   ("sling", "Find David's sling.", "1 Samuel 17:40", ["sling"], "David took five smooth stones and had his sling in his hand (1 Samuel 17:40).", 3, [[35, 51, 8, 22]]),
@@ -25,20 +25,20 @@ HIDDEN = {
  ],
  "moses_red_sea": [
   ("rod", "Find the rod Moses lifted up.", "Exodus 14:16", ["lift thou up thy rod"], "God told Moses, \u201clift thou up thy rod, and stretch out thine hand over the sea\u201d (Exodus 14:16).", 2, [[21, 0, 10, 44]]),
-  ("wall", "Find a wall of water.", "Exodus 14:22", ["wall"], "The waters were a wall unto them on their right hand, and on their left (Exodus 14:22).", 1, [[57, 0, 43, 44]]),
+  ("wall", "Find a wall of water.", "Exodus 14:22", ["wall"], "The waters were a wall unto them on their right hand, and on their left (Exodus 14:22).", 1, [[57, 0, 43, 44], [3, 0, 17, 22], [47, 14, 11, 28]]),
   ("flocks", "Find a sheep from the flocks that left Egypt.", "Exodus 12:38", ["flocks"], "Israel left Egypt with flocks, and herds, even very much cattle (Exodus 12:38).", 2, [[49, 66, 11, 21]]),
   ("moses", "Find Moses stretching out his hand over the sea.", "Exodus 14:21", ["stretched out his hand"], "Moses stretched out his hand over the sea, and the LORD caused the sea to go back (Exodus 14:21).", 1, [[16, 12, 32, 70]]),
  ],
  "elijah_carmel": [
   ("fire", "Find the fire of the LORD falling.", "1 Kings 18:38", ["fire of the LORD fell"], "The fire of the LORD fell and consumed the burnt sacrifice, the wood, the stones and the dust (1 Kings 18:38).", 1, [[42, 0, 24, 44]]),
-  ("altar", "Find the altar of twelve stones.", "1 Kings 18:31", ["twelve stones"], "Elijah took twelve stones, according to the tribes of Israel, and built an altar (1 Kings 18:31-32).", 1, [[34, 47, 38, 32]]),
+  ("altar", "Find the altar of twelve stones.", "1 Kings 18:31-32", ["twelve stones", "built an altar"], "Elijah took twelve stones, according to the tribes of Israel, and built an altar (1 Kings 18:31-32).", 1, [[34, 47, 38, 32]]),
   ("wood", "Find the wood laid on the altar.", "1 Kings 18:33", ["wood"], "Elijah put the wood in order and laid the bullock on the wood (1 Kings 18:33).", 3, [[40, 39, 28, 10]]),
   ("elijah", "Find Elijah praying beside the altar.", "1 Kings 18:36", ["Elijah the prophet came near"], "At the time of the evening sacrifice, Elijah the prophet came near and prayed (1 Kings 18:36).", 2, [[18, 8, 26, 72]]),
  ],
  "daniel_lions": [
   ("daniel", "Find Daniel.", "Daniel 6:16", ["den of lions"], "Daniel was brought and cast into the den of lions (Daniel 6:16).", 1, [[28, 4, 23, 88]]),
   ("lion", "Find the lion with the great mane.", "Daniel 6:22", ["lions' mouths"], "God sent His angel and shut the lions' mouths (Daniel 6:22).", 1, [[54, 42, 46, 38]]),
-  ("mouth", "Find the opening at the top of the den.", "Daniel 6:17", ["mouth of the den"], "A stone was laid upon the mouth of the den and sealed with the king's signet (Daniel 6:17).", 3, [[46, 0, 27, 10]]),
+  ("mouth", "Find the mouth of the den, where the stone was laid.", "Daniel 6:17", ["mouth of the den"], "A stone was brought and laid upon the mouth of the den, and the king sealed it with his own signet (Daniel 6:17).", 3, [[46, 0, 27, 10]]),
  ],
  "esther_king": [
   ("sceptre", "Find the golden sceptre.", "Esther 5:2", ["golden sceptre"], "The king held out to Esther the golden sceptre that was in his hand (Esther 5:2).", 1, [[45, 21, 21, 27]]),
@@ -55,7 +55,7 @@ HIDDEN = {
   ("beast", "Find the Samaritan's own beast.", "Luke 10:34", ["his own beast"], "The Samaritan set the wounded man on his own beast and brought him to an inn (Luke 10:34).", 1, [[0, 3, 31, 47]]),
   ("oil", "Find the jar of oil and wine.", "Luke 10:34", ["oil and wine"], "He bound up his wounds, pouring in oil and wine (Luke 10:34).", 3, [[19, 65, 8, 15]]),
   ("wounds", "Find the wounds being bound up.", "Luke 10:34", ["bound up his wounds"], "The Samaritan went to him, and bound up his wounds (Luke 10:34).", 2, [[49, 61, 12, 20]]),
-  ("passed", "Find the men who passed by on the other side.", "Luke 10:31", ["passed by on the other side"], "A priest saw him and passed by on the other side; a Levite did the same (Luke 10:31-32).", 2, [[77, 15, 19, 32]]),
+  ("passed", "Find the priest and the Levite who passed by on the other side.", "Luke 10:31-32", ["passed by on the other side", "Levite"], "A priest saw him and passed by on the other side; a Levite did the same (Luke 10:31-32).", 2, [[77, 15, 19, 32]]),
  ],
  "calming_storm": [
   ("waves", "Find the waves beating into the ship.", "Mark 4:37", ["waves beat into the ship"], "There arose a great storm of wind, and the waves beat into the ship (Mark 4:37).", 1, [[0, 48, 23, 50]]),
@@ -87,7 +87,7 @@ HIDDEN = {
  "solomon_temple": [
   ("solomon", "Find Solomon spreading forth his hands toward heaven.", "1 Kings 8:22", ["spread forth his hands toward heaven"], "Solomon stood before the altar and spread forth his hands toward heaven (1 Kings 8:22).", 1, [[35, 19, 26, 56]]),
   ("candlestick", "Find a candlestick of gold.", "1 Kings 7:49", ["candlesticks of pure gold"], "Solomon made the candlesticks of pure gold for the house (1 Kings 7:49).", 2, [[26, 19, 10, 17], [33, 44, 5, 8]]),
-  ("pillars", "Find one of the great pillars.", "1 Kings 7:21", ["pillars"], "Solomon set up the pillars in the porch of the temple, Jachin and Boaz (1 Kings 7:21).", 1, [[15, 0, 12, 40], [49, 0, 10, 50], [64, 0, 10, 60]]),
+  ("pillars", "Find one of the great pillars.", "1 Kings 7:21", ["pillars"], "Hiram of Tyre, the worker in brass whom Solomon fetched, set up the pillars in the porch of the temple and named them Jachin and Boaz (1 Kings 7:13-21).", 1, [[15, 0, 12, 40], [49, 0, 10, 50], [64, 0, 10, 60]]),
   ("cherubims", "Find a carved winged cherub.", "1 Kings 6:29", ["carved figures of cherubims"], "He carved all the walls of the house round about with carved figures of cherubims (1 Kings 6:29).", 3, [[16, 9, 11, 21], [67, 24, 8, 16]]),
  ],
  "abraham_stars": [
