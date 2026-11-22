@@ -1,4 +1,4 @@
-# BibleQuest architecture
+# MyBibleGem architecture
 
 ## Overview
 

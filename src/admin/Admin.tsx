@@ -50,7 +50,7 @@ function PreviewReview() {
       </div>
       <div className="mb-3 flex flex-wrap items-center gap-3">
         <p className="text-sm text-muted">{rows.length} shown</p>
-        <button className="btn-secondary btn-sm ml-auto" onClick={() => download('biblequest-review-sheet.csv', toCSV(rows))}><Download className="h-4 w-4" aria-hidden="true" />Download review sheet (CSV)</button>
+        <button className="btn-secondary btn-sm ml-auto" onClick={() => download('mybiblegem-review-sheet.csv', toCSV(rows))}><Download className="h-4 w-4" aria-hidden="true" />Download review sheet (CSV)</button>
       </div>
       {controls}
       <QuestionList rows={rows} open={open} setOpen={setOpen} />
@@ -101,7 +101,7 @@ function CloudAdmin({ isAdmin }: { isAdmin: boolean }) {
   ]
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
-      <PageHeader eyebrow="Admin" title="BibleQuest dashboard">Only published content appears in games. Edits send content back to draft for review.</PageHeader>
+      <PageHeader eyebrow="Admin" title="MyBibleGem dashboard">Only published content appears in games. Edits send content back to draft for review.</PageHeader>
       <div role="tablist" className="mb-6 flex gap-2 overflow-x-auto pb-1">
         {tabs.filter((t) => !t.admin || isAdmin).map((t) => <button key={t.id} role="tab" aria-selected={tab === t.id} onClick={() => setTab(t.id)} className={`btn btn-sm shrink-0 ${tab === t.id ? 'bg-ink text-bg' : 'border border-line bg-raised'}`}>{t.label}</button>)}
       </div>
@@ -181,7 +181,7 @@ function Questions({ isAdmin }: { isAdmin: boolean }) {
         <button className="btn-ghost btn-sm" onClick={() => setSelected(new Set(rows.map((r) => r.id)))}>Select all shown</button>
         {selected.size > 0 && <button className="btn-ghost btn-sm" onClick={() => setSelected(new Set())}>Clear</button>}
         {common.map((t) => <button key={t.to} className="btn-secondary btn-sm" onClick={() => setStatus([...selected], t.to)}>{t.label} ({selected.size})</button>)}
-        <button className="btn-secondary btn-sm ml-auto" onClick={() => download('biblequest-questions.csv', toCSV(rows))}><Download className="h-4 w-4" aria-hidden="true" />CSV</button>
+        <button className="btn-secondary btn-sm ml-auto" onClick={() => download('mybiblegem-questions.csv', toCSV(rows))}><Download className="h-4 w-4" aria-hidden="true" />CSV</button>
         <button className="btn-primary btn-sm" onClick={() => setEditing({ game_mode: 'picture', difficulty: 1, options: ['', '', '', ''], correct_index: 0, translation_id: 'KJV', book_id: 1, chapter: 1, verse_start: 1 })}><Plus className="h-4 w-4" aria-hidden="true" />New question</button>
       </div>
       {controls}

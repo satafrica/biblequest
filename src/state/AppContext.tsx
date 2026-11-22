@@ -110,7 +110,7 @@ export function AppProvider({ children, backendOverride }: { children: ReactNode
     return (
       <div className="min-h-screen grid place-items-center p-6 text-center">
         <div className="max-w-md">
-          <h1 className="font-display text-2xl mb-2">BibleQuest could not start</h1>
+          <h1 className="font-display text-2xl mb-2">MyBibleGem could not start</h1>
           <p className="text-muted mb-4">We could not reach the game server. Check your connection and try again.</p>
           <button className="btn-primary" onClick={() => window.location.reload()}>Try again</button>
         </div>
@@ -118,7 +118,7 @@ export function AppProvider({ children, backendOverride }: { children: ReactNode
     )
   }
   if (!value) {
-    return <div className="min-h-screen grid place-items-center" role="status" aria-live="polite"><span className="sr-only">Loading BibleQuest</span><div className="loader" aria-hidden="true" /></div>
+    return <div className="min-h-screen grid place-items-center" role="status" aria-live="polite"><span className="sr-only">Loading MyBibleGem</span><div className="loader" aria-hidden="true" /></div>
   }
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>
 }

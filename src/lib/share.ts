@@ -3,7 +3,7 @@
 export function resultText(title: string, correct: boolean[], url?: string): string {
   const n = correct.filter(Boolean).length
   const pattern = correct.map((c) => (c ? '\u25A0' : '\u25A1')).join('')
-  return [`BibleQuest \u00B7 ${title}`, `${n}/${correct.length} correct  ${pattern}`, url].filter(Boolean).join('\n')
+  return [`MyBibleGem \u00B7 ${title}`, `${n}/${correct.length} correct  ${pattern}`, url].filter(Boolean).join('\n')
 }
 
 /** The public address of this app, or undefined for local files and previews without one. */

@@ -1,4 +1,4 @@
-# BibleQuest editorial source: Picture Bible Quiz + Who Am I?
+# MyBibleGem editorial source: Picture Bible Quiz + Who Am I?
 # Each entry carries a KJV reference and keywords that MUST appear in that passage.
 # scripts/build_content.py fails the build if any reference or keyword does not check out.
 # Format for picture: (image, difficulty, prompt, [correct, wrong, wrong, wrong], "Book ch:v[-v]", [keywords], explanation, hint)

@@ -1,8 +1,8 @@
-# BibleQuest
+# MyBibleGem
 
 **Explore Scripture. Play the Adventure. Discover the Truth.**
 
-BibleQuest is a Bible gaming and learning platform for adults. Every answer shows its Scripture reference and a short explanation drawn from the text. Guests can play without registering. Signed-in players keep their progress and gems across devices.
+MyBibleGem is a Bible gaming and learning platform for adults. Every answer shows its Scripture reference and a short explanation drawn from the text. Guests can play without registering. Signed-in players keep their progress and gems across devices.
 
 > Status: Version 1.0 preview. See [STATUS.md](STATUS.md) for what is complete, tested, pending and blocked.
 
@@ -48,5 +48,5 @@ npm run build:content  # rebuild questions from content/source after editing
 
 - Scripture text: King James Version. Public domain outside the United Kingdom. In the UK, the KJV is under Crown letters patent administered by Cambridge University Press. See PRODUCTION_CHECKLIST.md.
 - KJV source file used for automated checks: [thiagobodruk/bible](https://github.com/thiagobodruk/bible) (`json/en_kjv.json`).
-- Illustrations: AI-generated artistic interpretations made for BibleQuest. Each one carries a note separating what Scripture describes from what the artist imagined.
+- Illustrations: AI-generated artistic interpretations made for MyBibleGem. Each one carries a note separating what Scripture describes from what the artist imagined.
 - No other translations are bundled. Add one only after its licence is confirmed (see the `bible_translations.permission_status` column).

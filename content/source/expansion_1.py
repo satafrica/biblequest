@@ -1,4 +1,4 @@
-# BibleQuest content expansion 1 (22 November 2026).
+# MyBibleGem content expansion 1 (22 November 2026).
 # Same formats and the same automatic KJV checks as picture_whoami.py and scripture_sequence.py.
 # New picture questions reuse the existing published illustrations.
 

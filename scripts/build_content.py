@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build + verify BibleQuest content.
+"""Build + verify MyBibleGem content.
 
 * Checks every reference exists in the KJV text (content/kjv.json, public domain).
 * Checks required keywords appear in the referenced passage.
@@ -265,8 +265,8 @@ out.append("insert into public.reward_rules (id, gems, description) values ('cor
   "('perfect_round',100,'First perfect score on a level'),('adventure_complete',250,'All chapters of an adventure completed') on conflict (id) do nothing;")
 for a in ASSETS:
     out.append("insert into public.question_assets (id, description, bible_reference, generation_prompt, ownership, license, is_artistic_interpretation, interpretation_note, alt_text, storage_path, width, height, review_status) values ("
-      + ",".join([lit(a["id"]), lit(a["description"]), lit(a["reference"]), lit(a["prompt"]), lit("BibleQuest project owner"),
-                  lit("AI-generated for BibleQuest (GPT Image); confirm commercial-use terms of the generator before release"), "true",
+      + ",".join([lit(a["id"]), lit(a["description"]), lit(a["reference"]), lit(a["prompt"]), lit("MyBibleGem project owner"),
+                  lit("AI-generated for MyBibleGem (GPT Image); confirm commercial-use terms of the generator before release"), "true",
                   lit(a["interpretation_note"]), lit(a["alt"]), lit(a["path"]), "1200", lit(a.get("height", 900)), "'review'"]) + ") on conflict (id) do nothing;")
 for q in questions:
     out.append("insert into public.questions (id, game_mode, book_id, chapter, verse_start, verse_end, reference_label, difficulty, prompt, clues, options, correct_index, explanation, hint, image_id, image_alt, translation_id, tags, status, verification, verse_text) values ("

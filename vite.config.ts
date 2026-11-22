@@ -11,8 +11,8 @@ export default defineConfig({
       injectRegister: false, // registered safely in src/main.tsx
       includeAssets: ['favicon.svg', 'icons/apple-touch-icon.png'],
       manifest: {
-        name: 'BibleQuest',
-        short_name: 'BibleQuest',
+        name: 'MyBibleGem',
+        short_name: 'MyBibleGem',
         description: 'Explore Scripture. Play the Adventure. Discover the Truth.',
         theme_color: '#142B40',
         background_color: '#0C1B29',

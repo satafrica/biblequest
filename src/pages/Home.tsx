@@ -45,7 +45,7 @@ export default function Home() {
         {hero && <Illustration path={hero.path} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" sizes="100vw" priority />}
         <div className="hero-shade absolute inset-0 -z-10" />
         <div className="mx-auto flex min-h-[64vh] max-w-6xl flex-col justify-end px-4 pb-12 pt-24 md:min-h-[72vh] md:pb-16">
-          <p className="mb-3 hidden text-sm font-semibold uppercase tracking-[0.2em] text-gold md:block">BibleQuest</p>
+          <p className="mb-3 hidden text-sm font-semibold uppercase tracking-[0.2em] text-gold md:block">MyBibleGem</p>
           <h1 className="max-w-3xl text-[clamp(2.25rem,5vw+1rem,4.25rem)] font-semibold leading-[1.05]">
             Explore Scripture. Play the Adventure. Discover the Truth.
           </h1>

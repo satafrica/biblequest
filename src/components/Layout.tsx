@@ -53,9 +53,9 @@ export function Layout() {
       )}
       <header className="sticky top-0 z-30 border-b border-line/70 bg-bg/90 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-4">
-          <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label="BibleQuest home">
+          <Link to="/" className="flex items-center gap-2.5 shrink-0" aria-label="MyBibleGem home">
             <Logo />
-            <span className="font-display text-xl font-semibold tracking-tight">BibleQuest</span>
+            <span className="font-display text-xl font-semibold tracking-tight">MyBibleGem</span>
           </Link>
           <nav aria-label="Main" className="ml-4 hidden md:flex items-center gap-1">
             {NAV.map((n) => (
@@ -80,7 +80,7 @@ export function Layout() {
 
       <footer className="hidden md:block border-t border-line/70">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-6 text-sm text-muted">
-          <span>BibleQuest · Explore Scripture. Play the Adventure. Discover the Truth.</span>
+          <span>MyBibleGem · Explore Scripture. Play the Adventure. Discover the Truth.</span>
           <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2 md:ml-auto">
             <Link className="hover:text-ink" to="/about">About &amp; licensing</Link>
             <Link className="hover:text-ink" to="/community">Community</Link>

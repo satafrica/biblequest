@@ -16,7 +16,7 @@ function scrub(s: string): string {
 export function report(err: unknown, context = 'error') {
   const e = err instanceof Error ? err : new Error(String(err))
   const payload = { context, message: scrub(e.message), stack: scrub(e.stack ?? ''), route: location.hash.split('?')[0], version, at: new Date().toISOString() }
-  if (!endpoint || sent >= 10) { console.error('[BibleQuest]', payload); return }
+  if (!endpoint || sent >= 10) { console.error('[MyBibleGem]', payload); return }
   sent++
   try { navigator.sendBeacon?.(endpoint, JSON.stringify(payload)) || fetch(endpoint, { method: 'POST', body: JSON.stringify(payload), keepalive: true }) } catch { /* never throw from the reporter */ }
 }

@@ -80,7 +80,7 @@ test('missed questions appear in Review my mistakes; streak and calendar update;
   await page.getByRole('button', { name: 'Share result' }).click()
   const shared = ((await get(page, '__shared')) as string[])[0]
   expect(shared).toContain(`${right}/${total} correct`)
-  expect(shared).toMatch(/^BibleQuest · Picture Bible Quiz/)
+  expect(shared).toMatch(/^MyBibleGem · Picture Bible Quiz/)
   expect(shared.split('\n').length).toBe(2) // no URL on localhost, and no answers
 
   await page.goto('./')

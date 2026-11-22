@@ -1,4 +1,4 @@
--- BibleQuest database setup, part 1 of 2: tables, security rules and game functions.
+-- MyBibleGem database setup, part 1 of 2: tables, security rules and game functions.
 -- Paste all of this into Supabase -> SQL Editor -> New query, then press Run.
 -- Safe to run on a new, empty project. Generated from supabase/migrations/.
 begin;

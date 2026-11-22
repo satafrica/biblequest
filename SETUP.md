@@ -1,8 +1,8 @@
-# BibleQuest setup guide
+# MyBibleGem setup guide
 
 This guide assumes no programming experience. Expect about an hour the first time. You need three free accounts: GitHub (code), Supabase (database and logins) and Netlify (website hosting).
 
-Never paste a Supabase **service_role** or **secret** key into Netlify, GitHub, the code, or a chat. BibleQuest only needs the public **anon / publishable** key.
+Never paste a Supabase **service_role** or **secret** key into Netlify, GitHub, the code, or a chat. MyBibleGem only needs the public **anon / publishable** key.
 
 ---
 
@@ -61,7 +61,7 @@ Find the connection string under **Project Settings → Database**.
 2. Go to **Authentication → URL Configuration**:
    - Set **Site URL** to your Netlify address, for example `https://biblequest.netlify.app`.
    - Add the same address to **Redirect URLs**, plus `http://localhost:5173` for local testing.
-3. Optional: under **Authentication → Emails**, edit the confirmation and password-reset emails to say "BibleQuest".
+3. Optional: under **Authentication → Emails**, edit the confirmation and password-reset emails to say "MyBibleGem".
 
 ### Collect the two public values
 
