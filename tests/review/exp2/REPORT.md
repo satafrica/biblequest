@@ -31,3 +31,5 @@ Raw results: who1.jsonl, who2.jsonl, seq.jsonl in this folder (`.v1` files are f
 ## Clue passages (22 Nov 2026)
 
 Each of the 40 Who Am I? items has KJV references for every clue (content/source/clue_refs_2.py). References were drafted by AI, checked in a second pass (32 were widened with context verses), and finally every clue was checked against the exact passage text players see: 40/40 pass. Files: tests/review/exp2/passages/.
+
+The same feature was extended to the other 94 Who Am I? questions on 22 Nov 2026; see tests/review/clue1.

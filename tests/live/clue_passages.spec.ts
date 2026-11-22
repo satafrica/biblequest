@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs'
 // Live check: Who Am I? shows the Scripture behind each clue after answering (cloud backend).
 test('clue passages after answering', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', (e) => errors.push(e.message))
-  await page.goto('./#/game/' + encodeURIComponent('whoami:4:1'))
+  await page.goto('./#/game/' + encodeURIComponent(process.env.LEVEL ?? 'whoami:4:1'))
   const out: { first: string; passages: number; clueItems: number }[] = []
   for (let i = 0; i < 8; i++) {
     const opts = page.getByRole('group', { name: 'Answer options' })
@@ -23,5 +23,6 @@ test('clue passages after answering', async ({ page }) => {
   const uid = await page.evaluate(() => { const k = Object.keys(localStorage).find((x) => x.includes('auth-token')); return k ? JSON.parse(localStorage.getItem(k)!).user?.id : null })
   writeFileSync('tests/live/clue_passages.json', JSON.stringify({ out, uid, errors }, null, 1))
   expect(out.some((o) => o.passages === 1 && o.clueItems === 4)).toBe(true)
+  if (process.env.EXPECT_ALL) expect(out.every((o) => o.passages === 1 && o.clueItems === 4)).toBe(true)
   expect(errors).toEqual([])
 })
