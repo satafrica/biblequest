@@ -29,6 +29,10 @@ export default defineConfig({
         // App shell and small illustrations are available offline; full-size images are cached as viewed.
         globPatterns: ['**/*.{js,css,html,svg,png}', 'images/*-sm.webp'],
         navigateFallback: 'index.html',
+        // A newly published version takes over at once (the page then reloads itself once, see main.tsx).
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
         runtimeCaching: [
           { urlPattern: ({ url }) => url.pathname.includes('/images/') && url.pathname.endsWith('.webp'), handler: 'CacheFirst', options: { cacheName: 'bq-images-v2', expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 30 } } },
           { urlPattern: ({ url }) => url.hostname.endsWith('fontshare.com'), handler: 'StaleWhileRevalidate', options: { cacheName: 'bq-fonts', expiration: { maxEntries: 30 } } },
