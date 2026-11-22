@@ -81,6 +81,7 @@ export function Layout() {
       <footer className="hidden md:block border-t border-line/70">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-6 text-sm text-muted">
           <span>MyBibleGem · Explore Scripture. Play the Adventure. Discover the Truth.</span>
+          <span className="w-full md:order-last">Illustrations are AI-generated, made with Perplexity.</span>
           <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2 md:ml-auto">
             <Link className="hover:text-ink" to="/about">About &amp; licensing</Link>
             <Link className="hover:text-ink" to="/community">Community</Link>

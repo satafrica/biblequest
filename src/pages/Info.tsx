@@ -1,7 +1,7 @@
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Lock } from 'lucide-react'
 import { useApp } from '../state/AppContext'
-import { Illustration, PageHeader } from '../components/ui'
+import { AI_CREDIT, Illustration, PageHeader } from '../components/ui'
 
 const GALLERIES: Record<string, { title: string; ids: string[] }> = {
   coll_ot: { title: 'Old Testament Gallery', ids: ['creation', 'noah_ark', 'abraham_stars', 'joseph_coat', 'moses_red_sea', 'david_goliath', 'solomon_temple', 'elijah_carmel', 'esther_king', 'daniel_lions', 'jonah_fish'] },
@@ -23,13 +23,13 @@ export function Collection() {
   )
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
-      <PageHeader eyebrow="Illustration gallery" title={g.title}>All illustrations are artistic interpretations. Notes below each image separate what Scripture describes from what the artist imagined.</PageHeader>
+      <PageHeader eyebrow="Illustration gallery" title={g.title}>All illustrations are AI-generated (made with Perplexity) and are artistic interpretations. Notes below each image separate what Scripture describes from what the artist imagined.</PageHeader>
       <ul className="grid gap-6 md:grid-cols-2">
         {g.ids.map((aid) => catalog.assets[aid]).filter(Boolean).map((a) => (
           <li key={a.id} className="card overflow-hidden">
             <figure>
               <Illustration path={a.path} alt={a.alt} className="aspect-[4/3] w-full object-cover" sizes="(min-width:768px) 50vw, 100vw" />
-              <figcaption className="p-4"><p className="font-semibold">{a.description}</p><p className="text-sm">{a.reference}</p><p className="mt-1 text-sm text-muted">{a.interpretation_note}</p></figcaption>
+              <figcaption className="p-4"><p className="font-semibold">{a.description}</p><p className="text-sm">{a.reference}</p><p className="mt-1 text-sm text-muted">{AI_CREDIT} {a.interpretation_note}</p></figcaption>
             </figure>
           </li>
         ))}
@@ -55,7 +55,7 @@ export function About() {
         <section><h2 className="text-xl font-semibold mb-2">Community</h2>
           <p>Friends, groups and challenge matches need a registered account. Only display names, avatars and scores are shared; there is no chat or direct messaging. Groups are joined by invite code, owners and moderators can remove members, and any name can be reported to the administrators.</p></section>
         <section><h2 className="text-xl font-semibold mb-2">Illustrations</h2>
-          <p>Illustrations were created with an AI image generator for MyBibleGem and are artistic interpretations. Faces, clothing, colours and settings are imagined; each image carries a note distinguishing what Scripture describes from artistic detail. Commercial-use terms of the generator should be confirmed by the owner before public release.</p></section>
+          <p data-testid="illustration-credit">Illustrations are AI-generated, made with <a className="link" href="https://www.perplexity.ai/" target="_blank" rel="noreferrer">Perplexity</a>, and are artistic interpretations, not historical records. Faces, clothing, colours and settings are imagined; each image carries a note distinguishing what Scripture describes from artistic detail.</p></section>
         <section><h2 className="text-xl font-semibold mb-2">Gems</h2>
           <p>Gems are earned by playing: {catalog.rewards.correct_answer} for the first correct answer to each question, {catalog.rewards.level_complete} for completing a level for the first time, {catalog.rewards.perfect_round} for a first perfect round, {catalog.rewards.daily_challenge} for each daily challenge and {catalog.rewards.adventure_complete} for completing an adventure. Replaying the same question does not earn gems again. Gems never expire, cannot go below zero, and cannot be bought, sold or exchanged for money.</p></section>
         <section id="accounts" className="scroll-mt-24"><h2 className="text-xl font-semibold mb-2">Accounts and saving</h2>

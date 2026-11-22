@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ChevronRight, Lock } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { MODES } from '../game/modes'
-import { Gems, Illustration } from '../components/ui'
+import { AI_CREDIT, Gems, Illustration } from '../components/ui'
 import { countsFor, describeLevelKey, nextLevel, parseLevelKey, recommendDifficulty, levelKey } from '../engine/levels'
 import { todayUTC } from '../lib/ids'
 import { ReviewCard, StreakCard } from '../components/Streak'
@@ -56,7 +56,7 @@ export default function Home() {
             <Link to={startTo} className="btn-primary px-7 text-base">Start playing</Link>
             <Link to="/play" className="btn border border-ivory/40 text-ivory hover:bg-ivory/10">Browse all games</Link>
           </div>
-          {hero && <p className="mt-6 text-xs text-ivory/60">Illustration: {hero.interpretation_note}</p>}
+          {hero && <p className="mt-6 text-xs text-ivory/60">{AI_CREDIT} {hero.interpretation_note}</p>}
         </div>
       </section>
 

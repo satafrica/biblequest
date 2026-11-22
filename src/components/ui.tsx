@@ -126,6 +126,9 @@ export function Modal({ open, title, onClose, children }: { open: boolean; title
   )
 }
 
+/** Shown with every illustration: the pictures are AI-generated, and the generator's terms ask that this is stated. */
+export const AI_CREDIT = 'AI-generated illustration, made with Perplexity.'
+
 export function Illustration({ path, alt, className = '', sizes = '(min-width: 1024px) 50vw, 100vw', priority = false }: { path: string | null; alt: string; className?: string; sizes?: string; priority?: boolean }) {
   if (!path) return null
   if (/^https?:\/\//.test(path)) return <img src={path} alt={alt} className={className} loading={priority ? 'eager' : 'lazy'} decoding="async" />

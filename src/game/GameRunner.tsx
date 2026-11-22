@@ -5,7 +5,7 @@ import { useApp } from '../state/AppContext'
 import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CluePassage, type CompleteResult, type PublicQuestion, type SessionStart } from '../engine'
 import { readJSON, removeKey, writeJSON } from '../lib/storage'
 import { countsFor, describeLevelKey, levelCount, levelKey as makeLevelKey, parseLevelKey } from '../engine/levels'
-import { Gems, GemIcon, Illustration, Modal } from '../components/ui'
+import { AI_CREDIT, Gems, GemIcon, Illustration, Modal } from '../components/ui'
 import { playSound, unlockAudio } from '../lib/sounds'
 import { soundVolume, speechRate } from '../state/prefs'
 import { vibrate } from '../lib/haptics'
@@ -232,7 +232,7 @@ export default function GameRunner() {
           {chapter.image_id && catalog.assets[chapter.image_id] && (
             <figure>
               <Illustration path={catalog.assets[chapter.image_id].path} alt={catalog.assets[chapter.image_id].alt} className="aspect-[16/9] w-full object-cover" priority />
-              <figcaption className="px-5 pt-2 text-xs text-muted">{catalog.assets[chapter.image_id].interpretation_note}</figcaption>
+              <figcaption className="px-5 pt-2 text-xs text-muted">{AI_CREDIT} {catalog.assets[chapter.image_id].interpretation_note}</figcaption>
             </figure>
           )}
           <div className="p-5 md:p-7">
@@ -260,9 +260,9 @@ export default function GameRunner() {
           {q.image_path && q.game_mode !== 'hidden' && (
             <figure className="mb-5 overflow-hidden rounded-2xl border border-line/70 bg-surface">
               <Illustration path={q.image_path} alt={q.image_alt ?? ''} className="aspect-[4/3] w-full object-cover" sizes="(min-width: 768px) 720px, 100vw" priority />
-              {phase === 'feedback' && q.image_id && catalog.assets[q.image_id]?.interpretation_note && (
-                <figcaption className="px-4 py-2 text-xs text-muted">{catalog.assets[q.image_id].interpretation_note}</figcaption>
-              )}
+              <figcaption className="px-4 py-2 text-xs text-muted" data-testid="ai-credit">
+                {AI_CREDIT}{phase === 'feedback' && q.image_id && catalog.assets[q.image_id]?.interpretation_note ? ` ${catalog.assets[q.image_id].interpretation_note}` : ''}
+              </figcaption>
             </figure>
           )}
           <div className="mb-2 flex flex-wrap items-center gap-2 text-xs">
@@ -297,10 +297,11 @@ export default function GameRunner() {
 
           {q.game_mode === 'sequence' ? (
             <SequenceBoard order={order} setOrder={setOrder} locked={phase === 'feedback'} correctOrder={phase === 'feedback' ? last?.correct_order : undefined} />
-          ) : q.game_mode === 'hidden' && q.image_path && q.extra?.boxes ? (
+          ) : q.game_mode === 'hidden' && q.image_path && q.extra?.boxes ? (<>
             <HiddenScene path={q.image_path} alt={q.image_alt ?? ''} boxes={q.extra.boxes} areaCount={q.options.length} locked={phase === 'feedback'}
               chosen={selected} correct={phase === 'feedback' ? last?.correct_index : undefined} disabled={busy} onPick={(a) => submit(a)} />
-          ) : (
+            <p className="mt-2 text-xs text-muted" data-testid="ai-credit">{AI_CREDIT}</p>
+          </>) : (
             <div className="grid gap-3" role="group" aria-label="Answer options">
               {q.options.map((o, i) => {
                 const state = phase === 'feedback'
