@@ -20,6 +20,7 @@ Status labels:
 | Live gameplay against the real Supabase project (`tests/live/gameplay.spec.ts`) | `npx playwright test -c playwright.live.config.ts tests/live/gameplay.spec.ts` | 1 / 1 passed |
 | Production build, and a check that the online build excludes the answer key | `npm run build` | Passed |
 | Hosted preview: full level played, no page errors | manual Playwright run | Passed |
+| Community with two registered accounts on https://mybiblegem.com (`tests/e2e/community-live.spec.ts`, Pixel 7) | see "Community screenshot test" below | 1 / 1 passed, 14 screenshots, no page errors (22 Nov 2026) |
 
 The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/supabase_auth_stub.sql`). They prove the SQL rules, but not Supabase's own Auth service.
 
@@ -120,6 +121,41 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - 22 Nov 2026: all six "In development" game modes and Community are now built and live. Geography Explorer (58 questions; Natural Earth map with OpenBible.info CC BY 4.0 locations), Hidden Object (72; tap the object in one of the illustrations, with tap boxes), Wisdom Decisions (63; Proverbs/Ecclesiastes-based choices, with a note that it is not professional advice), Bible Mystery (12 case-file chapters, 60 questions, staged clues) and Parables Explorer (12 chapters, 46 questions, KJV reading shown first), both adventure-style with chapters unlocking in order, and Bible Master Challenge (12 Expert questions per round, Old/New/Whole Bible, best score kept). Bank 716 -> 1015 questions; 4 new achievements. The 299 new items are AI-drafted and AI-reviewed (Claude Opus 5.5) and passed the KJV build check; they are published with human_review "pending" and show in Quick review. The hero_jerusalem illustration was published because hidden scenes use it. Community (registered accounts only; guests see "Needs a free account"): friend codes, requests, weekly friends board, remove and report; groups with invite codes, members, moderators, edit/new code/delete, leave and report; asynchronous challenge matches (same 10 questions for everyone, 7 days, results board, no extra gem bonuses). There is no chat or messaging and no real-time multiplayer. Admin Reports gained Reset player name, Reset group name and Delete group (admin_moderate). Migration 20261122000011 applied to the live database (published_questions view kept security_invoker/security_barrier with no anon access; require_member checks auth.users.is_anonymous); live content matches the build (md5 check). Tests: 90 unit/DB and 96 end-to-end plus 14 new-mode and 28 accessibility tests passed; every community function was run on the live database in a rolled-back transaction with two temporary accounts and one guest (all steps worked, nothing left behind). Draft 6b031a02 tested against the live database, then published to production at the owner's request and re-tested on https://mybiblegem.com (Pixel 7, 10 of 10). Community was later tested on the site with registered accounts (next entry). My test guests were deleted by id; other recent guests were real visitors and were left alone.
 - 22 Nov 2026: Community screenshot test with registered accounts (tests/e2e/community-live.spec.ts). It is skipped unless COMMUNITY_A_EMAIL/PASSWORD and COMMUNITY_B_EMAIL/PASSWORD are set. Two browser windows (Pixel 7) sign in through the Account page, then: A's empty Community page; B sends a request with A's friend code; A accepts and B appears on the weekly board; A creates a group; B joins with the invite code (2 members); A makes B a moderator; A creates a group match and plays it; B opens it by code and plays; the results board shows both scores; A's Community page lists the friend, group and match; the report dialog opens (cancelled, no report sent); A deletes the group and removes the friend. It takes 14 screenshots (tests/review/community-live/) and fails on any page error. Run on https://mybiblegem.com with two temporary confirmed accounts (community-test-a/b@mybiblegem.com, no email sent): passed, no page errors. The screenshots were checked by eye. The first run showed the dialogs half-transparent because they were captured during the 0.35 s fade-in; the test now waits for animations to finish. Afterwards no groups, matches, friendships or reports remained, and the two temporary accounts were deleted by id (auth.users back to 10). To run again, create two registered accounts and set the variables. Small things seen: notices ("Friend request sent") stay on screen after moving to the next page, and the match title "Mixed questions · Intermediate" can wrap so the "·" starts a line.
 - Cleanup rule going forward: never delete accounts while the owner may be testing; delete only after the owner says they are done.
+
+## Community screenshot test (22 November 2026)
+
+Test file: `tests/e2e/community-live.spec.ts`. It ran on the live site, https://mybiblegem.com, in two Pixel 7 browser windows. Two temporary registered accounts ("Test Player A" and "Test Player B") signed in through the site's own Account page. Result: **passed** (about 35 seconds) with no page errors in either window. All 14 screenshots were checked by eye.
+
+| # | Step | What the screen showed | Screenshot |
+|---|---|---|---|
+| 1 | Player A opens Community after signing in | No sign-in gate; empty friends, groups and matches; A's friend code shown | [01-community-empty.png](tests/review/community-live/01-community-empty.png) |
+| 2 | Player B enters A's friend code | "Friend request sent"; B sees "Waiting for: Test Player A" | [02-request-sent.png](tests/review/community-live/02-request-sent.png) |
+| 3 | A reloads Community | "Requests for you" lists Test Player B with Accept and Decline | [03-request-received.png](tests/review/community-live/03-request-received.png) |
+| 4 | A taps Accept | "Friend added"; B appears on A's weekly friends board | [04-friends-board.png](tests/review/community-live/04-friends-board.png) |
+| 5 | A creates "Screenshot Test Group" | Group page opens with its invite code and Edit group | [05-group-created.png](tests/review/community-live/05-group-created.png) |
+| 6 | B joins with the invite code | Group page shows 2 members; B sees Leave group | [06-group-joined.png](tests/review/community-live/06-group-joined.png) |
+| 7 | A taps Make moderator for B | B shows the "moderator" label; Remove moderator and Remove appear | [07-moderator.png](tests/review/community-live/07-moderator.png) |
+| 8 | A creates a group match | Match page with share code, Play now and "Nobody has finished this match yet" | [08-match-created.png](tests/review/community-live/08-match-created.png) |
+| 9 | A plays the 10 questions | Round results screen | [09-match-round-done.png](tests/review/community-live/09-match-round-done.png) |
+| 10 | B opens the match by code and plays | Results board lists both players, B marked "(you)" | [10-match-results.png](tests/review/community-live/10-match-results.png) |
+| 11 | A goes back to Community | Friend, group card and match (marked Played) all listed | [11-community-filled.png](tests/review/community-live/11-community-filled.png) |
+| 12 | A opens Report for B | Report window opens; cancelled, so no report was sent | [12-report-dialog.png](tests/review/community-live/12-report-dialog.png) |
+| 13 | A opens Edit group | Name, description, new-code option and Delete group | [13-edit-group.png](tests/review/community-live/13-edit-group.png) |
+| 14 | A deletes the group and removes B | "Group deleted"; Community is empty again | [14-cleaned-up.png](tests/review/community-live/14-cleaned-up.png) |
+
+Key screens:
+
+![Friend request received](tests/review/community-live/03-request-received.png)
+![Group with a moderator](tests/review/community-live/07-moderator.png)
+![Match results board](tests/review/community-live/10-match-results.png)
+![Report dialog](tests/review/community-live/12-report-dialog.png)
+
+Notes:
+- The first run stopped at step 11 on a test selector, not an app fault: the group name also appeared in the match row. The second run caught the dialogs halfway through their 0.35-second fade-in, so they looked see-through. The test now waits for animations to finish, and the final run (above) passed with solid dialogs.
+- Cleanup was checked in the database: no groups, matches, friendships or reports remained. The two temporary accounts were deleted by id, and auth.users is back to 10. No emails were sent to the test addresses.
+- To run it again, create two registered accounts, set COMMUNITY_A_EMAIL/PASSWORD and COMMUNITY_B_EMAIL/PASSWORD, and point Playwright at https://mybiblegem.com. Without these settings the test skips itself.
+- Small things seen, not yet changed: notices such as "Friend request sent" stay on screen after moving to another page, and the match title "Mixed questions · Intermediate" can wrap so the "·" starts a line.
+- Not covered: the same flow on a physical phone, and the desktop layout.
 
 ## Built, not yet tested against live Supabase
 
