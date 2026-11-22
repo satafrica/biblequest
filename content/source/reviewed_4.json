@@ -1,7 +1,7 @@
 {
- "human_review": "pending",
+ "human_review": "approved",
  "reviewed_at": "2026-11-22",
- "approved_by": "not human-approved: AI pipeline only (awaiting the project owner's approval of the draft, 22 Nov 2026)",
+ "approved_by": "Project owner (Samuel), approved the draft document, find-it contact sheets and test copy on 22 Nov 2026",
  "method": "AI-drafted with Claude Opus 5.5 from the KJV text for illustration batch 2; automatic checks (reference exists, keywords found in the KJV passage, tap areas within the picture); independent AI review against the KJV text (Claude Opus 5.5), 22 of 165 items flagged and fixed then re-reviewed, 1 dropped. Hidden-object areas were drawn by hand on a 10% grid over each illustration and checked visually on a contact sheet. See tests/review/illustrations2.",
  "ids": [
   "pic-burning_bush-1",

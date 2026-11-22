@@ -179,7 +179,7 @@ Notes:
 
 ## Blocked: needs the project owner
 
-- **Human review of the 20 illustrations.** All 1015 questions are published. 539 are approved (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
+- **Human review of the first 20 illustrations.** 1179 questions are published (1015 earlier plus 164 for illustration batch 2, which the owner approved on 22 Nov). 539 are approved (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
 - **Licensing decisions:** the image generator's commercial terms, and KJV distribution in the UK (Crown patent).
 
 ## Easier sign-in (22 November 2026)
@@ -191,3 +191,13 @@ Notes:
 - Files: src/engine/cloud.ts, src/pages/Account.tsx, src/components/Layout.tsx. New live test: tests/e2e/signin-live.spec.ts (runs only with SIGNIN_LIVE=1 and BASE_URL). Screenshots are in tests/review/signin/.
 - Tested on draft 6b0332d7 against the live backend, phone and desktop, 2/2 passed. Published to production at the owner's request (22 Nov 2026) and re-tested on https://mybiblegem.com: 2/2 passed. Covered: guest plays → creates account → same player id → signs out → Sign in form with email filled in → wrong password message → signs in. Full suite 92 unit, 126 end-to-end passed. My test accounts were deleted by exact id.
 - Still limited: password-reset emails (built-in sender). Emails are not verified, so a typo in an email cannot be recovered by reset. Google sign-in is not set up.
+
+## Illustration batch 2 (22 November 2026)
+
+- 20 new illustrations (40 in total): burning bush, Jacob's ladder, Jericho, Ruth and Boaz, Elijah and the ravens, Nehemiah's walls, the baptism of Jesus, the wedding at Cana, the feeding of the 5000, walking on water, Zacchaeus, the entry into Jerusalem, the Last Supper, Lazarus, the Damascus road, the miraculous catch, the wise men, the Sinai tablets, the sower and the lost sheep. Each was checked by eye; Nehemiah (crown), Cana (number of pots, setting) and Damascus (dome) were regenerated. Files: public/images/<id>.webp and -sm.webp; sources content/source/assets_2.py and illustrations_2.py.
+- New content: 80 Picture Bible Quiz questions (4 per picture) and 84 Hidden Object find-it items (3 to 5 per picture). The tap areas were drawn on a 10% grid and checked visually on contact sheets. A new unit test checks that every hidden object in the bank (old and new) can be reached with a fingertip.
+- Checks: the KJV build check passed. The independent AI review (Claude Opus 5.5) flagged 22 of 165 items: 21 were fixed and passed a second review, and 1 was dropped (the king's letters in the Nehemiah scene). Records are in tests/review/illustrations2. The owner reviewed the draft document, the contact sheets and the offline test copy (Netlify draft 6b033dfb) and approved publishing; content/source/reviewed_4.json records human_review "approved".
+- Live: on 22 Nov, 20 question_assets and 164 questions were inserted as published through the Supabase management API. The live database now has 1179 published questions and 40 published assets. The images already on production match local files (md5, all 40 files). The site code was not redeployed, because the online app reads content from the database. Re-tested on https://mybiblegem.com: the last Picture and Hidden levels show the new pictures and can be completed on phone and desktop (4/4). My 4 test guests were deleted by exact id.
+- Build change: vite.config.ts raises the offline precache limit to 4 MB because the bundled content grew to 2.1 MB. This affects only the offline build and the next deploy.
+- Tests: 93 unit, 126 end-to-end passed (4 live-only skipped).
+- Still open: the image generator's commercial-use terms (owner decision).
