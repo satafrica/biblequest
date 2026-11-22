@@ -1,0 +1,15 @@
+{
+ "pic-abraham_stars-5": "Answer is right. The cited verse says Isaac was born in Abraham's old age (\"his old age\"), not \"her old age\". Suggested fix: reword to \"Which wife of Abraham bore him Isaac in his old age?\"",
+ "pic-joseph_coat-5": "Answer is right, but the question is about Pharaoh's dream, not the coat in the picture. Suggested fix: replace with a coat question, e.g. \"What did Israel make for Joseph?\" (Genesis 37:3).",
+ "pic-joseph_coat-4": "Answer is right, but the question is about Joseph in prison, not the coat in the picture. Suggested fix: replace with a coat question, e.g. \"Who made Joseph a coat of many colours?\" (Genesis 37:3).",
+ "pic-moses_red_sea-4": "Answer is right, but Aaron being chosen to speak happens at the burning bush, not the Red Sea in the picture. Suggested fix: replace with a Red Sea question, e.g. what drove the sea back (Exodus 14:21, a strong east wind).",
+ "pic-david_goliath-5": "Answer is right for the Goliath story, but the question doesn't say so, and Israel faced the Philistines in other valleys too (e.g. Jezreel, 1 Samuel 29:1). Suggested fix: \"In which valley did Israel face the Philistines when Goliath challenged them?\"",
+ "pic-solomon_temple-2": "Answer is right, but Solomon's request at Gibeon is a different scene from the temple in the picture. Suggested fix: replace with a temple question, e.g. \"How many years did Solomon take to build the temple?\" Seven (1 Kings 6:38).",
+ "pic-solomon_temple-1": "Answer is right, but the cited verses (1 Kings 8:62-63) only show Solomon dedicating the temple, not building it. Suggested fix: add 1 Kings 6:14 to the reference.",
+ "pic-elijah_carmel-5": "Answer is right, but Elijah's whirlwind is a different scene from Mount Carmel in the picture. Suggested fix: replace with a Carmel question, e.g. \"What consumed Elijah's sacrifice?\" The fire of the LORD (1 Kings 18:38).",
+ "pic-daniel_lions-5": "Answer is right, but the fiery furnace is a different scene from the lions' den in the picture. Suggested fix: replace with a lions' den question, e.g. why Daniel was thrown in (Daniel 6:10-16).",
+ "pic-esther_king-3": "Answer is right, but the cited verse (Esther 2:7) only covers Mordecai raising her, not urging her to act. Suggested fix: change the reference to Esther 2:7; 4:13-14.",
+ "pic-pentecost-1": "Answer is right, but Acts 2 doesn't say \"upper room\", and that wording points toward the Last Supper. Suggested fix: \"Which event does this scene depict?\"",
+ "pic-empty_tomb-4": "Answer is right, but the wrong option \"The third day\" could confuse players, since Jesus rose on the third day. Suggested fix: replace it with \"The second day of the week\".",
+ "pic-jonah_fish-5": "Answer is right, but the gourd happens outside Nineveh, not with the great fish in the picture. Suggested fix: replace with a fish question, e.g. how long Jonah was in the fish (Jonah 1:17)."
+}

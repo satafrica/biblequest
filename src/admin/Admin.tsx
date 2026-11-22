@@ -6,6 +6,7 @@ import { DIFFICULTY_LABELS, friendlyError, type Difficulty } from '../engine'
 import { PageHeader, Modal, Illustration } from '../components/ui'
 import { download, QuestionDetail, StatusChip, toCSV, transitions, useQuestionFilter, type AdminQuestion, type Status } from './shared'
 import { BOOKS } from '../engine/books'
+import QuickReview from './QuickReview'
 
 export default function Admin() {
   const { backend, profile } = useApp()
@@ -90,12 +91,12 @@ function QuestionList({ rows, open, setOpen, selected, setSelected, actions }: {
 /* ------------------------------------------------------------------ */
 /* Live admin (Supabase)                                               */
 /* ------------------------------------------------------------------ */
-type Tab = 'overview' | 'questions' | 'images' | 'adventures' | 'daily' | 'store' | 'reports' | 'audit'
+type Tab = 'overview' | 'quick' | 'questions' | 'images' | 'adventures' | 'daily' | 'store' | 'reports' | 'audit'
 
 function CloudAdmin({ isAdmin }: { isAdmin: boolean }) {
   const [tab, setTab] = useState<Tab>('overview')
   const tabs: { id: Tab; label: string; admin?: boolean }[] = [
-    { id: 'overview', label: 'Overview' }, { id: 'questions', label: 'Questions' }, { id: 'images', label: 'Illustrations' },
+    { id: 'overview', label: 'Overview' }, { id: 'quick', label: 'Quick review' }, { id: 'questions', label: 'Questions' }, { id: 'images', label: 'Illustrations' },
     { id: 'adventures', label: 'Adventures' }, { id: 'daily', label: 'Daily challenges', admin: true }, { id: 'store', label: 'Store & rewards', admin: true },
     { id: 'reports', label: 'Reports' }, { id: 'audit', label: 'Audit log', admin: true },
   ]
@@ -106,6 +107,7 @@ function CloudAdmin({ isAdmin }: { isAdmin: boolean }) {
         {tabs.filter((t) => !t.admin || isAdmin).map((t) => <button key={t.id} role="tab" aria-selected={tab === t.id} onClick={() => setTab(t.id)} className={`btn btn-sm shrink-0 ${tab === t.id ? 'bg-ink text-bg' : 'border border-line bg-raised'}`}>{t.label}</button>)}
       </div>
       {tab === 'overview' && <Overview />}
+      {tab === 'quick' && <QuickReview />}
       {tab === 'questions' && <Questions isAdmin={isAdmin} />}
       {tab === 'images' && <Images isAdmin={isAdmin} />}
       {tab === 'adventures' && <Adventures isAdmin={isAdmin} />}

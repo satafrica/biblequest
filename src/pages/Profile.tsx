@@ -45,7 +45,7 @@ export default function Profile() {
           {badge && itemOf(badge.item_id) && <p className="mt-1 chip border-accent">{itemOf(badge.item_id)!.name}</p>}
           <div className="mt-2 flex flex-wrap gap-4 text-sm"><span><Gems n={wallet.balance} /> balance</span><span className="text-muted">{wallet.lifetime_earned.toLocaleString()} earned all-time</span></div>
         </div>
-        {backend.kind === 'cloud' && (guest ? <Link to="/account" className="btn-primary">Create account or sign in</Link> : <div className="flex flex-wrap gap-2"><Link to="/account/new-password" className="btn-ghost">Change password</Link><button className="btn-secondary" onClick={() => backend.signOut()}>Sign out</button></div>)}
+        {backend.kind === 'cloud' && (guest ? <Link to="/account" className="btn-primary">Create account or sign in</Link> : <div className="flex flex-wrap gap-2">{profile && profile.role !== 'player' && <Link to="/admin" className="btn-secondary">Admin dashboard</Link>}<Link to="/account/new-password" className="btn-ghost">Change password</Link><button className="btn-secondary" onClick={() => backend.signOut()}>Sign out</button></div>)}
       </section>
 
       <section id="streak" className="mb-10 grid scroll-mt-24 gap-6 md:grid-cols-2">
