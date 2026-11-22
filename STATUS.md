@@ -60,7 +60,7 @@ The database tests use a stand-in for Supabase's `auth` schema (`supabase/tests/
 - Auth: anonymous guest sign-ins are on; email sign-up with email confirmation is on. The Site URL is still `http://localhost:3000` and must be changed to the real address once the site is hosted.
 - **Tested live** (`tests/live`, Playwright desktop Chrome against a local server of the online build): a guest played a full 8-question level and earned 80 gems, which survived a reload. The guest added an email and kept the gems, set a password and bought a 30-gem hint. A second, fresh browser then signed in with that email and password and showed 50 gems. Database check: balance 50, 5 ledger entries, hint ×1 in inventory.
 - For that test only, email confirmation was switched off and 8 picture questions were published. Both were reverted afterwards, and the test accounts were deleted.
-- Not yet tested: the real confirmation and password-reset emails, phones, and a hosted address. Supabase's built-in email sender is limited to 2 emails per hour; add custom SMTP before launch. CAPTCHA is not enabled.
+- Not yet tested: the real confirmation and password-reset emails, phones, and a hosted address. Supabase's built-in email sender is limited to 2 emails per hour; add custom SMTP before launch. (22 Nov 2026: email confirmation was switched off so sign-up no longer depends on email; password-reset emails still use the limited sender.) CAPTCHA is not enabled.
 
 ### Security and performance hardening (applied live 16 November)
 
@@ -181,3 +181,13 @@ Notes:
 
 - **Human review of the 20 illustrations.** All 1015 questions are published. 539 are approved (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
 - **Licensing decisions:** the image generator's commercial terms, and KJV distribution in the UK (Crown patent).
+
+## Easier sign-in (22 November 2026)
+
+- Problem found: new players had to confirm their email first, but Supabase's built-in sender sends only 2 emails an hour and normally only to the project team. Only 1 registered account existed (the owner's, with no password set).
+- Changed (owner chose this option): Supabase Auth "Confirm email" switched off (mailer_autoconfirm = true). Sign-up with email and password now signs the player in straight away.
+- Guests become an account in one step (email + password + display name). They keep the same player id, so progress, gems and items carry over. Before, guests had to confirm an email and then set a password separately.
+- Account page: opens on Sign in with the email filled in when this device has signed in before. Show/Hide password button, a "Forgot your password?" link under the password, a clearer wrong-password message, and email fields that don't auto-capitalise on phones. The header Sign in button now shows on phones too (it was hidden on small screens).
+- Files: src/engine/cloud.ts, src/pages/Account.tsx, src/components/Layout.tsx. New live test: tests/e2e/signin-live.spec.ts (runs only with SIGNIN_LIVE=1 and BASE_URL). Screenshots are in tests/review/signin/.
+- Tested on draft 6b0332d7 against the live backend, phone and desktop, 2/2 passed. Covered: guest plays → creates account → same player id → signs out → Sign in form with email filled in → wrong password message → signs in. Full suite 92 unit, 126 end-to-end passed. My test accounts were deleted by exact id.
+- Still limited: password-reset emails (built-in sender). Emails are not verified, so a typo in an email cannot be recovered by reset. Google sign-in is not set up.

@@ -60,11 +60,14 @@ export class CloudBackend implements Backend {
 
   async signUp(email: string, password: string, displayName: string) {
     if (this.current?.is_anonymous) {
-      // Link the guest account to an email: progress, gems and inventory stay with the same user id.
-      const { error } = await this.sb.auth.updateUser({ email, data: { display_name: displayName } }, { emailRedirectTo: this.redirect() })
+      // Turn the guest into a full account in one step: same user id, so progress, gems and items stay.
+      // Email confirmation is off for this project, so the email and password take effect at once.
+      const { data, error } = await this.sb.auth.updateUser({ email, password, data: { display_name: displayName } }, { emailRedirectTo: this.redirect() })
       if (error) fail(error)
+      if (data.user) this.current = data.user
       if (displayName) await this.updateProfile({ display_name: displayName })
-      return { needsConfirmation: true }
+      this.listeners.forEach((l) => l())
+      return { needsConfirmation: !data.user?.email_confirmed_at }
     }
     const { data, error } = await this.sb.auth.signUp({ email, password, options: { data: { display_name: displayName }, emailRedirectTo: this.redirect() } })
     if (error) fail(error)

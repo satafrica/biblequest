@@ -66,7 +66,7 @@ export function Layout() {
             <Link to="/profile#wallet" className="chip border-accent/60 bg-raised py-1.5 text-sm" aria-label={`Gem balance: ${wallet.balance} gems. Open wallet`}>
               <Gems n={wallet.balance} />
             </Link>
-            {isGuest && backend.kind === 'cloud' && <Link to="/account" className="btn-secondary btn-sm hidden sm:inline-flex">Sign in</Link>}
+            {isGuest && backend.kind === 'cloud' && <Link to="/account" className="btn-secondary btn-sm">Sign in</Link>}
             <Link to="/profile" className="hidden md:inline-flex" aria-label={`Profile: ${profile?.display_name ?? 'Guest'}`}>
               <Avatar id={profile?.avatar_id ?? 'scroll'} frame={frame} size="sm" />
             </Link>
