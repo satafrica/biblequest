@@ -1,7 +1,7 @@
 {
- "human_review": "approved",
+ "human_review": "pending",
  "reviewed_at": "2026-11-22",
- "approved_by": "Project owner (Samuel), approved the draft document MyBibleGem_new_questions_draft_3.md (\"Approve all and publish\") on 22 Nov 2026",
+ "approved_by": "Owner approved publishing on 22 Nov 2026 (\"Approve all and publish\"), then asked for the 144 to go into Admin Quick review for individual human review (22 Nov 2026)",
  "method": "Expansion 3: AI-drafted with Claude Opus 5.5 from the KJV text; automatic checks (reference exists, at most 15 verses in one chapter, keywords found in the KJV passage, map places and marker spacing); independent AI review against the KJV text (Claude Opus 5.5): 16 of 144 items fixed then re-reviewed, 1 item dropped at the automatic check. See tests/review/modes3/REPORT.md.",
  "ids": [
   "wis-w9-1",

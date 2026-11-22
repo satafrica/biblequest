@@ -179,7 +179,7 @@ Notes:
 
 ## Blocked: needs the project owner
 
-- **Human review of the first 20 illustrations.** 1323 questions are published (1015 earlier, 164 for illustration batch 2 and 144 for expansion 3, all approved by the owner on 22 Nov). 683 are approved (the 144 from expansion 3 by owner sign-off on 22 Nov) (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
+- **Human review of the first 20 illustrations.** 1323 questions are published (1015 earlier, 164 for illustration batch 2 and 144 for expansion 3). 703 are human-approved; 620 await human review in Admin Quick review (177 from expansion 2, 299 new-mode items and the 144 from expansion 3) (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
 - **Licensing decisions:** the image generator's commercial terms, and KJV distribution in the UK (Crown patent).
 
 ## Easier sign-in (22 November 2026)
@@ -226,3 +226,4 @@ Notes:
 - Pipeline: tests/review/modes3. AI drafting (Claude Opus 5.5), automatic KJV check (1 dropped), independent AI review (16 fixed and re-reviewed). The owner approved the draft document ("Approve all and publish"). Report: tests/review/modes3/REPORT.md; approval recorded in content/source/reviewed_5.json.
 - Live DB: 144 questions inserted as published; the 4 case/parable adventures got new summaries, 19 new chapters and re-sorted positions (Bible order). Verified field by field against the generated content: 144/144 questions and 43/43 chapters match. Live total: 1323 published questions.
 - Site: deploy 6b03540481e7669647228016 published to https://mybiblegem.com (index and asset md5 match). Tests: vitest 93/93; new-modes plus batch-3 tests 20/20 on the draft; batch-3 and guest-flow tests 12/12 on production. 22 test guests deleted by exact id.
+- Later on 22 Nov the owner asked for the 144 expansion-3 questions to go into Admin Quick review. reviewed_5.json now records human_review 'pending' (ai_review 'passed'); the live rows were updated the same way (144/144, still published and playable). Live totals: 703 approved, 620 pending. The Quick review page itself was not opened, because that needs the owner's sign-in.
