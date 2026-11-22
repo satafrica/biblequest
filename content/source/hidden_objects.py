@@ -70,8 +70,8 @@ HIDDEN = {
  ],
  "pentecost": [
   ("tongues", "Find one of the cloven tongues like as of fire.", "Acts 2:3", ["cloven tongues like as of fire"], "There appeared unto them cloven tongues like as of fire, and it sat upon each of them (Acts 2:3).", 2,
-   [[15, 0, 5, 7], [4, 10, 4, 7], [12, 18, 5, 7], [30, 12, 5, 8], [41, 6, 5, 8], [46, 18, 5, 7], [55, 14, 5, 8], [64, 28, 5, 7], [78, 23, 5, 7], [87, 23, 7, 7]]),
-  ("jerusalem", "Find the city of Jerusalem outside.", "Acts 2:5", ["Jerusalem"], "There were dwelling at Jerusalem Jews, devout men, out of every nation under heaven (Acts 2:5).", 3, [[89, 3, 11, 30]]),
+   [[14.5, 0, 5, 7], [3.2, 9.5, 5, 7], [12.3, 17.5, 5, 7], [21.5, 16.5, 5, 7], [29.2, 13.5, 5, 7], [40.5, 6.5, 5, 7], [45.2, 18.5, 5, 7], [54.5, 14.5, 5, 7], [63.5, 15.0, 5, 7], [26.2, 23.1, 5, 7], [77.5, 20.2, 5, 7], [71.5, 24.5, 5, 7], [90.2, 23.2, 5, 7], [84.5, 26.5, 5, 7]]),
+  ("jerusalem", "Find the city of Jerusalem outside.", "Acts 2:5", ["Jerusalem"], "There were dwelling at Jerusalem Jews, devout men, out of every nation under heaven (Acts 2:5).", 3, [[90, 4, 10, 34]]),
  ],
  "paul_ship": [
   ("ship", "Find the ship breaking apart.", "Acts 27:41", ["hinder part was broken"], "The forepart stuck fast, and the hinder part was broken with the violence of the waves (Acts 27:41).", 1, [[0, 0, 58, 52]]),

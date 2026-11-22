@@ -208,3 +208,8 @@ Notes:
 - App icon: the old PNG icons had lost the book outline when rendered (only the star and two thin lines showed on phones). They were replaced with an open Bible under a gold star, built from filled shapes and rendered in Chromium (icon-192/512, maskable-192/512, apple-touch-icon, favicon.svg; the header logo uses the favicon). Checked under round and rounded-square masks.
 - Tests: new tests/e2e/credits.spec.ts; 93 unit and 126 end-to-end passed. Draft 6b034241 was tested against the live backend, then published at the owner's request and re-tested on https://mybiblegem.com (credits 6/6; index, icons and favicon match the build). My 6 test guests were deleted by exact id.
 - Phones that already installed the app may keep the old icon until Android refreshes it (can take a day) or the app is removed and added to the home screen again.
+
+## 22 Nov 2026 — Pentecost picture now shows a mix of skin tones
+- New `public/images/pentecost.webp` (same layout; olive, tan, brown and deep-brown skin tones; flames and Jerusalem window kept).
+- Alt text, prompt and note updated (Acts 2:5-11 names visitors from many nations). Find-it boxes for the flames (14) and Jerusalem window re-marked and visually checked.
+- Live DB updated (question_assets 'pentecost'; extra.boxes for the pentecost hidden scene). Published as deploy 6b034447c7abccd8e396ad3a; index and both webp files md5-verified on mybiblegem.com; 26 live Playwright tests passed; 18 test guests removed (auth.users back to 12).
