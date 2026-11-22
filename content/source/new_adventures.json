@@ -5,8 +5,22 @@
   "title": "Old Testament Case Files",
   "testament": "OT",
   "image_id": "joseph_coat",
-  "summary": "Nine investigations from Genesis to Daniel. Read each briefing, study the clues and answer from the text.",
+  "summary": "Fourteen investigations from Genesis to Daniel. Read each briefing, study the clues and answer from the text.",
   "chapters": [
+   {
+    "id": "case-m15",
+    "title": "The Stolen Blessing",
+    "reference_label": "Genesis 27",
+    "image_id": null,
+    "narrative": "Case File: The Stolen Blessing. In Genesis 27, an aged Isaac prepares to bless his son before he dies, yet the blessing ends up in unexpected hands. Examine the evidence in Genesis 27 to reconstruct exactly what happened in Isaac's tent.",
+    "question_ids": [
+     "mys-m15-1",
+     "mys-m15-2",
+     "mys-m15-3",
+     "mys-m15-4",
+     "mys-m15-5"
+    ]
+   },
    {
     "id": "case-m3",
     "title": "The Missing Household Gods",
@@ -78,6 +92,34 @@
     ]
    },
    {
+    "id": "case-m13",
+    "title": "The Travellers with Mouldy Bread",
+    "reference_label": "Joshua 9",
+    "image_id": null,
+    "narrative": "Shortly after Israel's victories at Jericho and Ai, a group of weary strangers arrives at Joshua's camp in Gilgal. They carry worn-out sacks, patched wineskins and dry, mouldy bread, and they ask for a peace treaty. Investigate Joshua 9 to find out who these travellers really are and what happened.",
+    "question_ids": [
+     "mys-m13-1",
+     "mys-m13-2",
+     "mys-m13-3",
+     "mys-m13-4",
+     "mys-m13-5"
+    ]
+   },
+   {
+    "id": "case-m16",
+    "title": "The Left-Handed Messenger",
+    "reference_label": "Judges 3",
+    "image_id": null,
+    "narrative": "A foreign king has ruled Israel for years, until one day he is found dead behind locked doors in his own private chamber, and the visitor who last saw him alive has vanished. Your case file is Judges 3:12-30: follow the evidence from the oppression of Israel to the final outcome, staying strictly with what the text reports.",
+    "question_ids": [
+     "mys-m16-1",
+     "mys-m16-2",
+     "mys-m16-3",
+     "mys-m16-4",
+     "mys-m16-5"
+    ]
+   },
+   {
     "id": "case-m6",
     "title": "The Secret of Samson's Strength",
     "reference_label": "Judges 16",
@@ -103,6 +145,34 @@
      "mys-m7-3",
      "mys-m7-4",
      "mys-m7-5"
+    ]
+   },
+   {
+    "id": "case-m14",
+    "title": "Naboth's Vineyard",
+    "reference_label": "1 Kings 21",
+    "image_id": null,
+    "narrative": "In Jezreel, a man named Naboth is dead and his vineyard has a new owner. Your task is to work through the record of 1 Kings 21 and establish who wanted the land, why it was refused, how Naboth was condemned, and what the LORD declared about it.",
+    "question_ids": [
+     "mys-m14-1",
+     "mys-m14-2",
+     "mys-m14-3",
+     "mys-m14-4",
+     "mys-m14-5"
+    ]
+   },
+   {
+    "id": "case-m17",
+    "title": "The Servant's Secret Errand",
+    "reference_label": "2 Kings 5",
+    "image_id": null,
+    "narrative": "After being healed of leprosy, the Syrian captain Naaman returns to the man of God with gifts and then sets off for home. Soon afterward silver and garments change hands on the road, and a servant's story does not match the facts. Examine 2 Kings 5:15-27 to uncover what happened on this secret errand.",
+    "question_ids": [
+     "mys-m17-1",
+     "mys-m17-2",
+     "mys-m17-3",
+     "mys-m17-4",
+     "mys-m17-5"
     ]
    },
    {
@@ -141,7 +211,7 @@
   "title": "New Testament Case Files",
   "testament": "NT",
   "image_id": "pentecost",
-  "summary": "Three investigations from the Gospels and Acts.",
+  "summary": "Seven investigations from the Gospels and Acts.",
   "chapters": [
    {
     "id": "case-m9",
@@ -155,6 +225,34 @@
      "mys-m9-3",
      "mys-m9-4",
      "mys-m9-5"
+    ]
+   },
+   {
+    "id": "case-m18",
+    "title": "The Guards' Story",
+    "reference_label": "Matthew 27; 28",
+    "image_id": null,
+    "narrative": "A sealed and guarded tomb in Jerusalem was found open, and a story soon spread that the body had been stolen in the night. Your task is to trace the guards' account from the setting of the watch to the report that went around the city, using Matthew 27:62-66 and Matthew 28:1-15. Follow the evidence in order and let the text decide.",
+    "question_ids": [
+     "mys-m18-1",
+     "mys-m18-2",
+     "mys-m18-3",
+     "mys-m18-4",
+     "mys-m18-5"
+    ]
+   },
+   {
+    "id": "case-m19",
+    "title": "The Man Born Blind",
+    "reference_label": "John 9",
+    "image_id": null,
+    "narrative": "A man known to have been blind from birth is suddenly seen walking the streets with full sight, and his neighbors cannot agree whether he is even the same man. The religious leaders open an inquiry, questioning the man and his parents. Reconstruct what really happened from the case file of John 9.",
+    "question_ids": [
+     "mys-m19-1",
+     "mys-m19-2",
+     "mys-m19-3",
+     "mys-m19-4",
+     "mys-m19-5"
     ]
    },
    {
@@ -184,6 +282,34 @@
      "mys-m11-4",
      "mys-m11-5"
     ]
+   },
+   {
+    "id": "case-m20",
+    "title": "The Uproar at Ephesus",
+    "reference_label": "Acts 19",
+    "image_id": null,
+    "narrative": "A riot has shaken the city of Ephesus, and a crowd has packed the theatre shouting the name of a goddess. Your assignment is to reconstruct what happened from the case file in Acts 19:23-41: who stirred the trouble, why, where it spread, and how it ended. Stay with the record; the text alone is your evidence.",
+    "question_ids": [
+     "mys-m20-1",
+     "mys-m20-2",
+     "mys-m20-3",
+     "mys-m20-4",
+     "mys-m20-5"
+    ]
+   },
+   {
+    "id": "case-m21",
+    "title": "The Plot of the Forty",
+    "reference_label": "Acts 23",
+    "image_id": null,
+    "narrative": "In Jerusalem, a band of men has sworn a deadly oath against the apostle Paul, who is being held by the Roman chief captain. Your assignment is to trace the conspiracy from its first vow to its final outcome, using only the evidence recorded in Acts 23:12-35.",
+    "question_ids": [
+     "mys-m21-1",
+     "mys-m21-2",
+     "mys-m21-3",
+     "mys-m21-4",
+     "mys-m21-5"
+    ]
    }
   ]
  },
@@ -193,7 +319,7 @@
   "title": "Parables in Matthew",
   "testament": "NT",
   "image_id": "sermon_mount",
-  "summary": "Read seven parables of Jesus from Matthew in the King James Version, then answer questions on each.",
+  "summary": "Read twelve parables of Jesus from Matthew in the King James Version, then answer questions on each.",
   "chapters": [
    {
     "id": "parable-p6",
@@ -229,6 +355,23 @@
     ]
    },
    {
+    "id": "parable-p13",
+    "title": "The Wheat and the Tares",
+    "reference_label": "Matthew 13:24-30, 36-43",
+    "image_id": null,
+    "narrative": "Seated in a ship by the sea while great multitudes stood on the shore, Jesus \"spake many things unto them in parables\" (Matthew 13:1-3). This is one of the parables He told that day about the kingdom of heaven (Matthew 13:24).",
+    "reading": [
+     "Matthew 13:24-30",
+     "Matthew 13:36-43"
+    ],
+    "question_ids": [
+     "par-p13-1",
+     "par-p13-2",
+     "par-p13-3",
+     "par-p13-4"
+    ]
+   },
+   {
     "id": "parable-p5",
     "title": "The Mustard Seed and the Leaven",
     "reference_label": "Matthew 13:31-35",
@@ -242,6 +385,22 @@
      "par-p5-2",
      "par-p5-3",
      "par-p5-4"
+    ]
+   },
+   {
+    "id": "parable-p14",
+    "title": "The Hidden Treasure, the Pearl and the Net",
+    "reference_label": "Matthew 13:44-52",
+    "image_id": null,
+    "narrative": "After sending the multitude away, Jesus went into the house, and his disciples came to him asking him to declare the parable of the tares (Matthew 13:36). Continuing his private teaching, he gave them three more short pictures of the kingdom of heaven (Matthew 13:44-50).",
+    "reading": [
+     "Matthew 13:44-52"
+    ],
+    "question_ids": [
+     "par-p14-1",
+     "par-p14-2",
+     "par-p14-3",
+     "par-p14-4"
     ]
    },
    {
@@ -274,6 +433,55 @@
      "par-p9-1",
      "par-p9-2",
      "par-p9-3"
+    ]
+   },
+   {
+    "id": "parable-p15",
+    "title": "The Two Sons",
+    "reference_label": "Matthew 21:23-32",
+    "image_id": null,
+    "narrative": "While Jesus was teaching in the temple, the chief priests and the elders of the people challenged him: 'By what authority doest thou these things?' (Matthew 21:23). After they declined to answer his counter-question, saying 'We cannot tell' (Matthew 21:27), he asked them, 'But what think ye?' and told them a story (Matthew 21:28).",
+    "reading": [
+     "Matthew 21:23-32"
+    ],
+    "question_ids": [
+     "par-p15-1",
+     "par-p15-2",
+     "par-p15-3",
+     "par-p15-4"
+    ]
+   },
+   {
+    "id": "parable-p16",
+    "title": "The Wicked Husbandmen",
+    "reference_label": "Matthew 21:33-46",
+    "image_id": null,
+    "narrative": "In the temple at Jerusalem, the chief priests and the elders of the people challenged Jesus, asking, 'By what authority doest thou these things?' (Matthew 21:23). After answering them with a question and the parable of the two sons, Jesus continued, 'Hear another parable' (Matthew 21:33).",
+    "reading": [
+     "Matthew 21:33-40",
+     "Matthew 21:41-46"
+    ],
+    "question_ids": [
+     "par-p16-1",
+     "par-p16-2",
+     "par-p16-3",
+     "par-p16-4"
+    ]
+   },
+   {
+    "id": "parable-p17",
+    "title": "The Marriage of the King's Son",
+    "reference_label": "Matthew 22:1-14",
+    "image_id": null,
+    "narrative": "In the temple during His final days in Jerusalem, Jesus was answering the chief priests and Pharisees, who had perceived that His previous parables were spoken about them (Matthew 21:45-46). Matthew 22:1 says He 'spake unto them again by parables,' and this story of a king's wedding feast follows.",
+    "reading": [
+     "Matthew 22:1-14"
+    ],
+    "question_ids": [
+     "par-p17-1",
+     "par-p17-2",
+     "par-p17-3",
+     "par-p17-4"
     ]
    },
    {
@@ -317,8 +525,24 @@
   "title": "Parables in Luke",
   "testament": "NT",
   "image_id": "good_samaritan",
-  "summary": "Read five parables of Jesus from Luke in the King James Version, then answer questions on each.",
+  "summary": "Read ten parables of Jesus from Luke in the King James Version, then answer questions on each.",
   "chapters": [
+   {
+    "id": "parable-p22",
+    "title": "The Two Debtors",
+    "reference_label": "Luke 7:36-50",
+    "image_id": null,
+    "narrative": "Jesus was eating in the house of a Pharisee named Simon when a woman of the city, known as a sinner, came and anointed His feet. Simon said within himself that a true prophet would know what manner of woman was touching Him, and Jesus answered with this short story addressed to Simon (Luke 7:36-40).",
+    "reading": [
+     "Luke 7:36-50"
+    ],
+    "question_ids": [
+     "par-p22-1",
+     "par-p22-2",
+     "par-p22-3",
+     "par-p22-4"
+    ]
+   },
    {
     "id": "parable-p2",
     "title": "The Good Samaritan",
@@ -336,6 +560,22 @@
     ]
    },
    {
+    "id": "parable-p18",
+    "title": "The Friend at Midnight",
+    "reference_label": "Luke 11:1-13",
+    "image_id": null,
+    "narrative": "After Jesus finished praying in a certain place, one of his disciples asked him, \"Lord, teach us to pray\" (Luke 11:1). Jesus gave them a pattern of prayer (Luke 11:2-4) and then told this story to his disciples (Luke 11:5).",
+    "reading": [
+     "Luke 11:1-13"
+    ],
+    "question_ids": [
+     "par-p18-1",
+     "par-p18-2",
+     "par-p18-3",
+     "par-p18-4"
+    ]
+   },
+   {
     "id": "parable-p7",
     "title": "The Rich Fool",
     "reference_label": "Luke 12:13-21",
@@ -348,6 +588,38 @@
      "par-p7-1",
      "par-p7-2",
      "par-p7-3"
+    ]
+   },
+   {
+    "id": "parable-p19",
+    "title": "The Barren Fig Tree",
+    "reference_label": "Luke 13:1-9",
+    "image_id": null,
+    "narrative": "Some who were present told Jesus of the Galilaeans 'whose blood Pilate had mingled with their sacrifices' (Luke 13:1). Jesus answered them, and then 'spake also this parable' about a fig tree in a vineyard (Luke 13:6).",
+    "reading": [
+     "Luke 13:1-9"
+    ],
+    "question_ids": [
+     "par-p19-1",
+     "par-p19-2",
+     "par-p19-3",
+     "par-p19-4"
+    ]
+   },
+   {
+    "id": "parable-p20",
+    "title": "The Great Supper",
+    "reference_label": "Luke 14:15-24",
+    "image_id": null,
+    "narrative": "While Jesus was eating bread on the sabbath in the house of one of the chief Pharisees (Luke 14:1), a fellow guest at the table spoke up, and Jesus answered him with this story (Luke 14:15-16).",
+    "reading": [
+     "Luke 14:15-24"
+    ],
+    "question_ids": [
+     "par-p20-1",
+     "par-p20-2",
+     "par-p20-3",
+     "par-p20-4"
     ]
    },
    {
@@ -381,6 +653,22 @@
      "par-p4-2",
      "par-p4-3",
      "par-p4-4"
+    ]
+   },
+   {
+    "id": "parable-p21",
+    "title": "The Unjust Judge",
+    "reference_label": "Luke 18:1-8",
+    "image_id": null,
+    "narrative": "In Luke 17:20-37, after the Pharisees asked when the kingdom of God should come, Jesus taught his disciples about the days of the Son of man. Luke 18:1 then tells us that he spake a parable unto them, about a judge and a widow in a certain city.",
+    "reading": [
+     "Luke 18:1-8"
+    ],
+    "question_ids": [
+     "par-p21-1",
+     "par-p21-2",
+     "par-p21-3",
+     "par-p21-4"
     ]
    },
    {

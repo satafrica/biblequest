@@ -1,0 +1,464 @@
+[
+ {
+  "id": "wis-w9-5",
+  "mode": "wisdom",
+  "prompt": "You find a wallet full of cash in an empty parking lot, and the thought of keeping it grows stronger the longer you hold it. You catch yourself thinking, 'God must have put this in my path to tempt me, so it's partly on Him.' What does James 1:13-15 counsel here?",
+  "options": [
+   "Treat the situation as God tempting you, so the responsibility is shared",
+   "Assume that a thought which is only entertained privately can never lead anywhere harmful",
+   "Recognize that God tempts no one; you are drawn away by your own desire, and desire that is allowed to grow brings forth sin",
+   "Keep the cash, since finding it without witnesses proves it was meant for you"
+  ],
+  "correct": 2,
+  "reference": "James 1:13-15",
+  "keywords": [
+   "neither tempteth he any man",
+   "drawn away of his own lust",
+   "enticed"
+  ],
+  "explanation": "James 1:13-15 says God cannot be tempted with evil, neither tempteth he any man; rather every man is tempted when he is drawn away of his own lust and enticed, and lust when it hath conceived bringeth forth sin. Blame cannot be shifted to God, and inner desire left unchecked grows into sin.",
+  "hint": "The passage traces temptation to its true source and describes how it grows.",
+  "difficulty": 3,
+  "kjv": "Let no man say when he is tempted, I am tempted of God: for God cannot be tempted with evil, neither tempteth he any man: But every man is tempted, when he is drawn away of his own lust, and enticed. Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.",
+  "auto_errors": [],
+  "r1_problems": "The scenario has the person say God put the wallet there 'to test me.' Scripture does affirm that God tests people (James 1:2-3, 12; Genesis 22:1). So the error James 1:13 actually addresses is blaming God for enticement to evil, not the idea of being tested. Rewording to 'tempt me' keeps the scenario aligned with the cited verse and avoids implying that believing God tests people is wrong. Otherwise the marked answer is accurate and the distractors are clearly contrary."
+ },
+ {
+  "id": "wis-w12-6",
+  "mode": "wisdom",
+  "prompt": "Your team has just finished an intense stretch of serving clients, so busy that no one had time even to eat lunch. As the leader, you're deciding what to do next. Which response best reflects Jesus' words in Mark 6:31?",
+  "options": [
+   "Schedule another busy stretch immediately to keep momentum",
+   "Tell everyone that rest is only for those who did less work",
+   "Invite them to come apart to a quiet place and rest a while",
+   "Praise the skipped meals as proof of true commitment"
+  ],
+  "correct": 2,
+  "reference": "Mark 6:31",
+  "keywords": [
+   "rest a while",
+   "leisure"
+  ],
+  "explanation": "In Mark 6:31 Jesus told his busy disciples, \"Come ye yourselves apart into a desert place, and rest a while,\" because \"they had no leisure so much as to eat.\"",
+  "hint": "Consider what Jesus told his disciples when they had no leisure even to eat.",
+  "difficulty": 3,
+  "kjv": "And he said unto them, Come ye yourselves apart into a desert place, and rest a while: for there were many coming and going, and they had no leisure so much as to eat.",
+  "auto_errors": [],
+  "r1_problems": "The hint slightly misreads the verse. In Mark 6:31, 'many coming and going' describes the crowds, not the disciples. Jesus' invitation was to the disciples, who 'had no leisure so much as to eat.' Everything else is accurate, and the wrong options are clearly contrary to the verse."
+ },
+ {
+  "id": "wis-w12-4",
+  "mode": "wisdom",
+  "prompt": "You are hosting a dinner where a visiting guest is teaching from the Scriptures. You become irritated that a relative is sitting and listening instead of helping in the kitchen, and you're tempted to complain publicly. What does Jesus' response in Luke 10:40-42 suggest?",
+  "options": [
+   "Insist that serving is always more important than listening",
+   "Ask the guest to tell the relative to get up and help you",
+   "Conclude that hospitality is unimportant and should be abandoned",
+   "Notice that you may be careful and troubled about many things, while one thing is needful"
+  ],
+  "correct": 3,
+  "reference": "Luke 10:40-42",
+  "keywords": [
+   "careful and troubled",
+   "that good part"
+  ],
+  "explanation": "In Luke 10:40-42 Martha asks Jesus to bid her sister help her. Jesus answers that she is \"careful and troubled about many things: But one thing is needful,\" and that Mary \"hath chosen that good part, which shall not be taken away from her.\"",
+  "hint": "Jesus did not tell the listening sister to get up.",
+  "difficulty": 2,
+  "kjv": "But Martha was cumbered about much serving, and came to him, and said, Lord, dost thou not care that my sister hath left me to serve alone? bid her therefore that she help me. And Jesus answered and said unto her, Martha, Martha, thou art careful and troubled about many things: But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.",
+  "auto_errors": [],
+  "r1_problems": "The scenario has the relative listening to a guest's ordinary stories. In the passage, the 'good part' Mary chose was hearing Jesus' word, so equating it with listening to a guest's stories distorts what is 'needful'. The explanation's phrase 'sitting and hearing his word' comes from v39, which is outside the cited text. Option B ('Ask the guest to step in…') is worded awkwardly."
+ },
+ {
+  "id": "wis-w12-8",
+  "mode": "wisdom",
+  "prompt": "You've begun working nights and weekends purely to grow your investments, constantly watching market charts and neglecting friendships. A coworker urges you to chase wealth even harder. Which response best reflects the teaching of Proverbs 23:4-5?",
+  "options": [
+   "Set your eyes firmly on riches, since they are the most lasting thing",
+   "Trust your own cleverness to make sure your riches never leave",
+   "Labour all the harder, because wealth stays with those who pursue it",
+   "Labour not to be rich, remembering that riches make themselves wings and fly away"
+  ],
+  "correct": 3,
+  "reference": "Proverbs 23:4-5",
+  "keywords": [
+   "Labour not to be rich",
+   "wings"
+  ],
+  "explanation": "Proverbs 23:4-5 warns, \"Labour not to be rich: cease from thine own wisdom,\" because \"riches certainly make themselves wings; they fly away as an eagle toward heaven.\"",
+  "hint": "Consider what the proverb says about how lasting riches are, and about relying on your own wisdom to hold onto them.",
+  "difficulty": 4,
+  "kjv": "Labour not to be rich: cease from thine own wisdom. Wilt thou set thine eyes upon that which is not? for riches certainly make themselves wings; they fly away as an eagle toward heaven.",
+  "auto_errors": [],
+  "r1_problems": "The hint ('bird imagery') gives the answer away, because only the marked option mentions wings or flying. That makes the item trivial despite its difficulty rating of 4. Otherwise the item is sound: the marked answer paraphrases the KJV directly, and each distractor contradicts the passage. Option B contradicts 'cease from thine own wisdom', option A contradicts 'set thine eyes upon that which is not', and option C contradicts 'labour not to be rich'. The scenario is a moral one rather than financial advice."
+ },
+ {
+  "id": "mys-m13-2",
+  "mode": "mystery",
+  "case": "m13",
+  "case_title": "The Travellers with Mouldy Bread",
+  "briefing": "Shortly after Israel's victories at Jericho and Ai, a group of weary strangers arrives at Joshua's camp in Gilgal. They carry worn-out sacks, patched wineskins and dry, mouldy bread, and they ask for a peace treaty. Investigate Joshua 9 to find out who these travellers really are and what happened.",
+  "stage": 2,
+  "clue": "Witness statement: the travellers pointed to their dry bread and told the Israelites a story about when it had been packed.",
+  "prompt": "What did the travellers claim about their bread?",
+  "options": [
+   "They took it hot out of their houses on the day they set out",
+   "They bought it at a market in Gilgal",
+   "They received it as a gift from the king of Ai",
+   "They baked it fresh that morning"
+  ],
+  "correct": 0,
+  "reference": "Joshua 9:12-13",
+  "keywords": [
+   "hot",
+   "mouldy",
+   "very long journey"
+  ],
+  "explanation": "In Joshua 9:12-13 the travellers said they took the bread hot from their houses when they set out, and that it had become dry and mouldy, their bottles torn and clothes worn 'by reason of the very long journey.'",
+  "hint": "They used the bread to suggest how long they had been travelling.",
+  "difficulty": 2,
+  "kjv": "This our bread we took hot for our provision out of our houses on the day we came forth to go unto you; but now, behold, it is dry, and it is mouldy: And these bottles of wine, which we filled, were new; and, behold, they be rent: and these our garments and our shoes are become old by reason of the very long journey.",
+  "auto_errors": [],
+  "r1_problems": "The clue adds a detail Scripture does not give: it says 'one of the travellers held up a piece of dry bread.' In Joshua 9:12 the speech is collective ('This our bread we took hot...'), and no single speaker or gesture is described. Everything else is accurate to the KJV: the briefing's details match 9:4-6, and the answer, explanation and hint fit the text."
+ },
+ {
+  "id": "mys-m17-5",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "briefing": "After being healed of leprosy, the Syrian captain Naaman returns to the man of God with gifts and then sets off for home. Soon afterward silver and garments change hands on the road, and a servant's story does not match the facts. Examine 2 Kings 5:15-27 to uncover what happened on this secret errand.",
+  "stage": 5,
+  "clue": "Final interview: Elisha asked, 'Whence comest thou, Gehazi?' The servant answered that he had gone nowhere, but the prophet replied that his own heart had gone with Gehazi.",
+  "prompt": "What really happened when Gehazi stood before Elisha?",
+  "options": [
+   "Gehazi confessed, and Elisha forgave him without consequence.",
+   "Elisha believed Gehazi, and the matter was forgotten.",
+   "Gehazi lied, saying 'Thy servant went no whither'; Elisha revealed he knew, and Naaman's leprosy came upon Gehazi.",
+   "Naaman returned to reclaim the silver, and Gehazi fled."
+  ],
+  "correct": 2,
+  "reference": "2 Kings 5:25-27",
+  "keywords": [
+   "went no whither",
+   "leprosy",
+   "white as snow"
+  ],
+  "explanation": "Gehazi claimed, 'Thy servant went no whither,' but Elisha answered, 'Went not mine heart with thee?' He pronounced that Naaman's leprosy would cleave to Gehazi, and Gehazi went out a leper as white as snow (2 Kings 5:25-27).",
+  "hint": "Compare Gehazi's answer with what Elisha said he already knew.",
+  "difficulty": 2,
+  "kjv": "But he went in, and stood before his master. And Elisha said unto him, Whence comest thou, Gehazi? And he said, Thy servant went no whither. And he said unto him, Went not mine heart with thee, when the man turned again from his chariot to meet thee? Is it a time to receive money, and to receive garments, and oliveyards, and vineyards, and sheep, and oxen, and menservants, and maidservants? The leprosy therefore of Naaman shall cleave unto thee, and unto thy seed for ever. And he went out from his presence a leper as white as snow.",
+  "auto_errors": [],
+  "r1_problems": "The clue's phrase 'the prophet said his heart had gone with him' is ambiguous and could be read as Gehazi's heart. In the KJV, Elisha says 'Went not mine heart with thee', meaning Elisha's own heart went with Gehazi. The explanation has the same ambiguity."
+ },
+ {
+  "id": "mys-m17-4",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "briefing": "After being healed of leprosy, the Syrian captain Naaman returns to the man of God with gifts and then sets off for home. Soon afterward silver and garments change hands on the road, and a servant's story does not match the facts. Examine 2 Kings 5:15-27 to uncover what happened on this secret errand.",
+  "stage": 4,
+  "clue": "Observation at the tower: 'Two of Naaman's servants carried the bags ahead of the man, then were sent on their way.'",
+  "prompt": "What did Gehazi do with the silver and garments when he came to the tower?",
+  "options": [
+   "He gave them to the two young men from mount Ephraim.",
+   "He took them from the servants' hands and bestowed them in the house, then let the men go.",
+   "He brought them openly to Elisha.",
+   "He buried them beside the Jordan."
+  ],
+  "correct": 1,
+  "reference": "2 Kings 5:24",
+  "keywords": [
+   "the tower",
+   "bestowed them in the house"
+  ],
+  "explanation": "At the tower Gehazi took the goods from the servants, bestowed them in the house, and sent the men away (2 Kings 5:24).",
+  "hint": "Look at where he stopped and where the goods were put.",
+  "difficulty": 2,
+  "kjv": "And when he came to the tower, he took them from their hand, and bestowed them in the house: and he let the men go, and they departed.",
+  "auto_errors": [],
+  "r1_problems": "The clue says 'near the hill', but the KJV says 'the tower', so it contradicts the supplied text. 'The goods were not seen again' adds a detail Scripture does not give. The question, options, answer, explanation and hint are sound."
+ },
+ {
+  "id": "mys-m14-1",
+  "mode": "mystery",
+  "case": "m14",
+  "case_title": "Naboth's Vineyard",
+  "briefing": "In Jezreel, a man named Naboth is dead and his vineyard has a new owner. Your task is to work through the record of 1 Kings 21 and establish who wanted the land, why it was refused, how Naboth was condemned, and what the LORD declared about it.",
+  "stage": 1,
+  "clue": "Surveyor's note: The vineyard in question lay in Jezreel, right beside the palace of Ahab king of Samaria. The king made an offer for it.",
+  "prompt": "According to Ahab's offer, what did he want to turn Naboth's vineyard into?",
+  "options": [
+   "A garden of herbs",
+   "A courtyard for his chariots",
+   "A burial ground for his fathers",
+   "A threshing floor for grain"
+  ],
+  "correct": 0,
+  "reference": "1 Kings 21:1-2",
+  "keywords": [
+   "Naboth the Jezreelite",
+   "garden of herbs",
+   "vineyard"
+  ],
+  "explanation": "Ahab asked for the vineyard 'that I may have it for a garden of herbs, because it is near unto my house,' offering a better vineyard or its worth in money (1 Kings 21:2).",
+  "hint": "Ahab gave as his reason that the vineyard was near unto his house. Think of a plot he could use close to home.",
+  "difficulty": 2,
+  "kjv": "And it came to pass after these things, that Naboth the Jezreelite had a vineyard, which was in Jezreel, hard by the palace of Ahab king of Samaria. And Ahab spake unto Naboth, saying, Give me thy vineyard, that I may have it for a garden of herbs, because it is near unto my house: and I will give thee for it a better vineyard than it; or, if it seem good to thee, I will give thee the worth of it in money.",
+  "auto_errors": [],
+  "r1_problems": "The hint gives the answer away: 'what kind of garden he named' points to the only option containing the word 'garden.' Otherwise the clue, prompt, answer and explanation match 1 Kings 21:1-2."
+ },
+ {
+  "id": "mys-m18-2",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "briefing": "A sealed and guarded tomb in Jerusalem was found open, and a story soon spread that the body had been stolen in the night. Your task is to trace the guards' account from the setting of the watch to the report that went around the city, using Matthew 27:62-66 and Matthew 28:1-15. Follow the evidence in order and let the text decide.",
+  "stage": 2,
+  "clue": "Governor's reply on record: 'Ye have a watch: go your way, make it as sure as ye can.' Those who asked then went to the sepulchre to act on his word.",
+  "prompt": "What two measures were taken to secure the sepulchre?",
+  "options": [
+   "The stone was sealed and a watch was set",
+   "The door was bricked up and the key given to Pilate",
+   "The body was moved and the tomb left empty",
+   "A second stone was added and the disciples were arrested"
+  ],
+  "correct": 0,
+  "reference": "Matthew 27:65-66",
+  "keywords": [
+   "sealing the stone",
+   "setting a watch"
+  ],
+  "explanation": "They went and made the sepulchre sure, 'sealing the stone, and setting a watch' (Matthew 27:65-66).",
+  "hint": "The final verse names two actions joined by 'and'.",
+  "difficulty": 2,
+  "kjv": "Pilate said unto them, Ye have a watch: go your way, make it as sure as ye can. So they went, and made the sepulchre sure, sealing the stone, and setting a watch.",
+  "auto_errors": [],
+  "r1_problems": "The clue adds an unscriptural detail: 'A later inspection noted marks on the stone.' Matthew records no inspection and no marks on the stone. The question, options, answer, explanation and hint are otherwise accurate to Matthew 27:65-66."
+ },
+ {
+  "id": "mys-m18-3",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "briefing": "A sealed and guarded tomb in Jerusalem was found open, and a story soon spread that the body had been stolen in the night. Your task is to trace the guards' account from the setting of the watch to the report that went around the city, using Matthew 27:62-66 and Matthew 28:1-15. Follow the evidence in order and let the text decide.",
+  "stage": 3,
+  "clue": "Early on the first day of the week, Mary Magdalene and the other Mary came to see the sepulchre. There was a great earthquake, and the stone was no longer in the door.",
+  "prompt": "According to the text, who rolled back the stone, and what happened to the keepers?",
+  "options": [
+   "The angel of the Lord rolled it back, and the keepers shook and became as dead men",
+   "The disciples rolled it back while the keepers slept",
+   "The women rolled it back, and the keepers fled to Pilate",
+   "The earthquake moved it, and the keepers arrested the women"
+  ],
+  "correct": 0,
+  "reference": "Matthew 28:1-4",
+  "keywords": [
+   "rolled back the stone",
+   "became as dead men"
+  ],
+  "explanation": "The angel of the Lord descended, rolled back the stone and sat upon it, and 'for fear of him the keepers did shake, and became as dead men' (Matthew 28:2-4).",
+  "hint": "Check who 'descended from heaven' and how the keepers reacted 'for fear of him'.",
+  "difficulty": 2,
+  "kjv": "In the end of the sabbath, as it began to dawn toward the first day of the week, came Mary Magdalene and the other Mary to see the sepulchre. And, behold, there was a great earthquake: for the angel of the Lord descended from heaven, and came and rolled back the stone from the door, and sat upon it. His countenance was like lightning, and his raiment white as snow: And for fear of him the keepers did shake, and became as dead men.",
+  "auto_errors": [],
+  "r1_problems": "The clue adds a detail Scripture does not give. 'Witnesses felt the ground shake' implies particular people, possibly the women, experienced the earthquake. The text says only 'there was a great earthquake' and does not say who felt it. The hint is somewhat revealing but acceptable."
+ },
+ {
+  "id": "mys-m20-1",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "briefing": "A riot has shaken the city of Ephesus, and a crowd has packed the theatre shouting the name of a goddess. Your assignment is to reconstruct what happened from the case file in Acts 19:23-41: who stirred the trouble, why, where it spread, and how it ended. Stay with the record; the text alone is your evidence.",
+  "stage": 1,
+  "clue": "Trade ledger note: a local craftsman known for making silver shrines for Diana is said to have brought 'no small gain' unto the craftsmen. He called them together with the workmen of like occupation.",
+  "prompt": "Who called the craftsmen together at the start of the uproar, and what was his trade?",
+  "options": [
+   "Demetrius, a silversmith who made silver shrines for Diana",
+   "Alexander, a coppersmith who made idols for Jupiter",
+   "Gaius, a tentmaker who sold goods in the market",
+   "The townclerk, a scribe who kept the temple records"
+  ],
+  "correct": 0,
+  "reference": "Acts 19:24-25",
+  "keywords": [
+   "Demetrius",
+   "silver shrines",
+   "silversmith"
+  ],
+  "explanation": "Acts 19:24-25 names Demetrius, a silversmith who made silver shrines for Diana, as the man who called together the workmen of like occupation.",
+  "hint": "Look for the man whose craft brought 'no small gain unto the craftsmen.'",
+  "difficulty": 3,
+  "kjv": "For a certain man named Demetrius, a silversmith, which made silver shrines for Diana, brought no small gain unto the craftsmen; Whom he called together with the workmen of like occupation, and said, Sirs, ye know that by this craft we have our wealth.",
+  "auto_errors": [],
+  "r1_problems": "The clue says 'small silver shrines,' but the KJV says only 'silver shrines'; 'small' is an added detail. 'Craftsmen of the city' is a slight embellishment of 'the craftsmen.' Everything else is accurate, and no distractor is defensible: Alexander and Gaius appear in the chapter but did not call the craftsmen together."
+ },
+ {
+  "id": "mys-m20-3",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "briefing": "A riot has shaken the city of Ephesus, and a crowd has packed the theatre shouting the name of a goddess. Your assignment is to reconstruct what happened from the case file in Acts 19:23-41: who stirred the trouble, why, where it spread, and how it ended. Stay with the record; the text alone is your evidence.",
+  "stage": 3,
+  "clue": "Scene report: the whole city was filled with confusion. Two of Paul's travel companions from Macedonia were seized, and the crowd rushed with one accord to a public gathering place. Paul's friends urged him not to go in.",
+  "prompt": "As the crowd rushed with one accord into the theatre, whom did they seize?",
+  "options": [
+   "Paul and Silas",
+   "Alexander and Demetrius",
+   "Gaius and Aristarchus",
+   "Timothy and Erastus"
+  ],
+  "correct": 2,
+  "reference": "Acts 19:29-31",
+  "keywords": [
+   "theatre",
+   "Gaius and Aristarchus"
+  ],
+  "explanation": "Acts 19:29 records that the crowd caught Gaius and Aristarchus, men of Macedonia, Paul's companions in travel, and rushed into the theatre. Verses 30-31 add that the disciples and certain of the chief of Asia kept Paul from entering.",
+  "hint": "The text calls them 'men of Macedonia, Paul's companions in travel.'",
+  "difficulty": 3,
+  "kjv": "And the whole city was filled with confusion: and having caught Gaius and Aristarchus, men of Macedonia, Paul’s companions in travel, they rushed with one accord into the theatre. And when Paul would have entered in unto the people, the disciples suffered him not. And certain of the chief of Asia, which were his friends, sent unto him, desiring him that he would not adventure himself into the theatre.",
+  "auto_errors": [],
+  "r1_problems": "The briefing already says the crowd 'packed the theatre', and only one option mentions the theatre. That gives away the answer without the player needing the names. The hint ('adventure himself' into this place) also points only to the location. The clue and the answer are otherwise accurate to Acts 19:29-31."
+ },
+ {
+  "id": "par-p19-4",
+  "mode": "parables",
+  "parable": "p19",
+  "parable_title": "The Barren Fig Tree",
+  "intro": "Some who were present told Jesus of the Galilaeans 'whose blood Pilate had mingled with their sacrifices' (Luke 13:1). Jesus answered them, and then 'spake also this parable' about a fig tree in a vineyard (Luke 13:6).",
+  "reading": [
+   "Luke 13:1-9"
+  ],
+  "prompt": "Just before this parable, Jesus spoke of the Galilaeans slain by Pilate and the eighteen on whom the tower in Siloam fell. What did he say about them and about his hearers?",
+  "options": [
+   "They were not sinners above others; and except ye repent, ye shall all likewise perish",
+   "They were sinners above all others, so his hearers had nothing to fear",
+   "Such disasters fall only on the wicked, so the righteous need not repent",
+   "Their deaths were a sign that the end of the world had come"
+  ],
+  "correct": 0,
+  "reference": "Luke 13:1-5",
+  "keywords": [
+   "except ye repent",
+   "likewise perish",
+   "Siloam"
+  ],
+  "explanation": "Jesus asked whether those victims were sinners above all others and answered, 'I tell you, Nay: but, except ye repent, ye shall all likewise perish' (Luke 13:3, 5). He then told the parable of the barren fig tree, for which the dresser asked, 'Lord, let it alone this year also' (Luke 13:6-9).",
+  "hint": "Jesus gave the same answer twice, once for each tragedy.",
+  "difficulty": 3,
+  "kjv": "There were present at that season some that told him of the Galilæans, whose blood Pilate had mingled with their sacrifices. And Jesus answering said unto them, Suppose ye that these Galilæans were sinners above all the Galilæans, because they suffered such things? I tell you, Nay: but, except ye repent, ye shall all likewise perish. Or those eighteen, upon whom the tower in Siloam fell, and slew them, think ye that they were sinners above all men that dwelt in Jerusalem? I tell you, Nay: but, except ye repent, ye shall all likewise perish.",
+  "reading_text": [
+   {
+    "ref": "Luke 13:1-9",
+    "text": "There were present at that season some that told him of the Galilæans, whose blood Pilate had mingled with their sacrifices. And Jesus answering said unto them, Suppose ye that these Galilæans were sinners above all the Galilæans, because they suffered such things? I tell you, Nay: but, except ye repent, ye shall all likewise perish. Or those eighteen, upon whom the tower in Siloam fell, and slew them, think ye that they were sinners above all men that dwelt in Jerusalem? I tell you, Nay: but, except ye repent, ye shall all likewise perish. He spake also this parable; A certain man had a fig tree planted in his vineyard; and he came and sought fruit thereon, and found none. Then said he unto the dresser of his vineyard, Behold, these three years I come seeking fruit on this fig tree, and find none: cut it down; why cumbereth it the ground? And he answering said unto him, Lord, let it alone this year also, till I shall dig about it, and dung it: And if it bear fruit, well: and if not, then after that thou shalt cut it down."
+   }
+  ],
+  "auto_errors": [],
+  "r1_problems": "The explanation says the fig tree was 'given one more year', but the text records only the dresser's request ('let it alone this year also'). The owner's answer is never stated. The rest of the item is accurate."
+ },
+ {
+  "id": "par-p14-4",
+  "mode": "parables",
+  "parable": "p14",
+  "parable_title": "The Hidden Treasure, the Pearl and the Net",
+  "intro": "After sending the multitude away, Jesus went into the house, and his disciples came to him asking him to declare the parable of the tares (Matthew 13:36). Continuing his private teaching, he gave them three more short pictures of the kingdom of heaven (Matthew 13:44-50).",
+  "reading": [
+   "Matthew 13:44-52"
+  ],
+  "prompt": "After asking his disciples whether they had understood all these things, Jesus said that every scribe instructed unto the kingdom of heaven is like what?",
+  "options": [
+   "A householder who brings forth out of his treasure things new and old",
+   "A merchant who sells all his pearls for a field",
+   "A fisherman who casts away every fish he catches",
+   "A man who hides his treasure so that no one may find it"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:51-52",
+  "keywords": [
+   "householder",
+   "things new and old"
+  ],
+  "explanation": "After the disciples answered 'Yea, Lord,' Jesus said in Matthew 13:52 that every instructed scribe is like a householder who brings forth out of his treasure things new and old.",
+  "hint": "This picture also involves treasure, but instead of hiding it, the man brings things forth out of it.",
+  "difficulty": 3,
+  "kjv": "Jesus saith unto them, Have ye understood all these things? They say unto him, Yea, Lord. Then said he unto them, Therefore every scribe which is instructed unto the kingdom of heaven is like unto a man that is an householder, which bringeth forth out of his treasure things new and old.",
+  "reading_text": [
+   {
+    "ref": "Matthew 13:44-52",
+    "text": "Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field. Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls: Who, when he had found one pearl of great price, went and sold all that he had, and bought it. Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind: Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away. So shall it be at the end of the world: the angels shall come forth, and sever the wicked from among the just, And shall cast them into the furnace of fire: there shall be wailing and gnashing of teeth. Jesus saith unto them, Have ye understood all these things? They say unto him, Yea, Lord. Then said he unto them, Therefore every scribe which is instructed unto the kingdom of heaven is like unto a man that is an householder, which bringeth forth out of his treasure things new and old."
+   }
+  ],
+  "auto_errors": [],
+  "r1_problems": "The hint says the householder 'shares' his treasure, which interprets beyond the KJV wording. The text says only that he 'bringeth forth out of his treasure things new and old'. Everything else is accurate."
+ },
+ {
+  "id": "par-p20-3",
+  "mode": "parables",
+  "parable": "p20",
+  "parable_title": "The Great Supper",
+  "intro": "While Jesus was eating bread on the sabbath in the house of one of the chief Pharisees (Luke 14:1), a fellow guest at the table spoke up, and Jesus answered him with this story (Luke 14:15-16).",
+  "reading": [
+   "Luke 14:15-24"
+  ],
+  "prompt": "How does the story close, stating what will happen to the men who were first invited?",
+  "options": [
+   "They will be given seats of honour when they finally arrive.",
+   "They will be invited again to a second supper.",
+   "None of them shall taste of his supper.",
+   "They must pay for the food that was prepared."
+  ],
+  "correct": 2,
+  "reference": "Luke 14:23-24",
+  "keywords": [
+   "shall taste of my supper",
+   "compel them to come in"
+  ],
+  "explanation": "After the lord orders his servant to compel guests from the highways and hedges so that his house may be filled, the story closes: \"none of those men which were bidden shall taste of my supper\" (Luke 14:24).",
+  "hint": "Think about what the refusers lose by turning down the invitation.",
+  "difficulty": 2,
+  "kjv": "And the lord said unto the servant, Go out into the highways and hedges, and compel them to come in, that my house may be filled. For I say unto you, That none of those men which were bidden shall taste of my supper.",
+  "reading_text": [
+   {
+    "ref": "Luke 14:15-24",
+    "text": "And when one of them that sat at meat with him heard these things, he said unto him, Blessed is he that shall eat bread in the kingdom of God. Then said he unto him, A certain man made a great supper, and bade many: And sent his servant at supper time to say to them that were bidden, Come; for all things are now ready. And they all with one consent began to make excuse. The first said unto him, I have bought a piece of ground, and I must needs go and see it: I pray thee have me excused. And another said, I have bought five yoke of oxen, and I go to prove them: I pray thee have me excused. And another said, I have married a wife, and therefore I cannot come. So that servant came, and shewed his lord these things. Then the master of the house being angry said to his servant, Go out quickly into the streets and lanes of the city, and bring in hither the poor, and the maimed, and the halt, and the blind. And the servant said, Lord, it is done as thou hast commanded, and yet there is room. And the lord said unto the servant, Go out into the highways and hedges, and compel them to come in, that my house may be filled. For I say unto you, That none of those men which were bidden shall taste of my supper."
+   }
+  ],
+  "auto_errors": [],
+  "r1_problems": "The explanation says 'After filling his house with others', but the text only records the lord ordering the servant to compel guests in 'that my house may be filled'. The filling itself is not narrated. Also, the speaker of v.24 ('For I say unto you', plural) is ambiguous: it could be the lord or Jesus addressing his hearers. Attributing it firmly to the master in the prompt is slightly interpretive, though it is a common reading."
+ },
+ {
+  "id": "par-p22-1",
+  "mode": "parables",
+  "parable": "p22",
+  "parable_title": "The Two Debtors",
+  "intro": "Jesus was eating in the house of a Pharisee named Simon when a woman of the city, known as a sinner, came and anointed His feet. Simon said within himself that a true prophet would know what manner of woman was touching Him, and Jesus answered with this short story addressed to Simon (Luke 7:36-40).",
+  "reading": [
+   "Luke 7:36-50"
+  ],
+  "prompt": "In Jesus' story, how much did the two debtors owe the creditor?",
+  "options": [
+   "One owed five hundred pence, and the other fifty",
+   "One owed a thousand talents, and the other a hundred",
+   "Each owed fifty pence",
+   "One owed ten pence, and the other one pence"
+  ],
+  "correct": 0,
+  "reference": "Luke 7:41",
+  "keywords": [
+   "five hundred pence",
+   "two debtors"
+  ],
+  "explanation": "Jesus said a certain creditor had two debtors: 'the one owed five hundred pence, and the other fifty' (Luke 7:41).",
+  "hint": "Both debts were reckoned in pence, and the larger one ran into the hundreds.",
+  "difficulty": 1,
+  "kjv": "There was a certain creditor which had two debtors: the one owed five hundred pence, and the other fifty.",
+  "reading_text": [
+   {
+    "ref": "Luke 7:36-50",
+    "text": "And one of the Pharisees desired him that he would eat with him. And he went into the Pharisee’s house, and sat down to meat. And, behold, a woman in the city, which was a sinner, when she knew that Jesus sat at meat in the Pharisee’s house, brought an alabaster box of ointment, And stood at his feet behind him weeping, and began to wash his feet with tears, and did wipe them with the hairs of her head, and kissed his feet, and anointed them with the ointment. Now when the Pharisee which had bidden him saw it, he spake within himself, saying, This man, if he were a prophet, would have known who and what manner of woman this is that toucheth him: for she is a sinner. And Jesus answering said unto him, Simon, I have somewhat to say unto thee. And he saith, Master, say on. There was a certain creditor which had two debtors: the one owed five hundred pence, and the other fifty. And when they had nothing to pay, he frankly forgave them both. Tell me therefore, which of them will love him most? Simon answered and said, I suppose that he, to whom he forgave most. And he said unto him, Thou hast rightly judged. And he turned to the woman, and said unto Simon, Seest thou this woman? I entered into thine house, thou gavest me no water for my feet: but she hath washed my feet with tears, and wiped them with the hairs of her head. Thou gavest me no kiss: but this woman since the time I came in hath not ceased to kiss my feet. My head with oil thou didst not anoint: but this woman hath anointed my feet with ointment. Wherefore I say unto thee, Her sins, which are many, are forgiven; for she loved much: but to whom little is forgiven, the same loveth little. And he said unto her, Thy sins are forgiven. And they that sat at meat with him began to say within themselves, Who is this that forgiveth sins also? And he said to the woman, Thy faith hath saved thee; go in peace."
+   }
+  ],
+  "auto_errors": [],
+  "r1_problems": "The hint ('ten times the size') fits options B (1000/100) and D (10/1) as well as A, so it does not help the player narrow the choices. It is not inaccurate, just ineffective. Everything else is accurate to Luke 7:36-41."
+ }
+]

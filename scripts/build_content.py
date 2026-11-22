@@ -105,7 +105,7 @@ def base(qid, mode, ref, diff, prompt, options, correct, expl, hint=None, image=
 REVIEWED = json.load(open(os.path.join(ROOT, "content", "source", "reviewed.json"), encoding="utf-8"))
 REVIEWED_IDS = set(REVIEWED["ids"])
 REVIEWED_BATCHES = []
-for _name in ("reviewed.json", "reviewed_2.json", "reviewed_3.json", "reviewed_4.json"):
+for _name in ("reviewed.json", "reviewed_2.json", "reviewed_3.json", "reviewed_4.json", "reviewed_5.json"):
     _path = os.path.join(ROOT, "content", "source", _name)
     if os.path.exists(_path):
         _b = json.load(open(_path, encoding="utf-8")); _b["ids"] = set(_b["ids"]); REVIEWED_BATCHES.append(_b)

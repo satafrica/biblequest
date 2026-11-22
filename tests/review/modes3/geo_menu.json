@@ -1,0 +1,908 @@
+{
+"Antioch 1": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 18
+},
+"Arnon": {
+"type": "river",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 12
+},
+"Aroer 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 13
+},
+"Ashdod": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 21
+},
+"Ashkelon": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 12
+},
+"Athens": {
+"type": "settlement",
+"views": [
+"med"
+],
+"verses": 6
+},
+"Babylon 1": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 296
+},
+"Beersheba 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 23
+},
+"Berea": {
+"type": "settlement",
+"views": [
+"med"
+],
+"verses": 6
+},
+"Beth-horon": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 7
+},
+"Beth-shan": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 8
+},
+"Beth-shemesh 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 17
+},
+"Bethany 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 12
+},
+"Bethlehem 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 52
+},
+"Bozrah 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 8
+},
+"Caesarea": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 18
+},
+"Capernaum": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 18
+},
+"Corinth": {
+"type": "settlement",
+"views": [
+"med"
+],
+"verses": 11
+},
+"Crete": {
+"type": "island",
+"views": [
+"east",
+"med"
+],
+"verses": 9
+},
+"Cyprus": {
+"type": "island",
+"views": [
+"east",
+"med"
+],
+"verses": 12
+},
+"Cyrene": {
+"type": "settlement",
+"views": [
+"med"
+],
+"verses": 7
+},
+"Damascus": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 58
+},
+"Dan": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 25
+},
+"Dedan": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 7
+},
+"Dibon 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 10
+},
+"Edrei 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 7
+},
+"Ekron": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 20
+},
+"Ephesus": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 20
+},
+"Euphrates": {
+"type": "river",
+"views": [
+"east"
+],
+"verses": 44
+},
+"Gath 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 38
+},
+"Gaza": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 22
+},
+"Gezer": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 14
+},
+"Gibeon": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 39
+},
+"Hamath 1": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 21
+},
+"Haran": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 12
+},
+"Hazor 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 11
+},
+"Hebron": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 62
+},
+"Iconium": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 6
+},
+"Jabbok": {
+"type": "river",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 7
+},
+"Jarmuth 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 6
+},
+"Jattir": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 6
+},
+"Jericho 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 63
+},
+"Jerusalem": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 955
+},
+"Jezreel 2": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 29
+},
+"Joppa": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 14
+},
+"Jordan": {
+"type": "river",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 202
+},
+"Kadesh-barnea": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 24
+},
+"Keilah": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 15
+},
+"Kidron": {
+"type": "river",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 14
+},
+"Kiriath-jearim": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 19
+},
+"Lachish": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 22
+},
+"Laodicea": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 6
+},
+"Lod": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 7
+},
+"Lystra": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 6
+},
+"Machpelah": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 6
+},
+"Mareshah": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 6
+},
+"Megiddo": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 12
+},
+"Memphis": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 8
+},
+"Meribah 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 9
+},
+"Mount Carmel": {
+"type": "mountain",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 18
+},
+"Mount Gilboa": {
+"type": "mountain",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 8
+},
+"Mount Hermon": {
+"type": "mountain",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 16
+},
+"Mount Tabor": {
+"type": "mountain",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 9
+},
+"Mount Zion": {
+"type": "hill",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 25
+},
+"Mount of Olives": {
+"type": "hill",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 18
+},
+"Nazareth": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 32
+},
+"Nile": {
+"type": "river",
+"views": [
+"east",
+"med"
+],
+"verses": 45
+},
+"Nineveh": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 30
+},
+"Peor": {
+"type": "mountain",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 8
+},
+"Rabbah 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 17
+},
+"Ramoth-gilead": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 20
+},
+"Riblah 1": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 11
+},
+"Rome": {
+"type": "settlement",
+"views": [
+"med"
+],
+"verses": 15
+},
+"Salt Sea": {
+"type": "body of water",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 21
+},
+"Samaria 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 113
+},
+"Sea of Galilee": {
+"type": "body of water",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 10
+},
+"Shechem": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 45
+},
+"Shiloh": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 37
+},
+"Shunem": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Sidon": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 37
+},
+"Susa": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 20
+},
+"Taanach": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 7
+},
+"Tahpanhes": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 7
+},
+"Tekoa": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 14
+},
+"Thebes": {
+"type": "settlement",
+"views": [
+"east"
+],
+"verses": 6
+},
+"Thessalonica": {
+"type": "settlement",
+"views": [
+"med"
+],
+"verses": 9
+},
+"Timnah 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 9
+},
+"Tirzah": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 13
+},
+"Troas": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 6
+},
+"Tyre": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 64
+},
+"Zoan": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+],
+"verses": 7
+},
+"Zorah": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+],
+"verses": 11
+},
+"Philippi": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+]
+},
+"Malta": {
+"type": "island",
+"views": [
+"med"
+]
+},
+"Patmos": {
+"type": "island",
+"views": [
+"east",
+"med"
+]
+},
+"Tarsus": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+]
+},
+"Ur 2": {
+"type": "settlement",
+"views": [
+"east"
+]
+},
+"Nain": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Bethsaida 2": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Antioch 2": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+]
+},
+"Derbe": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+]
+},
+"Miletus": {
+"type": "settlement",
+"views": [
+"east",
+"med"
+]
+},
+"Mount Moriah": {
+"type": "hill",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Gethsemane": {
+"type": "garden",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Bethel 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Ramah 1": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Zarephath": {
+"type": "settlement",
+"views": [
+"land",
+"east",
+"med"
+]
+},
+"Ararat": {
+"type": "region",
+"views": [
+"east"
+]
+},
+"Tigris": {
+"type": "river",
+"views": [
+"east"
+]
+}
+}

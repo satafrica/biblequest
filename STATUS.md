@@ -179,7 +179,7 @@ Notes:
 
 ## Blocked: needs the project owner
 
-- **Human review of the first 20 illustrations.** 1179 questions are published (1015 earlier plus 164 for illustration batch 2, which the owner approved on 22 Nov). 539 are approved (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
+- **Human review of the first 20 illustrations.** 1323 questions are published (1015 earlier, 164 for illustration batch 2 and 144 for expansion 3, all approved by the owner on 22 Nov). 683 are approved (the 144 from expansion 3 by owner sign-off on 22 Nov) (232 after a KJV accuracy review on 21 Nov; 307 by owner sign-off on the automated checks on 22 Nov); the 177 from expansion 2 and the 299 new-mode items await human review in Quick review.
 - **Licensing decisions:** the image generator's commercial terms, and KJV distribution in the UK (Crown patent).
 
 ## Easier sign-in (22 November 2026)
@@ -219,3 +219,10 @@ Notes:
 - Prompts and notes updated via DIVERSIFY in content/source/adventures_assets.py (applied to assets_2.py too). Find-it boxes unchanged and visually re-checked on every picture.
 - New docs/ILLUSTRATION_GUIDE.md: people the KJV calls Ethiopian (Numbers 12:1, Jeremiah 38:7, Acts 8:27) must be shown with dark skin. No current picture depicts them.
 - Live DB question_assets updated (12 rows). Published deploy 6b0347936607b27cc690213f; index and all 24 webp files md5-verified on mybiblegem.com; 26 live Playwright tests passed; 18 test guests removed (auth.users back to 12).
+
+## Expansion 3 (22 Nov 2026)
+
+- 144 new questions: 40 Wisdom Decisions (w9 to w13), 45 Bible Mystery stages in 9 new case files (m13 to m21; OT case files now 14, NT 7), 40 Parables Explorer questions for 10 new parables (p13 to p22; Matthew now 12, Luke 10), and 19 Geography Explorer map questions (gt, gs).
+- Pipeline: tests/review/modes3. AI drafting (Claude Opus 5.5), automatic KJV check (1 dropped), independent AI review (16 fixed and re-reviewed). The owner approved the draft document ("Approve all and publish"). Report: tests/review/modes3/REPORT.md; approval recorded in content/source/reviewed_5.json.
+- Live DB: 144 questions inserted as published; the 4 case/parable adventures got new summaries, 19 new chapters and re-sorted positions (Bible order). Verified field by field against the generated content: 144/144 questions and 43/43 chapters match. Live total: 1323 published questions.
+- Site: deploy 6b03540481e7669647228016 published to https://mybiblegem.com (index and asset md5 match). Tests: vitest 93/93; new-modes plus batch-3 tests 20/20 on the draft; batch-3 and guest-flow tests 12/12 on production. 22 test guests deleted by exact id.

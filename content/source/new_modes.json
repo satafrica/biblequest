@@ -5042,5 +5042,3234 @@
   "explanation": "Jesus' command to watch, because no one knows the day or hour of the Son of man's coming, leads directly into this parable of a lord who returns \"after a long time\" (Matthew 25:13-14, 19).",
   "hint": "Look at the last verse of the parable of the ten virgins, just before this one begins.",
   "difficulty": 3
+ },
+ {
+  "id": "wis-w9-1",
+  "mode": "wisdom",
+  "prompt": "You are finishing an expense report late at night, and padding a few receipts would be easy and probably never noticed. You start telling yourself that no one in your position could resist, and that this pressure is unlike anything anyone else faces. What does 1 Corinthians 10:13 counsel here?",
+  "options": [
+   "Accept that your temptation is unique to you and too strong to resist, so a small lapse is understandable",
+   "Remember that this temptation is common to man, and that God is faithful to provide a way to escape so you can bear it",
+   "Give in this once, since God sometimes allows people to be tempted beyond what they are able to bear",
+   "Conclude that God has left you alone in this, so you must decide entirely on your own strength"
+  ],
+  "correct": 1,
+  "reference": "1 Corinthians 10:13",
+  "keywords": [
+   "common to man",
+   "way to escape",
+   "God is faithful"
+  ],
+  "explanation": "1 Corinthians 10:13 teaches that no temptation is beyond what is common to man, and that God is faithful and will with the temptation make a way to escape. The passage rules out both the 'unique' excuse and the idea that God allows unbearable temptation.",
+  "hint": "The verse speaks about how ordinary temptation is and about God's faithfulness in the midst of it.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w9-2",
+  "mode": "wisdom",
+  "prompt": "You run a small home bakery, and customers rarely check whether a 'one-pound' bag actually weighs a pound. Shaving a little off each order would quietly boost your profits. Which response best reflects the teaching of Proverbs 11:1?",
+  "options": [
+   "Trim the portions slightly, since customers never weigh them and no one is harmed",
+   "Keep weights honest only for regular customers who might notice",
+   "Give honest measure every time, because a just weight is the LORD's delight and a false balance is an abomination to him",
+   "Lower the weight but add a nicer label so customers feel they still got value"
+  ],
+  "correct": 2,
+  "reference": "Proverbs 11:1",
+  "keywords": [
+   "false balance",
+   "just weight"
+  ],
+  "explanation": "Proverbs 11:1 says a false balance is abomination to the LORD, but a just weight is his delight. Honest measure matters whether or not anyone checks.",
+  "hint": "Think about what the verse says the LORD delights in when it comes to measuring.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w9-3",
+  "mode": "wisdom",
+  "prompt": "At your office, coworkers casually take printer paper, pens and snacks home, and the amounts seem trivial. You wonder whether small things like this really matter for a person of integrity. Which response best reflects the teaching of Luke 16:10?",
+  "options": [
+   "Be faithful even in these small things, because the one faithful in what is least is faithful also in much",
+   "Small items do not count; integrity only matters when large sums are involved",
+   "Take what you need now and plan to be honest later when you have more responsibility",
+   "Follow whatever your coworkers do, since shared habits cannot be dishonest"
+  ],
+  "correct": 0,
+  "reference": "Luke 16:10",
+  "keywords": [
+   "faithful in that which is least",
+   "unjust in the least"
+  ],
+  "explanation": "Luke 16:10 teaches that he that is faithful in that which is least is faithful also in much, and he that is unjust in the least is unjust also in much. Small choices reveal and shape character.",
+  "hint": "The verse connects how we handle little things with how we handle big ones.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w9-4",
+  "mode": "wisdom",
+  "prompt": "Late in the evening you read a cutting message from a colleague, and you have a blistering reply drafted and ready to send. No one would stop you, and it would feel satisfying in the moment. Which response best reflects the teaching of Proverbs 25:28?",
+  "options": [
+   "Send it immediately, since expressing every feeling is a sign of strength",
+   "Send it but copy others so the colleague feels publicly corrected",
+   "Let your feelings have free rein tonight and deal with any damage tomorrow",
+   "Rule your own spirit and hold back, because a person without self-control is like a city broken down and without walls"
+  ],
+  "correct": 3,
+  "reference": "Proverbs 25:28",
+  "keywords": [
+   "rule over his own spirit",
+   "without walls"
+  ],
+  "explanation": "Proverbs 25:28 compares a man that hath no rule over his own spirit to a city that is broken down and without walls. Lack of self-control leaves a person exposed and vulnerable.",
+  "hint": "The verse uses the picture of a city's defenses to describe self-control.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w9-5",
+  "mode": "wisdom",
+  "prompt": "You find a wallet full of cash in an empty parking lot, and the thought of keeping it grows stronger the longer you hold it. You catch yourself thinking, 'God must have put this in my path to tempt me, so it's partly on Him.' What does James 1:13-15 counsel here?",
+  "options": [
+   "Treat the situation as God tempting you, so the responsibility is shared",
+   "Assume that a thought which is only entertained privately can never lead anywhere harmful",
+   "Recognize that God tempts no one; you are drawn away by your own desire, and desire that is allowed to grow brings forth sin",
+   "Keep the cash, since finding it without witnesses proves it was meant for you"
+  ],
+  "correct": 2,
+  "reference": "James 1:13-15",
+  "keywords": [
+   "neither tempteth he any man",
+   "drawn away of his own lust",
+   "enticed"
+  ],
+  "explanation": "James 1:13-15 says God cannot be tempted with evil, neither tempteth he any man; rather every man is tempted when he is drawn away of his own lust and enticed, and lust when it hath conceived bringeth forth sin. Blame cannot be shifted to God, and inner desire left unchecked grows into sin.",
+  "hint": "The passage traces temptation to its true source and describes how it grows.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w9-6",
+  "mode": "wisdom",
+  "prompt": "Weeks ago you made an error in a report that cost your team time, and no one ever traced it back to you. You could keep quiet forever, or you could come clean and change how you work. Which response best reflects the teaching of Proverbs 28:13?",
+  "options": [
+   "Confess the mistake and forsake the careless habit, for whoever confesses and forsakes their sins will find mercy",
+   "Stay silent, since covering a mistake that no one discovered is the wisest way to prosper",
+   "Quietly blame the error on a system glitch so no one is hurt",
+   "Admit it only if someone else discovers it first"
+  ],
+  "correct": 0,
+  "reference": "Proverbs 28:13",
+  "keywords": [
+   "covereth his sins",
+   "confesseth and forsaketh"
+  ],
+  "explanation": "Proverbs 28:13 teaches that he that covereth his sins shall not prosper, but whoso confesseth and forsaketh them shall have mercy. Concealment is the path the verse warns against.",
+  "hint": "The verse contrasts two responses to wrongdoing and the outcome of each.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w9-7",
+  "mode": "wisdom",
+  "prompt": "You work remotely, and you notice you only work hard when your manager's status shows online or a check-in call is coming up. The rest of the time you coast, confident no one can tell. Which response best reflects the teaching of Colossians 3:22?",
+  "options": [
+   "Work diligently mainly when your supervisor is watching, since pleasing them is the goal of good work",
+   "Coast when unobserved, because obedience only applies to tasks someone checks",
+   "Put effort into looking busy on camera so your manager feels reassured",
+   "Work with singleness of heart, fearing God, rather than with eyeservice as a menpleaser"
+  ],
+  "correct": 3,
+  "reference": "Colossians 3:22",
+  "keywords": [
+   "eyeservice",
+   "menpleasers",
+   "singleness of heart"
+  ],
+  "explanation": "Colossians 3:22 calls for work not with eyeservice, as menpleasers, but in singleness of heart, fearing God. Working hard only when observed is exactly the eyeservice the verse rejects.",
+  "hint": "Look for the unusual word the verse uses for work done only to be seen.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w9-8",
+  "mode": "wisdom",
+  "prompt": "Your family is away for the weekend, and you are alone at home with a streaming service and an internet browser. Some content you would never watch in front of others is just a click away. Which response best reflects the teaching of Psalms 101:2-3?",
+  "options": [
+   "Integrity is for public life; what you watch in private at home is a separate matter",
+   "Walk within your house with a perfect heart and set no wicked thing before your eyes",
+   "Watch it this once, so long as you resolve to behave wisely in public afterward",
+   "Allow yourself a little, since only outward deeds, not what you look at, can cleave to you"
+  ],
+  "correct": 1,
+  "reference": "Psalms 101:2-3",
+  "keywords": [
+   "within my house",
+   "perfect heart",
+   "no wicked thing before mine eyes"
+  ],
+  "explanation": "In Psalms 101:2-3 the psalmist resolves, 'I will walk within my house with a perfect heart. I will set no wicked thing before mine eyes.' Integrity is pledged specifically for private life at home and for what one chooses to look at.",
+  "hint": "Notice where the psalmist says he will walk with integrity, and what he refuses to look at.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w10-1",
+  "mode": "wisdom",
+  "prompt": "A coworker's husband died suddenly, and she now lives alone. Several weeks after the funeral, most people have stopped checking on her, and you wonder whether it is your place to reach out. Which response best reflects the teaching of James 1:27?",
+  "options": [
+   "Visit her in her affliction and continue showing practical care, since caring for widows is part of pure religion",
+   "Leave her alone, because grief is private and visits only intrude",
+   "Send one sympathy card and consider your duty finished, since the funeral is over",
+   "Wait for her to ask for help, since it is not your responsibility to visit"
+  ],
+  "correct": 0,
+  "reference": "James 1:27",
+  "keywords": [
+   "fatherless and widows",
+   "affliction",
+   "Pure religion"
+  ],
+  "explanation": "James 1:27 describes pure and undefiled religion as including the duty 'to visit the fatherless and widows in their affliction.' Continuing to visit and care for her lives out that teaching.",
+  "hint": "Notice what James says pure religion actively does for those who are suffering.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w10-2",
+  "mode": "wisdom",
+  "prompt": "Your close friend has been caring for his elderly father, who has dementia, and he admits he is exhausted and hasn't had a break in months. You have a free Saturday each month. What does Galatians 6:2 counsel here?",
+  "options": [
+   "Tell him that everyone must carry his own family problems alone",
+   "Offer to share the load, such as staying with his father so he can rest",
+   "Advise him to stop talking about his struggles so he doesn't burden others",
+   "Avoid him for a while so his stress doesn't affect you"
+  ],
+  "correct": 1,
+  "reference": "Galatians 6:2",
+  "keywords": [
+   "one another's burdens",
+   "law of Christ"
+  ],
+  "explanation": "Galatians 6:2 commands, 'Bear ye one another's burdens, and so fulfil the law of Christ.' Helping carry your friend's caregiving load is a direct application.",
+  "hint": "The verse speaks of what believers should do with each other's heavy loads.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w10-3",
+  "mode": "wisdom",
+  "prompt": "Years ago you lost your mother and were deeply comforted by friends and by your faith. Now a new colleague has just lost her mother and seems overwhelmed. Which response best reflects the teaching of 2 Corinthians 1:3-4?",
+  "options": [
+   "Keep your own loss to yourself, since past sorrow should never be revisited",
+   "Tell her that her grief is smaller than yours was, so she should cope",
+   "Use the comfort you received from God to comfort her in her trouble",
+   "Avoid her until she is feeling better, since comforting is for professionals"
+  ],
+  "correct": 2,
+  "reference": "2 Corinthians 1:3-4",
+  "keywords": [
+   "God of all comfort",
+   "comfort them which are in any trouble"
+  ],
+  "explanation": "2 Corinthians 1:4 says God comforts us 'that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God.' Your past comfort equips you to comfort her.",
+  "hint": "Paul explains a purpose behind the comfort God gives us.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w10-4",
+  "mode": "wisdom",
+  "prompt": "At a community meeting, an elderly neighbor slowly rises to share a concern, and some younger attendees roll their eyes and talk over him. You are seated nearby. Which response best reflects the teaching of Leviticus 19:32?",
+  "options": [
+   "Join the others in ignoring him, since older people's views are outdated",
+   "Interrupt him to speed the meeting along",
+   "Treat him as no different from a nuisance, since age earns no special regard",
+   "Show him honor and respect, giving him attention as he speaks"
+  ],
+  "correct": 3,
+  "reference": "Leviticus 19:32",
+  "keywords": [
+   "hoary head",
+   "honour the face of the old man"
+  ],
+  "explanation": "Leviticus 19:32 commands, 'Thou shalt rise up before the hoary head, and honour the face of the old man, and fear thy God.' Showing him respect reflects this command.",
+  "hint": "The verse ties reverence for God to how we treat the aged.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w10-5",
+  "mode": "wisdom",
+  "prompt": "Your widowed mother needs help with errands and household needs, but you have been pouring your time into volunteer projects across town and barely see her. You feel pulled in two directions. Which response best reflects the teaching of 1 Timothy 5:4?",
+  "options": [
+   "Learn first to show piety at home by caring for your mother, repaying what your parents gave you",
+   "Focus only on outside projects, since helping family earns no credit before God",
+   "Assume someone else in the church will handle her needs, so you need not",
+   "Tell her she should manage on her own, since adult children owe parents nothing"
+  ],
+  "correct": 0,
+  "reference": "1 Timothy 5:4",
+  "keywords": [
+   "shew piety at home",
+   "requite their parents"
+  ],
+  "explanation": "1 Timothy 5:4 says the children of a widow should 'learn first to shew piety at home, and to requite their parents: for that is good and acceptable before God.' Caring for your mother is the priority this verse describes.",
+  "hint": "Paul says something should be learned 'first' and where it should be practiced.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w10-6",
+  "mode": "wisdom",
+  "prompt": "A friend's teenage son has died, and you go to the house unsure what to say. You feel pressure to explain the tragedy or offer advice. Which response best reflects the example of Job's friends in Job 2:11-13?",
+  "options": [
+   "Explain at length why this must have happened so your friend can understand",
+   "Stay away until you have the right words, since silence is unhelpful",
+   "Come and sit with your friend in his grief, sharing quiet presence rather than many words",
+   "Quickly change the subject to lighter topics so he forgets his pain"
+  ],
+  "correct": 2,
+  "reference": "Job 2:11-13",
+  "keywords": [
+   "to mourn with him",
+   "none spake a word",
+   "his grief was very great"
+  ],
+  "explanation": "Job's friends came 'to mourn with him and to comfort him' and 'sat down with him upon the ground seven days and seven nights, and none spake a word unto him: for they saw that his grief was very great' (Job 2:11-13). Their silent presence is the example in this passage.",
+  "hint": "Look at what the friends did before anyone began to speak.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w10-7",
+  "mode": "wisdom",
+  "prompt": "A friend is deeply grieving a recent loss, and you plan to visit. You're tempted to arrive with upbeat music and jokes to 'snap her out of it.' Which response best reflects the teaching of Proverbs 25:20?",
+  "options": [
+   "Insist on cheerfulness, because forced joy quickly cures sorrow",
+   "Be gentle and sensitive to her heavy heart rather than pressing lighthearted cheer on her",
+   "Tell her that grieving shows weak faith and she should sing instead",
+   "Bring a group for a party so she has no time to feel sad"
+  ],
+  "correct": 1,
+  "reference": "Proverbs 25:20",
+  "keywords": [
+   "heavy heart",
+   "vinegar upon nitre",
+   "singeth songs"
+  ],
+  "explanation": "Proverbs 25:20 compares one 'that singeth songs to an heavy heart' to taking away a garment in cold weather and 'vinegar upon nitre.' Forced cheer wounds rather than comforts, so gentleness fits the moment.",
+  "hint": "Consider the images of a removed coat in winter and a harsh reaction.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w10-8",
+  "mode": "wisdom",
+  "prompt": "On the same evening, you are invited to a lively celebration with friends and to the visitation for a coworker's elderly father who has died. You're inclined to skip the visitation because it feels heavy. Which response best reflects the teaching of Ecclesiastes 7:2?",
+  "options": [
+   "Choose the celebration, since feasting is always wiser than mourning",
+   "Skip both, because neither event has anything to teach you",
+   "Attend the celebration and avoid thinking about death, since it is not your concern",
+   "Go to the house of mourning, where the living reflect on the end of all men"
+  ],
+  "correct": 3,
+  "reference": "Ecclesiastes 7:2",
+  "keywords": [
+   "house of mourning",
+   "house of feasting",
+   "lay it to his heart"
+  ],
+  "explanation": "Ecclesiastes 7:2 says, 'It is better to go to the house of mourning, than to go to the house of feasting: for that is the end of all men; and the living will lay it to his heart.' Attending the visitation honors the grieving and encourages sober reflection.",
+  "hint": "The Preacher compares two kinds of houses and says which is better.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w13-1",
+  "mode": "wisdom",
+  "prompt": "You've just been promoted to lead your department, and a colleague jokes that now you'll finally have people to do your errands. You wonder what kind of leader you want to be. Which response best reflects the teaching of Mark 10:43-44?",
+  "options": [
+   "See the role as a reward and expect the team to serve your needs first",
+   "See greatness in the role as becoming the team's servant and meeting their needs",
+   "Keep your distance from the team so they respect your new authority",
+   "Use the promotion mainly to get your own ideas recognized"
+  ],
+  "correct": 1,
+  "reference": "Mark 10:43-44",
+  "keywords": [
+   "minister",
+   "servant of all"
+  ],
+  "explanation": "Jesus taught that whoever would be great 'shall be your minister' and whoever would be chiefest 'shall be servant of all' (Mark 10:43-44). True leadership is measured by service, not by being served.",
+  "hint": "Jesus turned the usual idea of greatness upside down.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w13-2",
+  "mode": "wisdom",
+  "prompt": "A friend from your small group is overwhelmed after losing a job while caring for a sick parent. You have some free evenings and could help with meals and errands. What does Galatians 6:2 counsel here?",
+  "options": [
+   "Wait for them to ask, since everyone should handle their own problems privately",
+   "Offer advice from a distance but avoid getting involved in their practical needs",
+   "Step in to help carry the load, since this fulfils the law of Christ",
+   "Remind them that hardship builds character and leave them to grow through it"
+  ],
+  "correct": 2,
+  "reference": "Galatians 6:2",
+  "keywords": [
+   "one another's burdens",
+   "law of Christ"
+  ],
+  "explanation": "Galatians 6:2 says, 'Bear ye one another's burdens, and so fulfil the law of Christ.' Practically sharing a friend's load is how believers live out Christ's law.",
+  "hint": "The verse speaks of carrying something together.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w13-3",
+  "mode": "wisdom",
+  "prompt": "Your team is choosing who will present a successful project to senior leadership, and you know you could push to take the spotlight. A quieter colleague did much of the groundwork. Which response best reflects Philippians 2:3-4?",
+  "options": [
+   "Make sure leadership knows the success was mostly your doing",
+   "Stay silent and let credit fall wherever it happens to land, even if it lands on you",
+   "Insist on presenting, since visibility is important for your career",
+   "Value your colleague above yourself and look out for their interests by giving them the credit and opportunity"
+  ],
+  "correct": 3,
+  "reference": "Philippians 2:3-4",
+  "keywords": [
+   "lowliness of mind",
+   "things of others"
+  ],
+  "explanation": "Philippians 2:3-4 teaches to do nothing 'through strife or vainglory' but in 'lowliness of mind' to esteem others better than ourselves, looking 'on the things of others.' Elevating a colleague's contribution fits that humility.",
+  "hint": "Think about whose interests the passage asks you to look at.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w13-4",
+  "mode": "wisdom",
+  "prompt": "You sit on a neighborhood council deciding how to allocate a small grant. Several low-income families who would be affected aren't at the meeting and have no one representing their needs. Which response best reflects Proverbs 31:8-9?",
+  "options": [
+   "Speak up on their behalf, judge fairly, and plead the cause of the poor and needy",
+   "Stay quiet, since those who didn't attend gave up their say",
+   "Support whichever option the most influential members prefer",
+   "Postpone any decision indefinitely to avoid controversy"
+  ],
+  "correct": 0,
+  "reference": "Proverbs 31:8-9",
+  "keywords": [
+   "plead the cause",
+   "judge righteously"
+  ],
+  "explanation": "Proverbs 31:8-9 instructs, 'Open thy mouth, judge righteously, and plead the cause of the poor and needy.' Those with a voice in decisions should use it for those who lack one.",
+  "hint": "The passage tells someone in authority what to do with their mouth.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w13-5",
+  "mode": "wisdom",
+  "prompt": "As a supervisor, you're frustrated that a staff member keeps missing deadlines. You're tempted to threaten their job in front of the team to scare everyone into line. Which response best reflects the teaching of Ephesians 6:9?",
+  "options": [
+   "Use threats freely, since fear is an effective motivator",
+   "Treat them fairly without threatening, remembering you too answer to a Master in heaven who shows no partiality",
+   "Ignore the problem entirely so you never have to confront anyone",
+   "Be harsh with this employee but lenient with your favorites"
+  ],
+  "correct": 1,
+  "reference": "Ephesians 6:9",
+  "keywords": [
+   "forbearing threatening",
+   "Master also is in heaven"
+  ],
+  "explanation": "Ephesians 6:9 tells masters to treat those under them well, 'forbearing threatening: knowing that your Master also is in heaven; neither is there respect of persons with him.' Leaders are accountable to God and must not rule by intimidation or favoritism.",
+  "hint": "The verse reminds those in charge that they also have someone over them.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w13-6",
+  "mode": "wisdom",
+  "prompt": "You've been asked to coordinate the volunteer team at your church's food pantry. You feel reluctant and wonder whether you could just give orders while others do the work. What does 1 Peter 5:2-3 counsel here?",
+  "options": [
+   "Accept the role only if it brings recognition or some benefit",
+   "Take the role reluctantly and do the bare minimum because you were pressured",
+   "Run the team firmly as its boss, since volunteers need to know who's in charge",
+   "Serve willingly and eagerly, leading by personal example rather than lording it over others"
+  ],
+  "correct": 3,
+  "reference": "1 Peter 5:2-3",
+  "keywords": [
+   "not by constraint",
+   "ensamples to the flock"
+  ],
+  "explanation": "1 Peter 5:2-3 urges oversight 'not by constraint, but willingly; not for filthy lucre, but of a ready mind,' and not as 'lords over God's heritage, but being ensamples to the flock.' Good leaders serve gladly and lead by example.",
+  "hint": "The passage contrasts ruling over people with showing them the way.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w13-7",
+  "mode": "wisdom",
+  "prompt": "As a new manager, one employee regularly brings you unflattering stories about coworkers, and you've started acting on them without checking. Office trust is souring. Which response best reflects the warning of Proverbs 29:12?",
+  "options": [
+   "Keep rewarding the informer, since knowing everything strengthens your control",
+   "Refuse to listen to falsehoods and verify claims, knowing a leader who heeds lies corrupts the whole team",
+   "Share the stories more widely so everyone is aware of the problems",
+   "Treat every report as true, since employees wouldn't bother inventing them"
+  ],
+  "correct": 1,
+  "reference": "Proverbs 29:12",
+  "keywords": [
+   "hearken to lies",
+   "servants are wicked"
+  ],
+  "explanation": "Proverbs 29:12 warns, 'If a ruler hearken to lies, all his servants are wicked.' A leader who welcomes falsehood encourages it throughout those under him.",
+  "hint": "Consider what happens to those under a leader when the leader welcomes untrue reports.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w13-8",
+  "mode": "wisdom",
+  "prompt": "You head a small family business through a tough season. One advisor says to rule strictly and conceal hard facts from staff; another says to be kind but always honest. Which response best reflects Proverbs 20:28?",
+  "options": [
+   "Lead with mercy and truth together, since this is what upholds a leader's position",
+   "Rely on strict control and fear, since kindness looks weak in hard times",
+   "Hide the bad news to keep morale up, even if it means misleading people",
+   "Be honest but harsh, since mercy has no place in running a business"
+  ],
+  "correct": 0,
+  "reference": "Proverbs 20:28",
+  "keywords": [
+   "Mercy and truth",
+   "upholden by mercy"
+  ],
+  "explanation": "Proverbs 20:28 says, 'Mercy and truth preserve the king: and his throne is upholden by mercy.' Lasting authority rests on combining compassion with honesty, not fear or deception.",
+  "hint": "The verse names two qualities that preserve a ruler.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w12-1",
+  "mode": "wisdom",
+  "prompt": "Your calendar is crammed with work deadlines, family events, and volunteer commitments, and you feel guilty that you can't do everything at once. A friend suggests you simply accept that different things have their proper times. Which response best reflects the teaching of Ecclesiastes 3:1?",
+  "options": [
+   "Recognize that there is a season and a time for each purpose, and give each task its proper time",
+   "Try to do every task simultaneously so nothing ever waits",
+   "Conclude that timing doesn't matter and everything should be done immediately",
+   "Drop all commitments, since no activity has a rightful place in life"
+  ],
+  "correct": 0,
+  "reference": "Ecclesiastes 3:1",
+  "keywords": [
+   "season",
+   "time to every purpose"
+  ],
+  "explanation": "Ecclesiastes 3:1 teaches that \"to every thing there is a season, and a time to every purpose under the heaven.\" Life's activities each have their fitting time, so not everything must happen at once.",
+  "hint": "The verse speaks of seasons, not of doing everything at once.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w12-2",
+  "mode": "wisdom",
+  "prompt": "It has been a frustrating week: your car needed repairs and a project at work stalled. Over dinner, you notice you've only talked about what went wrong. What does 1 Thessalonians 5:16-18 counsel here?",
+  "options": [
+   "Wait to give thanks until circumstances improve",
+   "Rejoice, keep praying, and give thanks in every thing",
+   "Give thanks only for the things that went well this week",
+   "Keep a careful record of complaints so you can pray about them later"
+  ],
+  "correct": 1,
+  "reference": "1 Thessalonians 5:16-18",
+  "keywords": [
+   "Rejoice evermore",
+   "give thanks"
+  ],
+  "explanation": "1 Thessalonians 5:16-18 says, \"Rejoice evermore. Pray without ceasing. In every thing give thanks,\" calling believers to gratitude in all circumstances, not only good ones.",
+  "hint": "Notice how broadly the passage applies thankfulness.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w12-3",
+  "mode": "wisdom",
+  "prompt": "At a milestone birthday, you realize years have slipped by while you've postponed what matters most to you. You want to use your remaining time well. Which response best reflects the prayer of Psalms 90:12?",
+  "options": [
+   "Avoid thinking about the passing of time so it doesn't trouble you",
+   "Assume there will always be more years, so priorities can wait",
+   "Ask God to teach you to number your days so you apply your heart to wisdom",
+   "Fill every remaining day with as much activity as possible, regardless of purpose"
+  ],
+  "correct": 2,
+  "reference": "Psalms 90:12",
+  "keywords": [
+   "number our days",
+   "wisdom"
+  ],
+  "explanation": "Psalms 90:12 prays, \"So teach us to number our days, that we may apply our hearts unto wisdom.\" Being mindful that our days are limited is meant to lead us toward wise living.",
+  "hint": "The psalmist wants counting days to lead somewhere.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w12-4",
+  "mode": "wisdom",
+  "prompt": "You are hosting a dinner where a visiting guest is teaching from the Scriptures. You become irritated that a relative is sitting and listening instead of helping in the kitchen, and you're tempted to complain publicly. What does Jesus' response in Luke 10:40-42 suggest?",
+  "options": [
+   "Insist that serving is always more important than listening",
+   "Ask the guest to tell the relative to get up and help you",
+   "Conclude that hospitality is unimportant and should be abandoned",
+   "Notice that you may be careful and troubled about many things, while one thing is needful"
+  ],
+  "correct": 3,
+  "reference": "Luke 10:40-42",
+  "keywords": [
+   "careful and troubled",
+   "that good part"
+  ],
+  "explanation": "In Luke 10:40-42 Martha asks Jesus to bid her sister help her. Jesus answers that she is \"careful and troubled about many things: But one thing is needful,\" and that Mary \"hath chosen that good part, which shall not be taken away from her.\"",
+  "hint": "Jesus did not tell the listening sister to get up.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w12-5",
+  "mode": "wisdom",
+  "prompt": "You've been staying up past midnight and waking before dawn, convinced that if you just work harder you can secure everything yourself. You are exhausted and anxious. Which response best reflects the teaching of Psalms 127:2?",
+  "options": [
+   "Recognize that anxious overwork is vain and that God gives his beloved sleep",
+   "Cut sleep further, since rest is a sign of laziness",
+   "Rise even earlier, because success depends entirely on your effort",
+   "Eat the bread of sorrows now so you can enjoy life later"
+  ],
+  "correct": 0,
+  "reference": "Psalms 127:2",
+  "keywords": [
+   "sit up late",
+   "sleep"
+  ],
+  "explanation": "Psalms 127:2 says, \"It is vain for you to rise up early, to sit up late, to eat the bread of sorrows: for so he giveth his beloved sleep.\" Sleep is a gift, not a failure.",
+  "hint": "The verse calls one pattern 'vain' and names a gift.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w12-6",
+  "mode": "wisdom",
+  "prompt": "Your team has just finished an intense stretch of serving clients, so busy that no one had time even to eat lunch. As the leader, you're deciding what to do next. Which response best reflects Jesus' words in Mark 6:31?",
+  "options": [
+   "Schedule another busy stretch immediately to keep momentum",
+   "Tell everyone that rest is only for those who did less work",
+   "Invite them to come apart to a quiet place and rest a while",
+   "Praise the skipped meals as proof of true commitment"
+  ],
+  "correct": 2,
+  "reference": "Mark 6:31",
+  "keywords": [
+   "rest a while",
+   "leisure"
+  ],
+  "explanation": "In Mark 6:31 Jesus told his busy disciples, \"Come ye yourselves apart into a desert place, and rest a while,\" because \"they had no leisure so much as to eat.\"",
+  "hint": "Consider what Jesus told his disciples when they had no leisure even to eat.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w12-7",
+  "mode": "wisdom",
+  "prompt": "You're offered a promotion with much higher pay, but it would mean constant stress, long hours, and little peace at home. Your current role pays less but leaves room for a calm life. What does Ecclesiastes 4:6 counsel here?",
+  "options": [
+   "Both hands full is always better, whatever the vexation",
+   "A handful with quietness is better than both hands full with travail and vexation of spirit",
+   "Quietness only matters once you have accumulated plenty",
+   "Travail is the surest path to a peaceful spirit"
+  ],
+  "correct": 1,
+  "reference": "Ecclesiastes 4:6",
+  "keywords": [
+   "handful with quietness",
+   "vexation of spirit"
+  ],
+  "explanation": "Ecclesiastes 4:6 says, \"Better is an handful with quietness, than both the hands full with travail and vexation of spirit,\" valuing peace above more gain gotten with turmoil.",
+  "hint": "The verse compares one handful with two, and weighs what comes with each.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w12-8",
+  "mode": "wisdom",
+  "prompt": "You've begun working nights and weekends purely to grow your investments, constantly watching market charts and neglecting friendships. A coworker urges you to chase wealth even harder. Which response best reflects the teaching of Proverbs 23:4-5?",
+  "options": [
+   "Set your eyes firmly on riches, since they are the most lasting thing",
+   "Trust your own cleverness to make sure your riches never leave",
+   "Labour all the harder, because wealth stays with those who pursue it",
+   "Labour not to be rich, remembering that riches make themselves wings and fly away"
+  ],
+  "correct": 3,
+  "reference": "Proverbs 23:4-5",
+  "keywords": [
+   "Labour not to be rich",
+   "wings"
+  ],
+  "explanation": "Proverbs 23:4-5 warns, \"Labour not to be rich: cease from thine own wisdom,\" because \"riches certainly make themselves wings; they fly away as an eagle toward heaven.\"",
+  "hint": "Consider what the proverb says about how lasting riches are, and about relying on your own wisdom to hold onto them.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w11-1",
+  "mode": "wisdom",
+  "prompt": "Your teenage nephew is living with you for a year, and you are tempted to leave his character and habits for 'life to sort out later.' You wonder whether patient guidance now really matters. Which response best reflects the teaching of Proverbs 22:6?",
+  "options": [
+   "Assume children will find their own way and that early guidance makes little lasting difference",
+   "Wait until he is an adult before trying to shape his habits or values",
+   "Leave all guidance to his school, since home life has little effect on character",
+   "Take time now to train him in the right way, trusting that early formation tends to last into later life"
+  ],
+  "correct": 3,
+  "reference": "Proverbs 22:6",
+  "keywords": [
+   "Train up a child",
+   "when he is old"
+  ],
+  "explanation": "Proverbs 22:6 says to 'Train up a child in the way he should go: and when he is old, he will not depart from it,' so diligent guidance in youth has lasting value.",
+  "hint": "Think about what this verse says happens 'when he is old.'",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w11-2",
+  "mode": "wisdom",
+  "prompt": "Your elderly parents call often, and after a stressful week you are tempted to ignore them and speak dismissively about them to friends. You want to respond rightly. What does Exodus 20:12 counsel here?",
+  "options": [
+   "Honour your father and mother, treating them with respect and regard even when it is inconvenient",
+   "Honour your parents only if they have earned it by agreeing with your choices",
+   "Keep your distance, since adult children owe their parents nothing further",
+   "Speak respectfully to their faces but freely mock them to others"
+  ],
+  "correct": 0,
+  "reference": "Exodus 20:12",
+  "keywords": [
+   "Honour thy father",
+   "thy mother"
+  ],
+  "explanation": "Exodus 20:12 commands, 'Honour thy father and thy mother,' attaching a promise of long days to the command, with no condition about convenience.",
+  "hint": "This is one of the Ten Commandments, and the first word of it is a verb about respect.",
+  "difficulty": 1
+ },
+ {
+  "id": "wis-w11-3",
+  "mode": "wisdom",
+  "prompt": "At a community meeting, an elderly man with white hair slowly makes his way to the front, and some younger attendees roll their eyes and keep their seats. You consider how to respond. Which response best reflects the teaching of Leviticus 19:32?",
+  "options": [
+   "Ignore him, since respect should be based only on someone's position or wealth",
+   "Rise and show him honour, treating age itself with respect as an act of reverence toward God",
+   "Join the others in quietly laughing at how slow he is",
+   "Offer respect only if he proves he is more qualified than the younger speakers"
+  ],
+  "correct": 1,
+  "reference": "Leviticus 19:32",
+  "keywords": [
+   "hoary head",
+   "old man"
+  ],
+  "explanation": "Leviticus 19:32 says, 'Thou shalt rise up before the hoary head, and honour the face of the old man, and fear thy God,' tying respect for the aged to reverence for the LORD.",
+  "hint": "The verse describes a physical action of respect toward grey hair.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w11-4",
+  "mode": "wisdom",
+  "prompt": "Your mother, now in her eighties, offers advice about a family matter. Friends say her views are outdated and you should simply tune her out because of her age. What does Proverbs 23:22 counsel here?",
+  "options": [
+   "Stop consulting parents once you have your own household",
+   "Listen politely only to your father, since the verse concerns fathers alone",
+   "Treat her age as a reason to dismiss her opinions",
+   "Listen to your parents and do not despise your mother because she has grown old"
+  ],
+  "correct": 3,
+  "reference": "Proverbs 23:22",
+  "keywords": [
+   "Hearken unto thy father",
+   "when she is old"
+  ],
+  "explanation": "Proverbs 23:22 says, 'Hearken unto thy father that begat thee, and despise not thy mother when she is old,' forbidding contempt for an aging parent.",
+  "hint": "Notice what the verse says about a mother's age.",
+  "difficulty": 2
+ },
+ {
+  "id": "wis-w11-5",
+  "mode": "wisdom",
+  "prompt": "An older volunteer at your organisation has made a real mistake, and you need to address it. A colleague suggests confronting him sharply in front of everyone so he learns his lesson. Which response best reflects the teaching of 1 Timothy 5:1-2?",
+  "options": [
+   "Rebuke him harshly, since age gives no special claim to gentle treatment",
+   "Never mention the problem at all, even if it continues",
+   "Approach him respectfully and appeal to him as you would to your own father",
+   "Ask a younger staff member to scold him publicly so you are not involved"
+  ],
+  "correct": 2,
+  "reference": "1 Timothy 5:1-2",
+  "keywords": [
+   "Rebuke not an elder",
+   "intreat him as a father"
+  ],
+  "explanation": "1 Timothy 5:1 says, 'Rebuke not an elder, but intreat him as a father,' calling for respectful appeal rather than harsh rebuke, and goes on to treat others as family 'with all purity.'",
+  "hint": "The passage compares how to treat older and younger people to members of a family.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w11-6",
+  "mode": "wisdom",
+  "prompt": "Your child keeps failing to finish chores, and you are frustrated. You are tempted to respond with constant belittling and harsh outbursts to 'toughen them up.' Which response best reflects the teaching of Ephesians 6:4?",
+  "options": [
+   "Avoid needlessly provoking them to anger, and instead raise them with patient instruction and godly correction",
+   "Use sarcasm and ridicule, since shame is the quickest way to change behaviour",
+   "Give up on correction entirely so the child never feels upset",
+   "Let the child raise themselves, since instruction is the church's job alone"
+  ],
+  "correct": 0,
+  "reference": "Ephesians 6:4",
+  "keywords": [
+   "provoke not your children to wrath",
+   "nurture and admonition"
+  ],
+  "explanation": "Ephesians 6:4 tells fathers to 'provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord,' which rules out both exasperating harshness and abandoning correction.",
+  "hint": "The verse contains both a warning and a positive instruction for parents.",
+  "difficulty": 3
+ },
+ {
+  "id": "wis-w11-7",
+  "mode": "wisdom",
+  "prompt": "Your aging father needs some financial help. You are tempted to tell him your money is already pledged to a religious cause, so you are excused from helping him, even though you could do both. In light of Mark 7:10-13, what does Scripture counsel here?",
+  "options": [
+   "A religious pledge rightly cancels any duty to help your parents",
+   "Declaring resources set apart as a gift is a wise way to avoid family obligations",
+   "Do not use a religious vow as an excuse to neglect your parents, because that makes God's command to honour them of none effect",
+   "Honouring parents means only speaking kindly, not practical help"
+  ],
+  "correct": 2,
+  "reference": "Mark 7:10-13",
+  "keywords": [
+   "Corban",
+   "of none effect"
+  ],
+  "explanation": "In Mark 7:10-13 Jesus rebukes those who declared their resources 'Corban' so they need do nothing for father or mother, saying this made 'the word of God of none effect through your tradition.'",
+  "hint": "Jesus criticised a tradition that used a 'gift' to God as a loophole.",
+  "difficulty": 4
+ },
+ {
+  "id": "wis-w11-8",
+  "mode": "wisdom",
+  "prompt": "You are the youngest person newly appointed to lead a team, and several older members quietly doubt you because of your age. You wonder how to respond. Which response best reflects the teaching of 1 Timothy 4:12?",
+  "options": [
+   "Demand respect forcefully and remind them often that you are in charge",
+   "Become an example in your speech, conduct, love, spirit, faith and purity so your youth gives no cause for contempt",
+   "Step aside, since young people should never hold responsibility",
+   "Match their attitude by dismissing the older members' contributions"
+  ],
+  "correct": 1,
+  "reference": "1 Timothy 4:12",
+  "keywords": [
+   "despise thy youth",
+   "an example of the believers"
+  ],
+  "explanation": "1 Timothy 4:12 says, 'Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity,' answering doubts through godly example rather than force.",
+  "hint": "The verse lists areas of life where a young person should set a pattern.",
+  "difficulty": 4
+ },
+ {
+  "id": "geo-gt-1",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Shiloh",
+  "distractors": [
+   "Hebron",
+   "Dan",
+   "Gaza"
+  ],
+  "view": "land",
+  "prompt": "Elkanah went up yearly to worship and sacrifice to the LORD at the town marked on the map, where Eli's sons served as priests. Which town is it?",
+  "reference": "1 Samuel 1:3",
+  "keywords": [
+   "Shiloh",
+   "Hophni and Phinehas"
+  ],
+  "explanation": "Elkanah went up yearly to sacrifice to the LORD of hosts in Shiloh, where Hophni and Phinehas, the sons of Eli, were priests (1 Samuel 1:3).",
+  "hint": "The tabernacle stood here in the days of Eli, in the hill country of Ephraim.",
+  "difficulty": 1
+ },
+ {
+  "id": "geo-gt-2",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Jerusalem",
+  "distractors": [
+   "Megiddo",
+   "Beersheba 1",
+   "Dan"
+  ],
+  "view": "land",
+  "prompt": "David and his men went up against the Jebusites and took the stronghold of Zion, the city of David. Which marker shows Jerusalem?",
+  "reference": "2 Samuel 5:6-7",
+  "keywords": [
+   "Jerusalem",
+   "strong hold of Zion",
+   "city of David"
+  ],
+  "explanation": "The king and his men went to Jerusalem against the Jebusites, and David took the stronghold of Zion, the city of David (2 Samuel 5:6-7).",
+  "hint": "Look in the hill country west of the northern end of the Salt Sea.",
+  "difficulty": 1
+ },
+ {
+  "id": "geo-gt-3",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Gath 1",
+  "distractors": [
+   "Hazor 1",
+   "Beth-shan",
+   "Rabbah 1"
+  ],
+  "view": "land",
+  "prompt": "The Philistine champion Goliath, who challenged Israel's army, came from Gath. Which marker shows Gath?",
+  "reference": "1 Samuel 17:4",
+  "keywords": [
+   "Goliath",
+   "Gath"
+  ],
+  "explanation": "Goliath, the champion of the Philistines, was 'of Gath' (1 Samuel 17:4).",
+  "hint": "It was one of the Philistine cities, in the lowlands toward the coastal plain.",
+  "difficulty": 1
+ },
+ {
+  "id": "geo-gt-4",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Beth-shan",
+  "distractors": [
+   "Lachish",
+   "Joppa",
+   "Beersheba 1"
+  ],
+  "view": "land",
+  "prompt": "After Saul died in battle, the Philistines fastened his body to the wall of the city marked on the map. Which city is it?",
+  "reference": "1 Samuel 31:10",
+  "keywords": [
+   "Beth-shan",
+   "fastened his body"
+  ],
+  "explanation": "The Philistines put Saul's armour in the house of Ashtaroth and fastened his body to the wall of Beth-shan (1 Samuel 31:10).",
+  "hint": "This city lies where the Jezreel valley opens toward the Jordan, not far from Mount Gilboa.",
+  "difficulty": 2
+ },
+ {
+  "id": "geo-gt-5",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Shunem",
+  "distractors": [
+   "Hebron",
+   "Beersheba 1",
+   "Dan"
+  ],
+  "view": "land",
+  "prompt": "Elisha passed through Shunem, where a great woman constrained him to eat bread. Which marker shows Shunem?",
+  "reference": "2 Kings 4:8",
+  "keywords": [
+   "Elisha",
+   "Shunem"
+  ],
+  "explanation": "Elisha passed to Shunem, where a great woman constrained him to eat bread (2 Kings 4:8).",
+  "hint": "It sits in the north, overlooking the Jezreel valley.",
+  "difficulty": 2
+ },
+ {
+  "id": "geo-gt-6",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Hazor 1",
+  "distractors": [
+   "Gezer",
+   "Gaza",
+   "Lachish"
+  ],
+  "view": "land",
+  "prompt": "In the days of Deborah, the LORD sold Israel into the hand of Jabin king of Canaan, who reigned in the city marked on the map. Which city is it?",
+  "reference": "Judges 4:2",
+  "keywords": [
+   "Jabin",
+   "Hazor",
+   "Sisera"
+  ],
+  "explanation": "Jabin king of Canaan reigned in Hazor, and the captain of his host was Sisera (Judges 4:2).",
+  "hint": "This great Canaanite city lay in upper Galilee, north of the Sea of Galilee.",
+  "difficulty": 2
+ },
+ {
+  "id": "geo-gt-7",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Zorah",
+  "distractors": [
+   "Tirzah",
+   "Megiddo",
+   "Bozrah 1"
+  ],
+  "view": "land",
+  "prompt": "Manoah, the father of Samson, was a man of the town marked on the map. Which town is it?",
+  "reference": "Judges 13:2",
+  "keywords": [
+   "Zorah",
+   "Manoah"
+  ],
+  "explanation": "There was a certain man of Zorah, of the family of the Danites, whose name was Manoah (Judges 13:2).",
+  "hint": "This town of the Danites lay in the lowland hills west of Jerusalem.",
+  "difficulty": 3
+ },
+ {
+  "id": "geo-gt-8",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Keilah",
+  "distractors": [
+   "Megiddo",
+   "Dan",
+   "Rabbah 1"
+  ],
+  "view": "land",
+  "prompt": "David and his men fought the Philistines and saved the inhabitants of Keilah. Which marker shows Keilah?",
+  "reference": "1 Samuel 23:5",
+  "keywords": [
+   "Keilah",
+   "Philistines"
+  ],
+  "explanation": "David and his men went to Keilah, fought with the Philistines, and saved the inhabitants of Keilah (1 Samuel 23:5).",
+  "hint": "It lay in the territory of Judah, in the lowlands northwest of Hebron.",
+  "difficulty": 3
+ },
+ {
+  "id": "geo-gt-9",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Rabbah 1",
+  "distractors": [
+   "Gaza",
+   "Megiddo",
+   "Hazor 1"
+  ],
+  "view": "land",
+  "prompt": "While David tarried at Jerusalem, Joab and Israel's army destroyed the children of Ammon and besieged Rabbah. Which marker shows Rabbah?",
+  "reference": "2 Samuel 11:1",
+  "keywords": [
+   "Rabbah",
+   "children of Ammon"
+  ],
+  "explanation": "David sent Joab and all Israel, and they destroyed the children of Ammon and besieged Rabbah, while David tarried still at Jerusalem (2 Samuel 11:1).",
+  "hint": "The Ammonite royal city lay east of the Jordan.",
+  "difficulty": 3
+ },
+ {
+  "id": "geo-gs-1",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Tarsus",
+  "distractors": [
+   "Thessalonica",
+   "Cyrene",
+   "Sidon"
+  ],
+  "view": "med",
+  "prompt": "Paul told the chief captain in Jerusalem that he was a Jew of the city marked on the map, 'a city in Cilicia.' Which city is it?",
+  "reference": "Acts 21:39",
+  "keywords": [
+   "Tarsus",
+   "Cilicia"
+  ],
+  "explanation": "Paul said, 'I am a man which am a Jew of Tarsus, a city in Cilicia, a citizen of no mean city' (Acts 21:39).",
+  "hint": "Saul is often identified by this hometown.",
+  "difficulty": 1
+ },
+ {
+  "id": "geo-gs-2",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Troas",
+  "distractors": [
+   "Cyrene",
+   "Sidon",
+   "Rome"
+  ],
+  "view": "med",
+  "prompt": "While Paul was at Troas, a vision of a man of Macedonia called him to come over and help. Which marker shows Troas?",
+  "reference": "Acts 16:8-9",
+  "keywords": [
+   "Troas",
+   "Macedonia"
+  ],
+  "explanation": "Passing by Mysia, Paul's company came down to Troas, where a vision of a man of Macedonia appeared to Paul in the night (Acts 16:8-9).",
+  "hint": "Look for a port in northwest Asia Minor facing Macedonia across the sea.",
+  "difficulty": 2
+ },
+ {
+  "id": "geo-gs-3",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Miletus",
+  "distractors": [
+   "Tarsus",
+   "Corinth",
+   "Cyrene"
+  ],
+  "view": "med",
+  "prompt": "Hurrying toward Jerusalem, Paul stopped at the place marked on the map and sent for the elders of the church at Ephesus. Which place is it?",
+  "reference": "Acts 20:17",
+  "keywords": [
+   "Miletus",
+   "elders"
+  ],
+  "explanation": "'And from Miletus he sent to Ephesus, and called the elders of the church' (Acts 20:17).",
+  "hint": "It is a coastal city south of Ephesus.",
+  "difficulty": 3
+ },
+ {
+  "id": "geo-gs-4",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Laodicea",
+  "distractors": [
+   "Damascus",
+   "Memphis",
+   "Susa"
+  ],
+  "view": "east",
+  "prompt": "Laodicea was one of the seven churches in Asia to which John was told to send what he saw. Which marker shows Laodicea?",
+  "reference": "Revelation 1:11",
+  "keywords": [
+   "Laodicea",
+   "seven churches"
+  ],
+  "explanation": "John was told to send the book 'unto the seven churches which are in Asia,' ending with Laodicea (Revelation 1:11).",
+  "hint": "The seven churches were in the province of Asia, in the west of Asia Minor.",
+  "difficulty": 2
+ },
+ {
+  "id": "geo-gs-5",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Iconium",
+  "distractors": [
+   "Troas",
+   "Miletus",
+   "Sidon"
+  ],
+  "view": "med",
+  "prompt": "Paul and Barnabas went together into the synagogue of the Jews in the city marked on the map, and a great multitude believed. Which city is it?",
+  "reference": "Acts 14:1-3",
+  "keywords": [
+   "Iconium",
+   "synagogue"
+  ],
+  "explanation": "In Iconium Paul and Barnabas went into the synagogue and so spake that a great multitude of Jews and Greeks believed (Acts 14:1).",
+  "hint": "It lies inland in south-central Asia Minor, visited before Lystra and Derbe.",
+  "difficulty": 3
+ },
+ {
+  "id": "geo-gs-6",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Derbe",
+  "distractors": [
+   "Thessalonica",
+   "Cyrene",
+   "Sidon"
+  ],
+  "view": "med",
+  "prompt": "After being stoned at Lystra, Paul departed the next day with Barnabas to Derbe and preached there. Which marker shows Derbe?",
+  "reference": "Acts 14:19-21",
+  "keywords": [
+   "Derbe",
+   "Barnabas"
+  ],
+  "explanation": "After Paul was stoned at Lystra, 'the next day he departed with Barnabas to Derbe' and preached the gospel to that city (Acts 14:19-21).",
+  "hint": "It is in inland Asia Minor, not far from Lystra.",
+  "difficulty": 4
+ },
+ {
+  "id": "geo-gs-7",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Cyprus",
+  "distractors": [
+   "Crete",
+   "Malta",
+   "Patmos"
+  ],
+  "view": "med",
+  "prompt": "Sent forth by the Holy Ghost, Barnabas and Saul went down to Seleucia and sailed to the island marked on the map. Which island is it?",
+  "reference": "Acts 13:4",
+  "keywords": [
+   "Cyprus",
+   "Seleucia"
+  ],
+  "explanation": "Being sent forth by the Holy Ghost, they 'departed unto Seleucia; and from thence they sailed to Cyprus' (Acts 13:4).",
+  "hint": "It is the large island in the eastern corner of the Mediterranean.",
+  "difficulty": 1
+ },
+ {
+  "id": "geo-gs-8",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Thessalonica",
+  "distractors": [
+   "Cyrene",
+   "Tarsus",
+   "Rome"
+  ],
+  "view": "med",
+  "prompt": "Passing through Amphipolis and Apollonia, Paul came to Thessalonica, where there was a synagogue of the Jews. Which marker shows Thessalonica?",
+  "reference": "Acts 17:1",
+  "keywords": [
+   "Thessalonica",
+   "synagogue"
+  ],
+  "explanation": "Paul and Silas 'came to Thessalonica, where was a synagogue of the Jews' (Acts 17:1).",
+  "hint": "Look in Macedonia, in northern Greece.",
+  "difficulty": 2
+ },
+ {
+  "id": "geo-gs-9",
+  "mode": "geography",
+  "kind": "locate",
+  "place": "Caesarea",
+  "distractors": [
+   "Rome",
+   "Athens",
+   "Cyrene"
+  ],
+  "view": "med",
+  "prompt": "Cornelius, a centurion of the Italian band, lived in Caesarea. Which marker shows Caesarea?",
+  "reference": "Acts 10:1",
+  "keywords": [
+   "Caesarea",
+   "Cornelius"
+  ],
+  "explanation": "'There was a certain man in Caesarea called Cornelius, a centurion of the band called the Italian band' (Acts 10:1).",
+  "hint": "It is a port on the coast of the Holy Land.",
+  "difficulty": 1
+ },
+ {
+  "id": "geo-gs-10",
+  "mode": "geography",
+  "kind": "identify",
+  "place": "Crete",
+  "distractors": [
+   "Cyprus",
+   "Malta",
+   "Patmos"
+  ],
+  "view": "med",
+  "prompt": "Paul wrote to Titus that he had left him on the island marked on the map to set things in order and ordain elders in every city. Which island is it?",
+  "reference": "Titus 1:4-5",
+  "keywords": [
+   "Crete",
+   "elders"
+  ],
+  "explanation": "Paul told Titus, 'For this cause left I thee in Crete,' to set in order the things wanting and ordain elders (Titus 1:4-5).",
+  "hint": "It is a long island south of the Greek mainland.",
+  "difficulty": 3
+ },
+ {
+  "id": "mys-m13-1",
+  "mode": "mystery",
+  "case": "m13",
+  "case_title": "The Travellers with Mouldy Bread",
+  "stage": 1,
+  "clue": "Camp report: the visitors' sacks are old, their wine bottles torn and bound up, their shoes patched, and all their bread dry and mouldy. Word has it they had heard what Joshua did to Jericho and Ai.",
+  "prompt": "According to the text, the inhabitants of which town planned this disguise?",
+  "options": [
+   "Gibeon",
+   "Jericho",
+   "Ai",
+   "Gilgal"
+  ],
+  "correct": 0,
+  "reference": "Joshua 9:3-6",
+  "keywords": [
+   "Gibeon",
+   "mouldy",
+   "far country"
+  ],
+  "explanation": "Joshua 9:3-5 says the inhabitants of Gibeon 'did work wilily' and came with old sacks, old shoes and mouldy bread. Jericho and Ai were the cities Joshua had already conquered, and Gilgal was Israel's camp (Joshua 9:6).",
+  "hint": "The plotters had heard about Jericho and Ai, so they were not from either of those cities.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m13-2",
+  "mode": "mystery",
+  "case": "m13",
+  "case_title": "The Travellers with Mouldy Bread",
+  "stage": 2,
+  "clue": "Witness statement: the travellers pointed to their dry bread and told the Israelites a story about when it had been packed.",
+  "prompt": "What did the travellers claim about their bread?",
+  "options": [
+   "They took it hot out of their houses on the day they set out",
+   "They bought it at a market in Gilgal",
+   "They received it as a gift from the king of Ai",
+   "They baked it fresh that morning"
+  ],
+  "correct": 0,
+  "reference": "Joshua 9:12-13",
+  "keywords": [
+   "hot",
+   "mouldy",
+   "very long journey"
+  ],
+  "explanation": "In Joshua 9:12-13 the travellers said they took the bread hot from their houses when they set out, and that it had become dry and mouldy, their bottles torn and clothes worn 'by reason of the very long journey.'",
+  "hint": "They used the bread to suggest how long they had been travelling.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m13-3",
+  "mode": "mystery",
+  "case": "m13",
+  "case_title": "The Travellers with Mouldy Bread",
+  "stage": 3,
+  "clue": "Procedure note: the Israelite men examined the visitors' food, and Joshua and the princes swore an oath of peace. One important step was left out.",
+  "prompt": "What did the men of Israel fail to do before making the league?",
+  "options": [
+   "They asked not counsel at the mouth of the LORD",
+   "They did not taste the visitors' food",
+   "They did not let the princes swear",
+   "They did not let Joshua make peace"
+  ],
+  "correct": 0,
+  "reference": "Joshua 9:14-15",
+  "keywords": [
+   "asked not counsel",
+   "league"
+  ],
+  "explanation": "Joshua 9:14 says the men took of their victuals 'and asked not counsel at the mouth of the LORD.' Verse 15 shows Joshua made peace and the princes swore, so the other options contradict the text.",
+  "hint": "They checked the evidence with their own eyes but did not seek guidance from someone else.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m13-4",
+  "mode": "mystery",
+  "case": "m13",
+  "case_title": "The Travellers with Mouldy Bread",
+  "stage": 4,
+  "clue": "Follow-up report: just three days after the treaty, Israel received news about the strangers and marched to their cities, arriving on the third day.",
+  "prompt": "What did Israel discover about the travellers?",
+  "options": [
+   "They were neighbours who dwelt among them",
+   "They lived beyond the great sea",
+   "They came from Egypt",
+   "They were Israelites from another tribe"
+  ],
+  "correct": 0,
+  "reference": "Joshua 9:16-17",
+  "keywords": [
+   "neighbours",
+   "Chephirah",
+   "Kirjath-jearim"
+  ],
+  "explanation": "Joshua 9:16 says Israel heard 'that they were their neighbours, and that they dwelt among them,' and verse 17 names their cities: Gibeon, Chephirah, Beeroth and Kirjathjearim.",
+  "hint": "The 'very long journey' turned out to be much shorter than claimed.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m13-5",
+  "mode": "mystery",
+  "case": "m13",
+  "case_title": "The Travellers with Mouldy Bread",
+  "stage": 5,
+  "clue": "Final interrogation: Joshua asked, 'Wherefore have ye beguiled us?' The Gibeonites gave their reason and placed themselves in his hand.",
+  "prompt": "Case solved: what really happened, and how did it end?",
+  "options": [
+   "The Gibeonites, sore afraid for their lives, pretended to come from far away; they were spared but made hewers of wood and drawers of water",
+   "The Gibeonites were truly from a far country and became Israel's honoured allies",
+   "The men of Ai disguised themselves, and Joshua destroyed them",
+   "The Gibeonites stole Israel's bread and were driven out of the land"
+  ],
+  "correct": 0,
+  "reference": "Joshua 9:22-27",
+  "keywords": [
+   "beguiled",
+   "sore afraid",
+   "hewers of wood"
+  ],
+  "explanation": "In Joshua 9:24 the Gibeonites said they 'were sore afraid of our lives' and so 'have done this thing.' Joshua 9:26-27 says he delivered them from being slain and made them hewers of wood and drawers of water for the congregation and the altar of the LORD.",
+  "hint": "Their lives were spared because of the oath, but their deception had a lasting consequence.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m19-1",
+  "mode": "mystery",
+  "case": "m19",
+  "case_title": "The Man Born Blind",
+  "stage": 1,
+  "clue": "Witness report: Jesus and his disciples passed a man blind since birth, and the disciples asked their Master a pointed question about blame.",
+  "prompt": "According to Jesus, why was this man born blind?",
+  "options": [
+   "Because his parents had sinned",
+   "Because the man himself had sinned",
+   "So that the works of God should be made manifest in him",
+   "Because he had broken the sabbath"
+  ],
+  "correct": 2,
+  "reference": "John 9:1-3",
+  "keywords": [
+   "blind from his birth",
+   "works of God"
+  ],
+  "explanation": "Jesus answered that neither the man nor his parents had sinned, but that the works of God should be made manifest in him (John 9:3).",
+  "hint": "Jesus rejected both options the disciples suggested.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m19-2",
+  "mode": "mystery",
+  "case": "m19",
+  "case_title": "The Man Born Blind",
+  "stage": 2,
+  "clue": "Physical evidence: traces of clay made with spittle were applied to the man's eyes, and he was given instructions to go somewhere.",
+  "prompt": "Where was the man told to go and wash?",
+  "options": [
+   "The river Jordan",
+   "The pool of Siloam",
+   "The pool of Bethesda",
+   "The temple laver"
+  ],
+  "correct": 1,
+  "reference": "John 9:6-7",
+  "keywords": [
+   "pool of Siloam",
+   "made clay"
+  ],
+  "explanation": "Jesus anointed the man's eyes with clay and told him, 'Go, wash in the pool of Siloam'; he washed and came seeing (John 9:6-7).",
+  "hint": "The name of this pool is interpreted as 'Sent.'",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m19-3",
+  "mode": "mystery",
+  "case": "m19",
+  "case_title": "The Man Born Blind",
+  "stage": 3,
+  "clue": "Pharisee testimony: 'This man is not of God,' some of them said of the healer, pointing to the day on which the clay was made.",
+  "prompt": "On what day did Jesus make the clay and open the man's eyes?",
+  "options": [
+   "The day of Pentecost",
+   "The first day of the week",
+   "The sabbath day",
+   "The day of atonement"
+  ],
+  "correct": 2,
+  "reference": "John 9:13-16",
+  "keywords": [
+   "sabbath day",
+   "Pharisees"
+  ],
+  "explanation": "It was the sabbath day when Jesus made the clay, and some Pharisees said he was not of God because he kept not the sabbath day (John 9:14,16).",
+  "hint": "Their objection concerned a weekly day of rest.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m19-4",
+  "mode": "mystery",
+  "case": "m19",
+  "case_title": "The Man Born Blind",
+  "stage": 4,
+  "clue": "Statement of the parents: 'We know that this is our son, and that he was born blind... he is of age; ask him.'",
+  "prompt": "Why did the man's parents refuse to say how their son received his sight?",
+  "options": [
+   "They feared the Jews, who had agreed to put out of the synagogue anyone who confessed Jesus was Christ",
+   "They had not seen their son in many years",
+   "They believed he had been healed by a physician",
+   "They were angry with their son"
+  ],
+  "correct": 0,
+  "reference": "John 9:18-23",
+  "keywords": [
+   "feared the Jews",
+   "put out of the synagogue"
+  ],
+  "explanation": "His parents spoke this way because they feared the Jews, who had agreed that anyone confessing Jesus as Christ would be put out of the synagogue (John 9:22).",
+  "hint": "Consider what the text says would happen to anyone who made a certain confession.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m19-5",
+  "mode": "mystery",
+  "case": "m19",
+  "case_title": "The Man Born Blind",
+  "stage": 5,
+  "clue": "Final report: after the man was cast out, Jesus found him and asked, 'Dost thou believe on the Son of God?'",
+  "prompt": "What really happened when Jesus revealed himself to the healed man?",
+  "options": [
+   "The man went away doubting",
+   "The man returned to the Pharisees to accuse Jesus",
+   "The man said, 'Lord, I believe,' and worshipped him",
+   "The man asked for another sign before believing"
+  ],
+  "correct": 2,
+  "reference": "John 9:35-38",
+  "keywords": [
+   "Lord, I believe",
+   "worshipped him"
+  ],
+  "explanation": "When Jesus said, 'it is he that talketh with thee,' the man replied, 'Lord, I believe,' and he worshipped him (John 9:37-38).",
+  "hint": "The man's answer was short and his response was immediate.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m15-1",
+  "mode": "mystery",
+  "case": "m15",
+  "case_title": "The Stolen Blessing",
+  "stage": 1,
+  "clue": "Witness report: The patriarch is old and his eyes are dim. He was heard sending his elder son out to the field with quiver and bow, promising a blessing afterward.",
+  "prompt": "What did Isaac ask Esau to bring him before giving the blessing?",
+  "options": [
+   "Venison made into savoury meat",
+   "A lamb from the flock for a sacrifice",
+   "Bread and wine from the city",
+   "Water from a well in the wilderness"
+  ],
+  "correct": 0,
+  "reference": "Genesis 27:1-4",
+  "keywords": [
+   "venison",
+   "savoury meat"
+  ],
+  "explanation": "Isaac told Esau to take his weapons, hunt venison, and make savoury meat, 'that my soul may bless thee before I die' (Genesis 27:3-4).",
+  "hint": "Think of what a hunter brings home from the field.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m15-2",
+  "mode": "mystery",
+  "case": "m15",
+  "case_title": "The Stolen Blessing",
+  "stage": 2,
+  "clue": "Overheard conversation: Someone in the household heard Isaac's instructions to Esau and quickly gave Jacob a set of instructions of her own.",
+  "prompt": "What did Rebekah tell Jacob to fetch from the flock?",
+  "options": [
+   "Two good kids of the goats",
+   "A young bullock",
+   "Seven ewe lambs",
+   "A pair of turtledoves"
+  ],
+  "correct": 0,
+  "reference": "Genesis 27:5-10",
+  "keywords": [
+   "two good kids of the goats",
+   "Rebekah"
+  ],
+  "explanation": "Rebekah told Jacob to fetch 'two good kids of the goats' so she could make savoury meat for Isaac (Genesis 27:9).",
+  "hint": "The animals came from the flock and their skins would prove useful later.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m15-3",
+  "mode": "mystery",
+  "case": "m15",
+  "case_title": "The Stolen Blessing",
+  "stage": 3,
+  "clue": "Physical evidence: Jacob had worried that his father would feel him, since his brother was hairy and he was smooth. The garments and some animal skins were later found to have been used.",
+  "prompt": "How was Jacob disguised before going in to Isaac?",
+  "options": [
+   "He wore Esau's goodly raiment and goat skins on his hands and neck",
+   "He wore a veil over his face",
+   "He covered himself with sackcloth and ashes",
+   "He wore a priest's linen ephod"
+  ],
+  "correct": 0,
+  "reference": "Genesis 27:15-17",
+  "keywords": [
+   "goodly raiment",
+   "skins of the kids"
+  ],
+  "explanation": "Rebekah put Esau's goodly raiment on Jacob and put the skins of the kids of the goats on his hands and the smooth of his neck (Genesis 27:15-16).",
+  "hint": "The disguise targeted Isaac's sense of touch and borrowed from the elder brother's wardrobe.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m15-4",
+  "mode": "mystery",
+  "case": "m15",
+  "case_title": "The Stolen Blessing",
+  "stage": 4,
+  "clue": "Statement from the tent: After feeling his son, the blind father voiced a doubt about what he heard compared with what he felt.",
+  "prompt": "What did Isaac say when he felt Jacob?",
+  "options": [
+   "The voice is Jacob's voice, but the hands are the hands of Esau",
+   "The smell is not the smell of my son",
+   "Thou art too young to be Esau",
+   "Thy meat is not as I love it"
+  ],
+  "correct": 0,
+  "reference": "Genesis 27:21-23",
+  "keywords": [
+   "The voice is Jacob's voice",
+   "the hands of Esau"
+  ],
+  "explanation": "Isaac felt him and said, 'The voice is Jacob's voice, but the hands are the hands of Esau,' and he discerned him not (Genesis 27:22-23).",
+  "hint": "One sense told Isaac the truth while another was deceived.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m15-5",
+  "mode": "mystery",
+  "case": "m15",
+  "case_title": "The Stolen Blessing",
+  "stage": 5,
+  "clue": "Final testimony: When the true elder son arrived from hunting, Isaac trembled very exceedingly and explained to him what had happened.",
+  "prompt": "According to Isaac's explanation to Esau, who had taken the blessing?",
+  "options": [
+   "Jacob, his brother, who came with subtilty",
+   "A servant who stole Esau's garments",
+   "Rebekah, who asked for it herself",
+   "No one; Isaac had not yet blessed anyone"
+  ],
+  "correct": 0,
+  "reference": "Genesis 27:33-35",
+  "keywords": [
+   "subtilty",
+   "taken away thy blessing"
+  ],
+  "explanation": "Isaac told Esau, 'Thy brother came with subtilty, and hath taken away thy blessing' (Genesis 27:35).",
+  "hint": "Isaac named the culprit by his relation to Esau.",
+  "difficulty": 1,
+  "stages": 5
+ },
+ {
+  "id": "mys-m17-1",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "stage": 1,
+  "clue": "Witness statement from Naaman's company: 'Our master stood before the prophet and begged him to accept a gift. The prophet swore an oath by the LORD and would not budge.'",
+  "prompt": "How did Elisha respond when Naaman urged him to take a blessing (a gift)?",
+  "options": [
+   "He refused, saying, 'As the LORD liveth, before whom I stand, I will receive none.'",
+   "He accepted half of the gift for the sons of the prophets.",
+   "He told Naaman to send the gift to the king of Israel.",
+   "He accepted only the changes of garments."
+  ],
+  "correct": 0,
+  "reference": "2 Kings 5:15-16",
+  "keywords": [
+   "take a blessing",
+   "I will receive none"
+  ],
+  "explanation": "Naaman asked Elisha to take a blessing, but Elisha swore he would receive none and refused even when urged (2 Kings 5:15-16).",
+  "hint": "Pay attention to the oath the prophet swore.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m17-2",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "stage": 2,
+  "clue": "Report from the road: 'A man came running after the chariot. Naaman stepped down to meet him and asked, Is all well? The runner said his master had sent him.'",
+  "prompt": "What reason did Gehazi give Naaman for coming after him?",
+  "options": [
+   "Elisha had changed his mind and wanted the whole gift.",
+   "Two young men of the sons of the prophets had come from mount Ephraim and needed a talent of silver and two changes of garments.",
+   "The king of Israel demanded payment for the healing.",
+   "Naaman had left his mules' burden of earth behind."
+  ],
+  "correct": 1,
+  "reference": "2 Kings 5:20-22",
+  "keywords": [
+   "Gehazi",
+   "mount Ephraim",
+   "sons of the prophets"
+  ],
+  "explanation": "Gehazi claimed his master had sent him because two young men of the sons of the prophets had arrived from mount Ephraim, and he asked for a talent of silver and two changes of garments (2 Kings 5:22).",
+  "hint": "The runner mentioned visitors from a hill country region.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m17-3",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "stage": 3,
+  "clue": "Inventory note: 'Bound in two bags and carried by two of Naaman's servants, along with two changes of garments.'",
+  "prompt": "How much silver did Naaman actually give?",
+  "options": [
+   "One talent of silver",
+   "Ten talents of silver",
+   "Two talents of silver",
+   "Six thousand pieces of gold"
+  ],
+  "correct": 2,
+  "reference": "2 Kings 5:23",
+  "keywords": [
+   "two talents",
+   "two bags"
+  ],
+  "explanation": "Naaman said, 'Be content, take two talents,' and bound two talents of silver in two bags with two changes of garments (2 Kings 5:23).",
+  "hint": "Naaman gave more than was requested; count the bags.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m17-4",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "stage": 4,
+  "clue": "Observation at the tower: 'Two of Naaman's servants carried the bags ahead of the man, then were sent on their way.'",
+  "prompt": "What did Gehazi do with the silver and garments when he came to the tower?",
+  "options": [
+   "He gave them to the two young men from mount Ephraim.",
+   "He took them from the servants' hands and bestowed them in the house, then let the men go.",
+   "He brought them openly to Elisha.",
+   "He buried them beside the Jordan."
+  ],
+  "correct": 1,
+  "reference": "2 Kings 5:24",
+  "keywords": [
+   "the tower",
+   "bestowed them in the house"
+  ],
+  "explanation": "At the tower Gehazi took the goods from the servants, bestowed them in the house, and sent the men away (2 Kings 5:24).",
+  "hint": "Look at where he stopped and where the goods were put.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m17-5",
+  "mode": "mystery",
+  "case": "m17",
+  "case_title": "The Servant's Secret Errand",
+  "stage": 5,
+  "clue": "Final interview: Elisha asked, 'Whence comest thou, Gehazi?' The servant answered that he had gone nowhere, but the prophet replied that his own heart had gone with Gehazi.",
+  "prompt": "What really happened when Gehazi stood before Elisha?",
+  "options": [
+   "Gehazi confessed, and Elisha forgave him without consequence.",
+   "Elisha believed Gehazi, and the matter was forgotten.",
+   "Gehazi lied, saying 'Thy servant went no whither'; Elisha revealed he knew, and Naaman's leprosy came upon Gehazi.",
+   "Naaman returned to reclaim the silver, and Gehazi fled."
+  ],
+  "correct": 2,
+  "reference": "2 Kings 5:25-27",
+  "keywords": [
+   "went no whither",
+   "leprosy",
+   "white as snow"
+  ],
+  "explanation": "Gehazi claimed, 'Thy servant went no whither,' but Elisha answered, 'Went not mine heart with thee?' He pronounced that Naaman's leprosy would cleave to Gehazi, and Gehazi went out a leper as white as snow (2 Kings 5:25-27).",
+  "hint": "Compare Gehazi's answer with what Elisha said he already knew.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m16-1",
+  "mode": "mystery",
+  "case": "m16",
+  "case_title": "The Left-Handed Messenger",
+  "stage": 1,
+  "clue": "Background report: Israel did evil in the sight of the LORD, and a foreign ruler allied with Ammon and Amalek seized the city of palm trees.",
+  "prompt": "Who was the ruler oppressing Israel, and for how long did Israel serve him?",
+  "options": [
+   "Eglon the king of Moab, for eighteen years",
+   "Jabin king of Canaan, for twenty years",
+   "Eglon the king of Ammon, for seven years",
+   "Cushanrishathaim of Mesopotamia, for forty years"
+  ],
+  "correct": 0,
+  "reference": "Judges 3:12-14",
+  "keywords": [
+   "Eglon",
+   "eighteen years"
+  ],
+  "explanation": "The LORD strengthened Eglon the king of Moab against Israel, and the children of Israel served him eighteen years (Judges 3:12-14).",
+  "hint": "Ammon and Amalek were his allies, not his own kingdom.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m16-2",
+  "mode": "mystery",
+  "case": "m16",
+  "case_title": "The Left-Handed Messenger",
+  "stage": 2,
+  "clue": "Suspect profile: a Benjamite, the son of Gera, sent by Israel to carry a present to the king. He prepared a weapon before the journey.",
+  "prompt": "Where did Ehud conceal the two-edged dagger he made?",
+  "options": [
+   "Under his raiment upon his left thigh",
+   "Inside the present carried to the king",
+   "Under his raiment upon his right thigh",
+   "In the sleeve of his left arm"
+  ],
+  "correct": 2,
+  "reference": "Judges 3:15-16",
+  "keywords": [
+   "dagger",
+   "right thigh"
+  ],
+  "explanation": "Ehud, a left-handed Benjamite, made a two-edged dagger a cubit long and girded it under his raiment upon his right thigh (Judges 3:15-16).",
+  "hint": "Think about which side a left-handed man would draw from.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m16-3",
+  "mode": "mystery",
+  "case": "m16",
+  "case_title": "The Left-Handed Messenger",
+  "stage": 3,
+  "clue": "Witness statement: after the present was delivered and the bearers sent away, the messenger turned back from the quarries by Gilgal and asked to see the king privately.",
+  "prompt": "What did Ehud say to Eglon once they were alone in the summer parlour?",
+  "options": [
+   "I bring tribute from the elders of Israel",
+   "I have a message from God unto thee",
+   "I come to swear peace between our peoples",
+   "I have a letter from the king of Ammon"
+  ],
+  "correct": 1,
+  "reference": "Judges 3:17-20",
+  "keywords": [
+   "secret errand",
+   "summer parlour"
+  ],
+  "explanation": "Ehud first claimed a secret errand so the attendants went out, then in the summer parlour said, 'I have a message from God unto thee,' and Eglon arose from his seat (Judges 3:19-20).",
+  "hint": "The king rose from his seat when he heard who the message was from.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m16-4",
+  "mode": "mystery",
+  "case": "m16",
+  "case_title": "The Left-Handed Messenger",
+  "stage": 4,
+  "clue": "Scene report: the visitor left through the porch. Afterward the king's servants waited a long time outside the parlour before anyone went in.",
+  "prompt": "According to the text, why did the servants delay entering the parlour?",
+  "options": [
+   "Ehud had ordered them to stay outside until evening",
+   "They feared the king's anger at being disturbed at a feast",
+   "The doors were locked, and they supposed he covereth his feet in his summer chamber",
+   "They could not find anyone to open the doors until morning"
+  ],
+  "correct": 2,
+  "reference": "Judges 3:21-25",
+  "keywords": [
+   "covereth his feet",
+   "locked"
+  ],
+  "explanation": "Finding the parlour doors locked, the servants said, 'Surely he covereth his feet in his summer chamber,' and tarried until they were ashamed, then used a key and found their lord dead (Judges 3:24-25).",
+  "hint": "The locked doors led them to assume the king wanted privacy.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m16-5",
+  "mode": "mystery",
+  "case": "m16",
+  "case_title": "The Left-Handed Messenger",
+  "stage": 5,
+  "clue": "Final report: while the servants tarried, the messenger was already gone. A trumpet was soon heard in the mountain of Ephraim.",
+  "prompt": "What was the outcome of the case after Ehud escaped?",
+  "options": [
+   "Ehud escaped unto Seirath, Israel took the fords of Jordan, Moab was subdued, and the land had rest fourscore years",
+   "Ehud was captured at the quarries, but Israel later defeated Moab and had rest forty years",
+   "Ehud fled to Gilgal, Moab's army escaped across the Jordan, and the land had rest twenty years",
+   "Ehud became king over Israel and made peace with Moab for eighty years"
+  ],
+  "correct": 0,
+  "reference": "Judges 3:26-30",
+  "keywords": [
+   "Seirath",
+   "fourscore years"
+  ],
+  "explanation": "Ehud escaped unto Seirath, rallied Israel, seized the fords of Jordan so no Moabite passed over, and Moab was subdued; the land had rest fourscore years (Judges 3:26-30).",
+  "hint": "Watch the fords of Jordan, and note how many years of rest 'fourscore' means.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m14-1",
+  "mode": "mystery",
+  "case": "m14",
+  "case_title": "Naboth's Vineyard",
+  "stage": 1,
+  "clue": "Surveyor's note: The vineyard in question lay in Jezreel, right beside the palace of Ahab king of Samaria. The king made an offer for it.",
+  "prompt": "According to Ahab's offer, what did he want to turn Naboth's vineyard into?",
+  "options": [
+   "A garden of herbs",
+   "A courtyard for his chariots",
+   "A burial ground for his fathers",
+   "A threshing floor for grain"
+  ],
+  "correct": 0,
+  "reference": "1 Kings 21:1-2",
+  "keywords": [
+   "Naboth the Jezreelite",
+   "garden of herbs",
+   "vineyard"
+  ],
+  "explanation": "Ahab asked for the vineyard 'that I may have it for a garden of herbs, because it is near unto my house,' offering a better vineyard or its worth in money (1 Kings 21:2).",
+  "hint": "Ahab gave as his reason that the vineyard was near unto his house. Think of a plot he could use close to home.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m14-2",
+  "mode": "mystery",
+  "case": "m14",
+  "case_title": "Naboth's Vineyard",
+  "stage": 2,
+  "clue": "Witness statement: The king came home heavy and displeased, lay on his bed, turned his face away and would eat no bread, all because of Naboth's answer.",
+  "prompt": "What reason did Naboth give for refusing to give up his vineyard?",
+  "options": [
+   "The price Ahab offered was too low",
+   "It was the inheritance of his fathers",
+   "He had already promised it to Jezebel",
+   "The vines were about to be harvested"
+  ],
+  "correct": 1,
+  "reference": "1 Kings 21:3-4",
+  "keywords": [
+   "inheritance of my fathers",
+   "heavy and displeased"
+  ],
+  "explanation": "Naboth said, 'The LORD forbid it me, that I should give the inheritance of my fathers unto thee,' and Ahab went home heavy and displeased (1 Kings 21:3-4).",
+  "hint": "Naboth's answer was about family land, not about money.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m14-3",
+  "mode": "mystery",
+  "case": "m14",
+  "case_title": "Naboth's Vineyard",
+  "stage": 3,
+  "clue": "Exhibit A: Letters were delivered to the elders and nobles of Naboth's city. They bore the king's name and were sealed with the king's seal.",
+  "prompt": "Who actually wrote the letters sent in Ahab's name?",
+  "options": [
+   "Ahab himself",
+   "The elders of Jezreel",
+   "Jezebel",
+   "Elijah the Tishbite"
+  ],
+  "correct": 2,
+  "reference": "1 Kings 21:7-8",
+  "keywords": [
+   "letters in Ahab's name",
+   "sealed them with his seal"
+  ],
+  "explanation": "After promising Ahab, 'I will give thee the vineyard of Naboth the Jezreelite,' Jezebel 'wrote letters in Ahab's name, and sealed them with his seal' (1 Kings 21:7-8).",
+  "hint": "Look for the person who told Ahab to arise, eat bread, and let his heart be merry.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m14-4",
+  "mode": "mystery",
+  "case": "m14",
+  "case_title": "Naboth's Vineyard",
+  "stage": 4,
+  "clue": "Court record: A fast was proclaimed and Naboth was set on high among the people. Two men sat before him and testified in public.",
+  "prompt": "What accusation did the two men of Belial bring against Naboth?",
+  "options": [
+   "That he had stolen from the king's treasury",
+   "That he had moved his neighbour's landmark",
+   "That he had worshipped Baal",
+   "That he did blaspheme God and the king"
+  ],
+  "correct": 3,
+  "reference": "1 Kings 21:9-13",
+  "keywords": [
+   "blaspheme God and the king",
+   "children of Belial",
+   "stoned him"
+  ],
+  "explanation": "The men of Belial witnessed, 'Naboth did blaspheme God and the king,' and he was carried out of the city and stoned until he died (1 Kings 21:13).",
+  "hint": "The letters scripted the exact charge in advance. Compare the instruction with the testimony.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m14-5",
+  "mode": "mystery",
+  "case": "m14",
+  "case_title": "Naboth's Vineyard",
+  "stage": 5,
+  "clue": "Final report: As Ahab went down to take possession of the vineyard, the word of the LORD came to Elijah the Tishbite with a question for the king.",
+  "prompt": "In the LORD's message through Elijah, what did He charge Ahab with?",
+  "options": [
+   "Having killed, and also taken possession",
+   "Only failing to pay a fair price for the land",
+   "Breaking a treaty with the king of Syria",
+   "Refusing to proclaim a fast"
+  ],
+  "correct": 0,
+  "reference": "1 Kings 21:17-19",
+  "keywords": [
+   "Elijah the Tishbite",
+   "Hast thou killed",
+   "taken possession"
+  ],
+  "explanation": "The LORD sent Elijah to say, 'Hast thou killed, and also taken possession?' and declared that dogs would lick Ahab's blood where they licked Naboth's (1 Kings 21:19).",
+  "hint": "The LORD's question named two things together: what happened to Naboth and what happened to the vineyard.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m18-1",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "stage": 1,
+  "clue": "Case file, day after the preparation: a delegation met the governor. One of them was recorded saying, 'Sir, we remember that that deceiver said... After three days I will rise again.'",
+  "prompt": "Who went to Pilate, and what did they say they feared?",
+  "options": [
+   "The chief priests and Pharisees, fearing the disciples would steal the body and say he was risen",
+   "The disciples, fearing the Romans would move the body",
+   "Joseph of Arimathaea, fearing robbers would damage the tomb",
+   "The elders of Galilee, fearing a riot at the feast"
+  ],
+  "correct": 0,
+  "reference": "Matthew 27:62-64",
+  "keywords": [
+   "chief priests and Pharisees",
+   "steal him away"
+  ],
+  "explanation": "The chief priests and Pharisees came to Pilate asking that the sepulchre be made sure, 'lest his disciples come by night, and steal him away' (Matthew 27:62-64).",
+  "hint": "Look at who 'came together unto Pilate' and the phrase beginning 'lest his disciples...'",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m18-2",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "stage": 2,
+  "clue": "Governor's reply on record: 'Ye have a watch: go your way, make it as sure as ye can.' Those who asked then went to the sepulchre to act on his word.",
+  "prompt": "What two measures were taken to secure the sepulchre?",
+  "options": [
+   "The stone was sealed and a watch was set",
+   "The door was bricked up and the key given to Pilate",
+   "The body was moved and the tomb left empty",
+   "A second stone was added and the disciples were arrested"
+  ],
+  "correct": 0,
+  "reference": "Matthew 27:65-66",
+  "keywords": [
+   "sealing the stone",
+   "setting a watch"
+  ],
+  "explanation": "They went and made the sepulchre sure, 'sealing the stone, and setting a watch' (Matthew 27:65-66).",
+  "hint": "The final verse names two actions joined by 'and'.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m18-3",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "stage": 3,
+  "clue": "Early on the first day of the week, Mary Magdalene and the other Mary came to see the sepulchre. There was a great earthquake, and the stone was no longer in the door.",
+  "prompt": "According to the text, who rolled back the stone, and what happened to the keepers?",
+  "options": [
+   "The angel of the Lord rolled it back, and the keepers shook and became as dead men",
+   "The disciples rolled it back while the keepers slept",
+   "The women rolled it back, and the keepers fled to Pilate",
+   "The earthquake moved it, and the keepers arrested the women"
+  ],
+  "correct": 0,
+  "reference": "Matthew 28:1-4",
+  "keywords": [
+   "rolled back the stone",
+   "became as dead men"
+  ],
+  "explanation": "The angel of the Lord descended, rolled back the stone and sat upon it, and 'for fear of him the keepers did shake, and became as dead men' (Matthew 28:2-4).",
+  "hint": "Check who 'descended from heaven' and how the keepers reacted 'for fear of him'.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m18-4",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "stage": 4,
+  "clue": "Statement attributed to the figure at the tomb, addressed to the women: 'Fear not ye.' He then invited them to look at a certain place.",
+  "prompt": "What did the angel tell the women about Jesus?",
+  "options": [
+   "He is not here, for he is risen, as he said",
+   "His body had been taken to another tomb",
+   "The guards had hidden him in the city",
+   "He would remain in the tomb until the fourth day"
+  ],
+  "correct": 0,
+  "reference": "Matthew 28:5-8",
+  "keywords": [
+   "he is risen",
+   "where the Lord lay"
+  ],
+  "explanation": "The angel said, 'He is not here: for he is risen, as he said. Come, see the place where the Lord lay' (Matthew 28:6).",
+  "hint": "The angel connects his words to what Jesus himself had said earlier.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m18-5",
+  "mode": "mystery",
+  "case": "m18",
+  "case_title": "The Guards' Story",
+  "stage": 5,
+  "clue": "Final report: some of the watch went into the city and told the chief priests all that was done. Soon afterward a particular saying was 'commonly reported among the Jews.'",
+  "prompt": "Case solved: where did the story that the disciples stole the body come from?",
+  "options": [
+   "The chief priests and elders gave the soldiers large money to say the disciples stole him while they slept",
+   "The soldiers personally saw the disciples carry the body away",
+   "The women told the disciples that the body had been stolen",
+   "Pilate announced it after investigating the tomb himself"
+  ],
+  "correct": 0,
+  "reference": "Matthew 28:11-15",
+  "keywords": [
+   "large money",
+   "stole him away while we slept"
+  ],
+  "explanation": "After taking counsel, the chief priests and elders 'gave large money unto the soldiers,' telling them to say 'His disciples came by night, and stole him away while we slept,' and the soldiers 'did as they were taught' (Matthew 28:12-15).",
+  "hint": "Notice who paid whom, and the phrase 'did as they were taught'.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m20-1",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "stage": 1,
+  "clue": "Trade ledger note: a local craftsman known for making silver shrines for Diana is said to have brought 'no small gain' unto the craftsmen. He called them together with the workmen of like occupation.",
+  "prompt": "Who called the craftsmen together at the start of the uproar, and what was his trade?",
+  "options": [
+   "Demetrius, a silversmith who made silver shrines for Diana",
+   "Alexander, a coppersmith who made idols for Jupiter",
+   "Gaius, a tentmaker who sold goods in the market",
+   "The townclerk, a scribe who kept the temple records"
+  ],
+  "correct": 0,
+  "reference": "Acts 19:24-25",
+  "keywords": [
+   "Demetrius",
+   "silver shrines",
+   "silversmith"
+  ],
+  "explanation": "Acts 19:24-25 names Demetrius, a silversmith who made silver shrines for Diana, as the man who called together the workmen of like occupation.",
+  "hint": "Look for the man whose craft brought 'no small gain unto the craftsmen.'",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m20-2",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "stage": 2,
+  "clue": "Witness statement from the craftsmen's meeting: 'He told us that by this craft we have our wealth, and that one man had turned away much people, not only at Ephesus but almost throughout all Asia.'",
+  "prompt": "According to the speech at the meeting, what was Paul saying that put the craft in danger?",
+  "options": [
+   "That the temple of Diana should be torn down by force",
+   "That they be no gods, which are made with hands",
+   "That the craftsmen were charging unfair prices",
+   "That the shrines should be given away rather than sold"
+  ],
+  "correct": 1,
+  "reference": "Acts 19:26-27",
+  "keywords": [
+   "made with hands",
+   "our craft"
+  ],
+  "explanation": "In Acts 19:26-27 the speaker says Paul persuaded many, saying 'they be no gods, which are made with hands,' so that 'this our craft is in danger to be set at nought' and Diana's temple would be despised.",
+  "hint": "The complaint concerns what is fashioned by human hands.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m20-3",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "stage": 3,
+  "clue": "Scene report: the whole city was filled with confusion. Two of Paul's travel companions from Macedonia were seized, and the crowd rushed with one accord to a public gathering place. Paul's friends urged him not to go in.",
+  "prompt": "As the crowd rushed with one accord into the theatre, whom did they seize?",
+  "options": [
+   "Paul and Silas",
+   "Alexander and Demetrius",
+   "Gaius and Aristarchus",
+   "Timothy and Erastus"
+  ],
+  "correct": 2,
+  "reference": "Acts 19:29-31",
+  "keywords": [
+   "theatre",
+   "Gaius and Aristarchus"
+  ],
+  "explanation": "Acts 19:29 records that the crowd caught Gaius and Aristarchus, men of Macedonia, Paul's companions in travel, and rushed into the theatre. Verses 30-31 add that the disciples and certain of the chief of Asia kept Paul from entering.",
+  "hint": "The text calls them 'men of Macedonia, Paul's companions in travel.'",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m20-4",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "stage": 4,
+  "clue": "Crowd observer's note: 'Some cried one thing, and some another; most did not even know why they had come. A man was put forward to speak and beckoned with his hand, but the moment they learned who he was, they drowned him out.'",
+  "prompt": "What happened when Alexander tried to make his defence to the people?",
+  "options": [
+   "The crowd listened quietly and then went home",
+   "When they knew he was a Jew, they cried out for about two hours, 'Great is Diana of the Ephesians'",
+   "Demetrius answered him and the two debated for an hour",
+   "He was immediately arrested by the deputies"
+  ],
+  "correct": 1,
+  "reference": "Acts 19:32-34",
+  "keywords": [
+   "Alexander",
+   "two hours",
+   "Great is Diana of the Ephesians"
+  ],
+  "explanation": "Acts 19:33-34 says Alexander beckoned to make his defence, but when the crowd knew he was a Jew, all with one voice cried out for about the space of two hours, 'Great is Diana of the Ephesians.'",
+  "hint": "Count how long the single chant went on.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m20-5",
+  "mode": "mystery",
+  "case": "m20",
+  "case_title": "The Uproar at Ephesus",
+  "stage": 5,
+  "clue": "Final entry: a city official finally quieted the crowd. He pointed out that the accused men were neither robbers of churches nor blasphemers of the goddess, that the courts were open, and that the city itself risked being called to account for the day's uproar.",
+  "prompt": "Case solution: who ended the uproar, and how was it resolved?",
+  "options": [
+   "Paul entered the theatre and persuaded the crowd to disperse",
+   "Demetrius withdrew his complaint and apologized to the city",
+   "The townclerk appeased the people, directed complaints to the law and lawful assembly, and dismissed the assembly",
+   "Roman soldiers broke up the crowd and imprisoned Gaius and Aristarchus"
+  ],
+  "correct": 2,
+  "reference": "Acts 19:35-41",
+  "keywords": [
+   "townclerk",
+   "the law is open",
+   "dismissed the assembly"
+  ],
+  "explanation": "Acts 19:35-41 records that the townclerk appeased the people, said any matter should go to the law, the deputies, or a lawful assembly, warned of being called in question for the uproar, and then dismissed the assembly.",
+  "hint": "The resolution came from a city official, not from Paul or the craftsmen.",
+  "difficulty": 3,
+  "stages": 5
+ },
+ {
+  "id": "mys-m21-1",
+  "mode": "mystery",
+  "case": "m21",
+  "case_title": "The Plot of the Forty",
+  "stage": 1,
+  "clue": "Case note: At daybreak a group gathered and bound themselves under a curse. Their number was counted at more than forty.",
+  "prompt": "What did the conspirators vow they would not do until they had killed Paul?",
+  "options": [
+   "Neither eat nor drink",
+   "Neither sleep nor rest",
+   "Neither enter the temple nor pray",
+   "Neither leave Jerusalem nor speak to anyone"
+  ],
+  "correct": 0,
+  "reference": "Acts 23:12-13",
+  "keywords": [
+   "bound themselves under a curse",
+   "more than forty"
+  ],
+  "explanation": "Acts 23:12 says they bound themselves under a curse, \"saying that they would neither eat nor drink till they had killed Paul,\" and verse 13 says they were more than forty.",
+  "hint": "Their oath concerned their daily needs at the table.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m21-2",
+  "mode": "mystery",
+  "case": "m21",
+  "case_title": "The Plot of the Forty",
+  "stage": 2,
+  "clue": "Overheard plan: The conspirators went to certain leaders and asked them to pass a request to the chief captain, so Paul would be brought out of the castle.",
+  "prompt": "What pretext were the leaders to use for having Paul brought down to the council?",
+  "options": [
+   "That Paul had asked to make a public defense",
+   "As though they would enquire something more perfectly concerning him",
+   "That Paul was to be released to his family",
+   "That Paul was to be sent to Rome for trial"
+  ],
+  "correct": 1,
+  "reference": "Acts 23:14-15",
+  "keywords": [
+   "chief priests and elders",
+   "enquire something more perfectly"
+  ],
+  "explanation": "In Acts 23:15 the conspirators told the chief priests and elders to ask that Paul be brought down \"as though ye would enquire something more perfectly concerning him,\" while they waited to kill him before he came near.",
+  "hint": "The cover story pretended the council wanted more information.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m21-3",
+  "mode": "mystery",
+  "case": "m21",
+  "case_title": "The Plot of the Forty",
+  "stage": 3,
+  "clue": "Witness report: A young man entered the castle and told Paul about the men lying in wait. Paul then had a centurion bring him to the chief captain.",
+  "prompt": "Who was the young man who brought word of the ambush?",
+  "options": [
+   "One of the centurions",
+   "A servant of the high priest",
+   "Paul's sister's son",
+   "One of the forty conspirators"
+  ],
+  "correct": 2,
+  "reference": "Acts 23:16-22",
+  "keywords": [
+   "Paul's sister's son",
+   "lying in wait"
+  ],
+  "explanation": "Acts 23:16 says that \"when Paul's sister's son heard of their lying in wait, he went and entered into the castle, and told Paul,\" and he later repeated the warning to the chief captain privately.",
+  "hint": "He was a relative of Paul.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m21-4",
+  "mode": "mystery",
+  "case": "m21",
+  "case_title": "The Plot of the Forty",
+  "stage": 4,
+  "clue": "Military order: Two centurions were told to make ready two hundred soldiers, threescore and ten horsemen, and two hundred spearmen at the third hour of the night, with beasts provided for Paul.",
+  "prompt": "Where, and to whom, was Paul to be brought safely?",
+  "options": [
+   "To Rome, to Caesar",
+   "To Damascus, to the governor of the city",
+   "To Antioch, to the church elders",
+   "To Caesarea, to Felix the governor"
+  ],
+  "correct": 3,
+  "reference": "Acts 23:23-24",
+  "keywords": [
+   "Caesarea",
+   "Felix the governor"
+  ],
+  "explanation": "Acts 23:23-24 records the order to go to Caesarea and \"bring him safe unto Felix the governor.\"",
+  "hint": "The destination was a coastal city where a Roman governor sat.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "mys-m21-5",
+  "mode": "mystery",
+  "case": "m21",
+  "case_title": "The Plot of the Forty",
+  "stage": 5,
+  "clue": "Final report: The soldiers took Paul by night, the horsemen went on with him, and a letter was delivered to the governor along with the prisoner.",
+  "prompt": "What really happened to Paul after the plot was exposed?",
+  "options": [
+   "He was brought by night to Antipatris, then to Caesarea, and the governor had him kept in Herod's judgment hall until his accusers came",
+   "He was handed back to the council, who released him after questioning",
+   "He escaped the soldiers and fled to Cilicia",
+   "He was killed on the road before reaching the governor"
+  ],
+  "correct": 0,
+  "reference": "Acts 23:31-35",
+  "keywords": [
+   "Antipatris",
+   "Herod's judgment hall"
+  ],
+  "explanation": "Acts 23:31-33 says the soldiers brought Paul by night to Antipatris and then presented him to the governor at Caesarea, and verse 35 says the governor would hear him when his accusers came and commanded him to be kept in Herod's judgment hall.",
+  "hint": "The plot failed, but Paul remained in custody awaiting a hearing.",
+  "difficulty": 2,
+  "stages": 5
+ },
+ {
+  "id": "par-p13-1",
+  "mode": "parables",
+  "parable": "p13",
+  "parable_title": "The Wheat and the Tares",
+  "prompt": "According to the parable, when did the enemy come and sow tares among the wheat?",
+  "options": [
+   "While men slept",
+   "At the time of harvest",
+   "At noon, while the servants watched the field",
+   "After the wheat had been gathered into the barn"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:25",
+  "keywords": [
+   "while men slept",
+   "tares among the wheat"
+  ],
+  "explanation": "Matthew 13:25 says that \"while men slept, his enemy came and sowed tares among the wheat, and went his way.\"",
+  "hint": "The enemy did his work at a time when no one was watching.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p13-2",
+  "mode": "parables",
+  "parable": "p13",
+  "parable_title": "The Wheat and the Tares",
+  "prompt": "Why did the householder tell his servants not to gather up the tares right away?",
+  "options": [
+   "Lest they root up also the wheat with them",
+   "Because the tares would wither on their own",
+   "Because the tares were good to eat",
+   "Because the field belonged to the enemy"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:29",
+  "keywords": [
+   "root up also the wheat"
+  ],
+  "explanation": "In Matthew 13:29 he answered, \"Nay; lest while ye gather up the tares, ye root up also the wheat with them.\"",
+  "hint": "His concern was for the good crop growing alongside the bad.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p13-3",
+  "mode": "parables",
+  "parable": "p13",
+  "parable_title": "The Wheat and the Tares",
+  "prompt": "In Jesus' own explanation of the parable, what does the harvest represent?",
+  "options": [
+   "The end of the world",
+   "The preaching of John the Baptist",
+   "The feast of the Passover",
+   "The rebuilding of the temple"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:37-39",
+  "keywords": [
+   "the harvest is the end of the world",
+   "the reapers are the angels"
+  ],
+  "explanation": "Jesus states in Matthew 13:39 that \"the harvest is the end of the world; and the reapers are the angels.\"",
+  "hint": "Look at how Jesus identifies the harvest and the reapers together in His explanation.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p13-4",
+  "mode": "parables",
+  "parable": "p13",
+  "parable_title": "The Wheat and the Tares",
+  "prompt": "Who asked Jesus to explain this parable, and where were they?",
+  "options": [
+   "His disciples, in the house after He sent the multitude away",
+   "The Pharisees, in the synagogue",
+   "The multitude, on the shore of the sea",
+   "The servants of the high priest, in the temple"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:36",
+  "keywords": [
+   "went into the house",
+   "Declare unto us the parable"
+  ],
+  "explanation": "Matthew 13:36 records that Jesus \"sent the multitude away, and went into the house: and his disciples came unto him, saying, Declare unto us the parable of the tares of the field.\"",
+  "hint": "The explanation was given privately, after the crowd had gone.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p16-1",
+  "mode": "parables",
+  "parable": "p16",
+  "parable_title": "The Wicked Husbandmen",
+  "prompt": "When the householder sent his servants to receive the fruits of the vineyard, how did the husbandmen treat them?",
+  "options": [
+   "They beat one, killed another, and stoned another",
+   "They paid them half the fruits and sent them away",
+   "They welcomed them and gave them all the fruits",
+   "They bound them and sent them to the king"
+  ],
+  "correct": 0,
+  "reference": "Matthew 21:34-36",
+  "keywords": [
+   "beat one",
+   "stoned another"
+  ],
+  "explanation": "The husbandmen 'took his servants, and beat one, and killed another, and stoned another,' and they treated the next, larger group of servants 'likewise' (Matthew 21:35-36).",
+  "hint": "The servants received violence, not fruit.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p16-2",
+  "mode": "parables",
+  "parable": "p16",
+  "parable_title": "The Wicked Husbandmen",
+  "prompt": "When the husbandmen saw the householder's son coming, what did they say among themselves?",
+  "options": [
+   "Let us give him the fruits, for he is the lord's son",
+   "This is the heir; come, let us kill him, and let us seize on his inheritance",
+   "Let us flee into a far country before he comes",
+   "Let us send him back to his father with a gift"
+  ],
+  "correct": 1,
+  "reference": "Matthew 21:37-39",
+  "keywords": [
+   "the heir",
+   "inheritance"
+  ],
+  "explanation": "Though the father said 'They will reverence my son,' the husbandmen said, 'This is the heir; come, let us kill him, and let us seize on his inheritance,' and they cast him out and slew him (Matthew 21:37-39).",
+  "hint": "They wanted what would one day belong to the son.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p16-3",
+  "mode": "parables",
+  "parable": "p16",
+  "parable_title": "The Wicked Husbandmen",
+  "prompt": "After quoting the scripture about the stone which the builders rejected, what did Jesus say would happen to the kingdom of God?",
+  "options": [
+   "It would be given to the chief priests as a reward",
+   "It would be delayed until the husbandmen repented",
+   "It would be taken from them and given to a nation bringing forth the fruits thereof",
+   "It would be divided equally among all the husbandmen"
+  ],
+  "correct": 2,
+  "reference": "Matthew 21:42-43",
+  "keywords": [
+   "head of the corner",
+   "kingdom of God"
+  ],
+  "explanation": "Jesus said, 'The kingdom of God shall be taken from you, and given to a nation bringing forth the fruits thereof' (Matthew 21:43).",
+  "hint": "Think of what the householder wanted from his vineyard all along.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p16-4",
+  "mode": "parables",
+  "parable": "p16",
+  "parable_title": "The Wicked Husbandmen",
+  "prompt": "When the chief priests and Pharisees perceived that Jesus spoke of them, why did they not lay hands on him at that time?",
+  "options": [
+   "Because the Roman governor forbade it",
+   "Because they agreed with the parable and repented",
+   "Because it was the sabbath day",
+   "Because they feared the multitude, who took him for a prophet"
+  ],
+  "correct": 3,
+  "reference": "Matthew 21:45-46",
+  "keywords": [
+   "feared the multitude",
+   "prophet"
+  ],
+  "explanation": "Though they sought to lay hands on him, 'they feared the multitude, because they took him for a prophet' (Matthew 21:46).",
+  "hint": "Consider how the crowds around Jesus regarded him.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p15-1",
+  "mode": "parables",
+  "parable": "p15",
+  "parable_title": "The Two Sons",
+  "prompt": "What did the father ask his first son to do?",
+  "options": [
+   "Go work to day in his vineyard",
+   "Feed the swine in the field",
+   "Gather the harvest into his barn",
+   "Go up to Jerusalem to pay tribute"
+  ],
+  "correct": 0,
+  "reference": "Matthew 21:28",
+  "keywords": [
+   "two sons",
+   "vineyard"
+  ],
+  "explanation": "The father came to the first son and said, 'Son, go work to day in my vineyard' (Matthew 21:28).",
+  "hint": "Think of a place where grapes are grown.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p15-2",
+  "mode": "parables",
+  "parable": "p15",
+  "parable_title": "The Two Sons",
+  "prompt": "How did the second son respond when the father gave him the same request?",
+  "options": [
+   "He said, 'I go, sir,' and went not",
+   "He said, 'I will not,' but afterward repented and went",
+   "He went without saying a word",
+   "He asked to take his brother's place"
+  ],
+  "correct": 0,
+  "reference": "Matthew 21:30",
+  "keywords": [
+   "I go, sir",
+   "went not"
+  ],
+  "explanation": "The second son answered, 'I go, sir: and went not' (Matthew 21:30), the opposite of the first son, who refused but later repented and went (Matthew 21:29).",
+  "hint": "Compare his words with his actions.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p15-3",
+  "mode": "parables",
+  "parable": "p15",
+  "parable_title": "The Two Sons",
+  "prompt": "After his hearers answered that the first son did his father's will, what did Jesus tell them?",
+  "options": [
+   "That the publicans and the harlots go into the kingdom of God before them",
+   "That both sons would receive an equal inheritance",
+   "That the second son would be cast into outer darkness",
+   "That they had answered wrongly"
+  ],
+  "correct": 0,
+  "reference": "Matthew 21:31",
+  "keywords": [
+   "publicans",
+   "harlots",
+   "kingdom of God"
+  ],
+  "explanation": "When they said 'The first,' Jesus replied, 'Verily I say unto you, That the publicans and the harlots go into the kingdom of God before you' (Matthew 21:31).",
+  "hint": "Jesus names two groups that his religious listeners looked down on.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p15-4",
+  "mode": "parables",
+  "parable": "p15",
+  "parable_title": "The Two Sons",
+  "prompt": "In explaining his point, Jesus connected the parable to John. What did he say about how his hearers responded to John?",
+  "options": [
+   "They believed him not, and when they saw others believe, they repented not afterward",
+   "They believed him at first but later turned away",
+   "They believed him, but the publicans and harlots did not",
+   "They never heard John's preaching at all"
+  ],
+  "correct": 0,
+  "reference": "Matthew 21:32",
+  "keywords": [
+   "way of righteousness",
+   "believed him not",
+   "repented not afterward"
+  ],
+  "explanation": "Jesus said John came 'in the way of righteousness, and ye believed him not: but the publicans and the harlots believed him,' and even after seeing it they 'repented not afterward' (Matthew 21:32). This ties back to the earlier question about John's baptism (Matthew 21:25).",
+  "hint": "Recall the counter-question Jesus asked earlier about John's baptism, and who in verse 32 did believe.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p19-1",
+  "mode": "parables",
+  "parable": "p19",
+  "parable_title": "The Barren Fig Tree",
+  "prompt": "For how long had the owner of the vineyard come seeking fruit on the fig tree without finding any?",
+  "options": [
+   "Three years",
+   "Seven years",
+   "One year",
+   "Twelve years"
+  ],
+  "correct": 0,
+  "reference": "Luke 13:7",
+  "keywords": [
+   "three years",
+   "seeking fruit"
+  ],
+  "explanation": "The owner told the dresser, 'Behold, these three years I come seeking fruit on this fig tree, and find none' (Luke 13:7).",
+  "hint": "Look at the owner's complaint to the dresser of his vineyard.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p19-2",
+  "mode": "parables",
+  "parable": "p19",
+  "parable_title": "The Barren Fig Tree",
+  "prompt": "When the owner ordered the tree cut down, what did the dresser of the vineyard ask to do instead?",
+  "options": [
+   "Let it alone this year also, and dig about it and dung it",
+   "Transplant it to a better part of the vineyard",
+   "Graft new branches onto it from another tree",
+   "Cut it down at once and plant a vine in its place"
+  ],
+  "correct": 0,
+  "reference": "Luke 13:8",
+  "keywords": [
+   "dig about it",
+   "dung it"
+  ],
+  "explanation": "The dresser answered, 'Lord, let it alone this year also, till I shall dig about it, and dung it' (Luke 13:8).",
+  "hint": "He asked for more time and offered to tend the tree himself.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p19-3",
+  "mode": "parables",
+  "parable": "p19",
+  "parable_title": "The Barren Fig Tree",
+  "prompt": "According to the dresser, what was to happen if the tree still bore no fruit after the extra year of care?",
+  "options": [
+   "It would be cut down",
+   "It would be left standing forever",
+   "It would be given to another husbandman",
+   "It would be burned along with the whole vineyard"
+  ],
+  "correct": 0,
+  "reference": "Luke 13:9",
+  "keywords": [
+   "bear fruit",
+   "cut it down"
+  ],
+  "explanation": "The dresser said, 'if it bear fruit, well: and if not, then after that thou shalt cut it down' (Luke 13:9), so the extra year was a final opportunity, not an endless delay.",
+  "hint": "The dresser's request had a condition and a deadline.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p19-4",
+  "mode": "parables",
+  "parable": "p19",
+  "parable_title": "The Barren Fig Tree",
+  "prompt": "Just before this parable, Jesus spoke of the Galilaeans slain by Pilate and the eighteen on whom the tower in Siloam fell. What did he say about them and about his hearers?",
+  "options": [
+   "They were not sinners above others; and except ye repent, ye shall all likewise perish",
+   "They were sinners above all others, so his hearers had nothing to fear",
+   "Such disasters fall only on the wicked, so the righteous need not repent",
+   "Their deaths were a sign that the end of the world had come"
+  ],
+  "correct": 0,
+  "reference": "Luke 13:1-5",
+  "keywords": [
+   "except ye repent",
+   "likewise perish",
+   "Siloam"
+  ],
+  "explanation": "Jesus asked whether those victims were sinners above all others and answered, 'I tell you, Nay: but, except ye repent, ye shall all likewise perish' (Luke 13:3, 5). He then told the parable of the barren fig tree, for which the dresser asked, 'Lord, let it alone this year also' (Luke 13:6-9).",
+  "hint": "Jesus gave the same answer twice, once for each tragedy.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p18-1",
+  "mode": "parables",
+  "parable": "p18",
+  "parable_title": "The Friend at Midnight",
+  "prompt": "At midnight, what does the man ask his friend to lend him?",
+  "options": [
+   "Three loaves",
+   "Two fishes",
+   "A lamp and oil",
+   "A jar of wine"
+  ],
+  "correct": 0,
+  "reference": "Luke 11:5-6",
+  "keywords": [
+   "three loaves",
+   "midnight"
+  ],
+  "explanation": "The man goes at midnight and says, \"Friend, lend me three loaves,\" because a traveling friend has arrived and he has nothing to set before him (Luke 11:5-6).",
+  "hint": "Think of what a host would need to set before a hungry guest.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p18-2",
+  "mode": "parables",
+  "parable": "p18",
+  "parable_title": "The Friend at Midnight",
+  "prompt": "What reason does the friend inside the house give for not getting up?",
+  "options": [
+   "He has no food left in the house",
+   "The door is shut and his children are with him in bed",
+   "He is too sick to rise",
+   "He does not recognize the voice at the door"
+  ],
+  "correct": 1,
+  "reference": "Luke 11:7",
+  "keywords": [
+   "the door is now shut",
+   "in bed"
+  ],
+  "explanation": "He answers from within, \"Trouble me not: the door is now shut, and my children are with me in bed; I cannot rise and give thee\" (Luke 11:7).",
+  "hint": "Picture a household already settled down for the night.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p18-3",
+  "mode": "parables",
+  "parable": "p18",
+  "parable_title": "The Friend at Midnight",
+  "prompt": "According to Jesus, why does the friend finally rise and give him as many as he needs?",
+  "options": [
+   "Because he is his friend",
+   "Because he is paid for the bread",
+   "Because of the man's importunity",
+   "Because the children wake up hungry"
+  ],
+  "correct": 2,
+  "reference": "Luke 11:8",
+  "keywords": [
+   "importunity",
+   "as many as he needeth"
+  ],
+  "explanation": "Jesus says that though he will not rise because he is his friend, \"yet because of his importunity he will rise and give him as many as he needeth\" (Luke 11:8).",
+  "hint": "Jesus explicitly rules out friendship as the reason; consider the asker's persistence.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p18-4",
+  "mode": "parables",
+  "parable": "p18",
+  "parable_title": "The Friend at Midnight",
+  "prompt": "In his closing comparison with earthly fathers, what does Jesus say the heavenly Father will give to them that ask him?",
+  "options": [
+   "Silver and gold",
+   "A sign from heaven",
+   "Victory over their enemies",
+   "The Holy Spirit"
+  ],
+  "correct": 3,
+  "reference": "Luke 11:11-13",
+  "keywords": [
+   "heavenly Father",
+   "Holy Spirit"
+  ],
+  "explanation": "Jesus reasons that if earthly fathers know how to give good gifts to their children, \"how much more shall your heavenly Father give the Holy Spirit to them that ask him?\" (Luke 11:13).",
+  "hint": "Look at the very last verse of the passage.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p17-1",
+  "mode": "parables",
+  "parable": "p17",
+  "parable_title": "The Marriage of the King's Son",
+  "prompt": "When the king's servants announced that the dinner was ready, how did some of the bidden guests respond?",
+  "options": [
+   "They made light of it and went their ways, one to his farm, another to his merchandise",
+   "They said they had bought five yoke of oxen and had married a wife",
+   "They came to the wedding but left before the dinner was served",
+   "They asked the king to postpone the marriage until after the harvest"
+  ],
+  "correct": 0,
+  "reference": "Matthew 22:4-5",
+  "keywords": [
+   "made light of it",
+   "his farm",
+   "his merchandise"
+  ],
+  "explanation": "Matthew 22:5 says the bidden guests 'made light of it, and went their ways, one to his farm, another to his merchandise,' even after being told all things were ready (Matthew 22:4).",
+  "hint": "Think of ordinary daily business that pulled them away.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p17-2",
+  "mode": "parables",
+  "parable": "p17",
+  "parable_title": "The Marriage of the King's Son",
+  "prompt": "When the king asked a guest how he came in without a wedding garment, how did the man respond?",
+  "options": [
+   "He blamed the servants for bringing him in from the highways",
+   "He was speechless",
+   "He said he was too poor to buy one",
+   "He begged the king for forgiveness"
+  ],
+  "correct": 1,
+  "reference": "Matthew 22:11-12",
+  "keywords": [
+   "wedding garment",
+   "speechless"
+  ],
+  "explanation": "Matthew 22:12 records the king's question, 'Friend, how camest thou in hither not having a wedding garment?' and states simply, 'And he was speechless.'",
+  "hint": "The man offered no excuse at all.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p17-3",
+  "mode": "parables",
+  "parable": "p17",
+  "parable_title": "The Marriage of the King's Son",
+  "prompt": "With what closing statement does Jesus sum up the parable?",
+  "options": [
+   "So the last shall be first, and the first last",
+   "Whosoever exalteth himself shall be abased",
+   "For many are called, but few are chosen",
+   "The harvest truly is plenteous, but the labourers are few"
+  ],
+  "correct": 2,
+  "reference": "Matthew 22:14",
+  "keywords": [
+   "many are called",
+   "few are chosen"
+  ],
+  "explanation": "Jesus ends the parable in Matthew 22:14 with the words, 'For many are called, but few are chosen.'",
+  "hint": "The saying contrasts an invitation with a selection.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p17-4",
+  "mode": "parables",
+  "parable": "p17",
+  "parable_title": "The Marriage of the King's Son",
+  "prompt": "Immediately after this parable, what did the Pharisees do?",
+  "options": [
+   "They believed on Him and were baptized",
+   "They went away and held a feast of their own",
+   "They asked Him to explain the parable privately",
+   "They took counsel how they might entangle Him in His talk"
+  ],
+  "correct": 3,
+  "reference": "Matthew 22:15",
+  "keywords": [
+   "took counsel",
+   "entangle him"
+  ],
+  "explanation": "Matthew 22:15 says, 'Then went the Pharisees, and took counsel how they might entangle him in his talk,' leading to their question about tribute to Caesar.",
+  "hint": "Read the very next verse after the parable ends; their response was hostile.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p14-1",
+  "mode": "parables",
+  "parable": "p14",
+  "parable_title": "The Hidden Treasure, the Pearl and the Net",
+  "prompt": "In the first parable, what did the man do after he found the treasure hid in a field?",
+  "options": [
+   "He hid it, then for joy sold all that he had and bought the field",
+   "He dug it up at once and carried it away by night",
+   "He reported it to the owner of the field and asked for a reward",
+   "He divided it among his neighbours"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:44",
+  "keywords": [
+   "treasure hid in a field",
+   "buyeth that field"
+  ],
+  "explanation": "Matthew 13:44 says that when the man found the treasure he hid it, and for joy went and sold all that he had and bought that field.",
+  "hint": "He did not take the treasure right away. Think about what he needed to own first.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p14-2",
+  "mode": "parables",
+  "parable": "p14",
+  "parable_title": "The Hidden Treasure, the Pearl and the Net",
+  "prompt": "What did the merchant man, who was seeking goodly pearls, do when he found one pearl of great price?",
+  "options": [
+   "He went and sold all that he had, and bought it",
+   "He traded it for many smaller pearls",
+   "He gave it to the king as a gift",
+   "He left it, because he could not afford it"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:45-46",
+  "keywords": [
+   "goodly pearls",
+   "pearl of great price"
+  ],
+  "explanation": "Matthew 13:46 says that when the merchant found one pearl of great price, he went and sold all that he had and bought it.",
+  "hint": "His response is like that of the man in the field.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p14-3",
+  "mode": "parables",
+  "parable": "p14",
+  "parable_title": "The Hidden Treasure, the Pearl and the Net",
+  "prompt": "In explaining the parable of the net, whom does Jesus say will come forth at the end of the world to sever the wicked from among the just?",
+  "options": [
+   "The angels",
+   "The fishermen of Galilee",
+   "The scribes and Pharisees",
+   "The disciples"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:49-50",
+  "keywords": [
+   "end of the world",
+   "sever the wicked"
+  ],
+  "explanation": "Jesus says in Matthew 13:49 that at the end of the world the angels shall come forth and sever the wicked from among the just.",
+  "hint": "Jesus names the ones who do the sorting. They are not human.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p14-4",
+  "mode": "parables",
+  "parable": "p14",
+  "parable_title": "The Hidden Treasure, the Pearl and the Net",
+  "prompt": "After asking his disciples whether they had understood all these things, Jesus said that every scribe instructed unto the kingdom of heaven is like what?",
+  "options": [
+   "A householder who brings forth out of his treasure things new and old",
+   "A merchant who sells all his pearls for a field",
+   "A fisherman who casts away every fish he catches",
+   "A man who hides his treasure so that no one may find it"
+  ],
+  "correct": 0,
+  "reference": "Matthew 13:51-52",
+  "keywords": [
+   "householder",
+   "things new and old"
+  ],
+  "explanation": "After the disciples answered 'Yea, Lord,' Jesus said in Matthew 13:52 that every instructed scribe is like a householder who brings forth out of his treasure things new and old.",
+  "hint": "This picture also involves treasure, but instead of hiding it, the man brings things forth out of it.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p21-1",
+  "mode": "parables",
+  "parable": "p21",
+  "parable_title": "The Unjust Judge",
+  "prompt": "How does Jesus describe the judge in this parable?",
+  "options": [
+   "He feared not God, neither regarded man",
+   "He was a righteous man who feared God",
+   "He was a priest who served in the temple",
+   "He was the widow's own brother"
+  ],
+  "correct": 0,
+  "reference": "Luke 18:2",
+  "keywords": [
+   "feared not God",
+   "regarded man"
+  ],
+  "explanation": "Luke 18:2 says there was in a city a judge \"which feared not God, neither regarded man.\" He had no reverence for God and no concern for people.",
+  "hint": "Jesus describes his attitude toward both God and people, and neither is favorable.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p21-2",
+  "mode": "parables",
+  "parable": "p21",
+  "parable_title": "The Unjust Judge",
+  "prompt": "When the judge finally decided to help the widow, what reason did he give within himself?",
+  "options": [
+   "He had come to fear God",
+   "He wanted the people of the city to honor him",
+   "Her continual coming would weary him",
+   "The law of Moses commanded him to do it"
+  ],
+  "correct": 2,
+  "reference": "Luke 18:4-5",
+  "keywords": [
+   "continual coming",
+   "weary me"
+  ],
+  "explanation": "In Luke 18:4-5 the judge admits he fears not God nor regards man, yet says, \"because this widow troubleth me, I will avenge her, lest by her continual coming she weary me.\"",
+  "hint": "His motive had nothing to do with God or justice; think about her persistence.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p21-3",
+  "mode": "parables",
+  "parable": "p21",
+  "parable_title": "The Unjust Judge",
+  "prompt": "After saying \"Hear what the unjust judge saith,\" what does Jesus declare God will do for his own elect who cry day and night unto him?",
+  "options": [
+   "He will make them wait until they stop asking",
+   "He will avenge them speedily",
+   "He will give them riches and long life",
+   "He will send them to another judge"
+  ],
+  "correct": 1,
+  "reference": "Luke 18:6-8",
+  "keywords": [
+   "his own elect",
+   "avenge them speedily"
+  ],
+  "explanation": "In Luke 18:7-8 Jesus asks, \"shall not God avenge his own elect, which cry day and night unto him?\" and answers, \"I tell you that he will avenge them speedily.\"",
+  "hint": "Jesus contrasts God with the unjust judge; consider how quickly God acts.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p21-4",
+  "mode": "parables",
+  "parable": "p21",
+  "parable_title": "The Unjust Judge",
+  "prompt": "According to the narrator at the opening of the passage, to what end did Jesus speak this parable?",
+  "options": [
+   "That men ought always to pray, and not to faint",
+   "That judges should fear God and regard man",
+   "That widows should not go to court",
+   "That men should sell all they have and give to the poor"
+  ],
+  "correct": 0,
+  "reference": "Luke 18:1",
+  "keywords": [
+   "always to pray",
+   "not to faint"
+  ],
+  "explanation": "Luke 18:1 states plainly that Jesus spake this parable \"to this end, that men ought always to pray, and not to faint.\"",
+  "hint": "Look at the very first verse, before the story itself begins.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p20-1",
+  "mode": "parables",
+  "parable": "p20",
+  "parable_title": "The Great Supper",
+  "prompt": "When the supper was prepared, what message did the man send his servant to give to those who had been invited?",
+  "options": [
+   "Come; for all things are now ready.",
+   "The supper is delayed until the morning.",
+   "Bring a gift worthy of the master's table.",
+   "Only the first to arrive may enter."
+  ],
+  "correct": 0,
+  "reference": "Luke 14:16-17",
+  "keywords": [
+   "great supper",
+   "all things are now ready"
+  ],
+  "explanation": "The servant was sent at supper time to tell the invited guests, \"Come; for all things are now ready\" (Luke 14:17).",
+  "hint": "The invitation stressed that nothing was left to prepare.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p20-2",
+  "mode": "parables",
+  "parable": "p20",
+  "parable_title": "The Great Supper",
+  "prompt": "One invited guest did not even ask to be excused but simply said, \"I cannot come.\" What reason did he give?",
+  "options": [
+   "He had bought a piece of ground and had to go see it.",
+   "He had married a wife.",
+   "He had bought five yoke of oxen to prove them.",
+   "He had to bury his father."
+  ],
+  "correct": 1,
+  "reference": "Luke 14:18-20",
+  "keywords": [
+   "married a wife",
+   "I cannot come"
+  ],
+  "explanation": "The third guest said, \"I have married a wife, and therefore I cannot come\" (Luke 14:20), unlike the first two who asked to be excused.",
+  "hint": "His excuse concerned a new household, not property or livestock.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p20-3",
+  "mode": "parables",
+  "parable": "p20",
+  "parable_title": "The Great Supper",
+  "prompt": "How does the story close, stating what will happen to the men who were first invited?",
+  "options": [
+   "They will be given seats of honour when they finally arrive.",
+   "They will be invited again to a second supper.",
+   "None of them shall taste of his supper.",
+   "They must pay for the food that was prepared."
+  ],
+  "correct": 2,
+  "reference": "Luke 14:23-24",
+  "keywords": [
+   "shall taste of my supper",
+   "compel them to come in"
+  ],
+  "explanation": "After the lord orders his servant to compel guests from the highways and hedges so that his house may be filled, the story closes: \"none of those men which were bidden shall taste of my supper\" (Luke 14:24).",
+  "hint": "Think about what the refusers lose by turning down the invitation.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p20-4",
+  "mode": "parables",
+  "parable": "p20",
+  "parable_title": "The Great Supper",
+  "prompt": "In the parable the master sends for the poor, the maimed, the halt, and the blind. Just before the parable, what had Jesus told his host to do with a similar list of people?",
+  "options": [
+   "Give them alms at the door but not seat them.",
+   "Call them when making a feast, for they cannot recompense him.",
+   "Send them away so that friends and rich neighbours may come.",
+   "Seat them in the lowest room at the table."
+  ],
+  "correct": 1,
+  "reference": "Luke 14:12-14",
+  "keywords": [
+   "makest a feast",
+   "the maimed"
+  ],
+  "explanation": "Jesus told the one who bade him, \"when thou makest a feast, call the poor, the maimed, the lame, the blind,\" adding that he would be blessed because they cannot recompense him (Luke 14:13-14).",
+  "hint": "Read the advice Jesus gave to the man who had invited him, just before verse 15.",
+  "difficulty": 3
+ },
+ {
+  "id": "par-p22-1",
+  "mode": "parables",
+  "parable": "p22",
+  "parable_title": "The Two Debtors",
+  "prompt": "In Jesus' story, how much did the two debtors owe the creditor?",
+  "options": [
+   "One owed five hundred pence, and the other fifty",
+   "One owed a thousand talents, and the other a hundred",
+   "Each owed fifty pence",
+   "One owed ten pence, and the other one pence"
+  ],
+  "correct": 0,
+  "reference": "Luke 7:41",
+  "keywords": [
+   "five hundred pence",
+   "two debtors"
+  ],
+  "explanation": "Jesus said a certain creditor had two debtors: 'the one owed five hundred pence, and the other fifty' (Luke 7:41).",
+  "hint": "The larger debt was ten times the smaller one.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p22-2",
+  "mode": "parables",
+  "parable": "p22",
+  "parable_title": "The Two Debtors",
+  "prompt": "When neither debtor had anything to pay, what did the creditor do?",
+  "options": [
+   "He cast them both into prison",
+   "He forgave only the one who owed less",
+   "He frankly forgave them both",
+   "He gave them more time and demanded interest"
+  ],
+  "correct": 2,
+  "reference": "Luke 7:42",
+  "keywords": [
+   "nothing to pay",
+   "forgave them both"
+  ],
+  "explanation": "Luke 7:42 says, 'when they had nothing to pay, he frankly forgave them both.'",
+  "hint": "The creditor treated both debtors the same way.",
+  "difficulty": 1
+ },
+ {
+  "id": "par-p22-3",
+  "mode": "parables",
+  "parable": "p22",
+  "parable_title": "The Two Debtors",
+  "prompt": "Jesus asked Simon which debtor would love the creditor most. What did Simon answer, which Jesus said was rightly judged?",
+  "options": [
+   "The one who had been forgiven least",
+   "Neither, since debts cannot produce love",
+   "Both would love him equally",
+   "The one to whom he forgave most"
+  ],
+  "correct": 3,
+  "reference": "Luke 7:42-43",
+  "keywords": [
+   "forgave most",
+   "rightly judged"
+  ],
+  "explanation": "Simon answered, 'I suppose that he, to whom he forgave most,' and Jesus replied, 'Thou hast rightly judged' (Luke 7:43).",
+  "hint": "Think about the size of each debt that was cancelled.",
+  "difficulty": 2
+ },
+ {
+  "id": "par-p22-4",
+  "mode": "parables",
+  "parable": "p22",
+  "parable_title": "The Two Debtors",
+  "prompt": "Turning to the woman, Jesus contrasted her actions with Simon's. Which courtesy did Jesus say Simon had not given Him when He entered the house?",
+  "options": [
+   "He gave no bread for the meal",
+   "He gave no water for His feet",
+   "He gave no seat at the table",
+   "He gave no wine to drink"
+  ],
+  "correct": 1,
+  "reference": "Luke 7:44-46",
+  "keywords": [
+   "no water",
+   "no kiss"
+  ],
+  "explanation": "Jesus told Simon, 'thou gavest me no water for my feet: but she hath washed my feet with tears,' and likewise noted Simon gave no kiss and no oil (Luke 7:44-46).",
+  "hint": "The woman supplied this lack with her tears.",
+  "difficulty": 2
  }
 ]
