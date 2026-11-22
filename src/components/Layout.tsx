@@ -1,7 +1,7 @@
 import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Compass, House, Map, Store, UserRound, WifiOff, X } from 'lucide-react'
-import { useApp } from '../state/AppContext'
+import { stays, useApp } from '../state/AppContext'
 import { Avatar, Gems, Logo } from './ui'
 
 const NAV = [
@@ -33,9 +33,9 @@ export function PreviewBanner() {
 }
 
 export function Layout() {
-  const { wallet, profile, user, backend, online, toasts, dismissToast, inventory } = useApp()
+  const { wallet, profile, user, backend, online, toasts, dismissToast, dismissOtherPages, inventory } = useApp()
   const loc = useLocation()
-  useEffect(() => { window.scrollTo(0, 0) }, [loc.pathname])
+  useEffect(() => { window.scrollTo(0, 0); dismissOtherPages(loc.pathname) }, [loc.pathname, dismissOtherPages])
   const frame = inventory.find((i) => i.equipped && i.item_id.startsWith('frame_'))?.item_id
   const staff = profile && profile.role !== 'player'
   const isGuest = backend.kind === 'local' || !user || user.isAnonymous
@@ -107,7 +107,7 @@ export function Layout() {
       </nav>
 
       <div aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-20 z-50 flex flex-col items-center gap-2 px-4 md:bottom-6 md:items-end md:pr-6">
-        {toasts.map((t) => (
+        {toasts.filter((t) => stays(t, loc.pathname)).map((t) => (
           <div key={t.id} role="status" className={`pointer-events-auto card flex max-w-sm items-start gap-3 bg-raised px-4 py-3 fade-up ${t.tone === 'error' ? 'border-bad/60' : t.tone === 'gem' ? 'border-accent' : ''}`}>
             <div className="min-w-0">
               <p className="font-semibold">{t.title}</p>

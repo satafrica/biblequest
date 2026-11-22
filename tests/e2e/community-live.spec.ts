@@ -109,6 +109,8 @@ test('community with two registered accounts: friends, group, moderator and a ch
   await b.page.getByRole('button', { name: 'Join', exact: true }).click()
   await expect(b.page.getByRole('heading', { name: GROUP })).toBeVisible()
   await expect(b.page.getByTestId('group-members').locator('li')).toHaveCount(2)
+  // The earlier "Friend request sent" notice belongs to the Community page and has closed.
+  await expect(b.page.getByRole('status').filter({ hasText: 'Friend request sent' })).toHaveCount(0)
   await shot(b.page, '06-group-joined')
 
   // 6. A makes B a moderator.
@@ -120,6 +122,8 @@ test('community with two registered accounts: friends, group, moderator and a ch
   // 7. A creates a group match and plays it.
   await a.page.getByRole('button', { name: 'Create match' }).click()
   await expect(a.page.getByText(/Challenge match · /)).toBeVisible()
+  // The title keeps '·' with the word before it, so a wrapped line never starts with it.
+  expect(await a.page.getByRole('heading', { level: 1 }).textContent()).toContain('\u00a0· ')
   const match = await codeOf(a.page, 'Challenge code')
   await shot(a.page, '08-match-created')
   await a.page.getByRole('link', { name: 'Play now' }).click()

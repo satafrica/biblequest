@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Copy, Flag, Swords, UserPlus, Users } from 'lucide-react'
 import { useApp } from '../state/AppContext'
+import { keepSeparators } from '../lib/notices'
 import { Avatar, Modal, PageHeader } from '../components/ui'
 import { DIFFICULTY_LABELS, friendlyError, type ChallengeDetail, type ChallengeMode, type ChallengeSummary, type Community as CommunityApi, type Friend, type GroupDetail, type GroupSummary } from '../engine'
 
@@ -240,7 +241,7 @@ function ChallengeList({ list, empty }: { list: ChallengeSummary[]; empty: strin
     <ul className="mt-5 divide-y divide-line rounded-xl border border-line">{list.map((c) => (
       <li key={c.code}><Link to={`/community/challenge/${c.code}`} className="flex flex-wrap items-center gap-3 px-3 py-2 hover:bg-raised">
         <span className="font-mono tracking-widest">{c.code}</span>
-        <span className="flex-1">{c.title}{c.group ? <span className="text-muted"> · {c.group}</span> : null}</span>
+        <span className="flex-1">{keepSeparators(c.title)}{c.group ? <span className="text-muted">{'\u00a0· '}{c.group}</span> : null}</span>
         <span className="text-sm text-muted">{c.players} played · ends {fmtDate(c.expires_at)}</span>
         {c.played && <span className="chip">Played</span>}
       </Link></li>))}</ul>
@@ -346,7 +347,7 @@ export function ChallengePage() {
         : error ? <><PageHeader eyebrow="Challenge match" title={code} /><p className="card p-6" role="alert">{error}</p></>
         : !c ? <p className="text-muted" role="status">Loading…</p>
         : <>
-            <PageHeader eyebrow={`Challenge match · ${c.code}`} title={c.title}>
+            <PageHeader eyebrow={`Challenge match · ${c.code}`} title={keepSeparators(c.title)}>
               {c.questions} questions{c.creator ? `, created by ${c.creator}` : ''}{c.group ? ` for ${c.group}` : ''}. {c.expired ? `Ended ${fmtDate(c.expires_at)}.` : `Open until ${fmtDate(c.expires_at)}.`} Everyone gets the same questions; your first completed round is the score that counts.
             </PageHeader>
             <div className="card flex flex-wrap items-center gap-4 p-5">

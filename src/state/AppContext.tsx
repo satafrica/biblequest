@@ -3,7 +3,8 @@ import { createBackend, type AuthUser, type Backend, type Catalog, type EarnedAc
 import { applyPrefs, loadPrefs, savePrefs, type Prefs } from './prefs'
 import { setPreferredVoice } from '../lib/speech'
 
-export interface Toast { id: number; title: string; body?: string; tone?: 'gem' | 'info' | 'error' }
+import { currentPath, stays, type Toast } from '../lib/notices'
+export { stays, type Toast }
 
 interface AppState {
   backend: Backend
@@ -19,9 +20,10 @@ interface AppState {
   setPrefs: (p: Partial<Prefs>) => void
   refresh: () => Promise<void>
   setBalance: (n: number) => void
-  toast: (t: Omit<Toast, 'id'>) => void
+  toast: (t: Omit<Toast, 'id' | 'path'>) => void
   toasts: Toast[]
   dismissToast: (id: number) => void
+  dismissOtherPages: (path: string) => void
   owns: (itemId: string) => number
 }
 
@@ -94,19 +96,21 @@ export function AppProvider({ children, backendOverride }: { children: ReactNode
     setPrefsState((old) => { const n = { ...old, ...p }; savePrefs(n); return n })
   }, [])
 
-  const toast = useCallback((t: Omit<Toast, 'id'>) => {
+  const toast = useCallback((t: Omit<Toast, 'id' | 'path'>) => {
     const id = toastId.current++
-    setToasts((ts) => [...ts.slice(-3), { ...t, id }])
+    setToasts((ts) => [...ts.slice(-3), { ...t, id, path: currentPath() }])
     window.setTimeout(() => setToasts((ts) => ts.filter((x) => x.id !== id)), 4500)
   }, [])
   const dismissToast = useCallback((id: number) => setToasts((ts) => ts.filter((x) => x.id !== id)), [])
+  /** Closes info and error notices that belong to another page. Gem and reward notices stay until they time out. */
+  const dismissOtherPages = useCallback((path: string) => setToasts((ts) => (ts.some((x) => !stays(x, path)) ? ts.filter((x) => stays(x, path)) : ts)), [])
   const setBalance = useCallback((n: number) => setWallet((w) => ({ ...w, balance: n })), [])
   const owns = useCallback((itemId: string) => inventory.find((i) => i.item_id === itemId)?.quantity ?? 0, [inventory])
 
   const value = useMemo(() => backend && catalog ? ({
     backend, catalog, user, profile, wallet, inventory, progress, achievements, prefs, online,
-    setPrefs, refresh, setBalance, toast, toasts, dismissToast, owns,
-  }) : null, [backend, catalog, user, profile, wallet, inventory, progress, achievements, prefs, online, setPrefs, refresh, setBalance, toast, toasts, dismissToast, owns])
+    setPrefs, refresh, setBalance, toast, toasts, dismissToast, dismissOtherPages, owns,
+  }) : null, [backend, catalog, user, profile, wallet, inventory, progress, achievements, prefs, online, setPrefs, refresh, setBalance, toast, toasts, dismissToast, dismissOtherPages, owns])
 
   if (error) {
     return (
