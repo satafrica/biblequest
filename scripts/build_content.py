@@ -83,6 +83,11 @@ def base(qid, mode, ref, diff, prompt, options, correct, expl, hint=None, image=
 
 REVIEWED = json.load(open(os.path.join(ROOT, "content", "source", "reviewed.json"), encoding="utf-8"))
 REVIEWED_IDS = set(REVIEWED["ids"])
+REVIEWED_BATCHES = []
+for _name in ("reviewed.json", "reviewed_2.json"):
+    _path = os.path.join(ROOT, "content", "source", _name)
+    if os.path.exists(_path):
+        _b = json.load(open(_path, encoding="utf-8")); _b["ids"] = set(_b["ids"]); REVIEWED_BATCHES.append(_b)
 
 def section_hint(book):
     n = BOOK_IDX[book] + 1
@@ -185,8 +190,9 @@ for (sid, title, diff, events) in SEQUENCES:
     questions.append(q)
 
 for q in questions:
-    if q["id"] in REVIEWED_IDS:
-        q["verification"].update({"human_review": "approved", "reviewed_at": REVIEWED["reviewed_at"], "review_method": REVIEWED["method"]})
+    for batch in REVIEWED_BATCHES:
+        if q["id"] in batch["ids"]:
+            q["verification"].update({"human_review": "approved", "reviewed_at": batch["reviewed_at"], "review_method": batch["method"]})
     if q["game_mode"] == "sequence":
         q["verse_text"] = "\n".join(f"{r}: {verse_text(r, 2, 220)}" for r in q["events_refs"])
     else:
