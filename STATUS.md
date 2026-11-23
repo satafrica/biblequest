@@ -260,3 +260,8 @@ Notes:
   - index.html and all the assets on mybiblegem.com match dist-online.
   - tests/e2e/draft-rewrites.spec.ts passed against mybiblegem.com itself: 10 of 10 on Pixel 7 and desktop.
   - The 8 test guests were deleted by id. 12 accounts remain, including the owner. 1323 questions are published.
+- PENDING (owner request, 22 Nov 2026): after the next update to mybiblegem.com, re-run the rewritten-questions check against the live site. An update means a new production deploy or a change to question content.
+  - Command: BASE_URL=https://mybiblegem.com/ npx playwright test tests/e2e/draft-rewrites.spec.ts --workers=1. Expect 10 tests.
+  - Then delete only this run's test guests using the usual safe conditions, and report the results.
+  - Baseline build assets: index-25s5HmGE.js, index-CoR7ixGE.css. The baseline production deploy is 6b039c85b75b763bdb827c83.
+  - An automatic watch was not set up because script-based watches aren't enabled for this account. A daily checking run would use credits.
