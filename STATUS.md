@@ -243,3 +243,4 @@ Notes:
   - The Moses and Noah answer areas were redrawn. This also changed the box layout for the already-approved questions on those pictures, which stay approved.
   - The live DB was updated (44 rows, matching the build). The 37 are still pending in Quick review and need approval.
   - No deploy was needed.
+- 22 Nov 2026: at the owner's instruction, the 37 rewritten questions were set to human_review "approved" (content/source/reviewed_7.json; review_method records that the AI assistant did the rewrites and checks). The live DB was verified at 1323 approved and 0 pending, so Quick review is now empty. This was done by direct SQL, so the Quick review audit log has no entry for it.
