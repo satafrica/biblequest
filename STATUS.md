@@ -277,3 +277,8 @@ Notes:
   - On mybiblegem.com, guest-save-prompt.spec.ts and draft-rewrites.spec.ts passed 14 of 14 on desktop and Pixel 7. This also covers the owner's pending re-check after the next update.
   - The 12 test guests were deleted by id. 17 accounts remain, including the owner.
   - Updated the live-watch baseline.json to this build.
+- 23 Nov 2026: moved notices on phones to the top, under the header (Layout notices container), so they no longer cover the results or the guest message. Desktop notices stay bottom-right. New achievements from a round are combined into one notice (e.g. "2 achievements unlocked · First Light · First Steps").
+  - Draft deploy 6b04a6295277d0477e84a9a0: guest-save-prompt.spec.ts passed 4 of 4. It now checks that the notice is below the header and doesn't overlap the guest message or Next level.
+  - Local suite: 142 passed, 8 skipped. vitest: 93 passed.
+  - The 4 test guests were deleted. 17 accounts remain.
+  - Not published to production yet.

@@ -95,9 +95,10 @@ export default function GameRunner() {
       setSummary(r); setBalance(r.balance)
       playSound('complete', soundVolume(prefs)); vibrate('complete', prefs.haptics)
       persist({ levelKey, session: sess, idx: sess.questions.length, results: res, savedAt: Date.now(), completed: true })
-      for (const a of r.new_achievements) {
-        const ach = catalog.achievements.find((x) => x.id === a)
-        toast({ title: 'Achievement unlocked', body: ach?.name ?? a, tone: 'gem' })
+      if (r.new_achievements.length > 0) {
+        // One notice for all new achievements, so several never stack over the results.
+        const names = r.new_achievements.map((a) => catalog.achievements.find((x) => x.id === a)?.name ?? a)
+        toast({ title: names.length === 1 ? 'Achievement unlocked' : `${names.length} achievements unlocked`, body: names.join(' · '), tone: 'gem' })
       }
       refresh().catch(() => {})
     } catch (e) {

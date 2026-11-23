@@ -107,7 +107,7 @@ export function Layout() {
         </ul>
       </nav>
 
-      <div aria-live="polite" className="pointer-events-none fixed inset-x-0 bottom-20 z-50 flex flex-col items-center gap-2 px-4 md:bottom-6 md:items-end md:pr-6">
+      <div aria-live="polite" data-testid="notices" className="pointer-events-none fixed inset-x-0 top-[calc(4.5rem+env(safe-area-inset-top))] z-50 flex flex-col items-center gap-2 px-4 md:top-auto md:bottom-6 md:items-end md:pr-6">
         {toasts.filter((t) => stays(t, loc.pathname)).map((t) => (
           <div key={t.id} role="status" className={`pointer-events-auto card flex max-w-sm items-start gap-3 bg-raised px-4 py-3 fade-up ${t.tone === 'error' ? 'border-bad/60' : t.tone === 'gem' ? 'border-accent' : ''}`}>
             <div className="min-w-0">

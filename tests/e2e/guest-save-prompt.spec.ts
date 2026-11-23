@@ -35,8 +35,19 @@ test('guest sees the free-account message after the first round, and it opens Cr
   await expect(prompt).toContainText(/\d+ gems/)
   await expect(prompt).toContainText('no email to confirm')
   await expect(prompt).not.toContainText(/buy|purchase|\$|price/i)
+  // Achievement notices (one combined notice) sit clear of the message, its buttons and the header.
+  const notice = page.getByTestId('notices').getByRole('status').filter({ hasText: /achievement/i })
+  await expect(notice).toHaveCount(1, { timeout: 10_000 })
   await prompt.scrollIntoViewIfNeeded()
-  await page.screenshot({ path: `${OUT}/${info.project.name}-prompt.png`, fullPage: true })
+  const nb = (await notice.boundingBox())!
+  const hb = (await page.getByRole('banner').boundingBox())!
+  expect(nb.y).toBeGreaterThanOrEqual(hb.y + hb.height - 1)
+  for (const el of [prompt, page.getByRole('link', { name: /Next level/ })]) {
+    const b = (await el.boundingBox())!
+    const overlap = !(nb.x + nb.width <= b.x || b.x + b.width <= nb.x || nb.y + nb.height <= b.y || b.y + b.height <= nb.y)
+    expect(overlap, 'notice must not cover the results').toBe(false)
+  }
+  await page.screenshot({ path: `${OUT}/${info.project.name}-prompt.png` })
   await prompt.getByRole('link', { name: 'Create free account' }).click()
   await expect(page.getByRole('heading', { name: 'Create your account' })).toBeVisible()
   await expect(page.getByText('Your guest progress, gems and items come with you')).toBeVisible()
