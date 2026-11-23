@@ -249,3 +249,10 @@ Notes:
   - All 37 were served, and the prompt, options, clues and picture areas match the approved content. Hints are not sent with the question, so they were checked in the database instead.
   - The "Spies in Jericho" title is live.
   - The test guest was deleted by id. 12 accounts remain, including the owner.
+- 22 Nov 2026, the owner asked for a final check on a draft site. Draft deploy 6b039c85b75b763bdb827c83 (https://6b039c85b75b763bdb827c83--biblequest-game.netlify.app, not published) was built from the current source and runs against the live database.
+  - tests/e2e/draft-rewrites.spec.ts passed on Pixel 7 and desktop: 5 checks × 2 devices = 10 passed.
+    - Tapping the left wall of water and the right half of the ark both count as correct, and tapping the zebras counts for "Find a beast going forth out of the ark."
+    - 1 Peter 5:7 shows its new choices, the Dothan question appears, and the Old Testament cases list shows "The Spies in Jericho" with no "Spies on the Roof".
+  - Two earlier runs failed because of a timing fault in the test itself, which was fixed.
+  - The 14 test guests were deleted by id. 12 accounts remain, including the owner.
+  - Production is unchanged at 6b0370fcd871ab12eba62258. That build has the same code, and questions come from the database.
