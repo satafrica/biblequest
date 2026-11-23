@@ -260,7 +260,7 @@ Notes:
   - index.html and all the assets on mybiblegem.com match dist-online.
   - tests/e2e/draft-rewrites.spec.ts passed against mybiblegem.com itself: 10 of 10 on Pixel 7 and desktop.
   - The 8 test guests were deleted by id. 12 accounts remain, including the owner. 1323 questions are published.
-- PENDING (owner request, 22 Nov 2026): after the next update to mybiblegem.com, re-run the rewritten-questions check against the live site. An update means a new production deploy or a change to question content.
+- DONE 23 Nov 2026 (was PENDING, owner request 22 Nov 2026): after the next update to mybiblegem.com, re-run the rewritten-questions check against the live site. An update means a new production deploy or a change to question content.
   - Command: BASE_URL=https://mybiblegem.com/ npx playwright test tests/e2e/draft-rewrites.spec.ts --workers=1. Expect 10 tests.
   - Then delete only this run's test guests using the usual safe conditions, and report the results.
   - Baseline build assets: index-25s5HmGE.js, index-CoR7ixGE.css. The baseline production deploy is 6b039c85b75b763bdb827c83.
@@ -272,3 +272,8 @@ Notes:
   - Draft deploy 6b046eb7f26b7854ccd6fa15: tests/e2e/guest-save-prompt.spec.ts passed 4 of 4 on desktop and Pixel 7. Local suite: 142 passed, 8 skipped. vitest: 93 passed.
   - The 4 test guests were deleted by id. 16 accounts remain; the 1 new one is a real visitor.
   - Not published to production yet.
+- 23 Nov 2026: published the guest free-account message. Production is now 6b046eb7f26b7854ccd6fa15.
+  - index.html and the assets match dist-online.
+  - On mybiblegem.com, guest-save-prompt.spec.ts and draft-rewrites.spec.ts passed 14 of 14 on desktop and Pixel 7. This also covers the owner's pending re-check after the next update.
+  - The 12 test guests were deleted by id. 17 accounts remain, including the owner.
+  - Updated the live-watch baseline.json to this build.
