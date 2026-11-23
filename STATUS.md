@@ -244,3 +244,8 @@ Notes:
   - The live DB was updated (44 rows, matching the build). The 37 are still pending in Quick review and need approval.
   - No deploy was needed.
 - 22 Nov 2026: at the owner's instruction, the 37 rewritten questions were set to human_review "approved" (content/source/reviewed_7.json; review_method records that the AI assistant did the rewrites and checks). The live DB was verified at 1323 approved and 0 pending, so Quick review is now empty. This was done by direct SQL, so the Quick review audit log has no entry for it.
+- 22 Nov 2026, the owner asked for the 37 to be published to mybiblegem.com. They were already published, because the app loads questions from the database, so no site deploy was needed: the site files contain no question text (checked dist-online).
+  - Verified on the live server (tests/review/fixes5/live_check.mjs). One temporary guest started the 15 levels that hold the 37 and played the case and parable chapters in order up to the ones that hold them.
+  - All 37 were served, and the prompt, options, clues and picture areas match the approved content. Hints are not sent with the question, so they were checked in the database instead.
+  - The "Spies in Jericho" title is live.
+  - The test guest was deleted by id. 12 accounts remain, including the owner.
