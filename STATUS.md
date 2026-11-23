@@ -256,3 +256,7 @@ Notes:
   - Two earlier runs failed because of a timing fault in the test itself, which was fixed.
   - The 14 test guests were deleted by id. 12 accounts remain, including the owner.
   - Production is unchanged at 6b0370fcd871ab12eba62258. That build has the same code, and questions come from the database.
+- 22 Nov 2026, the owner asked to publish the rewritten questions to mybiblegem.com. The checked draft 6b039c85b75b763bdb827c83 was published to production. It replaced 6b0370fcd871ab12eba62258, which had the same code.
+  - index.html and all the assets on mybiblegem.com match dist-online.
+  - tests/e2e/draft-rewrites.spec.ts passed against mybiblegem.com itself: 10 of 10 on Pixel 7 and desktop.
+  - The 8 test guests were deleted by id. 12 accounts remain, including the owner. 1323 questions are published.
