@@ -444,8 +444,10 @@ function Summary({ levelKey, title, results, total, summary, error, busy, roundG
   levelKey: string; title: string; results: AnswerResult[]; total: number; summary: CompleteResult | null; error: string | null; busy: boolean
   roundGems: number; points: number; headingRef: React.RefObject<HTMLHeadingElement | null>; onRetry: () => void; onFinishRetry: () => void
 }) {
-  const { catalog } = useApp()
+  const { catalog, backend, user } = useApp()
   const [shareNote, setShareNote] = useState('')
+  const [promptHidden, setPromptHidden] = useState(() => readJSON<boolean>(GUEST_PROMPT_KEY, false))
+  const showGuestPrompt = backend.kind === 'cloud' && Boolean(user?.isAnonymous) && Boolean(summary) && results.length > 0 && !promptHidden
   const share = async () => {
     const r = await shareResult(resultText(title, results.map((x) => x.correct), appUrl()))
     const msg = r === 'copied' ? 'Result copied. Paste it anywhere to share.' : r === 'failed' ? 'Sharing is not available in this browser.' : ''
@@ -498,6 +500,9 @@ function Summary({ levelKey, title, results, total, summary, error, busy, roundG
           {error !== 'This round has already finished.' && <button className="btn-secondary btn-sm mt-2" onClick={onFinishRetry}>Try saving again</button>}
         </div>
       )}
+      {showGuestPrompt && summary && (
+        <GuestSavePrompt balance={summary.balance} onDismiss={() => { writeJSON(GUEST_PROMPT_KEY, true); setPromptHidden(true) }} />
+      )}
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link className="btn-primary" to={nextTo.to}>{nextTo.label}</Link>
         <button className="btn-secondary" onClick={onRetry}>{p[0] === 'review' ? 'Review again' : 'Play again'}</button>
@@ -506,6 +511,30 @@ function Summary({ levelKey, title, results, total, summary, error, busy, roundG
       <p className="mt-3 min-h-5 text-sm text-muted" role="status">{shareNote}</p>
       <p className="text-xs text-muted">Sharing shows your score only, never the answers.</p>
     </section>
+  )
+}
+
+const GUEST_PROMPT_KEY = 'bq.guestSavePromptDismissed.v1'
+
+/** Shown to guests after a saved round: an optional, free account keeps progress on every device. */
+function GuestSavePrompt({ balance, onDismiss }: { balance: number; onDismiss: () => void }) {
+  return (
+    <aside className="mx-auto mt-6 max-w-md rounded-xl border border-accent/60 bg-accent/10 p-4 text-left" aria-labelledby="guest-save-title" data-testid="guest-save-prompt">
+      <div className="flex items-start gap-3">
+        <div className="min-w-0 flex-1">
+          <h2 id="guest-save-title" className="font-semibold">Keep your progress on any device</h2>
+          <p className="mt-1 text-sm">
+            {balance > 0 ? <>Your <strong>{balance.toLocaleString()} gems</strong>, levels and items are saved in this browser only. </> : <>Your levels and items are saved in this browser only. </>}
+            A free account keeps them safe if you clear your browser or switch phones. It takes a few seconds, with no email to confirm.
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Link to="/account" className="btn-primary btn-sm">Create free account</Link>
+            <button type="button" className="btn-ghost btn-sm" onClick={onDismiss}>Not now</button>
+          </div>
+        </div>
+        <button type="button" className="btn-ghost btn-sm -mr-2 -mt-1 shrink-0" aria-label="Dismiss" onClick={onDismiss}><X className="h-4 w-4" aria-hidden="true" /></button>
+      </div>
+    </aside>
   )
 }
 

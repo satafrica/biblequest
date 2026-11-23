@@ -29,6 +29,8 @@ test('guest completes a full picture level, earns persistent gems and unlocks a 
 
   await playLevel(page, 'picture:1:1')
   await expect(page.getByText('Level completed')).toBeVisible()
+  // The free-account message is only for the online version (no accounts in the local preview).
+  await expect(page.getByTestId('guest-save-prompt')).toHaveCount(0)
   const earned = await balance(page)
   expect(earned).toBeGreaterThanOrEqual(50)
 

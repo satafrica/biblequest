@@ -265,3 +265,10 @@ Notes:
   - Then delete only this run's test guests using the usual safe conditions, and report the results.
   - Baseline build assets: index-25s5HmGE.js, index-CoR7ixGE.css. The baseline production deploy is 6b039c85b75b763bdb827c83.
   - 23 Nov 2026: replaced by the daily 9 AM ET watch (automation 881dfceb-1b91-4268-b289-67c91fc11ee5). The baseline is in tests/live-watch/baseline.json.
+- 23 Nov 2026: added a guest free-account message to the Round complete screen (GameRunner GuestSavePrompt). It appears only for guests on the online version, after a saved round.
+  - It shows the guest's gem balance and explains that their progress is saved in this browser only.
+  - "Create free account" opens #/account. "Not now" or the X hides it on that device for good (localStorage bq.guestSavePromptDismissed.v1).
+  - There's no purchase wording, and there are no server changes.
+  - Draft deploy 6b046eb7f26b7854ccd6fa15: tests/e2e/guest-save-prompt.spec.ts passed 4 of 4 on desktop and Pixel 7. Local suite: 142 passed, 8 skipped. vitest: 93 passed.
+  - The 4 test guests were deleted by id. 16 accounts remain; the 1 new one is a real visitor.
+  - Not published to production yet.
