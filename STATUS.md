@@ -264,4 +264,4 @@ Notes:
   - Command: BASE_URL=https://mybiblegem.com/ npx playwright test tests/e2e/draft-rewrites.spec.ts --workers=1. Expect 10 tests.
   - Then delete only this run's test guests using the usual safe conditions, and report the results.
   - Baseline build assets: index-25s5HmGE.js, index-CoR7ixGE.css. The baseline production deploy is 6b039c85b75b763bdb827c83.
-  - An automatic watch was not set up because script-based watches aren't enabled for this account. A daily checking run would use credits.
+  - 23 Nov 2026: replaced by the daily 9 AM ET watch (automation 881dfceb-1b91-4268-b289-67c91fc11ee5). The baseline is in tests/live-watch/baseline.json.
