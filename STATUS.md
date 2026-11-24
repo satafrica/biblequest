@@ -312,7 +312,7 @@ Notes:
 - live-watch baseline.json updated to this build.
 - Not tested on a physical phone.
 
-## 24 Nov 2026 — Recorded voices for seven games (draft, not published)
+## 24 Nov 2026 — Recorded voices for seven games (published)
 
 - **Tested (draft site)**: read-aloud in seven more games plays recorded AI narration (Gemini text-to-speech), one voice per game, as the owner asked ("Use that voice plan for the other games"):
   - Picture Bible Quiz: Kore (229 questions, 670 clips)
@@ -357,3 +357,11 @@ Notes:
   - One guest created at 05:22 UTC from Firefox on Android is a real visitor and was not touched.
   - 21 accounts.
 - Not tested on a physical phone.
+- Published to https://mybiblegem.com at the owner's request ("Publish the seven recorded voices to mybiblegem.com"):
+  - Production build (default manifest) tested first on draft https://6b0575a16d6b78fdea6cfc9b--biblequest-game.netlify.app (Who Am I? and Scripture Quiz recorded tests passed on Pixel 7; all assets match dist-online).
+  - Deploy 6b0575a16d6b78fdea6cfc9b published 24 Nov 2026 11:33:47 UTC (previous 6b0515ee4126634690b7cc72). index.html and every asset on the live site match dist-online.
+  - `upload_games.mjs --promote` copied manifest-next.json to the live manifest.json (9 games). Temporary storage policies were added for this step and dropped again.
+  - Live tests on mybiblegem.com: narration-recorded (including the seven-game test and the Scripture Quiz test that was rate-limited last time), draft-rewrites and guest-save-prompt passed 22 of 22 on desktop and Pixel 7.
+  - 22 test guests deleted by id with the full test-guest condition. 21 accounts remain, including the owner. 1,323 questions published (unchanged).
+  - live-watch baseline.json updated to this build.
+  - Not tested on a physical phone.
