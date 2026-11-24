@@ -1,7 +1,7 @@
 import sys, json, re, subprocess, difflib, os
 sys.path.insert(0,'/tmp/narr')
 from asr import words
-NUM={'one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9','ten':'10'}
+NUM={'first':'1','second':'2','third':'3','one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9','ten':'10'}
 def norm(t):
     t=t.lower().replace('\u2019',"'").replace('æ','ae')
     out=[]

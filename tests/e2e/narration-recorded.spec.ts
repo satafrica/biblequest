@@ -79,3 +79,39 @@ test('with the recorded voice turned off, Who Am I? uses the device voice', asyn
   await expect.poll(async () => (await said(page)).join(' '), { timeout: 10_000 }).toContain('Clue 1.')
   expect(clips).toEqual([])
 })
+
+// Scripture Quiz: five voices take turns, one voice per question. Each question and its feedback
+// are read in that question's voice; over a few questions more than one voice is heard.
+test('Scripture Quiz reads each question and its feedback in one recorded voice', async ({ page }) => {
+  await deviceVoiceSpy(page)
+  const clips: { url: string; status: number }[] = []
+  page.on('response', (r) => { if (/\/narration\/scripture\/[a-z]+\/[0-9a-z]+\.mp3/.test(r.url())) clips.push({ url: r.url(), status: r.status() }) })
+  const errors: string[] = []
+  page.on('pageerror', (e) => errors.push(e.message))
+  await page.goto(`./#/game/${encodeURIComponent('scripture:1:1')}`)
+  const options = page.getByRole('group', { name: 'Answer options' })
+  const voiceOf = (u: string) => u.match(/\/narration\/scripture\/([a-z]+)\//)![1]
+  const voicesHeard = new Set<string>()
+  for (let qn = 0; qn < 4; qn++) {
+    await expect(options).toBeVisible({ timeout: 30_000 })
+    const i0 = clips.length
+    const mine = () => distinct(clips.slice(i0))
+    await page.getByRole('button', { name: 'Read question aloud' }).click()
+    await expect.poll(() => mine().length, { timeout: 30_000 }).toBeGreaterThanOrEqual(2)
+    await page.getByRole('button', { name: 'Stop reading' }).click().catch(() => {})
+    const q = mine().length
+    await options.getByRole('button').first().click()
+    await page.getByRole('button', { name: 'Read aloud', exact: true }).click()
+    // The answer detail is new for every question ("Correct."/"Not quite." may come from the cache).
+    await expect.poll(() => mine().length, { timeout: 30_000 }).toBeGreaterThanOrEqual(q + 1)
+    await page.getByRole('button', { name: 'Stop reading' }).click().catch(() => {})
+    const vs = new Set(mine().map(voiceOf))
+    expect(vs.size, `one voice per question: ${mine().join(' ')}`).toBe(1)
+    voicesHeard.add([...vs][0])
+    await page.getByRole('button', { name: /Next question|See results/ }).click()
+  }
+  expect(clips.every((c) => c.status === 200 || c.status === 206)).toBe(true)
+  expect(voicesHeard.size).toBeGreaterThanOrEqual(2)
+  expect(await said(page)).toEqual([])
+  expect(errors).toEqual([])
+})

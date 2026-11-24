@@ -296,3 +296,13 @@ Notes:
   - On mybiblegem.com: narration-recorded, draft-rewrites and guest-save-prompt passed 18 of 18 on desktop and Pixel 7.
   - 16 test guests deleted by id with the full test-guest condition. 17 accounts remain, including the owner. Questions unchanged (1323 published, same fingerprint).
   - live-watch baseline.json updated to this build.
+
+## 24 Nov 2026 — Recorded voices for Scripture Quiz (draft, not published)
+
+- **Tested (draft site)**: Scripture Quiz read-aloud plays recorded narration in five AI voices (Gemini text-to-speech) that take turns, one voice per question: Charon, Algieba, Vindemiatrix, Kore and Gacrux (74 questions each). The question, options and feedback are always in that question's voice.
+- 1,120 new clips in the `narration` bucket (`scripture/<voice>/`), manifest updated. 1,930 objects in the bucket.
+- Read-aloud changes (all games, device voice too): a fill-in blank is read as "blank"; choice questions are recorded as two parts (question, options); feedback no longer repeats the reference ("This verse is Acts 9:4 (KJV)." is skipped, and the reference is not read twice when it is the answer). After a 50/50, the device voice reads the question.
+- That feedback change also shortened 5 Who Am I? answers (Judah, Jeremiah, John, Paul, Achan); they were re-recorded in Algieba.
+- Checks: every part was matched word by word when splitting; 61 failed parts and 42 more found by a length check and speech-to-text were re-recorded singly. Not every clip was re-transcribed in full.
+- Tests: vitest 102 passed; local browser suite 142 passed, 14 skipped; on draft https://6b0515ee4126634690b7cc72--biblequest-game.netlify.app (desktop and Pixel 7): narration-recorded (now including Scripture Quiz), draft-rewrites and guest-save-prompt 20/20. Test guests and the temporary uploader deleted by id; temporary storage policies dropped. 17 accounts remain.
+- Not tested on a physical phone. Not published to mybiblegem.com.

@@ -62,6 +62,8 @@ const NUMBERED_BOOKS = 'Samuel|Kings|Chronicles|Corinthians|Thessalonians|Timoth
 export function spokenText(text: string): string {
   return text
     .replace(/\u2026/g, '')
+    // A fill-in blank ("_____") is read as the word "blank".
+    .replace(/_{2,}/g, ' blank ')
     .replace(/\s*\u2192\s*/g, ', then ')
     .replace(/\s+\u00b7\s+/g, ', ')
     .replace(/&/g, ' and ')
@@ -141,12 +143,24 @@ export function narrationKey(text: string): string {
   return `${h.toString(16).padStart(8, '0')}${s.length.toString(36)}`
 }
 
-interface NarrationManifest { version: number; modes: Record<string, { voice: string; clips: string[] }> }
+// manifest.json lists the recordings per game. Either one voice for the whole game
+//   { voice, clips: [key…] }            -> <mode>/<key>.mp3
+// or several voices (Scripture Quiz takes turns between voices, one voice per question)
+//   { voices: { <voice>: [key…] } }      -> <mode>/<voice>/<key>.mp3
+// A list of parts is played in one voice only: the first voice that has every part.
+type ModeEntry = { voice?: string; clips?: string[]; voices?: Record<string, string[]> }
+interface NarrationManifest { version: number; modes: Record<string, ModeEntry> }
+type VoiceSet = { path: string; keys: Set<string> }
+function toSets(mode: string, v: ModeEntry | string[]): VoiceSet[] {
+  if (Array.isArray(v)) return [{ path: mode, keys: new Set(v) }]
+  if (v.voices && typeof v.voices === 'object') return Object.entries(v.voices).map(([voice, keys]) => ({ path: `${mode}/${voice}`, keys: new Set(keys ?? []) }))
+  return [{ path: mode, keys: new Set(v.clips ?? []) }]
+}
 const NARRATION_BASE = (() => {
   const url = (import.meta.env?.VITE_SUPABASE_URL as string | undefined) ?? ''
   return url ? `${url.replace(/\/$/, '')}/storage/v1/object/public/narration` : ''
 })()
-let manifest: { modes: Record<string, Set<string>> } | null = null
+let manifest: { modes: Record<string, VoiceSet[]> } | null = null
 let manifestLoading: Promise<void> | null = null
 let recordedEnabled = true
 
@@ -161,7 +175,7 @@ export function loadNarration(base = NARRATION_BASE): Promise<void> {
       .then((r) => (r.ok ? r.json() : null))
       .then((m: NarrationManifest | null) => {
         if (!m || typeof m !== 'object' || !m.modes) return
-        manifest = { modes: Object.fromEntries(Object.entries(m.modes).map(([k, v]) => [k, new Set(v.clips ?? [])])) }
+        manifest = { modes: Object.fromEntries(Object.entries(m.modes).map(([k, v]) => [k, toSets(k, v)])) }
       })
       .catch(() => { manifestLoading = null })
   }
@@ -170,13 +184,20 @@ export function loadNarration(base = NARRATION_BASE): Promise<void> {
 
 /** True when every part has a recording for this game (and the player has not turned recordings off). */
 export function hasRecording(mode: string, parts: string[]): boolean {
-  const set = recordedEnabled && manifest ? manifest.modes[mode] : undefined
-  return Boolean(set && parts.length > 0 && parts.every((p) => set.has(narrationKey(p))))
+  return recordingPath(mode, parts) !== null
 }
 
-/** Test hook: install a manifest directly. */
-export function _setNarrationManifest(modes: Record<string, string[]> | null) {
-  manifest = modes ? { modes: Object.fromEntries(Object.entries(modes).map(([k, v]) => [k, new Set(v)])) } : null
+/** Storage folder of the first voice that has every part, or null. */
+function recordingPath(mode: string, parts: string[]): string | null {
+  const sets = recordedEnabled && manifest ? manifest.modes[mode] : undefined
+  if (!sets || !parts.length) return null
+  const keys = parts.map(narrationKey)
+  return sets.find((s) => keys.every((k) => s.keys.has(k)))?.path ?? null
+}
+
+/** Test hook: install a manifest directly (a key list for one voice, or { voice: keys } for several). */
+export function _setNarrationManifest(modes: Record<string, string[] | Record<string, string[]>> | null) {
+  manifest = modes ? { modes: Object.fromEntries(Object.entries(modes).map(([k, v]) => [k, toSets(k, Array.isArray(v) ? v : { voices: v })])) } : null
 }
 
 let audioEl: HTMLAudioElement | null = null
@@ -195,7 +216,8 @@ export function speakParts(mode: string, parts: string[], opts: { rate?: number;
   if (!clean.length) return false
   stopAudio()
   if (speechSupported()) { session++; window.speechSynthesis.cancel() }
-  if (!hasRecording(mode, clean) || typeof Audio === 'undefined') return speak(clean.join(' '), opts)
+  const path = recordingPath(mode, clean)
+  if (!path || typeof Audio === 'undefined') return speak(clean.join(' '), opts)
   const id = ++audioSession
   if (!audioEl) audioEl = new Audio()
   const el = audioEl
@@ -210,7 +232,7 @@ export function speakParts(mode: string, parts: string[], opts: { rate?: number;
     if (i >= clean.length) { opts.onEnd?.(); return }
     el.onended = () => play(i + 1)
     el.onerror = () => fallback(i)
-    el.src = `${NARRATION_BASE}/${mode}/${narrationKey(clean[i])}.mp3`
+    el.src = `${NARRATION_BASE}/${path}/${narrationKey(clean[i])}.mp3`
     el.playbackRate = opts.rate ?? 1
     ;(el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true
     const p = el.play()

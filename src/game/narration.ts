@@ -23,7 +23,13 @@ export function questionSpeechParts(q: Q | null | undefined, cluesShown: number,
   if (q.game_mode === 'mystery' && q.extra?.clue) parts.unshift(`Case file: ${q.extra.case_title}. Stage ${q.extra.stage} of ${q.extra.stages}. ${q.extra.clue}`)
   if (q.game_mode === 'sequence') parts.push('Events to put in order:', ...order.map((o, i) => `${i + 1}. ${o}.`))
   else if (q.game_mode === 'hidden') parts.push('Tap the object in the picture.')
-  else parts.push(...q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean))
+  else {
+    // Choice questions: the prompt and the options are separate parts (one recording each). After a
+    // 50/50 the options part has no recording, so the device voice reads the question instead; the
+    // device voice reads the same words either way.
+    const opts = q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean)
+    return opts.length ? [parts.join(' '), opts.join(' ')] : [parts.join(' ')]
+  }
   return [parts.join(' ')]
 }
 
@@ -31,11 +37,16 @@ type R = Pick<AnswerResult, 'correct' | 'correct_index' | 'reference' | 'verse_t
 
 const words = (s: string) => s.toLowerCase().replace(/\u2019/g, "'").match(/[a-z']+/g) ?? []
 
-/** True when an explanation mostly repeats the verse just read (so read-aloud does not say it twice). Exported for tests. */
-export function repeatsVerse(explanation: string, verse: string): boolean {
+/**
+ * True when an explanation mostly repeats what was just read (the verse, and the reference if
+ * given), so read-aloud does not say it twice. "This verse is Acts 9:4 (KJV)." adds nothing after
+ * the reference has been read. Exported for tests.
+ */
+export function repeatsVerse(explanation: string, verse: string, reference = ''): boolean {
   const e = words(explanation)
   if (!e.length) return false
   const v = new Set(words(verse))
+  if (reference) for (const w of [...words(reference), 'this', 'verse', 'is', 'kjv']) v.add(w)
   return e.filter((w) => v.has(w)).length / e.length >= 0.7
 }
 
@@ -43,9 +54,10 @@ export function repeatsVerse(explanation: string, verse: string): boolean {
 export function answerDetail(answer: string | undefined, reference: string | undefined, verse: string | null | undefined, explanation: string | undefined): string {
   const parts: string[] = []
   if (answer) parts.push(`The answer is ${answer}.`)
-  if (reference) parts.push(`${reference}.`)
+  // When the answer is the reference ("Where is this verse found?"), it is not read twice.
+  if (reference && reference !== answer) parts.push(`${reference}.`)
   if (verse) parts.push(verse.replace(/\n/g, '. ').replace(/\u2026/g, ''))
-  if (explanation && !(verse && repeatsVerse(explanation, verse))) parts.push(explanation)
+  if (explanation && !(verse && repeatsVerse(explanation, verse, reference))) parts.push(explanation)
   return parts.join(' ')
 }
 
