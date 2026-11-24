@@ -14,7 +14,16 @@ describe('narration parts', () => {
     const sq = { game_mode: 'scripture' as const, prompt: 'Q?', clues: null, options: ['x', 'y'], extra: null }
     expect(questionSpeechParts(sq, 1)).toEqual(['Q?', 'Option 1. x. Option 2. y.'])
     expect(questionSpeechParts(sq, 1, [], [0])).toEqual(['Q?', 'Option 2. y.'])
-    expect(questionSpeechParts({ ...sq, game_mode: 'sequence' as const }, 1, ['a', 'b'])).toEqual(['Q? Events to put in order: 1. a. 2. b.'])
+  })
+  it('reads each Sequence event as its own part, in the order on screen', () => {
+    const seq = { game_mode: 'sequence' as const, prompt: 'Put these events in order: Creation', clues: null, options: ['a', 'b'], extra: null }
+    expect(questionSpeechParts(seq, 1, ['b', 'a'])).toEqual(['Put these events in order: Creation.', 'b.', 'a.'])
+  })
+  it('Hidden Object and Sequence feedback: verdict, then the same detail', () => {
+    const r = { correct: true, reference: 'Genesis 8:11', verse_text: 'V', explanation: 'E' }
+    expect(feedbackSpeechParts({ game_mode: 'hidden', options: [] }, r)).toEqual(['Correct.', 'Genesis 8:11. V E'])
+    expect(feedbackSpeechParts({ game_mode: 'hidden', options: [] }, { ...r, correct: false })).toEqual(['Not quite. The object is outlined in the picture.', 'Genesis 8:11. V E'])
+    expect(feedbackSpeechParts({ game_mode: 'sequence', options: [] }, { ...r, correct: false })).toEqual(['Not quite.', 'Genesis 8:11. V E'])
   })
   it('reads a fill-in blank as the word blank', () => {
     expect(spokenText('the _____ and the earth')).toBe('the blank and the earth')

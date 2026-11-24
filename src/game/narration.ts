@@ -21,8 +21,10 @@ export function questionSpeechParts(q: Q | null | undefined, cluesShown: number,
   }
   const parts = [q.prompt]
   if (q.game_mode === 'mystery' && q.extra?.clue) parts.unshift(`Case file: ${q.extra.case_title}. Stage ${q.extra.stage} of ${q.extra.stages}. ${q.extra.clue}`)
-  if (q.game_mode === 'sequence') parts.push('Events to put in order:', ...order.map((o, i) => `${i + 1}. ${o}.`))
-  else if (q.game_mode === 'hidden') parts.push('Tap the object in the picture.')
+  // Sequence: the events are shown in a shuffled order, so each event is its own part (one
+  // recording each) and the parts follow the order on screen.
+  if (q.game_mode === 'sequence') return [endSentence(q.prompt), ...order.map((o) => endSentence(o))]
+  if (q.game_mode === 'hidden') parts.push('Tap the object in the picture.')
   else {
     // Choice questions: the prompt and the options are separate parts (one recording each). After a
     // 50/50 the options part has no recording, so the device voice reads the question instead; the
@@ -34,6 +36,9 @@ export function questionSpeechParts(q: Q | null | undefined, cluesShown: number,
 }
 
 type R = Pick<AnswerResult, 'correct' | 'correct_index' | 'reference' | 'verse_text' | 'explanation'>
+
+/** Adds a full stop when a text has no closing punctuation, so the voice ends the sentence. */
+export const endSentence = (t: string) => (/[.!?:;\u201d"')]$/.test(t.trim()) ? t.trim() : `${t.trim()}.`)
 
 const words = (s: string) => s.toLowerCase().replace(/\u2019/g, "'").match(/[a-z']+/g) ?? []
 
@@ -65,8 +70,11 @@ export function feedbackSpeechParts(q: Pick<PublicQuestion, 'game_mode' | 'optio
   if (!q || !r) return []
   const verdict = r.correct ? 'Correct.' : 'Not quite.'
   if (q.game_mode === 'hidden' || q.game_mode === 'sequence') {
-    const lead = !r.correct && q.game_mode === 'hidden' ? ' The object is outlined in the picture.' : ''
-    return [`${verdict}${lead} ${answerDetail(undefined, r.reference, r.verse_text, r.explanation)}`.trim()]
+    // The verdict (with the hidden-object hint) and the detail are separate parts, so the detail
+    // has one recording whether the answer was right or wrong.
+    const lead = !r.correct && q.game_mode === 'hidden' ? `${verdict} The object is outlined in the picture.` : verdict
+    const detail = answerDetail(undefined, r.reference, r.verse_text, r.explanation)
+    return detail ? [lead, detail] : [lead]
   }
   const answer = r.correct_index !== undefined ? q.options[r.correct_index] : undefined
   const detail = answerDetail(answer, r.reference, r.verse_text, r.explanation)

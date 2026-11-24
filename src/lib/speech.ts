@@ -71,6 +71,8 @@ export function spokenText(text: string): string {
     .replace(new RegExp(`\\b([1-3]) (${NUMBERED_BOOKS})\\b`, 'g'), (_, n: string, b: string) => `${NUMBERED[n]} ${b}`)
     .replace(/\bPsalms (\d+)(?=:)/g, 'Psalm $1')
     .replace(/(\d+):(\d+)\s*[-\u2013]\s*(\d+)/g, 'chapter $1, verses $2 to $3')
+    // A chapter range between two references ("Genesis 12 \u2013 Genesis 22") is read with "to".
+    .replace(/(\d)\s+\u2013\s+(?=(?:First |Second |Third )?[A-Z])/g, '$1 to ')
     .replace(/(\d+):(\d+)/g, 'chapter $1, verse $2')
     // All-capital words such as LORD or MENE are otherwise spelled out by some voices.
     .replace(/\b([A-Z])([A-Z]{1,})\b/g, (w, a: string, rest: string) => (w === 'I' ? w : a + rest.toLowerCase()))
@@ -160,6 +162,9 @@ const NARRATION_BASE = (() => {
   const url = (import.meta.env?.VITE_SUPABASE_URL as string | undefined) ?? ''
   return url ? `${url.replace(/\/$/, '')}/storage/v1/object/public/narration` : ''
 })()
+// A draft build can read a different manifest (VITE_NARRATION_MANIFEST, e.g. manifest-next.json), so new
+// recordings can be tested on a draft site before the live manifest lists them.
+const MANIFEST_FILE = ((import.meta.env?.VITE_NARRATION_MANIFEST as string | undefined) || 'manifest.json').replace(/[^a-z0-9._-]/gi, '')
 let manifest: { modes: Record<string, VoiceSet[]> } | null = null
 let manifestLoading: Promise<void> | null = null
 let recordedEnabled = true
@@ -171,7 +176,7 @@ export function setRecordedNarration(on: boolean) { recordedEnabled = on }
 export function loadNarration(base = NARRATION_BASE): Promise<void> {
   if (!base || typeof fetch !== 'function') return Promise.resolve()
   if (!manifestLoading) {
-    manifestLoading = fetch(`${base}/manifest.json`, { cache: 'no-cache' })
+    manifestLoading = fetch(`${base}/${MANIFEST_FILE}`, { cache: 'no-cache' })
       .then((r) => (r.ok ? r.json() : null))
       .then((m: NarrationManifest | null) => {
         if (!m || typeof m !== 'object' || !m.modes) return

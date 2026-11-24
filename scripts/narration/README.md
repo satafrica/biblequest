@@ -37,3 +37,22 @@ Parts per question: prompt, options, answer detail (1,110 + 10 verdicts, about 1
    uploader guest and uid-scoped storage policies (removed afterwards).
 The feedback no longer repeats the reference ("This verse is Acts 9:4 (KJV).", or the reference
 when it is the answer). That also shortened 5 Who Am I? answers, which were re-recorded in Algieba.
+
+## Other games (24 Nov 2026): one voice per game
+Picture Bible Quiz and Geography Explorer: Kore. Hidden Object: Vindemiatrix. Bible Mystery: Charon.
+Wisdom Decisions and Sequence: Gacrux. Parables Explorer: Algieba. Manifest entries are
+`{ voice, clips }`, stored as `<mode>/<key>.mp3`.
+Read-aloud changes made for recording: Sequence reads the prompt and then each event as its own part
+in the order on screen (the numbers are no longer read, because the shuffled order would need a
+recording for every position); Hidden Object and Sequence feedback is a verdict part plus a detail part.
+1. Export published questions of these games to /tmp/narr/others.json; `node scripts/narration/build_games.mjs`.
+2. `python3 scripts/narration/g_batches.py` packs the unique parts into about 2,500-byte recordings
+   (`narr_g/g_<mode>_NNN.txt`); "Correct." / "Not quite." are copied from the Scripture Quiz clips.
+3. Record each with the game's voice, split with `g_split.py`, re-record failed parts singly.
+4. Checks: `g_optcheck.py` (every option list) and `g_fullcheck.py <shard> <n>` (every other clip) re-transcribe
+   the clips and flag missing or extra words (repeats, text from a neighbouring part); flagged clips and
+   their neighbours were re-recorded singly. `g_audit.mjs` confirms every part of every published
+   question (both verdicts) has a clip in manifest-next.json.
+5. `upload_games.mjs <clipsDir>` uploads the clips and writes `manifest-next.json` (the live
+   `manifest.json` is unchanged). A draft build with `VITE_NARRATION_MANIFEST=manifest-next.json`
+   reads it. At publish: build normally, publish, then `upload_games.mjs --promote`.

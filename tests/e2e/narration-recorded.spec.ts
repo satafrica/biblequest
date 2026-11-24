@@ -115,3 +115,58 @@ test('Scripture Quiz reads each question and its feedback in one recorded voice'
   expect(await said(page)).toEqual([])
   expect(errors).toEqual([])
 })
+
+// The other games: one recorded voice per game. One guest plays a question in each game (to keep
+// guest sign-ups low): the question and its feedback are read from that game's recordings only.
+test('each other game reads its question and feedback in its recorded voice', async ({ page }) => {
+  test.setTimeout(420_000)
+  await deviceVoiceSpy(page)
+  const clips: { url: string; status: number }[] = []
+  page.on('response', (r) => { if (/\/narration\/[a-z]+\/[0-9a-z]+\.mp3/.test(r.url())) clips.push({ url: r.url(), status: r.status() }) })
+  const errors: string[] = []
+  page.on('pageerror', (e) => errors.push(e.message))
+  const games: [string, () => Promise<void>][] = [
+    ['picture', () => page.goto(`./#/game/${encodeURIComponent('picture:1:1')}`).then(() => {})],
+    ['geography', () => page.goto(`./#/game/${encodeURIComponent('geography:1:1')}`).then(() => {})],
+    ['hidden', () => page.goto(`./#/game/${encodeURIComponent('hidden:1:1')}`).then(() => {})],
+    ['wisdom', () => page.goto(`./#/game/${encodeURIComponent('wisdom:1:1')}`).then(() => {})],
+    ['sequence', () => page.goto(`./#/game/${encodeURIComponent('sequence:1:1')}`).then(() => {})],
+    ['mystery', async () => {
+      await page.goto('./#/mystery'); await page.locator('a[href*="/adventures/"]').first().click()
+      await page.getByRole('link', { name: /Play case/ }).first().click(); await page.getByRole('button', { name: /Open the case/ }).click()
+    }],
+    ['parables', async () => {
+      await page.goto('./#/parables'); await page.locator('a[href*="/adventures/"]').first().click()
+      await page.getByRole('link', { name: /Play parable/ }).first().click(); await page.getByRole('button', { name: /Answer questions/ }).click()
+    }],
+  ]
+  for (const [mode, open] of games) {
+    await open()
+    const opts = page.getByRole('group', { name: 'Answer options' })
+    const order = page.getByRole('button', { name: 'Check order' })
+    const scene = page.getByTestId('hidden-scene')
+    await expect(opts.or(order).or(scene).first()).toBeVisible({ timeout: 30_000 })
+    const i0 = clips.length
+    const mine = () => distinct(clips.slice(i0))
+    await page.getByRole('button', { name: 'Read question aloud' }).click()
+    await expect.poll(() => mine().length, { timeout: 30_000, message: `${mode} question` }).toBeGreaterThanOrEqual(1)
+    await page.getByRole('button', { name: 'Stop reading' }).click().catch(() => {})
+    const q = mine().length
+    if (await order.isVisible()) await order.click()
+    else if (await scene.isVisible()) {
+      await expect(scene.locator('img')).toBeVisible()
+      const area = scene.locator('button[data-area]').first()
+      await area.scrollIntoViewIfNeeded()
+      const b = (await area.boundingBox())!
+      await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2)
+      await expect(page.getByTestId('hidden-answer')).toBeVisible()
+    } else await opts.getByRole('button').first().click()
+    await page.getByRole('button', { name: 'Read aloud', exact: true }).click()
+    await expect.poll(() => mine().length, { timeout: 30_000, message: `${mode} feedback` }).toBeGreaterThanOrEqual(q + 1)
+    await page.getByRole('button', { name: 'Stop reading' }).click().catch(() => {})
+    expect(mine().every((u) => u.includes(`/narration/${mode}/`)), `${mode}: ${mine().join(' ')}`).toBe(true)
+    expect(await said(page), mode).toEqual([])
+  }
+  expect(clips.every((c) => c.status === 200 || c.status === 206)).toBe(true)
+  expect(errors).toEqual([])
+})

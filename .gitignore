@@ -19,3 +19,4 @@ tests/live/gameplay.json
 __pycache__/
 content/geo/cache
 art_batch2/
+dist-draft
