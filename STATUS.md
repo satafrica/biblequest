@@ -365,3 +365,10 @@ Notes:
   - 22 test guests deleted by id with the full test-guest condition. 21 accounts remain, including the owner. 1,323 questions published (unchanged).
   - live-watch baseline.json updated to this build.
   - Not tested on a physical phone.
+
+## 24 Nov 2026 — Easier "Remove two wrong answers" (draft, not yet published)
+- Help buttons ("Get a hint", "Remove two wrong answers", "Add 15 seconds") now sit directly under the question, above the answers.
+- If you have none, the button shows its gem price and unlocks inside the game (confirm dialog: gems earned by playing, never real money), then applies straight away to the same question. Not enough gems: shows "earn N more gems" instead of leaving the game.
+- Removed answers show a dashed border, strike-through and a "Removed" tag; a note says "Pick from the 2 answers left." The button becomes "Two wrong answers removed".
+- Store item `eliminate_two` renamed from "Winnowing Fan" to "Remove Two Wrong Answers" in source; live DB rename is migration 20261124000013 (not yet applied to live).
+- Tests: vitest 104/104; local Playwright e2e 141 passed, 3 hidden-picture tests fixed (they tapped without scrolling) and re-run 26/26; new remove-two.spec.ts passes desktop + Pixel 7. Draft 6b058221f0183fada12954b1 (live backend): placement check 2/2. 2 test guests removed (21 accounts).

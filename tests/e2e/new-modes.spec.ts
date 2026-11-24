@@ -53,6 +53,7 @@ test('hidden object: tapping empty space asks to keep looking; tapping an object
   await expect(page.getByRole('group', { name: 'Answer options' })).toHaveCount(0)
   // A tap on empty picture space is not an answer.
   await expect(scene.locator('img')).toBeVisible()
+  await scene.scrollIntoViewIfNeeded()
   const empty = await scene.evaluate((el) => {
     const r = el.getBoundingClientRect()
     const boxes = JSON.parse(el.getAttribute('data-boxes') ?? '[]') as [number, number, number, number][]
@@ -70,6 +71,7 @@ test('hidden object: tapping empty space asks to keep looking; tapping an object
   for (let i = 0; i < 20; i++) {
     await expect(scene.locator('img')).toBeVisible()
     const area = scene.locator('button[data-area]').first()
+    await scene.scrollIntoViewIfNeeded()
     const b = (await area.boundingBox())!
     await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2)
     await expect(page.getByTestId('hidden-answer')).toBeVisible()

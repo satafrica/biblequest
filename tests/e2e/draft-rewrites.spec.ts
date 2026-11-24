@@ -10,6 +10,7 @@ async function next(page: Page) {
 async function tapAt(page: Page, fx: number, fy: number) {
   const scene = page.getByTestId('hidden-scene')
   await expect(scene.locator('img')).toBeVisible()
+  await scene.scrollIntoViewIfNeeded()
   const r = (await scene.boundingBox())!
   await page.mouse.click(r.x + r.width * fx / 100, r.y + r.height * fy / 100)
 }
@@ -23,7 +24,7 @@ async function playHidden(page: Page, key: string, spots: Record<string, [number
     let matched: string | undefined
     for (const p of Object.keys(spots)) if (await page.getByText(p, { exact: true }).isVisible()) matched = p
     if (matched) { await tapAt(page, ...spots[matched]); await expect(page.getByText(/^Correct$/)).toBeVisible(); hit.add(matched) }
-    else { const b = (await scene.locator('button[data-area]').first().boundingBox())!; await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2) }
+    else { await scene.scrollIntoViewIfNeeded(); const b = (await scene.locator('button[data-area]').first().boundingBox())!; await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2) }
     void prompt
     if (await next(page)) break
   }

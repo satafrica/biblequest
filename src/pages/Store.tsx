@@ -30,13 +30,13 @@ function clearKey(itemId: string) { const p = readJSON<Record<string, string>>(P
 export function usePurchase() {
   const { backend, refresh, toast, setBalance } = useApp()
   const [busy, setBusy] = useState(false)
-  const buy = async (item: StoreItem) => {
+  const buy = async (item: StoreItem, opts: { quiet?: boolean } = {}) => {
     setBusy(true)
     try {
       const r = await backend.purchase(item.id, keyFor(item.id))
       clearKey(item.id)
       setBalance(r.balance)
-      toast({ title: r.replayed ? 'Already unlocked' : `${item.name} unlocked`, body: r.replayed ? 'Your earlier unlock went through; the gems were used only once.' : `Balance: ${r.balance} gems`, tone: 'gem' })
+      if (!opts.quiet) toast({ title: r.replayed ? 'Already unlocked' : `${item.name} unlocked`, body: r.replayed ? 'Your earlier unlock went through; the gems were used only once.' : `Balance: ${r.balance} gems`, tone: 'gem' })
       await refresh()
       return true
     } catch (e) {

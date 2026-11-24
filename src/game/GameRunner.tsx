@@ -14,6 +14,7 @@ import { feedbackSpeechParts, questionSpeechParts } from './narration'
 import { appUrl, resultText, shareResult } from '../lib/share'
 import { BibleMap, type MarkerState } from './BibleMap'
 import { HiddenScene } from './HiddenScene'
+import { usePurchase } from '../pages/Store'
 
 const ACTIVE_KEY = 'bq.active.v1'
 const ARENA_SECONDS = 20
@@ -24,7 +25,9 @@ export default function GameRunner() {
   const { levelKey: raw = '' } = useParams()
   const levelKey = decodeURIComponent(raw)
   const app = useApp()
-  const { backend, catalog, prefs, toast, setBalance, refresh, owns, online } = app
+  const { backend, catalog, prefs, toast, setBalance, refresh, owns, online, wallet } = app
+  const { buy, busy: buying } = usePurchase()
+  const [unlockItem, setUnlockItem] = useState<PowerId | null>(null)
   const navigate = useNavigate()
   const kind = levelKey.split(':')[0]
   const isArena = kind === 'arena'
@@ -157,7 +160,7 @@ export default function GameRunner() {
     return () => window.clearTimeout(t)
   }, [timed, phase, timeLeft, busy, submit])
 
-  const power = useCallback(async (item: 'hint' | 'eliminate_two' | 'extra_time') => {
+  const power = useCallback(async (item: PowerId) => {
     if (!session || !q) return
     try {
       const r = await backend.usePowerUp(session.session_id, q.id, item)
@@ -278,6 +281,25 @@ export default function GameRunner() {
             </ol>
           )}
 
+          {phase === 'question' && (
+            <div className="mb-4 flex flex-wrap items-center gap-2" role="group" aria-label="Help for this question" data-testid="helpers">
+              {(['hint', 'eliminate_two', 'extra_time'] as PowerId[])
+                .filter((id) => id !== 'eliminate_two' || (q.game_mode !== 'sequence' && q.game_mode !== 'hidden'))
+                .filter((id) => id !== 'extra_time' || timed)
+                .map((id) => {
+                  const item = catalog.store.find((i) => i.id === id)
+                  const used = id === 'hint' ? Boolean(hint) : id === 'eliminate_two' ? eliminated.length > 0 : false
+                  return <PowerButton key={id} id={id} qty={owns(id)} price={item?.price ?? 0} balance={wallet.balance} used={used}
+                    onUse={() => power(id)} onUnlock={() => setUnlockItem(id)} />
+                })}
+            </div>
+          )}
+          {phase === 'question' && eliminated.length > 0 && (
+            <p className="mb-3 flex items-center gap-2 text-sm font-semibold text-good" role="status" data-testid="removed-note">
+              <Scissors className="h-4 w-4" aria-hidden="true" />Pick from the {q.options.length - eliminated.length} answers left.
+            </p>
+          )}
+
           {hint && phase === 'question' && <p className="mb-4 rounded-xl border border-accent/60 bg-accent/10 px-4 py-3 text-sm" role="status"><strong>Hint:</strong> {hint}</p>}
 
           {q.game_mode === 'sequence' ? (
@@ -296,7 +318,8 @@ export default function GameRunner() {
                   <button key={i} className="option" data-state={state} disabled={phase === 'feedback' || busy || eliminated.includes(i)} onClick={() => submit(i)}
                     aria-label={`${o}${state === 'correct' ? ', correct answer' : state === 'wrong' ? ', your answer, incorrect' : state === 'eliminated' ? ', removed' : ''}`}>
                     <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-line text-sm font-semibold" aria-hidden="true">{i + 1}</span>
-                    <span className="flex-1">{o}</span>
+                    <span className="flex-1 option-text">{o}</span>
+                    {state === 'eliminated' && <span className="chip py-0 text-xs" aria-hidden="true">Removed</span>}
                     {state === 'correct' && <Check className="h-5 w-5 text-good" aria-hidden="true" />}
                     {state === 'wrong' && <X className="h-5 w-5 text-bad" aria-hidden="true" />}
                   </button>
@@ -308,9 +331,6 @@ export default function GameRunner() {
           {phase === 'question' && (
             <div className="mt-5 flex flex-wrap items-center gap-2">
               {q.game_mode === 'sequence' && <button className="btn-primary" disabled={busy} onClick={() => submit(-1)}>Check order</button>}
-              <PowerButton label="Hint" Icon={Lamp} qty={owns('hint')} onUse={() => power('hint')} disabled={Boolean(hint)} />
-              {q.game_mode !== 'sequence' && q.game_mode !== 'hidden' && <PowerButton label="Remove two" Icon={Scissors} qty={owns('eliminate_two')} onUse={() => power('eliminate_two')} disabled={eliminated.length > 0} />}
-              {timed && <PowerButton label="+15 seconds" Icon={Hourglass} qty={owns('extra_time')} onUse={() => power('extra_time')} />}
               <ReadAloud mode={q.game_mode} parts={questionParts} label="Read question aloud" />
             </div>
           )}
@@ -361,6 +381,27 @@ export default function GameRunner() {
           onFinishRetry={() => session && finish(session, results)} />
       )}
 
+      {unlockItem && (() => {
+        const item = catalog.store.find((i) => i.id === unlockItem)
+        const t = POWER_TEXT[unlockItem]
+        if (!item) return null
+        return (
+          <Modal open onClose={() => setUnlockItem(null)} title={t.ask}>
+            <p>This uses <strong><Gems n={item.price} /></strong> that you earned by playing. Gems never cost real money.</p>
+            <dl className="mt-4 space-y-1 text-sm">
+              <div className="flex justify-between"><dt>Your gems</dt><dd><Gems n={wallet.balance} /></dd></div>
+              <div className="flex justify-between border-t border-line pt-1 font-semibold"><dt>Gems left</dt><dd><Gems n={wallet.balance - item.price} /></dd></div>
+            </dl>
+            <div className="mt-6 flex justify-end gap-2">
+              <button className="btn-ghost" onClick={() => setUnlockItem(null)}>Not now</button>
+              <button className="btn-primary" disabled={buying} data-testid="power-confirm" onClick={async () => {
+                const id = unlockItem
+                if (await buy(item, { quiet: true })) { setUnlockItem(null); await power(id) }
+              }}>{buying ? 'One moment…' : `Yes, use ${item.price} gems`}</button>
+            </div>
+          </Modal>
+        )
+      })()}
       {q && <ReportDialog open={reportOpen} onClose={() => setReportOpen(false)} questionId={q.id} />}
     </div>
   )
@@ -379,11 +420,37 @@ function ReadAloud({ mode, parts, label }: { mode: string; parts: string[]; labe
   )
 }
 
-function PowerButton({ label, Icon, qty, onUse, disabled }: { label: string; Icon: typeof Lamp; qty: number; onUse: () => void; disabled?: boolean }) {
-  if (qty <= 0) return (
-    <Link to="/rewards" className="btn-ghost btn-sm text-muted"><Icon className="h-4 w-4" aria-hidden="true" />{label}<span className="text-xs">(unlock with gems)</span></Link>
+type PowerId = 'hint' | 'eliminate_two' | 'extra_time'
+const POWER_TEXT: Record<PowerId, { label: string; used: string; ask: string; Icon: typeof Lamp }> = {
+  hint: { label: 'Get a hint', used: 'Hint shown', ask: 'Show a hint for this question?', Icon: Lamp },
+  eliminate_two: { label: 'Remove two wrong answers', used: 'Two wrong answers removed', ask: 'Remove two wrong answers from this question?', Icon: Scissors },
+  extra_time: { label: 'Add 15 seconds', used: '15 seconds added', ask: 'Add 15 seconds to the timer?', Icon: Hourglass },
+}
+
+/**
+ * One help button. If the player has one, it is used straight away. If not, it can be unlocked
+ * with gems right here (a confirmation opens, then it is used on this question), so the player
+ * never has to leave the game. Gems are earned by playing; nothing costs real money.
+ */
+function PowerButton({ id, qty, price, balance, used, onUse, onUnlock }: { id: PowerId; qty: number; price: number; balance: number; used: boolean; onUse: () => void; onUnlock: () => void }) {
+  const t = POWER_TEXT[id]
+  if (used) return <span className="chip border-good py-1.5 text-good" data-testid={`power-${id}`}><Check className="h-4 w-4" aria-hidden="true" />{t.used}</span>
+  if (qty > 0) return (
+    <button className="btn-secondary btn-sm" onClick={onUse} data-testid={`power-${id}`} aria-label={`${t.label} (${qty} left)`}>
+      <t.Icon className="h-4 w-4" aria-hidden="true" />{t.label}<span className="chip py-0">{qty} left</span>
+    </button>
   )
-  return <button className="btn-secondary btn-sm" onClick={onUse} disabled={disabled}><Icon className="h-4 w-4" aria-hidden="true" />{label} <span className="chip py-0">{qty}</span></button>
+  const short = price - balance
+  if (short > 0) return (
+    <span className="chip py-1.5 text-muted" data-testid={`power-${id}`}>
+      <t.Icon className="h-4 w-4" aria-hidden="true" />{t.label}: earn {short} more gems
+    </span>
+  )
+  return (
+    <button className="btn-secondary btn-sm" onClick={onUnlock} data-testid={`power-${id}`} aria-label={`${t.label} for ${price} gems`}>
+      <t.Icon className="h-4 w-4" aria-hidden="true" />{t.label}<span className="chip py-0"><Gems n={price} /></span>
+    </button>
+  )
 }
 
 function SequenceBoard({ order, setOrder, locked, correctOrder }: { order: string[]; setOrder: (o: string[]) => void; locked: boolean; correctOrder?: string[] }) {

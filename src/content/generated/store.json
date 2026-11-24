@@ -12,8 +12,8 @@
  },
  {
   "id": "eliminate_two",
-  "name": "Winnowing Fan",
-  "description": "Remove two incorrect answers from one question.",
+  "name": "Remove Two Wrong Answers",
+  "description": "Removes two wrong answers from one question.",
   "category": "power_up",
   "price": 40,
   "consumable": true,

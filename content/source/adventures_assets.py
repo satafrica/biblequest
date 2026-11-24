@@ -113,7 +113,7 @@ def I(id, name, desc, cat, price, consumable=False, sort=0, image=None, alt=None
 
 STORE_ITEMS = [
  I("hint", "Lamp of Insight", "Reveal a helpful hint for one question.", "power_up", 30, True, 1),
- I("eliminate_two", "Winnowing Fan", "Remove two incorrect answers from one question.", "power_up", 40, True, 2),
+ I("eliminate_two", "Remove Two Wrong Answers", "Removes two wrong answers from one question.", "power_up", 40, True, 2),
  I("extra_time", "Hourglass", "Add 15 seconds to a timed Arena question.", "power_up", 25, True, 3),
  I("badge_scroll", "Scroll Keeper", "A badge for faithful readers.", "badge", 150, sort=10),
  I("badge_lamp", "Lamp unto My Feet", "Inspired by Psalm 119:105.", "badge", 200, sort=11),

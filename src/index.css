@@ -81,7 +81,8 @@
   .option:not(:disabled):hover { border-color: rgb(var(--accent)); }
   .option[data-state='correct'] { border-color: rgb(var(--good)); background: rgb(var(--good) / .12); }
   .option[data-state='wrong'] { border-color: rgb(var(--bad)); background: rgb(var(--bad) / .10); }
-  .option[data-state='eliminated'] { opacity: .45; text-decoration: line-through; }
+  .option[data-state='eliminated'] { opacity: .55; padding-top: .45rem; padding-bottom: .45rem; border-style: dashed; cursor: not-allowed; }
+  .option[data-state='eliminated'] .option-text { text-decoration: line-through; }
   .gem-pop { animation: gem-pop .6s cubic-bezier(.2,.9,.3,1.4); }
   .fade-up { animation: fade-up .35s ease-out both; }
   .map-pulse { transform-box: fill-box; transform-origin: center; animation: map-pulse 1.8s ease-out infinite; }
