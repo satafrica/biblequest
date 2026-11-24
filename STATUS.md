@@ -297,7 +297,7 @@ Notes:
   - 16 test guests deleted by id with the full test-guest condition. 17 accounts remain, including the owner. Questions unchanged (1323 published, same fingerprint).
   - live-watch baseline.json updated to this build.
 
-## 24 Nov 2026 — Recorded voices for Scripture Quiz (draft, not published)
+## 24 Nov 2026 — Recorded voices for Scripture Quiz (published)
 
 - **Tested (draft site)**: Scripture Quiz read-aloud plays recorded narration in five AI voices (Gemini text-to-speech) that take turns, one voice per question: Charon, Algieba, Vindemiatrix, Kore and Gacrux (74 questions each). The question, options and feedback are always in that question's voice.
 - 1,120 new clips in the `narration` bucket (`scripture/<voice>/`), manifest updated. 1,930 objects in the bucket.
@@ -305,4 +305,9 @@ Notes:
 - That feedback change also shortened 5 Who Am I? answers (Judah, Jeremiah, John, Paul, Achan); they were re-recorded in Algieba.
 - Checks: every part was matched word by word when splitting; 61 failed parts and 42 more found by a length check and speech-to-text were re-recorded singly. Not every clip was re-transcribed in full.
 - Tests: vitest 102 passed; local browser suite 142 passed, 14 skipped; on draft https://6b0515ee4126634690b7cc72--biblequest-game.netlify.app (desktop and Pixel 7): narration-recorded (now including Scripture Quiz), draft-rewrites and guest-save-prompt 20/20. Test guests and the temporary uploader deleted by id; temporary storage policies dropped. 17 accounts remain.
-- Not tested on a physical phone. Not published to mybiblegem.com.
+- Published to https://mybiblegem.com at the owner's request (deploy 6b0515ee4126634690b7cc72, 24 Nov 2026 04:56:59 UTC; previous 6b050292415359235cc62b6c). index.html and every asset on the live site match dist-online.
+- Live tests: 19 of 20 online specs passed. The live Scripture Quiz round test could not run: the guest sign-up returned 429 "over_request_rate_limit" (Supabase's per-IP limit on new guest sign-ups, used up by test runs from one machine). The same test passed on the draft, which has the same files and database. Instead, the manifest on live lists 224 parts for each of the 5 voices, and 30 random clips (6 per voice) load as audio/mpeg. To do: rerun `BASE_URL=https://mybiblegem.com npx playwright test tests/e2e/narration-recorded.spec.ts:85` after the limit resets.
+- Note: many players starting as guests from one shared Wi-Fi network (for example a church group) could hit the same limit, and they would see "This round could not start". The limit can be raised in Supabase Auth rate limits. Not changed.
+- Cleanup: 17 test guests deleted by id. Two empty guests from my sign-up checks remain (b237fc41-5369-469c-ada8-44f6407cbf76, 22d4b068-a42c-468b-8ebd-45895f66816c, both with no progress); they do not meet the browser-tag deletion rule, so they were left. 19 accounts.
+- live-watch baseline.json updated to this build.
+- Not tested on a physical phone.
