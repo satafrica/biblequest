@@ -283,7 +283,7 @@ Notes:
   - The 4 test guests were deleted. 17 accounts remain.
   - Not published to production yet.
 
-## 24 Nov 2026 — Recorded voice for Who Am I? (draft, not published)
+## 24 Nov 2026 — Recorded voice for Who Am I? (published)
 
 - **Tested (draft site)**: Who Am I? read-aloud now plays recorded narration in the Algieba voice (AI-generated, Gemini text-to-speech). 804 clips (about 37 MB) are in the public Supabase Storage bucket `narration`, with `manifest.json`.
 - Clues are recorded separately so a recording never reads a clue before it is revealed; revealing a clue reads just that clue when automatic read-aloud is on.
@@ -291,4 +291,8 @@ Notes:
 - If any part has no recording (for example after a question is edited) or playback fails, the device voice reads it instead. Settings has "Use the recorded voice where available" (on by default). Privacy page mentions recorded narration. CSP now allows audio from Supabase.
 - Checks: every clip was re-transcribed with speech-to-text; 15 parts that failed and 2 answers with a skipped phrase were re-recorded and re-checked.
 - Tests: tests/e2e/narration-recorded.spec.ts 4/4 on draft https://6b050292415359235cc62b6c--biblequest-game.netlify.app (desktop and Pixel 7); draft-rewrites and guest-save-prompt 14/14 on the draft; local browser suite 142 passed, 12 skipped; vitest 99 passed. Test guests deleted by id (17 accounts remain).
-- Not tested on a physical phone. Not published to mybiblegem.com. Also still unpublished: the phone notices fix (draft 6b04a6295277d0477e84a9a0), which this draft includes.
+- Not tested on a physical phone.
+- 24 Nov 2026 03:46 UTC: published to mybiblegem.com at the owner's request ("Publish both"). Production is now 6b050292415359235cc62b6c, which includes the phone notices fix. index.html and all assets match dist-online (md5); the CSP header includes the Supabase media-src.
+  - On mybiblegem.com: narration-recorded, draft-rewrites and guest-save-prompt passed 18 of 18 on desktop and Pixel 7.
+  - 16 test guests deleted by id with the full test-guest condition. 17 accounts remain, including the owner. Questions unchanged (1323 published, same fingerprint).
+  - live-watch baseline.json updated to this build.
