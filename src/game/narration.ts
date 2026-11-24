@@ -1,0 +1,62 @@
+import type { AnswerResult, PublicQuestion } from '../engine/types'
+
+// What is read aloud for a question and for its feedback, split into parts. The device voice reads
+// the parts joined together; recorded narration has one recording per part (see speakParts), so
+// the split decides what can be recorded once and reused:
+//  - Who Am I?: the prompt with clue 1, then each later clue on its own (clues are revealed one at
+//    a time, so a recording never gives away a clue early), then the options.
+//  - Feedback: "Correct." or "Not quite.", then the answer, reference, verse and explanation.
+// The recording script (scripts/narration) imports these same functions, so the words match.
+
+type Q = Pick<PublicQuestion, 'game_mode' | 'prompt' | 'clues' | 'options' | 'extra'>
+
+export function questionSpeechParts(q: Q | null | undefined, cluesShown: number, order: string[] = [], eliminated: number[] = []): string[] {
+  if (!q) return []
+  if (q.game_mode === 'whoami' && q.clues && q.clues.length) {
+    const shown = q.clues.slice(0, Math.max(1, cluesShown))
+    const parts = [`${q.prompt} Clue 1. ${shown[0]}`, ...shown.slice(1).map((c, i) => `Clue ${i + 2}. ${c}`)]
+    const opts = q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean)
+    if (opts.length) parts.push(opts.join(' '))
+    return parts
+  }
+  const parts = [q.prompt]
+  if (q.game_mode === 'mystery' && q.extra?.clue) parts.unshift(`Case file: ${q.extra.case_title}. Stage ${q.extra.stage} of ${q.extra.stages}. ${q.extra.clue}`)
+  if (q.game_mode === 'sequence') parts.push('Events to put in order:', ...order.map((o, i) => `${i + 1}. ${o}.`))
+  else if (q.game_mode === 'hidden') parts.push('Tap the object in the picture.')
+  else parts.push(...q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean))
+  return [parts.join(' ')]
+}
+
+type R = Pick<AnswerResult, 'correct' | 'correct_index' | 'reference' | 'verse_text' | 'explanation'>
+
+const words = (s: string) => s.toLowerCase().replace(/\u2019/g, "'").match(/[a-z']+/g) ?? []
+
+/** True when an explanation mostly repeats the verse just read (so read-aloud does not say it twice). Exported for tests. */
+export function repeatsVerse(explanation: string, verse: string): boolean {
+  const e = words(explanation)
+  if (!e.length) return false
+  const v = new Set(words(verse))
+  return e.filter((w) => v.has(w)).length / e.length >= 0.7
+}
+
+/** The part after "Correct."/"Not quite." for a choice question; the same whether the answer was right or wrong. */
+export function answerDetail(answer: string | undefined, reference: string | undefined, verse: string | null | undefined, explanation: string | undefined): string {
+  const parts: string[] = []
+  if (answer) parts.push(`The answer is ${answer}.`)
+  if (reference) parts.push(`${reference}.`)
+  if (verse) parts.push(verse.replace(/\n/g, '. ').replace(/\u2026/g, ''))
+  if (explanation && !(verse && repeatsVerse(explanation, verse))) parts.push(explanation)
+  return parts.join(' ')
+}
+
+export function feedbackSpeechParts(q: Pick<PublicQuestion, 'game_mode' | 'options'> | null | undefined, r: R | null | undefined): string[] {
+  if (!q || !r) return []
+  const verdict = r.correct ? 'Correct.' : 'Not quite.'
+  if (q.game_mode === 'hidden' || q.game_mode === 'sequence') {
+    const lead = !r.correct && q.game_mode === 'hidden' ? ' The object is outlined in the picture.' : ''
+    return [`${verdict}${lead} ${answerDetail(undefined, r.reference, r.verse_text, r.explanation)}`.trim()]
+  }
+  const answer = r.correct_index !== undefined ? q.options[r.correct_index] : undefined
+  const detail = answerDetail(answer, r.reference, r.verse_text, r.explanation)
+  return detail ? [verdict, detail] : [verdict]
+}

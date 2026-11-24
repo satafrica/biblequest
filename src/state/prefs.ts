@@ -14,10 +14,12 @@ export interface Prefs {
   speechRate: 'slow' | 'normal' | 'fast'
   /** voiceURI of the chosen narrator voice on this device; '' = automatic (most natural available). */
   narratorVoice: string
+  /** Use recorded narration (an AI-generated voice) in games that have it; otherwise the device voice. */
+  recordedVoice: boolean
   /** Which part of the Bible level games and the Arena draw from. */
   testament: 'all' | 'ot' | 'nt'
 }
-export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal', haptics: true, readAloudAuto: false, speechRate: 'normal', narratorVoice: '', testament: 'all' }
+export const DEFAULT_PREFS: Prefs = { theme: 'system', textSize: 'normal', highContrast: false, motion: 'system', timers: true, sound: 'normal', haptics: true, readAloudAuto: false, speechRate: 'normal', narratorVoice: '', recordedVoice: true, testament: 'all' }
 const KEY = 'bq.prefs.v1'
 
 export const loadPrefs = (): Prefs => ({ ...DEFAULT_PREFS, ...readJSON<Partial<Prefs>>(KEY, {}) })

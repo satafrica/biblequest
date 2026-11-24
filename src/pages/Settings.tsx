@@ -95,6 +95,10 @@ export default function Settings() {
             </>
           )}
         </div>
+        <div className="card flex items-start gap-3 p-5">
+          <input id="rv" type="checkbox" className="mt-1 h-5 w-5 accent-[rgb(var(--accent))]" checked={prefs.recordedVoice !== false} onChange={(e) => update({ recordedVoice: e.target.checked })} />
+          <label htmlFor="rv"><span className="font-semibold">Use the recorded voice where available</span><span className="block text-sm text-muted">Who Am I? has a recorded narrator (an AI-generated voice). When this is on, read-aloud in that game uses the recording; turn it off to use your device's voice everywhere. Other games use your device's voice.</span></label>
+        </div>
         <Segmented label="Motion" value={prefs.motion} onChange={(v) => update({ motion: v })} options={[{ v: 'system', label: 'Match device' }, { v: 'reduce', label: 'Reduce motion' }, { v: 'full', label: 'Full motion' }]} />
         <div className="card flex items-start gap-3 p-5">
           <input id="hc" type="checkbox" className="mt-1 h-5 w-5 accent-[rgb(var(--accent))]" checked={prefs.highContrast} onChange={(e) => update({ highContrast: e.target.checked })} />

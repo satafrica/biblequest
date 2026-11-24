@@ -93,6 +93,7 @@ let session = 0
 /** Speak text, replacing anything already being read. Returns false when unsupported. */
 export function speak(text: string, opts: { rate?: number; onEnd?: () => void } = {}): boolean {
   if (!speechSupported() || !text.trim()) return false
+  stopAudio()
   const synth = window.speechSynthesis
   synth.cancel()
   const chunks = speechChunks(spokenText(text))
@@ -120,5 +121,106 @@ export function speak(text: string, opts: { rate?: number; onEnd?: () => void } 
 }
 
 export function stopSpeaking() {
+  stopAudio()
   if (speechSupported()) { session++; window.speechSynthesis.cancel() }
+}
+
+// ---------------------------------------------------------------------------------------------
+// Recorded narration. Some games have studio-style recordings (an AI-generated voice) stored in
+// Supabase Storage. Each recording is one "part" of what is read aloud (for example the opening
+// clue, a later clue, or the options), named by a hash of the exact spoken text, so a recording
+// is only ever played for text it matches. If any part has no recording, or playback fails, the
+// device voice reads the text instead.
+// ---------------------------------------------------------------------------------------------
+
+/** Short stable id for spoken text (FNV-1a, 32 bit, plus the length). Exported for tests and the recording script. */
+export function narrationKey(text: string): string {
+  const s = spokenText(text)
+  let h = 0x811c9dc5
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0 }
+  return `${h.toString(16).padStart(8, '0')}${s.length.toString(36)}`
+}
+
+interface NarrationManifest { version: number; modes: Record<string, { voice: string; clips: string[] }> }
+const NARRATION_BASE = (() => {
+  const url = (import.meta.env?.VITE_SUPABASE_URL as string | undefined) ?? ''
+  return url ? `${url.replace(/\/$/, '')}/storage/v1/object/public/narration` : ''
+})()
+let manifest: { modes: Record<string, Set<string>> } | null = null
+let manifestLoading: Promise<void> | null = null
+let recordedEnabled = true
+
+/** Player setting: use recorded narration when it exists (default on). */
+export function setRecordedNarration(on: boolean) { recordedEnabled = on }
+
+/** Fetch the list of recordings once; safe to call repeatedly. Failure just means the device voice is used. */
+export function loadNarration(base = NARRATION_BASE): Promise<void> {
+  if (!base || typeof fetch !== 'function') return Promise.resolve()
+  if (!manifestLoading) {
+    manifestLoading = fetch(`${base}/manifest.json`, { cache: 'no-cache' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((m: NarrationManifest | null) => {
+        if (!m || typeof m !== 'object' || !m.modes) return
+        manifest = { modes: Object.fromEntries(Object.entries(m.modes).map(([k, v]) => [k, new Set(v.clips ?? [])])) }
+      })
+      .catch(() => { manifestLoading = null })
+  }
+  return manifestLoading ?? Promise.resolve()
+}
+
+/** True when every part has a recording for this game (and the player has not turned recordings off). */
+export function hasRecording(mode: string, parts: string[]): boolean {
+  const set = recordedEnabled && manifest ? manifest.modes[mode] : undefined
+  return Boolean(set && parts.length > 0 && parts.every((p) => set.has(narrationKey(p))))
+}
+
+/** Test hook: install a manifest directly. */
+export function _setNarrationManifest(modes: Record<string, string[]> | null) {
+  manifest = modes ? { modes: Object.fromEntries(Object.entries(modes).map(([k, v]) => [k, new Set(v)])) } : null
+}
+
+let audioEl: HTMLAudioElement | null = null
+let audioSession = 0
+function stopAudio() {
+  audioSession++
+  if (audioEl) { audioEl.onended = null; audioEl.onerror = null; audioEl.pause() }
+}
+
+/**
+ * Read a list of parts aloud: with the recorded voice when every part has a recording for this
+ * game, otherwise with the device voice (same words). Returns false when nothing can be read.
+ */
+export function speakParts(mode: string, parts: string[], opts: { rate?: number; onEnd?: () => void } = {}): boolean {
+  const clean = parts.filter((p) => p && p.trim())
+  if (!clean.length) return false
+  stopAudio()
+  if (speechSupported()) { session++; window.speechSynthesis.cancel() }
+  if (!hasRecording(mode, clean) || typeof Audio === 'undefined') return speak(clean.join(' '), opts)
+  const id = ++audioSession
+  if (!audioEl) audioEl = new Audio()
+  const el = audioEl
+  el.preload = 'auto'
+  const fallback = (from: number) => {
+    if (id !== audioSession) return
+    stopAudio()
+    if (!speak(clean.slice(from).join(' '), opts)) opts.onEnd?.()
+  }
+  const play = (i: number) => {
+    if (id !== audioSession) return
+    if (i >= clean.length) { opts.onEnd?.(); return }
+    el.onended = () => play(i + 1)
+    el.onerror = () => fallback(i)
+    el.src = `${NARRATION_BASE}/${mode}/${narrationKey(clean[i])}.mp3`
+    el.playbackRate = opts.rate ?? 1
+    ;(el as HTMLAudioElement & { preservesPitch?: boolean }).preservesPitch = true
+    const p = el.play()
+    if (p && typeof p.catch === 'function') p.catch(() => fallback(i))
+  }
+  play(0)
+  return true
+}
+
+/** True when read-aloud can work at all here (device voice or a recording). */
+export function readAloudAvailable(mode?: string, parts?: string[]): boolean {
+  return speechSupported() || Boolean(mode && parts && hasRecording(mode, parts))
 }

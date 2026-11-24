@@ -44,7 +44,7 @@ export function Privacy() {
         </Section>
         <Section title="On your device">
           <p>The app keeps a few items in your browser's local storage: your display settings, the round you are currently playing (so it can resume), and your sign-in session. The offline preview also keeps its practice progress there. Clearing your browser data removes them.</p>
-          <p>Read-aloud uses your device's built-in voice. On some devices the operating system or browser may use an online voice service to speak the text; only the question or verse text is spoken, never your account details.</p>
+          <p>Read-aloud uses your device's built-in voice. On some devices the operating system or browser may use an online voice service to speak the text; only the question or verse text is spoken, never your account details. Some games also have recorded narration (an AI-generated voice), which is downloaded from our storage like a picture; you can turn it off in Settings.</p>
         </Section>
         <Section title="Who can see it">
           <ul className="list-disc space-y-1 pl-5">

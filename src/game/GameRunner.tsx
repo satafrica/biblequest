@@ -9,7 +9,8 @@ import { AI_CREDIT, Gems, GemIcon, Illustration, Modal } from '../components/ui'
 import { playSound, unlockAudio } from '../lib/sounds'
 import { soundVolume, speechRate } from '../state/prefs'
 import { vibrate } from '../lib/haptics'
-import { speak, speechSupported, stopSpeaking } from '../lib/speech'
+import { readAloudAvailable, speakParts, stopSpeaking } from '../lib/speech'
+import { feedbackSpeechParts, questionSpeechParts } from './narration'
 import { appUrl, resultText, shareResult } from '../lib/share'
 import { BibleMap, type MarkerState } from './BibleMap'
 import { HiddenScene } from './HiddenScene'
@@ -137,29 +138,12 @@ export default function GameRunner() {
   }, [session, idx, results, finish, resetQuestion])
 
   // Read aloud: the question with its visible clues and numbered options, or the feedback.
-  const questionSpeech = useMemo(() => {
-    if (!q) return ''
-    const parts = [q.prompt]
-    if (q.game_mode === 'whoami' && q.clues) parts.push(...q.clues.slice(0, clues).map((c, i) => `Clue ${i + 1}. ${c}`))
-    if (q.game_mode === 'mystery' && q.extra?.clue) parts.unshift(`Case file: ${q.extra.case_title}. Stage ${q.extra.stage} of ${q.extra.stages}. ${q.extra.clue}`)
-    if (q.game_mode === 'sequence') parts.push('Events to put in order:', ...order.map((o, i) => `${i + 1}. ${o}.`))
-    else if (q.game_mode === 'hidden') parts.push('Tap the object in the picture.')
-    else parts.push(...q.options.map((o, i) => (eliminated.includes(i) ? '' : `Option ${i + 1}. ${o}.`)).filter(Boolean))
-    return parts.join(' ')
-  }, [q, clues, order, eliminated])
+  // Kept as parts so recorded narration can be matched part by part (see speakParts).
+  const questionParts = useMemo(() => questionSpeechParts(q, clues, order, eliminated), [q, clues, order, eliminated])
   const last0 = results[results.length - 1]
-  const feedbackSpeech = useMemo(() => {
-    if (!q || !last0) return ''
-    const parts = [last0.correct ? 'Correct.' : 'Not quite.']
-    if (!last0.correct && q.game_mode === 'hidden') parts.push('The object is outlined in the picture.')
-    else if (!last0.correct && q.game_mode !== 'sequence' && last0.correct_index !== undefined) parts.push(`The answer is ${q.options[last0.correct_index]}.`)
-    if (last0.reference) parts.push(`${last0.reference}.`)
-    if (last0.verse_text) parts.push(last0.verse_text.replace(/\n/g, '. ').replace(/\u2026/g, ''))
-    if (last0.explanation) parts.push(last0.explanation)
-    return parts.join(' ')
-  }, [q, last0])
+  const feedbackParts = useMemo(() => feedbackSpeechParts(q, last0), [q, last0])
   useEffect(() => {
-    if (phase === 'question' && prefs.readAloudAuto && q) speak(questionSpeech, { rate: speechRate(prefs) })
+    if (phase === 'question' && prefs.readAloudAuto && q) speakParts(q.game_mode, questionParts, { rate: speechRate(prefs) })
     // only when a new question appears, not on every clue change
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, q?.id, prefs.readAloudAuto])
@@ -289,7 +273,7 @@ export default function GameRunner() {
                 <li key={i} className="card flex gap-3 px-4 py-3 fade-up"><span className="font-display text-accent font-semibold">{i + 1}</span><span>{c}</span></li>
               ))}
               {phase === 'question' && clues < q.clues.length && (
-                <li><button className="btn-secondary btn-sm" onClick={() => setClues((c) => c + 1)}>Reveal next clue <span className="text-muted">(−20 points)</span></button></li>
+                <li><button className="btn-secondary btn-sm" onClick={() => { const n = clues + 1; setClues(n); if (prefs.readAloudAuto && q.clues?.[n - 1]) speakParts(q.game_mode, [`Clue ${n}. ${q.clues[n - 1]}`], { rate: speechRate(prefs) }) }}>Reveal next clue <span className="text-muted">(−20 points)</span></button></li>
               )}
             </ol>
           )}
@@ -327,7 +311,7 @@ export default function GameRunner() {
               <PowerButton label="Hint" Icon={Lamp} qty={owns('hint')} onUse={() => power('hint')} disabled={Boolean(hint)} />
               {q.game_mode !== 'sequence' && q.game_mode !== 'hidden' && <PowerButton label="Remove two" Icon={Scissors} qty={owns('eliminate_two')} onUse={() => power('eliminate_two')} disabled={eliminated.length > 0} />}
               {timed && <PowerButton label="+15 seconds" Icon={Hourglass} qty={owns('extra_time')} onUse={() => power('extra_time')} />}
-              <ReadAloud text={questionSpeech} label="Read question aloud" />
+              <ReadAloud mode={q.game_mode} parts={questionParts} label="Read question aloud" />
             </div>
           )}
 
@@ -353,7 +337,7 @@ export default function GameRunner() {
                   <span className="text-sm text-muted">Gems for this question were already earned earlier.</span>
                 ) : null}
                 {last.points > 0 && <span className="text-sm text-muted">+{last.points} points</span>}
-                <ReadAloud text={feedbackSpeech} label="Read aloud" />
+                <ReadAloud mode={q.game_mode} parts={feedbackParts} label="Read aloud" />
                 <button className="btn-primary ml-auto" onClick={next} disabled={busy}>{idx + 1 >= total ? 'See results' : 'Next question'}</button>
               </div>
               {q.game_mode === 'whoami' && q.clues && last.clue_refs && last.clue_refs.length > 0 && (
@@ -382,14 +366,14 @@ export default function GameRunner() {
   )
 }
 
-function ReadAloud({ text, label }: { text: string; label: string }) {
+function ReadAloud({ mode, parts, label }: { mode: string; parts: string[]; label: string }) {
   const { prefs } = useApp()
   const [on, setOn] = useState(false)
   useEffect(() => () => { if (on) stopSpeaking() }, [on])
-  if (!speechSupported() || !text) return null
+  if (!parts.length || !readAloudAvailable(mode, parts)) return null
   return (
     <button type="button" className="btn-ghost btn-sm" aria-pressed={on}
-      onClick={() => { if (on) { stopSpeaking(); setOn(false) } else { setOn(speak(text, { rate: speechRate(prefs), onEnd: () => setOn(false) })) } }}>
+      onClick={() => { if (on) { stopSpeaking(); setOn(false) } else { setOn(speakParts(mode, parts, { rate: speechRate(prefs), onEnd: () => setOn(false) })) } }}>
       {on ? <Square className="h-4 w-4" aria-hidden="true" /> : <Volume2 className="h-4 w-4" aria-hidden="true" />}{on ? 'Stop reading' : label}
     </button>
   )
@@ -572,7 +556,7 @@ function ChapterReading({ reading }: { reading: CluePassage[] }) {
           {p.text}
         </blockquote>
       ))}
-      <div className="mt-3"><ReadAloud text={speech} label="Read the passage aloud" /></div>
+      <div className="mt-3"><ReadAloud mode="passage" parts={speech ? [speech] : []} label="Read the passage aloud" /></div>
     </section>
   )
 }
@@ -617,7 +601,7 @@ function CluePassages({ clues, refs, kind = 'clue' }: { clues: string[]; refs: C
             </li>
           ))}
         </ol>
-        <div className="mt-3"><ReadAloud text={speech} label="Read these passages aloud" /></div>
+        <div className="mt-3"><ReadAloud mode="passage" parts={speech ? [speech] : []} label="Read these passages aloud" /></div>
       </div>
     </details>
   )
