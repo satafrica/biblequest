@@ -311,3 +311,49 @@ Notes:
 - Cleanup: 17 test guests deleted by id. Two empty guests from my sign-up checks remain (b237fc41-5369-469c-ada8-44f6407cbf76, 22d4b068-a42c-468b-8ebd-45895f66816c, both with no progress); they do not meet the browser-tag deletion rule, so they were left. 19 accounts.
 - live-watch baseline.json updated to this build.
 - Not tested on a physical phone.
+
+## 24 Nov 2026 — Recorded voices for seven games (draft, not published)
+
+- **Tested (draft site)**: read-aloud in seven more games plays recorded AI narration (Gemini text-to-speech), one voice per game, as the owner asked ("Use that voice plan for the other games"):
+  - Picture Bible Quiz: Kore (229 questions, 670 clips)
+  - Hidden Object: Vindemiatrix (156, 290)
+  - Bible Mystery: Charon (105, 317)
+  - Wisdom Decisions: Gacrux (103, 311)
+  - Parables Explorer: Algieba (86, 260)
+  - Geography Explorer: Kore (77, 194)
+  - Sequence: Gacrux (63, 428)
+  - 2,470 clips in total, in the `narration` bucket at `<mode>/<key>.mp3`.
+- The new voices are listed in `manifest-next.json`. **The live `manifest.json` is unchanged**, so mybiblegem.com still uses the device voice for these games. A draft build with `VITE_NARRATION_MANIFEST=manifest-next.json` reads the new list. Publishing runs `node scripts/narration/upload_games.mjs --promote`, which copies it to `manifest.json`.
+- Read-aloud changes (all games, device voice too):
+  - Sequence reads each event as its own sentence and no longer reads event numbers.
+  - Hidden Object and Sequence feedback is two parts: the verdict, then the detail. A wrong Hidden Object tap says "Not quite. The object is outlined in the picture."
+  - Chapter ranges such as "Genesis 12 – Genesis 22" are read as "Genesis 12 to Genesis 22".
+- Checks:
+  - Coverage audit (`scripts/narration/g_audit.mjs`): for all 829 published questions, every part of the question, the options and both feedback versions has a clip.
+  - Splitting matched every part word by word. The following were re-recorded singly and re-checked:
+    - 98 failed parts
+    - 18 parts found by a length check
+    - 34 parts found by speech-to-text
+    - 14 bad option lists found by the option check (561 option lists checked)
+  - Full speech-to-text check of all 1,896 other clips. Most flags were mishearings of names and numbers. Seven real defects were re-recorded:
+    - 2 clips with text from a neighbouring part at the start or end
+    - 1 answer with a repeated phrase
+    - 1 Sequence verse list that read one verse three times
+    - 1 clip cut short ("Peter's Denial")
+    - 2 clips with a stray word or repeat at the end
+  - Shortened verses: 33 Sequence clips quote verses that the source text shortens with "…". In about 11 of them, the voice had added the missing word itself (for example "So he died"). All 33 were re-recorded with an audible "…" pause, so they now read only the stored text.
+- Content note: 44 published verses (all seven games) end mid-sentence in the source data. They are read exactly as stored. They were not changed, because approved content was left untouched.
+- Tests:
+  - vitest: 104 passed.
+  - Local browser suite: 142 passed, 16 skipped.
+  - On the draft https://6b0530a4b038b9bfadf43046--biblequest-game.netlify.app:
+    - New test "each other game reads its question and feedback in its recorded voice": passed on Pixel 7 and desktop. The desktop run needed a test fix: the Hidden Object tap now scrolls the picture into view and waits for the answer.
+    - Scripture Quiz recorded test: passed on desktop.
+  - Clips corrected after the draft tests were re-uploaded. Three of them were checked byte-for-byte against the public bucket.
+- Cleanup:
+  - 4 test guests deleted by id.
+  - Temporary storage policies dropped.
+  - The temporary uploader guest (60554f9d-ae83-4fb7-ad8e-90a7624738a3) is older than one hour and no longer meets the deletion rule, so it was left. It has no progress.
+  - One guest created at 05:22 UTC from Firefox on Android is a real visitor and was not touched.
+  - 21 accounts.
+- Not tested on a physical phone.
