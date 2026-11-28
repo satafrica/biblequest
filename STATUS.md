@@ -388,3 +388,4 @@ Notes:
 - Opening an unfinished level directly asks "Continue where I left off" or "Start over". Gems are still awarded only when a round is finished (server).
 - Tests: tests/e2e/resume.spec.ts. Local: 104 unit + 154 e2e passed. Draft 6b0a470482e344d17c31fad4: resume + share specs 8/8 passed against the real database; 2 test guests removed (24 accounts).
 - Not yet published to mybiblegem.com.
+- Published 28 Nov 2026 03:17 UTC (27 Nov evening, New York) on user request: deploy 6b0a470482e344d17c31fad4 restored to mybiblegem.com; all 99 files match by md5. Live tests 32/32 (share, recorded narration, rewrites, guest save prompt, remove-two placement, resume; desktop + Pixel 7). 26 test guests removed; 24 accounts, owner present, 1,323 published questions. Live-watch baseline updated.

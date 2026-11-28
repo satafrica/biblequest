@@ -1,10 +1,10 @@
 {
-  "assets": "assets/Admin-1r1tz0MD.js assets/cloud-DO_u-fdO.js assets/index-BdM3H_Do.js assets/index-DVfKBf0W.css assets/supabase-BuC6IxGz.js",
+  "assets": "assets/Admin-BdOWv3Kp.js assets/cloud-BN7H1tzq.js assets/index-C3jkA2IB.css assets/index-Ubd-WIGH.js assets/supabase-CYVBsQGr.js",
   "questions": {
     "n": 1323,
     "pub": 1323,
     "fp": "430cd8759c2c0665dd927ea81a1547e0"
   },
-  "deploy": "6b0a336c0d0225ded2bbb712",
+  "deploy": "6b0a470482e344d17c31fad4",
   "set": "2026-11-27"
 }
