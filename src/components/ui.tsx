@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import { useEffect, useId, useRef, type ReactNode } from 'react'
 import {
   Anchor, Award, Bird, Coins, Crown, Fish, Flame, Gem, Hourglass, Lamp, Leaf, Mountain, Scissors, Scroll, Shield, Sparkles,
@@ -113,16 +114,18 @@ export function Modal({ open, title, onClose, children }: { open: boolean; title
     return () => { document.removeEventListener('keydown', onKey); prev?.focus() }
   }, [open, onClose])
   if (!open) return null
-  return (
+  // Rendered at the end of the page so it is never hidden behind, or coloured by, the section it was opened from.
+  return createPortal(
     <div className="fixed inset-0 z-50 grid place-items-center bg-black/55 p-4" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose() }}>
-      <div ref={ref} role="dialog" aria-modal="true" aria-labelledby={id} className="card w-full max-w-md bg-raised p-6 fade-up">
+      <div ref={ref} role="dialog" aria-modal="true" aria-labelledby={id} className="card max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto bg-raised p-6 text-ink fade-up">
         <div className="mb-4 flex items-start justify-between gap-4">
           <h2 id={id} className="text-xl font-semibold">{title}</h2>
           <button className="btn-ghost btn-sm -mr-2 -mt-1" onClick={onClose} aria-label="Close dialog"><X className="h-5 w-5" /></button>
         </div>
         {children}
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }
 

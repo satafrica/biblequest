@@ -373,3 +373,10 @@ Notes:
 - Store item `eliminate_two` renamed from "Winnowing Fan" to "Remove Two Wrong Answers" in source; live DB rename is migration 20261124000013 (applied to live at publish).
 - Tests: vitest 104/104; local Playwright e2e 141 passed, 3 hidden-picture tests fixed (they tapped without scrolling) and re-run 26/26; new remove-two.spec.ts passes desktop + Pixel 7. Draft 6b058221f0183fada12954b1 (live backend): placement check 2/2. 2 test guests removed (21 accounts).
 - Published 24 Nov 2026 12:31 UTC on user request: deploy 6b058221f0183fada12954b1 restored to mybiblegem.com; all 9 JS/CSS/HTML files match by md5; store item renamed in live DB. Live tests 24/24 (recorded narration, rewrites, guest save prompt, remove-two placement; desktop + Pixel 7). 22 test guests removed (21 accounts, owner present). Live-watch baseline updated.
+
+## 27 Nov 2026 — Easy sharing (draft, not yet published)
+- Share window (src/components/ShareSheet.tsx): phone share menu when available, Copy link, WhatsApp, Text message, Email, Facebook, and a QR code (with download) for church screens and bulletins. Opened from a share icon in the header (every page) and "Share with a friend" on the home page.
+- Invite links: "Send invite link" next to the friend code, group invite code and challenge code. Links open https://mybiblegem.com/#/community?friend=CODE / ?group=CODE / #/community/challenge/CODE with the code filled in; the invite is kept on the device until used, so it survives creating a free account.
+- Link previews: Open Graph and Twitter tags in index.html with public/og-image.jpg (1200×630, made by scripts/share/make_og.mjs from the Jerusalem illustration).
+- Dialogs now render at the end of the page (portal) and scroll if taller than the screen; this fixed the share window being hidden behind the home hero on phones.
+- Tests: vitest 104/104; local Playwright 152/152 (new tests/e2e/share.spec.ts). Draft 6b0a336c0d0225ded2bbb712 (live backend): share.spec 6/6 desktop + Pixel 7; og-image.jpg served as image/jpeg. No test guests created. Accounts: 24 (3 new real visitors since 24 Nov).

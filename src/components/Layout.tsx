@@ -1,4 +1,6 @@
 import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
+import { ShareButton } from './ShareSheet'
+import { APP_SHARE } from '../lib/share'
 import { useEffect } from 'react'
 import { Compass, Gift, House, Map, UserRound, WifiOff, X } from 'lucide-react'
 import { stays, useApp } from '../state/AppContext'
@@ -63,6 +65,7 @@ export function Layout() {
             ))}
           </nav>
           <div className="ml-auto flex items-center gap-2">
+            <ShareButton target={APP_SHARE} iconOnly className="btn-ghost btn-sm px-2.5" />
             <Link to="/profile#wallet" className="chip border-accent/60 bg-raised py-1.5 text-sm" aria-label={`Gem balance: ${wallet.balance} gems. Open wallet`}>
               <Gems n={wallet.balance} />
             </Link>

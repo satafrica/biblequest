@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { ShareButton } from '../components/ShareSheet'
+import { APP_SHARE } from '../lib/share'
 import { ChevronRight, Lock } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { MODES } from '../game/modes'
@@ -55,6 +57,7 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to={startTo} className="btn-primary px-7 text-base">Start playing</Link>
             <Link to="/play" className="btn border border-ivory/40 text-ivory hover:bg-ivory/10">Browse all games</Link>
+            <ShareButton target={APP_SHARE} label="Share with a friend" heading="Share MyBibleGem" className="btn border border-ivory/40 text-ivory hover:bg-ivory/10" />
           </div>
           {hero && <p className="mt-6 text-xs text-ivory/60">{AI_CREDIT} {hero.interpretation_note}</p>}
         </div>

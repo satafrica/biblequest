@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useState, type FormEvent, type ReactNode } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { Copy, Flag, Swords, UserPlus, Users } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { keepSeparators } from '../lib/notices'
 import { Avatar, Modal, PageHeader } from '../components/ui'
+import { ShareButton } from '../components/ShareSheet'
+import { inviteUrl } from '../lib/share'
 import { DIFFICULTY_LABELS, friendlyError, type ChallengeDetail, type ChallengeMode, type ChallengeSummary, type Community as CommunityApi, type Friend, type GroupDetail, type GroupSummary } from '../engine'
 
 const CHALLENGE_MODES: { v: ChallengeMode; label: string }[] = [
@@ -71,19 +73,51 @@ function ReportButton({ api, type, id, name }: { api: CommunityApi; type: 'profi
   )
 }
 
+type Invite = { kind: 'friend' | 'group'; code: string }
+const INVITE_KEY = 'mbg.pendingInvite'
+/** Reads an invite link (?friend=CODE or ?group=CODE). It is kept on this device until used, so it survives signing up. */
+function useInvite(): [Invite | null, () => void] {
+  const [params] = useSearchParams()
+  const [invite, setInvite] = useState<Invite | null>(() => {
+    const clean = (v: string | null) => (v ?? '').replace(/[^a-z0-9]/gi, '').toUpperCase().slice(0, 10)
+    const f = clean(params.get('friend')), g = clean(params.get('group'))
+    const fromLink: Invite | null = g ? { kind: 'group', code: g } : f ? { kind: 'friend', code: f } : null
+    try {
+      if (fromLink) { localStorage.setItem(INVITE_KEY, JSON.stringify(fromLink)); return fromLink }
+      const saved = JSON.parse(localStorage.getItem(INVITE_KEY) ?? 'null') as Invite | null
+      return saved && (saved.kind === 'friend' || saved.kind === 'group') && typeof saved.code === 'string' ? saved : null
+    } catch { return fromLink }
+  })
+  const clear = useCallback(() => { try { localStorage.removeItem(INVITE_KEY) } catch { /* ignore */ } setInvite(null) }, [])
+  return [invite, clear]
+}
+
+function InviteNote({ invite, ready }: { invite: Invite; ready: boolean }) {
+  const what = invite.kind === 'group' ? 'join a group' : 'be friends'
+  return (
+    <p className="card mb-6 border-accent bg-accent/10 p-4 text-sm" role="status" data-testid="invite-note">
+      <strong>You were invited to {what} on MyBibleGem</strong> (code <span className="font-mono tracking-widest">{invite.code}</span>).{' '}
+      {ready ? (invite.kind === 'group' ? 'The code is filled in below. Press Join.' : 'The code is filled in below. Press Send request.')
+        : 'Create a free account first. This invite is saved on this device and will be ready when you come back to Community.'}
+    </p>
+  )
+}
+
 export function Community() {
   const { api, gate } = useCommunity()
+  const [invite, clearInvite] = useInvite()
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 md:py-12">
       <PageHeader eyebrow="Community" title="Friends, groups and challenges">
         Add friends with a private code, start a group for your church or study circle, and send challenge matches where everyone answers the same ten questions. There is no chat or direct messaging; only display names and scores are shared.
       </PageHeader>
-      {gate ?? <CommunityHome api={api!} />}
+      {invite && <InviteNote invite={invite} ready={!gate} />}
+      {gate ?? <CommunityHome api={api!} invite={invite} onInviteUsed={clearInvite} />}
     </div>
   )
 }
 
-function CommunityHome({ api }: { api: CommunityApi }) {
+function CommunityHome({ api, invite, onInviteUsed }: { api: CommunityApi; invite: Invite | null; onInviteUsed: () => void }) {
   const { toast } = useApp()
   const navigate = useNavigate()
   const [code, setCode] = useState('')
@@ -117,10 +151,13 @@ function CommunityHome({ api }: { api: CommunityApi }) {
         <h2 id="friends-h" className="flex items-center gap-2 text-xl font-semibold"><UserPlus className="h-5 w-5" aria-hidden="true" />Friends</h2>
         <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
           <span>Your friend code:</span><CopyCode code={code} label="Friend code" />
+          <ShareButton label="Send invite link" heading="Invite a friend" qrName="mybiblegem-friend-invite"
+            target={{ title: 'Be my friend on MyBibleGem', text: `Add me as a friend on MyBibleGem, the free Bible games site. My friend code is ${code}.`, url: inviteUrl.friend(code) }} />
           <span className="text-muted">Share it only with people you know.</span>
         </div>
-        <CodeForm id="friend-code" label="Add a friend by code" button="Send request" onSubmit={(c) => act(async () => {
+        <CodeForm id="friend-code" label="Add a friend by code" button="Send request" initial={invite?.kind === 'friend' ? invite.code : ''} onSubmit={(c) => act(async () => {
           const r = await api.sendFriendRequest(c)
+          if (invite?.kind === 'friend') onInviteUsed()
           toast({ title: r === 'accepted' ? 'You are now friends' : r === 'already_friends' ? 'Already friends' : r === 'pending' ? 'Request already sent' : 'Friend request sent', tone: 'info' })
         })} />
         {incoming.length > 0 && (
@@ -161,7 +198,7 @@ function CommunityHome({ api }: { api: CommunityApi }) {
             </Link></li>))}</ul>
         )}
         <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <CodeForm id="group-code" label="Join a group by invite code" button="Join" onSubmit={(c) => act(async () => { const id = await api.joinGroup(c); navigate(`/community/group/${id}`) })} />
+          <CodeForm id="group-code" label="Join a group by invite code" button="Join" initial={invite?.kind === 'group' ? invite.code : ''} onSubmit={(c) => act(async () => { const id = await api.joinGroup(c); if (invite?.kind === 'group') onInviteUsed(); navigate(`/community/group/${id}`) })} />
           <CreateGroup onCreate={(n, d) => act(async () => { const r = await api.createGroup(n, d); navigate(`/community/group/${r.id}`) })} />
         </div>
       </section>
@@ -180,8 +217,8 @@ function CommunityHome({ api }: { api: CommunityApi }) {
   )
 }
 
-function CodeForm({ id, label, button, onSubmit }: { id: string; label: string; button: string; onSubmit: (code: string) => Promise<unknown> }) {
-  const [v, setV] = useState('')
+function CodeForm({ id, label, button, onSubmit, initial = '' }: { id: string; label: string; button: string; onSubmit: (code: string) => Promise<unknown>; initial?: string }) {
+  const [v, setV] = useState(initial)
   const [busy, setBusy] = useState(false)
   const submit = async (e: FormEvent) => {
     e.preventDefault(); const c = v.trim().toUpperCase(); if (!c) return
@@ -274,6 +311,8 @@ function GroupView({ api, id }: { api: CommunityApi; id: string }) {
       <PageHeader eyebrow="Group" title={g.name}>{g.description}</PageHeader>
       <div className="flex flex-wrap items-center gap-3 text-sm">
         <span>Invite code:</span><CopyCode code={g.invite_code} label="Invite code" />
+        <ShareButton label="Send invite link" heading={`Invite people to ${g.name}`} qrName="mybiblegem-group-invite"
+          target={{ title: `Join ${g.name} on MyBibleGem`, text: `Join our group "${g.name}" on MyBibleGem, the free Bible games site. Invite code: ${g.invite_code}.`, url: inviteUrl.group(g.invite_code) }} />
         <span className="text-muted">Anyone with this code can join.</span>
         <span className="flex-1" />
         {g.is_owner && <button type="button" className="btn-secondary btn-sm" onClick={() => setEditing(true)}>Edit group</button>}
@@ -352,6 +391,8 @@ export function ChallengePage() {
             </PageHeader>
             <div className="card flex flex-wrap items-center gap-4 p-5">
               <span className="text-sm">Share code:</span><CopyCode code={c.code} label="Challenge code" />
+              {!c.expired && <ShareButton label="Send invite link" heading="Invite people to this match" qrName="mybiblegem-challenge"
+                target={{ title: 'MyBibleGem challenge match', text: `Can you beat my score? Play the same ${c.questions} Bible questions on MyBibleGem. Match code: ${c.code}.`, url: inviteUrl.challenge(c.code) }} />}
               <span className="flex-1" />
               {!c.expired && <Link to={`/game/${encodeURIComponent(`challenge:${c.code}`)}`} className="btn-primary">{c.played ? 'Play again (practice)' : 'Play now'}</Link>}
             </div>
