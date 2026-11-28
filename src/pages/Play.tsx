@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ResumeCard } from '../game/activeRound'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { Check, Lock, Sparkles } from 'lucide-react'
 import { useApp } from '../state/AppContext'
@@ -18,6 +19,7 @@ export function PlayHub() {
     <div className="mx-auto max-w-6xl px-4 py-8 md:py-12">
       <PageHeader eyebrow="Play" title="Choose a game">Guests can play every live game. Each answer shows its Scripture reference and a short explanation.</PageHeader>
       <TestamentPicker id="hub-testament" note={<>Applies to the level games (Picture Quiz, Who Am I?, Scripture, Sequencing, Wisdom, Geography, Hidden Object), the Challenge Arena and the Master Challenge. The Daily Challenge uses the whole Bible; <Link to="/adventures" className="link">Adventures</Link>, <Link to="/mystery" className="link">case files</Link> and <Link to="/parables" className="link">parables</Link> are grouped by Testament or Gospel.</>} />
+      <ResumeCard className="mb-6" />
       {stats && stats.review_count > 0 && <div className="mb-6 max-w-md"><ReviewCard stats={stats} /></div>}
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {MODES.map((m) => m.live ? (

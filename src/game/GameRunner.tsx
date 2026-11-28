@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { ArrowDown, ArrowUp, BookOpen, Check, Flag, Hourglass, Lamp, Scissors, Share2, Square, Timer, Volume2, X } from 'lucide-react'
 import { useApp } from '../state/AppContext'
 import { friendlyError, DIFFICULTY_LABELS, type AnswerResult, type CluePassage, type CompleteResult, type PublicQuestion, type SessionStart } from '../engine'
@@ -15,15 +15,18 @@ import { appUrl, resultText, shareResult } from '../lib/share'
 import { BibleMap, type MarkerState } from './BibleMap'
 import { HiddenScene } from './HiddenScene'
 import { usePurchase } from '../pages/Store'
+import { ACTIVE_KEY, isResumable, type SavedRound } from './activeRound'
 
-const ACTIVE_KEY = 'bq.active.v1'
 const ARENA_SECONDS = 20
 
-interface Saved { levelKey: string; session: SessionStart; idx: number; results: (AnswerResult & { qid: string })[]; savedAt: number; completed?: boolean }
+type Saved = SavedRound
 
 export default function GameRunner() {
   const { levelKey: raw = '' } = useParams()
   const levelKey = decodeURIComponent(raw)
+  const [params] = useSearchParams()
+  const choice = params.get('resume') // 'continue' | 'restart' from the home or Play page card
+  const [pending, setPending] = useState<Saved | null>(null)
   const app = useApp()
   const { backend, catalog, prefs, toast, setBalance, refresh, owns, online, wallet } = app
   const { buy, busy: buying } = usePurchase()
@@ -37,7 +40,7 @@ export default function GameRunner() {
   const finishRef = useRef<((s: SessionStart, r: Saved['results']) => void) | null>(null)
   const startedFor = useRef<string | null>(null)
 
-  const [phase, setPhase] = useState<'loading' | 'intro' | 'question' | 'feedback' | 'summary' | 'error'>('loading')
+  const [phase, setPhase] = useState<'loading' | 'resume' | 'intro' | 'question' | 'feedback' | 'summary' | 'error'>('loading')
   const [error, setError] = useState<string | null>(null)
   const [session, setSession] = useState<SessionStart | null>(null)
   const [idx, setIdx] = useState(0)
@@ -68,11 +71,16 @@ export default function GameRunner() {
     setPhase('loading'); setError(null); setSummary(null)
     try {
       const saved = readJSON<Saved | null>(ACTIVE_KEY, null)
-      if (resume && saved && saved.levelKey === levelKey && !saved.completed && Date.now() - saved.savedAt < 6 * 3600_000) {
+      // All questions answered but the round was not saved as finished: finish it now.
+      if (resume && saved && saved.levelKey === levelKey && !saved.completed && saved.session?.questions?.length && saved.idx >= saved.session.questions.length) {
+        setSession(saved.session); setResults(saved.results); setIdx(saved.idx)
+        setPhase('summary'); finishRef.current?.(saved.session, saved.results); return
+      }
+      if (resume && saved && saved.levelKey === levelKey && isResumable(saved) && choice !== 'restart') {
+        // Ask first if they had answered something, unless they already chose Continue on the home or Play page.
+        if (saved.results.length > 0 && choice !== 'continue') { setPending(saved); setPhase('resume'); return }
         setSession(saved.session); setResults(saved.results); setIdx(saved.idx); resetQuestion(saved.session.questions[saved.idx])
-        if (saved.idx >= saved.session.questions.length) { setPhase('summary'); finishRef.current?.(saved.session, saved.results); return }
         setPhase('question')
-        if (saved.results.length) toast({ title: 'Round resumed', body: 'We picked up where you left off.', tone: 'info' })
         return
       }
       if (backend.kind === 'cloud' && !navigator.onLine) throw new Error('offline')
@@ -83,7 +91,7 @@ export default function GameRunner() {
     } catch (e) {
       setError(friendlyError(e)); setPhase('error')
     }
-  }, [backend, levelKey, resetQuestion, persist, chapter, toast])
+  }, [backend, levelKey, resetQuestion, persist, chapter, choice])
 
   useEffect(() => {
     if (startedFor.current === levelKey) return
@@ -190,6 +198,31 @@ export default function GameRunner() {
   const roundGems = results.reduce((s, r) => s + r.gems_awarded, 0) + (summary?.bonuses.reduce((s, b) => s + b.gems, 0) ?? 0)
   const points = results.reduce((s, r) => s + r.points, 0)
 
+  const continueSaved = () => {
+    if (!pending) return
+    setSession(pending.session); setResults(pending.results); setIdx(pending.idx); resetQuestion(pending.session.questions[pending.idx])
+    setPending(null); setPhase('question')
+  }
+  const startOver = () => { setPending(null); persist(null); start(false) }
+
+  if (phase === 'resume' && pending) {
+    const total = pending.session.questions.length
+    const right = pending.results.filter((x) => x.correct).length
+    return (
+      <div className="mx-auto max-w-xl px-4 py-12" data-testid="resume-choice">
+        <div className="card p-6 md:p-8">
+          <p className="eyebrow">Welcome back</p>
+          <h1 className="mt-1 text-2xl font-semibold">{chapter ? chapter.title : describeLevelKey(levelKey)}</h1>
+          <p className="mt-3 text-muted">You stopped at question {pending.idx + 1} of {total}. So far you have {right} of {pending.results.length} correct.</p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <button type="button" className="btn-primary" onClick={continueSaved}>Continue where I left off</button>
+            <button type="button" className="btn-secondary" onClick={startOver}>Start over</button>
+          </div>
+          <p className="mt-4 text-sm text-muted">Start over begins this round again at question 1. Gems are added when you finish a round.</p>
+        </div>
+      </div>
+    )
+  }
   if (phase === 'loading') return <div className="grid min-h-[50vh] place-items-center" role="status"><span className="sr-only">Loading round</span><div className="loader" /></div>
   if (phase === 'error') return (
     <div className="mx-auto max-w-lg px-4 py-16 text-center">

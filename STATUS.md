@@ -381,3 +381,10 @@ Notes:
 - Dialogs now render at the end of the page (portal) and scroll if taller than the screen; this fixed the share window being hidden behind the home hero on phones.
 - Tests: vitest 104/104; local Playwright 152/152 (new tests/e2e/share.spec.ts). Draft 6b0a336c0d0225ded2bbb712 (live backend): share.spec 6/6 desktop + Pixel 7; og-image.jpg served as image/jpeg. No test guests created. Accounts: 24 (3 new real visitors since 24 Nov).
 - Published 28 Nov 2026 02:05 UTC (27 Nov evening, New York) on user request: deploy 6b0a336c0d0225ded2bbb712 restored to mybiblegem.com; all 12 JS/CSS/HTML/og-image files match by md5. Live tests 30/30 (share, recorded narration, rewrites, guest save prompt, remove-two placement; desktop + Pixel 7). 22 test guests removed; 24 accounts, owner present, 1,323 published questions. Live-watch baseline updated.
+
+## 2026-11-27 — Continue where I left off / Start over (draft, not published)
+- Unfinished rounds (at least 1 answer) are kept for 3 days (daily rounds: same UTC day only).
+- Home: main button becomes "Continue where I left off" and a "Continue where you left off" card shows the level, question N of M and score, with Continue / Start over. Same card on the Play page.
+- Opening an unfinished level directly asks "Continue where I left off" or "Start over". Gems are still awarded only when a round is finished (server).
+- Tests: tests/e2e/resume.spec.ts. Local: 104 unit + 154 e2e passed. Draft 6b0a470482e344d17c31fad4: resume + share specs 8/8 passed against the real database; 2 test guests removed (24 accounts).
+- Not yet published to mybiblegem.com.

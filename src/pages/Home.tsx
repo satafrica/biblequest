@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ShareButton } from '../components/ShareSheet'
+import { ResumeCard, readActiveRound, roundLink } from '../game/activeRound'
 import { APP_SHARE } from '../lib/share'
 import { ChevronRight, Lock } from 'lucide-react'
 import { useApp } from '../state/AppContext'
@@ -35,6 +36,7 @@ export default function Home() {
     }
     return null
   })()
+  const active = readActiveRound()
   const startTestament = prefs.testament ?? 'all'
   const startDiff = recommendDifficulty(progress, 'picture')
   const startTo = `/game/${encodeURIComponent(levelKey('picture', startDiff, nextLevel(progress, countsFor(catalog, startTestament), 'picture', startDiff, startTestament), startTestament))}`
@@ -55,7 +57,9 @@ export default function Home() {
             Bible games for adults: picture quizzes, character riddles, verse challenges and journeys through the whole story — every question tied to a Scripture reference.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to={startTo} className="btn-primary px-7 text-base">Start playing</Link>
+            {active
+              ? <Link to={roundLink(active.levelKey, 'continue')} className="btn-primary px-7 text-base">Continue where I left off</Link>
+              : <Link to={startTo} className="btn-primary px-7 text-base">Start playing</Link>}
             <Link to="/play" className="btn border border-ivory/40 text-ivory hover:bg-ivory/10">Browse all games</Link>
             <ShareButton target={APP_SHARE} label="Share with a friend" heading="Share MyBibleGem" className="btn border border-ivory/40 text-ivory hover:bg-ivory/10" />
           </div>
@@ -88,6 +92,8 @@ export default function Home() {
               : <Link to="/profile" className="mt-1 inline-block text-xs link">Profile and settings</Link>}
           </div>
         </section>
+
+        <ResumeCard className="mt-4" />
 
         <section aria-label="Streak and review" className="mt-4 grid gap-3 md:grid-cols-2">
           <StreakCard stats={stats} />
