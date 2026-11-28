@@ -394,3 +394,4 @@ Notes:
 - User asked to remove the small caption under the home hero buttons ("AI-generated illustration… Second Temple-era Jerusalem…").
 - AI credit kept: desktop footer, About page, and under every in-game picture.
 - Local: 156 e2e (1 new check, fixed for phones). Draft 6b0a503b5c098d75d37efb17: credits + resume 10/10. 6 test guests removed (24 accounts).
+- Published 28 Nov 2026 04:20 UTC (27 Nov 11:20 PM, New York) on user request: deploy 6b0a503b5c098d75d37efb17 restored to mybiblegem.com; all 99 files match by md5. Live tests 40/40 (credits, share, recorded narration, rewrites, guest save prompt, remove-two placement, resume; desktop + Pixel 7). 28 test guests removed; 24 accounts, owner present, 1,323 published questions. Live-watch baseline updated.
