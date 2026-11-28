@@ -26,3 +26,10 @@ test('About page credits Perplexity for the illustrations', async ({ page }) => 
   await expect(p.getByRole('link', { name: 'Perplexity' })).toHaveAttribute('href', 'https://www.perplexity.ai/')
   await expect(page.getByText(/should be confirmed by the owner/)).toHaveCount(0)
 })
+
+test('home hero has no picture caption; the footer keeps the AI credit', async ({ page }, info) => {
+  await page.goto('./')
+  await expect(page.getByText(/Second Temple-era Jerusalem/)).toHaveCount(0)
+  await expect(page.getByText(CREDIT)).toHaveCount(0)
+  if (info.project.name === 'desktop') await expect(page.getByText('Illustrations are AI-generated, made with Perplexity.')).toBeVisible()
+})

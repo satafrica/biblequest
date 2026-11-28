@@ -389,3 +389,8 @@ Notes:
 - Tests: tests/e2e/resume.spec.ts. Local: 104 unit + 154 e2e passed. Draft 6b0a470482e344d17c31fad4: resume + share specs 8/8 passed against the real database; 2 test guests removed (24 accounts).
 - Not yet published to mybiblegem.com.
 - Published 28 Nov 2026 03:17 UTC (27 Nov evening, New York) on user request: deploy 6b0a470482e344d17c31fad4 restored to mybiblegem.com; all 99 files match by md5. Live tests 32/32 (share, recorded narration, rewrites, guest save prompt, remove-two placement, resume; desktop + Pixel 7). 26 test guests removed; 24 accounts, owner present, 1,323 published questions. Live-watch baseline updated.
+
+## 2026-11-27 — Home picture caption removed (draft, not published)
+- User asked to remove the small caption under the home hero buttons ("AI-generated illustration… Second Temple-era Jerusalem…").
+- AI credit kept: desktop footer, About page, and under every in-game picture.
+- Local: 156 e2e (1 new check, fixed for phones). Draft 6b0a503b5c098d75d37efb17: credits + resume 10/10. 6 test guests removed (24 accounts).
